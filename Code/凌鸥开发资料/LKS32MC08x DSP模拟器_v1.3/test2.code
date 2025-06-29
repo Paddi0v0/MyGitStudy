@@ -1,0 +1,12 @@
+    LDRDHI  R1 R2 0x0
+	LDRDHI  R3 R4 0x1
+	
+	MAC     R2 R4 R0
+	LSLI    R7 R7 1
+	STRWI	R7 0x30
+    IRQ
+    ADD     R1 R0 R0
+    ADD     R0 R0 R0
+    ADD     R0 R0 R0
+    ADD     R0 R0 R0
+	END

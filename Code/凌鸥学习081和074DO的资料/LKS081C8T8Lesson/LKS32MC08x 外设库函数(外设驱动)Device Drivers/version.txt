@@ -1,0 +1,15 @@
+ (HEAD -> main, tag: v2.24) 添加了三个函数：SYS_ResetPeripheral复位所有外设，SYS_ResetPeripheralInternal复位内部外设，SYS_ResetIO复位IO，均不包含特定寄存器及内核寄存器。
+ (tag: v2.23) 更新dsp库函数
+ (tag: v2.22) fix(UART): 固定SYS_CLK_DIV2的数值以免两串口波特率不同时出现冲突
+ (tag: v2.21) fix(SYS): 休眠前关闭除WAKE_IRQn以外的其他中断
+ (tag: V2.2) 对V2.1的（lks32mc08x_sys.c内增加电源检查函数，实际使用在voidClock_Init(void)和voidPWRDN_IRQHandler(void)函数内）这些内容做更新，之前的有问题。
+ (tag: V2.0) lks32mc08x_sys.c内增加电源检查函数，实际使用在void Clock_Init(void)和void PWRDN_IRQHandler(void)函数内。
+ (tag: V1.9) 将void SYS_SoftResetModule(uint32_t nModule)函数内延时函数去掉，防止在中断内执行该函数时间过长。
+ (tag: V1.8) 修正u8 CMP_GetIRQFlag(u8 CMPx)函数返回值，返回0和1反了，现以修正。
+ (tag: V1.7) 去除库函数内文档说明，把文档说明放到BSP文件内
+ (tag: v1.6) 修改错误注释
+ (tag: V1.5) 1
+ (tag: V1.4) 修改版本说明文件名称
+ (tag: V1.2) 修正lks32mc08x_adc.c库函数内一倍增益的校正参数读取地址（之前的有误），增加lks32mc08x_adc.c库函数可以配置ADC基准电压接口。
+ (tag: V1.1) 修正lks32mc08x_iwdg.c和lks32mc08x_iwdg.h喂狗函数。
+ (tag: v1.0) 取消库函数使用bool类型，防止部分客户编译报错

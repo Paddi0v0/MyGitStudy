@@ -1,0 +1,6 @@
+-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay
+-I.\RTE\_LK_StdPeriph_GPIO
+-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include
+-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_
+-o .\objects\lks32mc08x_iwdg.o --omf_browse .\objects\lks32mc08x_iwdg.crf --depend .\objects\lks32mc08x_iwdg.d "LKS32MC08x_Periph_Driver\Source\lks32mc08x_iwdg.c"

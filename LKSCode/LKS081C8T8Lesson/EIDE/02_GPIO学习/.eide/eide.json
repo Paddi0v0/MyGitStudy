@@ -1,0 +1,294 @@
+{
+  "name": "02_GPIO学习",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Source_Code",
+        "files": [
+          {
+            "path": "Source/main.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "AppFunction",
+        "files": [
+          {
+            "path": "AppFunction/hardware_init.c"
+          },
+          {
+            "path": "AppFunction/interrupt.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Periph_Driver",
+        "files": [
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_adc.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_can.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_cmp.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_dac.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_dma.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_dsp.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_exti.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32MC08x_flash.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_gpio.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_hall.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_i2c.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_iwdg.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_mcpwm.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_opa.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_spi.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_sys.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_tim.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_uart.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_tmp.c"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/lks32mc08x_nvr.lib"
+          },
+          {
+            "path": "LKS32MC08x_Periph_Driver/Source/startup_lks32mc08x.s"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "::CMSIS",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "::Device",
+        "files": [],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "31ae8af40790c7b32a5b3ffb2488660f"
+  },
+  "targets": {
+    "LK_StdPeriph_GPIO": {
+      "excludeList": [],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M0",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x2000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x8000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "LKS",
+          "cpuName": "LKS32MC081C8T8"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "FreeMaster",
+          "Include",
+          "LKS32MC08x_Periph_Driver/Include",
+          "Source",
+          "USER/LED",
+          "USER/KEY",
+          "USER/Delay",
+          ".cmsis/include",
+          "RTE/_LK_StdPeriph_GPIO",
+          "${MY_LKS}"
+        ],
+        "libList": [],
+        "defineList": []
+      },
+      "builderOptions": {
+        "AC5": {
+          "version": 4,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-0",
+            "one-elf-section-per-function": true,
+            "c99-mode": true,
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "warnings": "all-warnings"
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "xo-base": "",
+            "ro-base": "0x00000000",
+            "rw-base": "0x20000000"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}

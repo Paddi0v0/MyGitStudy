@@ -1,0 +1,13 @@
+.\objects\utimer.o: USER\UTimer\UTimer.c
+.\objects\utimer.o: USER\UTimer\utimer.h
+.\objects\utimer.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h
+.\objects\utimer.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h
+.\objects\utimer.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h
+.\objects\utimer.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\utimer.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\utimer.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\utimer.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\utimer.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c
+.\objects\utimer.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h
+.\objects\utimer.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h
+.\objects\utimer.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h

@@ -1,0 +1,13 @@
+.\objects\gpio_led.o: USER\LED\GPIO_LED.c
+.\objects\gpio_led.o: USER\LED\gpio_led.h
+.\objects\gpio_led.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h
+.\objects\gpio_led.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h
+.\objects\gpio_led.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h
+.\objects\gpio_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\gpio_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\gpio_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\gpio_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\gpio_led.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c
+.\objects\gpio_led.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h
+.\objects\gpio_led.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h
+.\objects\gpio_led.o: .\USER\Delay\delay.h

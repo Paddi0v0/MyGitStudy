@@ -1,0 +1,15 @@
+.\build\keil\lks32mc08x_exti.o: Drivers/Source/lks32mc08x_exti.c
+.\build\keil\lks32mc08x_exti.o: Drivers\Include\lks32mc08x_exti.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\lks32mc08x.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\basic.h
+.\build\keil\lks32mc08x_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\build\keil\lks32mc08x_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\build\keil\lks32mc08x_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\build\keil\lks32mc08x_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\keil\lks32mc08x_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\core_cm0.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\core_cmInstr.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\core_cmFunc.h
+.\build\keil\lks32mc08x_exti.o: Drivers\Include\lks32mc08x_gpio.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\lks32mc08x.h
+.\build\keil\lks32mc08x_exti.o: ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x\core_cm0.h

@@ -1,0 +1,73 @@
+#ifndef __UTIMER_H__
+#define __UTIMER__H__
+#include "lks32mc08x_sys.h"
+#include "lks32mc08x_tim.h"
+
+extern u32 OverFlow;
+extern u32 InPut_FrontTime;
+extern u32 InPut_CurrentTime;
+extern double InPut_PulseTime;
+
+#define GPIO0_AF_MODE GPIO0_FFEDC
+#define InPut_Value   UTIMER_UNT0_CMP0
+
+//GPIOx_0123端口复用配置
+#define GPIO0_F0_4_8_12_AF0 0x0000 //模拟功能
+#define GPIO0_F0_4_8_12_AF1 0x0001 //SYS_AF,比较器及时钟等数字信号输出功能
+#define GPIO0_F0_4_8_12_AF2 0x0002 //HALL
+#define GPIO0_F0_4_8_12_AF3 0x0003 //MCPWM
+#define GPIO0_F0_4_8_12_AF4 0x0004 //UART
+#define GPIO0_F0_4_8_12_AF5 0x0005 //SPI
+#define GPIO0_F0_4_8_12_AF6 0x0006 //IIC
+#define GPIO0_F0_4_8_12_AF7 0x0007 //Timer0/Time1
+#define GPIO0_F0_4_8_12_AF8 0x0008 //Timer2/ Timer3/QEP0/QEP1
+#define GPIO0_F0_4_8_12_AF9 0x0009 //ADC trigger debug
+#define GPIO0_F0_4_8_12_AFA 0x000A //CAN
+#define GPIO0_F0_4_8_12_AFB 0x000B //SIF
+
+//GPIOx_4567端口复用配置
+#define GPIO0_F1_5_9_13_AF0 0x0000
+#define GPIO0_F1_5_9_13_AF1 0x0010
+#define GPIO0_F1_5_9_13_AF2 0x0020
+#define GPIO0_F1_5_9_13_AF3 0x0030
+#define GPIO0_F1_5_9_13_AF4 0x0040
+#define GPIO0_F1_5_9_13_AF5 0x0050
+#define GPIO0_F1_5_9_13_AF6 0x0060
+#define GPIO0_F1_5_9_13_AF7 0x0070
+#define GPIO0_F1_5_9_13_AF8 0x0080
+#define GPIO0_F1_5_9_13_AF9 0x0090
+#define GPIO0_F1_5_9_13_AFA 0x00A0
+#define GPIO0_F1_5_9_13_AFB 0x00B0
+
+//GPIOx_89AB端口复用配置
+#define GPIO0_F2_6_10_14_AF0 0x0000
+#define GPIO0_F2_6_10_14_AF1 0x0100
+#define GPIO0_F2_6_10_14_AF2 0x0200
+#define GPIO0_F2_6_10_14_AF3 0x0300
+#define GPIO0_F2_6_10_14_AF4 0x0400
+#define GPIO0_F2_6_10_14_AF5 0x0500
+#define GPIO0_F2_6_10_14_AF6 0x0600
+#define GPIO0_F2_6_10_14_AF7 0x0700
+#define GPIO0_F2_6_10_14_AF8 0x0800
+#define GPIO0_F2_6_10_14_AF9 0x0900
+#define GPIO0_F2_6_10_14_AFA 0x0A00
+#define GPIO0_F2_6_10_14_AFB 0x0B00
+
+//GPIOx_CDEF端口复用配置
+#define GPIO0_F3_7_11_15_AF0 0x0000
+#define GPIO0_F3_7_11_15_AF1 0x1000
+#define GPIO0_F3_7_11_15_AF2 0x2000
+#define GPIO0_F3_7_11_15_AF3 0x3000
+#define GPIO0_F3_7_11_15_AF4 0x4000
+#define GPIO0_F3_7_11_15_AF5 0x5000
+#define GPIO0_F3_7_11_15_AF6 0x6000
+#define GPIO0_F3_7_11_15_AF7 0x7000
+#define GPIO0_F3_7_11_15_AF8 0x8000
+#define GPIO0_F3_7_11_15_AF9 0x9000
+#define GPIO0_F3_7_11_15_AFA 0xA000
+#define GPIO0_F3_7_11_15_AFB 0xB000
+
+int InPut_Time(void);
+
+#endif
+

@@ -1,0 +1,12 @@
+.\objects\wdt.o: USER\WDT_0\WDT.c
+.\objects\wdt.o: USER\WDT_0\WDT.h
+.\objects\wdt.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h
+.\objects\wdt.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h
+.\objects\wdt.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h
+.\objects\wdt.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\wdt.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\wdt.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\wdt.o: D:\keli5\APPlication\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\wdt.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c
+.\objects\wdt.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h
+.\objects\wdt.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h

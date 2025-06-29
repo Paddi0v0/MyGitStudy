@@ -1,0 +1,25 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\startup_lks32mc08x.o"
+".\objects\hardware_init.o"
+".\objects\interrupt.o"
+".\objects\lks32mc08x_adc.o"
+".\objects\lks32mc08x_cmp.o"
+".\objects\lks32mc08x_dma.o"
+".\objects\lks32mc08x_exti.o"
+".\objects\lks32mc08x_flash.o"
+".\objects\lks32mc08x_gpio.o"
+".\objects\lks32mc08x_hall.o"
+".\objects\lks32mc08x_i2c.o"
+".\objects\lks32mc08x_mcpwm.o"
+".\objects\lks32mc08x_spi.o"
+".\objects\lks32mc08x_sys.o"
+".\objects\lks32mc08x_tim.o"
+".\objects\lks32mc08x_uart.o"
+".\LKS32MC08x_Periph_Driver\Source\lks32mc08x_nvr.o"
+".\objects\lks32mc08x_dsp.o"
+".\objects\lks32mc08x_opa.o"
+--library_type=microlib --strict --scatter ".\Objects\LK_StdPeriph_Utiemr.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LK_StdPeriph_Utiemr.map" -o .\Objects\LK_StdPeriph_Utiemr.axf

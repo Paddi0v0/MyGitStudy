@@ -1,0 +1,37 @@
+./objects/key.o: app_function\key.c Include\global_variable.h \
+  Include\mc_type.h periph_driver\Include\lks32mc08x_lib.h \
+  C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h \
+  C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\ctype.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h \
+  C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h \
+  C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h \
+  C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armclang.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h \
+  periph_driver\Include\lks32mc08x_adc.h \
+  periph_driver\Include\lks32mc08x_lib.h \
+  periph_driver\Include\lks32mc08x_can.h \
+  periph_driver\Include\lks32mc08x_sys.h \
+  periph_driver\Include\lks32mc08x_gpio.h \
+  periph_driver\Include\lks32mc08x_cmp.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  periph_driver\Include\lks32mc08x_dma.h \
+  periph_driver\Include\lks32mc08x_dac.h \
+  periph_driver\Include\lks32mc08x_dsp.h \
+  periph_driver\Include\lks32mc08x_exti.h \
+  periph_driver\Include\lks32mc08x_flash.h \
+  periph_driver\Include\lks32mc08x_hall.h \
+  periph_driver\Include\lks32mc08x_i2c.h \
+  periph_driver\Include\lks32mc08x_mcpwm.h \
+  periph_driver\Include\lks32mc08x_nvr.h \
+  periph_driver\Include\lks32mc08x_opa.h \
+  periph_driver\Include\lks32mc08x_spi.h \
+  periph_driver\Include\lks32mc08x_tim.h \
+  periph_driver\Include\lks32mc08x_uart.h \
+  periph_driver\Include\lks32mc08x_iwdg.h

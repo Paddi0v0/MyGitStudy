@@ -1,0 +1,20418 @@
+# LKS32MC08X库函数使用说明
+
+0.1 结构体 10.2 文件列表 2
+
+# 1 结构体说明 7
+
+1.1 ADC_InitTypeDef结构体参考 7
+
+1.1.1 详细描述 8
+
+1.1.2 结构体成员变量说明 8
+
+1.1.2.1 ADC_CLK_DIV 8
+
+1.1.2.2 Align 9
+
+1.1.2.3 Con Sample 9
+
+1.1.2.4 DAT0_TH 9
+
+1.1.2.5 DAT0_TH_Type 9
+
+1.1.2.6 FirSeg.Ch 10
+
+1.1.2.7 FouSeg.Ch 10
+
+1.1.2.8 Gain0 10
+
+1.1.2.9 Gain1 10
+
+1.1.2.10 IE 11
+
+1.1.2.11 MCPWM.Trigger.En 11
+
+1.1.2.12 RefVol 12
+
+1.1.2.13 SecSeg.Ch 12
+
+1.1.2.14 ThrSeg.Ch 12
+
+1.1.2.15 Trigger.Cnt 12
+
+1.1.2.16 Trigger.Mode 13
+
+1.1.2.17 UTIMER.Trigger.En 13
+
+# 1.2 ADC_TypeDef结构体参考 13
+
+1.2.1 详细描述 16
+
+1.2.2 结构体成员变量说明 16
+
+1.2.2.1 AMC.A0 16
+
+1.2.2.2 AMC.A1 16
+
+1.2.2.3 AMC.B0 16
+
+1.2.2.4 AMC.B1 16
+
+1.2.2.5 CFG 17
+
+1.2.2.6 CHN0 17
+
+1.2.2.7 CHN1 17
+
+1.2.2.8 CHN2 17
+
+1.2.2.9 CHN3 17
+
+1.2.2.10 CHN6 18
+
+1.2.2.11 CHN5 18
+
+1.2.2.12 CHN6 18
+
+1.2.2.13 CHN7 18
+
+1.2.2.14 CHN8 18
+
+1.2.2.15 CHN9 19
+
+1.2.2.16 CHNT0 191.2.2.17 CHNT1 191.2.2.18 DAT0 191.2.2.19 DATCLTH 191.2.2.20 DAT1 201.2.2.21 DAT10 201.2.2.22 DAT11 201.2.2.23 DAT12 201.2.2.24 DAT13 201.2.2.25 DAT14 211.2.2.26 DAT15 211.2.2.27 DAT16 211.2.2.28 DAT17 211.2.2.29 DAT18 211.2.2.30 DAT19 221.2.2.31 DAT2 221.2.2.32 DAT3 221.2.2.33 DAT4 221.2.2.34 DAT5 221.2.2.35 DAT6 231.2.2.36 DAT7 231.2.2.37 DAT8 231.2.2.38 DAT9 231.2.2.39 DC_A0 231.2.2.40 DC_A1 241.2.2.41 DC_E0 241.2.2.42 DC_B1 241.2.2.43 GAIN_0 241.2.2.44 GAIN_1 241.2.2.45 IE 251.2.2.46 IF 251.2.2.47 SD0 251.2.2.48 SD1 251.2.2.49 SWT 251.2.2.50 TRG 261.3 CAN_InitTypeDef结构体参考 261.3.1 261.3.2 261.3.2.1 CAN_Btr0 261.3.2.2 CAN_Btr1 271.3.2.3 CAN_DMAEn 271.3.2.4 CAN_ErrWarThre 27
+
+1.3.2.5 CAN.WorkMode 27 1.3.2.6 IRQEna 27
+
+# 1.4 CAN_TypeDef结构体参考 28
+
+1.4.1详细描述 29
+
+# 1.4.2结构体成员变量说明 29
+
+1.4.2.1 ALC 29
+
+1.4.2.2 BTR0 29
+
+1.4.2.3 BTR1 30
+
+1.4.2.4 CMR 30
+
+1.4.2.5 ECC 30
+
+1.4.2.6 EIR 30
+
+1.4.2.7EWLR 30
+
+1.4.2.8 IR 31
+
+1.4.2.9 MOD 31
+
+1.4.2.10 null0 31
+
+1.4.2.11 null1 31
+
+1.4.2.12 null2 31
+
+1.4.2.13 null3 31
+
+1.4.2.14 RBSA 32
+
+1.4.2.15 RMC 32
+
+1.4.2.16 RXERR 32
+
+1.4.2.17 SR 32
+
+1.4.2.18 TXERR 32
+
+1.4.2.19 TXRX0 33
+
+1.4.2.20 TXRX1 33
+
+1.4.2.21 TXRX2 33
+
+1.4.2.22 TXRX3 33
+
+1.4.2.23 TXRX4 33
+
+1.4.2.24 TXRX5 34
+
+1.4.2.25 TXRX6 34
+
+1.4.2.26 TXRX7 34
+
+1.4.2.27 TXRX8 34
+
+1.4.2.28 TXRX9 34
+
+1.4.2.29 TXRXA 35
+
+1.4.2.30 TXRXB 35
+
+1.4.2.31 TXRXC 35
+
+1.5 CMP_InitTypeDef结构体参考 35
+
+1.5.1详细描述 37
+
+1.5.2结构体成员变量说明 37
+
+1.5.2.1 CLK10. EN 37
+
+1.5.2.2 CMP0.CHN0P_WIN. EN 38
+
+1.5.2.3 CMP0.CHN1P_WIN. EN 38
+
+1.5.2.4 CMP0.CHN2P_WIN. 381.5.2.5 CMP0.CHN3P_WIN. EN 381.5.2.6 CMP0.EN 381.5.2.7 CMP0.IIE 391.5.2.8 CMP0.IN.EN 391.5.2.9 CMP0.IPC_TRIG 391.5.2.10 CMP0.POL 391.5.2.11 CMP0.SELN 401.5.2.12 CMP0.SELP 401.5.2.13 CMP0.W.PWM.POL 411.5.2.14 CMP1.CHNOP_WIN. EN 411.5.2.15 CMP1.CHN1P_WIN. EN 411.5.2.16 CMP1.CHN2P_WIN. EN 411.5.2.17 CMP1.CHN3P_WIN. EN 411.5.2.18 CMP1.EN 421.5.2.19 CMP1.IIE 421.5.2.20 CMP1.IN.EN 421.5.2.21 CMP1.IRQ_TRIG 421.5.2.22 CMP1.POL 421.5.2.23 CMP1.SELN 431.5.2.24 CMP1.SELP 431.5.2.25 CMP1.W.PWM.POL 441.5.2.26 CMP- FT 441.5.2.27 CMP-HYS 441.5.2.28 FIL_CLK10.DIV16 441.5.2.29 FIL_CLK10.DIV2 451.6 CMP-TypeDef结构体参考 451.6.1 451.6.2 451.6.2.1 BLCWN 461.6.2.2 CFG 461.6.2.3 DATA 461.6.2.4 IE 461.6.2.5 IF 461.6.2.6 TCLK 471.7 DAC_InitTypeDef结构体参考 471.7.1 471.7.2 471.7.2.1 DAC.CAIN 471.7.2.2 DACOUT.EN 481.8 DMA_InitTypeDef结构体参考 481.8.1 48
+
+# 1.8.2结构体成员变量说明 49
+
+1.8.2.1 DMA.CIRC 49  1.8.2.2 DMA.CMAR 49  1.8.2.3 DMA.CPAR 49  1.8.2.4 DMA.DIR 49  1.8.2.5 DMA.RQ.DN 50  1.8.2.6 DMA.MBTW 50  1.8.2.7 DMA.MINC 50  1.8.2.8 DMA.PBTW 51  1.8.2.9 DMA.PINC 51  1.8.2.10 DMA.REQ.EN 51  1.8.2.11 DMA.ROUND 52  1.8.2.12 DMA.TIMES 52
+
+# 1.9 DMA.RegTypeDef结构体参考 52
+
+# 1.9.1详细描述 52
+
+# 1.9.2结构体成员变量说明 52
+
+1.9.2.1 DMA.CCR 53  1.9.2.2 DMA.CMAR 53  1.9.2.3 DMA.CPAR 53  1.9.2.4 DMA.CTMS 53
+
+# 1.10 EXTI.TypeDef结构体参考 53
+
+# 1.10.1详细描述 54
+
+# 1.10.2结构体成员变量说明 54
+
+1.10.2.1CR0 54  1.10.2.2CR1 54  1.10.2.3EN 54  1.10.2.4IF 54  1.10.2.5POL 54
+
+# 1.11 GPIO_InitTypeDef结构体参考 55
+
+# 1.11.1详细描述 55
+
+# 1.11.2结构体成员变量说明 55
+
+1.11.2.1 GPIO.Mode 55  1.11.2.2 GPIO_Pin 55  1.11.2.3 GPIO.PODEna 56  1.11.2.4 GPIO.PuPd 56
+
+# 1.12 GPIO.TypeDef结构体参考 56
+
+# 1.12.1详细描述 56
+
+# 1.12.2结构体成员变量说明 56
+
+1.12.2.1F3210 57  1.12.2.2F7654 57  1.12.2.3FBA98 57  1.12.2.4FFEDC 57
+
+1.12.2.5 LCKR 57  1.12.2.6 PDE 58  1.12.2.7 PDI 58  1.12.2.8 PDO 58  1.12.2.9 PIE 58  1.12.2.10 PODE 58  1.12.2.11 POE 59  1.12.2.12 PUB 59
+
+# 1.13 HALL InitTypeDef结构体参考 59
+
+1.13.1 详细描述 59
+
+# 1.13.2 结构体成员变量说明 60
+
+1.13.2.1 Capture_IRQ_Ena 60  1.13.2.2 ClockDivision 60  1.13.2.3 CountTH 60  1.13.2.4 Filter75_Ena 60  1.13.2.5 FilterLen 60  1.13.2.6 HALL_Ena 61  1.13.2.7 Overflow_IRQ_Ena 61  1.13.2.8 softIE 61
+
+# 1.14 HALL_TypeDef结构体参考 61
+
+1.14.1 详细描述 62
+
+# 1.14.2 结构体成员变量说明 62
+
+1.14.2.1 CFG 62  1.14.2.2 CNT 62  1.14.2.3 INFO 62  1.14.2.4 TH 62  1.14.2.5 WIDTH 63
+
+# 1.15 I2C InitTypeDef结构体参考 63
+
+1.15.1 详细描述 63
+
+# 1.15.2 结构体成员变量说明 64
+
+1.15.2.1 ADCCMP 64  1.15.2.2 BaudRate 64  1.15.2.3 BURST_ADDR_CMP 64  1.15.2.4 BURST_NACK 64  1.15.2.5 BUSERR_IE 64  1.15.2.6 DMA 65  1.15.2.7 IE 65  1.15.2.8 MST_MODE 65  1.15.2.9 SLV_MODE 65  1.15.2.10 STOP_IE 65  1.15.2.11 TC_IE 66
+
+1.16 I2C_TypeDef结构体参考 66
+
+# 1.16.1详细描述 66
+
+# 1.16.2结构体成员变量说明 66
+
+1.16.2.1 ADDR 66  1.16.2.2 BCR 66  1.16.2.3 CFG 67  1.16.2.4 DATA 67  1.16.2.5 MSCR 67  1.16.2.6 SCR 67
+
+# 1.17 IwDG.InitTypeDef结构体参考 67
+
+# 1.17.1详细描述 67
+
+# 1.17.2结构体成员变量说明 68
+
+1.17.2.1 RTH 68  1.17.2.2 WDGLEN 68
+
+# 1.18 MCPWM.InitTypeDef结构体参考 68
+
+# 1.18.1详细描述 72
+
+# 1.18.2结构体成员变量说明 72
+
+1.18.2.1 CH0.NS 73  1.18.2.2 CH0.PS 73  1.18.2.3 CH0N.default.output 73  1.18.2.4 CH0N.Polarity.INV 73  1.18.2.5 CH0N.SCTRLN 74  1.18.2.6 CH0N.default.output 74  1.18.2.7 CH0P.Polarity.INV 74  1.18.2.8 CH0P.SCTRLP 74  1.18.2.9 CH1.NS 75  1.18.2.10 CH1.PS 75  1.18.2.11 CH1N.default.output 75  1.18.2.12 CH1N.Polarity.INV 75  1.18.2.13 CH1N.SCTRLN 76  1.18.2.14 CH1P.default.output 76  1.18.2.15 CH1P.Polarity.INV 76  1.18.2.16 CH1P.SCTRLP 76  1.18.2.17 CH2.NS 77  1.18.2.18 CH2.PS 77  1.18.2.19 CH2N.default.output 77  1.18.2.20 CH2N.Polarity.INV 77  1.18.2.21 CH2N.SCTRLN 78  1.18.2.22 CH2P.default.output 78  1.18.2.23 CH2P.Polarity.INV 78  1.18.2.24 CH2P.SCTRLP 78  1.18.2.25 CH2.NS 79  1.18.2.26 CH3.PS 79
+
+1.18.2.27 CH3N.default_output 791.18.2.28 CH3N_Polarity_INV 791.18.2.29 CH3N_SCTRLN 801.18.2.30 CH3P_default_output 801.18.2.31 CH3P_Polarity_INV 801.18.2.32 CH3P_SCTRLP 801.18.2.33 CLK_DIV 801.18.2.34 CMP_BKIN_Filter 811.18.2.35 DeadTimeCH0N 811.18.2.36 DeadTimeCH0P 811.18.2.37 DeadTimeCH1N 811.18.2.38 DeadTimeCH1P 821.18.2.39 DeadTimeCH2N 821.18.2.40 DeadTimeCH2P 821.18.2.41 DeadTimeCH3N 821.18.2.42 DeadTimeCH3P 831.18.2.43 DebugMode_PWM_out 831.18.2.44 FAIL0_INPUT_EN 831.18.2.45 FAIL0_INT_EN 831.18.2.46 FAIL0_Polarity 841.18.2.47 FAIL0_Signal_Sel 841.18.2.48 FAIL1_INPUT_EN 841.18.2.49 FAIL1_INT_EN 841.18.2.50 FAIL1_Polarity 851.18.2.51 FAIL1_Signal_Sel 851.18.2.52 GPIO_BKIN_Filter 851.18.2.53 IO0_PPE 851.18.2.54 IO1_PPE 861.18.2.55 IO2_PPE 861.18.2.56 IO3_PPE 861.18.2.57 MCLK_EN 861.18.2.58 MCPWM_Auto_ERR_EN 861.18.2.59 MCPWM_Cnt_EN 871.18.2.60 MCPWM_PERIOD 871.18.2.61 MCPWM_REG_UPDATE_INT_EN 871.18.2.62 MCPWM_T0_UpdateEN 871.18.2.63 MCPWM_T1_UpdateEN 871.18.2.64 MCPWM_UpdateInterval 881.18.2.65 MCPWM_WorkModeCH0 881.18.2.66 MCPWM_WorkModeCH1 881.18.2.67 MCPWM_WorkModeCH2 881.18.2.68 MCPWM_WorkModeCH3 89
+
+1.18.2.69 Switch.CH0N.CH0P 891.18.2.70 Switch.CH1N.CH1P 891.18.2.71 Switch.CH2N.CH2P 891.18.2.72 Switch.CH3N.CH3P 891.18.2.73 T0_Update_INT_EN 901.18.2.74 T1_Update_INT_EN 901.18.2.75 TH00_Match_INT_EN 901.18.2.76 TH01_Match_INT_EN 901.18.2.77 TH10_Match_INT_EN 901.18.2.78 TH11_Match_INT_EN 911.18.2.79 TH20_Match_INT_EN 911.18.2.80 TH21_Match_INT_EN 911.18.2.81 TH30_Match_INT_EN 911.18.2.82 TH31_Match_INT_EN 911.18.2.83 TMR0_Match_INT_EN 921.18.2.84 TMR1_Match_INT_EN 921.18.2.85 TMR2_Match_INT_EN 921.18.2.86 TMR3_Match_INT_EN 921.18.2.87 TriggerPoint0 921.18.2.88 TriggerPoint1 931.18.2.89 TriggerPoint2 931.18.2.90 TriggerPoint3 931.19 OPA_InitTypeDef结构体参考 931.19.1 931.19.2 941.19.2.1 OPA.CLEna 941.19.2.2 OPA.Gain 941.20 SPI_InitTypeDef结构体参考 941.20.1 951.20.2 951.20.2.1 BaudRate 951.20.2.2 ByteLength 961.20.2.3 CPHA 961.20.2.4 CPOL 961.20.2.5 DataOrder 961.20.2.6 DMA 961.20.2.7 Duplex 971.20.2.8 EN 971.20.2.9 IRQEna 971.20.2.10 Mode 981.20.2.11 SS 981.20.2.12 Trig 98
+
+# 1.21 SPLTypeDef结构体参考 98
+
+1.21.1详细描述 99
+
+1.21.2结构体成员变量说明 99
+
+1.21.2.1CFG 99 1.21.2.2DIV 99 1.21.2.3IE 99 1.21.2.4RX_DATA 99 1.21.2.5SIZE 100 1.21.2.6TX_DATA 100
+
+# 1.22 stru.CordicComponents结构体参考 100
+
+1.22.1详细描述 100
+
+1.22.2结构体成员变量说明 101
+
+1.22.2.1ArctanValue 101 1.22.2.2ArctanX 101 1.22.2.3ArctanY 101 1.22.2.4CosValue 101 1.22.2.5SinValue 102 1.22.2.6Theta 102
+
+# 1.23 stru.DiviComponents结构体参考 102
+
+1.23.1详细描述 102
+
+1.23.2结构体成员变量说明 102
+
+1.23.2.1Dividend 103 1.23.2.2Divisor 103 1.23.2.3Quotient 103 1.23.2.4Remainder 103
+
+# 1.24 Stru.TempertureCof.Def结构体参考 103
+
+1.24.1详细描述 104
+
+1.24.2结构体成员变量说明 104
+
+1.24.2.1nCofA 104 1.24.2.2nOffsetB 104
+
+# 1.25 SYS.InitTypeDef结构体参考 104
+
+1.25.1详细描述 105
+
+1.25.2结构体成员变量说明 105
+
+1.25.2.1Cik.DivSPI 105
+
+1.25.2.2Cik.DivUART 105
+
+1.25.2.3Cik.FEN 106
+
+1.25.2.4PLL_DivSel 106
+
+1.25.2.5PLL_ReDiv 106
+
+1.25.2.6PLL_SrcSel 106
+
+1.25.2.7PORFilter_Ena 106
+
+1.25.2.8WDT_Ena 107
+
+1.26 TIM.ECDInitTypeDef结构体参考 107
+
+# 1.26.1详细描述 107
+
+# 1.26.2结构体成员变量说明 107
+
+1.26.2.1 ECD_ClockDiv 108  1.26.2.2 ECD_Filter0 108  1.26.2.3 ECD_Filter1 108  1.26.2.4 ECD_IRQEna 108  1.26.2.5 ECD_Mode 109  1.26.2.6 ECD_TH 109
+
+# 1.27 TIM_ECDTypeDef结构体参考 109
+
+# 1.27.1详细描述 110
+
+# 1.27.2结构体成员变量说明 110
+
+1.27.2.1 CFG 110  1.27.2.2 CNT 110  1.27.2.3 TH 110
+
+# 1.28 TIM_TimerInitTypeDef结构体参考 110
+
+# 1.28.1详细描述 111
+
+# 1.28.2结构体成员变量说明 111
+
+1.28.2.1 Timer_CH0_CapMode 112  1.28.2.2 Timer_CH0_WorkMode 112  1.28.2.3 Timer_CH0Output 112  1.28.2.4 Timer_CH1_CapMode 113  1.28.2.5 Timer_CH1_WorkMode 113  1.28.2.6 Timer_CH1Output 113  1.28.2.7 Timer_ClockDiv 114  1.28.2.8 Timer_CMP0 114  1.28.2.9 Timer_CMP1 114  1.28.2.10 Timer_Filter0 114  1.28.2.11 Timer_Filter1 115  1.28.2.12 Timer_IRQEna 115  1.28.2.13 Timer_TH 115
+
+# 1.29 TIM_TimerTypeDef结构体参考 115
+
+# 1.29.1详细描述 116  1.29.2结构体成员变量说明 116
+
+1.29.2.1 CFG 116  1.29.2.2 CMPTO 116  1.29.2.3 CMPT1 116  1.29.2.4 CNT 116  1.29.2.5 EVT 117  1.29.2.6 TH 117
+
+# 1.30 UART_InitTypeDef结构体参考 117
+
+1.30.1详细描述 118  1.30.2结构体成员变量说明 118
+
+1.30.2.1 BaudRate 1181.30.2.2 Bit9Value 1181.30.2.3 FirstSend 1181.30.2.4 IRQEna 1191.30.2.5 Match485Addr 1191.30.2.6 MultiDroplna 1191.30.2.7 ParityMode 1191.30.2.8 RXD.INV 1201.30.2.9 StopBits 1201.30.2.10 TXD.INV 1201.30.2.11 WordLength 1201.31 UART_TypeDef结构体参考 1211.31.1 1211.31.2 1211.31.2.1 ADR 1211.31.2.2 BUFF 1221.31.2.3 CTRL 1221.31.2.4 DIVH 1221.31.2.5 DIVL 1221.31.2.6 IE 1221.31.2.7 IF 1231.31.2.8 INV 1231.31.2.9 STT 1231.32 WAKE_InitTypeDef结构体参考 1231.32.1 1231.32.2 1241.32.2.1 AFE_REG5. RECORD 1241.32.2.2 AFE_REG6. RECORD 1241.32.2.3 CLK_CFG. RECORD 124
+
+# 2 125
+
+# 2.1 Include/lks32mc08x.add.h文件参考 125
+
+2.1.1 129
+
+2.1.2 130
+
+2.1.2.1 ADC0 1302.1.2.2 ADC.10. TIMES.SAMPLE 1302.1.2.3 ADC.11. TIMES.SAMPLE 1302.1.2.4 ADC.12. TIMES.SAMPLE 1302.1.2.5 ADC.13. TIMES.SAMPLE 1312.1.2.6 ADC.14. TIMES.SAMPLE 1312.1.2.7 ADC.15. TIMES.SAMPLE 1312.1.2.8 ADC.16. TIMES.SAMPLE 131
+
+2.1.2.9 ADC.17. TIMES.SAMPLE 131  2.1.2.10 ADC.18. TIMES.SAMPLE 132  2.1.2.11 ADC.19. TIMES.SAMPLE 132  2.1.2.12 ADC.1.TIMES.SAMPLE 132  2.1.2.13 ADC.1SEG.TRG 132  2.1.2.14 ADC.20.TIMES.SAMPLE 132  2.1.2.15 ADC.2.TIMES.SAMPLE 133  2.1.2.16 ADC.2SEG.TRG 133  2.1.2.17 ADC.3.TIMES.SAMPLE 133  2.1.2.18 ADC.4.TIMES.SAMPLE 133  2.1.2.19 ADC.4SEG.TRG 133  2.1.2.20 ADC.5.TIMES.SAMPLE 134  2.1.2.21 ADC.6.TIMES.SAMPLE 134  2.1.2.22 ADC.7.TIMES.SAMPLE 134  2.1.2.23 ADC.8.TIMES.SAMPLE 134  2.1.2.24 ADC.9.TIMES.SAMPLE 134  2.1.2.25 ADC.ALL.IRQ.IF 135  2.1.2.26 ADC.CHANNEL.0 135  2.1.2.27 ADC.CHANNEL.1 135  2.1.2.28 ADC.CHANNEL.10 135  2.1.2.29 ADC.CHANNEL.11 135  2.1.2.30 ADC.CHANNEL.12 136  2.1.2.31 ADC.CHANNEL.13 136  2.1.2.32 ADC.CHANNEL.14 136  2.1.2.33 ADC.CHANNEL.15 136  2.1.2.34 ADC.CHANNEL.16 136  2.1.2.35 ADC.CHANNEL.17 137  2.1.2.36 ADC.CHANNEL.18 137  2.1.2.37 ADC.CHANNEL.19 137  2.1.2.38 ADC.CHANNEL.2 137  2.1.2.39 ADC.CHANNEL.3 137  2.1.2.40 ADC.CHANNEL.4 138  2.1.2.41 ADC.CHANNEL.5 138  2.1.2.42 ADC.CHANNEL.6 138  2.1.2.43 ADC.CHANNEL.7 138  2.1.2.44 ADC.CHANNEL.8 138  2.1.2.45 ADC.CHANNEL.9 139  2.1.2.46 ADC.Clock.12M 139  2.1.2.47 ADC.Clock.24M 139  2.1.2.48 ADC.Clock.48M 139  2.1.2.49 ADC.DAT0.HTH 139  2.1.2.50 ADC.DAT0.LTH 139
+
+2.1.2.51 ADC.DAT0.OV.IRQ.EN 1402.1.2.52 ADC.DAT0.OV.IRQ.IF 1402.1.2.53 ADC.EOS0.IRQ.EN 1402.1.2.54 ADC.EOS0.IRQ.IF 1402.1.2.55 ADC.EOS1.IRQ.EN 1402.1.2.56 ADC.EOS1.IRQ.IF 1412.1.2.57 ADC.EOS2.IRQ.EN 1412.1.2.58 ADC.EOS2.IRQ.IF 1412.1.2.59 ADC.EOS3.IRQ.EN 1412.1.2.60 ADC.EOS3.IRQ.IF 1412.1.2.61 ADC.H.CONFLICT.IRQ.EN 1422.1.2.62 ADC.H.CONFLICT.IRQ.IF 1422.1.2.63 ADC.HARDWARE.T0.TRG 1422.1.2.64 ADC.HARDWARE.T1_TRG 1422.1.2.65 ADC.HARDWARE.T2_TRG 1422.1.2.66 ADC.HARDWARE.T3_TRG 1432.1.2.67 ADC.LEFT_ALIGN 1432.1.2.68 ADC.MCPWM.T0.TRG 1432.1.2.69 ADC.MCPWM.T1_TRG 1432.1.2.70 ADC.MCPWM.T2_TRG 1432.1.2.71 ADC.MCPWM.T3_TRG 1442.1.2.72 ADC.RIGHT_ALIGN 1442.1.2.73 ADC.S.CONFLICT.IRQ.EN 1442.1.2.74 ADC.S.CONFLICT.IRQ.IF 1442.1.2.75 ADC.UTIMER.T0.TRG 1442.1.2.76 ADC.UTIMER.T1_TRG 1452.1.2.77 ADC.UTIMER.T2_TRG 1452.1.2.78 ADC.UTIMER.T3_TRG 1452.1.2.79 RefVol.1V2 1452.1.2.80 RefVol.2V4 1452.1.3 枚举类型说明 1452.1.3.1 CHNx 1452.1.3.2 DATx 1462.1.4 函数说明 1472.1.4.1 ADC.ChannelConfig() 1472.1.4.2 ADC.ClearIRQFlag() 1482.1.4.3 ADC.GetConversionValue() 1502.1.4.4 ADC.GetIRQFlag() 1512.1.4.5 ADC.Init() 1522.1.4.6 ADC.SoftTrgEN() 1532.1.4.7 ADC.StructInit() 1542.2 lks32mc08x.adch.h 155
+
+# 2.3 Include/lks32mc08x.can.h 文件参考 158
+
+# 2.3.1 详细描述 161
+
+# 2.3.2 宏定义说明 161
+
+2.3.2.1 CAN.ALLSR 161
+
+2.3.2.2 CAN.DATAV 162
+
+2.3.2.3 CAN.BRROV 162
+
+2.3.2.4 CAN.IE.BUSERR 162
+
+2.3.2.5 CAN.IE.LOSTARB 162
+
+2.3.2.6 CAN.IE.PASSIVEERR 162
+
+2.3.2.7 CAN.IE.RFIFONOEMPTY 163
+
+2.3.2.8 CAN.IE.RFIFOOV 163
+
+2.3.2.9 CAN.IE.TXDONE 163
+
+2.3.2.10 CAN.IE.WAKE 163
+
+2.3.2.11 CAN.IE.WERR 163
+
+2.3.2.12 CAN.IF.BUSERR 164
+
+2.3.2.13 CAN.IF.LOSTARB 164
+
+2.3.2.14 CAN.IF.PASSIVEERR 164
+
+2.3.2.15 CAN.IF.RFIFONOEMPTY 164
+
+2.3.2.16 CAN.IF.RFIFOOV 164
+
+2.3.2.17 CAN.IF.TXDONE 165
+
+2.3.2.18 CAN.IF.WAKE 165
+
+2.3.2.19 CAN.IF.WERR 165
+
+2.3.2.20 CAN.MONITOR_MODE 165
+
+2.3.2.21 CAN.NORMAL_MODE 165
+
+2.3.2.22 CAN.ONBUS 166
+
+2.3.2.23 CAN.RFIFOEMPTY 166
+
+2.3.2.24 CAN.RXING 166
+
+2.3.2.25 CAN.SELFTEST_MODE 166
+
+2.3.2.26 CAN.TFIFOEMPTY 167
+
+2.3.2.27 CAN.TRNASDONE 167
+
+2.3.2.28 CAN.TXING 167
+
+# 2.3.3 枚举类型说明 167
+
+2.3.3.1 enumErrortime 167
+
+2.3.3.2 enumErrortype 168
+
+2.3.3.3 enumErrorposition 168
+
+2.3.3.4 enumLosssposition 169
+
+# 2.3.4 函数说明 169
+
+2.3.4.1 CAN.GetlRQFlag() 169
+
+2.3.4.2 CAN.Init() 170
+
+2.3.4.3 CAN.Manual_Awake() 172
+
+2.3.4.4 CAN.ReadState() 173
+
+2.3.4.5 CAN.ReceiveMsg() 174
+
+2.3.4.6 CAN.Sleep() 175  2.3.4.7 CAN.StructInit() 176  2.3.4.8 EFF_ID.Filter() 177  2.3.4.9 ID1.Filter_Dual() 178  2.3.4.10 ID2.Filter_Dual() 179  2.3.4.11 My.CAN.Send.Msg() 181  2.3.4.12 SFF_ID.Filter() 182
+
+# 2.4 lks32mc08x.can.h 183
+
+# 2.5 include/ks32mc08x.cmp.h 文件参考 185
+
+# 2.5.1 详细描述 188
+
+# 2.5.2 宏定义说明 188
+
+2.5.2.1 CMP0 189  2.5.2.2 CMP0.SELP.IP0 189  2.5.2.3 CMP0.SELP.IP1 189  2.5.2.4 CMP0.SELP.IP2 189  2.5.2.5 CMP0.SELP.IP3 189  2.5.2.6 CMP0.SELP.IP4 190  2.5.2.7 CMP0.SELP.OPA0. IP 190  2.5.2.8 CMP0.SELP.OPA0. OUT 190  2.5.2.9 CMP0.SELP.OPA1. OUT 190  2.5.2.10 CMP0 190  2.5.2.11 CMP1. SELP.AVSS 191  2.5.2.12 CMP1. SELP.IP0 191  2.5.2.13 CMP1.SELP.IP1 191  2.5.2.14 CMP1.SELP.IP2 191  2.5.2.15 CMP1.SELP.IP3 191  2.5.2.16 CMP1.SELP.OPA2. OUT 192  2.5.2.17 CMP1.SELP.OPA3. IP 192  2.5.2.18 CMP1.SELP.OPA3. OUT 192  2.5.2.19 CMP.HYS.0mV 192  2.5.2.20 CMP.HYS.20mV 192  2.5.2.21 CMP.SELN.DAC 193  2.5.2.22 CMP.SELN.HALL.MID 193  2.5.2.23 CMP.SELN.IN 193  2.5.2.24 CMP.SELN.REF 193  2.5.2.25 SELN.CMP.IN 193  2.5.2.26 SELN.DAC 194  2.5.2.27 SELN.HALL.MID 194  2.5.2.28 SELN.REF 194  2.5.2.29 SELP.CMP.IP0 194  2.5.2.30 SELP.CMP.IP1 194  2.5.2.31 SELP.CMP.IP2 195
+
+2.5.2.32 SELPLCMP.IP3 195 2.5.2.33 SELPLCMP.IP4 195 2.5.2.34 SELPLCMP.OPA0IP 195 2.5.2.35 SELPLCMP.OPA0OUT 195 2.5.2.36 SELPLCMP.OPA1OUT 196 2.5.2.37 SELPLCMP.OPA2OUT 196 2.5.2.38 SELPLCMP.OPA3IP 196 2.5.2.39 SELPLCMP.OPA3OUT 196 2.5.3 函数说明 196 2.5.3.1 CMP.ClearIRQFlag() 196 2.5.3.2 CMP.GetIRQFlag() 197 2.5.3.3 CMP.Init() 198 2.5.3.4 CMP.StructInit() 200 2.6 lks32mc08x.cmp.h. 201 2.7 Include/lks32mc08x.dac.h 文件参考 202 2.7.1 详细描述 203 2.7.2 宏定义说明 203 2.7.2.1 DAC.RANGE_1V2 204 2.7.2.2 DAC.RANGE_3V0 204 2.7.2.3 DAC.RANGE_4V85 204 2.7.3 函数说明 204 2.7.3.1 DAC.Init() 204 2.7.3.2 DAC.OutputValue() 205 2.7.3.3 DAC.OutputVoltage() 206 2.7.3.4 DAC.StructInit() 207 2.8 lks32mc08x.dac.h 208 2.9 Include/lks32mc08x.dma.h 文件参考 209 2.9.1 详细描述 211 2.9.2 宏定义说明 211 2.9.2.1 DMA.BYTE_TRANS 211 2.9.2.2 DMA.CHO.ADC0_REQ.EN 212 2.9.2.3 DMA.CHO.EIF 212 2.9.2.4 DMA.CHO.FIF 212 2.9.2.5 DMA.CHO.TIMER0_REQ.EN 212 2.9.2.6 DMA.CHO.TIMER1.REQ.EN 212 2.9.2.7 DMA.CH1_EIF 213 2.9.2.8 DMA.CH1_FIF 213 2.9.2.9 DMA.CH1_MCPWM.REQ.EN 213 2.9.2.10 DMA.CH1_SPI_RX.REQ.EN 213 2.9.2.11 DMA.CH1_TIMER2.REQ.EN 213 2.9.2.12 DMA.CH2_EIF 214 2.9.2.13 DMA.CH2_FIF 214
+
+2.9.2.14 DMA.CH2.SPI_TX_REQ_EN 2142.9.2.15 DMA.CH2_TIMER3_REQ_EN 2142.9.2.16 DMA.CH2_UART0_REQ_EN 2142.9.2.17 DMA.CH3_CAN_REQ_EN 2152.9.2.18 DMA.CH3 EIF 2152.9.2.19 DMA.CH3_IF 2152.9.2.20 DMA.CH3_I2C_REQ_EN 2152.9.2.21 DMA.CH3_UART1_REQ_EN 2152.9.2.22 DMA.HALFWORD_TRANS 2162.9.2.23 DMA.TCIE 2162.9.2.24 DMA.TEIE 2162.9.2.25 DMA.WORD_TRANS 2162.9.2.26 MEMORY2PERI 2162.9.2.27 PER2MEMORY 2172.9.3 函数说明 2172.9.3.1 DMA.CHx_EN() 2172.9.3.2 DMA.ClearIRQFlag() 2182.9.3.3 DMA.GetIRQFlag() 2192.9.3.4 DMA.Init() 2212.9.3.5 DMA.StructInit() 2222.10 lks32mc08x.dma.h 2232.11 Include/lks32mc08x.dsp.h 文件参考 2242.11.1 详细描述 2252.11.2 枚举类型说明 2252.11.2.1 Arc.or.SinCFuction 2262.11.3 函数说明 2262.11.3.1 DSP.CalcCordic() 2262.11.3.2 DSP.CalcDivision() 2282.11.3.3 DSP.CalcSprt() 2282.11.3.4 DSP.Cmd() 2292.11.3.5 DSP.GetSqrt() 2302.12 lks32mc08x.dsp.h 2312.13 Include/lks32mc08x.exti.h 文件参考 2322.13.1 详细描述 2342.13.2 宏定义说明 2342.13.2.1 EXTI 2342.13.3 枚举类型说明 2342.13.3.1 EXTIMode_TypeDef 2342.13.4 函数说明 2352.13.4.1 EXTI.ClearIRQFlag() 2352.13.4.2 EXTI.GetIRQFlag() 2362.13.4.3 EXTI.Trigger_Config() 237
+
+2.14 lks32mc08x.exti.h 238
+
+2.15 Include/lks32MC08x.flash.h 文件参考 239
+
+2.15.1 详细描述 240
+
+2.15.2 宏定义说明 240
+
+2.15.2.1 Flash.MAIN 240 2.15.2.2 Flash.NVR 241
+
+2.15.3 函数说明 241
+
+2.15.3.1 EraseSector() 241
+
+2.15.3.2 ProgramPage() 242
+
+2.15.3.3 Read.More FLASH() 243
+
+2.15.4 变量说明 245
+
+2.15.4.1 erase.flag 245 2.15.4.2 program_flag 245
+
+2.16 lks32MC08x.flash.h 245
+
+2.17 Include/lks32mc08x.gpio.h 文件参考 245
+
+2.17.1 详细描述 248
+
+2.17.2 宏定义说明 249
+
+2.17.2.1 AF0_GPIO 249
+
+2.17.2.2 AF10.CAM 249
+
+2.17.2.3 AF11.SIF 249
+
+2.17.2.4 AF1_GYSAF 249
+
+2.17.2.5 AF2_HALL 249
+
+2.17.2.6 AF3_MCPWM 250
+
+2.17.2.7 AF4_HART 250
+
+2.17.2.8 AF5_SPI 250
+
+2.17.2.9 AF6_2C 250
+
+2.17.2.10 AF7_TIMER01 250
+
+2.17.2.11 AF8_TIMER23 251
+
+2.17.2.12 AF9_DEBUG 251
+
+2.17.2.13 GPIO0 251
+
+2.17.2.14 GPIO1 251
+
+2.17.2.15 GPIO2 251
+
+2.17.2.16 GPIO3 252
+
+2.17.2.17 GPIO_Pin_0 252
+
+2.17.2.18 GPIO_Pin_1 252
+
+2.17.2.19 GPIO_Pin_10 252
+
+2.17.2.20 GPIO_Pin_11 252
+
+2.17.2.21 GPIO_Pin_12 253
+
+2.17.2.22 GPIO_Pin_13 253
+
+2.17.2.23 GPIO_Pin_14 253
+
+2.17.2.24 GPIO_Pin_15 253
+
+2.17.2.25 GPIO_Pin_2 253
+
+2.17.2.26 GPIO.Pin.3. 254  2.17.2.27 GPIO.Pin.4. 254  2.17.2.28 GPIO.Pin.5. 254  2.17.2.29 GPIO.Pin.6. 254  2.17.2.30 GPIO Pin.7. 254  2.17.2.31 GPIO Pin.8. 255  2.17.2.32 GPIO Pin.9. 255  2.17.2.33 GPIO Pin ALL. 255  2.17.2.34 GPIO Pin NONE. 255  2.17.2.35 GPIO Pin Source.0. 255  2.17.2.36 GPIO Pin Source.1. 256  2.17.2.37 GPIO Pin Source.10. 256  2.17.2.38 GPIO Pin Source.11. 256  2.17.2.39 GPIO Pin Source.12. 256  2.17.2.40 GPIO Pin Source.13. 256  2.17.2.41 GPIO Pin Source.14. 257  2.17.2.42 GPIO Pin Source.15. 257  2.17.2.43 GPIO Pin Source.2. 257  2.17.2.44 GPIO Pin Source.3. 257  2.17.2.45 GPIO Pin Source.4. 257  2.17.2.46 GPIO Pin Source.5. 258  2.17.2.47 GPIO Pin Source.6. 258  2.17.2.48 GPIO Pin Source.7. 258  2.17.2.49 GPIO Pin Source.8. 258  2.17.2.50 GPIO Pin Source.9. 258  2.17.3 枚举类型说明. 258  2.17.3.1 BitAction. 258  2.17.3.2 GPIOMode.TypeDef. 259  2.17.3.3 GPIOPuPd.TypeDef. 259  2.17.4 函数说明. 259  2.17.4.1 GPIO_Init() 259  2.17.4.2 GPIO LockRegister() 261  2.17.4.3 GPIO PinAFConfig() 262  2.17.4.4 GPIO ReadInputData() 263  2.17.4.5 GPIO ReadInputDataBit() 264  2.17.4.6 GPIO ReadOutputData() 265  2.17.4.7 GPIO ReadOutputDataBit() 266  2.17.4.8 GPIO ResetBits() 267  2.17.4.9 GPIO SetBits() 268  2.17.4.10 GPIO StructInit() 270  2.17.4.11 GPIO UnlockRegister() 271  2.17.4.12 GPIO Write() 272
+
+# 2.17.4.13 GPIO.WriteBit() 273
+
+2.18 lks32mc08x.gpio.h 274
+
+2.19 Include/lks32mc08x.hall.h 文件参考 276
+
+2.19.1 详细描述 277
+
+2.19.2 宏定义说明 277
+
+2.19.2.1 HALL_CAPTURE_EVENT 278
+
+2.19.2.2 HALL_CLK_DIV1 278
+
+2.19.2.3 HALL_CLK_DIV2 278
+
+2.19.2.4 HALL_CLK_DIV4 278
+
+2.19.2.5 HALL_CLK_DIV8 278
+
+2.19.2.6 HALL_OVERFLOW_EVENT 279
+
+# 2.19.3 函数说明 279
+
+2.19.3.1 HALL_ClearIRQFlag() 279
+
+2.19.3.2 HALL_GetCaptureValue() 280
+
+2.19.3.3 HALL_GetCount() 281
+
+2.19.3.4 HALL_GetFilterValue() 282
+
+2.19.3.5 HALL_GetIRQFlag() 283
+
+2.19.3.6 HALL_Init() 284
+
+2.19.3.7 HALL_Structinit() 285
+
+2.19.3.8 HALL_WIDCount() 286
+
+2.20 lks32mc08x.hall.h 287
+
+2.21 Include/lks32mc08x.i2c.h 文件参考 288
+
+2.21.1 详细描述 289
+
+2.21.2 函数说明 289
+
+2.21.2.1 i2c.dna_init() 290
+
+2.21.2.2 i2c.dna_rx() 291
+
+2.21.2.3 i2c.dna_state_over() 292
+
+2.21.2.4 i2c.dna_tx() 293
+
+2.21.2.5 i2c.init() 295
+
+2.21.2.6 i2c.ReadData() 296
+
+2.21.2.7 i2c.SendData() 297
+
+2.21.2.8 i2c.Structinit() 298
+
+2.22 lks32mc08x.i2c.h 299
+
+2.23 Include/lks32mc08x.iwdg.h 文件参考 300
+
+2.23.1 详细描述 301
+
+2.23.2 宏定义说明 301
+
+2.23.2.1 WDT.RTH.2S 301
+
+2.23.2.2 WDT.RTH.4S 301
+
+2.23.2.3 WDT.RTH.64S 302
+
+2.23.2.4 WDT.RTH.8S 302
+
+2.23.3 函数说明 302
+
+2.23.3.1 IWDG.DISABLE() 302
+
+2.23.3.2 IWDG.ENABLE() 303  2.23.3.3 IWDG.Feed() 304  2.23.3.4 IWDG.Init() 305  2.23.3.5 IWDG.StrutInit() 306  2.24 Iks32mc08x.iwdg.h 307  2.25 Include/Iks32mc08x.lib.h 文件参考 307  2.25.1 详细描述 308  2.26 Iks32mc08x.lib.h 309  2.27 Include/Iks32mc08x.mcpwm.h 文件参考 309  2.27.1 详细描述 312  2.27.2 宏定义说明 313  2.27.2.1 CENTRAL_PWM_MODE 313  2.27.2.2 EDGE_PWM_MODE 313  2.27.2.3 FAIL_SEL_CMP 313  2.27.2.4 FAIL_SEL_IO 313  2.27.2.5 HIGH_LEVEL 314  2.27.2.6 HIGH_LEVEL_ACTIVE 314  2.27.2.7 LOW_LEVEL 314  2.27.2.8 LOW_LEVEL_ACTIVE 314  2.27.2.9 MCPWM_CH0_SHORT_IRQ_EN 314  2.27.2.10 MCPWM_CH0_SHORT_IRQ_IF 315  2.27.2.11 MCPWM_CH1_SHORT_IRQ_EN 315  2.27.2.12 MCPWM_CH1_SHORT_IRQ_IF 315  2.27.2.13 MCPWM_CH2_SHORT_IRQ_EN 315  2.27.2.14 MCPWM_CH2_SHORT_IRQ_IF 315  2.27.2.15 MCPWM_CH3_SHORT_IRQ_EN 316  2.27.2.16 MCPWM_CH3_SHORT_IRQ_IF 316  2.27.2.17 MCPWM_FAIL0_IRQ_EN 316  2.27.2.18 MCPWM_FAIL0_IRQ_IF 316  2.27.2.19 MCPWM_FAIL1_IRQ_EN 316  2.27.2.20 MCPWM_FAIL1_IRQ_IF 317  2.27.2.21 MCPWM MOE DISABLE_MASK 317  2.27.2.22 MCPWM MOE_ENABLE_MASK 317  2.27.2.23 MCPWM SHADE_IRQ_EN 317  2.27.2.24 MCPWM SHADE_IRQ_IF 317  2.27.2.25 MCPWM_TO_IRQ_EN 318  2.27.2.26 MCPWM_TO_IRQ_IF 318  2.27.2.27 MCPWM_T1_IRQ_EN 318  2.27.2.28 MCPWM_T1_IRQ_IF 318  2.27.2.29 MCPWM_TH00_IRQ_EN 318  2.27.2.30 MCPWM_TH00_IRQ_IF 319  2.27.2.31 MCPWM_TH01_IRQ_EN 319
+
+2.27.2.32 MCPWM_TH01_IRQ.IF 3192.27.2.33 MCPWM_TH10_IRQ.EN 3192.27.2.34 MCPWM_TH10_IRQ.IF 3192.27.2.35 MCPWM_TH11_IRQ.EN 3202.27.2.36 MCPWM_TH11_IRQ.IF 3202.27.2.37 MCPWM_TH20_IRQ.EN 3202.27.2.38 MCPWM_TH20_IRQ.IF 3202.27.2.39 MCPWM_TH21_IRQ.EN 3202.27.2.40 MCPWM_TH21_IRQ.IF 3212.27.2.41 MCPWM_TH30_IRQ.EN 3212.27.2.42 MCPWM_TH30_IRQ.IF 3212.27.2.43 MCPWM_TH31_IRQ.EN 3212.27.2.44 MCPWM_TH31_IRQ.IF 3212.27.2.45 MCPWM_TMR0_IRQ.EN 3222.27.2.46 MCPWM_TMR0_IRQ.IF 3222.27.2.47 MCPWM_TMR1_IRQ.EN 3222.27.2.48 MCPWM_TMR1_IRQ.IF 3222.27.2.49 MCPWM_TMR2_IRQ.EN 3222.27.2.50 MCPWM_TMR2_IRQ.IF 3232.27.2.51 MCPWM_TMR3_IRQ.EN 3232.27.2.52 MCPWM_TMR3_IRQ.IF 3232.27.2.53 MCPWM_UPDATE_REG 3232.27.3 函数说明 3232.27.3.1 MCPWM.ClearIRQFlag() 3232.27.3.2 MCPWM.GetIRQFlag() 3252.27.3.3 MCPWM_Init() 3272.27.3.4 MCPWM_Structinit() 3282.27.3.5 PWMOutputs() 3292.28 lks32mc08x_mcpwm.h 3302.29 Include/lks32mc08x_nvr.h 文件参考 3322.29.1 详细描述 3332.29.2 函数说明 3342.29.2.1 Read.NVR() 3342.29.2.2 Read.Trim() 3342.30 lks32mc08x_nvr.h 3352.31 Include/lks32mc08x_opa.h 文件参考 3352.31.1 详细描述 3362.31.2 宏定义说明 3372.31.2.1 PGA.GAIN.20 3372.31.2.2 PGA.GAIN.4P25 3372.31.2.3 PGA.GAIN.6 3372.31.2.4 PGA.GAIN.9P5 337
+
+# 2.31.3 枚举类型说明 337
+
+2.31.3.1 enumOPA 337
+
+# 2.31.4 函数说明 338
+
+2.31.4.1 OPA.init() 338  2.31.4.2 OPA.OUT() 339  2.31.4.3 OPAStructinit() 340
+
+2.32 lks32mc08x_opa.h 341
+
+# 2.33 Include/lks32mc08x.spi.h 文件参考 341
+
+2.33.1 详细描述 343
+
+# 2.33.2 宏定义说明 343
+
+2.33.2.1 SPI.DMA DISABLE 344  2.33.2.2 SPI.DMA_ENABLE 344  2.33.2.3 SPI.PIRSTSENDLSB 344  2.33.2.4 SPI.PIRSTSEND.MSB 344  2.33.2.5 SPI.IF.DataOver 344  2.33.2.6 SPI.IF.SSErr 345  2.33.2.7 SPI.IF.TranDone 345  2.33.2.8 SPI.IRQEna.DataOver 345  2.33.2.9 SPI.IRQEna.Enable 345  2.33.2.10 SPI.IRQEna.SSErr 345  2.33.2.11 SPI.IRQEna.TranDone 346
+
+# 2.33.3 枚举类型说明 346
+
+2.33.3.1 SPI.Duplex 346  2.33.3.2 SPI.Mode 346
+
+# 2.33.4 函数说明 346
+
+2.33.4.1 SPI.ClearIRQFlag() 347  2.33.4.2 SPI.GetIRQFlag() 348  2.33.4.3 SPI.init() 349  2.33.4.4 SPI.ReadData() 350  2.33.4.5 SPI.SendData() 351  2.33.4.6 SPI.Structinit() 352
+
+# 2.34 lks32mc08x.spi.h 353
+
+# 2.35 Include/lks32mc08x.sys.h 文件参考 354
+
+# 2.35.1 详细描述 358
+
+# 2.35.2 宏定义说明 358
+
+2.35.2.1 SYS.AnalogModule_ADC 358  2.35.2.2 SYS.AnalogModule.BGP 358  2.35.2.3 SYS.AnalogModule.CMP0 359  2.35.2.4 SYS.AnalogModule.CMP1 359  2.35.2.5 SYS.AnalogModule.DAC 359  2.35.2.6 SYS.AnalogModule.OPA0 359  2.35.2.7 SYS.AnalogModule.OPA1 359
+
+2.35.2.8 SYS_AnalogModule.OPA2. 360  2.35.2.9 SYS_AnalogModule.OPA3. 360  2.35.2.10 SYS_AnalogModule.PLL 360  2.35.2.11 SYS_AnalogModule.RCH 360  2.35.2.12 SYS_AnalogModule.TMP 360  2.35.2.13 SYS_AnalogModule.XTAL 361  2.35.2.14 SYS_Clk_SPIDiv1 361  2.35.2.15 SYS_Clk_SPIDiv2 361  2.35.2.16 SYS_Clk_SPIDiv4 361  2.35.2.17 SYS_Clk_SPIDiv8 361  2.35.2.18 SYS_Clk_UARTDiv1 362  2.35.2.19 SYS_Clk_UARTDiv2 362  2.35.2.20 SYS_Clk_UARTDiv4 362  2.35.2.21 SYS_Clk_UARTDiv8 362  2.35.2.22 SYS_Module_CAN 362  2.35.2.23 SYS_Module_DSP 363  2.35.2.24 SYS_Module_HALL 363  2.35.2.25 SYS_Module_I2C 363  2.35.2.26 SYS_Module_MCPWM 363  2.35.2.27 SYS_Module_SPI 363  2.35.2.28 SYS_Module_TIMER 364  2.35.2.29 SYS_Module_UART0 364  2.35.2.30 SYS_Module_UART1 364  2.35.2.31 SYS_PLLREDIV.1 364  2.35.2.32 SYS_PLLREDIV.4 364  2.35.2.33 SYS.PLLSRSEL.CRYSTAL 365  2.35.2.34 SYS_PLLLSRSEL.RCH 365  2.35.2.35 SYS_RstSrc.HPOR 365  2.35.2.36 SYS_RstSrc.KEYBOARD 365  2.35.2.37 SYS_RstSrc.LPOR 365  2.35.2.38 SYS_RstSrc.WDT 366  2.35.2.39 SYS_Wakelntrval.025s 366  2.35.2.40 SYS_Wakelntrval.05s 366  2.35.2.41 SYS_Wakelntrval.16s 366  2.35.2.42 SYS_Wakelntrval.1s 366  2.35.2.43 SYS_Wakelntrval.2s 367  2.35.2.44 SYS_Wakelntrval.32s 367  2.35.2.45 SYS_Wakelntrval.4s 367  2.35.2.46 SYS_Wakelntrval.8s 367  2.35.2.47 SYS_WD_TimeOut2s 367  2.35.2.48 SYS_WD_TimeOut4s 368  2.35.2.49 SYS_WD_TimeOut64s 368
+
+2.35.2.50 SYS_WD_TimeOut8s 3682.35.2.51 WAKEIO_P0.0 3682.35.2.52 WAKEIO_P0.1 3682.35.2.53 WAKEIO_P1.0 3692.35.2.54 WAKEIO_P1.1 3692.35.3 枚举类型说明 3692.35.3.1 enumWakeTrigLevel 3692.35.4 函数说明 3692.35.4.1 DSP_Init() 3692.35.4.2 SetWakeIO() 3712.35.4.3 Switch2HRC() 3722.35.4.4 Switch2PLL() 3732.35.4.5 SYS_AnalogModuleClockCmd() 3742.35.4.6 SYS_ClearRst() 3762.35.4.7 SYS_FallSleep() 3772.35.4.8 SYS_FeedDog() 3782.35.4.9 SYS_GetRstSource() 3792.35.4.10 SYS_Init() 3802.35.4.11 SYS_ModuleClockCmd() 3812.35.4.12 SYS_SetWakeInterval() 3832.35.4.13 SYS_SoftResetModule() 3842.35.4.14 SYS_StructInit() 3862.35.4.15 SYS_WatchDogCmd() 3872.36 lks32mc08x_sys.h 3882.37 Include/lks32mc08x_tim.h 文件参考 3902.37.1 详细描述 3932.37.2 宏定义说明 3932.37.2.1 ECD_Clk_Div1 3932.37.2.2 ECD_Clk_Div2 3932.37.2.3 ECD_Clk_Div4 3942.37.2.4 ECD_Clk_Div8 3942.37.2.5 ECD_IF_OVERFLOW 3942.37.2.6 ECD_IF_UNDERFLOW 3942.37.2.7 ECD_HQEna_None 3942.37.2.8 ECD_HQEna_Overflow 3952.37.2.9 ECD_HQEna_UnderFlow 3952.37.2.10 ECD_Mode_CCWCW 3952.37.2.11 ECD_Mode_CCWCW_UpDown 3952.37.2.12 ECD_Mode_CCWSIGN 3952.37.2.13 ECD_Mode_CCWSIGN_UpDown 3962.37.2.14 ECD_Mode_T1 3962.37.2.15 ECD_Mode_T1_T2 396
+
+2.37.2.16 TIM.Clk.Div1 3962.37.2.17 TIM.Clk.Div2 3962.37.2.18 TIM.Clk.Div4 3972.37.2.19 TIM.Clk.Div8 3972.37.2.20 TIMER.CapMode.Fall 3972.37.2.21 TIMER.CapMode.None 3972.37.2.22 TIMER.CapMode.Rise 3972.37.2.23 TIMER.CapMode.RiseFall 3982.37.2.24 TIMER.IF_CH0 3982.37.2.25 TIMER.IF_CH1 3982.37.2.26 TIMER.IF_ZERO 3982.37.2.27 TIMER.OPMode.CAP 3982.37.2.28 TIMER.OPMode.CMP 3992.37.3 枚举类型说明 3992.37.3.1 Timer.IRQEnaDef 3992.37.4 函数说明 3992.37.4.1 ECD.ClearIRQFlag() 3992.37.4.2 ECD.GetIRQFlag() 4002.37.4.3 TIM.ClearIRQFlag() 4012.37.4.4 TIM.ECD.GetCount() 4022.37.4.5 TIM.ECDCmd() 4032.37.4.6 TIM.ECDInit() 4042.37.4.7 TIM.ECDStructInit() 4062.37.4.8 TIM.GetIRQFlag() 4072.37.4.9 TIM.Timer.GetCMPT0() 4082.37.4.10 TIM.Timer.GetCMPT1() 4092.37.4.11 TIM.Timer.GetCount() 4102.37.4.12 TIM.TimerCmd() 4112.37.4.13 TIM.TimerInit() 4122.37.4.14 TIM.TimerStrutInit() 4132.38 lks32mc08x.tim.h 4142.39 Include/lks32mc08x.tmp.h 文件参考 4162.39.1 详细描述 4172.39.2 函数说明 4172.39.2.1 GetCurrentTemperature() 4172.39.2.2 TempSensor.Init() 4182.40 lks32mc08x.tmp.h 4192.41 Include/lks32mc08x.uart.h 文件参考 4202.41.1 详细描述 4222.41.2 宏定义说明 4222.41.2.1 UART_FIRSTSENDLSB 4232.41.2.2 UART_FIRSTSENDMSB 423
+
+2.41.2.3 UART_IF_CheckError 4232.41.2.4 UART_IF_RcvOver 4232.41.2.5 UART_IF_SendBufEmpty 4232.41.2.6 UART_IF_SendOver 4242.41.2.7 UART_IF_StopError 4242.41.2.8 UART_IRQEna_CheckError 4242.41.2.9 UART_IRQEna_RcvOver 4242.41.2.10 UART_IRQEna_RX_DMA_RE 4242.41.2.11 UART_IRQEna_SendBufEmpty 4252.41.2.12 UART_IRQEna_SendOver 4252.41.2.13 UART_IRQEna_StopError 4252.41.2.14 UART_IRQEna_TX_BUF_DMA_RE 4252.41.2.15 UART_IRQEna_TX_DMA_RE 4252.41.2.16 UART_STOPBITS_1b 4262.41.2.17 UART_STOPBITS_2b 4262.41.2.18 UART_WORDLENGTH_7b 4262.41.2.19 UART_WORDLENGTH_8b 4262.41.3 枚举类型说明 4262.41.3.1 UART_ParyMode 4262.41.4 函数说明 4272.41.4.1 UART_ClearIRQFlag() 4272.41.4.2 UART_GetIRQFlag() 4282.41.4.3 UART_Init() 4292.41.4.4 UART_ReadData() 4312.41.4.5 UART_SendAddr_485() 4322.41.4.6 UART_SendData() 4332.41.4.7 UART_SendData_485() 4342.41.4.8 UART_Structinit() 4352.42 lks32mc08x.uart.h 4362.43 Source/lks32mc08x.adc.c 文件参考 4372.43.1 详细描述 4382.43.2 函数说明 4382.43.2.1 ADC_ChannelConfig() 4382.43.2.2 ADC_ClearIRQFlag() 4392.43.2.3 ADC_GetConversionValue() 4412.43.2.4 ADC_GetIRQFlag() 4422.43.2.5 ADC_Init() 4432.43.2.6 ADC_SoftTrgEN() 4442.43.2.7 ADC_Structinit() 4452.44 lks32mc08x.adc.c 4462.45 Source/lks32mc08x.can.c 文件参考 4492.45.1 详细描述 450
+
+# 2.45.2 函数说明 450
+
+2.45.2.1 CAN.GetIRQFlag() 4502.45.2.2 CAN.Init() 4512.45.2.3 CAN.Manual_Awake() 4532.45.2.4 CAN.ReadALC() 4542.45.2.5 CAN.ReadErrorCode() 4552.45.2.6 CAN.ReadRXERRCNT() 4562.45.2.7 CAN.ReadState() 4572.45.2.8 CAN.ReadTXERRCNT() 4592.45.2.9 CAN.ReceFramInfor() 4602.45.2.10 CAN.ReceiveMsg() 4612.45.2.11 CAN.Sleep() 4622.45.2.12 CAN.StructInit() 4632.45.2.13 EFF_ID_Filter() 4642.45.2.14 ID1_Filter_Dual() 4652.45.2.15 ID2_Filter_Dual() 4662.45.2.16 My_CAN_SendMsg() 4682.45.2.17 SFF_ID_Filter() 4692.46 lks32mc08x.can.c 4702.47 Source/lks32mc08x.cmp.c 文件参考 4742.47.1 详细描述 4752.47.2 函数说明 4752.47.2.1 CMP.ClearIRQFlag() 4752.47.2.2 CMP.GetIRQFlag() 4762.47.2.3 CMP.Init() 4772.47.2.4 CMP.StructInit() 4792.48 lks32mc08x.cmp.c 4802.49 Source/lks32mc08x.dac.c 文件参考 4812.49.1 详细描述 4822.49.2 函数说明 4822.49.2.1 DAC.Init() 4822.49.2.2 DAC.OutputValue() 4832.49.2.3 DAC.OutputVoltage() 4842.49.2.4 DAC.StructInit() 4852.50 lks32mc08x.dac.c 4862.51 Source/lks32mc08x.dna.c 文件参考 4872.51.1 详细描述 4882.51.2 函数说明 4892.51.2.1 DMA.CHx.EN() 4892.51.2.2 DMA.ClearIRQFlag() 4902.51.2.3 DMA.GetIRQFlag() 4912.51.2.4 DMA.Init() 492
+
+2.51.2.5 DMA.StructInit() 4942.52 lks32mc08x.dma.c 4952.53 Source/lks32mc08x.dsp.c 文件参考 4962.53.1 详细描述 4972.53.2 函数说明 4972.53.2.1 DSP.CalcCordic() 4972.53.2.2 DSP.CalcDivision() 4992.53.2.3 DSP.CalcSprt() 4992.53.2.4 DSP.Cmd() 5012.53.2.5 DSP.GetSqrt() 5022.53.3 变量说明 5032.53.3.1 dsp.fg 5032.54 lks32mc08x.dsp.c 5042.55 Source/lks32mc08x.exti.c 文件参考 5052.55.1 详细描述 5062.55.2 函数说明 5072.55.2.1 EXTI.ClearIRQFlag() 5072.55.2.2 EXTI.GetIRQFlag() 5082.55.2.3 EXTI.Trigger.Config() 5092.56 lks32mc08x.exti.c 5102.57 Source/lks32MC08x_flash.c 文件参考 5112.57.1 详细描述 5112.57.2 函数说明 5122.57.2.1 EraseSector() 5122.57.2.2 ProgramPage() 5132.57.2.3 ReadFlash() 5142.57.2.4 ReadMoreFlash() 5162.57.3 变量说明 5172.57.3.1 erase_flag 5172.57.3.2 program_flag 5172.58 lks32MC08x_flash.c 5182.59 Source/lks32mc08x.gpio.c 文件参考 5192.59.1 详细描述 5212.59.2 函数说明 5212.59.2.1 GPIO.Init() 5212.59.2.2 GPIO.LockRegister() 5222.59.2.3 GPIO.PinAConfig() 5232.59.2.4 GPIO.ReadInputData() 5252.59.2.5 GPIO.ReadInputDataBit() 5262.59.2.6 GPIO.ReadOutputData() 5272.59.2.7 GPIO.ReadOutputDataBit() 5282.59.2.8 GPIO.ResetBits() 529
+
+2.59.2.9 GPIO_SetBits() 530  2.59.2.10 GPIO_StructInit() 531  2.59.2.11 GPIO_UnlockRegister() 532  2.59.2.12 GPIO.Write() 533  2.59.2.13 GPIO.WriteBit() 534
+
+2.60 lks32mc08x.gpio.c 535
+
+2.61 Source/lks32mc08x.hall.c 文件参考 539
+
+2.61.1 详细描述 539
+
+2.61.2 函数说明 540
+
+2.61.2.1 HALL_ClearIRQFlag() 540  2.61.2.2 HALL_GetCaptureValue() 541  2.61.2.3 HALL_GetCount() 542  2.61.2.4 HALL_GetFilterValue() 543  2.61.2.5 HALL_GetIRQFlag() 544  2.61.2.6 HALL_Init() 545  2.61.2.7 HALL_StructInit() 546  2.61.2.8 HALL_WIDCount() 547
+
+2.62 lks32mc08x.hall.c 548
+
+2.63 Source/lks32mc08x.i2c.c 文件参考 549
+
+2.63.1 详细描述 550  2.63.2 函数说明 550
+
+2.63.2.1 i2c.dna_delay.over() 551  2.63.2.2 i2c.dna.init() 552  2.63.2.3 i2c.dna.rx() 553  2.63.2.4 i2c.dna.state.over() 555  2.63.2.5 i2c.dna.state.start() 556  2.63.2.6 i2c.dna.tx() 557  2.63.2.7 i2c.init() 558  2.63.2.8 i2C.ReadData() 560  2.63.2.9 i2C.SendData() 561  2.63.2.10 i2C.StructInit() 562
+
+2.63.3 变量说明 562  2.63.3.1 i2c.dna.state 563
+
+2.64 lks32mc08x.i2c.c 563
+
+2.65 Source/lks32mc08x.iwdg.c 文件参考 565
+
+2.65.1 详细描述 565
+
+2.65.2 函数说明 566
+
+2.65.2.1 IWDG.DISABLE() 566  2.65.2.2 IWDG.ENABLE() 567  2.65.2.3 IWDG.Feed() 568  2.65.2.4 IWDG.Init() 569  2.65.2.5 IWDG.StructInit() 570
+
+2.66 lks32mc08x.iwdg.c 571
+
+2.67 Source/lks32mc08x.mcpwm.c 文件参考 572
+
+2.67.1 详细描述 572
+
+2.67.2 函数说明 573
+
+2.67.2.1 MCPWM.ClearIRQFlag() 573  2.67.2.2 MCPWM.SetIRQFlag() 575  2.67.2.3 MCPWM.Init() 577  2.67.2.4 MCPWM.StructInit() 578  2.67.2.5 PWMOutputs() 579
+
+2.68 lks32mc08x.mcpwm.c 580
+
+2.69 Source/lks32mc08x.opa.c 文件参考 583
+
+2.69.1 详细描述 583
+
+2.69.2 函数说明 584
+
+2.69.2.1 OPA_Init() 584  2.69.2.2 OPA_OUT() 585  2.69.2.3 OPA_StructInit() 586
+
+2.70 lks32mc08x.opa.c 587
+
+2.71 Source/lks32mc08x.spi.c 文件参考 588
+
+2.71.1 详细描述 589
+
+2.71.2 函数说明 589
+
+2.71.2.1 SPI.ClearIRQFlag() 589
+
+2.71.2.2 SPI.GetIRQFlag() 590
+
+2.71.2.3 SPI.Init() 591
+
+2.71.2.4 SPI.ReadData() 593
+
+2.71.2.5 SPI.SendData() 594
+
+2.71.2.6 SPI.StructInit() 595
+
+2.72 lks32mc08x.spi.c 596
+
+2.73 Source/lks32mc08x.sys.c 文件参考 597
+
+2.73.1 详细描述 598
+
+2.73.2 函数说明 598
+
+2.73.2.1 DSP.Init() 598
+
+2.73.2.2 SetWakeO() 600
+
+2.73.2.3 SoftDelay() 601
+
+2.73.2.4 Switch2HRC() 602
+
+2.73.2.5 Switch2PLL() 603
+
+2.73.2.6 SYS.AnalogModuleClockCmd() 604
+
+2.73.2.7 SYS.ClearRst() 606
+
+2.73.2.8 SYS.EnablePORFilter() 607
+
+2.73.2.9 SYS.FallSleep() 608
+
+2.73.2.10 SYS.FeedDog() 609
+
+2.73.2.11 SYS.GetRstSource() 610
+
+2.73.2.12 SYS.Init() 611
+
+2.73.2.13 SYS_ModuleClockCmd() 6122.73.2.14 SYS.SetWakeInterval() 6142.73.2.15 SYS.SoftResetModule() 6152.73.2.16 SYS.StructInit() 6172.73.2.17 SYS.WatchDogCmd() 6182.73.3 变量说明 6192.73.3.1 WAKE_InitStruct 6192.74 lks32mc08x.sys.c 6202.75 Source/lks32mc08x.tim.c 文件参考 6222.75.1 详细描述 6232.75.2 函数说明 6242.75.2.1 ECD.ClearIRQFlag() 6242.75.2.2 ECD.GetIRQFlag() 6252.75.2.3 TIM.ClearIRQFlag() 6262.75.2.4 TIM.ECD.GetCount() 6272.75.2.5 TIM.ECDCmd() 6282.75.2.6 TIM.ECDInit() 6292.75.2.7 TIM.ECDStructInit() 6312.75.2.8 TIM.GetIRQFlag() 6322.75.2.9 TIM.Timer.GetCMPT0() 6332.75.2.10 TIM.Timer.GetCMPT1() 6342.75.2.11 TIM.Timer.GetCount() 6352.75.2.12 TIM.TimerCmd() 6362.75.2.13 TIM.TimerInit() 6372.75.2.14 TIM.TimerStrutInit() 6382.76 lks32mc08x.tim.c 6392.77 Source/lks32mc08x.tmp.c 文件参考 6432.77.1 详细描述 6442.77.2 函数说明 6452.77.2.1 GetCurrentTemperature() 6452.77.2.2 TempSensor.Init() 6462.77.3 变量说明 6472.77.3.1 m_TemperatureCof 6472.78 lks32mc08x.tmp.c 6472.79 Source/lks32mc08x.uart.c 文件参考 6482.79.1 详细描述 6482.79.2 函数说明 6492.79.2.1 UART.ClearIRQFlag() 6492.79.2.2 UART.GetIRQFlag() 6502.79.2.3 UART.Init() 6512.79.2.4 UART.ReadData() 6532.79.2.5 UART.SendAddr.485() 654
+
+2.79.2.6 UART_SendData() 655  2.79.2.7 UART_SendData_485() 656  2.79.2.8 UART_StructInit() 657  2.80 lks32mc08x.uart.c 658
+
+# Index
+
+661
+
+# 0.1 结构体
+
+这里列出了所有结构体，并附带简要说明：
+
+ADC_InitTypeDefADC初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参ADC_TypeDefADC寄存器结构体句柄CAN_InitTypeDefCAN结构体基地址定义CAN-TypeTypeDefCAN寄存器结构体句柄CMP_InitTypeDefCMP初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参CMP-TypeTypeDefCMP寄存器结构体句柄DAC_InitTypeDefDMA_InitTypeDefDMA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参DMA_RegTypeDefDAM通道0结构体基地址定义EXTI_TypeDefEXTI寄存器结构体句柄GPIO_InitTypeDefGPIO功能配置结构体句柄GPIO_TypeDefGPIO寄存器结构体句柄HALL_InitTypeDefHALL结构体基地址定义HALL_TypeDefHALL寄存器结构体句柄I2C_InitTypeDefI2C结构体基地址定义I2C_TypeDefI2C寄存器结构体句柄IWDG_InitTypeDefIWDG寄存器结构体句柄MCPWM_InitTypeDefMCPWM初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参OPA_InitTypeDefOPA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参SPI_InitTypeDefSPI结构体基地址定义SPI_TypeDefSPI寄存器结构体句柄stru.CondicComponents三角函数运算结构体句柄stru.DiviComponents除法运算结构体句柄Stru.TempertureCof.Def芯片内置温度传感器初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参SYS_InitTypeDef系统初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参TIM.ECDInitTypeDefTIM.ECDTypeDef编码器寄存器结构体句柄TIM.TimerInitTypeDef
+
+TIM_TimerTypeDef定时器寄存器结构体句柄 115UART_InitTypeDefUART初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参 117UART_TypeDefUART寄存器结构体句柄 121WAKE_InitTypeDef低功耗时钟配置中间变量 123
+
+# 0.2 文件列表
+
+这里列出了所有文件，并附带简要说明：
+
+Include/lks32mc08x.adc.h文件名称：lks32mc08x.adc.h文件标识：无内容摘要：ADC驱动头文件其它说明：无125Include/lks32mc08x.can.h文件名称：lks32mc08x.can.h文件标识：无内容摘要：CAN外设驱动程序头文件其它说明：无158Include/lks32mc08x.cmp.h文件名称：lks32mc08x.cmp.h文件标识：无内容摘要：CMP外设驱动程序头文件其它说明：无185Include/lks32mc08x.dac.h文件名称：lks32mc08x.dac.h文件标识：无内容摘要：DAC外设驱动程序头文件其它说明：无202Include/lks32mc08x.dma.h文件名称：lks32mc08x.dma.h文件标识：无内容摘要：DMA外设驱动程序头文件其它说明：无209Include/lks32mc08x.dsp.h文件名称：lks32mc08x.dsp.h文件标识：无内容摘要：DSP驱动头文件其它说明：无224Include/lks32mc08x.exti.h文件名称：lks32mc08x.exti.h文件标识：无内容摘要：EXTI外部中断驱动头文件其它说明：无232
+
+Include/lks32MC08x flash.h文件名称：LKS32MC_08x flash.h文件标识：无内容摘要：FLASH外设驱动程序其它说明：无239Include/lks32mc08x.gpio.h文件名称：lks32mc08x.gpio.h文件标识：无内容摘要：GPIC外设驱动程序头文件其它说明：无245Include/lks32mc08x.hall.h文件名称：lks32mc08x.hall.h文件标识：无内容摘要：HALL驱动头文件其它说明：无276Include/lks32mc08x.i2c.h文件名称：lks32mc08x.i2c.h文件标识：无内容摘要：I2C驱动头文件其它说明：无288Include/lks32mc08x.iwdg.h文件名称：lks32mc08x.iWDG.h文件标识：无内容摘要：看门狗驱动头文件其它说明：无300Include/lks32mc08x.lib.h文件名称：LKS32MC08x.lib.h文件标识：无内容摘要：LIB库函数头文件其它说明：无307Include/lks32mc08x.mcpwm.h文件名称：lks32mc08x.mcpwm.h文件标识：无内容摘要：mcpwm驱动头文件其它说明：无309Include/lks32mc08x.nvr.h文件名称：lks32mc08x.nvr.h文件标识：无内容摘要：NVR驱动头文件其它说明：无332Include/lks32mc08x.opa.h文件名称：lks32mc08x.opa.h文件标识：无内容摘要：OPA驱动头文件其它说明：无335
+
+Include/lks32mc08x.spi.h文件名称：lks32mc08x.spi.h文件标识：无内容摘要：SPI驱动头文件其它说明：无341Include/lks32mc08x.sys.h文件名称：lks32mc08x.sys.h文件标识：无内容摘要：sys驱动头文件其它说明：无354Include/lks32mc08x.tim.h文件名称：lks32mc08x.tim.h文件标识：无内容摘要：TIM驱动头文件其它说明：无390Include/lks32mc08x.tmp.h文件名称：lks32mc08x.tmp.h文件标识：无内容摘要：芯片内置温度传感器驱动头文件其它说明：无416Include/lks32mc08x.uart.h文件名称：lks32mc08x.uart.h文件标识：无内容摘要：UART驱动头文件其它说明：无420Source/lks32mc08x.adc.c文件名称：lks32mc08x.adc.c文件标识：无内容摘要：ADC外设驱动程序其它说明：无437Source/lks32mc08x.can.c文件名称：lks32mc08x.can.c文件标识：无内容摘要：CAN外设驱动程序其它说明：无449Source/lks32mc08x.cmp.c文件名称：lks32mc08x.cmp.c文件标识：无内容摘要：cmp外设驱动程序其它说明：无474Source/lks32mc08x.dac.c文件名称：LKSS2MC08x.dac.c文件标识：无内容摘要：DAC外设驱动程序其它说明：无481
+
+Source/lks32mc08x.dma.c文件名称：LKS32MC08x.dma.c文件标识：无内容摘要：DMA外设驱动程序其它说明：无487Source/lks32mc08x.dsp.c文件名称：lks32mc08x.dsp.c文件标识：无内容摘要：DSP驱动程序其它说明：无498Source/lks32mc08x.exti.c文件名称：lks32mc08x.exti.c文件标识：无内容摘要：EXTI外设驱动程序其它说明：无505Source/lks32MC08x.flash.c文件名称：lks32mc08x.flash.c文件标识：无内容摘要：FLASH外设驱动程序其它说明：无511Source/lks32mc08x.gpio.c文件名称：lks32mc08x.gpio.c文件标识：无内容摘要：GPIC外设驱动程序其它说明：无519Source/lks32mc08x.hall.c文件名称：lks32mc08x.hall.c文件标识：无内容摘要：HALL外设驱动程序其它说明：无539Source/lks32mc08x.i2c.c文件名称：lks32mc08x.i2c.c文件标识：无内容摘要：I2C外设驱动程序其它说明：无549Source/lks32mc08x.iwdg.c文件名称：lks32mc08x.IWDG.c文件标识：无内容摘要：IWDG外设驱动程序其它说明：无565Source/lks32mc08x.mcpwm.c文件名称：lks32mc08x.mcpwm.c文件标识：无内容摘要：MCPWM外设驱动程序其它说明：无572
+
+Source/lks32mc08x. opa.c文件名称：lks32mc08x. opa.c文件标识：无内容摘要：OPA运放外设驱动程序其它说明：无583Source/lks32mc08x. spi.c文件名称：lks32mc08x. spi.c文件标识：无内容摘要：SPI外设驱动程序其它说明：无588Source/lks32mc08x. sys.c文件名称：lks32mc08x. sys.c文件标识：无内容摘要：SYS外设驱动程序其它说明：无597Source/lks32mc08x. tim.c文件名称：lks32mc08x. tim.c文件标识：无内容摘要：定时器外设驱动程序其它说明：无622Source/lks32mc08x. tmp.c文件名称：lks32mc08x. tmp.c文件标识：无内容摘要：芯片内置温度传感器外设驱动程序其它说明：无643Source/lks32mc08x. uart.c文件名称：lks32mc08x. uart.c文件标识：无内容摘要：UART外设驱动程序其它说明：无648
+
+# Chapter 1
+
+# 结构体说明
+
+# 1.1 ADCInitTypeDef结构体参考
+
+ADC初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x_adc.h>
+
+# 成员变量
+
+- uint16_t ILEADC中断使能- uint16_t Align 采样数据对齐方式- uint16_t ADC_CLK_DIV ADC时钟分频- uint16_t Con_Sample  连续采样模式 DISABLE:关闭，ENABLE:使能- uint16_t Trigger_CNT  TriggerCnt设置1，即需要触发ADC两次采进行一次ADC采样转换，设置范围0~15，表示需要1~16次触发事件- uint16_t FirSeg_Ch  使用该段采样对应的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。- uint16_t SecSeg_Ch  使用该段采样对应的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。- uint16_t ThrSeg_Ch  使用该段采样对应的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。- uint16_t FouSeg_Ch  使用该段采样对应的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。- uint16_t Trigger_Mode  ADC触发模式单段、双段或四段- uint16_t MCPWM_Trigger_En
+
+MCPWM触发采样使能- uint16_t UTIMER_Trigger_ENUTIMER触发采样使能- uint16_t DAT0_TH_Type设置DAT0_TH作为：1上阈值，0下阈值- uint16_t DAT0_TH通道0阈值设置- uint16_t Gain0ADC_DAT0- ADC_DAT9采样保持电路增益BIT0~BIT9可以或BIT0|BIT1- uint16_t Gain1ADC_DAT10- ADC_DAT19采样保持电路增益BIT0~BIT9可以或BIT0|BIT1- uint16_t RefVol基准电压选择
+
+# 1.1.1 详细描述
+
+ADC初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x adc.h第90行定义.
+
+# 1.1.2 结构体成员变量说明
+
+# 1.1.2.1 ADC_CLK_DIV
+
+uint16_t ADC_CLK_DIV
+
+ADC时钟分频
+
+参见
+
+ADC_Clock_48M
+
+ADC_Clock_24M
+
+ADC_Clock_12M
+
+在文件lks32mc08x adc.h第115行定义.
+
+# 1.1.2.2 Align
+
+uint16. t Align
+
+采样数据对齐方式
+
+参见
+
+ADC_LEFT_ALIGN
+
+ADC_RIGHT_ALIGN
+
+在文件lks32mc08x.adc.h第108行定义.
+
+# 1.1.2.3 ConSample
+
+uint16. t Con.Sample
+
+连续采样模式DISABLE:关闭，ENABLE:使能在文件lks32mc08x.adc.h第116行定义.
+
+# 1.1.2.4 DAT0.TH
+
+uint16. t DAT0. TH
+
+通道0阀值设置
+
+在文件lks32mc08x.adc.h第162行定义.
+
+# 1.1.2.5 DAT0.TH.Type
+
+uint16. t DAT0. TH.Type
+
+设置DAT0. TH作为：1上阀值，0下阀值在文件lks32mc08x.adc.h第161行定义.
+
+# 1.1.2.6 FirSeg.Ch
+
+uint16. t FirSeg.Ch
+
+使用该段采样对应段的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。
+
+第一段采样的总通道数
+
+在文件lks32mc08x.adc.h第125行定义
+
+# 1.1.2.7 FouSeg.Ch
+
+uint16. t FouSeg.Ch
+
+使用该段采样对应段的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。
+
+第四段采样的总通道数
+
+在文件lks32mc08x.adc.h第137行定义
+
+# 1.1.2.8 Gain0
+
+uint16. t Gain0
+
+ADC_DAT0- ADC_DAT9采样保持电路增益BIT0~BIT9可以或BIT0|BIT1在文件lks32mc08x.adc.h第163行定义
+
+# 1.1.2.9 Gain1
+
+uint16. t Gain1
+
+ADC_DAT10- ADC_DAT19采样保持电路增益BIT0~BIT9可以或BIT0|BIT1在文件lks32mc08x.adc.h第164行定义
+
+# 1.1.2.10 IE
+
+uint16_t IEADC中断使能
+
+参见
+
+ADC_DAT0. OV.IRQ_EN
+
+ADC_H.CONFLICT.IRQ_EN
+
+ADC_S.CONFLICT.IRQ_EN
+
+ADC_EOS3. IRQ_EN
+
+ADC_EOS2. IRQ_EN
+
+ADC_EOS1. IRQ_EN
+
+ADC_EOS0. IRQ_EN
+
+在文件lks32mc08x.adc.h第162行定义
+
+# 1.1.2.11 MCPWM_Trigger.En
+
+uint16_t MCPWM_Trigger.En
+
+MCPWM触发采样使能
+
+参见
+
+ADC_MCPWM_T0_TRGADC_MCPWM_T1_TRGADC_MCPWM_T2_TRGADC_MCPWM_T3_TRG
+
+在文件lks32mc08x.adc.h第162行定义
+
+# 1.1.2.12 RefVol
+
+uint16. t RefVol
+
+基准电压选择
+
+参见
+
+RefVol.1V2
+
+RefVol.2V4
+
+在文件lks32mc08x.adc.h第170行定义.
+
+# 1.1.2.13 SecSeg.Ch
+
+uint16. t SecSeg.Ch
+
+使用该段采样对应段的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。
+
+第二段采样的总通道数
+
+在文件lks32mc08x.adc.h第129行定义.
+
+# 1.1.2.14 ThrSeg.Ch
+
+uint16. t ThrSeg.Ch
+
+使用该段采样对应段的采样个数不可设置为0，如果未用该段采样，采样个数可设置为0。
+
+第三段采样的总通道数
+
+在文件lks32mc08x.adc.h第133行定义.
+
+# 1.1.2.15 Trigger.Cnt
+
+uint16. t Trigger.Cnt
+
+Trigger.Cnt设置1，即需要触发ADC两次采进行一次ADC采样转换，设置范围  $0\sim 15$  ，表示需要  $1\sim 16$  次触发事件
+
+单段模式下触发下一次采样所需的触发事件数
+
+在文件lks32mc08x.adc.h第120行定义.
+
+# 1.1.2.16 Trigger Mode
+
+uint16. t Trigger Mode
+
+ADC触发模式单段、双段或四段
+
+参见
+
+ADC- 1SEG_TRGADC- 2SEG_TRG
+
+ADC- 4SEG_TRG
+
+在文件lks32mc08x.adc.h第144行定义.
+
+# 1.1.2.17UTIMER_Trigger.En
+
+uint16. tUTIMER_Trigger.En
+
+UTIMER触发采样使能
+
+参见
+
+ADC_UTIMER_T0_TRGADC_UTIMER_T1_TRGADC_UTIMER_T2_TRGADC_UTIMER_T3_TRG
+
+在文件lks32mc08x.adcb第160行定义.
+
+# 1.2 ADC_TypeDef结构体参考
+
+ADC寄存器结构体句柄
+
+include <lks32mc08x.adc.h>
+
+# 成员变量
+
+- _IO uint32.t DAT0ADC数据寄存器0- _IO uint32.t DAT1ADC数据寄存器1- _IO uint32.t DAT2ADC数据寄存器2- _IO uint32.t DAT3ADC数据寄存器3- _IO uint32.t DAT4ADC数据寄存器4- _IO uint32.t DAT5ADC数据寄存器5- _IO uint32.t DAT6ADC数据寄存器6- _IO uint32.t DAT7ADC数据寄存器7- _IO uint32.t DAT8ADC数据寄存器8- _IO uint32.t DAT9ADC数据寄存器9- _IO uint32.t DAT10ADC数据寄存器10- _IO uint32.t DAT11ADC数据寄存器11- _IO uint32.t DAT12ADC数据寄存器12- _IO uint32.t DAT13ADC数据寄存器13- _IO uint32.t DAT14ADC数据寄存器14- _IO uint32.t DAT15ADC数据寄存器15- _IO uint32.t DAT16ADC数据寄存器16- _IO uint32.t DAT17ADC数据寄存器17- _IO uint32.t DAT18ADC数据寄存器18- _IO uint32.t DAT19ADC数据寄存器19- _IO uint32.t CHN0ADC采样信号来源寄存器0- _IO uint32.t CHN1ADC采样信号来源寄存器1- _IO uint32.t CHN2ADC采样信号来源寄存器2- _IO uint32.t CHN3ADC采样信号来源寄存器3- _IO uint32.t CHN4
+
+ADC采样信号来源寄存器4- _IO uint32. t CHN5ADC采样信号来源寄存器5- _IO uint32. t CHN6ADC采样信号来源寄存器6- _IO uint32. t CHN7ADC采样信号来源寄存器7- _IO uint32. t CHN8ADC采样信号来源寄存器8- _IO uint32. t CHN9ADC采样信号来源寄存器9- _IO uint32. t CHNT0ADC分段通道数寄存器0设置每段采样数量- _IO uint32. t CHNT1ADC分段通道数寄存器1设置每段采样数量- _IO uint32. t SD0保留- _IO uint32. t SD1保留- _IO uint32. t GAIN_0ADC增益选择寄存器0- _IO uint32. t GAIN_1ADC增益选择寄存器1- _IO uint32. t DC_A0ADC直流偏置寄存器0采样保持电路A对应2/3倍增益通道偏置- _IO uint32. t DC_A1ADC直流偏置寄存器1采样保持电路A对应1倍增益通道偏置- _IO uint32. t AMC_A0ADC增益校正寄存器0采样保持电路A对应2/3倍增益通道增益校正- _IO uint32. t AMC_A1ADC增益校正寄存器0采样保持电路A对应1倍增益通道增益校正- _IO uint32. t DC_B0ADC直流偏置寄存器0采样保持电路B对应2/3倍增益通道偏置- _IO uint32. t DC_B1ADC直流偏置寄存器1采样保持电路B对应1倍增益通道偏置- _IO uint32. t AMC_B0ADC增益校正寄存器0采样保持电路B对应2/3倍增益通道增益校正- _IO uint32. t AMC_B1ADC增益校正寄存器0采样保持电路B对应1倍增益通道增益校正- _IO uint32. t IEARDC中断寄存器- _IO uint32. t IFADC中断标志位寄存器- _IO uint32. t CFGADC模式配置寄存器- _IO uint32. t TRGADC触发控制寄存器- _IO uint32. t SWTADC软件触发寄存器- _IO uint32. t DAT0_THADC通道0阈值寄存器
+
+# 1.2.1 详细描述
+
+ADC寄存器结构体句柄
+
+在文件 Iks32mc08x.adc.h 第 22 行定义.
+
+# 1.2.2 结构体成员变量说明
+
+# 1.2.2.1 AMC.A0
+
+IO uint32_t AMC.A0
+
+ADC增益校正寄存器0采样保持电路A对应2/3倍增益通道增益校正在文件 Iks32mc08x.adc.h 第 65 行定义.
+
+# 1.2.2.2 AMC.A1
+
+IO uint32_t AMC.A1
+
+ADC增益校正寄存器0采样保持电路A对应1倍增益通道增益校正在文件 Iks32mc08x.adc.h 第 66 行定义.
+
+# 1.2.2.3 AMC.B0
+
+IO uint32_t AMC.B0
+
+ADC增益校正寄存器0采样保持电路B对应2/3倍增益通道增益校正在文件 Iks32mc08x.adc.h 第 70 行定义.
+
+# 1.2.2.4 AMC.B1
+
+IO uint32_t AMC.B1
+
+ADC增益校正寄存器0采样保持电路B对应1倍增益通道增益校正在文件 Iks32mc08x.adc.h 第 71 行定义.
+
+# 1.2.2.5 CFG
+
+IO uint32_t CFG
+
+ADC模式配置寄存器
+
+在文件 Iks32mc08x.adc.h 第 76 行定义.
+
+# 1.2.2.6 CHNO
+
+IO uint32_t CHNO
+
+ADC采样信号来源寄存器0
+
+在文件 Iks32mc08x.adc.h 第 46 行定义.
+
+# 1.2.2.7 CHN1
+
+IO uint32_t CHN1
+
+ADC采样信号来源寄存器1
+
+在文件 Iks32mc08x.adc.h 第 46 行定义.
+
+# 1.2.2.8 CHN2
+
+IO uint32_t CHN2
+
+ADC采样信号来源寄存器2
+
+在文件 Iks32mc08x.adc.h 第 47 行定义.
+
+# 1.2.2.9 CHN3
+
+IO uint32_t CHN3
+
+ADC采样信号来源寄存器3
+
+在文件 Iks32mc08x.adc.h 第 48 行定义.
+
+# 1.2.2.10 CHN4
+
+IO uint32_t CHN4
+
+ADC采样信号来源寄存器4
+
+在文件lks32mc08x.adc.h第49行定义.
+
+# 1.2.2.11 CHN5
+
+IO uint32_t CHN5
+
+ADC采样信号来源寄存器5
+
+在文件lks32mc08x.adc.h第50行定义.
+
+# 1.2.2.12 CHN6
+
+IO uint32_t CHN6
+
+ADC采样信号来源寄存器6
+
+在文件lks32mc08x.adc.h第51行定义.
+
+# 1.2.2.13 CHN7
+
+IO uint32_t CHN7
+
+ADC采样信号来源寄存器7
+
+在文件lks32mc08x.adc.h第52行定义.
+
+# 1.2.2.14 CHN8
+
+IO uint32_t CHN8
+
+ADC采样信号来源寄存器8
+
+在文件lks32mc08x.adc.h第53行定义.
+
+# 1.2.2.15 CHN9
+
+IO uint32_t CHN9
+
+ADC采样信号来源寄存器9
+
+在文件lks32mc08x.adc.h第54行定义.
+
+# 1.2.2.16 CHNT0
+
+IO uint32_t CHNT0
+
+ADC分段通道数寄存器0设置每段采样数量在文件lks32mc08x.adc.h第56行定义.
+
+# 1.2.2.17 CHNT1
+
+IO uint32_t CHNT1
+
+ADC分段通道数寄存器1设置每段采样数量在文件lks32mc08x.adc.h第57行定义.
+
+# 1.2.2.18 DAT0
+
+IO uint32_t DAT0
+
+ADC数据寄存器0
+
+在文件lks32mc08x.adc.h第24行定义.
+
+# 1.2.2.19 DAT0_TH
+
+IO uint32_t DAT0_TH
+
+ADC通道0阀值寄存器
+
+在文件lks32mc08x.adc.h第78行定义.
+
+# 1.2.2.20 DAT1
+
+IO uint32_t DAT1
+
+# ADC数据寄存器1
+
+在文件 Iks32mc08x.adc.h 第 26 行定义.
+
+# 1.2.2.21 DAT10
+
+IO uint32_t DAT10
+
+# ADC数据寄存器10
+
+在文件 Iks32mc08x.adc.h 第 34 行定义.
+
+# 1.2.2.22 DAT11
+
+IO uint32_t DAT11
+
+ADC数据寄存器11
+
+在文件 Iks32mc08x.adc.h 第 35 行定义.
+
+# 1.2.2.23 DAT12
+
+IO uint32_t DAT12
+
+# ADC数据寄存器12
+
+在文件 Iks32mc08x.adc.h 第 36 行定义.
+
+# 1.2.2.24 DAT13
+
+IO uint32_t DAT13
+
+# ADC数据寄存器13
+
+在文件 Iks32mc08x.adc.h 第 37 行定义.
+
+# 1.2.2.25 DAT14
+
+IO uint32_t DAT14
+
+# ADC数据寄存器14
+
+在文件 Iks32mc08x.adc.h 第 38 行定义.
+
+# 1.2.2.26 DAT15
+
+IO uint32_t DAT15
+
+# ADC数据寄存器15
+
+在文件 Iks32mc08x.adc.h 第 39 行定义.
+
+# 1.2.2.27 DAT16
+
+IO uint32_t DAT16
+
+ADC数据寄存器16
+
+在文件 Iks32mc08x.adc.h 第 40 行定义.
+
+# 1.2.2.28 DAT17
+
+IO uint32_t DAT17
+
+# ADC数据寄存器17
+
+在文件 Iks32mc08x.adc.h 第 41 行定义.
+
+# 1.2.2.29 DAT18
+
+IO uint32_t DAT18
+
+# ADC数据寄存器18
+
+在文件 Iks32mc08x.adc.h 第 42 行定义.
+
+# 1.2.2.30 DAT19
+
+IO uint32_t DAT19
+
+# ADC数据寄存器19
+
+在文件 Iks32mc08x.adc.h 第 43 行定义.
+
+# 1.2.2.31 DAT2
+
+IO uint32_t DAT2
+
+# ADC数据寄存器2
+
+在文件 Iks32mc08x.adc.h 第 26 行定义.
+
+# 1.2.2.32 DAT3
+
+IO uint32_t DAT3
+
+# ADC数据寄存器3
+
+在文件 Iks32mc08x.adc.h 第 27 行定义.
+
+# 1.2.2.33 DAT4
+
+IO uint32_t DAT4
+
+# ADC数据寄存器4
+
+在文件 Iks32mc08x.adc.h 第 28 行定义.
+
+# 1.2.2.34 DAT5
+
+IO uint32_t DAT5
+
+# ADC数据寄存器5
+
+在文件 Iks32mc08x.adc.h 第 29 行定义.
+
+# 1.2.2.35 DAT6
+
+IO uint32_t DAT6
+
+# ADC数据寄存器6
+
+在文件 Iks32mc08x.adc.h 第 30 行定义.
+
+# 1.2.2.36 DAT7
+
+IO uint32_t DAT7
+
+# ADC数据寄存器7
+
+在文件 Iks32mc08x.adc.h 第 30 行定义.
+
+# 1.2.2.37 DAT8
+
+IO uint32_t DAT8
+
+# ADC数据寄存器8
+
+在文件 Iks32mc08x.adc.h 第 32 行定义.
+
+# 1.2.2.38 DAT9
+
+IO uint32_t DAT9
+
+# ADC数据寄存器9
+
+在文件 Iks32mc08x.adc.h 第 33 行定义.
+
+# 1.2.2.39 DC_A0
+
+IO uint32_t DC_A0
+
+ADC直流偏置寄存器0 采样保持电路A对应2/3倍增益通道偏置
+
+在文件 Iks32mc08x.adc.h 第 63 行定义.
+
+# 1.2.2.40DC.A1
+
+IO uint32_t DC_A1
+
+ADC直流偏置寄存器1采样保持电路A对应1倍增益通道偏置在文件lks32mc08x.adc.h第64行定义.
+
+# 1.2.2.41DC.B0
+
+IO uint32_t DC_B0
+
+ADC直流偏置寄存器0采样保持电路B对应2/3倍增益通道偏置在文件lks32mc08x.adc.h第68行定义.
+
+# 1.2.2.42DC.B1
+
+IO uint32_t DC_B1
+
+ADC直流偏置寄存器1采样保持电路B对应1倍增益通道偏置在文件lks32mc08x.adc.h第69行定义.
+
+# 1.2.2.43GAIN.0
+
+IO uint32_t GAIN.0
+
+ADC增益选择寄存器0
+
+在文件lks32mc08x.adc.h第60行定义.
+
+# 1.2.2.44GAIN_1
+
+IO uint32_t GAIN.1
+
+ADC增益选择寄存器1
+
+在文件lks32mc08x.adc.h第61行定义.
+
+# 1.2.2.45 IE
+
+IO uint32_t IE
+
+ADC中断寄存器
+
+在文件lks32mc08x.adc.h第73行定义.
+
+# 1.2.2.46 IF
+
+IO uint32_t IF
+
+ADC中断标志位寄存器
+
+在文件lks32mc08x.adc.h第74行定义.
+
+# 1.2.2.47 SD0
+
+IO uint32_t SD0
+
+保留
+
+在文件lks32mc08x.adc.h第58行定义.
+
+# 1.2.2.48 SD1
+
+IO uint32_t SD1
+
+保留
+
+在文件lks32mc08x.adc.h第59行定义.
+
+# 1.2.2.49 SWT
+
+IO uint32_t SWT
+
+ADC软件触发寄存器
+
+在文件lks32mc08x.adc.h第77行定义.
+
+# 1.2.2.50 TRG
+
+IO uint32_t TRG
+
+ADC触发控制寄存器
+
+在文件 Iks32mc08x.adc.h 第 76 行定义.
+
+# 1.3 CAN_InitTypeDef结构体参考
+
+CAN结构体基地址定义
+
+include <lks32mc08x.can.h>
+
+# 成员变量
+
+- uint32_t CAN_WorkMode CAN工作模式选择 1: 自测模式 2: 监听模式 3: 正常收发模式- uint32_t CAN_DMAEn使能 CAN的 DMA功能- uint32_t CAN_ErrWarThree错误与警告门限值- uint32_t CAN_Btr0波特率 0- uint32_t CAN_Btr1波特率 1- uint32_t IRQEna中断使能
+
+# 1.3.1 详细描述
+
+CAN结构体基地址定义CAN初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件 Iks32mc08x.can.h 第 74 行定义.
+
+# 1.3.2 结构体成员变量说明
+
+# 1.3.2.1 CAN_Btr0
+
+uint32_t CAN_Btr0波特率 0在文件 Iks32mc08x.can.h 第 79 行定义.
+
+# 1.3.2.2 CAN_Btr1
+
+uint32. t CAN_Btr1
+
+# 波特率1
+
+在文件lks32mc08x.can.h第80行定义.
+
+# 1.3.2.3 CAN_DMAEn
+
+uint32. t CAN_DMAEn
+
+使能CAN的DMA功能
+
+在文件lks32mc08x.can.h第77行定义.
+
+# 1.3.2.4 CAN_ErrWarThre
+
+uint32. t CAN_ErrWarThre
+
+错误与警告门限值
+
+在文件lks32mc08x.can.h第78行定义.
+
+# 1.3.2.5 CAN_WorkMode
+
+uint32. t CAN_WorkMode
+
+CAN工作模式选择1：自测模式2：监听模式3;正常收发模式
+
+在文件lks32mc08x.can.h第76行定义.
+
+# 1.3.2.6 IRQEna
+
+uint32. t IRQEna
+
+中断使能
+
+在文件lks32mc08x.can.h第81行定义.
+
+# 1.4 CAN_TypeDef结构体参考
+
+CAN寄存器结构体句柄
+
+include <lks32mc08x_can.h>
+
+# 成员变量
+
+- _IO uint32.t MOD CAN模式寄存器- _IO uint32.t CMRCAN命令寄存器- _IO uint32.t SR CAN状态寄存器- _IO uint32.t IRCAN中断状态寄存器- _IO uint32.t EIR CAN中断控制寄存器- _IO uint32.t null0- _IO uint32.t BTR0 CAN总线时序控制寄存器0- _IO uint32.t BTR1 CAN总线时序控制寄存器1- _IO uint32.t null1- _IO uint32.t null2- _IO uint32.t null3- _IO uint32.t ALC CAN仲裁丢失捕捉寄存器- _IO uint32.t ECC CAN错误码捕捉寄存器- _IO uint32.t EWLRCAN错误&警告门限值设置寄存器- _IO uint32.t RXERR CAN接收错误计数器- _IO uint32.t TXERR CAN发送错误计数器- _IO uint32.t TXRX0 正常工作模式下，CAN发送帧格式寄存器0/CAN接收帧格式寄存器0- _IO uint32.t TXRX1 正常工作模式下，CAN发送数据寄存器0/CAN接收数据寄存器1- _IO uint32.t TXRX2 正常工作模式下，CAN发送数据寄存器2/CAN接收数据寄存器2- _IO uint32.t TXRX3 正常工作模式下，CAN发送数据寄存器3/CAN接收数据寄存器3- _IO uint32.t TXRX4 正常工作模式下，CAN发送数据寄存器4/CAN接收数据寄存器4- _IO uint32.t TXRX5 正常工作模式下，CAN发送数据寄存器5/CAN接收数据寄存器5- _IO uint32.t TXRX6 正常工作模式下，CAN发送数据寄存器6/CAN接收数据寄存器6
+
+- ...IO uint32.t TXRX7  正常工作模式下，CAN发送数据寄存器7/CAN接收数据寄存器7- ...IO uint32.t TXRX8  正常工作模式下，CAN发送数据寄存器8/CAN接收数据寄存器8- ...IO uint32.t TXRX9  正常工作模式下，CAN发送数据寄存器9/CAN接收数据寄存器9- ...IO uint32.t TXRXA  正常工作模式下，CAN发送数据寄存器10/CAN接收数据寄存器10- ...IO uint32.t TXRXB  正常工作模式下，CAN发送数据寄存器11/CAN接收数据寄存器11- ...IO uint32.t TXRXC  正常工作模式下，CAN发送数据寄存器12/CAN接收数据寄存器12- ...IO uint32.t RMC  CAN FIFO有效接收信息计数器- ...IO uint32.t RBSA  CAN第一条有效接收信息在FIFO中的地址寄存器
+
+# 1.4.1 详细描述
+
+CAN寄存器结构体句柄
+
+在文件lks32mc08x.can.h第22行定义
+
+# 1.4.2 结构体成员变量说明
+
+# 1.4.2.1 ALC
+
+IO uint32. t ALC
+
+CAN仲裁丢失捕捉寄存器
+
+在文件lks32mc08x.can.h第37行定义
+
+# 1.4.2.2 BTR0
+
+IO uint32. t BTR0
+
+CAN总线时序控制寄存器0
+
+在文件lks32mc08x.can.h第39行定义
+
+# 1.4.2.3 BTR1
+
+IO uint32_t BTR1
+
+CAN总线时序控制寄存器1
+
+在文件lks32mc08x.can.h第32行定义
+
+# 1.4.2.4 CMR
+
+IO uint32_t CMR
+
+CAN命令寄存器
+
+在文件lks32mc08x.can.h第26行定义
+
+# 1.4.2.5 ECC
+
+IO uint32_t ECC
+
+CAN错误码捕捉寄存器
+
+在文件lks32mc08x.can.h第39行定义
+
+# 1.4.2.6 EIR
+
+IO uint32_t EIR
+
+CAN中断控制寄存器
+
+在文件lks32mc08x.can.h第29行定义
+
+# 1.4.2.7EWLR
+
+IO uint32_tEWLR
+
+CAN错误&警告门限值设置寄存器在文件lks32mc08x.can.h第40行定义
+
+# 1.4.2.8 IR
+
+IO uint32_t IR
+
+# CAN中断状态寄存器
+
+在文件lks32mc08x.can.h第27行定义
+
+# 1.4.2.9 MOD
+
+IO uint32_t MOD
+
+# CAN模式寄存器
+
+在文件lks32mc08x.can.h第24行定义
+
+# 1.4.2.10 null0
+
+IO uint32_t null0
+
+在文件lks32mc08x.can.h第30行定义
+
+# 1.4.2.11 null1
+
+IO uint32_t null1
+
+在文件lks32mc08x.can.h第34行定义
+
+# 1.4.2.12 null2
+
+IO uint32_t null2
+
+在文件lks32mc08x.can.h第35行定义
+
+# 1.4.2.13 null3
+
+IO uint32_t null3
+
+在文件lks32mc08x.can.h第36行定义
+
+# 1.4.2.14 RBSA
+
+IO uint32_t RBSA
+
+CAN 第一条有效接收信息在 FIFO 中的地址寄存器在文件 Iks32mc08x.can.h 第 61 行定义.
+
+# 1.4.2.15 RMC
+
+IO uint32_t RMC
+
+CAN FIFO 有效接收信息计数器
+
+在文件 Iks32mc08x.can.h 第 60 行定义.
+
+# 1.4.2.16 RXERR
+
+IO uint32_t RXERR
+
+CAN 接收错误计数器
+
+在文件 Iks32mc08x.can.h 第 41 行定义.
+
+# 1.4.2.17 SR
+
+IO uint32_t SR
+
+CAN 状态寄存器
+
+在文件 Iks32mc08x.can.h 第 28 行定义.
+
+# 1.4.2.18 TXERR
+
+IO uint32_t TXERR
+
+CAN 发送错误计数器
+
+在文件 Iks32mc08x.can.h 第 42 行定义.
+
+# 1.4.2.19 TXRX0
+
+IO uint32_t TXRX0
+
+正常工作模式下，CAN发送帧格式寄存器0/CAN接收帧格式寄存器0在文件lks32mc08x.can.h第44行定义.
+
+# 1.4.2.20 TXRX1
+
+IO uint32_t TXRX1
+
+正常工作模式下，CAN发送数据寄存器0/CAN接收数据寄存器1在文件lks32mc08x.can.h第46行定义.
+
+# 1.4.2.21 TXRX2
+
+IO uint32_t TXRX2
+
+正常工作模式下，CAN发送数据寄存器2/CAN接收数据寄存器2在文件lks32mc08x.can.h第46行定义.
+
+# 1.4.2.22 TXRX3
+
+IO uint32_t TXRX3
+
+正常工作模式下，CAN发送数据寄存器3/CAN接收数据寄存器3在文件lks32mc08x.can.h第47行定义.
+
+# 1.4.2.23 TXRX4
+
+IO uint32_t TXRX4
+
+正常工作模式下，CAN发送数据寄存器4/CAN接收数据寄存器4在文件lks32mc08x.can.h第49行定义.
+
+# 1.4.2.24 TXRX5
+
+IO uint32_t TXRX5
+
+正常工作模式下，CAN发送数据寄存器5/CAN接收数据寄存器5在文件lks32mc08x.can.h第50行定义.
+
+# 1.4.2.25 TXRX6
+
+IO uint32_t TXRX6
+
+正常工作模式下，CAN发送数据寄存器6/CAN接收数据寄存器6在文件lks32mc08x.can.h第51行定义.
+
+# 1.4.2.26 TXRX7
+
+IO uint32_t TXRX7
+
+正常工作模式下，CAN发送数据寄存器7/CAN接收数据寄存器7在文件lks32mc08x.can.h第52行定义.
+
+# 1.4.2.27 TXRX8
+
+IO uint32_t TXRX8
+
+正常工作模式下，CAN发送数据寄存器8/CAN接收数据寄存器8在文件lks32mc08x.can.h第54行定义.
+
+# 1.4.2.28 TXRX9
+
+IO uint32_t TXRX9
+
+正常工作模式下，CAN发送数据寄存器9/CAN接收数据寄存器9在文件lks32mc08x.can.h第55行定义.
+
+# 1.4.2.29 TXRXA
+
+IO uint32_t TXRXA
+
+正常工作模式下，CAN 发送数据寄存器 10/CAN 接收数据寄存器 10在文件 Iks32mc08x.can.h 第 56 行定义.
+
+# 1.4.2.30 TXRXB
+
+IO uint32_t TXRXB
+
+正常工作模式下，CAN 发送数据寄存器 11/CAN 接收数据寄存器 11在文件 Iks32mc08x.can.h 第 57 行定义.
+
+# 1.4.2.31 TXRXC
+
+IO uint32_t TXRXC
+
+正常工作模式下，CAN 发送数据寄存器 12/CAN 接收数据寄存器 12在文件 Iks32mc08x.can.h 第 59 行定义.
+
+# 1.5 CMP_InitTypeDef 结构体 参考
+
+CMP 初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参#include <lks32mc08x_cmp.h>
+
+# 成员变量
+
+- u32 FIL_CLK10_DIV16CMP 滤波时钟频率 Freq(CMP_Filter) = (Freq(MCLK)/2^FIL_CLK10_DIV2)/(FIL_CLK10_DIV16+1)，其中 MCLK 为系统的主时钟，通常为 96MHz 全速时钟。需要注意的是，产生 CMP 滤波时钟需要使能 CLK10_EN。- FuncState CLK10_EN比较器 1/0 滤波时钟使能DISABLE: 失能，ENABLE: 使能- u32 FIL_CLK10_DIV2CMP 滤波时钟频率 Freq(CMP_Filter) = (Freq(MCLK)/2^FIL_CLK10_DIV2)/(FIL_CLK10_DIV16+1)，其中 MCLK 为系统的主时钟，通常为 96MHz 全速时钟。需要注意的是，产生 CMP 滤波时钟需要使能 CLK10_EN。- FuncState CMP_FT比较器快速比较使能DISABLE: 失能，ENABLE: 使能- u32 CMP_HYS比较器回差选择- FuncState CMP0_EN比较器 0 使能DISABLE: 失能，ENABLE: 使能- u32 CMP0_SELPL比较器 0 信号正端选择- u32 CMP0_SELN比较器 0 信号负端选择- FuncState CMP0_IE比较器 0 中断使能DISABLE: 失能，ENABLE: 使能- u32 CMP0_W_PWM_POL比较器 0 开窗 PWM 信号极性选择0: 高电平有效；1: 低电平有效- FuncState CMP0_IRQ_TRIG比较器 0 边沿触发使能DISABLE: 失能，ENABLE: 使能- FuncState CMP0_IN_EN比较器 0 信号输入使能DISABLE: 失能，ENABLE: 使能- u32 CMP0_POL比较器 0 极性选择0: 高电平有效；1: 低电平有效- FuncState CMP0_CHN3F_WIN_ENMCPWM 模块 CHN3_P 通道使能比较器0 开窗 DISABLE: 失能，ENABLE: 使能- FuncState CMP0_CHN2F_WIN_ENMCPWM 模块 CHN2_P 通道使能比较器0 开窗 DISABLE: 失能，ENABLE: 使能- FuncState CMP0_CHN1P_WIN_ENMCPWM 模块 CHN1_P 通道使能比较器0 开窗 DISABLE: 失能，ENABLE: 使能- FuncState CMP0_CHN0F_WIN_ENMCPWM 模块 CHN0_P 通道使能比较器0 开窗 DISABLE: 失能，ENABLE: 使能- FuncState CMP1_EN比较器 1 使能使能 DISABLE: 失能，ENABLE: 使能
+
+- u32 CMP1.SELP  比较器 0 信号正端选择- u32 CMP1.SELN  比较器 0 信号负端选择- FuncState CMP1.IE  比较器 1 中断使能  DISABLE: 失能, ENABLE: 使能- u32 CMP1.W.PWM.POL  比较器 1 开窗 PWM 信号极性选择  0:高电平有效; 1:低电平有效- FuncState CMP1.HNQ.TH1C  比较器 1 边沿触发使能  DISABLE: 失能, ENABLE: 使能- FuncState CMP1.IN.EN  比较器 1 信号输入使能  DISABLE: 失能, ENABLE: 使能- u32 CMP1.POL  比较器 1 极性选择 0:高电平有效; 1:低电平有效- FuncState CMP1.CHN3F_WIN_EN  MCPWM 模块 CHN3.P 通道使能比较器 1 开窗  0:高电平有效; 1:低电平有效- FuncState CMP1.CHN2F_WIN_EN  MCPWM 模块 CHN2.P 通道使能比较器 1 开窗  0:高电平有效; 1:低电平有效- FuncState CMP1.CHN1F_WIN_EN  MCPWM 模块 CHN1.P 通道使能比较器 1 开窗  0:高电平有效; 1:低电平有效- FuncState CMP1.CHN0.F_WIN_EN  MCPWM 模块 CHN0.P 通道使能比较器 1 开窗  0:高电平有效; 1:低电平有效
+
+# 1.5.1 详细描述
+
+CMP初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x.cmp.h第103行定义.
+
+# 1.5.2 结构体成员变量说明
+
+# 1.5.2.1 CLK10.EN
+
+FuncState CLK10. EN
+
+比较器 1/0 滤波时钟使能  DISABLE: 失能, ENABLE: 使能在文件 lks32mc08x.cmp.h 第 110 行定义.
+
+# 1.5.2.2 CMP0.CHNOP_WIN
+
+FuncState CMP0. CHNOP_WIN.
+
+MCPWM模块CHNO.P通道使能比较器0开窗DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第147行定义
+
+# 1.5.2.3 CMP0.CHN1P_WIN
+
+FuncState CMP0. CHN1P_WIN.
+
+MCPWM模块CHN1. P通道使能比较器0开窗DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第146行定义
+
+# 1.5.2.4 CMP0.CHN2P_WIN
+
+FuncState CMP0. CHN2P_WIN.
+
+MCPWM模块CHN2. P通道使能比较器0开窗DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第145行定义
+
+# 1.5.2.5 CMP0.CHN3P_WIN
+
+FuncState CMP0. CHN3P_WIN.
+
+MCPWM模块CHN3. P通道使能比较器0开窗DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第144行定义
+
+# 1.5.2.6 CMP0.EN
+
+FuncState CMP0. EN
+
+比较器0使能DISABLE:失能，ENABLE：使能在文件lks32mc08x.cmp.h第119行定义
+
+# 1.5.2.7 CMP0.IE
+
+FuncState CMP0. IE
+
+比较器0中断使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第139行定义
+
+# 1.5.2.8 CMP0.IN.EN
+
+FuncState CMP0. IN.EN
+
+比较器0信号输入使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第142行定义
+
+# 1.5.2.9 CMP0.IRQ.TRIG
+
+FuncState CMP0. IRQ.TRIG
+
+比较器0边沿触发使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第141行定义
+
+# 1.5.2.10 CMP0.POL
+
+u32 CMP0. POL
+
+比较器0极性选择0:高电平有效；1:低电平有效
+
+在文件lks32mc08x.cmp.h第143行定义
+
+# 1.5.2.11 CMP0.SELN
+
+u32 CMP0. SELN
+
+比较器0信号负端选择
+
+参见
+
+CMP- SELN.IN
+
+CMP- SELN.REF CMP- SELN.DAC CMP- SELN.HALL.MID
+
+在文件lks32mc08x.cmp.h第138行定义
+
+# 1.5.2.12 CMP0.SELP
+
+u32 CMP0. SELP
+
+比较器0信号正端选择
+
+参见
+
+CMP- SELP.IP0 CMP- SELP.OPA.IP CMP- SELP.OPA.OUT CMP- SELP.IP1 CMP- SELP.IP2 CMP- SELP.IP3 CMP- SELP.IP4
+
+在文件lks32mc08x.cmp.h第130行定义
+
+# 1.5.2.13 CMP0_W_PWM_POL
+
+u32 CMP0_W_PWM_POL
+
+比较器0开窗PWM信号极性选择0：高电平有效；1：低电平有效
+
+在文件lks32mc08x.cmp.h第140行定义
+
+# 1.5.2.14 CMP1.CHNOP_WIN
+
+FuncState CMP1. CHNOP_WIN_EN
+
+MCPWM模块CHNO_P通道使能比较器1开窗0：高电平有效；1：低电平有效
+
+在文件lks32mc08x.cmp.h第177行定义
+
+# 1.5.2.15 CMP1.CHN1P_WIN_EN
+
+FuncState CMP1. CHN1P_WIN_EN
+
+MCPWM模块CHN1_P通道使能比较器1开窗0：高电平有效；1：低电平有效
+
+在文件lks32mc08x.cmp.h第176行定义
+
+# 1.5.2.16 CMP1.CHN2P_WIN_EN
+
+FuncState CMP1. CHN2P_WIN_EN
+
+MCPWM模块CHN2. P通道使能比较器1开窗0：高电平有效；1：低电平有效
+
+在文件lks32mc08x.cmp.h第175行定义
+
+# 1.5.2.17 CMP1.CHN3P_WIN_EN
+
+FuncState CMP1. CHN3P_WIN_EN
+
+MCPWM模块CHN3. P通道使能比较器1开窗0：高电平有效；1：低电平有效
+
+在文件lks32mc08x.cmp.h第174行定义
+
+# 1.5.2.18 CMP1.EN
+
+FuncState CMP1. EN
+
+比较器1使能使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第149行定义
+
+# 1.5.2.19 CMP1.IE
+
+FuncState CMP1. IE
+
+比较器1中断使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第169行定义
+
+# 1.5.2.20 CMP1.IN.EN
+
+FuncState CMP1. IN.EN
+
+比较器1信号输入使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第172行定义
+
+# 1.5.2.21 CMP1.IRQ.TRIG
+
+FuncState CMP1. IRQ_TRIG
+
+比较器1边沿触发使能DISABLE:失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第171行定义
+
+# 1.5.2.22 CMP1.POL
+
+u32 CMP1. POL
+
+比较器1极性选择0:高电平有效；1:低电平有效在文件lks32mc08x.cmp.h第173行定义
+
+# 1.5.2.23 CMP1.SELN
+
+u32 CMP1. SELN
+
+比较器0信号负端选择
+
+参见
+
+CMP_SELN.IN
+
+CMP_SELN.INCMP_SELN.REFCMP_SELN.DACCMP_SELN.HALL.MID
+
+在文件lks32mc08x.cmp.h第168行定义
+
+# 1.5.2.24 CMP1.SELP
+
+u32 CMP1. SELP
+
+比较器0信号正端选择
+
+参见
+
+CMP_SELP.IP0 CMP- SELP- OPA.IP CMP- SELP- OPA.OUT CMP- SELP.IP1 CMP- SELP.IP2 CMP- SELP.IP3 CMP- SELP.IP4
+
+在文件lks32mc08x.cmp.h第160行定义
+
+# 1.5.2.25 CMP1_W_PWM_POL
+
+u32 CMP1_W_PWM_POL
+
+比较器1开窗PWM信号极性选择0：高电平有效；1：低电平有效
+
+在文件lks32mc08x.cmp.h第170行定义
+
+# 1.5.2.26 CMP_FT
+
+FuncState CMP_FT
+
+比较器快速比较使能DISABLE：失能，ENABLE：使能
+
+在文件lks32mc08x.cmp.h第116行定义
+
+# 1.5.2.27 CMP_HYS
+
+u32 CMP_HYS
+
+比较器回差选择
+
+参见
+
+CMP_HYS.0mV
+
+CMP_HYS.20mV
+
+在文件lks32mc08x.cmp.h第117行定义
+
+# 1.5.2.28 FIL_CLK10_DIV16
+
+u32 FIL_CLK10. DIV16
+
+CMP滤波时钟频率Freq(CMP Filter)  $=$  (Freq(MCLK)/2^FIL_CLK10. DIV2)/(FIL_CLK10. DIV16+1），其中MCLK为系统的主时钟，通常为96MHz全速时钟。需要注意的是，产生CMP滤波时钟需要使能CLK10. EN。
+
+比较器1/0滤波时钟分频赋值范围0- 0xF
+
+在文件lks32mc08x.cmp.h第109行定义
+
+# 1.5.2.29 FIL_CLK10_DIV2
+
+u32 FIL_CLK10. DIV2
+
+CMP滤波时钟频率Freq(CMP_Filter)  $=$  (Freq(MCLK)/2^FIL_CLK10. DIV2)/(FIL_CLK10. DIV16+1），其中MCLK为系统的主时钟，通常为96MHz全速时钟。需要注意的是，产生CMP滤波时钟需要使能CLK10. EN。
+
+比较器1/0滤波时钟分频0x0:1分频，0x1:2分频，0x2:4分频，0x3:8分频
+
+在文件lks32mc08x.cmp.h第115行定义
+
+# 1.6 CMP_TypeDef结构体参考
+
+CMP寄存器结构体句柄
+
+include <lks32mc08x.cmp.h>
+
+# 成员变量
+
+成员变量- _IO uint32_t IE  比较器中断使能寄存器- _IO uint32_t IF  比较器中断标志寄存器- _IO uint32_t TCLK  比较器分频时钟控制寄存器- _IO uint32_t CFG  比较器控制寄存器- _IO uint32_t BLCWIN  比较器开窗控制寄存器- _IO uint32_t DATA  比较器输出数值寄存器
+
+# 1.6.1 详细描述
+
+CMP寄存器结构体句柄
+
+在文件lks32mc08x.cmp.h第76行定义
+
+# 1.6.2 结构体成员变量说明
+
+# 1.6.2.1 BLCWIN
+
+IO uint32_t BLCWIN
+
+比较器开窗控制寄存器
+
+在文件 Iks32mc08x.cmp.h 第 82 行定义.
+
+# 1.6.2.2 CFG
+
+IO uint32_t CFG
+
+比较器控制寄存器
+
+在文件 Iks32mc08x.cmp.h 第 81 行定义.
+
+# 1.6.2.3 DATA
+
+IO uint32_t DATA
+
+比较器输出数值寄存器
+
+在文件 Iks32mc08x.cmp.h 第 83 行定义.
+
+# 1.6.2.4 IE
+
+IO uint32_t IE
+
+比较器中断使能寄存器
+
+在文件 Iks32mc08x.cmp.h 第 78 行定义.
+
+# 1.6.2.5 IF
+
+IO uint32_t IF
+
+比较器中断标志寄存器
+
+在文件 Iks32mc08x.cmp.h 第 79 行定义.
+
+# 1.6.2.6TCLK
+
+IO uint32_t TCLK
+
+比较器分频时钟控制寄存器
+
+在文件lks32mc08x.cmp.h第80行定义.
+
+# 1.7 DACInitTypeDef结构体参考
+
+include <lks32mc08x.dac.h>
+
+# 成员变量
+
+- uint8_t DAC_GAIN  DAC输出档位：0, 3V; 1, 1.2V; 2, 4.85V  
+- uint8_t DACOUT_EN  DAC输出使能：DISABLE，不使能；ENABLE，使能。
+
+# 1.7.1 详细描述
+
+在文件lks32mc08x.dac.h第19行定义.
+
+# 1.7.2 结构体成员变量说明
+
+# 1.7.2.1 DAC.GAIN
+
+uint8_t DAC.GAIN
+
+DAC输出档位：0，3V；1，1.2V；2，4.85V
+
+参见
+
+DAC_RANGE.3V0  DAC_RANGE.1V2  DAC_RANGE.4V85
+
+在文件lks32mc08x.dac.h第27行定义.
+
+# 1.7.2.2 DACOUT.EN
+
+uint8_t DACOUT_EN
+
+DAC输出使能：DISABLE，不使能；ENABLE，使能。在文件lks32mc08x.dac.h第28行定义.
+
+# 1.8 DMAInitTypeDef结构体参考
+
+DMA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x.dma.h>
+
+# 成员变量
+
+- uint8_t DMA_IRQ_ENDMA 中断使能- uint8_t DMA_DIRDMA 传输方向- uint8_t DMA_CIRCDMA 传输模式，循环模式，ENABLE:使能，DISABLE:失能- uint8_t DMA_PINC外设地址每轮内是否递增，ENABLE:使能，DISABLE:失能- uint8_t DMA_MINC内存地址第二轮是否在第一轮地址的基础上递增，ENABLE:使能，DISABLE:失能- uint8_t DMA_PBTW外设访问位宽- uint8_t DMA_MBTW内存访问位宽- uint8_t DMA_REQ_EN通道  $x$  三个硬件 DMA 请求使能- uint16_t DMA_TIMESDMA 通道  $x$  每轮数据搬运次数 1~511- uint8_t DMA_ROUNDDMA 通道  $x$  采样轮数 1~255- uint32_t DMA_CPARDMA 通道  $x$  外设地址- uint32_t DMA_CMARDMA 通道  $x$  内存地址
+
+# 1.8.1 详细描述
+
+DMA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x.dma.h第22行定义.
+
+# 1.8.2 结构体成员变量说明
+
+# 1.8.2.1 DMA.CIRC
+
+uint8. t DMA.CIRC
+
+DMA传输模式：循环模式，ENABLE:使能，DISABLE:失能在文件Iks32mc08x.dma.h第36行定义.
+
+# 1.8.2.2 DMA.CMAR
+
+uint32. t DMA.CMAR
+
+DMA通道x内存地址
+
+在文件Iks32mc08x.dma.h第72行定义.
+
+# 1.8.2.3 DMA.CPAR
+
+uint32. t DMA.CPAR
+
+DMA通道x外设地址
+
+在文件Iks32mc08x.dma.h第71行定义.
+
+# 1.8.2.4 DMA.DIR
+
+uint8. t DMA.DIR
+
+DMA传输方向
+
+参见
+
+PERI2MEMORY外设室内存搬运
+
+MEMORY2PERI内存至外设搬运
+
+在文件Iks32mc08x.dma.h第35行定义.
+
+# 1.8.2.5 DMA_IRQ.EN
+
+uint8_t DMA_IRQ.EN
+
+DMA中断使能
+
+参见
+
+DMA_TCIE
+
+DMA_TEIEDMA中断使能
+
+在文件lks32mc08x.dma.h第29行定义.
+
+# 1.8.2.6 DMA_MBTW
+
+uint8_t DMA_MBTW
+
+内存访问位宽
+
+参见
+
+DMA_BYTE_TRANS
+
+DMA.HALFWORD_TRANS
+
+DMA_WORD_TRANS
+
+在文件lks32mc08x.dma.h第52行定义.
+
+# 1.8.2.7 DMA.MINC
+
+uint8_t DMA.MINC
+
+内存地址第二轮是否在第一轮地址的基础上递增，ENABLE:使能，DISABLE:失能在文件lks32mc08x.dma.h第38行定义.
+
+# 1.8.2.8 DMA.PBTW
+
+uint8. t DMA.PBTW
+
+外设访问位宽
+
+参见
+
+DMA.BYTE.TRANS
+
+DMA.HALFWORD.TRANS
+
+DMA.WORD.TRANS
+
+在文件 Iks32mc08x.dma.h 第 45 行定义.
+
+# 1.8.2.9 DMA.PINC
+
+uint8. t DMA.PINC
+
+外设地址每轮内是否递增,ENABLE:使能,DISABLE:失能在文件 Iks32mc08x.dma.h 第 37 行定义.
+
+# 1.8.2.10 DMA.REQ.EN
+
+uint8. t DMA.REQ.EN
+
+通道 x 三个硬件 DMA 请求使能
+
+参见
+
+DMA.CH0. ADC0. REQ.EN （DMA通道0使用）
+
+DMA.CH0. TIMER0. REQ.EN （DMA通道0使用）DMA.CH0. TIMER1. REQ.EN （DMA通道0使用）DMA.CH1. SPI.RX.REQ.EN （DMA通道1使用）DMA.CH1. MCPWM.REQ.EN （DMA通道1使用）DMA.CH1. TIMER2. REQ.EN （DMA通道1使用）DMA.CH2.UART0. REQ.EN （DMA通道2使用）DMA.CH2. SPI.TX.REQ.EN （DMA通道2使用）DMA.CH2. TIMER3. REQ.EN （DMA通道2使用）
+
+DMA.CH3. UART1. REQ.EN （DMA通道3使用）DMA.CH3. CAN.REQ.EN （DMA通道3使用）DMA.CH3. I2C.REQ.EN （DMA通道3使用）
+
+在文件 Iks32mc08x.dma.h 第 68 行定义.
+
+# 1.8.2.11 DMA_ROUNDO
+
+uint8_t DMA_ROUNDO
+
+DMA 通道 x 采样轮数 1~255在文件 Iks32mc08x.dma.h 第 70 行定义.
+
+# 1.8.2.12 DMA TIMES
+
+uint16_t DMA_TIMES
+
+DMA 通道 x 每轮数据搬运次数 1~511在文件 Iks32mc08x.dma.h 第 69 行定义.
+
+# 1.9 DMA_RegTypeDef结构体参考
+
+DAM通道0结构体基地址定义
+
+include <lks32mc08x_dma.h>
+
+# 成员变量
+
+成员变量- _IO uint32_t DMA_CCRDMA 通道配置寄存器- _IO uint32_t DMA_CTRLSDMA 控制寄存器- _IO uint32_t DMA_CPARDMA 外设地址寄存器- _IO uint32_t DMA_CMARDMA 内存地址寄存器
+
+# 1.9.1 详细描述
+
+DAM通道0结构体基地址定义
+
+DAM通道1结构体基地址定义 DAM通道2结构体基地址定义 DAM通道3结构体基地址定义
+
+DMA寄存器结构体句柄
+
+在文件 Iks32mc08x.dma.h 第 104 行定义.
+
+# 1.9.2 结构体成员变量说明
+
+# 1.9.2.1 DMA.CCR
+
+IO uint32_t DMA_CCR
+
+# DMA通道配置寄存器
+
+在文件lks32mc08x.dma.h第106行定义
+
+# 1.9.2.2 DMA.CMAR
+
+IO uint32_t DMA_CMAR
+
+DMA内存地址寄存器在文件lks32mc08x.dma.h第109行定义
+
+# 1.9.2.3 DMA.CPAR
+
+IO uint32_t DMA.CPAR
+
+DMA外设地址寄存器
+
+在文件lks32mc08x.dma.h第108行定义
+
+# 1.9.2.4 DMA.CTMS
+
+IO uint32_t DMA.CTMS
+
+DMA控制寄存器
+
+在文件lks32mc08x.dma.h第107行定义
+
+# 1.10 EXTI-TypeDef结构体参考
+
+EXTI寄存器结构体句柄
+
+include <lks32mc08x.exti.h>
+
+# 成员变量
+
+IO uint32_t CR0IO uint32_t CR1IO uint32_t IFIO uint32_t POLIO uint32_t EN
+
+# 1.10.1 详细描述
+
+EXTI寄存器结构体句柄
+
+在文件 Iks32mc08x.exti.h 第 29 行定义.
+
+# 1.10.2 结构体成员变量说明
+
+# 1.10.2.1 CR0
+
+IO uint32_t CR0
+
+在文件 Iks32mc08x.exti.h 第 29 行定义.
+
+# 1.10.2.2 CR1
+
+IO uint32_t CR1
+
+在文件 Iks32mc08x.exti.h 第 30 行定义.
+
+# 1.10.2.3 EN
+
+IO uint32_t EN
+
+在文件 Iks32mc08x.exti.h 第 30 行定义.
+
+# 1.10.2.4 IF
+
+IO uint32_t IF
+
+在文件 Iks32mc08x.exti.h 第 31 行定义.
+
+# 1.10.2.5 POL
+
+IO uint32_t POL
+
+在文件 Iks32mc08x.exti.h 第 32 行定义.
+
+# 1.11 GPIOInitTypeDef结构体参考
+
+GPIO功能配置结构体句柄
+
+include <1ks32mc08x_gpio.h>
+
+# 成员变量
+
+成员变量- uint32_t GPIO_Pin- GPIOMode_TypeDef GPIO_Mode- GPIO模式:输入、输出、模拟在文件 Iks32mc08x_gpio.h 第 97 行定义.
+
+# 1.11.1 详细描述
+
+1.11.1 详细描述GPIO功能配置结构体句柄在文件 Iks32mc08x_gpio.h 第 97 行定义.
+
+# 1.11.2 结构体成员变量说明
+
+# 1.11.2.1 GPIO_Mode
+
+GPIOMode_TypeDef GPIO_Mode
+
+GPIO模式:输入、输出、模拟在文件 Iks32mc08x_gpio.h 第 100 行定义.
+
+# 1.11.2.2 GPIO_Pin
+
+uint32_t GPIO_Pin
+
+要配置的Pad
+
+在文件 Iks32mc08x_gpio.h 第 99 行定义.
+
+# 1.11.2.3 GPIO.PODEna
+
+uint32. t GPIO.PODEna
+
+开漏
+
+在文件 Iks32mc08x.gpio.h 第 102 行定义.
+
+# 1.11.2.4 GPIO.PuPd
+
+GPIOPud.TypeDef GPIO.PuPd
+
+默认/上拉
+
+在文件 Iks32mc08x.gpio.h 第 101 行定义.
+
+# 1.12 GPIO_TypeDef结构体参考
+
+GPIO寄存器结构体句柄
+
+include <lks32mc08x.gpio.h>
+
+# 成员变量
+
+成员变量- __IO uint32_t PIE- __IO uint32_t POE- __IO uint32_t PDI- __IO uint32_t PDO- __IO uint32_t PUE- __IO uint32_t PDE- __IO uint32_t PODE- __IO uint32_t LCKR- __IO uint32_t F3210- __IO uint32_t F7654- __IO uint32_t FBA98- __IO uint32_t FFEDC
+
+# 1.12.1 详细描述
+
+1.12.1 详细描述GPIO寄存器结构体句柄在文件 Iks32mc08x.gpio.h 第 25 行定义.
+
+# 1.12.2 结构体成员变量说明
+
+# 1.12.2.1 F3210
+
+IO uint32_t F3210
+
+功能选择 GPIO_Pin.0- 3
+
+在文件 Iks32mc08x_gpio.h 第 35 行定义.
+
+# 1.12.2.2 F7654
+
+IO uint32_t F7654
+
+功能选择 GPIO_Pin.4- 7
+
+在文件 Iks32mc08x_gpio.h 第 36 行定义.
+
+# 1.12.2.3 FBA98
+
+IO uint32_t FBA98
+
+功能选择 GPIO_Pin.8- 11
+
+在文件 Iks32mc08x_gpio.h 第 37 行定义.
+
+# 1.12.2.4 FFEDC
+
+IO uint32_t FFEDC
+
+功能选择 GPIO_Pin.12- 15
+
+在文件 Iks32mc08x_gpio.h 第 38 行定义.
+
+# 1.12.2.5 LCKR
+
+IO uint32_t LCKR
+
+配置锁存在文件 Iks32mc08x_gpio.h 第 34 行定义.
+
+# 1.12.2.6 PDE
+
+IO uint32_t PDE
+
+空闲
+
+在文件 Iks32mc08x.gpio.h 第 32 行定义.
+
+# 1.12.2.7 PDI
+
+IO uint32_t PDI
+
+输入数据在文件 Iks32mc08x.gpio.h 第 29 行定义.
+
+# 1.12.2.8 PDO
+
+IO uint32_t PDO
+
+输出数据在文件 Iks32mc08x.gpio.h 第 30 行定义.
+
+# 1.12.2.9 PIE
+
+IO uint32_t PIE
+
+输入使能在文件 Iks32mc08x.gpio.h 第 27 行定义.
+
+# 1.12.2.10 PODE
+
+IO uint32_t PODE
+
+开漏使能在文件 Iks32mc08x.gpio.h 第 33 行定义.
+
+# 1.12.2.11 POE
+
+IO uint32_t POE
+
+输出使能
+
+在文件 Iks32mc08x.gpio.h 第 28 行定义.
+
+# 1.12.2.12 PUE
+
+IO uint32_t PUE
+
+上拉使能
+
+在文件 Iks32mc08x.gpio.h 第 31 行定义.
+
+# 1.13 HALL.InitTypeDef结构体参考
+
+HALL结构体基地址定义
+
+include <lks32mc08x_hall.h>
+
+# 成员变量
+
+成员变量- uint16_t FilterLen  滤波长度,0对应长度1组32767对应长度32768滤波长度,滤波时钟为系统时钟- uint8_t ClockDivision  分频 0~3/1/2/4/8- uint8_t Filter75_Ena  使能第一级7/5滤波,ENABLE: 使能 DISABLE: 失能- uint8_t HALL_Ena  使能HALL,ENABLE: 使能 DISABLE: 失能- uint8_t Capture_IRQ_Ena  HALL信号变化中断使能,ENABLE: 使能 DISABLE: 失能- uint8_t Overflow_IRQ_Ena  HALL计数器溢出中断使能,ENABLE: 使能 DISABLE: 失能- uint32_t CountTH  HALL计数器门限值,有效位为24位- uint8_t softIE  软件中断使能 ENABLE: 使能 DISABLE: 失能
+
+# 1.13.1 详细描述
+
+1.13.1 详细描述HALL结构体基地址定义HALL初始化结构体句柄, 初始化时请定义该句柄, 并用其它地址来传参在文件 Iks32mc08x_hall.h 第 42 行定义.
+
+# 1.13.2 结构体成员变量说明
+
+# 1.13.2.1 Capture.IRQ. Ena
+
+uint8. t Capture.IRQ. Ena
+
+HALL信号变化中断使能,ENABLE: 使能 DISABLE: 失能在文件 Iks32mc08x_hall.h 第 48 行定义.
+
+# 1.13.2.2 ClockDivision
+
+uint8. t ClockDivision
+
+分频  $0\sim 3 / 1 / 2 / 4 / 8$
+
+在文件 Iks32mc08x_hall.h 第 48 行定义.
+
+# 1.13.2.3 CountTH
+
+uint32. t CountTH
+
+HALL计数器门限值，有效位为24位在文件Iks32mc08x_hall.h第50行定义
+
+# 1.13.2.4 Filter75. Ena
+
+uint8. t Filter75. Ena
+
+使能第一级7/5滤波,ENABLE: 使能 DISABLE: 失能在文件 Iks32mc08x_hall.h 第 48 行定义.
+
+# 1.13.2.5 FilterLen
+
+uint16. t FilterLen
+
+滤波长度,0对应长度1到32767对应长度32768滤波长度，滤波时钟为系统时钟在文件 Iks32mc08x_hall.h 第 44 行定义.
+
+# 1.13.2.6 HALL-Ena
+
+uint8_t HALL- Ena
+
+使能HALL,ENABLE: 使能 DISABLE: 失能在文件 Iks32mc08x_hall.h 第 49 行定义.
+
+# 1.13.2.7 Overflow.IRQ-Ena
+
+uint8_t Overflow.IRQ- Ena
+
+HALL计数器溢出中断使能,ENABLE: 使能 DISABLE: 失能在文件 Iks32mc08x_hall.h 第 49 行定义.
+
+# 1.13.2.8 softIE
+
+uint8_t softIE
+
+软件中断使能 ENABLE: 使能 DISABLE: 失能在文件 Iks32mc08x_hall.h 第 51 行定义.
+
+# 1.14 HALL-TypeDet结构体参考
+
+HALL寄存器结构体句柄
+
+include <lks32mc08x_hall.h>
+
+# 成员变量
+
+- _IO uint32_t CPG  HALL 模块配置寄存器  
+- _IO uint32_t INFO  HALL 模块信息寄存器  
+- _IO uint32_t WIDTH  HALL 宽度计数值寄存器  
+- _IO uint32_t TH  HALL 模块计数器门限值寄存器  
+- _IO uint32_t CNT  HALL 计数寄存器
+
+# 1.14.1 详细描述
+
+HALL寄存器结构体句柄在文件lks32mc08x.hall.h第23行定义
+
+# 1.14.2 结构体成员变量说明
+
+# 1.14.2.1 CFG
+
+IO uint32_t CFG
+
+HALL模块配置寄存器
+
+在文件lks32mc08x.hall.h第26行定义
+
+# 1.14.2.2 CNT
+
+IO uint32_t CNT
+
+HALL计数寄存器
+
+在文件lks32mc08x.hall.h第29行定义
+
+# 1.14.2.3 INFO
+
+IO uint32_t INFO
+
+HALL模块信息寄存器
+
+在文件lks32mc08x.hall.h第26行定义
+
+# 1.14.2.4 TH
+
+IO uint32_t TH
+
+HALL模块计数器门限值寄存器
+
+在文件lks32mc08x.hall.h第28行定义
+
+# 1.14.2.5 WIDTH
+
+IO uint32_t WIDTH
+
+HALL宽度计数值寄存器
+
+在文件lks32mc08x.hall.h第27行定义
+
+# 1.15 I2CInitTypeDef结构体参考
+
+I2C结构体基地址定义
+
+include <lks32mc08x.i2c.h>
+
+# 成员变量
+
+成员变量- u8 ADRCMP    I2C硬件地址比较使能开关，只有在DMA模式下开启才有效- u8 MST_MODE    I2C主模式使能；ENABLE:使能，DISABLE:失能- u8 SLV_MODE    I2C从模式使能；ENABLE:使能，DISABLE:失能- u8 DMA    I2C DMA传输使能；ENABLE:使能，DISABLE:失能- u32 BaudRate    I2C波特率- u8 IE    I2C中断使能；ENABLE:使能，DISABLE:失能- u8 TC_IE    I2C数据传输完成中断使能；ENABLE:使能，DISABLE:失能- u8 BUS_ERR_IE    I2C总线错误事件中断使能；ENABLE:使能，DISABLE:失能- u8 STOP_IE    I2C STOP事件中断使能；ENABLE:使能，DISABLE:失能- u8 BURST_NACK    I2C传输，NACK事件中断使能；ENABLE:使能，DISABLE:失能- u8 BURST_ADDR_CMP    I2C传输，硬件地址匹配中断使能；ENABLE:使能，DISABLE:失能
+
+# 1.15.1 详细描述
+
+I2C结构体基地址定义
+
+I2C初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x.i2c.h第44行定义.
+
+# 1.15.2 结构体成员变量说明
+
+# 1.15.2.1 ADRCMP
+
+u8 ADRCMP
+
+I2C硬件地址比较使能开关，只有在DMA模式下开启才有效在文件Iks32mc08x.i2c.h第46行定义.
+
+# 1.15.2.2 BaudRate
+
+u32 BaudRate
+
+I2C波特率在文件Iks32mc08x.i2c.h第50行定义.
+
+# 1.15.2.3 BURST.ADDR.CMP
+
+u8 BURST.ADDR.CMP
+
+I2C传输，硬件地址匹配中断使能；ENABLE：使能，DISABLE：失能在文件Iks32mc08x.i2c.h第56行定义.
+
+# 1.15.2.4 BURST.NACK
+
+u8 BURST.NACK
+
+I2C传输，NACK事件中断使能；ENABLE：使能，DISABLE：失能在文件Iks32mc08x.i2c.h第55行定义.
+
+# 1.15.2.5 BUS.ERR.IE
+
+u8 BUS_ERR.IE
+
+I2C总线错误事件中断使能；ENABLE：使能，DISABLE：失能在文件Iks32mc08x.i2c.h第53行定义.
+
+# 1.15.2.6 DMA
+
+u8 DMA
+
+I2C DMA传输使能；ENABLE:使能，DISABLE:失能在文件 Iks32mc08x.i2c.h 第 49 行定义.
+
+# 1.15.2.7 IE
+
+u8 IE
+
+I2C 中断使能；ENABLE:使能，DISABLE:失能在文件 Iks32mc08x.i2c.h 第 51 行定义.
+
+# 1.15.2.8 MST.MODE
+
+u8 MST.MODE
+
+I2C 主模式使能；ENABLE:使能，DISABLE:失能在文件 Iks32mc08x.i2c.h 第 47 行定义.
+
+# 1.15.2.9 SLV.MODE
+
+u8 SLV.MODE
+
+I2C 从模式使能；ENABLE:使能，DISABLE:失能在文件 Iks32mc08x.i2c.h 第 48 行定义.
+
+# 1.15.2.10 STOP_IE
+
+u8 STOP_IE
+
+I2C STOP 事件中断使能；ENABLE:使能，DISABLE:失能在文件 Iks32mc08x.i2c.h 第 54 行定义.
+
+# 1.15.2.11 TC_IE
+
+u8 TC_IE
+
+I2C数据传输完成中断使能；ENABLE：使能，DISABLE：失能在文件Iks32mc08x.i2c.h第52行定义.
+
+# 1.16 I2C_TypeDef结构体参考
+
+I2C寄存器结构体句柄
+
+include <lks32mc08x.i2c.h>
+
+# 成员变量
+
+成员变量- _IO uint32. t ADDR- _IO uint32. t CFG- _IO uint32. t SCR- _IO uint32. t DATA- _IO uint32. t MSCR- _IO uint32. t BCR
+
+# 1.16.1 详细描述
+
+I2C寄存器结构体句柄在文件Iks32mc08x.i2c.h第23行定义.
+
+# 1.16.2 结构体成员变量说明
+
+# 1.16.2.1 ADDR
+
+IO uint32. t ADDR
+
+在文件Iks32mc08x.i2c.h第23行定义.
+
+# 1.16.2.2 BCR
+
+IO uint32. t BCR
+
+在文件Iks32mc08x.i2c.h第30行定义.
+
+# 1.16.2.3 CFG
+
+IO uint32. t CFG
+
+在文件 Iks32mc08x.i2c.h 第 26 行定义.
+
+# 1.16.2.4 DATA
+
+IO uint32. t DATA
+
+在文件 Iks32mc08x.i2c.h 第 26 行定义.
+
+# 1.16.2.5 MSCR
+
+IO uint32. t MSCR
+
+在文件 Iks32mc08x.i2c.h 第 29 行定义.
+
+# 1.16.2.6 SCR
+
+IO uint32. t SCR
+
+在文件 Iks32mc08x.i2c.h 第 27 行定义.
+
+# 1.17 IWDG_InitTypeDef结构体参考
+
+IWDG寄存器结构体句柄
+
+include <lks32mc08x.iwdg.h>
+
+# 成员变量
+
+- u32 IWDG_EN 独立着门狗使能- u32 RTH 看门狗超时复位时间
+
+# 1.17.1 详细描述
+
+IWDG寄存器结构体句柄
+
+在文件 Iks32mc08x.iwdg.h 第 23 行定义.
+
+# 1.17.2 结构体成员变量说明
+
+# 1.17.2.1 RTH
+
+u32 RTH
+
+看门狗超时复位时间在文件lks32mc08x_iwdg.h第26行定义.
+
+# 1.17.2.2 WDG_EN
+
+u32 WDG_EN
+
+独立看门狗使能在文件lks32mc08x_iwdg.h第25行定义.
+
+# 1.18 MCPWMInitTypeDef结构体参考
+
+MCPWM初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x_mcpwm.h>
+
+# 成员变量
+
+- uint16_t MCPWM.PERIOD  MCPWM输出周期  #define PWM.PERIOD (u16) (PWM.MCLK/(u32)/(2*PWM.FREQ*(PWM.PRSC+1))))  PWM.PERIOD为MCPWM.PERIOD赋值，PWM.MCLK为PWM模块时钟频率如96000000HZ  PWM.FREQ为PWM新波频率如16000Hz即16KHz，PWM.PRSC为PWM分频系数为0/1/3/7  
+- uint8_t CLK_DIV  MCPWM分频系数为0/1分频，1/2分频，2/4分频，3/8分频  uint8_t MCLK_EN  MCPWM时钟使能开关：ENABLE使能，DISABLE关闭  
+- uint8_t MCPWM.Cnt_EN  MCPWM主计数器使能开关：ENABLE使能，DISABLE关闭  
+- uint8_t GPIO.BKIN_Filter  GPIO输入滤波时钟设置1-16  
+- uint8_t CMP.BKIN_Filter  比较器CMP输入滤波时钟设置1-16  
+- uint16_t MCPWM_WorkModeCH0  MCPWM CH0工作模式，边沿对齐/中心对齐  
+- uint16_t MCPWM_WorkModeCH1
+
+MCPWM CH0工作模式，边沿对齐/中心对齐- uint16_t MCPWM_WorkModeCH2MCPWM CH0工作模式，边沿对齐/中心对齐
+
+- uint16_t MCPWM_WorkModeCH3MCPWM CH0工作模式，边沿对齐/中心对齐
+
+- uint16_t TriggerPoint0
+
+PWM触发ADC事件0，时间点设置，取值范围（- MCPWM.PERIOD\~MCPWM.PERIOD）
+
+- uint16_t TriggerPoint1
+
+PWM触发ADC事件1，时间点设置，取值范围（- MCPWM.PERIOD\~MCPWM.PERIOD）
+
+- uint16_t TriggerPoint2
+
+PWM触发ADC事件2，时间点设置，取值范围（- MCPWM.PERIOD\~MCPWM.PERIOD）
+
+- uint16_t TriggerPoint3
+
+PWM触发ADC事件3，时间点设置，取值范围（- MCPWM.PERIOD\~MCPWM.PERIOD）
+
+- uint16_t DeadTimeCHON
+
+CHON死区时间设置#define DEADTIME (u10)((unsigned long long)PWM.MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)DEADTIME为DeadTimeCHON\~DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+- uint16_t DeadTimeCHOP
+
+CHOP死区时间设置#define DEADTIME (u10)((unsigned long long)PWM.MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)DEADTIME为DeadTimeCHON\~DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+CH1N死区时间设置
+
+CH1N死区时间设置#define DEADTIME (u10)((unsigned long long)PWM.MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)DEADTIME为DeadTimeCHON\~DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+CH1P死区时间设置#define DEADTIME (u10)((unsigned long long)PWM.MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)DEADTIME为DeadTimeCHON\~DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+CH2N死区时间设置#define DEADTIME (u10)((unsigned long long)PWM.MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)DEADTIME为DeadTimeCHON\~DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+CHOP输出极性取反，0:正常输出；1:取反输出- uint8. t CH1N_Polarity_INVCH1N输出极性取反，0:正常输出；1:取反输出- uint8. t CH1P_Polarity_INVCH1P输出极性取反，0:正常输出；1:取反输出- uint8. t CH2N_Polarity_INVCH2N输出极性取反，0:正常输出；1:取反输出- uint8. t CH2P_Polarity_INVCH2P输出极性取反，0:正常输出；1:取反输出- uint8. t CH3N_Polarity_INVCH3N输出极性取反，0:正常输出；1:取反输出- uint8. t CH3P_Polarity_INVCH3P输出极性取反，0:正常输出；1:取反输出- uint8. t CHOP_SCTRLP当  $CHO\_ PS = 1$  时，输出到CH0. P通道的值高电平(前提极性为取反)- uint8. t CHON_SCTRLN当  $CHO\_ NS = 1$  时，输出到CH0. N通道的值高电平(前提极性为取反)- uint8. t CH1P_SCTRLP当  $CH1\_ PS = 1$  时，输出到CH1. P通道的值高电平(前提极性为取反)- uint8. t CH1N_SCTRLN当  $CH1\_ NS = 1$  时，输出到CH1. N通道的值高电平(前提极性为取反)- uint8. t CH2P_SCTRLP当  $CH2\_ PS = 1$  时，输出到CH2. P通道的值高电平(前提极性为取反)- uint8. t CH2N_SCTRLN当  $CH2\_ NS = 1$  时，输出到CH2. N通道的值高电平(前提极性为取反)- uint8. t CH3P_SCTRLP当  $CH3\_ PS = 1$  时，输出到CH3. P通道的值高电平(前提极性为取反)- uint8. t CH3N_SCTRLN当  $CH3\_ NS = 1$  时，输出到CH3. PN通道的值高电平(前提极性为取反)- uint8. t CH0_PSCHO_P信号来源，1:来自CH0_SCTRLP（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH0_NSCH0_N信号来源，1:来自CH0_SCTRLN（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH1_PSCH1_P信号来源，1:来自CH1_SCTRLP（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH1_NSCH1_N信号来源，1:来自CH1_SCTRLN（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH2_PSCH2_P信号来源，1:来自CH2_SCTRLP（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH2_NSCH2_N信号来源，1:来自CH2_SCTRLN（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH3_PSCH3_P信号来源，1:来自CH3_SCTRLP（软件控制PWM输出）；0:来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t CH3_NS
+
+CH3. N信号来源，1：来自CH3. SCTRLN（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）- uint8. t Switch.CH0N_CH0P交换CH0N, CH0P信号输出使能开关：ENABLE使能，DISABLE关闭- uint8. t Switch.CH1N_CH1P交换CH1N, CH1P信号输出使能开关：ENABLE使能，DISABLE关闭- uint8. t Switch.CH2N_CH2P交换CH2N, CH2P信号输出使能开关：ENABLE使能，DISABLE关闭- uint8. t Switch.CH3N_CH3P交换CH3N, CH3P信号输出使能开关：ENABLE使能，DISABLE关闭- uint8. t MCPWM_UpdateInterval MCPWM T0/T1事件更新间隔，0～15次才更新一次- uint8. t MCPWM_T0_UpdateEN MCPWM T0事件更新使能：ENABLE使能，DISABLE关闭- uint8. t MCPWM_T1_UpdateEN MCPWM T1事件更新使能：ENABLE使能，DISABLE关闭- uint8. t MCPWM_Auto_ERR_EN当发生FAIL事件关闭MCPWM时（即MOE关闭），MCPWM更新事件是否自动打开MOE，使能开关- uint8. t FAIL0. INPUT_EN FAIL0输入功能使能：ENABLE使能，DISABLE关闭- uint8. t FAIL1. INPUT_EN FAIL1输入功能使能：ENABLE使能，DISABLE关闭- uint8. t FAIL0. Signal.Sel FAIL0信号选择，比较器0或GPIO(MCPWM_BKIN0)- uint8. t FAIL1. Signal.Sel FAIL1信号选择，比较器1或GPIO(MCPWM_BKIN1)- uint8. t FAIL0. Polarity FAIL0信号极性设置，高有效或低有效- uint8. t FAIL1. Polarity FAIL1信号极性设置，高有效或低有效- uint8. t DebugMode_PWM_Out Debug时，MCU进入Wait, MCPWM信号是否正常输出- uint8. t CH0P_default.outputCH0PMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH0N_default.outputCH0NMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH1P_default.outputCH1PMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH1N_default.outputCH1NMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH0P_default.outputCH2PMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH2N_default.outputCH2NMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH3P_default.outputCH3PMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t CH3N_default.outputCH3NMOE为0时或发生FAIL事件时，默认电平输出,- uint8. t T0_Update_INT_ENT0更新事件中断使能：ENABLE使能，DISABLE关闭- uint8. t T1_Update_INT_EN
+
+T1更新事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH00. Match_INT_ENTH00与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH01. Match_INT_ENTH01与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH10. Match_INT_ENTH10与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH11. Match_INT_ENTH11与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH20. Match_INT_ENTH20与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH21. Match_INT_ENTH21与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH30. Match_INT_ENTH30与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TH31. Match_INT_ENTH31与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TMR0. Match_INT_ENTMR0与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TMR1. Match_INT_ENTMR1与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TMR2. Match_INT_ENTMR2与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t TMR3. Match_INT_ENTMR3与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭- uint8. t MCPWM.REG.UPDATE_INT_ENMCPWM寄存器更新事件中断使能：ENABLE使能，DISABLE关闭- uint8. t FAIL0. INT_ENFAIL0事件中断使能：ENABLE使能，DISABLE关闭- uint8. t FAIL1. INT_ENFAIL1事件中断使能：ENABLE使能，DISABLE关闭- uint8. t IOO.PPEIOO推挽模式使能：ENABLE使能，DISABLE关闭- uint8. t IO1. PPEIO1推挽模式使能：ENABLE使能，DISABLE关闭- uint8. t IO2. PPEIO2推挽模式使能：ENABLE使能，DISABLE关闭- uint8. t IO3. PPEIO3推挽模式使能：ENABLE使能，DISABLE关闭
+
+# 1.18.1 详细描述
+
+MCPWM初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x_mcpwm.h第26行定义.
+
+# 1.18.2 结构体成员变量说明
+
+# 1.18.2.1 CH0_NS
+
+uint8_t CH0_NS
+
+CH0_N信号来源，1：来自CH0_SCTRLN（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第118行定义
+
+# 1.18.2.2 CH0_PS
+
+uint8_t CH0_PS
+
+CH0_P信号来源，1：来自CH0_SCTRLP（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第117行定义
+
+# 1.18.2.3 CHON.default_output
+
+uint8_t CHON.default_output
+
+CHONMOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH.LEVEL LOW.LEVEL
+
+在文件lks32mc08x_mcpwm.h第145行定义
+
+# 1.18.2.4 CHON.Polarity.INV
+
+uint8_t CHON.Polarity.INV
+
+CHON输出极性取反，0：正常输出；1：取反输出在文件lks32mc08x_mcpwm.h第99行定义
+
+# 1.18.2.5 CHON_SCTRLN
+
+uint8_t CHON_SCTRLN
+
+当CH0. NS = 1时，输出到CH0. N通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 109 行定义.
+
+# 1.18.2.6 CHOP_default_output
+
+uint8_t CHOP_default_output
+
+CHOP MOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH_LEVEL LOW_LEVEL
+
+在文件 Iks32mc08x_mcpwm.h 第 144 行定义.
+
+# 1.18.2.7 CHOP_Polarity.INV
+
+uint8_t CHOP_Polarity.INV
+
+CHOP输出极性取反，0:正常输出；1:取反输出在文件 Iks32mc08x_mcpwm.h 第 100 行定义.
+
+# 1.18.2.8 CHOP_SCTRLP
+
+uint8_t CHOP_SCTRLP
+
+当CH0. PS = 1时，输出到CH0. P通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 108 行定义.
+
+# 1.18.2.9 CH1_NS
+
+uint8_t CH1_NS
+
+CH1_N信号来源，1：来自CH1_SCTRLN（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第120行定义
+
+# 1.18.2.10 CH1_PS
+
+uint8_t CH1_PS
+
+CH1_P信号来源，1：来自CH1_SCTRLP（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第119行定义
+
+# 1.18.2.11 CH1N_default_output
+
+uint8_t CH1N_default_output
+
+CH1N MOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH.LEVEL LOW.LEVEL
+
+在文件lks32mc08x_mcpwm.h第147行定义
+
+# 1.18.2.12 CH1N_Polarity_INV
+
+uint8_t CH1N_Polarity_INV
+
+CH1N输出极性取反，0：正常输出；1：取反输出在文件lks32mc08x_mcpwm.h第101行定义
+
+# 1.18.2.13 CHIN_SCTRLN
+
+uint8. t CHIN_SCTRLN
+
+当CH1. NS = 1时，输出到CH1. N通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 111 行定义.
+
+# 1.18.2.14 CHIP_default_output
+
+uint8. t CHIP_default_output
+
+CHIP MOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH_LEVEL LOW_LEVEL
+
+在文件 Iks32mc08x_mcpwm.h 第 146 行定义.
+
+# 1.18.2.15 CHIP_Polarity_INV
+
+uint8. t CHIP_Polarity_INV
+
+CHIP输出极性取反，0:正常输出；1:取反输出在文件 Iks32mc08x_mcpwm.h 第 102 行定义.
+
+# 1.18.2.16 CHIP_SCTRLP
+
+uint8. t CHIP_SCTRLP
+
+当CH1. PS = 1时，输出到CH1. P通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 110 行定义.
+
+# 1.18.2.17 CH2.NS
+
+uint8_t CH2. NS
+
+CH2. N信号来源，1：来自CH2. SCTRLN（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第122行定义
+
+# 1.18.2.18 CH2.PS
+
+uint8_t CH2. PS
+
+CH2. P信号来源，1：来自CH2. SCTRLP（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第121行定义
+
+# 1.18.2.19 CH2N_default.output
+
+uint8_t CH2N_default.output
+
+CH2NMOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH.LEVEL LOW.LEVEL
+
+在文件lks32mc08x_mcpwm.h第149行定义
+
+# 1.18.2.20 CH2N_Polarity_INV
+
+uint8_t CH2N_Polarity_INV
+
+CH2N输出极性取反，0：正常输出；1：取反输出在文件lks32mc08x_mcpwm.h第103行定义
+
+# 1.18.2.21 CH2N_SCTRLN
+
+uint8_t CH2N_SCTRLN
+
+当CH2. NS = 1时，输出到CH2. N通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 113 行定义.
+
+# 1.18.2.22 CH2P_default_output
+
+uint8_t CH2P_default_output
+
+CH2P MOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH_LEVEL LOW_LEVEL
+
+在文件 Iks32mc08x_mcpwm.h 第 148 行定义.
+
+# 1.18.2.23 CH2P_Polarity_INV
+
+uint8_t CH2P_Polarity_INV
+
+CH2P输出极性取反，0:正常输出；1:取反输出在文件 Iks32mc08x_mcpwm.h 第 104 行定义.
+
+# 1.18.2.24 CH2P_SCTRLP
+
+uint8_t CH2P_SCTRLP
+
+当CH2. PS = 1时，输出到CH2. P通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 112 行定义.
+
+# 1.18.2.25 CH3.NS
+
+uint8_t CH3. NS
+
+CH3. N信号来源，1：来自CH3. SCTRLN（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第124行定义
+
+# 1.18.2.26 CH3.PS
+
+uint8_t CH3. PS
+
+CH3. P信号来源，1：来自CH3. SCTRLP（软件控制PWM输出）；0：来自MCPWM实际运行计数器（硬件计数器控制PWM输出）
+
+在文件lks32mc08x_mcpwm.h第123行定义
+
+# 1.18.2.27 CH3N_default.output
+
+uint8_t CH3N_default.output
+
+CH3NMOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH.LEVEL LOW.LEVEL
+
+在文件lks32mc08x_mcpwm.h第151行定义
+
+# 1.18.2.28 CH3N_Polarity_INV
+
+uint8_t CH3N_Polarity_INV
+
+CH3N输出极性取反，0：正常输出；1：取反输出在文件lks32mc08x_mcpwm.h第105行定义
+
+# 1.18.2.29 CH3N_SCTRLN
+
+uint8. t CH3N_SCTRLN
+
+当CH3. NS = 1时，输出到CH3. PN通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 115 行定义.
+
+# 1.18.2.30 CH3P_Polarity_INV
+
+uint8. t CH3P_default_output
+
+CH3P MOE为0时或发生FAIL事件时，默认电平输出，
+
+参见
+
+HIGH_LEVEL LOW_LEVEL
+
+在文件 Iks32mc08x_mcpwm.h 第 150 行定义.
+
+# 1.18.2.31 CH3P_Polarity_INV
+
+uint8. t CH3P_Polarity_INV
+
+CH3P输出极性取反，0:正常输出；1:取反输出在文件 Iks32mc08x_mcpwm.h 第 106 行定义.
+
+# 1.18.2.32 CH3P_SCTRLP
+
+uint8. t CH3P_SCTRLP
+
+当CH3. PS = 1时，输出到CH3. PN通道的值高电平(前提极性为取反)在文件 Iks32mc08x_mcpwm.h 第 114 行定义.
+
+# 1.18.2.33 CLK_DIV
+
+uint8. t CLK_DIV
+
+MCPWM 分频系数为0:1分频，1:2分频，2:4分频，3:8分频在文件 Iks32mc08x_mcpwm.h 第 35 行定义.
+
+# 1.18.2.34 CMP.BKIN_Filter
+
+uint8_t CMP.BKIN_Filter
+
+比较器CMP输入滤波时钟设置1- 16
+
+在文件lks32mc08x_mcpwm.h第36行定义
+
+# 1.18.2.35 DeadTimeCHON
+
+uint16. t DeadTimeCHON
+
+CHON死区时间设置#define DEADTIME(u16(((unsigned long long)PWM_MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- - DeadTimeCH3P值，PWM_MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第55行定义
+
+# 1.18.2.36 DeadTimeCHOP
+
+uint16. t DeadTimeCHOP
+
+CHOP死区时间设置#define DEADTIME(u16(((unsigned long long)PWM_MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- - DeadTimeCH3P值，PWM_MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第61行定义
+
+# 1.18.2.37 DeadTimeCH1N
+
+uint16. t DeadTimeCH1N
+
+CH1N死区时间设置#define DEADTIME(u16(((unsigned long long)PWM_MCLK  $\ast$  (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- - DeadTimeCH3P值，PWM_MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第67行定义
+
+# 1.18.2.38 DeadTimeCH1P
+
+uint16. t DeadTimeCH1P
+
+CH1P死区时间设置#define DEADTIME (u16)((unsigned long long)PWM.MCLK * (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- >DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第73行定义
+
+# 1.18.2.39 DeadTimeCH2N
+
+uint16. t DeadTimeCH2N
+
+CH2N死区时间设置#define DEADTIME (u16)((unsigned long long)PWM.MCLK * (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- >DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第79行定义
+
+# 1.18.2.40 DeadTimeCH2P
+
+uint16. t DeadTimeCH2P
+
+CH2P死区时间设置#define DEADTIME (u16)((unsigned long long)PWM.MCLK * (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- >DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第85行定义
+
+# 1.18.2.41 DeadTimeCH3N
+
+uint16. t DeadTimeCH3N
+
+CH3N死区时间设置#define DEADTIME (u16)((unsigned long long)PWM.MCLK * (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- >DeadTimeCH3P值，PWM.MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第91行定义
+
+# 1.18.2.42 DeadTimeCH3P
+
+uint16. t DeadTimeCH3P
+
+CH3P死区时间设置#define DEADTIME(u16(((unsigned long long)PWM_MCLK  $^*$  (unsigned long long)DEADTIME.NS)/100000000uL)
+
+DEADTIME为DeadTimeCHON- DeadTimeCH3P值，PWM_MCLK主频如96000000HZ，DEADTIME.NS死区时间如1200单位纳秒
+
+在文件lks32mc08x_mcpwm.h第97行定义
+
+# 1.18.2.43 DebugMode.PWM.out
+
+uint8. t DebugMode.PWM.out
+
+Debug时，MCU进入Halt，MCPWM信号是否正常输出在文件lks32mc08x_mcpwm.h第142行定义
+
+# 1.18.2.44 FAIL0.INPUT.EN
+
+uint8. t FAIL0. INPUT.EN
+
+FAIL0输入功能使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第136行定义
+
+# 1.18.2.45 FAIL0.INT.EN
+
+uint8. t FAIL0. INT.EN
+
+FAIL0事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第172行定义
+
+# 1.18.2.46 FAIL0.Polarity
+
+uint8_t FAIL0. Polarity
+
+FAIL0信号极性设置，高有效或低有效
+
+参见
+
+HIGH_LEVEL_ACTIVE LOW_LEVEL_ACTIVE
+
+在文件lks32mc08x_mcpwm.h第140行定义
+
+# 1.18.2.47 FAIL0.Signal.Sel
+
+uint8_t FAIL0. Signal.Sel
+
+FAIL0信号选择，比较器0或GPIO(MCPWM.BKINO)
+
+参见 FAIL_SEL_CMP FAIL_SEL_IO
+
+在文件lks32mc08x_mcpwm.h第138行定义
+
+# 1.18.2.48 FAIL1.INPUT.EN
+
+uint8_t FAIL1. INPUT.EN
+
+FAIL1输入功能使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第137行定义
+
+# 1.18.2.49 FAIL1_INT_EN
+
+uint8_t FAIL1_INT_EN
+
+FAIL1事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第173行定义
+
+# 1.18.2.50 FAIL1_Polarity
+
+uint8_t FAIL1_Polarity
+
+FAIL1信号极性设置，高有效或低有效
+
+参见
+
+HIGH_LEVEL_ACTIVE LOW_LEVEL_ACTIVE
+
+在文件lks32mc08x_mcpwm.h第141行定义
+
+# 1.18.2.51 FAIL1_Signal_Sel
+
+uint8_t FAIL1_Signal_Sel
+
+FAIL1信号选择，比较器1或GPIO(MCPWM.BKIN1)
+
+参见 FAIL_SEL_CMP FAIL_SEL_IO
+
+在文件lks32mc08x_mcpwm.h第139行定义
+
+# 1.18.2.52 GPIO.BKIN_Filter
+
+uint8_t GPIO.BKIN_Filter
+
+GPIO输入滤波时钟设置1- 16
+
+在文件lks32mc08x_mcpwm.h第38行定义
+
+# 1.18.2.53 IOO.PPE
+
+uint8_t IOO.PPE
+
+IOO推挽模式使能：ENABLE使能，DISABLE关闭
+
+在文件lks32mc08x_mcpwm.h第175行定义
+
+# 1.18.2.54 IO1.PPE
+
+uint8. t IO1. PPE
+
+IO1推挽模式使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第176行定义.
+
+# 1.18.2.55 IO2.PPE
+
+uint8. t IO2. PPE
+
+IO2推挽模式使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第177行定义.
+
+# 1.18.2.56 IO3.PPE
+
+uint8. t IO3. PPE
+
+IO3推挽模式使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第178行定义.
+
+# 1.18.2.57 MCLK.EN
+
+uint8. t MCLK.EN
+
+MCPWM时钟使能开关：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第36行定义.
+
+# 1.18.2.58 MCPWM.Auto_ERR.EN
+
+uint8. t MCPWM.Auto_ERR.EN
+
+当发生FAIL事件关闭MCPWM时（即MOE关闭），MCPWM更新事件是否自动打开MOE，使能开关在文件lks32mc08x_mcpwm.h第134行定义.
+
+# 1.18.2.59 MCPWM.Cnt.EN
+
+uint8_t MCPWM.Cnt.EN
+
+MCPWM主计数器使能开关：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第37行定义.
+
+# 1.18.2.60 MCPWM.PERIOD
+
+uint16. t MCPWM.PERIOD
+
+MCPWM输出周期#definePWM.PERIOD（（u16）（PWM.MCLK/（u32)（2\*PWM.FREQ\*(PWM.PRSC+1)))PWM.PERIOD为MCPWM.PERIOD赋值，PWM.MCLK为PWM模块时钟频率如96000000HZPWM.FREQ为PWM斩波频率如16000Hz即16KHz，PWM.PRSC为PWM分频系数为0/1/3/7
+
+在文件lks32mc08x_mcpwm.h第34行定义.
+
+# 1.18.2.61 MCPWM.REG.UPDATE.INT.EN
+
+uint8. t MCPWM.REG.UPDATE.INTCEN
+
+MCPWM寄存器更新事件中断使能：ENABLE使能，DISABLE关闭
+
+在文件lks32mc08x_mcpwm.h第170行定义.
+
+# 1.18.2.62 MCPWM.TO.UpdateEN
+
+uint8. t MCPWM.TO.UpdateEN
+
+MCPWMT0事件更新使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第132行定义.
+
+# 1.18.2.63 MCPWM.T1.UpdateEN
+
+uint8. t MCPWM.T1. UpdateEN
+
+MCPWMT1事件更新使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第133行定义.
+
+# 1.18.2.64 MCPWM.UpdateInterval
+
+uint8. t MCPWM.UpdateInterval
+
+MCPWMT0/T1事件更新间隔，  $0\sim 15$  对应发送更新事件  $0\sim 15$  次才更新一次在文件lks32mc08x_mcpwm.h第131行定义.
+
+# 1.18.2.65 MCPWM.WorkModeCH0
+
+uint16. t MCPWM.WorkModeCH0
+
+MCPWMCHO工作模式：边沿对齐/中心对齐
+
+参见
+
+EDGE_PWM_MODE CENTRAL_PWM_MODE
+
+在文件lks32mc08x_mcpwm.h第41行定义
+
+# 1.18.2.66 MCPWM.WorkModeCH1
+
+uint16. t MCPWM.WorkModeCH1
+
+MCPWMCHO工作模式：边沿对齐/中心对齐
+
+参见
+
+EDGE_PWM_MODE CENTRAL_PWM_MODE
+
+在文件lks32mc08x_mcpwm.h第42行定义
+
+# 1.18.2.67 MCPWM.WorkModeCH2
+
+uint16. t MCPWM.WorkModeCH2
+
+MCPWMCHO工作模式：边沿对齐/中心对齐
+
+参见
+
+EDGE_PWM_MODE CENTRAL_PWM_MODE
+
+在文件lks32mc08x_mcpwm.h第43行定义
+
+# 1.18.2.68 MCPWM_WorkModeCH3
+
+uint16. t MCPWM_WorkModeCH3
+
+MCPWMCH0工作模式：边沿对齐/中心对齐
+
+参见
+
+EDGE.PWM.MODE CENTRAL_PWM.MODE
+
+在文件lks32mc08x_mcpwm.h第44行定义
+
+# 1.18.2.69 Switch.CHON.CHOP
+
+uint8. t Switch.CHON.CHOP
+
+交换CHON,CHOP信号输出使能开关：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第126行定义
+
+# 1.18.2.70 Switch.CH1N.CH1P
+
+uint8. t Switch.CH1N.CH1P
+
+交换CH1N,CH1P信号输出使能开关：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第127行定义
+
+# 1.18.2.71 Switch.CH2N.CH2P
+
+uint8. t Switch.CH2N.CH2P
+
+交换CH2N,CH2P信号输出使能开关：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第128行定义
+
+# 1.18.2.72 Switch.CH3N.CH3P
+
+uint8. t Switch.CH3N.CH3P
+
+交换CH3N,CH3P信号输出使能开关：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第129行定义
+
+# 1.18.2.73 TO_Update_INT_EN
+
+uint8_t TO_Update_INT_EN
+
+TO更新事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 153 行定义.
+
+# 1.18.2.74 T1_Update_INT_EN
+
+uint8_t T1_Update_INT_EN
+
+T1更新事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 154 行定义.
+
+# 1.18.2.75 TH00.Match_INT_EN
+
+uint8_t TH00_Match_INT_EN
+
+TH00与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 156 行定义.
+
+# 1.18.2.76 TH01.Match_INT_EN
+
+uint8_t TH01_Match_INT_EN
+
+TH01与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 157 行定义.
+
+# 1.18.2.77 TH10.Match_INT_EN
+
+uint8_t TH10_Match_INT_EN
+
+TH10与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 158 行定义.
+
+# 1.18.2.78 TH11.Match.INT.EN
+
+uint8_t TH11.Match.INT.EN
+
+TH11与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第159行定义.
+
+# 1.18.2.79 TH20.Match.INT.EN
+
+uint8_t TH20.Match.INT.EN
+
+TH20与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第160行定义.
+
+# 1.18.2.80 TH21.Match.INT.EN
+
+uint8_t TH21.Match.INT.EN
+
+TH21与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第161行定义.
+
+# 1.18.2.81 TH30.Match.INT.EN
+
+uint8_t TH30.Match.INT.EN
+
+TH30与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第162行定义.
+
+# 1.18.2.82 TH31.Match.INT.EN
+
+uint8_t TH31.Match.INT.EN
+
+TH31与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件lks32mc08x_mcpwm.h第163行定义.
+
+# 1.18.2.83 TMR0-Match_INT_EN
+
+uint8_t TMR0_Match_INT_EN
+
+TMR0与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 165 行定义.
+
+# 1.18.2.84 TMR1_Match_INT_EN
+
+uint8_t TMR1_Match_INT_EN
+
+TMR1与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 166 行定义.
+
+# 1.18.2.85 TMR2_Match_INT_EN
+
+uint8_t TMR2_Match_INT_EN
+
+TMR2与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 167 行定义.
+
+# 1.18.2.86 TMR3_Match_INT_EN
+
+uint8_t TMR3_Match_INT_EN
+
+TMR3与计数器值匹配事件中断使能：ENABLE使能，DISABLE关闭在文件 Iks32mc08x_mcpwm.h 第 168 行定义.
+
+# 1.18.2.87 TriggerPoint0
+
+uint16. t TriggerPoint0
+
+PWM触发ADC事件0，时间点设置，取值范围（- MCPWM.PERIOD~MCPWM.PERIOD）在文件 Iks32mc08x_mcpwm.h 第 46 行定义.
+
+# 1.18.2.88 TriggerPoint1
+
+uint16. t TriggerPoint1
+
+PWM触发ADC事件1，时间点设置，取值范围（- MCPWM.PERIOD~MCPWM.PERIOD）在文件 Iks32mc08x_mcpwm.h 第 47 行定义.
+
+# 1.18.2.89 TriggerPoint2
+
+uint16. t TriggerPoint2
+
+PWM触发ADC事件2，时间点设置，取值范围（- MCPWM.PERIOD~MCPWM.PERIOD）在文件 Iks32mc08x_mcpwm.h 第 48 行定义.
+
+# 1.18.2.90 TriggerPoint3
+
+uint16. t TriggerPoint3
+
+PWM触发ADC事件3，时间点设置，取值范围（- MCPWM.PERIOD~MCPWM.PERIOD）在文件 Iks32mc08x_mcpwm.h 第 49 行定义.
+
+# 1.19 OPA_InitTypeDef结构体参考
+
+OPA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x_opa.h>
+
+# 成员变量
+
+- uint32_t OPA_Gain  运成闭环增益- uint32_t OPA_CLEna  运成闭环使能：Enable,Disable
+
+# 1.19.1 详细描述
+
+OPA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件 Iks32mc08x_opa.h 第 32 行定义.
+
+# 1.19.2 结构体成员变量说明
+
+# 1.19.2.1 OPA.CLEna
+
+uint32. t OPA.CLEna
+
+运放闭环使能：EnableDisable
+
+在文件lks32mc08x_opa.h第42行定义
+
+# 1.19.2.2 OPA.Gain
+
+uint32. t OPA.Gain
+
+运放闭环增益
+
+参见
+
+PGA.GAIN.20
+
+PGA.GAIN.9P5
+
+PGA.GAIN.6
+
+PGA.GAIN.4P25
+
+在文件lks32mc08x_opa.h第41行定义
+
+# 1.20 SPIInitTypeDef结构体参考
+
+SPI结构体基地址定义
+
+include <lks32mc08x.spi.h>
+
+# 成员变量
+
+- SPI.Duplex Duplex全双工、半双工工作模式选择：0，全双工；2，半双工仅发送；3，半双工仅接收- uint8_t SS从设备下片选信号来源：0，恒为0；1，来源于主设备- SPI.Mode Mode主从模式选择：0，从模式；1，主模式- uint8_t CPHA相位选择：0对应0；1对应1- uint8_t CPOL极性选择：0对应0；1对应1- uint8_t DataOrder传输顺序：0，高位先传；1，低位先传- uint8_t ENSP/模块使能：0，关闭；1，开启- uint8_t IRQEnaSP/中断使能：DISABLE：关闭所以中断- uint8_t Trig传输触发选择：0，内部自动执行（仅主模式有效）；1，外部触发- uint8_t DMASP/数据搬运方式：0，DMA搬运；1，MCU搬运- uint8_t BaudRate波特率设置- uint8_t ByteLengthSPI传输数据长度，CPU搬运只能写1
+
+# 1.20.1 详细描述
+
+SPI结构体基地址定义SPI初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x.spi.h第63行定义.
+
+# 1.20.2 结构体成员变量说明
+
+# 1.20.2.1 BaudRate
+
+uint8_t BaudRate
+
+波特率设置在文件lks32mc08x.spi.h第91行定义.
+
+# 1.20.2.2 ByteLength
+
+uint8_t ByteLengthSPI传输数据长度，CPU搬运只能写1在文件 Iks32mc08x.spi.h 第 93 行定义.
+
+# 1.20.2.3 CPHA
+
+uint8_t CPHA
+
+相位选择：0对应0；1对应1在文件 Iks32mc08x.spi.h 第 76 行定义.
+
+# 1.20.2.4 CPOL
+
+uint8_t CPOL
+
+极性选择：0对应0；1对应1在文件 Iks32mc08x.spi.h 第 77 行定义.
+
+# 1.20.2.5 DataOrder
+
+uint8_t DataOrder传输顺序：0，高位先传；1，低位先传在文件 Iks32mc08x.spi.h 第 78 行定义.
+
+# 1.20.2.6 DMA
+
+uint8_t DMA
+
+SPI数据搬运方式：0，DMA搬运；1，MCU搬运在文件 Iks32mc08x.spi.h 第 90 行定义.
+
+# 1.20.2.7 Duplex
+
+SPI.Duplex Duplex
+
+全双工、半双工工作模式选择：0，全双工；2，半双工仅发送；3，半双工仅接收
+
+参见
+
+SPI.Duplex
+
+在文件lks32mc08x.spi.h第69行定义.
+
+# 1.20.2.8 EN
+
+uint8. t EN
+
+SPI模块使能：0，关闭；1，开启在文件lks32mc08x.spi.h第79行定义.
+
+# 1.20.2.9 IRQEna
+
+uint8. t IRQEna
+
+SPI中断使能：DISABLE：关闭所以中断
+
+参见
+
+SPI.IRQEna.Enable
+
+SPI.IRQEna.TranDone
+
+SPI.IRQEna.SSErr
+
+SPI.IRQEna.DataOver
+
+在文件lks32mc08x.spi.h第87行定义.
+
+# 1.20.2.10 Mode
+
+SPI.Mode Mode
+
+主从模式选择：0，从模式；1，主模式
+
+参见
+
+SPI.Mode
+
+在文件 Iks32mc08x.spi.h 第 75 行定义.
+
+# 1.20.2.11 SS
+
+uint8_t SS从设备下片选信号来源：0，恒为0；1，来源于主设备在文件 Iks32mc08x.spi.h 第 70 行定义.
+
+# 1.20.2.12 Trig
+
+uint8_t Trig传输触发选择：0，内部自动执行（仅主模式有效）；1，外部触发在文件 Iks32mc08x.spi.h 第 88 行定义.
+
+# 1.21 SPI_TypeDef结构体参考
+
+SPI寄存器结构体句柄#include <lks32mc08x.spi.h>
+
+# 成员变量
+
+成员变量- _IO uint32_t CFGSPPI控制寄存器- _IO uint32_t IESPI中断寄存器- _IO uint32_t DIVSPPI波特率控制寄存器- _IO uint32_t TX_DATASPI发送数据寄存器- _IO uint32_t RX_DATASPPI接收数据寄存器- _IO uint32_t SIZESPI传输数据长度寄存器
+
+# 1.21.1 详细描述
+
+SPI寄存器结构体句柄在文件 Iks32mc08x.spi.h 第 45 行定义.
+
+# 1.21.2 结构体成员变量说明
+
+# 1.21.2.1 CFG
+
+IO uint32_t CFG
+
+SPI控制寄存器在文件 Iks32mc08x.spi.h 第 45 行定义.
+
+# 1.21.2.2 DIV
+
+IO uint32_t DIV
+
+SPI波特率控制寄存器在文件 Iks32mc08x.spi.h 第 47 行定义.
+
+# 1.21.2.3 IE
+
+IO uint32_t IE
+
+SPI中断寄存器在文件 Iks32mc08x.spi.h 第 46 行定义.
+
+# 1.21.2.4 RX.DATA
+
+IO uint32_t RX.DATA
+
+SPI接收数据寄存器在文件 Iks32mc08x.spi.h 第 49 行定义.
+
+# 1.21.2.5 SIZE
+
+IO uint32_t SIZE
+
+SPI传输数据长度寄存器
+
+在文件lks32mc08x.spi.h第50行定义
+
+# 1.21.2.6 TX.DATA
+
+IO uint32_t TX.DATA
+
+SPI发送数据寄存器
+
+在文件lks32mc08x.spi.h第48行定义
+
+# 1.22 struCordicComponents结构体参考
+
+三角函数运算结构体句柄
+
+include <lks32mc08x.dsp.h>
+
+# 成员变量
+
+s16Theta角度- 32768\~32767对应  $(\pi)\sim \pi$  s16 SinValue计算得到sin值s16 CosValue计算得到cos值s16ArctanXArctan计算对应X值arctan  $= Y / X$  s16ArctanYArctan计算对应Y值arctan  $= Y / X$  s16ArctanValue计算得到arctan值
+
+# 1.22.1 详细描述
+
+三角函数运算结构体句柄
+
+在文件lks32mc08x.dsp.h第36行定义
+
+# 1.22.2 结构体成员变量说明
+
+# 1.22.2.1 ArctanValue
+
+s16 ArctanValue
+
+计算得到arctan值
+
+在文件lks32mc08x.dsp.h第43行定义
+
+# 1.22.2.2 ArctanX
+
+s16 ArctanX
+
+Arctan计算对应X值arctan  $= Y / X$
+
+在文件lks32mc08x.dsp.h第41行定义
+
+# 1.22.2.3 ArctanY
+
+s16 ArctanY
+
+Arctan计算对应Y值arctan  $= Y / X$
+
+在文件lks32mc08x.dsp.h第42行定义
+
+# 1.22.2.4 CosValue
+
+s16 CosValue
+
+计算得到cos值
+
+在文件lks32mc08x.dsp.h第40行定义
+
+# 1.22.2.5 SinValue
+
+s16 SinValue
+
+计算得到sin值
+
+在文件lks32mc08x.dsp.h第39行定义
+
+# 1.22.2.6 Theta
+
+s16 Theta
+
+角度- 32768~32767对应  $(\pi) \sim \pi$
+
+在文件lks32mc08x.dsp.h第38行定义
+
+# 1.23 stru_DiviComponents结构体参考
+
+除法运算结构体句柄
+
+include <lks32mc08x.dsp.h>
+
+# 成员变量
+
+- s32 Dividend被除数- s16 Divisor除数- s32 Quotient商- s16 Remainder余数
+
+# 1.23.1 详细描述
+
+除法运算结构体句柄在文件lks32mc08x.dsp.h第26行定义
+
+# 1.23.2 结构体成员变量说明
+
+# 1.23.2.1 Dividend
+
+s32 Dividend
+
+被除数
+
+在文件 Iks32mc08x.dsp.h 第 27 行定义.
+
+# 1.23.2.2 Divisor
+
+s16 Divisor
+
+除数
+
+在文件 Iks32mc08x.dsp.h 第 28 行定义.
+
+# 1.23.2.3 Quotient
+
+s32 Quotient
+
+商
+
+在文件 Iks32mc08x.dsp.h 第 29 行定义.
+
+# 1.23.2.4 Remainder
+
+s16 Remainder
+
+余数
+
+在文件 Iks32mc08x.dsp.h 第 30 行定义.
+
+# 1.24 Stru_TemperatureCof.Def结构体参考
+
+芯片内置温度传感器初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x.tmp.h>
+
+# 成员变量
+
+成员变量- u16 nCofA  温度系数A，来源Read.Trim(0x00000398)输出值- u16 nOffsetB  温度系数偏置，来源Read.Trim(0x0000039C)输出值
+
+# 1.24.1 详细描述
+
+芯片内置温度传感器初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件lks32mc08x.tmp.h第24行定义.
+
+# 1.24.2 结构体成员变量说明
+
+# 1.24.2.1 nCofA
+
+u16 nCofA
+
+温度系数A，来源Read.Trim(0x00000398)输出值在文件lks32mc08x.tmp.h第24行定义.
+
+# 1.24.2.2 nOffsetB
+
+u16 nOffsetB
+
+温度系数偏置，来源Read.Trim(0x0000039C)输出值在文件lks32mc08x.tmp.h第25行定义.
+
+# 1.25 SYSInitTypeDef结构体参考
+
+系统初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x_sys.h>
+
+# 成员变量
+
+- uint32_t PLL_SrcSel  PLL信号输入源选择，RC时钟或外部晶体  
+- uint32_t PLL_DivSel  选择8个时钟周期中，哪个周期输出时钟  
+- uint32_t PLL_ReDiv  PLL再分频，1分频或4分频  
+- uint32_t Clk_DivSPI  I2C时钟分频  
+- uint32_t Clk_DivUART  UART时钟分频  
+- uint32_t Clk_FEN  模块时钟使能  
+- uint32_t WDT_Ena  使能看门狗  
+- uint32_t PORFilter_Ena  使能POR滤波
+
+# 1.25.1 详细描述
+
+系统初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参  在文件 Iks32mc08x_sys.h 第 43 行定义.
+
+# 1.25.2 结构体成员变量说明
+
+# 1.25.2.1 Clk_DivSPI
+
+uint32_t Clk_DivSPI
+
+I2C时钟分频
+
+在文件 Iks32mc08x_sys.h 第 50 行定义.
+
+# 1.25.2.2 Clk_DivUART
+
+uint32_t Clk_DivUART
+
+UART时钟分频
+
+在文件 Iks32mc08x_sys.h 第 51 行定义.
+
+# 1.25.2.3 CIk_FEN
+
+uint32. t Clk.FEN
+
+模块时钟使能
+
+在文件lks32mc08x_sys.h第52行定义
+
+# 1.25.2.4 PLL.DivSel
+
+uint32. t PLL.DivSel选择8个时钟周期中，哪个周期输出时钟在文件lks32mc08x_sys.h第47行定义.
+
+# 1.25.2.5 PLL.ReDiv
+
+uint32. t PLL.ReDiv
+
+PLL再分频，1分频或4分频
+
+在文件lks32mc08x_sys.h第48行定义
+
+# 1.25.2.6 PLL.SrcSel
+
+uint32. t PLL.SrcSel
+
+PLL信号输入源选择，RC时钟或外部晶体
+
+参见
+
+SYS.PLLSRSEL_RCHSYS.PLLSRSEL_CRYSTAL
+
+在文件lks32mc08x_sys.h第45行定义
+
+# 1.25.2.7 PORFilter.Ena
+
+uint32. t PORFilter.Ena
+
+使能POR滤波
+
+在文件lks32mc08x_sys.h第55行定义
+
+# 1.25.2.8 WDT_Ena
+
+uint32. t WDT_Ena
+
+使能看门狗
+
+在文件lks32mc08x.sys.h第54行定义
+
+# 1.26 TIM_ECDInitTypeDef结构体参考
+
+include <lks32mc08x.tim.h>
+
+# 成员变量
+
+- uint32_t ECD_Mode  编码器模式选择- uint32_t ECD_TH  编码器计数门限值- uint32_t ECD_ClockDiv  编码器对应UTIMER时钟分频系数- uint32_t ECD_Filter0  编码器0滤波分频0.不滤波N滤波采用的时钟是系统时钟N分频- uint32_t ECD_Filter1  编码器1滤波分频0.不滤波N滤波采用的时钟是系统时钟N分频- uint32_t ECD_IRQEna  编码器中断使能
+
+# 1.26.1 详细描述
+
+在文件lks32mc08x.tim.h第186行定义
+
+# 1.26.2 结构体成员变量说明
+
+# 1.26.2.1 ECD.ClockDiv
+
+uint32. t ECD.ClockDiv编码器对应UTIMER时钟分频系数
+
+参见
+
+ECD_Clk_Div1 ECD_Clk_Div2 ECD_Clk_Div4 ECD_Clk_Div8
+
+在文件lks32mc08x.tim.h第206行定义.
+
+# 1.26.2.2 ECD.Filter0
+
+uint32. t ECD.Filter0编码器0滤波分频0:不滤波N:滤波采用的时钟是系统时钟N分频在文件lks32mc08x.tim.h第208行定义.
+
+# 1.26.2.3 ECD.Filter1
+
+uint32. t ECD.Filter1编码器1滤波分频0:不滤波N:滤波采用的时钟是系统时钟N分频在文件lks32mc08x.tim.h第209行定义.
+
+# 1.26.2.4 ECD.IRQEna
+
+uint32. t ECD.IRQEna编码器中断使能
+
+参见
+
+参见ECD_IRQEna.NoneECD_IRQEna.UnderFlowECD_IRQEna.OverFlow
+
+在文件lks32mc08x.tim.h第216行定义.
+
+# 1.26.2.5 ECD_Mode
+
+uint32. t ECD_Mode
+
+编码器模式选择
+
+参见
+
+参见ECD_Mode_T1ECD_Mode_T1_T2ECD_Mode_CCWSIGNECD_Mode_CCWCWECD_Mode_CCWSIGN_UpDownECD_Mode_CCWCW_UpDown
+
+在文件lks32mc08x.tim.h第197行定义.
+
+# 1.26.2.6 ECD_TH
+
+uint32. t ECD_TH
+
+编码器计数门限值
+
+在文件lks32mc08x.tim.h第198行定义.
+
+# 1.27 TIM_ECDTypeDef结构体参考
+
+编码器寄存器结构体句柄
+
+include <lks32mc08x.tim.h>
+
+# 成员变量
+
+成员变量- _IO uint32. t CFG编码器配置寄存器- _IO uint32. t TH编码器计数门限寄存器- _IO uint32. t CNT编码器计数值寄存器
+
+# 1.27.1 详细描述
+
+编码器寄存器结构体句柄在文件 Iks32mc08x.tim.h 第 36 行定义.
+
+# 1.27.2 结构体成员变量说明
+
+# 1.27.2.1 CFG
+
+IO uint32_t CFG
+
+编码器配置寄存器
+
+在文件 Iks32mc08x.tim.h 第 38 行定义.
+
+# 1.27.2.2 CNT
+
+IO uint32_t CNT
+
+编码器计数值寄存器
+
+在文件 Iks32mc08x.tim.h 第 40 行定义.
+
+# 1.27.2.3 TH
+
+IO uint32_t TH
+
+编码器计数门限寄存器
+
+在文件 Iks32mc08x.tim.h 第 39 行定义.
+
+# 1.28 TIM_TimerInitTypeDef结构体参考
+
+include <lks32mc08x.tim.h>
+
+# 成员变量
+
+- uint32_t Timer_CH0_WorkMode    channel0工作模式:捕获模式, 比较模式- uint32_t Timer_CH0.CapMode    channel0捕获模式:上升沿、下降沿、双沿- uint32_t Timer_CH0Output    计数器回零时, 比较模式IO输出1: 高电平0: 低电平- uint32_t Timer_CH1.WorkMode    channel0工作模式:捕获模式, 比较模式- uint32_t Timer_CH1.CapMode    channel0捕获模式:上升沿、下降沿、双沿- uint32_t Timer_CH1Output    计数器回零时, 比较模式IO输出1: 高电平0: 低电平- uint32_t Timer_TH    定时器计数门限- uint32_t Timer_CMP0    CH0比较计数器值- uint32_t Timer_CMP1    CH1比较计数器值- uint32_t Timer_Filter0    CH0滤波分频, 0:不滤波N:滤波采用的时钟是系统时钟N分频- uint32_t Timer_Filter1    CH1滤波分频0:不滤波N:滤波采用的时钟是系统时钟N分频- uint32_t Timer_ClockDiv    定时器分频- uint32_t Timer_IRQEna    定时器中断使能
+
+# 1.28.1 详细描述
+
+在文件lks32mc08x.tim.h第131行定义.
+
+# 1.28.2 结构体成员变量说明
+
+# 1.28.2.1 Timer.CH0.CapMode
+
+uint32. t Timer.CH0. CapModechannel0捕获模式:上升沿、下降沿、双沿
+
+参见
+
+参见TIMER.CapMode_NoneTIMER.CapMode_RiseTIMER.CapMode_FallTIMER.CapMode_RiseFall在文件 Iks32mc08x.tim.h 第 146 行定义.
+
+在文件lks32mc08x.tim.h第146行定义
+
+# 1.28.2.2 Timer.CH0.WorkMode
+
+uint32. t Timer.CH0. WorkModechannel0工作模式:捕获模式，比较模式
+
+参见
+
+TIMER.OPMode.CAP TIMER.OPMode.CMP
+
+在文件lks32mc08x.tim.h第138行定义
+
+# 1.28.2.3 Timer.CH0Output
+
+uint32. t Timer.CH0Output
+
+计数器回零时，比较模式IO输出1：高电平0：低电平在文件lks32mc08x.tim.h第147行定义.
+
+# 1.28.2.4 Timer.CH1.CapMode
+
+uint32. t Timer.CH1.CapModechannel0捕获模式:上升沿、下降沿、双沿
+
+参见
+
+参见TIMER.CapMode_NoneTIMER.CapMode_RiseTIMER.CapMode_FallTIMER.CapMode_RiseFall在文件 Iks32mc08x.tim.h 第 161 行定义.
+
+在文件lks32mc08x.tim.h第161行定义
+
+# 1.28.2.5 Timer.CH1_WorkMode
+
+uint32. t Timer.CH1_WorkModechannel0工作模式:捕获模式，比较模式
+
+参见
+
+TIMER.OPMode.CAP TIMER.OPMode.CMP
+
+在文件lks32mc08x.tim.h第153行定义
+
+# 1.28.2.6 Timer.CH1Output
+
+uint32. t Timer.CH1Output
+
+计数器回零时，比较模式IO输出1：高电平0：低电平在文件lks32mc08x.tim.h第162行定义.
+
+# 1.28.2.7 Timer.ClockDiv
+
+uint32. t Timer.ClockDiv
+
+定时器分频
+
+参见
+
+TIM.Clk.Div1
+
+TIM.Clk.Div2
+
+TIM.Clk.Div4
+
+TIM.Clk.Div8
+
+在文件lks32mc08x.tim.h第178行定义.
+
+# 1.28.2.8 Timer.CMP0
+
+uint32. t Timer.CMP0
+
+CH0比较计数器值
+
+在文件lks32mc08x.tim.h第165行定义.
+
+# 1.28.2.9 Timer.CMP1
+
+uint32. t Timer.CMP1
+
+CH1比较计数器值
+
+在文件lks32mc08x.tim.h第166行定义.
+
+# 1.28.2.10 Timer.Filter0
+
+uint32. t Timer.Filter0
+
+CH0滤波分频，0：不滤波N：滤波采用的时钟是系统时钟N分频在文件lks32mc08x.tim.h第168行定义.
+
+# 1.28.2.11 Timer_Filter1
+
+uint32. t Timer.Filter1
+
+CH1滤波分频0:不滤波N:滤波采用的时钟是系统时钟N分频在文件lks32mc08x.tim.h第169行定义.
+
+# 1.28.2.12 Timer.IRQEna
+
+uint32. t Timer.IRQEna
+
+定时器中断使能
+
+参见
+
+Timer.IRQEnaDef
+
+在文件lks32mc08x.tim.h第183行定义.
+
+# 1.28.2.13 Timer_TH
+
+uint32. t Timer.TH
+
+定时器计数门限
+
+在文件lks32mc08x.tim.h第164行定义.
+
+# 1.29 TIM_TimerTypeDef结构体参考
+
+定时器寄存器结构体句柄
+
+include <lks32mc08x.tim.h>
+
+# 成员变量
+
+成员变量- _IO uint32. t CFG定时器配置寄存器- _IO uint32. t TH定时器计数门限寄存器- _IO uint32. t CNT定时器计数值寄存器- _IO uint32. t CMPT0定时器比较捕获寄存器0- _IO uint32. t CMPT1定时器比较捕获寄存器1- _IO uint32. t EVT定时器外部事件选择寄存器
+
+# 1.29.1 详细描述
+
+定时器寄存器结构体句柄在文件 Iks32mc08x.tim.h 第 29 行定义.
+
+# 1.29.2 结构体成员变量说明
+
+# 1.29.2.1 CFG
+
+IO uint32_t CFG
+
+定时器配置寄存器
+
+在文件 Iks32mc08x.tim.h 第 29 行定义.
+
+# 1.29.2.2 CMPT0
+
+IO uint32_t CMPT0
+
+定时器比较/捕获寄存器 0
+
+在文件 Iks32mc08x.tim.h 第 28 行定义.
+
+# 1.29.2.3 CMPT1
+
+IO uint32_t CMPT1
+
+定时器比较/捕获寄存器 1
+
+在文件 Iks32mc08x.tim.h 第 29 行定义.
+
+# 1.29.2.4 CNT
+
+IO uint32_t CNT
+
+定时器计数值寄存器
+
+在文件 Iks32mc08x.tim.h 第 27 行定义.
+
+# 1.29.2.5 EVT
+
+IO uint32_t EVT
+
+定时器外部事件选择寄存器
+
+在文件 Iks32mc08x.tim.h 第 30 行定义.
+
+# 1.29.2.6 TH
+
+IO uint32_t TH
+
+定时器计数门限寄存器
+
+在文件 Iks32mc08x.tim.h 第 26 行定义.
+
+# 1.30 UART_InitTypeDef结构体参考
+
+UART初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+include <lks32mc08x.uart.h>
+
+# 成员变量
+
+- uint32_t BaudRate波特率- uint8_t WordLength数据长度- uint8_t StopBits停止位长度- uint8_t FirstSend发送数据大小端设置- UART_ParityMode ParityMode奇偶校验,- uint8_t MultiDropEna使能Multi-drop,0:Disabled- uint8_t Bit9ValueMulti-drop Master模式时，第9个数据位值改为一般不在初始化内使用- uint16_t Match485Addr用作485通信时的匹配地址- uint8_t IRQEna中断使能寄存器- uint8_t RXD_INV接收电平取反 ENABLE取反，DISABLE正常- uint8_t TXD_INV发送电平取反 ENABLE取反，DISABLE正常
+
+# 1.30.1 详细描述
+
+1.30.1 详细描述UART初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参在文件 Iks32mc08x.uart.h 第 48 行定义.
+
+# 1.30.2 结构体成员变量说明
+
+# 1.30.2.1 BaudRate
+
+uint32. t BaudRate
+
+波特率
+
+在文件 Iks32mc08x.uart.h 第 50 行定义.
+
+# 1.30.2.2 Bit9Value
+
+uint8. t Bit9Value
+
+Multi- drop Master模式时，第9个数据位值改为一般不在初始化内使用在文件 Iks32mc08x.uart.h 第 57 行定义.
+
+# 1.30.2.3 FirstSend
+
+uint8. t FirstSend
+
+发送数据大小端设置
+
+参见
+
+UART.FIRSTSEND.LSB UART.FIRSTSEND.MSB
+
+在文件 Iks32mc08x.uart.h 第 53 行定义.
+
+# 1.30.2.4 IRQEna
+
+uint8. t IRQEna
+
+中断使能寄存器
+
+参见
+
+UART.IRQEna.SendOver UART.IRQEna.RcvOver UART.IRQEna.SendBufEmpty UART.IRQEna.StopError UART.IRQEna.CheckError
+
+在文件lks32mc08x.uart.h第67行定义
+
+# 1.30.2.5 Match485Addr
+
+uint16. t Match485Addr
+
+用作485通信时的匹配地址
+
+在文件lks32mc08x.uart.h第59行定义
+
+# 1.30.2.6 MultiDropEna
+
+uint8. t MultiDropEna
+
+使能Multi- drop,0:Disable1:Enable
+
+在文件lks32mc08x.uart.h第56行定义
+
+# 1.30.2.7 ParityMode
+
+UART.ParityMode ParityMode
+
+奇偶校验，
+
+参见
+
+UART.ParityMode
+
+在文件lks32mc08x.uart.h第54行定义
+
+# 1.30.2.8 RXD.INV
+
+uint8_t RXD.INV
+
+接收电平取反 ENABLE取反，DISABLE正常在文件 Iks32mc08x.uart.h 第 68 行定义.
+
+# 1.30.2.9 StopBits
+
+uint8_t StopBits
+
+停止位长度
+
+参见
+
+UART.STOPBITS.1b UART.STOPBITS.2b
+
+在文件 Iks32mc08x.uart.h 第 52 行定义.
+
+# 1.30.2.10 TXD.INV
+
+uint8_t TXD.INV
+
+发送电平取反 ENABLE取反，DISABLE正常
+
+在文件 Iks32mc08x.uart.h 第 69 行定义.
+
+# 1.30.2.11 WordLength
+
+uint8_t WordLength
+
+数据长度
+
+参见
+
+UART.WORDLENGTH.8b UART.WORDLENGTH.7b
+
+在文件 Iks32mc08x.uart.h 第 51 行定义.
+
+# 1.31 UART_TypeDef结构体参考
+
+UART寄存器结构体句柄
+
+include <lks32mc08x.uart.h>
+
+# 成员变量
+
+成员变量- _IO uint32_t CTRL  UART控制寄存器- _IO uint32_t DIVH  UART波特率设置高字节寄存器- _IO uint32_t DIVL  UART波特率设置低字节寄存器- _IO uint32_t BUFF  UART收发缓冲寄存器- _IO uint32_t ADR  485通信地址匹配寄存器- _IO uint32_t STT  UART状态寄存器- _IO uint32_t IE  UART中断使能寄存器- _IO uint32_t IF  UART中断标志寄存器- _IO uint32_t INV  UART IO翻转使能
+
+# 1.31.1 详细描述
+
+UART寄存器结构体句柄在文件lks32mc08x.uart.h第32行定义.
+
+# 1.31.2 结构体成员变量说明
+
+# 1.31.2.1 ADR
+
+IO uint32_t ADR
+
+485通信地址匹配寄存器
+
+在文件lks32mc08x.uart.h第38行定义.
+
+# 1.31.2.2 BUFF
+
+IO uint32_t BUFF
+
+UART收发缓冲寄存器
+
+在文件 Iks32mc08x.uart.h 第 37 行定义.
+
+# 1.31.2.3 CTRL
+
+IO uint32_t CTRL
+
+UART控制寄存器
+
+在文件 Iks32mc08x.uart.h 第 34 行定义.
+
+# 1.31.2.4 DIVH
+
+IO uint32_t DIVH
+
+UART波特率设置高字节寄存器
+
+在文件 Iks32mc08x.uart.h 第 35 行定义.
+
+# 1.31.2.5 DIVL
+
+IO uint32_t DIVL
+
+UART波特率设置低字节寄存器
+
+在文件 Iks32mc08x.uart.h 第 36 行定义.
+
+# 1.31.2.6 IE
+
+IO uint32_t IE
+
+UART中断使能寄存器
+
+在文件 Iks32mc08x.uart.h 第 40 行定义.
+
+# 1.31.2.7 IF
+
+IO uint32_t IF
+
+UART中断标志寄存器
+
+在文件 Iks32mc08x.uart.h 第 41 行定义.
+
+# 1.31.2.8 INV
+
+IO uint32_t INV
+
+UART IO翻转使能
+
+在文件 Iks32mc08x.uart.h 第 42 行定义.
+
+# 1.31.2.9 STT
+
+IO uint32_t STT
+
+UART状态寄存器
+
+在文件 Iks32mc08x.uart.h 第 39 行定义.
+
+# 1.32 WAKE_InitTypeDef结构体参考
+
+低功耗时钟配置中间变量
+
+include <lks32mc08x_sys.h>
+
+# 成员变量
+
+- uint32_t AFE_REG5_RECORD- uint32_t AFE_REG6_RECORD- uint32_t CLK_CFG_RECORD
+
+# 1.32.1 详细描述
+
+低功耗时钟配置中间变量
+
+在文件 Iks32mc08x_sys.h 第 39 行定义.
+
+# 1.32.2 结构体成员变量说明
+
+# 1.32.2.1 AFE.REG5.RECORD
+
+uint32. t AFE.REG5. RECORD
+
+在文件 Iks32mc08x_sys.h 第 36 行定义.
+
+# 1.32.2.2 AFE.REG6.RECORD
+
+uint32. t AFE.REG6. RECORD
+
+在文件 Iks32mc08x_sys.h 第 36 行定义.
+
+# 1.32.2.3 CLK.CFG.RECORD
+
+uint32. t CLK.CFG.RECORD
+
+在文件 Iks32mc08x_sys.h 第 37 行定义.
+
+# Chapter 2
+
+# 文件说明
+
+# 2.1 Include/lks32mc08x_adc.h 文件参考
+
+文件名称： lks32mc08x_adc.h  文件标识：无  内容摘要：ADC驱动头文件  其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x_adc.h的引用(lks3de)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/dac2aa352e0504dcb9c93768b919f83ad90fc22263cad61243644c1b374559d4.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/f6e20f870675dd9ce06f1c49add9d622c47e17c8968994a7eb8fae24ce9091ca.jpg)
+
+# 结构体
+
+结构体- struct ADC_TypeDefADC寄存器结构体句柄- struct ADC.InitTypeDefADC初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 宏定义
+
+- #define ADC0 ((ADC_TypeDef *) ADC0.BASE)ADC结构体基地址定义- #define ADC_Clock_48M (0x00) /*48MHz*/- #define ADC_Clock_24M (0x03) /*24MHz*/- #define ADC_Clock_12M (0x02) /*12MHz*/- #define RefVol_2V4 ((uint16_t)0x00)/*ADC基准电压2.4V*/- #define RefVol_1V2 ((uint16_t)0x01)/*ADC基准电压1.2V*/- #define ADC-1_TIMES_SAMPLE ((u8)1)ADC采样通道数9次采样- #define ADC-2_TIMES_SAMPLE ((u8)2)ADC采样通道数2次采样- #define ADC-3_TIMES_SAMPLE ((u8)3)ADC采样通道数3次采样- #define ADC-4_TIMES_SAMPLE ((u8)4)ADC采样通道数4次采样- #define ADC-5_TIMES_SAMPLE ((u8)5)ADC采样通道数5次采样- #define ADC-6_TIMES_SAMPLE ((u8)6)ADC采样通道数6次采样- #define ADC-7_TIMES_SAMPLE ((u8)7)ADC采样通道数7次采样- #define ADC-8_TIMES_SAMPLE ((u8)8)ADC采样通道数8次采样- #define ADC-9_TIMES_SAMPLE ((u8)9)ADC采样通道数9次采样- #define ADC-10_TIMES_SAMPLE ((u8)10)ADC采样通道数10次采样- #define ADC-11_TIMES_SAMPLE ((u8)11)ADC采样通道数11次采样- #define ADC-12_TIMES_SAMPLE ((u8)12)ADC采样通道数12次采样- #define ADC-13_TIMES_SAMPLE ((u8)13)ADC采样通道数13次采样- #define ADC-14_TIMES_SAMPLE ((u8)14)ADC采样通道数14次采样- #define ADC-15_TIMES_SAMPLE ((u8)15)ADC采样通道数15次采样- #define ADC-16_TIMES_SAMPLE ((u8)16)ADC采样通道数16次采样- #define ADC-17_TIMES_SAMPLE ((u8)17)ADC采样通道数17次采样- #define ADC-18_TIMES_SAMPLE ((u8)18)ADC采样通道数18次采样- #define ADC-19_TIMES_SAMPLE ((u8)19)ADC采样通道数19次采样- #define ADC-20_TIMES_SAMPLE ((u8)20)ADC采样通道数20次采样- #define ADC_DAT0_OV_IRQ.EN ((uint16_t)0x40)ADC0_DAT0超阈值中断
+
+- #define ADC.H.CONFLICT.IRQ-EN ((uint16_t)0x20)  硬件触发冲突- #define ADC.S.CONFLICT.IRQ-EN ((uint16_t)0x10)  软件触发冲突- #define ADC.EOS3.IRQ-EN ((uint16_t)0x08)  第四段扫描结束中断- #define ADC.EOS2.IRQ-EN ((uint16_t)0x04)  第三段扫描结束中断- #define ADC.EOS1.IRQ-EN ((uint16_t)0x02)  第二段扫描结束中断- #define ADC.EOS0.IRQ-EN ((uint16_t)0x01)  第一段扫描结束中断- #define ADC.DAT0.OV.IRQ-IF ((uint16_t)0x40)  ADC.DAT0超阈值中断标志位- #define ADC.H.CONFLICT.IRQ-IF ((uint16_t)0x20)  硬件触发冲突标志- #define ADC.S.CONFLICT.IRQ-IF ((uint16_t)0x10)  软件触发冲突标志- #define ADC.EOS3.IRQ-IF ((uint16_t)0x08)  第四段扫描结束中断标志- #define ADC.EOS2.IRQ-IF ((uint16_t)0x04)  第三段扫描结束中断标志- #define ADC.EOS1.IRQ-IF ((uint16_t)0x02)  第二段扫描结束中断标志- #define ADC.EOS0.IRQ-IF ((uint16_t)0x01)  第一段扫描结束中断标志- #define ADC.ALL.IRQ-IF ((uint16_t)0x7f)  ADC全部中断标志位——可用于初始化- #define ADC.LEFT_ALIGN ((uint16_t)0x0000)  ADC数据输出左对齐- #define ADC.RIGHT_ALIGN ((uint16_t)0x0001)  ADC数据输出右对齐- #define ADC.DAT0.LTH ((uint16_t)0x0001)  ADC.DAT0.TH作为上阈值- #define ADC.DAT0.LTH ((uint16_t)0x0000)  ADC.DAT0.TH作为下阈值- #define ADC.MCPWM.T0.TRG ((uint16_t)0x01)  ADC采用MCPWM T0事件触发- #define ADC.MCPWM.T1.TRG ((uint16_t)0x02)  ADC采用MCPWM T1事件触发- #define ADC.MCPWM.T2.TRG ((uint16_t)0x04)  ADC采用MCPWM T2事件触发- #define ADC.MCPWM.T3.TRG ((uint16_t)0x08)  ADC采用MCPWM T3事件触发- #define ADC.UTIMER.T0.TRG ((uint16_t)0x01)  ADC采用UTIMER T0事件触发- #define ADC.UTIMER.T1.TRG ((uint16_t)0x02)  ADC采用UTIMER T1事件触发- #define ADC.UTIMER.T2.TRG ((uint16_t)0x04)  ADC采用UTIMER T2事件触发- #define ADC.UTIMER.T3.TRG ((uint16_t)0x08)
+
+ADC采用UTIMER T3事件触发- #define ADC.1SEG_TRG ((uint16. t)0x00)ADC采用单段模式- #define ADC.2SEG_TRG ((uint16. t)0x01)ADC采用2段模式- #define ADC.4SEG_TRG ((uint16. t)0x03)ADC采用4段模式- #define ADC.CHANNEL_0 ((uint16. t)0x00)ADC通道0- OPA0. OUT- #define ADC.CHANNEL_1 ((uint16. t)0x01)ADC通道1- OPA1. OUT- #define ADC.CHANNEL_2 ((uint16. t)0x02)ADC通道2- OPA2. OUT- #define ADC.CHANNEL_3 ((uint16. t)0x03)ADC通道3- OPA3. OUT- #define ADC.CHANNEL_4 ((uint16. t)0x04)ADC通道4- #define ADC.CHANNEL_5 ((uint16. t)0x05)ADC通道5- #define ADC.CHANNEL_6 ((uint16. t)0x06)ADC通道6- #define ADC.CHANNEL_7 ((uint16. t)0x07)ADC通道7- #define ADC.CHANNEL_8 ((uint16. t)0x08)ADC通道8- #define ADC.CHANNEL_9 ((uint16. t)0x09)ADC通道9- #define ADC.CHANNEL_10 ((uint16. t)0x0a)ADC通道10- #define ADC.CHANNEL_11 ((uint16. t)0x0b)ADC通道11- #define ADC.CHANNEL_12 ((uint16. t)0x0c)ADC通道12- #define ADC.CHANNEL_13 ((uint16. t)0x0d)ADC通道13- #define ADC.CHANNEL_14 ((uint16. t)0x0e)ADC通道14- #define ADC.CHANNEL_15 ((uint16. t)0x0f)ADC通道15- #define ADC.CHANNEL_16 ((uint16. t)0x10)ADC通道16- #define ADC.CHANNEL_17 ((uint16. t)0x11)ADC通道17- #define ADC.CHANNEL_18 ((uint16. t)0x12)ADC通道18- Temp- #define ADC.CHANNEL_19 ((uint16. t)0x13)ADC通道19- VSS- #define ADC.HARDWARE.T0_TRG ((uint16. t)0x01)ADC采用硬件T0事件触发- #define ADC.HARDWARE.T1_TRG ((uint16. t)0x02)ADC采用硬件T1事件触发
+
+- #define ADC_HARDWARE_T2_TRG ((uint16_t)0x04)  ADC采用硬件T2事件触发- #define ADC_HARDWARE_T3_TRG ((uint16_t)0x08)  ADC采用硬件T3事件触发
+
+# 枚举
+
+- enum CHNx {  CHN0 = 0, CHN1, CHN2, CHN3,  CHN4, CHN5, CHN6, CHN7,  CHN8, CHN9, CHN10, CHN11,  CHN12, CHN13, CHN14, CHN15,  CHN16, CHN17, CHN18, CHN19}  ADC采样信号来源寄存器序号- enum DATx {  DAT0 = 0, DAT1, DAT2, DAT3,  DAT4, DAT5, DAT6, DAT7,  DAT8, DAT9, DAT10, DAT11,  DAT12, DAT13, DAT14, DAT15,  DAT16, DAT17, DAT18, DAT19}  ADC数据寄存器序号
+
+# 函数
+
+- void ADC_Init (ADC_TypeDef *ADCx, ADC_InitTypeDef *ADC_InitStructure)  函数名称: void ADC Init(ADC_TypeDef *ADCx, ADC InitTypeDef *ADC_InitStructure)- void ADC_StructInit(ADC_InitStructure)  函数名称: void ADC_StructInit(ADC_InitStructure)- void ADC_ClearIRQFlag(ADC_TypeDef *ADCx, uint16_t INT_flag)  函数名称: void ADC_ClearIRQFlag(ADC_TypeDef *ADCx, uint16_t INT_flag)- void ADC.ChannelConfig(ADC_TypeDef *ADCx, CHNx CHNum, uint16_t nChannel)  函数名称: void ADC.ChannelConfig(ADC_TypeDef *ADCx, CHNx CHNum, uint16_t Channel0, uint16_t Channel1)- u16 ADC_GetIRQFlag(ADC_TypeDef *ADCx, uint16_t INT_flag)  函数名称: uint16_t ADC_GetIRQFlag(ADC_TypeDef *ADCx, uint16_t INT_flag)- s16 ADC.GetConversionValue(DATx DATNum)  函数名称: s16 ADC.GetConversionValue(DATNx DATNum)- void ADC_SoftTrgEN(ADC_TypeDef *ADCx, FuncState state)  函数名称: void ADC_SoftTrgEN(ADC_TypeDef *ADCx, FuncState state)
+
+# 2.1.1 详细描述
+
+文件名称：lks32mc08x. adc.h  文件标识：无  内容摘要：ADC驱动头文件  其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年07月25日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.adc.h 中定义.
+
+# 2.1.2 宏定义说明
+
+# 2.1.2.1 ADC0
+
+2.1.2.1 ADC0#define ADC0 ((ADC_TypeDef *) ADC0_BASE)ADC结构体基地址定义在文件 Iks32mc08x.adc.h 第 85 行定义.
+
+# 2.1.2.2 ADC_10_TIMES_SAMPLE
+
+2.1.2.2 ADC_10_TIMES_SAMPLE#define ADC_10_TIMES_SAMPLE ((u8)10)ADC采样通道数 10 次采样在文件 Iks32mc08x.adc.h 第 190 行定义.
+
+# 2.1.2.3 ADC_11_TIMES_SAMPLE
+
+2.1.2.3 ADC_11_TIMES_SAMPLE#define ADC_11_TIMES_SAMPLE ((u8)11)ADC采样通道数 11 次采样在文件 Iks32mc08x.adc.h 第 191 行定义.
+
+# 2.1.2.4 ADC_12_TIMES_SAMPLE
+
+2.1.2.4 ADC_12_TIMES_SAMPLE#define ADC_12_TIMES_SAMPLE ((u8)12)ADC采样通道数 12 次采样在文件 Iks32mc08x.adc.h 第 192 行定义.
+
+# 2.1.2.5 ADC-13-TIMES_SAMPLE
+
+define ADC13. TIMES_SAMPLE((u8)13)
+
+ADC采样通道数13次采样
+
+在文件lks32mc08x.adc.h第193行定义.
+
+# 2.1.2.6 ADC-14-TIMES_SAMPLE
+
+define ADC14. TIMES_SAMPLE((u8)14)
+
+ADC采样通道数14次采样
+
+在文件lks32mc08x.adc.h第194行定义.
+
+# 2.1.2.7 ADC-15-TIMES_SAMPLE
+
+define ADC15. TIMES_SAMPLE((u8)15)ADC采样通道数15次采样在文件lks32mc08x.adc.h第195行定义.
+
+# 2.1.2.8 ADC-16-TIMES_SAMPLE
+
+define ADC16. TIMES_SAMPLE((u8)16)
+
+ADC采样通道数16次采样
+
+在文件lks32mc08x.adc.h第196行定义.
+
+# 2.1.2.9 ADC-17-TIMES_SAMPLE
+
+define ADC17. TIMES_SAMPLE((u8)17)
+
+ADC采样通道数17次采样
+
+在文件lks32mc08x.adc.h第197行定义.
+
+# 2.1.2.10 ADC.19-TIMES.SAMPLE
+
+define ADC.19. TIMES_SAMPLE ((u8)19)
+
+ADC采样通道数18次采样
+
+在文件lks32mc08x.adc.h第199行定义.
+
+# 2.1.2.11 ADC.19.TIMES.SAMPLE
+
+define ADC.19. TIMES_SAMPLE ((u8)19)
+
+ADC采样通道数19次采样
+
+在文件lks32mc08x.adc.h第199行定义.
+
+# 2.1.2.12 ADC.1.TIMES.SAMPLE
+
+define ADC.1. TIMES_SAMPLE ((u8)1)ADC采样通道数1次采样在文件lks32mc08x.adc.h第181行定义.
+
+# 2.1.2.13 ADC.1SEG_TRG
+
+define ADC.1SEG_TRG ((uint16_t)0x00)
+
+ADC采用单段模式
+
+在文件lks32mc08x.adc.h第234行定义.
+
+# 2.1.2.14 ADC.20.TIMES.SAMPLE
+
+define ADC.20. TIMES_SAMPLE ((u8)20)
+
+ADC采样通道数20次采样
+
+在文件lks32mc08x.adc.h第200行定义.
+
+# 2.1.2.15 ADC.2-TIMES_SAMPLE
+
+define ADC_2_TIMES_SAMPLE ((u8)2)
+
+ADC采样通道数2次采样在文件lks32mc08x.adc.h第182行定义.
+
+# 2.1.2.16 ADC.2SEG_TRG
+
+define ADC.2SEG.TRG((uint16. t)0x01)
+
+ADC采用2段模式在文件lks32mc08x.adc.h第285行定义.
+
+# 2.1.2.17 ADC.3-TIMES_SAMPLE
+
+define ADC.3_TIMES_SAMPLE ((u8)3)ADC采样通道数3次采样在文件lks32mc08x.adc.h第183行定义.
+
+# 2.1.2.18 ADC.4-TIMES_SAMPLE
+
+define ADC.4_TIMES_SAMPLE ((u8)4)
+
+ADC采样通道数4次采样在文件lks32mc08x.adc.h第184行定义.
+
+# 2.1.2.19 ADC.4SEG_TRG
+
+define ADC.4SEG.TRG((uint16. t)0x03)
+
+ADC采用4段模式在文件lks32mc08x.adc.h第286行定义.
+
+# 2.1.2.20 ADC.5-TIMES_SAMPLE
+
+define ADC.5- TIMES_SAMPLE ((u8)5)
+
+ADC采样通道数5次采样在文件lks32mc08x.adc.h第185行定义.
+
+# 2.1.2.21 ADC.6-TIMES_SAMPLE
+
+define ADC.6- TIMES_SAMPLE ((u8)6)
+
+ADC采样通道数6次采样在文件lks32mc08x.adc.h第186行定义.
+
+# 2.1.2.22 ADC.7-TIMES_SAMPLE
+
+define ADC.7- TIMES_SAMPLE ((u8)7)ADC采样通道数7次采样在文件lks32mc08x.adc.h第187行定义.
+
+# 2.1.2.23 ADC.8-TIMES_SAMPLE
+
+define ADC.8- TIMES_SAMPLE ((u8)8)
+
+ADC采样通道数8次采样在文件lks32mc08x.adc.h第188行定义.
+
+# 2.1.2.24 ADC.9-TIMES_SAMPLE
+
+define ADC.9- TIMES_SAMPLE ((u8)9)
+
+ADC采样通道数9次采样在文件lks32mc08x.adc.h第189行定义.
+
+# 2.1.2.25 ADC.ALL_IRQ_IF
+
+define ADC.ALL_IRQ_IF ((uint16_t)0x7f)ADC全部中断标志位——可用于初始化在文件 Iks32mc08x_adc.h 第 217 行定义.
+
+# 2.1.2.26 ADC.CHANNEL_0
+
+define ADC.CHANNEL_0 ((uint16_t)0x00)ADC通道0- OPA0- OUT在文件 Iks32mc08x_adc.h 第 238 行定义.
+
+# 2.1.2.27 ADC.CHANNEL_1
+
+define ADC.CHANNEL_1 ((uint16_t)0x01)ADC通道1- OPA1- OUT在文件 Iks32mc08x_adc.h 第 239 行定义.
+
+# 2.1.2.28 ADC.CHANNEL_10
+
+define ADC.CHANNEL_10 ((uint16_t)0x0a)
+
+# ADC通道10
+
+在文件 Iks32mc08x_adc.h 第 248 行定义.
+
+# 2.1.2.29 ADC.CHANNEL_11
+
+define ADC.CHANNEL_11 ((uint16_t)0x0b)
+
+# ADC通道11
+
+在文件 Iks32mc08x_adc.h 第 249 行定义.
+
+# 2.1.2.30 ADC.CHANNEL_12
+
+define ADC.CHANNEL_12 ((uint16_t)0x0c)
+
+# ADC通道12
+
+在文件 Iks32mc08x.adc.h 第 250 行定义.
+
+# 2.1.2.31 ADC.CHANNEL_13
+
+define ADC.CHANNEL_13 ((uint16_t)0x0d)
+
+# ADC通道13
+
+在文件 Iks32mc08x.adc.h 第 251 行定义.
+
+# 2.1.2.32 ADC.CHANNEL_14
+
+define ADC.CHANNEL_14 ((uint16_t)0x0e)
+
+# ADC通道14
+
+在文件 Iks32mc08x.adc.h 第 252 行定义.
+
+# 2.1.2.33 ADC.CHANNEL_15
+
+define ADC.CHANNEL_15 ((uint16_t)0x0f)
+
+# ADC通道15
+
+在文件 Iks32mc08x.adc.h 第 253 行定义.
+
+# 2.1.2.34 ADC.CHANNEL_16
+
+define ADC.CHANNEL_16 ((uint16_t)0x10)
+
+# ADC通道16
+
+在文件 Iks32mc08x.adc.h 第 254 行定义.
+
+# 2.1.2.35ADC.CHANNEL_17
+
+defineADC.CHANEL_17((uint16. t)0x11)
+
+# ADC通道17
+
+在文件lks32mc08x.adc.h第265行定义.
+
+# 2.1.2.36ADC.CHANEL_18
+
+defineADC.CHANEL_18((uint16. t)0x12)
+
+# ADC通道18-Temp
+
+在文件lks32mc08x.adc.h第266行定义.
+
+# 2.1.2.37ADC.CHANEL_19
+
+defineADC.CHANEL_19((uint16. t)0x13)
+
+# ADC通道19-VSS
+
+在文件lks32mc08x.adc.h第257行定义.
+
+# 2.1.2.38ADC.CHANEL_2
+
+defineADC.CHANEL_2((uint16. t)0x02)
+
+# ADC通道2-OPA2.OUT
+
+在文件lks32mc08x.adc.h第240行定义.
+
+# 2.1.2.39ADC.CHANEL_3
+
+defineADC.CHANEL_3((uint16. t)0x03)
+
+# ADC通道3-OPA3.OUT
+
+在文件lks32mc08x.adc.h第241行定义.
+
+# 2.1.2.40 ADC.CHANNEL_4
+
+define ADC.CHANNEL_4 ((uint16_t) 0x04)
+
+# ADC通道4
+
+在文件 Iks32mc08x.adc.h 第 242 行定义.
+
+# 2.1.2.41 ADC.CHANNEL_5
+
+define ADC.CHANNEL_5 ((uint16_t) 0x05)
+
+# ADC通道5
+
+在文件 Iks32mc08x.adc.h 第 243 行定义.
+
+# 2.1.2.42 ADC.CHANNEL_6
+
+define ADC.CHANNEL_6 ((uint16_t) 0x06)
+
+# ADC通道6
+
+在文件 Iks32mc08x.adc.h 第 244 行定义.
+
+# 2.1.2.43 ADC.CHANNEL_7
+
+define ADC.CHANNEL_7 ((uint16_t) 0x07)
+
+# ADC通道7
+
+在文件 Iks32mc08x.adc.h 第 245 行定义.
+
+# 2.1.2.44 ADC.CHANNEL_8
+
+define ADC.CHANNEL_8 ((uint16_t) 0x08)
+
+# ADC通道8
+
+在文件 Iks32mc08x.adc.h 第 246 行定义.
+
+# 2.1.2.45 ADC.CHANNEL.9
+
+define ADC.CHANNEL.9 ((uint16_t)0x09)
+
+# ADC通道9
+
+在文件 Iks32mc08x.adc.h 第 247 行定义.
+
+# 2.1.2.46 ADC.CLOCK-12M
+
+define ADC.CLOCK- 12M (0x02) /*12MHz*/在文件 Iks32mc08x.adc.h 第 176 行定义.
+
+# 2.1.2.47 ADC.CLOCK-24M
+
+define ADC.CLOCK- 24M (0x03) /*24MHz*/在文件 Iks32mc08x.adc.h 第 175 行定义.
+
+# 2.1.2.48 ADC.CLOCK-48M
+
+define ADC.CLOCK- 48M (0x00) /*48MHz*/在文件 Iks32mc08x.adc.h 第 174 行定义.
+
+# 2.1.2.49 ADC.DAT0.HTH
+
+define ADC.DAT0.HTH ((uint16_t)0x0001)
+
+ADC.DAT0. TH作为上阈值在文件 Iks32mc08x.adc.h 第 222 行定义.
+
+# 2.1.2.50 ADC.DAT0.LTH
+
+define ADC.DAT0.LTH ((uint16_t)0x0000)ADC.DAT0. TH作为下阈值在文件 Iks32mc08x.adc.h 第 223 行定义.
+
+# 2.1.2.51 ADC.DAT0.OV.IRQ.EN
+
+define ADC.DAT0.OV.IRQ.EN ((uint16. t)0x40)
+
+# ADC0.DAT0超闻值中断
+
+在文件 Iks32mc08x.adc.h 第 202 行定义.
+
+# 2.1.2.52 ADC.DAT0.OV.IRQ.IF
+
+define ADC.DAT0.OV.IRQ.IF ((uint16. t)0x40)
+
+ADC.DAT0超闻值中断标志位
+
+在文件 Iks32mc08x.adc.h 第 210 行定义.
+
+# 2.1.2.53 ADC.EOS0.IRQ.EN
+
+define ADC.EOS0.IRQ.EN ((uint16. t)0x01)  第一段扫描结束中断  在文件 Iks32mc08x.adc.h 第 208 行定义.
+
+# 2.1.2.54 ADC.EOS0.IRQ.IF
+
+define ADC.EOS0.IRQ.IF ((uint16. t)0x01)
+
+第一段扫描结束中断标志
+
+在文件 Iks32mc08x.adc.h 第 216 行定义.
+
+# 2.1.2.55 ADC.EOS1.IRQ.EN
+
+define ADC.EOS1.IRQ.EN ((uint16. t)0x02)
+
+第二段扫描结束中断
+
+在文件 Iks32mc08x.adc.h 第 207 行定义.
+
+# 2.1.2.56 ADC.EOS1.IRQ.IF
+
+define ADC.EOS1. IRQ_IF ((uint16_t) 0x02)
+
+第二段扫描结束中断标志
+
+在文件 Iks32mc08x.adc.h 第 215 行定义.
+
+# 2.1.2.57 ADC.EOS2.IRQ.EN
+
+define ADC.EOS2. IRQ_EN ((uint16_t) 0x04)
+
+第三段扫描结束中断
+
+在文件 Iks32mc08x.adc.h 第 206 行定义.
+
+# 2.1.2.58 ADC.EOS2.IRQ.IF
+
+define ADC.EOS2. IRQ_IF ((uint16_t) 0x04)
+
+第三段扫描结束中断标志
+
+在文件 Iks32mc08x.adc.h 第 214 行定义.
+
+# 2.1.2.59 ADC.EOS3.IRQ.EN
+
+define ADC.EOS3. IRQ_EN ((uint16_t) 0x08)
+
+第四段扫描结束中断
+
+在文件 Iks32mc08x.adc.h 第 205 行定义.
+
+# 2.1.2.60 ADC.EOS3.IRQ.IF
+
+define ADC.EOS3. IRQ_IF ((uint16_t) 0x08)
+
+第四段扫描结束中断标志
+
+在文件 Iks32mc08x.adc.h 第 213 行定义.
+
+# 2.1.2.61 ADC.H.CONFLICT.IRQ.EN
+
+define ADC.H.CONFLICT.IRQ.EN ((uint16_t)0x20)
+
+硬件触发冲突
+
+在文件 Iks32mc08x.adc.h 第 203 行定义.
+
+# 2.1.2.62 ADC.H.CONFLICT.IRQ.IF
+
+define ADC.H.CONFLICT.IRQ.IF ((uint16_t)0x20)
+
+硬件触发冲突标志
+
+在文件 Iks32mc08x.adc.h 第 211 行定义.
+
+# 2.1.2.63 ADC.HARDWARE.T0.TRG
+
+define ADC.HARDWARE.T0_TRG ((uint16_t)0x01)ADC采用硬件T0事件触发在文件 Iks32mc08x.adc.h 第 260 行定义.
+
+# 2.1.2.64 ADC.HARDWARE.T1.TRG
+
+define ADC.HARDWARE.T1_TRG ((uint16_t)0x02)
+
+ADC采用硬件T1事件触发
+
+在文件 Iks32mc08x.adc.h 第 261 行定义.
+
+# 2.1.2.65 ADC.HARDWARE.T2.TRG
+
+define ADC.HARDWARE.T2_TRG ((uint16_t)0x04)
+
+ADC采用硬件T2事件触发
+
+在文件 Iks32mc08x.adc.h 第 262 行定义.
+
+# 2.1.2.66 ADC.HARDWARE.T3.TRG
+
+define ADC_HARDWARE.T3. TRG ((uint16. t)0x08)
+
+ADC采用硬件T3事件触发
+
+在文件 Iks32mc08x.adc.h 第 263 行定义.
+
+# 2.1.2.67 ADC.LEFT_ALIGN
+
+define ADC.LEFT_ALIGN ((uint16. t)0x0000)
+
+ADC数据输出左对齐
+
+在文件 Iks32mc08x.adc.h 第 219 行定义.
+
+# 2.1.2.68 ADC.MCPWM.T0.TRG
+
+define ADC.MCPWM.T0. TRG ((uint16. t)0x01)ADC采用MCPWM T0事件触发在文件 Iks32mc08x.adc.h 第 225 行定义.
+
+# 2.1.2.69 ADC.MCPWM.T1.TRG
+
+define ADC.MCPWM.T1. TRG ((uint16. t)0x02)
+
+ADC采用MCPWM T1事件触发
+
+在文件 Iks32mc08x.adc.h 第 226 行定义.
+
+# 2.1.2.70 ADC.MCPWM.T2.TRG
+
+define ADC.MCPWM.T2. TRG ((uint16. t)0x04)
+
+ADC采用MCPWM T2事件触发
+
+在文件 Iks32mc08x.adc.h 第 227 行定义.
+
+# 2.1.2.71 ADC.MCPWM_T3.TRG
+
+define ADC_MCPWM_T3_TRG ((uint16_t)0x08)
+
+ADC采用MCPWM T3事件触发
+
+在文件 Iks32mc08x.adc.h 第 228 行定义.
+
+# 2.1.2.72 ADC_RIGHT_ALIGN
+
+define ADC_RIGHT_ALIGN ((uint16_t)0x0001)
+
+ADC数据输出右对齐
+
+在文件 Iks32mc08x.adc.h 第 229 行定义.
+
+# 2.1.2.73 ADC.S.CONFLICT.IRQ.EN
+
+define ADC.S.CONFLICT.IRQ_EN ((uint16_t)0x10)
+
+软件触发冲突
+
+在文件 Iks32mc08x.adc.h 第 204 行定义.
+
+# 2.1.2.74 ADC.S.CONFLICT.IRQ_IF
+
+define ADC.S.CONFLICT.IRQ_IF ((uint16_t)0x10)
+
+软件触发冲突标志
+
+在文件 Iks32mc08x.adc.h 第 212 行定义.
+
+# 2.1.2.75 ADC_UTIMER_TO_TRG
+
+define ADC_UTIMER_TO_TRG ((uint16_t)0x01)
+
+ADC采用UTIMER T0事件触发
+
+在文件 Iks32mc08x.adc.h 第 229 行定义.
+
+# 2.1.2.76 ADC.UTIMER.T1.TRG
+
+define ADC.UTIMER.T1. TRG（（uint16. t）0x02）ADC采用UTIMERT1事件触发在文件lks32mc08x.adc.h第230行定义.
+
+# 2.1.2.77 ADC.UTIMER.T2.TRG
+
+define ADC.UTIMER.T2. TRG（（uint16. t）0x04）ADC采用UTIMERT2事件触发在文件lks32mc08x.adc.h第231行定义.
+
+# 2.1.2.78 ADC.UTIMER.T3.TRG
+
+define ADC.UTIMER.T3. TRG（（uint16. t）0x08）ADC采用UTIMERT3事件触发在文件lks32mc08x.adc.h第232行定义.
+
+# 2.1.2.79 RefVol.1V2
+
+define RefVol.1V2（（uint16. t）0x01）/\*ADC基准电压1.2V\*/在文件lks32mc08x.adc.h第179行定义.
+
+# 2.1.2.80 RefVol.2V4
+
+define RefVol.2V4（（uint16. t）0x00）/\*ADC基准电压2.4V\*/在文件lks32mc08x.adc.h第178行定义.
+
+# 2.1.3 枚举类型说明
+
+# 2.1.3.1 CHNx
+
+enum CHNx
+
+ADC采样信号来源寄存器序号
+
+枚举值  
+
+<table><tr><td>CHNO</td><td>第0次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN1</td><td>第1次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN2</td><td>第2次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN3</td><td>第3次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN4</td><td>第4次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN5</td><td>第5次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN6</td><td>第6次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN7</td><td>第7次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN8</td><td>第8次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN9</td><td>第9次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN10</td><td>第10次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN11</td><td>第11次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN12</td><td>第12次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN13</td><td>第13次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN14</td><td>第14次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN15</td><td>第15次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN16</td><td>第16次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN17</td><td>第17次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN18</td><td>第18次采样信号对应信号来源寄存器序号</td></tr><tr><td>CHN19</td><td>第19次采样信号对应信号来源寄存器序号</td></tr></table>
+
+在文件lks32mc08x.adc.h第266行定义.
+
+# 2.1.3.2 DATx
+
+enum DATx
+
+ADC数据寄存器序号
+
+枚举值  
+
+<table><tr><td>DAT0</td><td>第0次采样信号对应结果寄存器序号</td></tr><tr><td>DAT1</td><td>第1次采样信号对应结果寄存器序号</td></tr><tr><td>DAT2</td><td>第2次采样信号对应结果寄存器序号</td></tr><tr><td>DAT3</td><td>第3次采样信号对应结果寄存器序号</td></tr><tr><td>DAT4</td><td>第4次采样信号对应结果寄存器序号</td></tr><tr><td>DAT5</td><td>第5次采样信号对应结果寄存器序号</td></tr><tr><td>DAT6</td><td>第6次采样信号对应结果寄存器序号</td></tr><tr><td>DAT7</td><td>第7次采样信号对应结果寄存器序号</td></tr><tr><td>DAT8</td><td>第8次采样信号对应结果寄存器序号</td></tr><tr><td>DAT9</td><td>第9次采样信号对应结果寄存器序号</td></tr><tr><td>DAT10</td><td>第10次采样信号对应结果寄存器序号</td></tr></table>
+
+枚举值  
+
+<table><tr><td>DAT11</td><td>第11次采样信号对应结果寄存器序号</td></tr><tr><td>DAT12</td><td>第12次采样信号对应结果寄存器序号</td></tr><tr><td>DAT13</td><td>第13次采样信号对应结果寄存器序号</td></tr><tr><td>DAT14</td><td>第14次采样信号对应结果寄存器序号</td></tr><tr><td>DAT15</td><td>第15次采样信号对应结果寄存器序号</td></tr><tr><td>DAT16</td><td>第16次采样信号对应结果寄存器序号</td></tr><tr><td>DAT17</td><td>第17次采样信号对应结果寄存器序号</td></tr><tr><td>DAT18</td><td>第18次采样信号对应结果寄存器序号</td></tr><tr><td>DAT19</td><td>第19次采样信号对应结果寄存器序号</td></tr></table>
+
+在文件lks32mc08x_adc.h第290行定义.
+
+# 2.1.4 函数说明
+
+# 2.1.4.1 ADC_ChannelConfig()
+
+void ADC_ChannelConfig {ADC_TypeDef *ADCx,CHNx CHNum, uint16_t nChannel }
+
+函数名称：void ADC_ChannelConfig(ADC_TypeDef* ADCx,CHNx CHNum, uint16_t Channel_0, uint16_t Channel_1)
+
+功能描述：ADC采样通道设置
+
+参见
+
+被引用内容：CHNx
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx, 08系列固定选择ADC0 CHNum为枚举类型，对应0-19；Channel.0为采样通道序号对应0-19 nChannel. ADC CHNAME.0 ~ ADC CHNAME.19</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+ADC_ChannelConfig（ADC0,CHN0,ADC_CHANNEL_3）；//配置ADC第0次采样ADC通道3的信号ADC_ChannelConfig（ADC0,CHN1,ADC_CHANNEL_0）；//配置ADC第1次采样ADC通道0的信号
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.adc.c第263行定义.
+
+# 2.1.4.2 ADC_ClearIRQFlag()
+
+void ADC_ClearIRQFlag (ADC_TypeDef *ADCx, uint16_t INT_flag)
+
+函数名称：void ADC_ClearIRQFlag(ADC_TypeDef* ADCx, uint16_t INT_flag)
+
+功能描述：ADC中断标志位清零
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="10">输入参数:</td><td>ADCx:</td><td>ADC0</td></tr><tr><td>INT_flag:</td><td>ADC中断标志</td></tr><tr><td>ADC_DAT0.OV_IRQ.IF</td><td>ADC_DAT0超阈值中断标志位</td></tr><tr><td>ADC_H_CONFLICT_IRQ.IF</td><td>硬件触发冲突标志</td></tr><tr><td>ADC_S_CONFLICT_IRQ.IF</td><td>软件触发冲突标志</td></tr><tr><td>ADC_EOS3_IRQ.IF</td><td>第四段扫描结束中断标志</td></tr><tr><td>ADC_EOS2_IRQ.IF</td><td>第三段扫描结束中断标志</td></tr><tr><td>ADC_EOS1_IRQ.IF</td><td>第二段扫描结束中断标志</td></tr><tr><td>ADC_EOS0_IRQ.IF</td><td>第一段扫描结束中断标志</td></tr><tr><td>ADC_ALL_IRQ.IF</td><td>ADC全部中断标志位——可用于初始化</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(ADC.GetIRQFlag(ADC0,ADC_EOS0. IRQ.IF))//获取第一段扫描结束中断标志ADC.ClearIRQFlag(ADC0,ADC_EOS0. IRQ.IF)//第一段扫描结束中断标志
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.adc.c第188行定义
+
+# 2.1.4.3 ADC_GetConversionValue()
+
+s16 ADC_GetConversionValue ( DATx DATNum )
+
+函数名称：s16 ADC_GetConversionValue(DATNx DATNum)
+
+功能描述：读ADC采样值
+
+参见
+
+被引用内容：DATx
+
+参数
+
+<table><tr><td>输入参数:</td><td>DATx: 读取第几次采样结果值</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：对应x次采样结果值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+s16 ADC_samp0 = 0; ADC_samp0 = ADC_GetConversionValue(DATA); //读取ADC第0次采样结果
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.adc.c第294行定义.
+
+# 2.1.4.4 ADC_GetIRQFlag()
+
+u16 ADC_GetIRQFlag (ADCTypeDef *ADCx, uint16_t INT_flag)
+
+函数名称：uint16_t ADC_GetIRQFlag(ADC_TypeDef* ADCx, uint16_t INT_flag)
+
+功能描述：获取ADC中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td>ADCx:</td><td>ADC0</td></tr><tr><td>INT_flag:</td><td>ADC中断标志</td></tr><tr><td>ADC_DAT0.OV_IRQ.IF</td><td>ADC_DAT0超阈值中断标志位</td></tr><tr><td>ADC_H_CONFLICT_IRQ.IF</td><td>硬件触发冲突标志</td></tr><tr><td>ADC_S_CONFLICT_IRQ.IF</td><td>软件触发冲突标志</td></tr><tr><td>ADC_EOS3_IRQ.IF</td><td>第四段扫描结束中断标志</td></tr><tr><td>ADC_EOS2_IRQ.IF</td><td>第三段扫描结束中断标志</td></tr><tr><td>ADC_EOS1_IRQ.IF</td><td>第二段扫描结束中断标志</td></tr><tr><td>ADC_EOS0_IRQ.IF</td><td>第一段扫描结束中断标志</td></tr><tr><td>ADC_ALL_IRQ.IF</td><td>ADC全部中断标志位——可用于初始化</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：读对应标志位是否为1，1位置位，0为未置位
+
+注解
+
+其它说明：无
+
+警告
+
+只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+# 示例代码：
+
+if(ADC.GetIRQFlag(ADC0,ADC_EOS0_IRQ_IF))//获取第一段扫描结束中断标志  {      ADC.ClearIRQFlag(ADC0,ADC_EOS0_IRQ_IF)//第一段扫描结束中断标志  }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_adc.c第226行定义.
+
+# 2.1.4.5 ADC_Init()
+
+void ADC_Init ( ADC_TypeDef \*ADCx, ADC.InitTypeDef \*ADC.InitStruct)
+
+函数名称：void ADC_Init(ADC,TypeDef \*ADCx,ADC InitTypeDef \*ADC InitStruct)
+
+功能描述：ADC初始化函数
+
+参见
+
+被引用内容：SYS_AnalogModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx: ADC0, ADC_InitTypeDef *ADC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+ADCInitTypeDef ADCInitStructure;ADC_structInit（&ADC_InitStructure); //初始化结构体ADCInitStructure.ADC_CLKDIV  $=$  ADC_Clock_48M; //ADC时钟选择48MHzADCInitStructure.Align  $=$  ADC_LEFT_ALIGN; //ADC数据输出左对齐ADCInitStructure.TriggerMode  $=$  ADC_2SEG_TRG; //设置ADC转换模式为双股式采样ADCInitStructure.FirSegCn  $\equiv$  ADC_2_Times_SAMPLE; //第一段共采样2个通道ADCInitStructure.SecSegCn  $\equiv$  ADC_2_Times_SAMPLE; //第二段共采样0个通道ADCInitStructure.ThrSegCn  $\equiv$  0; //第三段共采样0个通道ADCInitStructure.FouSegCn  $\equiv$  0; //第四段共采样0个通道ADCInitStructure.ReFVol  $=$  RefVol_2V4; //ADC基准电压  $= 1 + 1$  ADCInitStructure.Gain  $\begin{array}{rl}{=}&{0\times 0}\end{array}$  //ADC_DAT0- ADC_DAT9（BIT0~BIT9）采样保持电路增益设置2/3 ADCInitStructure.Gain  $\begin{array}{rl}{=}&{0\times 0}\end{array}$  //ADC_DAT10- ADC_DAT9（BIT10~BIT19）采样保持供电路增益设置2/3 ADC_InitStructure.Gas_SqTable  $=$  DISABLE; //关闭连续采样//打开UTIMERTO_TI硬件触发采样ADCInitStructure.MCPWM_Trigger_En  $=$  ADC_MCPWM_T0_TRG|ADC_MCPWM_T1_TRG://开启UTIMER硬件第一段和第二段触发采样ADCInitStructure.UTIMER_Trigger_En  $=$  DISABLE; //关闭UTIMER硬件触发采样ADCInitStructure.TrigStartCnt  $= 0$  //发生（TriggerCnt  $^{+1}$  次触发事件执行一段转换动作ADCInitStructure.IE  $=$  ADC_EOS0_IRQ_EN|ADC_EOS1_IRQ_EN; //ADC第一、二段采样结束中断使能ADC_Init（ADC0,&ADC_InitStructure);
+
+修改日志：
+
+在文件lks32mc08x.adc.c第59行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/6bf78bc95687daa2bb8b04f939750a2bb15dba929cfb58bf7663c03efcd367ce.jpg)
+
+# 2.1.4.8 ADC_SoftTrgEN()
+
+void ADC_SoftTrgEN(ADC_TypeDef  $\#$  ADCx,FuncState state)
+
+函数名称：void ADC_SoftTrgEN(ADC_TypeDef\*ADCx,FuncState state)
+
+功能描述：ADC采样软件触发使能
+
+参见
+
+被引用内容：FuncState
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx, 08系列固定选择ADC0 state: ENABLE触发, DISABLE不触发</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：ADC0 SWT写0x5AA5仅触发一次，完成后自动清零，等待下次软件触发
+
+警告
+
+无
+
+示例代码：
+
+ADC_SoftTrgEN(ADC0, ENABLE); //软件触发一次ADC采样
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_adc.c第398行定义
+
+# 2.1.4.7 ADC_StructInit()
+
+void ADC_StructInit(ADC_InitTypeDef *ADC_InitStructure)
+
+函数名称：void ADC_StructInit(ADC_InitStructure)
+
+功能描述：ADC结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADC_InitTypeDef *ADC_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+ADC_InitStructureDef ADC_InitStructureDefADC_StructInit（&ADC_InitStructureDef）；//初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>Howlet</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_adc.c第136行定义.
+
+# 2.2 lks32mc08x_adc.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef LKS32MC08x_ADC_H 00015 #define LKS32MC08x_ADC_H 00016 00017 00021 #include "lks32mc08x.lib.h" 00022 typedef struct 00023 { 00024 _IO uint32_t DAT0; 00025 _IO uint32_t DAT1; 00026 _IO uint32_t DAT2; 00027 _IO uint32_t DAT3; 00028 _IO uint32_t DAT4; 00029 _IO uint32_t DAT5; 00030 _IO uint32_t DAT6; 00031 _IO uint32_t DAT7; 00032 _IO uint32_t DAT8; 00033 _IO uint32_t DAT9; 00034 _IO uint32_t DAT10; 00035 _IO uint32_t DAT11;
+
+00036 _IO uint32. t DAT12;00037 _IO uint32. t DAT13;00038 _IO uint32. t DAT14;00039 _IO uint32. t DAT15;00040 _IO uint32. t DAT16;00041 _IO uint32. t DAT17;00042 _IO uint32. t DAT18;00043 _IO uint32. t DAT19;00044 _IO uint32. t CHN0;00045 _IO uint32. t CHN1;00046 _IO uint32. t CHN2;00048 _IO uint32. t CHN3;00049 _IO uint32. t CHN4;00050 _IO uint32. t CHN5;00051 _IO uint32. t CHN6;00052 _IO uint32. t CHN7;00053 _IO uint32. t CHN8;00054 _IO uint32. t CHN9;00056 _IO uint32. t CHNTO;00057 _IO uint32. t CHNT1;00058 _IO uint32. t SD0;00059 _IO uint32. t SD1;00060 _IO uint32. t GAIN;00061 _IO uint32. t GAIN_1;00062 /\*采样保持电路A对应通道范围是第0、2、4等偶数序号通道\*/00063 _IO uint32. t DC_A0;00064 _IO uint32. t DC_A1;00065 _IO uint32. t AMC_A0;00066 _IO uint32. t AMC_A1;00067 /\*采样保持电路B对应通道范围是第1、3、5等奇数序号通道\*/00068 _IO uint32. t DC_B0;00069 _IO uint32. t DC_B1;00070 _IO uint32. t AMC_B0;00071 _IO uint32. t AMC_B1;00073 _IO uint32. t IE;00074 _IO uint32. t IE;00075 _IO uint32. t CFG;00076 _IO uint32. t TRG;00077 _IO uint32. t SWT;00078 _IO uint32. t DAT0. TH;00079 \} ADC_TypeDef;00080 00084 #ifndef ADC00085 #define ADC0 ((ADCTypeDef *) ADC0_BASE)00086 #endif00090 typedef struct00091 {00102 uint16_t IE;00108 uint16_t Align;00115 uint16_t ADC_CLK_DIV;00116 uint16_t Con_Sample;00120 uint16_t TriggerCnt;00125 uint16_t FirSeg_Ch;00129 uint16_t SecSeg_Ch;00133 uint16_t ThrSeg_Ch;00137 uint16_t FouSeg_Ch;00138 uint16_t TriggerModel;00144 uint16_t MTCWM_TriggerEn;00150 uint16_t UTIMER_Trigger_En;00161 uint16_t DAT0. TH_type00162 uint16_t DAT0. TH;00163 uint16_t Gain0;00164 uint16_t Gain1;00170 uint16_t RefVol;00171 \} ADC_InitTypeDef;00172 00173 00174 #define ADC_Clock_48M (0x00) /\*48MHz\*/00175 #define ADC_Clock_24M (0x03) /\*24MHz\*/00176 #define ADC_Clock_12M (0x02) /\*12MHz\*/00177 00178 #define RefVol_2V4 ((uint16_t)0x00) /\*ADC基准电压2.4V\*/00179 #define RefVol_1V2 ((uint16_t)0x01) /\*ADC基准电压1.2V\*/00180 00181 #define ADC_1_TIMES_SAMPLE ((u8)1)00182 #define ADC_2_TIMES_SAMPLE ((u8)2)00183 #define ADC_3_TIMES_SAMPLE ((u8)3)00184 #define ADC_4_TIMES_SAMPLE ((u8)4)00185 #define ADC_5_TIMES_SAMPLE ((u8)5)00186 #define ADC_6_TIMES_SAMPLE ((u8)6)00187 #define ADC_7_TIMES_SAMPLE ((u8)7)00188 #define ADC_8_TIMES_SAMPLE ((u8)8)00189 #define ADC_9_TIMES_SAMPLE ((u8)9)00190 #define ADC_10_TIMES_SAMPLE ((u8)10)00191 #define ADC_11_TIMES_SAMPLE ((u8)11)00192 #define ADC_12_TIMES_SAMPLE ((u8)12)00193 #define ADC_13_TIMES_SAMPLE ((u8)13)
+
+00194 #define ADC14. TIMES.SAMPLE 00195 #define ADC15. TIMES.SAMPLE 00196 #define ADC16. TIMES.SAMPLE 00197 #define ADC17. TIMES.SAMPLE 00198 #define ADC18. TIMES.SAMPLE 00199 #define ADC19. TIMES.SAMPLE 00200 #define ADC20. TIMES.SAMPLE 00202 #define ADC.DAT.OV.IRQ_EN 00203 #define ADC.H.CONFLICT.IRQ_EN 00204 #define ADC.S.CONFLICT.IRQ_EN 00205 #define ADC.EOS3.IRQ_EN 00206 #define ADC.EOS2.IRQ_EN 00207 #define ADC.EOS1.IRQ_EN 00208 #define ADC.EOSO.IRQ_EN 00209 #define ADC.DAT.OV.IRQ_EN 00210 #define ADC.H.CONFLICT.IRQ_IF 00211 #define ADC.S.CONFLICT.IRQ_IF 00212 #define ADC.S.CONFLICT.IRQ_IF 00213 #define ADC.EOS3.IRQ_IF 00214 #define ADC.EOS2.IRQ_IF 00215 #define ADC.EOS1.IRQ_IF 00216 #define ADC.EOSO.IRQ_IF 00217 #define ADC.ALL.IRQ_IF 00219 #define ADC.LEFT.ALIG 00220 #define ADC.RIGHT.ALIGN 00222 #define ADC.DAT0.HTH 00223 #define ADC.DAT0.LTH 00225 #define ADC.MCPWM.TO_TRG 00226 #define ADC.MCPWM.T1.TRG 00227 #define ADC.MCPWM.T2.TRG 00228 #define ADC.MCPWM.T3.TRG 00229 #define ADC.UTIMER.T0.TRG 00230 #define ADC.UTIMER.T1.TRG 00231 #define ADC.UTIMER.T2.TRG 00232 #define ADC.UTIMER.T3.TRG 00233 #define ADC.1SEG.TRG 00234 #define ADC.1SEG.TRG 00235 #define ADC.4SEG.TRG 00236 #define ADC.CHANNEL.0 00239 #define ADC.CHANNEL.1 00240 #define ADC.CHANNEL.2 00241 #define ADC.CHANNEL.3 00242 #define ADC.CHANNEL.4 00243 #define ADC.CHANNEL.5 00244 #define ADC.CHANNEL.6 00245 #define ADC.CHANNEL.7 00246 #define ADC.CHANNEL.8 00247 #define ADC.CHANNEL.9 00248 #define ADC.CHANNEL.10 00249 #define ADC.CHANNEL.11 00250 #define ADC.CHANNEL.12 00251 #define ADC.CHANNEL.13 00252 #define ADC.CHANNEL.14 00253 #define ADC.CHANNEL.15 00254 #define ADC.CHANNEL.16 00255 #define ADC.CHANNEL.17 00256 #define ADC.CHANNEL.18 00257 #define ADC.CHANNEL.19 00260 #define ADC.HARDWARE.TO_TRG 00261 #define ADC.HARDWARE.T1.TRG 00262 #define ADC.HARDWARE.T2.TRG 00263 #define ADC.HARDWARE.T3.TRG 00266 typedef enum { 00267 CHN0 = 0, 00268 CHN1, 00269 CHN2, 00270 CHN3, 00271 CHN4, 00272 CHN5, 00273 CHN6, 00274 CHN7, 00275 CHN8, 00276 CHN9, 00277 CHN10, 00278 CHN11, 00279 CHN12, 00280 CHN13, 00281 CHN14, 00282 CHN15, 00283 CHN16, 00284 CHN17, 00285 CHN18, 00286 CHN19, 00287 CHNX; 00288 00290 typedef enum { 00291 DAT0 = 0, 00292 DAT1,
+
+((u8)14) ((u8)15) ((u8)16) ((u8)17) ((u8)18) ((u8)19) ((u8)20) ((uint16. t)0x40) ((uint16. t)0x20) ((uint16. t)0x10) ((uint16. t)0x08) ((uint16. t)0x04) ((uint16. t)0x02) ((uint16. t)0x01) ((uint16. t)0x40) ((uint16. t)0x20) ((uint16. t)0x10) ((uint16. t)0x08) ((uint16. t)0x04) ((uint16. t)0x02) ((uint16. t)0x01) ((uint16. t)x7f) ((uint16. t)0x0000) ((uint16. t)0x0001) ((uint16. t)0x0001) ((uint16. t)0x0000) ((uint16. t)0x01) ((uint16. t)0x02) ((uint16. t)0x04) ((uint16. t)0x08) ((uint16. t)0x01) ((uint16. t)0x03) ((uint16. t)0x00) ((uint16. t)0x01) ((uint16. t)0x02) ((uint16. t)0x03) ((uint16. t)0x04) ((uint16. t)0x05) ((uint16. t)0x06) ((uint16. t)0x07) ((uint16. t)0x08) ((uint16. t)0x09) ((uint16. t)0x0a) ((uint16. t)0x0b) ((uint16. t)0x0c) ((uint16. t)0x0d) ((uint16. t)0x0e) ((uint16. t)0x0f) ((uint16. t)0x10) ((uint16. t)0x11) ((uint16. t)0x12) ((uint16. t)0x13) ((uint16. t)0x01) ((uint16. t)0x02) ((uint16. t)0x04) ((uint16. t)0x08)
+
+00293 DAT2, 00294 DAT3, 00295 DAT4, 00296 DAT5, 00297 DAT6, 00298 DAT7, 00299 DAT8, 00300 DAT9, 00301 DAT10, 00302 DAT11, 00303 DAT12, 00304 DAT13, 00305 DAT14, 00306 DAT15, 00307 DAT16, 00308 DAT17, 00309 DAT18, 00310 DAT19, 00311 DATx; 00312 00313 void ADC_Init(ADC_typeDef \* ADCx, ADC_InitTypeDef \* ADC InitStruct); 00314 void ADC_StructInit(ADC InitTypeDef \* ADCx, uint16_t INT_flag); 00315 void ADC_ClearIRQFlag(ADC_typeDef \* ADCx, uint16_t INT_flag); 00316 void ADC_ChannelConfig(ADC_TypeDef \* ADCx,CHnx CHNum, uint16_t nChannel); 00317 u16 ADC.GetIRQFlag(ADC_TypeDef \* ADCx, uint16_t INT_flag); 00318 s16 ADC.GetConversionValue(DATx DATNum);/\*取对应序号ADC数据寄存器的值\*/ 00319 void ADC_SoftTrgEN(ADC_TypeDef \* ADCx,FuncState state); 00320 #endif /\*CONNIE_ADC.H.\*/ 00321 00322 00323 00324 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*（C）COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*\*END OF FILE\*\*\*\*/
+
+# 2.3 Include/lks32mc08x.can.h 文件参考
+
+文件名称：lks32mc08x.can.h  文件标识：无  内容摘要：CAN外设驱动程序头文件  其它说明：无
+
+include "lks32mc08x.lib.h"  lks32mc08x.can.h 的引用(Include)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/96c624020d510b5294485c841184496e0245283c105cd1022827b6035084a58d.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/ca8ae91dd88101dba3673505b0e8ef7a63a3dc73b39993cdc27ff6e1f5357b0f.jpg)
+
+# 结构体
+
+- struct CAN_TypeDef  CAN寄存器结构体句柄  
+- struct CAN.InitTypeDef  CAN结构体基地址定义
+
+# 宏定义
+
+- #define CAN.SELFTEST_MODE BIT2CAN工作模式选择, 自测模式- #define CAN.MONITOR_MODE BIT1CAN工作模式选择, 监听模式- #define CAN.NORMAL_MODE 0x0CAN工作模式选择, 正常收发模式- #define CAN.IE.BUSERR BIT7中断使能定义, 总线错误中断使能- #define CAN.IE.LOSTARB BIT6中断使能定义, 丢失仲裁中断使能- #define CAN.IE.PASSIVEERR BIT5中断使能定义, 被动错误错误中断使能- #define CAN.IE.WAKE BIT4中断使能定义, CAN模块从休眠中唤醒中断使能- #define CAN.IE.RFIFOOV BIT3中断使能定义, RFIFO数据发送溢出中断使能- #define CAN.IE.WERR BIT2中断使能定义, 错误报警中断使能- #define CAN.IE.TXDONE BIT1中断使能定义, 发送完毕当前帧中断使能- #define CAN.IE.RFIFONOEEMPTY BIT0中断使能定义, RFIFO有新的数据被接收到中断使能- #define CAN.IF.BUSERR BIT7总线错误中断标志- #define CAN.IF.LOSTARB BIT6丢失仲裁中断标志- #define CAN.IF.PASSIVEERR BIT5被动错误错误中断标志- #define CAN.IF.WAKE BIT4CAN模块从休眠中唤醒中断标志- #define CAN.IF.RFIFOOV BIT3RFIFO数据发送溢出中断标志- #define CAN.IF.WERR BIT2错误报警中断标志- #define CAN.IF.TXDONE BIT1发送完毕当前帧中断标志- #define CAN.IF.RFIFONOEEMPTY BIT0RFIFO有新的数据被接收到中断标志- #define CAN.ONBUS BIT71: CAN模块, 处于BUS OFF状态, 无数据发送接收动作0: CAN模块, 可以发送数据到CAN总线, 或接收CAN总线数据- #define CAN.ERRORV BIT61: CAN传输产生的错误总数达到或超过CAN.EWL规定值0: CAN传输产生的错误总数低于CAN.EWL规定值- #define CAN.TXING BIT51: CAN模块正在发送一帧数据0: CAN模块没有发送数据的动作- #define CAN.RXING BIT41: CAN模块正在接收一帧数据0: CAN模块没有接收数据的动作- #define CAN.TRNASDONE BIT3
+
+1: 最近一次传输已完成 0: 最近一次传输未完成- #define CAN_TFIFOEMPTY_BIT21: TFIFO 空，可以写入发送数据 0: TFIFO 非空，内部数据没有发送完毕- #define CAN_RFIFOEMPTY_BIT11: RFIFO 存入的帧太多，已满，导致数据丢失 0: RFIFO 未满- #define CAN_DATAAVAIL_BIT01: RFIFO 存有一帧或多帧数据，可以通过 RFIFO 寄存器读取 0: RFIFO 没有有效帧数据- #define CAN_ALLSR 0xff读取全部状态
+
+# 枚举
+
+枚举- enum enumLossposition {CAN_LOST_ID0, CAN_LOST_ID1, CAN_LOST_ID2, CAN_LOST_ID3, CAN_LOST_ID4, CAN_LOST_ID5, CAN_LOST_ID6, CAN_LOST_ID7, CAN_LOST_ID8, CAN_LOST_ID9, CAN_LOST_IDA, CAN_LOST_SRTR, CAN_LOST_IDE}- enum enumErrortype {CAN_BITERROR, CAN_FORMATERROR, CAN_FLLERROR, CAN_OTHERERROR} - enum enumErrortime {CAN_RECE_PROCESS, CAN_SEND_PROCESS} - enum enumErposition {null0, null1, CAN_ID28. ID21, CAN_START, CAN_SRTR, CAN_IDE, CAN_ID20. ID18, CAN_ID17. ID13, CAN_CRC, CAN_KEEP0, CAN_DATA_FIELD, CAN DATALENGTHCODE, CAN_RTR, CAN_KEEP1, CAN_ID4. ID0, CAN_ID15. ID12, null2, CAN_ACTIVE_ERROR_FLAG, CAN_INTERMISSION, CAN_TOLERATE_DOMINANT, null3, null4, CAN_PASSIVE_ERROR, CAN_ERROR_DELIMITER, CAN_CRC_DELIMITER, CAN_CONNFIRM, CAN_FRAMEEND, CAN_CONNFIRM_DELIMITER, CAN_OVERLOAD_FLAG}
+
+# 函数
+
+·void CAN StructInit (CAN InitTypeDef \*CAN InitStruct) 函数名称：void CAN StructInit(CAN InitTypeDef \*CAN InitStruct) ·void CAN Init (CAN TypeDef \*CANx, CAN InitTypeDef \*CAN InitStruct) 函数名称：void CAN Init(CAN TypeDef\* CANx, CAN InitTypeDef\* CAN InitStruct) ·void SFF_ID_Filter (u32 acr, u32 amr, u8 rtr.acr, u8 rtr.amr, u8 Byte1_acr, u8 Byte1_amr, u8 Byte2_acr, u8 Byte2.amr) 函数名称：void SFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr, u8 Byte1_acr,u8 Byte1_amr,u8 Byte2_acr,u8 Byte2.amr) ·void EFF_ID_Filter (u32 acr, u32 amr, u8 rtr.acr, u8 rtr.amr) 函数名称：void EFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr) ·void ID1_Filter_Dual (u32 acr1, u32 amr1, u8 rtr.acr1, u8 rtr.amr1, u8 Byte.acr1, u8 Byte.amr1, u8 ide) 函数名称：void ID1_Filter_Dual(u32 acr1, u32 amr1,u8 rtr.acr1, u8 rtr.amr1,u8 Byte.acr1,u8 Byte.amr1,u8 ide) ·void ID2_Filter_Dual (u32 acr2, u32 amr2, u8 rtr.acr2, u8 rtr.amr2, u8 ide) 函数名称：void ID2_Filter_Dual(u32 acr2,u32 amr2,u8 rtr.acr2,u8 rtr.amr2,u8 ide) ·u8 My_CAN_Send.Msg (u32 id, u8 ide, u8 rtr, u8 \*msg, u8 len) 函数名称：u8 My_CAN_Send.Msg(u32 id,u8 ide,u8 rtr,const u8 \*msg,u8 len) ·u8 CAN_Receive_Msg (u32 \*id, u8 \*ide, u8 \*rtr, u8 \*buf) ·uint8_t CAN_ReadState (CAN_TypeDef \*CANx, uint32_t sr) 函数名称：uint8_t CAN_ReadState(CAN_TypeDef\* CANx, uint32_t sr) ·uint32_t CAN_GetIRQFlag (void)
+
+函数名称：uint32_t CAN_GetIRQFlag（void)- void CAN_Sleep (u32 Baud)- 函数名称：void CAN_Sleep(u32 Baud)- void CAN_Manual_Awake (void)- 函数名称：void CAN_Manual_Awake(void)
+
+# 2.3.1 详细描述
+
+文件名称：lks32mc08x. can.h文件标识：无内容摘要：CAN外设驱动程序头文件其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年06月1日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.h中定义
+
+# 2.3.2 宏定义说明
+
+# 2.3.2.1 CAN ALLSR
+
+define CAN ALLSR 0xff
+
+读取全部状态
+
+记录总线仲裁丢失的具体位置定义
+
+在文件lks32mc08x.can.h第137行定义
+
+# 2.3.2.2 CAN_DATAAVAIL
+
+define CAN_DATAAVAIL BIT0
+
+1: RFIFO存有一帧或多帧数据，可以通过RFIFO寄存器读取0：RFIFO没有有效帧数据选择读取CAN_SR状态定义在文件lks32mc08x.can.h第134行定义.
+
+# 2.3.2.3 CAN_ERROV
+
+define CAN_ERROV BIT6
+
+1：CAN传输产生的错误总数达到或超过CAN.EWL规定值0：CAN传输产生的错误总数低于CAN.EWL规定值
+
+选择读取CAN_SR状态定义
+
+在文件lks32mc08x.can.h第116行定义.
+
+# 2.3.2.4 CAN_IE.BUSERR
+
+define CAN_IE.BUSERR BIT7中断使能定义，总线错误中断使能在文件lks32mc08x.can.h第88行定义.
+
+# 2.3.2.5 CAN_IE.LOSTARB
+
+define CAN_IE.LOSTARB BIT6
+
+中断使能定义，丢失仲裁中断使能在文件lks32mc08x.can.h第89行定义.
+
+# 2.3.2.6 CAN_IE.PASSIVEERR
+
+define CAN_IE.PASSIVEERR BIT5
+
+中断使能定义，被动错误错误中断使能
+
+在文件lks32mc08x.can.h第90行定义.
+
+# 2.3.2.7 CAN_IE.RFIFONOEMPTY
+
+define CAN_IE.RFIFONOEMPTY BITO
+
+中断使能定义，RFIFI0有新的数据被接收到中断使能在文件lks32mc08x.can.h第96行定义.
+
+# 2.3.2.8 CAN_IE.RFIFOOV
+
+define CAN_IE.RFIFOOV BIT3
+
+中断使能定义，RFIFO数据发送溢出中断使能在文件lks32mc08x.can.h第92行定义.
+
+# 2.3.2.9 CAN_IE.TXDONE
+
+define CAN_IE.TXDONE BIT1
+
+中断使能定义，发送完毕当前帧中断使能在文件lks32mc08x.can.h第94行定义.
+
+# 2.3.2.10 CAN_IE.WAKE
+
+define CAN_IE.WAKE BIT4
+
+中断使能定义，CAN模块从休眠中唤醒中断使能
+
+在文件lks32mc08x.can.h第91行定义.
+
+# 2.3.2.11 CAN_IE.WERR
+
+define CAN_IE.WERR BIT2
+
+中断使能定义，错误报警中断使能在文件lks32mc08x.can.h第93行定义.
+
+# 2.3.2.12 CANIF.BUSERR
+
+define CANIF_BUSERR BIT7
+
+总线错误中断标志
+
+在文件 Iks32mc08x.can.h 第 99 行定义.
+
+# 2.3.2.13 CANIF.LOSTARB
+
+define CANIF_LOSTARB BIT6
+
+丢失仲裁中断标志
+
+在文件 Iks32mc08x.can.h 第 99 行定义.
+
+# 2.3.2.14 CANIF.PASSIVEERR
+
+define CANIF.PASSIVEERR BIT5
+
+被动错误错误中断标志
+
+在文件 Iks32mc08x.can.h 第 100 行定义.
+
+# 2.3.2.15 CANIF.RFIFONOEMPTY
+
+define CANIF.RFIFONOEMPTY BIT0
+
+RFIFIO有新的数据被接收到中断标志选择读取CAN_SR状态定义在文件 Iks32mc08x.can.h 第 110 行定义.
+
+# 2.3.2.16 CANIF.RFIFOOV
+
+define CANIF.RFIFOOV BIT3
+
+RFIFO数据发送溢出中断标志在文件 Iks32mc08x.can.h 第 102 行定义.
+
+# 2.3.2.17 CAN.IF.TXDONE
+
+define CAN.IF.TXDONE BIT1
+
+发送完毕当前帧中断标志
+
+中断标志定义，注意CAN.IR为读清除寄存器，只有BIT0- RFIFO.N_EMPTY.IF无法读清除，此位只能通过对CAN.CMRBIT2写1清除，若RX.FIFO有多帧接收的数据，CAN.CMRBIT2写1也无法清除，除非RXFIFO全部读完，即读一帧数据写CAN.CMRBIT2，反复迭代。
+
+在文件lks32mc08x.can.h第107行定义
+
+# 2.3.2.18 CAN.IF.WAKE
+
+define CAN.IF.WAKE BIT4
+
+CAN模块从休眠中唤醒中断标志
+
+在文件lks32mc08x.can.h第101行定义
+
+# 2.3.2.19 CAN.IF.WERR
+
+define CAN.IF.WERR BIT2
+
+错误报警中断标志
+
+在文件lks32mc08x.can.h第103行定义
+
+# 2.3.2.20 CAN.MONITOR.MODE
+
+define CAN.MONITOR_MODE BIT1
+
+CAN工作模式选择，监听模式
+
+在文件lks32mc08x.can.h第86行定义
+
+# 2.3.2.21 CAN.NORMAL_MODE
+
+define CAN.NORMAL_MODE 0x0
+
+CAN工作模式选择，正常收发模式
+
+在文件lks32mc08x.can.h第86行定义
+
+# 2.3.2.22 CAN.ONBUS
+
+define CAN.ONBUS BIT7
+
+1：CAN 模块，处于 BUS OFF 状态，无数据发送接收动作 0：CAN 模块，可以发送数据到 CAN 总线，或接收 CAN 总线数据
+
+选择读取CAN_SR状态定义
+
+在文件 Iks32mc08x.can.h 第 113 行定义.
+
+# 2.3.2.23 CAN.RFIFOEMPTY
+
+define CAN.RFIFOEMPTY BIT1
+
+1：RFIFO 存入的帧太多，已满，导致数据丢失 0：RFIFO 未满
+
+选择读取CAN_SR状态定义
+
+在文件 Iks32mc08x.can.h 第 131 行定义.
+
+# 2.3.2.24 CAN.RXING
+
+define CAN.RXING BIT4
+
+1：CAN 模块正在接收一帧数据 0：CAN 模块没有接收数据的动作选择读取 CAN_SR 状态定义在文件 Iks32mc08x.can.h 第 122 行定义.
+
+# 2.3.2.25 CAN.SELFTEST.MODE
+
+define CAN.SELFTEST.MODE BIT2
+
+CAN 工作模式选择，自测模式在文件 Iks32mc08x.can.h 第 84 行定义.
+
+# 2.3.2.26 CAN_TFIFOEMPTY
+
+define CAN_TFIFOEMPTY BIT2
+
+1：TFIFO空，可以写入发送数据0：TFIFO非空，内部数据没有发送完毕选择读取CAN_SR状态定义在文件lks32mc08x.can.h第128行定义.
+
+# 2.3.2.27 CAN_TRNASDONE
+
+define CAN_TRNASDONE BIT3
+
+1：最近一次传输已完成0：最近一次传输未完成选择读取CAN_SR状态定义在文件lks32mc08x.can.h第125行定义.
+
+# 2.3.2.28 CAN_TXING
+
+define CAN_TXING BIT5
+
+1：CAN模块正在发送一帧数据0：CAN模块没有发送数据的动作选择读取CAN_SR状态定义在文件lks32mc08x.can.h第119行定义.
+
+# 2.3.3 枚举类型说明
+
+# 2.3.3.1 enumErrortime
+
+enum enumErrortime
+
+枚举值
+
+<table><tr><td>CAN_RECE_PROCESS</td><td>总线错误发生在发送过程中</td></tr><tr><td>CAN_SEND_PROCESS</td><td>总线错误发生在接收过程中</td></tr></table>
+
+在文件lks32mc08x.can.h第165行定义.
+
+# 2.3.3.2 enumErrortype
+
+enum enumErrortype
+
+枚举值  
+
+<table><tr><td>CAN.BITERROR</td><td>bit错误</td></tr><tr><td>CAN.COMMATERIALERROR</td><td>格式错误</td></tr><tr><td>CAN.FILLERROR</td><td>填充错误</td></tr><tr><td>CAN.OTHERERROR</td><td>其它类型错误</td></tr></table>
+
+在文件lks32mc08x.can.h第156行定义
+
+# 2.3.3.3 enumErrposition
+
+enum enumErrposition
+
+枚举值  
+
+<table><tr><td>null0</td><td></td></tr><tr><td>null1</td><td></td></tr><tr><td>CAN_ID28_ID21</td><td>ID.28 到 ID.21</td></tr><tr><td>CAN_START</td><td>起始帧</td></tr><tr><td>CAN_SRTR</td><td>SRTR 位</td></tr><tr><td>CAN IDE</td><td>IDE 位</td></tr><tr><td>CAN_ID20_ID18</td><td>ID.20 到 ID.18</td></tr><tr><td>CAN_ID17_ID13</td><td>ID.17 到 ID.13</td></tr><tr><td>CAN CRC</td><td>CRC 数据段</td></tr><tr><td>CAN KEEP0</td><td>保留位，固定为 0</td></tr><tr><td>CAN_DATA_FIELD</td><td>Data Field</td></tr><tr><td>CAN.DATALONGTHCODE</td><td>Data Length Code</td></tr><tr><td>CAN_RTR</td><td>RTR 位</td></tr><tr><td>CAN KEEP1</td><td>保留位，固定为 1</td></tr><tr><td>CAN_ID4_ID0</td><td>ID.4 到 ID.0</td></tr><tr><td>CAN_ID15_ID12</td><td>ID.12 到 ID.5</td></tr><tr><td>null2</td><td></td></tr><tr><td>CAN_ACTIVE_ERROR_FLAG</td><td>active error flag</td></tr><tr><td>CAN_INTERMISSION</td><td>Intermission</td></tr><tr><td>CAN_TOLERATE_DOMINANT</td><td>Tolerate dominant 位</td></tr><tr><td>null3</td><td></td></tr><tr><td>null4</td><td></td></tr><tr><td>CAN_PASSIVE_ERROR</td><td>passive error flag</td></tr><tr><td>CAN_ERROR_DELIMITER</td><td>Error delimiter</td></tr></table>
+
+枚举值  
+
+<table><tr><td>CAN.CRC.DELIMITER</td><td>CRC delimiter</td></tr><tr><td>CAN.CONNFIRM</td><td>确认位</td></tr><tr><td>CAN.FRAMEEND</td><td>帧结束</td></tr><tr><td>CAN.CONNFIRM.DELIMITER</td><td>确认 delimiter</td></tr><tr><td>CAN.OVERLOAD.FLAG</td><td>Overload flag</td></tr></table>
+
+在文件lks32mc08x.can.h第172行定义
+
+# 2.3.3.4 enumLossposition
+
+enum enumLossposition
+
+枚举值  
+
+<table><tr><td>CAN.LOST.ID0</td><td>ID的第一位</td></tr><tr><td>CAN.LOST.ID1</td><td>ID的第二位</td></tr><tr><td>CAN.LOST.ID2</td><td>ID的第三位</td></tr><tr><td>CAN.LOST.ID3</td><td>ID的第四位</td></tr><tr><td>CAN.LOST.ID4</td><td>ID的第五位</td></tr><tr><td>CAN.LOST.ID5</td><td>ID的第六位</td></tr><tr><td>CAN.LOST.ID6</td><td>ID的第七位</td></tr><tr><td>CAN.LOST.ID7</td><td>ID的第八位</td></tr><tr><td>CAN.LOST.ID8</td><td>ID的第九位</td></tr><tr><td>CAN.LOST.ID9</td><td>ID的第十位</td></tr><tr><td>CAN.LOST.IDA</td><td>ID的第十一位</td></tr><tr><td>CAN.LOST.SRTR</td><td>ID的SRTR位</td></tr><tr><td>CAN.LOST.IDE</td><td>ID的IDE位</td></tr></table>
+
+在文件lks32mc08x.can.h第138行定义
+
+# 2.3.4 函数说明
+
+# 2.3.4.1 CAN_GetIRQFlag()
+
+uint32_t CAN_GetIRQFlag（ void
+
+函数名称：uint32_t CAN_GetIRQFlag(void)
+
+功能描述：获取中断标志与清除中断标志位
+
+参见
+
+被应用枚举：enumErrorType，enumErrortime，enumErrposition
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：TIM中断标志
+
+注解
+
+其它说明：CAN中断标志位为读清除
+
+警告
+
+无
+
+示例代码：
+
+u8 CAN_SR 0; CAN_SR = CAN.GetIRQFlag(); //获取CAN中断标志位且清除CAN中断标志位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第832行定义
+
+# 2.3.4.2 CANInit()
+
+void CAN_Init ( CAN_TypeDef *CANx, CAN.InitTypeDef *CAN.InitStruct)
+
+函数名称：void CAN_Init(CAN_TypeDef* CANx, CAN_InitTypeDef* CAN_InitStructure)
+
+功能描述：ADC初始化函数
+
+参见
+
+被调用函数：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>CANx: CAN, CAN_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CAN_InitTypeDef CAN_InitStruct; CAN_StructInit(&CAN_InitStructure); //Can波特率：500Kbps CAN_InitStructure.CAN_Btr0 = 0x05; CAN_InitStructure.CAN_Btr1 = 0x1C; CAN_InitStructure.CAN_DMAEn = DISABLE; CAN_InitStructure.CAN_DMAEnIn = CAN_PRAMEN; //CAN正常散发数据 CAN_InitStructure.CAN_ErWarShre = 50; //错误与警告门限值为50 //开启接收中断使能，发送完毕当前帧中断使能，错误报警中断使能 CAN_InitStructure.IRQEna = CAN_IE.RFIFONOEMPTY | CAN_IE.TXDONE | CAN_IE.WEREF; CAN_Init(CAN, &CAN_InitStructure);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第47行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/882e379eaab540fe55dea102504966ca8e63ae083fed27f93e4aefdde55aa3fd.jpg)
+
+# 2.3.4.3 CAN_Manual_Awake()
+
+void CAN_Manual_Awake (void)
+
+函数名称：void CAN_Manual_Awake(void)
+
+功能描述：CAN手动休眠唤醒函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CAN_Manual_Awake();//唤醒CAN休眠
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第153行定义.
+
+# 2.3.4.4 CAN_ReadState()
+
+uint8_t CAN_ReadState ( CAN_TypeDef \* CANx, uint32. t sr)
+
+函数名称：uint8. t CAN_ReadState(CAN_TypeDef\* CANx，uint32. t sr)
+
+功能描述：获取CAN状态
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="2">sr:读取指定状态或者所有状态结果</td></tr><tr><td>CAN.ONBUS</td><td>1: CAN 模块，处于 BUS OFF 状态，无数据发送接收动作
+0: CAN 模块，可以发送数据到 CAN 总线，或接收 CAN 总线数据</td></tr><tr><td>CAN.ERROR</td><td>1: CAN 传输产生的错误总数达到或超过 CAN_EWL 规定值
+0: CAN 传输产生的错误总数低于 CAN_EWL 规定值</td></tr><tr><td>CAN_TXING</td><td>1: CAN 模块正在发送一帧数据
+0: CAN 模块没有发送数据的动作</td></tr><tr><td>CAN_RXING</td><td>1: CAN 模块正在接收一帧数据
+0: CAN 模块没有接收数据的动作</td></tr><tr><td>CAN_TRNASDONE</td><td>1: 最近一次传输已完成
+0: 最近一次传输未完成</td></tr><tr><td>CAN_TFIFOEMPTY</td><td rowspan="2">1: TFIFO 空，可以写入发送数据
+0: TFIFO 非空，内部数据没有发送完毕
+1: RIFIFO 存入的帧太多，已满，导致数据丢失
+0: RIFIFO 未满</td></tr><tr><td>CAN_RFIFOEMPTY</td></tr><tr><td>CAN_DATAAVAIL</td><td rowspan="2">1: RIFIFO 存有一帧或多帧数据，可以通过 RIFIFO 寄存器读取
+0: RIFIFO 没有有效帧数据</td></tr><tr><td>CAN_ALLSR</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：返回指定状态结果或者所有状态结果
+
+<table><tr><td>CAN.ONBUS</td><td>1: CAN 模块，处于 BUS OFF 状态，无数据发送接收动作
+0: CAN 模块，可以发送数据到 CAN 总线，或接收 CAN 总线数据</td></tr><tr><td>CAN.ERROR</td><td>1: CAN 传输产生的错误总数达到或超过 CAN_EWL 规定值
+0: CAN 传输产生的错误总数低于 CAN_EWL 规定值</td></tr></table>
+
+
+<table><tr><td>CAN_TXING</td><td>1: CAN 模块正在发送一帧数据
+0: CAN 模块没有发送数据的动作</td></tr><tr><td>CAN_RXING</td><td>1: CAN 模块正在接收一帧数据
+0: CAN 模块没有接收数据的动作</td></tr><tr><td>CAN_TRNASDONE</td><td>1: 最近一次传输已完成
+0: 最近一次传输未完成</td></tr><tr><td>CAN_TFIFOEMPTY</td><td>1: TFIFO 空，可以写入发送数据
+0: TFIFO 非空，内部数据没有发送完毕</td></tr><tr><td>CAN_RFIFOEMPTY</td><td>1: RFIFO 存入的帧太多，已满，导致数据丢失
+0: RFIFO 赤满</td></tr><tr><td>CAN_DATAAVAIL</td><td>1: RFIFO 存有一帧或多帧数据，可以通过 RFIFO 寄存器读取
+0: RFIFO 没有有效帧数据</td></tr><tr><td>CAN_ALLSR</td><td>读取全部状态</td></tr></table>
+
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+//判断CAN的RFIFO是否存有一帧或多帧数据，此时是否可以通过RFIFO寄存器读取if(CAN.ReadState(CAN,CAN_DATAAVAIL) == CAN_DATAAVAIL) {
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第673行定义
+
+# 2.3.4.5 CAN_Receive_Msg()
+
+u8 CAN_Receive_Msg (u32 * id,
+
+u8 * ide,  u8 * rtr,  u8 * buf)
+
+# 2.3.4.6 CAN_Sleep()
+
+void CAN_Sleep (  u32 Baud)
+
+函数名称：void CAN_Sleep(u32 Baud)
+
+功能描述：CAN开启休眠函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>Baud: 波特率，单位Kbps</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：休眠唤醒有两种：1、软件清零CAN_MOD[4]，即自动退出休眠模式。，2、一旦检测到CAN总线的活动，即自动退出休眠模式。
+
+警告
+
+无
+
+示例代码：
+
+CAN_Sleep(500); //开启CAN休眠，CAN比特率500kbps
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_can.c 第 116 行定义.
+
+# 2.3.4.7 CAN_StructInit()
+
+void CAN_StructInit (CAN.InitTypeDef *CAN.InitStruct)
+
+函数名称：void CAN_StructInit(CAN.InitTypeDef *CAN.InitStruct)
+
+功能描述：CAN结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>CAN.InitTypeDef</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：CAN.InitTypeDef CAN.InitStructure; CAN_StructInit(&CAN.InitStructure); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第85行定义
+
+# 2.3.4.8 EFF_ID_Filter()
+
+void EFF_ID_Filter (u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr)
+
+函数名称：void EFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr)
+
+功能描述：CAN扩展帧单ID过滤，采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>acr: ID值。
+amr: 屏蔽位
+rtr.acr: 接收（1远程/0数据帧）帧类型选择
+rtr.amr: 远程/数据帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：1、扩展帧29位ID长度2、amr：屏蔽位对应位0表示此为对应ID必须匹配才会接收
+
+警告
+
+无
+
+# 示例代码：
+
+示例1：//扩展帧接收滤波：ID：0x10005A5A，数据帧EFF_ID_Filter（0x10005A5A，0x00，0x0，0x0）；//接收的扩展帧只有满足ID地址为0x10005A5A且为数据帧才会接收示例2：//扩展帧接收滤波：ID：0x10005A5A，数据帧和远程帧（因为rtr.amr为1，所以接收帧类型不需要匹配也可以接收）EFF_ID_Filter（0x10005A5A，0x00，0x0，0x1）；//接收的扩展帧只有满足ID地址为0x10005A5A的数据帧和远程帧才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第263行定义
+
+# 2.3.4.9 ID1_Filter_Dual()
+
+void ID1- FilterDual（ u32 acr1, u32 aml, u32 rtr.acrl, u8 rtr.amrl, u8 rtr.acrl, u8 Byte.acrl, u8 Byte.amrl, u8 ide)
+
+函数名称：void ID1- Filter_Dual(u32 acr1, u32 amr1, u8 rtr.acr1, u8 rtr.amr1, u8 Byte.acr1, u8 Byte.amr1, u8 ide)
+
+功能描述：CAN双ID过滤中ID1滤波设置采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>acr1: ID1值（标志帧ID11位，扩展帧ID范围1D28～ID13即ID高16位有效）
+amr1: ID1屏蔽位
+rtr.acr1: 接收（1远程/0数据帧）帧类型选择（只支持SFF模式，扩展帧配置无效）
+rtr.amr1: 远程/标志帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收（只支持SFF模式，扩展帧配置无效）
+Byte.acr1: 数据帧第1个Byte低4位滤波选择（只支持SFF模式，扩展帧配置无效）
+Byte.amr1: 数据帧第1个Byte低4位屏蔽位（只支持SFF模式，扩展帧配置无效）
+ide: 0标准(SFF模式)/1扩展帧</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+其它说明：1、SFF模式为标准帧模式2、扩展帧时，只对ID的bit13- bit28即ID高16位进行筛选过滤3、因为双滤波ID1函数兼容标志准和扩展帧滤波（标准帧和扩展帧的双滤波有区别），所以该函数的形参部分只支持标准帧模式配置使用，扩展帧模式配置无效。
+
+警告
+
+无
+
+示例代码：
+
+示例代码：示例1：//标准帧ID1接收滤波：u32:0x75A，数据帧ID1- Filter_Dual（0x75A，0x00，0x0，0x0F，0x00，0）；//接收的标准帧只有满足ID地址为0X75A且为数据帧且接收数据（不是帧的第一个数据，而是数据区的第一个数据）的第1个Byte低4位为0XF才会接收。示例2：//扩展帧ID1接收滤波：u32:0xFECCB的扩展帧ID1- Filter_Dual（0xFECCB，0x00，0x0，0x0，0x00，0x00，1）；//接收的扩展帧只有满足ID地址为0xFECCB才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第321行定义
+
+# 2.3.4.10 ID2.Filter_Dual()
+
+void ID2. Filter_Dual（ u32 acr2, u32 amr2, u8 rtr.acr2, u8 rtr.amr2, u8 ide)
+
+函数名称：void ID2. Filter_Dual(u32 acr2,u32 amr2,u8 rtr.acr2,u8 rtr.amr2,u8 ide)功能描述：CAN双ID过滤中ID2滤波设置采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数  
+
+<table><tr><td>输入参数:</td><td>acr2: ID2值（范围1D28～ID13即ID高16位有效）
+amr2: ID2屏蔽位
+rtr.acr2: 接收（1远程/0数据帧）帧类型选择（只支持SFF标准帧模式，扩展帧配置无效）
+rtr.amr2: 远程/标志帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收（只支持SFF标准帧模式，扩展帧配置无效）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+其它说明：1、SFF模式为标准帧模式2、扩展帧时，只对ID的bit13、bit28即ID高16位进行筛选过滤3、因为双滤波ID1函数兼容标志准和扩展帧滤波（标准帧和扩展帧的双滤波有区别），所以该函数的形参部分只支持标准帧模式配置使用，扩展帧模式配置无效。
+
+警告
+
+无
+
+示例代码：
+
+示例1：//标准帧ID2接收滤波：ID：0X75A，数据帧ID2. Filter.Dual（0X75A，0x00，0x0，0x0，0）；//接收的标准帧只有满足ID地址为0X75A且为数据帧才会接收。示例2：//扩展帧ID2接收滤波：ID：0xFECCB的扩展帧ID2. Filter.Dual（0xFECCB，0x00，0x0，0x0,1）；//接收的扩展帧只有满足ID地址为0xFECCB才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第388行定义
+
+# 2.3.4.11 My_CAN_Send.Msg()
+
+u8 My_CAN_Send.Msg（ u32 id, u8 ide, u8 rtr, u8 \* msg, u8 len)
+
+函数名称：u8 My_CAN_Send.Msg(u32 id,u8 ide,u8 rtr,const u8 \*msg,u8 len)
+
+功能描述：CAN轮询发送数据程序采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>id: 发送id
+ide: 标准/扩展帧
+rtr: 远程帧/数据帧
+*msg: 发送的数据
+len: 发送字节长度</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：0：发送成功10：发送失败
+
+注解
+
+其它说明：1、id：标准ID(11位)/扩展ID(11位+18位)2、ide：0，标准帧；1，扩展帧3、rtr：0，数据帧；1，远程帧。
+
+警告
+
+无
+
+示例代码：
+
+示例1：u8 Can_TX[8] = {0x81, 0x23, 0x33, 0x44, 0x15, 0x26, 0x37, 0x48}; // 发送数据 ID:0x03，标准帧，数据帧。数据，数据长度8字节My_CAN_Send.Msg(0x5A, 0, 0, Can_TX, 8);示例2：u8 Can_TX[8] = {0x81, 0x23, 0x33, 0x44, 0x15, 0x26, 0x37, 0x48}; // 发送数据 ID:0x03，扩展帧，数据帧。数据，数据长度8字节My_CAN_Send.Msg(0x10005A5A, 1, 0, Can_TX, 8);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年08月10日</td><td>1.0</td><td>ZKW</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMQ</td><td>创建</td></tr></table>
+
+修改日志：增加自测模式发送数据功能
+
+在文件lks32mc08x.can.c第457行定义.
+
+# 2.3.4.12 SFF_ID_Filter()
+
+void SFF_ID_Filter (u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr,u8 Byte1_acr,u8 Byte2_acr,u8 Byte2_amr)
+
+函数名称：void SFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr,u8 Byte1_acr,u8 Byte1_amr,u8 Byte2_acr,u8 Byte2_amr)功能描述：CAN标准帧单ID过滤，采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>acr: ID值。
+amr: 屏蔽位
+rtr.acr: 接收（1远程/0数据帧）帧类型选择
+rtr.amr: 远程/数据帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收
+Byte1.acr: 数据第一个字节
+Byte1.amr: 第一个字节屏蔽位
+Byte2.acr: 数据第二个字节
+Byte2.amr: 第二个字节屏蔽位</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+其它说明：1、标准帧11位ID长度2、amr：屏蔽位对应ID表示此为对应ID必须匹配才会接收
+
+警告
+
+无
+
+示例代码：
+
+示例代码：示例1：//标准帧接收单滤波：ID:0x5A，数据帧，BYTE1:0x81, BYTE:0x23SFF_ID_Filter(0x5A, 0x00, 0x0, 0x0, 0x81, 0x00, 0x23, 0x00);//接收的标准帧只有满足ID地址为0x5A的数据帧且第一个数据字节为0x81，第二个字节为0x23才会接收示例2：//标准帧接收单滤波：ID:0x5A和0x5B（因为amr第一位为1，所以第一位可以为1或0，无需匹配即可接收），数据帧，BYTE1:0x81, BYTE:0x23SFF_ID_Filter(0x5A, 0x00, 0x0, 0x0, 0x81, 0x00, 0x23, 0x00);//接收的标准帧只有满足ID地址为0x5a和0x5B的数据帧且第一个数据字节为0x81，第二个字节为0x23才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第197行定义
+
+# 2.4 lks32mc08x_can.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x_CAN.h_ 00015 #define _LKS32MC08x_CAN.h_ 00016 /\*Includes _LKS32MC08x_CAN.h_ 00017 /\*Includes"lks32mc08x_lib.h" 00018 00022 typedef struct 00023 { 00024 _IO uint32_t MOD; 00025 _IO uint32_t CMR; 00026 _IO uint32_t SR; 00027 _IO uint32_t IR; 00029 _IO uint32_t EIR; 00030 _IO uint32_t null0; 00031 _IO uint32_t BTR0; 00032 _IO uint32_t BTR1; 00033 _IO uint32_t null1; 00034 _IO uint32_t null2; 00035 _IO uint32_t null3; 00036 _IO uint32_t ALC;
+
+00039 _IO uint32. t ECC;00040 _IO uint32. t EwLR;00041 _IO uint32. t RXERR;00042 _IO uint32. t TXERR;00044 _IO uint32. t TXRXO;00045 _IO uint32. t TXRX1;00046 _IO uint32. t TXRX2;00047 _IO uint32. t TXRX3;00049 _IO uint32. t TXRX4;00050 _IO uint32. t TXRX5;00051 _IO uint32. t TXRX6;00052 _IO uint32. t TXRX7;00054 _IO uint32. t TXRX8;00055 _IO uint32. t TXRX9;00056 _IO uint32. t TXRXA;00057 _IO uint32. t TXRXB;00059 _IO uint32. t TXRXC;00060 _IO uint32. t RMC;00061 _IO uint32. t RBSA;00062 } CAN.TypeDef;0006300067 #ifndef CAN00068 #define CAN ( CANTypeDef *) CAN_BASE)00069 #endif000700074 typedef struct00075 {00076 uint32. t CAN.WorkMode;00077 uint32. t CAN.DMAEn;00078 uint32. t CAN.ErrwThre;00079 uint32. t CAN.Btr0;00080 uint32. t CAN.Btr1;00081 uint32. t IRQEna;00082 } CAN.InitTypeDef;0008300084 #define CAN.SELFTEST.MODE: BIT200085 #define CAN.MONITOR_MODE BIT100086 #define CAN.NORMAL_MODE BIT100088 #define CAN.IE.BUSERR BIT700089 #define CAN.IE.LOSTARB BIT600090 #define CAN.IE.PASSIVEERR BIT500091 #define CAN.IE.WAKE BIT400092 #define CAN.IE.RFIFOOV BIT300093 #define CAN.IE.WERR BIT200094 #define CAN.IE.TXDONE BIT100095 #define CAN.IE.RFIFONOMETHY BIT00098 #define CAN.IF.BUSERR BIT700099 #define CAN.IF.LOSTARB BIT600100 #define CAN.IF.PASSIVEERR BIT500101 #define CAN.IF.RFIFOV BIT700102 #define CAN.IF.WAKE BIT400103 #define CAN.IF.RERR BIT200104 #define CAN.IF.TXDONE BIT100108 #define CAN.IF.RFIFONOMETHY BIT000111 #define CAN.ONBUS BIT700114 #define CAN.ERROR BIT600117 #define CAN.XTXING BIT500120 #define CAN.RXING BIT400123 #define CAN.TRNASDONE BIT300126 #define CAN.TFIFOEMPTY BIT200129 #define CAN.RFIFOEMPTY BIT100132 #define CAN.DATAVAIL BIT000135 #define CAN.ALLSR 0xff00138 typedef enum00139 {00140 CAN.LOST_ID0,00141 CAN.LOST_ID1,00142 CAN.LOST_ID2,00143 CAN.LOST_ID3,00144 CAN.LOST_ID4,00145 CAN.LOST_ID5,00146 CAN.LOST_ID6,00147 CAN.LOST_ID7,00148 CAN.LOST_ID8,00149 CAN.LOST_ID9,00150 CAN.LOST_IDA,00151 CAN.LOST_SRTR,00152 CAN.LOST_IDE,00153 } enumLossposition;0015400156 typedef enum00157 {00158 CAN.BITERROR,00159 CAN.FORMATERROR,00160 CAN.FILLERROR,00161 CAN.OtherERROR,00162 } enumErrortype;
+
+00163 00165 typedef enum 00166 { 00167 CAN.RECE_PROCESS, 00168 CAN_SEND_PROCESS, 00169 } enumErrortime; 00170 00172 typedef enum 00173 { 00174 null10, 00175 null11, 00176 CAN_ID28_ID21, 00177 CAN_START, 00178 CAN_SRTR, 00179 CAN_ID20, 00180 CAN_ID20_ID18, 00181 CAN_ID17_ID13, 00182 CAN CRC, 00183 CAN_KEEP0, 00184 CAN_DATA_FIELD, 00185 CAN_DATALENGTHCODE, 00186 CAN_RTR, 00187 CAN_KEEP1, 00188 CAN_ID4_ID0, 00189 CAN_ID15_ID12, 00190 null2, 00191 CAN_ACTIVE_ERROR_FLAG, 00192 CAN_INTERMISSION, 00193 CAN_TOLERATE_DOMINANT, 00194 null3, 00195 null4, 00196 CAN_PASSIVE_ERROR, 00197 CAN_ERROR_DELIMITER, 00198 CAN CRC_DELIMITER, 00199 CAN timeframe, 00200 CAN_FRAMEEND, 00201 CAN_FRAMEEND_DELIMITER, 00202 CAN_OVERLOAD_FLAG, 00203 enumErrposition; 00204 00205 00206 void CAN_StructInit(CAN_InitTypeDef *CAN_InitStructure); 00207 void CAN_InitStructureDef CAN_x, CAN_InitStructureDef CAN_initStruct; 00208 void SFF_ID_filter(u32 acr, u32 amr, u8 rtr.acr, u8 rtr.amr, u8 Byte1acr, u8 Byte2acr, u8 Byte2_amr); 00209 void EFF_ID_filter(u32 acr, u32 amr, u8 rtr.acr, u8 rtr.amr); 00210 void ID1_filter_Dual(u32 acr1, u32 amr1, u8 rtr.acr1, u8 rtr.amr1, u8 Byte1acr1, u8 Byte2amr1, u8 ide); 00211 void ID2_filter_Dual(u32 acr2, u32 amr2, u8 rtr.acr2, u8 rtr.amr2, u8 ide); 00212 u8 MY_CAN_SendMsg(u32 id, u8 ide, u8 rtr, u8 *msg, u8 len); 00213 u8 CANReceiveMsg(u32 *id, u8 *ide, u8 *rtr, u8 *buf); 00214 uint8_t CAN_ReadState(CAN_TypeDef *CANx, uint32_t sr); 00215 uint32_t CAN_GetIRQFlag(void); 00216 void CAN_Sleep(u32 Baud); 00217 void CAN_Manual_Awake(void); 00218 00219 #endif
+
+# 2.5 Include/lks32mc08x_cmp.h 文件参考
+
+文件名称：lks32mc08x_cmp.h  文件标识：无  内容摘要：CMP外设驱动程序头文件  其它说明：无
+
+include "lks32mc08x_lib.h"  #include "string.h"  lks32mc08x_cmp.h 的引用(Include)关系图:
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/de3ee01adb203cf10308bd047dffc424c2cff6f895ed3cc4ef7d765149734d02.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/1ee51ac4742efbffdf23ef00c761daf04c9169ba2eba717d0c27c15cc7ad10e1.jpg)
+
+# 结构体
+
+结构体- struct CMP_TypeDef    CMP寄存器结构体句柄- struct CMP_InitTypeDef    CMP初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 宏定义
+
+- #define CMP_HYS_20mV 0    < 比较器回差选择- #define CMP_HYS_0mV 1    0mV- #define CMP_SELN_IN 0    比较器N端，N端输入- #define CMP_SELN_REF 1    比较器N端，N端内部参考REF输入- #define CMP_SELN_DAC 2    比较器N端，N端内部DAC输入- #define CMP_SELN_HALL_MID 3    比较器N端，N端反电势过零中点输入- #define CMP0_SELP_IP0 0    P端IPO输入- #define CMP0_SELP_OPA0_IP 1    P端OPA0 IP输入- #define CMP0_SELP_OPA0_OUT 2    P端OPA0 OUT- #define CMP0_SELP_OPA1_OUT 3    P端OPA1 OUT- #define CMP0_SELP_IP1 4    P端IP1输入- #define CMP0_SELP_IP2 5    P端IP2输入- #define CMP0_SELP_IP3 6    P端IP3输入- #define CMP0_SELP_IP4 7    P端IP4输入- #define CMP1_SELP_IP0 0    P端IPO输入- #define CMP1_SELP_OPA3_IP 1    P端OPA3 IP输入- #define CMP1_SELP_OPA2_OUT 2
+
+P端OPA2OUT- #defineCMP1- SELP.OPA3- OUT3P端OPA3OUT- #defineCMP1- SELP.IP14P端IP1输入- #defineCMP1- SELP.IP25P端IP2输入- #defineCMP1- SELP.IP36P端IP3输入- #defineCMP1- SELP.AVSS7芯片地- #defineSELN.CMP_IN0N端输入（为保证库兼容性，保留修改的宏定义）- #defineSELN_REF1N端内部参考REF输入（为保证库兼容性，保留修改的宏定义）- #defineSELN_DAC2N端内部DAC输入（为保证库兼容性，保留修改的宏定义）- #defineSELN_HALL_MID3N端反电势过零中点输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.OPA0IP1P端OPA0. IP输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.OPA0OUT2P端OPA0.OUT输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.OPA1OUT3P端OPA1. OUT输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.OPA3IP1P端OPA3. IP输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.OPA2OUT2P端OPA2. OUT输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.OPA3OUT3P端OPA3. OUT输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.IP00P端IPO输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.IP14P端IP1输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.IP25P端IP2输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.IP36P端IP3输入（为保证库兼容性，保留修改的宏定义）- #defineSELP.CMP.IP47P端IP4输入（为保证库兼容性，保留修改的宏定义）- #defineCMP00CMP结构体基地址定义- #defineCMP11比较器1
+
+# 函数
+
+函数- void CMP_Init (CMP_InitTypeDef *)  函数名称: CMP_Init (CMP_InitTypeDef *)- void CMP_StructInit (CMP_InitTypeDef *)  函数名称: void CMP_StructInit (CMP_InitTypeDef * CMP_InitStructure)- void CMP_ClearIRQFlag (u8 CMPx)  函数名称: void CMP_ClearIRQFlag (u8 CMPx)- u8 CMP_GetIRQFlag (u8 CMPx)  函数名称: u8 CMP_GetIRQFlag (u8 CMPx)
+
+# 2.5.1 详细描述
+
+文件名称：lks32mc08x.cmp.h  文件标识：无  内容摘要：CMP外设驱动程序头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年07月25日</td><td>1.0</td><td>William Zhang</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月26日</td><td>2.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：增加开窗配置、增加比较器中断相关函数
+
+在文件lks32mc08x.cmp.h中定义
+
+# 2.5.2 宏定义说明
+
+# 2.5.2.1 CMP0
+
+define CMP0 0
+
+CMP结构体基地址定义
+
+比较器0
+
+在文件lks32mc08x.cmp.h第94行定义.
+
+# 2.5.2.2 CMP0.SELP.IP0
+
+define CMP0. SELP.IP0 0
+
+P端IP0输入
+
+在文件lks32mc08x.cmp.h第36行定义.
+
+# 2.5.2.3 CMP0.SELP.IP1
+
+define CMP0. SELP.IP1 4
+
+P端IP1输入
+
+在文件lks32mc08x.cmp.h第40行定义.
+
+# 2.5.2.4 CMP0.SELP.IP2
+
+define CMP0. SELP.IP2 5
+
+P端IP2输入
+
+在文件lks32mc08x.cmp.h第41行定义.
+
+# 2.5.2.5 CMP0.SELP.IP3
+
+define CMP0. SELP.IP3 6
+
+P端IP3输入
+
+在文件lks32mc08x.cmp.h第42行定义.
+
+# 2.5.2.6 CMP0.SELP.IP4
+
+define CMP0. SELP.IP4 7
+
+# P端IP4输入
+
+在文件 Iks32mc08x.cmp.h 第 43 行定义.
+
+# 2.5.2.7 CMP0.SELP.OPA0.IP
+
+define CMP0. SELP.OPA0. IP 1
+
+# P端OPA0IP输入
+
+在文件 Iks32mc08x.cmp.h 第 37 行定义.
+
+# 2.5.2.8 CMP0.SELP.OPA0.OUT
+
+define CMP0. SELP.OPA0.OUT 2
+
+# P端OPA0OUT
+
+在文件 Iks32mc08x.cmp.h 第 38 行定义.
+
+# 2.5.2.9 CMP0.SELP.OPA1.OUT
+
+define CMP0. SELP.OPA1.OUT 3
+
+# P端OPA1OUT
+
+在文件 Iks32mc08x.cmp.h 第 39 行定义.
+
+# 2.5.2.10 CMP1
+
+define CMP1 1
+
+# 比较器1
+
+在文件 Iks32mc08x.cmp.h 第 98 行定义.
+
+# 2.5.2.11 CMP1.SELP.AVSS
+
+define CMP1. SELP.AVSS 7
+
+芯片地
+
+在文件 Iks32mc08x.cmp.h 第 53 行定义.
+
+# 2.5.2.12 CMP1.SELP.IP0
+
+define CMP1. SELP.IP0 0
+
+P端IP0输入
+
+在文件 Iks32mc08x.cmp.h 第 46 行定义.
+
+# 2.5.2.13 CMP1.SELP.IP1
+
+define CMP1. SELP.IP1 4
+
+P端IP1输入
+
+在文件 Iks32mc08x.cmp.h 第 50 行定义.
+
+# 2.5.2.14 CMP1.SELP.IP2
+
+define CMP1. SELP.IP2 5
+
+P端IP2输入
+
+在文件 Iks32mc08x.cmp.h 第 51 行定义.
+
+# 2.5.2.15 CMP1.SELP.IP3
+
+define CMP1. SELP.IP3 6
+
+P端IP3输入
+
+在文件 Iks32mc08x.cmp.h 第 52 行定义.
+
+# 2.5.2.16 CMP1.SELP.OPA2.OUT
+
+define CMP1. SELP.OPA2. OUT 2
+
+# P端OPA2OUT
+
+在文件lks32mc08x.cmp.h第48行定义.
+
+# 2.5.2.17 CMP1.SELP.OPA3.IP
+
+define CMP1. SELP.OPA3. IP 1
+
+# P端OPA3IP输入
+
+在文件lks32mc08x.cmp.h第47行定义.
+
+# 2.5.2.18 CMP1.SELP.OPA3.OUT
+
+define CMP1. SELP.OPA3. OUT 3
+
+# P端OPA3OUT
+
+在文件lks32mc08x.cmp.h第49行定义.
+
+# 2.5.2.19 CMP.HYS.0mV
+
+define CMP.HYS.0mV 1
+
+0mV
+
+在文件lks32mc08x.cmp.h第27行定义.
+
+# 2.5.2.20 CMP.HYS.20mV
+
+define CMP.HYS.20mV 0
+
+<比较器回差选择
+
+20mV
+
+在文件lks32mc08x.cmp.h第26行定义.
+
+# 2.5.2.21 CMP.SELN.DAC
+
+define CMP SELN.DAC 2
+
+比较器N端，N端内部DAC输入在文件 Iks32mc08x.cmp.h 第 32 行定义.
+
+# 2.5.2.22 CMP.SELN.HALL.MID
+
+define CMP SELN.HALL.MID 3
+
+比较器N端，N端反电势过零中点输入
+
+在文件 Iks32mc08x.cmp.h 第 33 行定义.
+
+# 2.5.2.23 CMP.SELN.IN
+
+define CMP SELN.IN 0
+
+比较器N端，N端输入
+
+在文件 Iks32mc08x.cmp.h 第 30 行定义.
+
+# 2.5.2.24 CMP.SELN.REF
+
+define CMP SELN.REF 1
+
+比较器N端，N端内部参考REF输入
+
+在文件 Iks32mc08x.cmp.h 第 31 行定义.
+
+# 2.5.2.25 SELN.CMP.IN
+
+define SELN.CMP.IN 0
+
+N端输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 56 行定义.
+
+# 2.5.2.26 SELN.DAC
+
+define SELN.DAC 2
+
+N端内部DAC输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 58 行定义.
+
+# 2.5.2.27 SELN.HALL_MID
+
+define SELN.HALL_MID 3
+
+N端反电势过零中点输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 59 行定义.
+
+# 2.5.2.28 SELN.REF
+
+define SELN.REF 1
+
+N端内部参考REF输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 57 行定义.
+
+# 2.5.2.29 SELP.CMP.IPO
+
+define SELP.CMP.IPO 0
+
+P端IPO输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 67 行定义.
+
+# 2.5.2.30 SELP.CMP.IP1
+
+define SELP.CMP.IP1 4
+
+P端IP1输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 68 行定义.
+
+# 2.5.2.31 SELP.CMP.IP2
+
+define SELP.CMP.IP2 5
+
+P端IP2输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 69 行定义.
+
+# 2.5.2.32 SELP.CMP.IP3
+
+define SELP.CMP.IP3 6
+
+P端IP3输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 70 行定义.
+
+# 2.5.2.33 SELP.CMP.IP4
+
+define SELP.CMP.IP4 7
+
+P端IP4输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 71 行定义.
+
+# 2.5.2.34 SELP.CMP.OPA0IP
+
+define SELP.CMP.OPA0IP 1
+
+P端OPA0. IP输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 61 行定义.
+
+# 2.5.2.35 SELP.CMP.OPA0OUT
+
+define SELP.CMP.OPA0OUT 2
+
+P端OPA0. OUT输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 62 行定义.
+
+# 2.5.2.36 SELP.CMP.OPA1OUT
+
+define SELP.CMP.OPA1OUT 3P端OPA1. OUT输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 63 行定义.
+
+# 2.5.2.37 SELP.CMP.OPA2OUT
+
+define SELP.CMP.OPA2OUT 2P端OPA2. OUT输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 65 行定义.
+
+# 2.5.2.38 SELP.CMP.OPA3IP
+
+define SELP.CMP.OPA3IP 1P端OPA3. IP输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 64 行定义.
+
+# 2.5.2.39 SELP.CMP.OPA3OUT
+
+define SELP.CMP.OPA3OUT 3P端OPA3. OUT输入（为保证库兼容性，保留修改的宏定义）在文件 Iks32mc08x.cmp.h 第 66 行定义.
+
+# 2.5.3 函数说明
+
+# 2.5.3.1 CMP_ClearIRQFlag()
+
+void CMP_ClearIRQFlag (u8 CMPx)
+
+函数名称：void CMP_ClearIRQFlag(u8 CMPx)
+
+功能描述：清除TIM中断标志
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP0, CMP1即获取CMP0和CMP1中断标志位</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（CMP_GetIRQFlag（CMP1））//获取CMP1中断标志位CMP_ClearIRQFlag（CMP1）；//清除CMP1中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月11日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.cmp.c第197行定义
+
+# 2.5.3.2 CMP_GetIRQFlag()
+
+u8 CMP_GetIRQFlag（u8 CMPx)
+
+函数名称：u8CMP_GetIRQFlag（u8CMPx)
+
+功能描述：读取比较器中断
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP0, CMP1即获取CMP0和CMP1中断标志位</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：TIM中断标志0/1
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（CMP.GetIRQFlag（CMP1））//获取CMP1中断标志位CMP.ClearIRQFlag（CMP1）；//清除CMP1中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月21日</td><td>1.0</td><td>Yangzj</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.cmp.c第148行定义
+
+# 2.5.3.3 CMP_Init()
+
+void CMP_Init (CMP_InitTypeDef *this)
+
+函数名称：CMP_Init（CMP_InitTypeDef\*this)
+
+功能描述：CMP初始化
+
+参见
+
+被调用函数：SYS AnalogModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CMP.InitTypeDef CMP.InitStruct CMP.StructInit（&CMP_InitStruct), CMP.InitStruct.CLK10. EN  $=$  ENABLE ； //比较器1/0滤波时钟使能 CMP.InitStruct.FIL.CLK10. DIV16  $= 15$  ； //比较器1/0滤波系数 0- 0xF CMP.InitStruct.FIL.CLK10. DIV2  $= 0$  ； //比较器1/0滤波相位系数  $0 - 0\times 3$  最终分频系数为 (DIV16+1)<DIV2 CMP.CMP InitStruct.CMP.ET  $= 0$  0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 CMP.InitStruct.CMP.HYS  $= 0$  ； //比较器同差选择 0：回差20mV1：回差0mV CMP.InitStruct.CMP.1EN  $=$  ENABLE ； //比较器1使能 CMP.InitStruct.CMP1. EN  $=$  ENABLE ； //比较器1信号输入使能影响比较器数字模块信号，模拟部 分不受影响 CMP.InitStruct.CMP1. SELF  $=$  CMP1. SELF_IP2; //比较器1信号正确选择见CMP1. SELF.CMP1. IP0比较器 定义 CMP.InitStruct.CMP1. SELN  $=$  CMP SELN.DAC ； //比较器1信号负端选择 CMP.InitStruct.CMP1. IE  $=$  ENABLE ； //比较器1中断使能 CMP.InitStruct.CMP1.POL  $= 0$  ； //比较器1极性选择 0：高电平有效1：低电平有效 只影响比较器中断 CMP.InitStruct.CMP1.RE  $=$  DISABLE ； //比较器1DMA请求使能 CMP.InitStruct.CMP1.IRQ.TRIG  $=$  DISABLE ； //比较器1边沿触发使能 CMP.InitStruct.CMP1.CHN3PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN3P通道使能比较器1开窗 CMP.InitStruct.CMP1.CHN2PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN2P通道使能比较器1开窗 CMP.InitStruct.CMP1.CHN1PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN1P通道使能比较器1开窗 CMP.InitStruct.CMP1.CHN0PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN0P通道使能比较器1开窗 CMP.InitStruct.CMP1.W.PWM.POL  $=$  DISABLE ； //比较器1开窗FWH信号极性选择0：高电平有效：1：低 电平有效
+
+CMP.Init（&CMP.InitStruct）
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年11月26日</td><td>1.0</td><td>Howlet Li</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.cmp.c第56行定义.
+
+函数调用图:
+
+# 2.5.3.4 CMP_StructInit()
+
+void CMP_StructInit ( CMP_InitTypeDef  $\ast$  CMP_InitStructure)
+
+函数名称：void CMP_StructInit(CMP_InitTypeDef  $\ast$  CMP_InitStructure)
+
+功能描述：ADC结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CMP_StructInit CMP_InitStructure; CMP_StructInit(&CMP_InitStructure); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年11月26日</td><td>1.0</td><td>Howlet Li</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件 Iks32mc08x_cmp.c 第 121 行定义.
+
+# 2.6 Iks32mc08x_cmp.h
+
+# 浏览该文件的文档.
+
+00001 00019 #ifndef _LKS32MC08x_CMP_I 00020 #define _LKS32MC08x_CMP_I 00021 /\* Includes 00022 #include "lks32mc08x_lib.h" 00023 #include "string.h" 00026 #define CMP_HYS_20mV 0 00027 #define CMP_HYS_0mV 1 00029 //比较器N端 00030 #define CMP_SELN_IN 0 00031 #define CMP_SELN_REF 1 00032 #define CMP_SELN_HAD 2 00033 #define CMP_SELN_HALL_MID 3 00035 //比较器P端 00036 #define CMP0_SELP_IPO 0 00037 #define CMP0_SELP_OPA0_IP 1 00038 #define CMP0_SELP_OPA0_OUT 2 00039 #define CMP0_SELP_OPA1_OUT 3 00040 #define CMP0_SELP_IP1 4 00041 #define CMP0_SELP_IP2 5 00042 #define CMP0_SELP_IP3 6 00043 #define CMP0_SELP_IP4 7 00045 //比较器P端 00046 #define CMP1_SELP_IPO 0 00047 #define CMP1_SELP_OPA3_IP 1 00048 #define CMP1_SELP_OPA2_OUT 2 00049 #define CMP1_SELP_OPA3_OUT 3 00050 #define CMP1_SELP_IP1 4 00051 #define CMP1_SELP_IP2 5 00052 #define CMP1_SELP_IP3 6 00053 #define CMP1_SELP_AVSS 7 00055 //为保证库兼容性，保留修改的宏定义 00056 #define SELN_CMP_IN 0 00057 #define SELN_REF 1 00058 #define SELN_DAC 2 00059 #define SELN_HALL_MID 3 00061 #define SELP_CMP_OPA0IP 1 00062 #define SELP_CMP_OPA0OUT 2 00063 #define SELP_CMP_OPA1OUT 3 00064 #define SELP_CMP_OPA3OUT 1 00065 #define SELP_CMP_OPA2OUT 2 00066 #define SELP_CMP_OPA3OUT 3 00067 #define SELP_CMP_IPO 0 00068 #define SELP_CMP_IP1 4 00069 #define SELP_CMP_IP2 5 00070 #define SELP_CMP_IP3 6 00071 #define SELP_CMP_IP4 7 00076 typedef struct 00077 { 00078 _IO uint32_t IE; 00079 _IO uint32_t IF; 00080 _IO uint32_t TLK; 00081 _IO uint32_t CFG; 00082 _IO uint32_t BLCWIN; 00083 _IO uint32_t DATA; 00084 } CMP_TypeDef; 00088 #ifndef CMP 00089 #define CMP ((CMP_TypeDef *) CMP_BASE) 00090 #endif 00094 #define CMP0 0 00098 #define CMP1 1 00099 00103 typedef struct
+
+00104{ 00109 u32 FILCLK12- DIV16; 00110 FuncState CLK10- EN; 00115 u32 FILCLK12- DIV2; 00116 FuncState CMP- FT; 00117 u32 CMP- HYS; 00119 FuncState CMP0- EN; 00130 u32 CMP0- SELI; 00138 u32 CMP0- SELI; 00139 FuncState CMP0- IE; 00140 u32 CMP0- PWMPOL; 00141 FuncState CMP0- IRQTRIG; 00142 FuncState CMP0- INEN; 00143 u32 CMP0- POL; 00144 FuncState CMP0- CHNPP- WIN- EN; 00145 FuncState CMP0- CHNPP- WIN- EN; 00146 FuncState CMP0- CHNPP- WIN- EN; 00147 FuncState CMP0- CHNPP- WIN- EN; 00149 FuncState CMP1- EN; 00160 u32 CMP1- SELI; 00168 u32 CMP1- SEP; 00169 FuncState CMP1- IE; 00170 u32 CMP1- PWMPOL; 00171 FuncState CMP1- IRQTRIG; 00172 FuncState CMP1- INEN; 00173 u32 CMP1- POL; 00174 FuncState CMP1- CHNPP- WIN- EN; 00175 FuncState CMP1- CHNPP- WIN- EN; 00176 FuncState CMP1- CHNPP- WIN- EN; 00177 FuncState CMP1- CHNPP- WIN- EN; 00178 }CMP- InitTypeDef; 00180 void CMP- Init(CMP- InitTypeDef \*); //比较器初始化 00181 void CMP- StructInit(CMP- InitTypeDef \*); //比较器配置结构体初始化 00182 void CMP- GetIRQFlag(u8 CMPx); //清CMP中断 00183 u8 CMP- GetIRQFlag(u8 CMPx); //读CMP中断 00185 #endif \*LK32MC05xCMPH 00186 \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*/ 00187
+
+# 2.7 Include/lks32mc08x_dac.h 文件参考
+
+文件名称：lks32mc08x_dac.h  文件标识：无  内容摘要：DAC外设驱动程序头文件  其它说明：无
+
+include"lks32mc08x_lib. h"lks32mc08x_dac.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/8dd1bb1bae20b3e6f98a39736076f55076e182477cad9f64507a92f3d942a244.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/075541eaa2c29e5b14b425f28727aed0f711e9a266bc0aab0530912633d9cc84.jpg)
+
+# 结构体
+
+- struct DAC-InitTypeDef
+
+# 宏定义
+
+- #define DAC.RANGE.3V0 0  DAC 3.0V 量程- #define DAC.RANGE.1V2 1  DAC 1.2V 量程- #define DAC.RANGE.4V85 2  DAC 4.85V 量程
+
+# 函数
+
+- void DAC.StructInit (DAC.InitTypeDef *DAC.InitStruct)  函数名称: void DAC.StructInit(DAC.InitTypeDef *DAC.InitStruct)- void DAC.Init (DAC.InitTypeDef *DAC.InitStruct)  函数名称: void DAC.init(DAC.InitTypeDef *DAC.InitStruct)- void DAC.OutputValue (uint32_t DACValue)  函数名称: void DAC.OutputValue(uint32_t DACValue)- void DAC.OutputVoltage (uint16_t DACVoltage)  函数名称: void DAC.OutputVoltage(uint32_t DACVoltage)
+
+# 2.7.1 详细描述
+
+文件名称：lks32mc08x.dac.h  文件标识：无  内容摘要：DAC外设驱动程序头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.h中定义
+
+# 2.7.2 宏定义说明
+
+# 2.7.2.1 DAC_RANGE.1V2
+
+define DAC_RANGE.1V2 1
+
+# DAC1.2V量程
+
+在文件 Iks32mc08x.dac.h 第 33 行定义.
+
+# 2.7.2.2 DAC_RANGE.3V0
+
+define DAC_RANGE.3V0 0
+
+# DAC3.0V量程
+
+在文件 Iks32mc08x.dac.h 第 32 行定义.
+
+# 2.7.2.3 DAC_RANGE.4V85
+
+define DAC_RANGE.4V85 2
+
+# DAC4.85V量程
+
+在文件 Iks32mc08x.dac.h 第 34 行定义.
+
+# 2.7.3 函数说明
+
+# 2.7.3.1 DAC_Init()
+
+void DAC_Init DAC_InitTypeDef  $\ast$  DAC_InitStructure
+
+函数名称：void DAC_init(DAC_InitTypeDef  $\ast$  DAC_InitStructure)
+
+功能描述：DAC初始化函数
+
+参见
+
+参见被调用函数：SYS_AnalogModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>DAC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>元</td></tr><tr><td>南京凌鹏创芯电子有限公司</td><td>204</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DACInitTypeDef DACInitStructure; DACStructInit（&DACInitStructure); DACInitStructure.DAC_GAIN  $=$  DAC_RANGE.1V2;//DAC量程为1.2V DACInitStructure.DACOUTLIN  $=$  DISABLE； //DAC通过IOP0[0]输出 DACInit（&DACInitStructure); //DAC初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_dac.c第64行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/a9beacfe97b28483a71aa2ca849e5be36e277404963a0bd4018d35ffcc5e1556.jpg)
+
+# 2.7.3.2 DACOutputValue()
+
+void DACOutputValue ( uint32_t DACValue)
+
+函数名称：void DAC_OutputValue(uint32_t DACValue)功能描述：DAC输出数字量数值设置
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>DACValue:DAC输出电压对应数字量</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DACOutputValue（2048);//DAC输出2048\*1.2/4096=0.6V
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c第114行定义.
+
+# 2.7.3.3 DACOutputVoltage()
+
+void DACOutputVoltage (    uint16_t DACVoltage )
+
+函数名称：void DAC_OutputVoltage(uint32_t DACVoltage)
+
+功能描述：DAC输出模拟量数值设置
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>DACVoltage:DAC输出电压对应数字量</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：输入变量DACVoltage为Q12格式，即输出1V对应DACVoltage  $= 1< < 12 = 4096$
+
+警告
+
+无
+
+示例代码：
+
+DACOutputVoltage（BIT12  $\ast$  0.6）//DAC输出0.6V
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c第142行定义
+
+# 2.7.3.4 DAC_StructInit()
+
+void DAC_StructInit( DAC_InitTypeDef  $\ast$  DAC_InitStructure )
+
+函数名称：void DAC_StructInit(DAC_InitTypeDef  $\ast$  DAC_InitStructure)
+
+功能描述：DAC结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DAC_structInit DAC_InitStructure; DAC_structInit（&DAC_InitStructure）；//初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c第37行定义
+
+# 2.8 lks32mc08x.dac.h
+
+# 浏览该文件的文档
+
+00001 00001 #ifndef _LKS32MC08x.DAC.c 00014 #define _LKS32MC08x.DAC.c 00015 00016 00017 /\*Includes 00018 #include"lks32mc08x.lib.c" 00019 typedef struct 00020 { 00027 uint8. t DAC.GAIN; 00028 uint8. t DACOUT.EN; 00029 DAC.InitTypeDef; 00030 00031 /\* - DAC操作相关定义 00032 #define DAC.RANGE.3V0 00033 #define DAC.RANGE.1V2 00034 #define DAC.RANGE.4V8 00036 void DAC_StructInit(DAC.InitTypeDef\* DAC.InitStruct); /\* DAC结构体初始化 \*/ 00037 void DAC.Init(DAC.InitTypeDef\* DAC.InitStruct); /\* DAC初始化 \*/
+
+00038 void DACOutputValue(uint32_t DACValue); 00039 void DACOutputVoltage(uint16_t DACVoltage); 00040 00041 #endif 00042
+
+/\*DAC输出数值设置- - 数字量\*/ /\*DAC输出模拟量数值设置- - 模拟量\*/
+
+# 2.9 Include/lks32mc08x.dma.h 文件参考
+
+文件名称：lks32mc08x.dma.h  文件标识：无  内容摘要：DMA外设驱动程序头文件  其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x.dma.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/1b7ad152d01d9d244f2c2fffcb46816d8072b66a2b444e0b66ed8ca45b6b1244.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/7456e5e63c620f5c2a50380b6c48113e0ca247c44f00c024d53b7574d24664a3.jpg)
+
+# 结构体
+
+结构体- struct DMA_InitTypeDef  DMA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参- struct DMA_RegTypeDef  DAM通道0结构体基地址定义
+
+# 宏定义
+
+宏定义- #define DMA_TCIIE_BIT0  DMA中断使能定义，传输完成中断使能，高有效- #define DMA_TEIE_BIT1  DMA中断使能定义，错误中断使能，高有效- #define PERI2MEMORY0  DMA搬运方向定义，外设至内存- #define MEMORY2PERI1  DMA搬运方向定义，内存至外设- #define DMA_BYTE_TRANS 0  DMA搬运数据位宽定义，访问位宽，0:byte- #define DMA_HALFWORD_TRANS 1
+
+DMA搬运数据位宽定义，访问位宽，1:half- word- #define DMA- WORD_TRANS 2DMA搬运数据位宽定义，访问位宽，2:word- #define DMA- CHO- ADC0- REQ- EN BIT0触发DMA搬运源定义，Channel.0 ADC0 DMA请求使能- #define DMA- CHO- TIMER0- REQ- EN BIT1触发DMA搬运源定义，Channel.0 TIMER0 DMA请求使能- #define DMA- CHO- TIMER1- REQ- EN BIT2触发DMA搬运源定义，Channel.0 TIMER1 DMA请求使能- #define DMA- CH1_SPI_RX- REQ- EN BIT0触发DMA搬运源定义，Channel.1 SPI_RX DMA请求使能- #define DMA- CH1_MCPWM- REQ- EN BIT1触发DMA搬运源定义，Channel.1 MCPWM DMA请求使能- #define DMA- CH1_TIMER2- REQ- EN BIT2触发DMA搬运源定义，Channel.1 TIMER2 DMA请求使能- #define DMA- CH2- UART0- REQ- EN BIT0触发DMA搬运源定义，Channel.2 UART0 DMA请求使能- #define DMA- CH2- SPI_TX- REQ- EN BIT1触发DMA搬运源定义，Channel.2 SPI_TX DMA请求使能- #define DMA- CH2- TIMER3- REQ- EN BIT2触发DMA搬运源定义，Channel.2 TIMER3 DMA请求使能- #define DMA- CH3- UART1- REQ- EN BIT0触发DMA搬运源定义，Channel.3 UART1 DMA请求使能- #define DMA- CH3- CAN- REQ- EN BIT1触发DMA搬运源定义，Channel.3 SPI_CAN DMA请求使能- #define DMA- CH3.12C- REQ- EN BIT2触发DMA搬运源定义，Channel.3 I2X DMA请求使能- #define DMA- CHO- FIF BIT0DMA中断标志定义，通道0完成中断标志- #define DMA- CH1- FIF BIT1DMA中断标志定义，通道1完成中断标志- #define DMA- CH2- FIF BIT2DMA中断标志定义，通道2完成中断标志- #define DMA- CH3- FIF BIT3DMA中断标志定义，通道3完成中断标志- #define DMA- CHO- EIF BIT4DMA中断标志定义，通道4错误中断标志- #define DMA- CH1- EIF BIT5DMA中断标志定义，通道1错误中断标志- #define DMA- CH2- EIF BIT6DMA中断标志定义，通道2错误中断标志- #define DMA- CH3- EIF BIT7DMA中断标志定义，通道3错误中断标志
+
+# 函数
+
+函数- void DMA_Init (DMA_RegTypeDef *DMAx, DMA_InitTypeDef *DMAInitStruct)  函数名称: void DMA_Init(DMA_RegTypeDef *DMAx, DMA_InitTypeDef *DMAInitStruct)- void DMA_StructInit (DMA_InitTypeDef *DMAInitStruct)  函数名称: void DMA_StructInit(DMA_InitTypeDef *DMAInitStruct)- uint32_t DMA_GetIRQFlag (DMA_RegTypeDef *DMAx, u32 timer.if)  函数名称: uint32_t DMA_GetIRQFlag(DMA_RegTypeDef *DMAx, u32 timer.if)- void DMA_ClearIRQFlag (DMA_RegTypeDef *DMAx, uint32_t tempFlag)  函数名称: void DMA_ClearIRQFlag(DMA_RegTypeDef *DMAx, uint32_t tempFlag)- void DMA_CHx_EN (DMA_RegTypeDef *DMAx, u32 Channel.EN)  函数名称: void DMA_CHx_EN(DMA_RegTypeDef *DMAx, u32 Channel.EN)
+
+# 2.9.1 详细描述
+
+文件名称：lks32mc08x.dma.h  文件标识：无  内容摘要：DMA外设驱动程序头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年08月1日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件lks32mc08x.dma.h中定义.
+
+# 2.9.2 宏定义说明
+
+# 2.9.2.1 DMA_BYTE.TRANS
+
+define DMA_BYTE.TRANS 0
+
+DMA搬运数据位宽定义，访问位宽，0:byte
+
+在文件lks32mc08x.dma.h第118行定义.
+
+# 2.9.2.2 DMA.CH0-ADC0_REQ_EN
+
+define DMA_CH0- ADC0_REQ_EN BIT0
+
+触发DMA搬运源定义，Channel.0 ADC0 DMA请求使能在文件 Iks32mc08x.dma.h 第 122 行定义.
+
+# 2.9.2.3 DMA.CH0_EIF
+
+define DMA_CH0_EIF BIT4
+
+DMA中断标志定义，通道0错误中断标志在文件 Iks32mc08x.dma.h 第 139 行定义.
+
+# 2.9.2.4 DMA.CH0_FIF
+
+define DMA_CH0_FIF BIT0DMA中断标志定义，通道0完成中断标志在文件 Iks32mc08x.dma.h 第 135 行定义.
+
+# 2.9.2.5 DMA.CH0_TIMER0_REQ_EN
+
+define DMA_CH0_TIMER0_REQ_EN BIT1
+
+触发DMA搬运源定义，Channel.0 TIMER0 DMA请求使能在文件 Iks32mc08x.dma.h 第 123 行定义.
+
+# 2.9.2.6 DMA.CH0_TIMER1_REQ_EN
+
+define DMA_CH0_TIMER1_REQ_EN BIT2
+
+触发DMA搬运源定义，Channel.0 TIMER1 DMA请求使能在文件 Iks32mc08x.dma.h 第 124 行定义.
+
+# 2.9.2.7 DMA.CH1_EIF
+
+define DMA_CH1_EIF BIT5
+
+DMA中断标志定义，通道1错误中断标志在文件lks32mc08x.dma.h第140行定义.
+
+# 2.9.2.8 DMA.CH1_FIF
+
+define DMA_CH1_FIF BIT1
+
+DMA中断标志定义，通道1完成中断标志在文件lks32mc08x.dma.h第136行定义.
+
+# 2.9.2.9 DMA.CH1_MCPWM_REQ_EN
+
+define DMA_CH1_MCPWM_REQ_EN BIT1
+
+触发DMA搬运源定义，Channel.1 MCPWM DMA请求使能在文件lks32mc08x.dma.h第126行定义.
+
+# 2.9.2.10 DMA.CH1_SPI_RX_REQ_EN
+
+define DMA_CH1_SPI_RX_REQ_EN BIT0
+
+触发DMA搬运源定义，Channel.1SPI_RXDMA请求使能在文件lks32mc08x.dma.h第125行定义.
+
+# 2.9.2.11 DMA.CH1_TIMER2.REQ_EN
+
+define DMA_CH1_TIMER2_REQ_EN BIT2
+
+触发DMA搬运源定义，Channel.1TIMER2DMA请求使能在文件lks32mc08x.dma.h第127行定义.
+
+# 2.9.2.12 DMA.CH2.EIF
+
+define DMA.CH2. EIF BIT6
+
+DMA中断标志定义，通道2错误中断标志在文件lks32mc08x.dma.h第141行定义.
+
+# 2.9.2.13 DMA.CH2.FIF
+
+define DMA.CH2. EIF BIT2
+
+DMA中断标志定义，通道2完成中断标志在文件lks32mc08x.dma.h第137行定义.
+
+# 2.9.2.14 DMA.CH2.SPI.TXT.REQ.EN
+
+define DMA.CH2.SPI.TXT.REQ.EN BIT1
+
+触发DMA搬运源定义，Channel2SPI.TXDMA请求使能在文件lks32mc08x.dma.h第129行定义.
+
+# 2.9.2.15 DMA.CH2.TIMER3.REQ.EN
+
+define DMA.CH2. TIMER3.REQ.EN BIT2
+
+触发DMA搬运源定义，Channel2TIMER3DMA请求使能在文件lks32mc08x.dma.h第130行定义.
+
+# 2.9.2.16 DMA.CH2.UARTO.REQ.EN
+
+define DMA.CH2. UARTO.REQ.EN BIT0
+
+触发DMA搬运源定义，Channel2UART0DMA请求使能在文件lks32mc08x.dma.h第128行定义.
+
+# 2.9.2.17 DMA.CH3.CAN_REQ.EN
+
+define DMA.CH3. CAN_REQ_EN BIT1
+
+触发DMA搬运源定义，Channel3SPI.CANDMA请求使能在文件lks32mc08x.dma.h第132行定义.
+
+# 2.9.2.18 DMA.CH3.EIF
+
+define DMA.CH3. EIF BIT7
+
+DMA中断标志定义，通道3错误中断标志在文件lks32mc08x.dma.h第142行定义.
+
+# 2.9.2.19 DMA.CH3.FIF
+
+define DMA.CH3. FIF BIT3DMA中断标志定义，通道3完成中断标志在文件lks32mc08x.dma.h第138行定义.
+
+# 2.9.2.20 DMA.CH3.I2C.REQ.EN
+
+define DMA.CH3. I2C.REQ.EN BIT2
+
+触发DMA搬运源定义，Channel3I2XDMA请求使能在文件lks32mc08x.dma.h第133行定义.
+
+# 2.9.2.21 DMA.CH3.UART1.REQ.EN
+
+define DMA.CH3. UART1. REQ.EN BIT0
+
+触发DMA搬运源定义，Channel3UART1DMA请求使能在文件lks32mc08x.dma.h第131行定义.
+
+# 2.9.2.22 DMA.HALFWORD.TRANS
+
+define DMA.HALFWORD.TRANS 1
+
+DMA搬运数据位宽定义，访问位宽，1:half- word在文件 Iks32mc08x.dma.h 第 119 行定义.
+
+# 2.9.2.23 DMA.TCIE
+
+define DMA.TCIE BIT0
+
+DMA中断使能定义，传输完成中断使能，高有效在文件 Iks32mc08x.dma.h 第 112 行定义.
+
+# 2.9.2.24 DMA.TEIE
+
+define DMA.TEIE BIT1
+
+DMA中断使能定义，错误中断使能，高有效在文件 Iks32mc08x.dma.h 第 113 行定义.
+
+# 2.9.2.25 DMA.WORD.TRANS
+
+define DMA.WORD.TRANS 2
+
+DMA搬运数据位宽定义，访问位宽，2:word在文件 Iks32mc08x.dma.h 第 120 行定义.
+
+# 2.9.2.26 MEMORY2PERI
+
+define MEMORY2PERI 1
+
+DMA搬运方向定义，内存至外设在文件 Iks32mc08x.dma.h 第 116 行定义.
+
+# 2.9.2.27 PERI2MEMORY
+
+definePERI2MEMORY0
+
+DMA搬运方向定义，外设至内存在文件lks32mc08x.dma.h第115行定义.
+
+# 2.9.3 函数说明
+
+# 2.9.3.1 DMA.CHx.EN()
+
+void DMA.CHx.EN DMA RegTypeDef \* DMAx, u32 Channel_EN)
+
+函数名称：void DMA.CHx.EN(DMA.RegTypeDef \*DMAx,u32Channel.EN)
+
+功能描述：使能DMA通道
+
+参见
+
+被引用内容：DMAx可选：DMA.CH0，DMA.CH1，DMA.CH2，DMA.CH3
+
+参数
+
+<table><tr><td>输入参数:</td><td>DMAx: DMA通道选择
+Channel_EN: ENABLE: 使能DMA通道, DISABLE: 关闭DMA通道使能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DMA_CHx_EN（DMA- CHO，ENABLE）；//使能DMA通道0
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dma.c第135行定义
+
+# 2.9.3.2 DMA.ClearIRQFlag()
+
+void DMA.ClearIRQFlag DMA.RegTypeDef  $\ast$  DMAx, uint32. t tempFlag
+
+函数名称：void DMA.ClearIRQFlag(DMA.RegTypeDef \*DMAx，uint32. t tempFlag)
+
+功能描述：清除DMA中断标志
+
+参见
+
+被引用内容：DMAx可选：DMA- CH0，DMA- CH1，DMA- CH2，DMA- CH3
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="2">DMAx: DMA通道选择
+timer_if参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>DMA_CH0.FIF</td><td>通道0完成中断标志</td></tr><tr><td>DMA_CH1.FIF</td><td>通道1完成中断标志</td></tr><tr><td>DMA_CH2.FIF</td><td>通道2完成中断标志</td></tr><tr><td>DMA_CH3.FIF</td><td>通道3完成中断标志</td></tr><tr><td>DMA_CH0.FIF</td><td>通道0错误中断标志</td></tr><tr><td>DMA_CH1.FIF</td><td>通道1错误中断标志</td></tr><tr><td>DMA_CH2.FIF</td><td>通道2错误中断标志</td></tr><tr><td>DMA_CH3.FIF</td><td>通道3错误中断标志</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（DMA_GetIRQFlag（DMA_CH0,DMA_CH0_1F））//获取DMA通道0完成中断标志 DMA_ClearIRQFlag（DMA_CH0,DMA_CH0_1F）//清除DMA通道0完成中断标志
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_dma.c第234行定义
+
+# 2.9.3.3 DMA_GetIRQFlag()
+
+uint32_t DMA_GetIRQFlag (DMA_RegTypeDef * DMAx, u32 timer_if)
+
+函数名称：uint32_t DMA_GetIRQFlag(DMA_RegTypeDef * DMAx, u32 timer_if)
+
+功能描述：获取DMA中断标志
+
+参见
+
+被引用内容：DMAx可选：DMA_CH0，DMA_CH1，DMA_CH2，DMA_CH3
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="2">DMAx: DMA通道选择
+timer.if参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>DMA_CH0_FIF</td><td>通道0完成中断标志</td></tr><tr><td>DMA_CH1_FIF</td><td>通道1完成中断标志</td></tr><tr><td>DMA_CH2_FIF</td><td>通道2完成中断标志</td></tr><tr><td>DMA_CH3_FIF</td><td>通道3完成中断标志</td></tr><tr><td>DMA_CH0_EIF</td><td>通道0错误中断标志</td></tr><tr><td>DMA_CH1_EIF</td><td>通道1错误中断标志</td></tr><tr><td>DMA_CH2_EIF</td><td>通道2错误中断标志</td></tr><tr><td>DMA_CH3_EIF</td><td>通道3错误中断标志</td></tr></table>
+
+
+参见
+
+参数
+
+输出参数： 无
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if（DMA.GetIRQFlag（DMA.CNO，DMA.CH0_1FIP））//获取DMA通道0完成中断标志{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+修改日志:在文件 Iks32mc08x.dma.c 第 178 行定义.
+
+# 2.9.3.4 DMA_Init()
+
+void DMA_Init DMA RegTypeDef \* DMAx, DMA.InitTypeDef \* DMAInitStruct )
+
+函数名称：void DMA_Init(DMA_RegTypeDef \*DMAx,DMA.InitTypeDef \*DMAInitStruct)
+
+功能描述：DMA初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx: ADC0, ADCInitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 memaddr[25] = {0x11,0x12,0x13}; //发送数据缓冲区DMA_InitStructure DMA_InitStructure（DMA_InitStructure,DMA.IQ_EN  $=$  DMA.TCIE; //DMA传输完成中断使能DMA_InitStructure.DMA.DIR  $=$  MEMORY2PERI; //内存至外设DMA_InitStructure.DMA.CIR  $=$  DISABLE; //关闭循环传输模式DMA_InitStructure.DMA.PINC  $=$  ENABLE; //外设地址每轮内是否递增，高有效DMA_InitStructure.DMA.MINC  $=$  ENABLE; //内存地址第二轮是否在第一轮地址的基础上递增（轮内地址一定递增）高有效DMA_InitStructure.DMA.PBTW  $=$  DMA.BYTE_TRANs; //外设访问位宽，0:byte，1:half- word，2:wordDMA_InitStructure.DMA.MBTW  $=$  DMA.BYTE_TRANs; //内存访问位宽，0:byte，1:half- word，2:wordDMA_InitStructure.DMA.REQ_EN  $=$  DMA.CH3_CAN.REQ_EN; //CAN DMA请求使能，高有效DMA_InitStructure.DMA.TIMES  $= 5$  //DMA通道  $\texttt{x}$  每轮数据搬运次数1~511DMA_InitStructure.DMA.ROUND  $= 5$  //DMA通道  $\texttt{x}$  采样轮数1~256DMA_InitStructure.DMA.CPAR  $=$  （u32）&CAN.TXRX0; //DMA通道  $\texttt{x}$  外设地址DMA_InitStructure.DMA.CMAR  $=$  （u32)memaddr; //DMA通道  $\texttt{x}$  内存地址DMA_Init（DMA.CH3,6DMA.InitStruct); //使能DMA.CH3通道DMA.CHx.EN（DMA.CH3,ENABLE);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>Howlet Li</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMQ</td><td>修改</td></tr></table>
+
+修改日志:去除初始化使能DMA通道，改为DMA_Chx_EN（）函数使能DMA通道
+
+在文件lks32mc08x.dma.c第101行定义
+
+这是这个函数的调用关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/7b7fba9785259eed66ae971c12e5ef4ffcf8fe1a8a090843cd7b24266eff9f9a.jpg)
+
+# 2.9.3.5 DMA_StructInit()
+
+void DMA_StructInit DMA_InitStructure  $\ast$  DMAInitStruct)
+
+函数名称：void DMA_StructInitDMA initTypeDef \*DMAInitStruct)
+
+功能描述：DMA结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>DMA_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DMA_InitTypeDef DMA_InitStructure;DMA_StructInit(&DMA_InitStructure); //初始化结构体
+
+修改日志：
+
+在文件lks32mc08x.dma.c第55行定义
+
+# 2.10 lks32mc08x.dma.h
+
+# 浏览该文件的文档
+
+00001 00001 #ifndef_LKS32MC08x.DMA.R 00015 #define_LKS32MC08x.DMA.R 00016 00017 #include"lks32mc08x.lib.h" 00018 00022 typedef struct 00023 { 00029 uint8. t DMAIRQ_EN; 00035 uint8. t DMA.DIR; 00036 uint8. t DMA.CIRC; 00037 uint8. t DMA.PINC; 00038 uint8. t DMA.MINC; 00045 uint8. t DMA.PBTW; /*外设访问位宽，0:byte，1:half- word，2:word */ 00052 uint8. t DMA.MBTW; /*内存访问位宽，0:byte，1:half- word，2:word */ 00068 uint8. t DMA.REQ.EN; 00069 uint16. t DMA.TIMES; 00070 uint8. t DMA.ROUND; 00071 uint32. t DMA.CPAR; 00072 uint32. t DMA.CMAR; 00074 DMA.InitTypeDef; 00075 } DMA.InitTypeDef; 00079 #ifndef DMA.CHO 00080 #define DMA.CHO ((DMA.RegTypeDef *) DMA.BASE) 00081 #endif 00085 #ifndef DMA.CH1 00086 #define DMA.CH1 ((DMA.RegTypeDef *) (DMA.BASE+0x10)) 00087 #endif 00091 #ifndef DMA.CH2 00092 #define DMA.CH2 ((DMA.RegTypeDef *) (DMA.BASE+0x20))
+
+00093 #endif 00097 #ifndef DMA.CH3 00098 #define DMA.CH3 ((DMA.RegTypeDef  $\ast$  )DMA.BASE+0x30)) 00099 #endif 00100 00104 typedef struct 00105 { 00106 _IO uint32_t DMA- CCR; 00107 _IO uint32_t DMA- CTMS; 00108 _IO uint32_t DMA- CPAR; 00109 _IO uint32_t DMA- CMAR; 00110 DMA- RegTypeDef; 00111 00112 #define DMA_TCIE BIT0 00113 #define DMA- TEIE BIT1 00115 #define PERI2MEMORY 0 00116 #define MEMORY2PERI 1 00118 #define DMA- BYTE_TRANS 0 00119 #define DMA- HALFWORD_TRANS 1 00120 #define DMA- WORD_TRANS 2 00122 #define DMA- CHO- ADCO- REQEN BIT0 00123 #define DMA- CHO- TIMERO- REQ- EN BIT1 00124 #define DMA- CHO- TIMER1- REQ- EN BIT2 00125 #define DMA- CH1- SPI- RX- REQ- EN BIT0 00126 #define DMA- CH1- MCPWM- REQ- EN BIT1 00127 #define DMA- CH1- TIMER2- REQ- EN BIT2 00128 #define DMA- CH2- UART0- REQ- EN BIT0 00129 #define DMA- CH2- SPI- TX- REQ- EN BIT1 00130 #define DMA- CH2- TIMER3- REQ- EN BIT2 00131 #define DMA- CH3- UART1- REQ- EN BIT0 00132 #define DMA- CH3- CAN- REQ- EN BIT1 00133 #define DMA- CH3- I2C- REQ- EN BIT2 00135 #define DMA- CH0- FIF BIT0 00136 #define DMA- CH1- FIF BIT1 00137 #define DMA- CH2- FIF BIT2 00138 #define DMA- CH3- FIF BIT2 00139 #define DMA- CH0- EIF BIT3 00140 #define DMA- CH1- EIF BIT5 00141 #define DMA- CH2- EIF BIT6 00142 #define DMA- CH3- EIF BIT7 00144 void DMA_InitDMA- RegTypeDef \*DMAx, DMA- InitTypeDef \*DMAInitStruct); 00145 void DMA- StructInitDMA- InitTypeDef \*DMAx, u32 timer.if); 00146 uint32_t DMA_GetIRQFlag(DMA- RegTypeDef \*DMAx, uint32_t tempFlag); 00147 void DMA- ClearIRQFlag(DMA- RegTypeDef \*DMAx, uint32_t tempFlag); 00148 void DMA- CHx- EN(DMA- RegTypeDef \*DMAx, u32 Channel- EN); 00149 #endif
+
+# 2.11 Include/lks32mc08x_dsp.h 文件参考
+
+文件名称：lks32mc08x_dsp.h  文件标识：无  内容摘要：DSP驱动头文件  其它说明：无
+
+include "lks32mc08x_lib.h"  lks32mc08x_dsp.h 的引用(include)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/92bb42de7dc15a1e2ad6300d4528af511925bc0d6ff417d92c4502e11d1be9bf.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/a3a65ff96d4ccfd37c487eb2a2af60a977cbfb9301fef72ed70dd4ef10f15764.jpg)
+
+# 结构体
+
+结构体- struct stru_DiviComponents  除法运算结构体句柄- struct stru_CordicComponents  三角函数运算结构体句柄
+
+# 枚举
+
+枚举- enum Arc_or_SinCFuction { ARCTAN = 0, SINCOS = 1 }
+
+# 函数
+
+函数- void DSP-Cmd (FuncState state)  函数名称: void DSP-Cmd(FuncState state)- void DSP_CalcDivision (stru_DiviComponents *stru_Divi)- void DSP_CalcCordic (stru_CordicComponents *Cordic, Arc_or_SinCFuction choose)  函数名称: void DSP_CalcCordic(stru_CordicComponents *Cordic, Arc_or_SinCuction choose)- uint32_t DSP_GetSqrt (uint32_t Data)  函数名称: uint32_t DSP_GetSqrt (uint32_t Data)- s16 DSP_CalcSqrt (s16 X, s16 Y)  函数名称: s16 DSP_CalcSqrt (s16 X, s16 Y)
+
+# 2.11.1 详细描述
+
+文件名称： Iks32mc08x_dsp.h  文件标识：无  内容摘要：DSP驱动头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年07月25日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_dsp.h 中定义.
+
+# 2.11.2 枚举类型说明
+
+# 2.11.2.1 Arc_or_SinCFuction
+
+enum Arc_or_SinCFuction
+
+枚举值
+
+<table><tr><td>ARCTAN</td><td>0计算arctan</td></tr><tr><td>SINCOS</td><td>1计算sin cos</td></tr></table>
+
+在文件lks32mc08x.dsp.h第46行定义
+
+# 2.11.3 函数说明
+
+# 2.11.3.1 DSP_CalcCordic()
+
+void DSP_CalcCordic (    stru_CordicComponents * Cordic,    Arc_or_SinCFuction choise)
+
+函数名称：void DSP_CalcCordic(stru_CordicComponents * Cordic, Arc_or_SinCFuction choise)
+
+功能描述：DSP三角运算
+
+参见
+
+被引用内容：stru_CordicComponents，Arc_or_SinCFuction，SYS_SoftResetModule()
+
+参数
+
+<table><tr><td>输入参数:</td><td>Cordic:角度或坐标X和Y,choise:计算模式选择0Arctan;1sin/cos</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+1、开方8个总线周期完成
+
+2、Theta(角度)为16位有符号定点数，表示范围  $(- (32768)\sim 32767)$  对应  $(- (\pi)\sim \pi)$
+
+3、SinValue值为16位有符号定点数，其中1bit符号位，15bit小数位；表示范围  $(- (1)\sim 1)$
+
+4、CosValue值为16位有符号定点数，其中1bit符号位，15bit小数位；表示范围  $(- (1)\sim 1)$  
+5、ArctanX值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围  $(- (32768)\sim 32767)$
+
+6、ArctanY值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)7、ArctanValue值为16位有符号定点数，表示范围  $(- (32768) \sim 32767)$  对应  $(- (\pi) \sim \pi)$
+
+警告
+
+无
+
+示例代码：
+
+stru.CordicComponents.CordicData;//定义三角函数计算结构体变量示例1：CordicData.ArctanX  $\times$  100；//坐标x赋值取值范围（- （32768）- 32767）CordicData.ArctanY  $\times$  10；//坐标v赋值取值范围（- （32768）- 32767）DSP.CalcDivision(&CordicData,ARCTAN);arctan储存位置：CordicData.ArctanValue（输出范围- （32768）～32767对应（- （π）\~π）示例2：CordicData,Theta  $= 0$  //角度赋值取值范围（- （32768）～32767）对应（- （π）\~π）DSP.CalcDivision(&CordicData,SINCOS);sin结果储存位置：CordicData.SinValue（输出范围- （32768）～32767对应（- （1）\~1）cos结果储存位置：CordicData.CosValue（输出范围- （32768）～32767对应（- （1）\~1）
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+在文件lks32mc08x.dsp.c第143行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/fe901236fafd225313e12201f2de3c6c235c73e56d955fcd825757829d488eda.jpg)
+
+# 2.11.3.2 DSP.CalcDivision()
+
+void DSP.CalcDivision (stru_DiviComponents * stru_Divi)
+
+在文件 Iks32mc08x.dsp.c 第 86 行定义.
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/3bfbf50984207bfeb0440d796a4e870a2af5592a11fe8dc05aa86e8ec2890317.jpg)
+
+# 2.11.3.3 DSP.CalcSprt()
+
+s16 DSP.CalcSprt (s16 X, s16 Y)
+
+函数名称：s16 DSP.CalcSprt(s16 X, s16 Y)
+
+功能描述：DSP两个数平方后开方运算
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>X和Y</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：sqrt(X^2+Y^2)结果值
+
+注解
+
+其它说明：
+
+1、开方8个总线周期完成2、X值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)3、Y值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)4、输出结果sqrt(X^2+Y^2)：为16位有符号定点数，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)
+
+警告
+
+无
+
+示例代码：
+
+s16 DSP.Value = 0;  DSP.Value = DSP.CalcSprt(50,100); //sqrt(50^2+100^2)  50的平方加100的平方后开模号
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+在文件lks32mc08x.dsp.c第198行定义.
+
+# 2.11.3.4 DSP.Cmd()
+
+void DSP.Cmd ( FuncState state)
+
+函数名称：void DSP.Cmd(FuncState state)
+
+功能描述：DSP使能和关闭
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>state: ENABLE: 使能, DISABLE:失能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DSP_Cmd（ENABLE）；//使能DSP时钟
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.dsp.c第43行定义。
+
+函数调用图：
+
+# 2.11.3.5 DSP.GetSqrt()
+
+uint32. t DSP.GetSqrt（ uint32. t Data)
+
+函数名称：uint32. tDSP.GetSqrt（uint32. tData)
+
+功能描述：DSP开平方函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>被开方数</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：开方根
+
+注解
+
+其它说明：
+
+其它说明：1、开方8个总线周期完成2、被开方数Data为32位无符号数，即范围是  $(0 \sim (2^{\wedge}31))$ 3、开方根sqrt(Data)为16位无符号数，即范围是  $(0 \sim (2^{\wedge}15))$
+
+警告
+
+无
+
+示例代码：
+
+示例代码：c16 GetSort.Value = 0;GetSort.Value = DSP.GetSort(100); //sqrt(100) 100开根号结果为10
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+在文件 Iks32mc08x.dsp.c 第 239 行定义.
+
+# 2.12 Iks32mc08x.dsp.h
+
+浏览该文件的文档
+
+00001 00015 #ifndef _LKS32MC08x.DSP.H 00016 #define _LKS32MC08x.DSP.H 00017 00018 00019 /\* Includes 00020 #include"lks32mc08x.lib.h" 00021 00025 typedef struct 00026 { 00027 s32 Dividend; 00028 s16 Divisor; 00029 s32 Quotient; 00030 s16 Remainder; 00031 } stru_DiviComponents; 00032 00036 typedef struct 00037 { 00038 s16 Theta; 00039 s16 SinValue; 00040 s16 CosValue; 00041 s16 ArctanX; 00042 s16 ArctanY; 00043 s16 ArctanValue; 00044 } stru_CordicComponents; 00045 00046 typedef enum 00047 { 00048 ARCTAN  $= 0$  00049 SINCOS  $= 1$  00050 } Arc_or_SinFuction; 00051 00052 void DSP_Cmd（FuncState state); /\* DSP使能和关闭 \*/ 00053 void DSP_CalcDivision（stru_DiviComponents \*stru_Divi); /\* DSP除法运算 \*/ 00054 void DSP_CalcCordic（stru_CordicComponents \*Cordic, Arc_or_SinCFuction choose); /\* DSP三角函数运算运算 \*/ 00055 uint32_t DSP_GetSqrt(uint32_t Data); /\* DSP取得开方根\*/ 00056 s16 DSP_CalcSprt（s16 X,s16 Y); /\* DSP计算开方根\*/ 00057 00058 #endif 00059 00060 00061 00062 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* （C）COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*\*END OF FILE\*\*\*\*/
+
+# 2.13 Include/lks32mc08x_exti.h 文件参考
+
+文件名称：lks32mc08x_exti.h  文件标识：无  内容摘要：EXTI外部中断驱动头文件  其它说明：无
+
+```c#include "lks32mc08x.h"#include "lks32mc08x.epi.h"#include "basic.h"```
+
+lks32mc08x_exti.h的引用(Include)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/59dc6bdae4e0b740977785e945fd20603cefe63ce615d75b50a2525ad59cf102.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/e47e26d06417c8947de6c92dfbaa13665d8781244645cc15d9d51015fb480547.jpg)
+
+# 结构体
+
+结构体- struct EXTLTypeDefEXTI寄存器结构体句柄
+
+# 宏定义
+
+宏定义- #define EXTI((EXTI-TypeDef *) EXTI.BASE)EXTI结构体基地址定义
+
+# 枚举
+
+枚举- enum EXTIMode_TypeDef {EXTI_Trigger.None = 0x00, EXTI_Trigger.Negedge = 0x01, EXTI_Trigger.Posedge = 0x02, EXTI_Trigger印刷 = 0x03}EXTI触发信号定义
+
+# 函数
+
+函数- void EXTI_Trigger.Config(GPIO_TypeDef *GPIOx, uint32_t GPIO_PinSource, uint16_t EXTI_Trigger)函数名称：void EXTI_Trigger.Config(GPIO_TypeDef *GPIOx, uint32_t GPIO_PinSource, uint16_t EXTI_Trigger)- void EXTI_ClearIRQFlag(GPIO_TypeDef *GPIOx, uint32_t GPIO_PinSource)函数名称：void EXTI.ClearIRQFlag(GPIO_TypeDef *GPIOx, uint32_t GPIO_PinSource)- u8 EXTI_GetIRQFlag(GPIO_TypeDef *GPIOx, uint32_t GPIO_PinSource)函数名称：u8 EXTI_GetIRQFlag(GPIO_TypeDef *GPIOx, uint32_t GPIO_PinSource)
+
+# 2.13.1 详细描述
+
+文件名称： Iks32mc08x_exti.h文件标识：无内容摘要：EXTI外部中断驱动头文件其它说明：无
+
+版权所有
+
+(C)2015,LINKOSEMCONDUCTORCo.td
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_exti.h 中定义。
+
+# 2.13.2 宏定义说明
+
+# 2.13.2.1 EXTI
+
+define EXTI ((EXTI_TypeDef *) EXTI_BASE)
+
+EXTI结构体基地址定义
+
+在文件 Iks32mc08x_exti.h 第 40 行定义。
+
+# 2.13.3 枚举类型说明
+
+# 2.13.3.1 EXTIMode_TypeDef
+
+enum EXTIMode_TypeDef
+
+EXTI触发信号定义
+
+枚举值  
+
+<table><tr><td>EXTI Trigger.None</td><td>不触发</td></tr><tr><td>EXTI Trigger.Negedge</td><td>下降沿触发</td></tr><tr><td>EXTI Trigger.Posedge</td><td>上升沿触发</td></tr><tr><td>EXTI Trigger.Edge</td><td>上升沿、下降沿均触发</td></tr></table>
+
+在文件lks32mc08x.exti.h第46行定义
+
+# 2.13.4 函数说明
+
+# 2.13.4.1 EXTI.ClearIRQFlag()
+
+void EXTI.ClearIRQFlag ( GPIOTypeDef \* GPIOx, uint32. t GPIO_PinSource )
+
+函数名称：void EXTI_ClearIRQFlag(GPIO_TypeDef \*GPIOx,uint32. t GPIO_PinSource)
+
+功能描述：清除外部中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource可选(GPIO.PinSource.0~GPIO.PinSource.15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(EXTI.GetIRQFlag(GPIOO, GPIO_PinSource_O)) //获取P0.0外部中断标志位{    EXTI.ClearIRQFlag(GPIOO, GPIO_PinSource_O); //清除P0.0外部中断标志位}
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_exti.c第124行定义
+
+# 2.13.4.2 EXTI.GetIRQFlag()
+
+u8 EXTI.GetIRQFlag(GPIOTypeDef * GPIOx, uint32_t GPIO_PinSource)
+
+函数名称：u8 EXTI.GetIRQFlag(GPIO, TypeDef * GPIOx, uint32_t GPIO_PinSource)
+
+功能描述：读取外部中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource可选(GPIO.PinSource.0~GPIO.PinSource.15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：中断标志，高有效
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(EXTI_GetIRQFlag(GPIO0, GPIO PinSource.0)) //获取P0.0外部中断标志位{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_exti.c第80行定义
+
+# 2.13.4.3 EXTI.Trigger.Config()
+
+void EXTI.Trigger.Config {    GPIO_TypeDef * GPIOx,    uint32_t GPIO_PinSource,    uint16_t EXTI_Trigger }
+
+函数名称：void EXTI.Trigger.Config(GPIO_TypeDef * GPIOx, uint32_t GPIO_PinSource, uint16_t EXTI_Trigger)
+
+功能描述：GPIO外部触发极性选择
+
+参见
+
+被引用内容：EXTIMode_TypeDef
+
+参数
+
+<table><tr><td>输入参数：</td><td>GPIOx: GPIO对象可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource可选(GPIO.PinSource.0~GPIO.PinSource.15)
+EXTI.Trigger:指定的触发极性</td></tr></table>
+
+
+参见
+
+EXTI_Trigger参数来源：EXTIMode_TypeDef
+
+参数
+
+<table><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+EXTI_Trigger_Config(GPIO,GPIO.PinSource.0,EXTI_Trigger.Negedge);//P0.0信号下降沿触发外部中断事件
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>Yang2J</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_exti.c第38行定义.
+
+# 2.14 lks32mc08x_exti.h
+
+# 浏览该文件的文档
+
+00001 00015 #ifndef _LKS32MC08x_EXTI_H 00016 #define _LKS32MC08x_EXTI_H 00017 00018 00019 /\*Includes 00020 #include"1ks32mc08x.h" 00021 #include"1ks32mc08x.gpi.h" 00022 #include"basic.h" 00023 00027 typedef struct 00028 { 00029 _IO uint32_t CR0; 00030 _IO uint32_t CR1; 00031 _IO uint32_t IF; 00032 _IO uint32_t POL; 00033 _IO uint32_t EN; 00034 }EXTI_TypeDef; 00035 00039 #ifndef EXTI 00040 #define EXTI ((EXTI_TypeDef *) EXTI_BASE) 00041 #endif 00042
+
+00046 typedef enum 00047{ 00048 EXTI_Trigger.None = 0x00, 00049 EXTI_Trigger.Negedge = 0x01, 00050 EXTI_Trigger.Posedge = 0x02, 00051 EXTI_Trigger.Edge = 0x03 00052 EXTIMode.TypeDef; 00053 00054 void EXTI_Trigger.Config(GPIO.TypeDef *GPI0x, uint32_t GPIO.PinSource, uint16_t EXTI_Trigger); 00055 void EXTI.ClearIRQFlag(GPIO.TypeDef *GPI0x, uint32_t GPIO.PinSource); 00056 u8 EXTI.GetIRQFlag(GPIO.TypeDef *GPI0x, uint32_t GPIO.PinSource); 00057 00058 #endif /\_\_lks32mc05x_EXTI.H \*/ 00059 00060 00061 00062 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* (C) COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*\*END OF FILE\*\*\*\*/
+
+# 2.15 Include/lks32MC08x_flash.h 文件参考
+
+文件名称：LKS32MC_08x_flash.h  文件标识：无  内容摘要：FLASH外设驱动程序  其它说明：无
+
+include "lks32mc08x_lib.h"  lks32MC08x_flash.h 的引用(Include)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/eb2fdf71ff161496a338ddb4d8d550caf5ceb4a4d4b327e132a821effe59d53c.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/2302c7c07998c9fe466dace1ddc3432703ab6ec41bcdc6705bac29f5d39b1850.jpg)
+
+# 宏定义
+
+- #define Flash_MAIN 0x000  Flash的mian区域定义  
+- #define Flash_NVR 0x800  Flash的nvr区域定义
+
+# 函数
+
+- int ProgramPage (u32 adr, u32 sz, u8 *buf, u16 nvr)  函数名称：int ProgramPage(u32 adr, u32 sz, u8 *buf, u16 nvr)  
+- void EraseSector (u32 adr, u16 nvr)  函数名称：void EraseSector(u32 adr, u16 nvr)  
+- void Read_MoreFlash (u32 adr, u32 sz, u32 *buf, u16 nvr)  函数名称：void Read_MoreFlash(u32 adr, u32 sz, u32 *buf, u16 nvr)
+
+# 变量
+
+- volatile u32 erase_flag  flash擦除操作启动变量- volatile u32 progm_flag  flash编程操作启动变量
+
+# 2.15.1 详细描述
+
+文件名称： LKS32MC.08x. flash.h  文件标识：无  内容摘要：FLASH外设驱动程序  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年07月25日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：增加程序跑飞时，对Flash的保护
+
+在文件lks32MC08x. flash.h中定义
+
+# 2.15.2 宏定义说明
+
+# 2.15.2.1 Flash.MAIN
+
+define Flash.MAIN 0x000
+
+Flash的mian区域定义
+
+在文件lks32MC08x. flash.h第25行定义
+
+# 2.15.2.2 Flash.NVR
+
+define Flash.NVR 0x800
+
+Flash的nvr区域定义
+
+在文件 Iks32MC08x.flash.h 第26行定义.
+
+# 2.15.3 函数说明
+
+# 2.15.3.1 EraseSector()
+
+void EraseSector (u32 adr,u16 nvr)
+
+函数名称：void EraseSector(u32 adr,u16 nvr)
+
+功能描述：Flash按扇区擦除操作
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>adr: 廊区地址(一个扇区512字节)
+nvr: 为0x800的时候擦除NVR,为0时擦除主Flash
+erase_flag: 调用函数前必须赋值0x9A0D361F, 否则不执行擦除, 用来防程序跑飞</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 Flash.Buff[2]  $=$  {0x12,0x23}； 事例1： erase_flag  $=$  0x9AD0361F；//擦除解锁 EraseSector（0x00000000，Flash.MAIN）；//擦除flash的main区域即存储程序区域 erase_flag  $=$  0x00；//擦除上锁 erase_flag  $=$  0xA9FDAD00C；//编程解锁锁 ProgramFlag  $=$  0x00000000，2,Flash.Buff，Flash.MAIN）；//编程flash的main区域即存储程序区域 erase_flag  $=$  0x00; //编程上锁 事例2： erase_flag  $=$  0x9AD0361F；//擦除解锁 EraseSector（0x00000000，Flash.NVR）；//擦除flash的NVR区域即独立的1KB用户存储区 erase_flag  $=$  0x00；//擦除上锁 erase_flag  $=$  0xA9D361F；//编程解锁 EraseSector（0x00000000，2,Flash.Buff,Flash.NVR）；//编程flash的NVR区域即独立的1KB用户存储区 erase_flag  $=$  0x00; //编程上锁
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32MC08xFlash.c第128行定义
+
+# 2.15.3.3 Read_More_Flash()
+
+void ReadMoreFlash（ u32 adr, u32 sz, u32 \* buf, u16 nvr)
+
+函数名称：void Read_More_Flash(u32 adr, u32 sz, u32 \*buf, u16 nvr)
+
+功能描述：读取FLASH多地址数据函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>adr: 廊区地址(一个扇区512字节)
+nvr: 为0x800, 读取MAIN数据, 为0x0, 读取NVR数据
+buf: 读取数据存储的地址
+sz: 读取sz个字</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：读取的数据值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+$\mathbb{W}^{22}$  FlashReadBuff  $(1) = \{2\} ;$  事例1：Read.MoreFlash（0x00000000，4,Flash.Read.Buff,Flash.MAIN）；//获取flashJmain区域0x00000000地址4个word数据事例2：Read.MoreFlash（0x00000000，4,Flash.Read.Buff,Flash.NVR）；//获取flash的NVR区域0x00000000地址4个word数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32MC08x_flash.c第273行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/965002ef1f4f64d5148fd32e1762f07b95c40afe5fe8e76eda325dc0f894d729.jpg)
+
+# 2.15.4 变量说明
+
+# 2.15.4.1 erase.flag
+
+volatile u32 erase.flag [extern]
+
+flash擦除操作启动变量
+
+在文件 Iks32MC08x_flash.c 第 21 行定义.
+
+# 2.15.4.2 progm_flag
+
+volatile u32 progm_flag [extern]
+
+flash编程操作启动变量
+
+在文件 Iks32MC08x_flash.c 第 25 行定义.
+
+# 2.16 Iks32MC08x flash.h
+
+# 浏览该文件的文档
+
+00001 00000 #ifndef LKS32MC08x.FLASH_ 00021 #define LKS32MC08x.FLASH_ 00022 00023 #include"1ks32mc08x.lib.h" 00024 00025 #define Flash.MAIN Ox000 00026 #define Flash.NVR Ox800 00028 extern volatile u32 erase_flag; 00029 extern volatile u32 progm_flag; 00030 int ProgramPage(u32 adr,u32 sz,u8 \*buf,u16 nvr); 00031 extern void EraseSector(u32 adr,u16 nvr); 00032 void ReadMoreFlash(u32 adr,u32 sz,u32 \*buf,u16 nvr); 00033 00034 #endif 00035
+
+# 2.17 Include/Iks32mc08x_gpio.h 文件参考
+
+文件名称： Iks32mc08x_gpio.h  文件标识：无  内容摘要： GPIO外设驱动程序头文件  其它说明：无
+
+include "lks32mc08x.h" #include "basic.h" lks32mc08x.gpio.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/b489891a707d3a0b258db97b0ec61786a87b571dd763adf3cda98c07a70a71d3.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/ebe78889a5943706d93a27441008eec9ae527e501a8c3f5c5fb590a7241ac45c.jpg)
+
+# 结构体
+
+结构体- struct GPIO_TypeDef GPIO寄存器结构体句柄- struct GPIO_InitTypeDef GPIO功能配置结构体句柄
+
+# 宏定义
+
+宏定义- #define GPIO0 ((GPIO_TypeDef *) GPIO0_BASE) GPIO0结构体基地址定义- #define GPIO1 ((GPIO_TypeDef *) GPIO1_BASE) GPIO1结构体基地址定义- #define GPIO2 ((GPIO_TypeDef *) GPIO2_BASE) GPIO2结构体基地址定义- #define GPIO3 ((GPIO_TypeDef *) GPIO3_BASE) GPIO3结构体基地址定义- #define AF0_GPIO 0- #define AF1_SYSAF 1- #define AF2_HALL 2- #define AF3_MCPWM 3- #define AF4_UART 4- #define AF5_SPI 5- #define AF6_I2C 6- #define AF7_TIMER01 7
+
+- #define AF8_TIMER23 8- #define AF9.DEBUG 9- #define AF10_CAN 10- #define AF11_SIF 11- #define GPIO_Pin.NONE 0- #define GPIO_Pin.0 BIT0- #define GPIO_Pin.1 BIT1- #define GPIO_Pin.2 BIT2- #define GPIO_Pin.3 BIT3- #define GPIO_Pin.4 BIT4- #define GPIO_Pin.5 BIT5- #define GPIO_Pin.6 BIT6- #define GPIO_Pin.7 BIT7- #define GPIO_Pin.8 BIT8- #define GPIO_Pin.9 BIT9- #define GPIO_Pin.10 BIT10- #define GPIO_Pin.11 BIT11- #define GPIO_Pin.12 BIT12- #define GPIO_Pin.13 BIT13- #define GPIO_Pin.14 BIT14- #define GPIO_Pin.15 BIT15- #define GPIO_Pin.ALL (uint32_t)0xFFFF- #define GPIO_PinSource_0 0- #define GPIO_PinSource_1 1- #define GPIO_PinSource_2 2- #define GPIO_PinSource_3 3- #define GPIO_PinSource_4 4- #define GPIO_PinSource_5 5- #define GPIO_PinSource_6 6- #define GPIO_PinSource_7 7- #define GPIO_PinSource_8 8- #define GPIO_PinSource_9 9- #define GPIO_PinSource_10 10- #define GPIO_PinSource_11 11- #define GPIO_PinSource_12 12- #define GPIO_PinSource_13 13- #define GPIO_PinSource_14 14- #define GPIO_PinSource_15 15
+
+# 枚举
+
+- enum GPIOMode_TypeDef { GPIO_Mode_IN = 0x00, GPIO_Mode_OUT = 0x01, GPIO_Mode_ANA = 0x02 } GPIO模式选择枚举- enum GPIOPuPd_TypeDef { GPIO_PuPd.NOPULL = 0x00, GPIO_PuPd.UP = 0x01 } GPIO输出模式选择枚举- enum BitAction { Bit_RESET = 0, Bit.SET } GPIO寄存器写入量枚举
+
+# 函数
+
+- void GPIO_Init(GPIO_TypeDef \*GPIOx, GPIO_InitTypeDef \*GPIO_InitStructure) 函数名称：void GPIO_Init(GPIO_TypeDef\* GPIOx, GPIO_InitTypeDef\* GPIO_InitStructure) ·void GPIO_StructInit(GPIO格局Def \*GPIO格局) 函数名称：void GPIO_StructInit(GPIO格局Def\* GPIO格局) ·void GPIO_LockRegister(GPIO_TypeDef \*GPIOx, uint16_t GPIO_Pin) 函数名称：void GPIO_LockRegister(GPIO_TypeDef\* GPIOx, uint16_t GPIO_Pin) ·void GPIO_UnlockRegister (GPIO_TypeDef \*GPIOx, uint16_t GPIO_Pin) 函数名称：void GPIO_UnlockRegister(GPIO_TypeDef\* GPIOx, uint16_t GPIO_Pin) ·uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef \*GPIOx, uint16_t GPIO_Pin) 函数名称：uint8.t GPIO_ReadInputDataBit(GPIO_TypeDef\* GPIOx, uint16.t GPIO_Pin) ·uint32_t GPIO_ReadInputData (GPIO_TypeDef \*GPIOx) 函数名称：uint32.t GPIO.ReadInputData(GPIO_TypeDef\* GPIOx) ·uint8_t GPIO.ReadOutputDataBit(GPIO_TypeDef \*GPIOx, uint16_t GPIO_Pin) 函数名称：uint8.t GPIO.ReadOutputDataBit(GPIO_TypeDef\* GPIOx, uint16.t GPIO_Pin) ·uint32_t GPIO.ReadOutputData (GPIO_TypeDef \*GPIOx) 函数名称：uint32.t GPIO.ReadOutputData(GPIO_TypeDef\* GPIOx) ·void GPIO_SetBits (GPIO_TypeDef \*GPIOx, uint16_t GPIO_Pin) 函数名称：void GPIO_SetBits(GPIO_TypeDef\* GPIOx, uint16.t GPIO_Pin) ·void GPIO_ResetBits (GPIO_TypeDef \*GPIOx, uint16_t GPIO_Pin) 函数名称：void GPIO_ResetBits(GPIO_TypeDef\* GPIOx, uint16.1 GPIO_Pin) ·void GPIO_Write (GPIO_TypeDef \*GPIOx, uint32_t Val) 函数名称：void GPIO_Write(GPIO_TypeDef\* GPIOx, uint32.1 Val) ·void GPIO_WriteBit (GPIO_TypeDef \*GPIOx, uint16.1 GPIO_Pin, BitAction BitVal) 函数名称：void GPIO_WriteBit(GPIO_TypeDef\* GPIOx, uint16.1 GPIO_Pin, BitAction BitVal) ·void GPIO_PinAConfig (GPIO_TypeDef \*GPIOx, uint32.1 GPIO_PinSource, uint32.1 GPIO_AF) 函数名称：void GPIO_PinAConfig(GPIO_TypeDef\* GPIOx, uint32.1 GPIO_PinSource, uint32.1 GPIO.AF)
+
+# 2.17.1 详细描述
+
+文件名称：lks32mc08x_gpio.h  文件标识：无  内容摘要：GPIO外设驱动程序头文件  其它说明：无
+
+版权所有
+
+(C)2015. LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年6月19日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_gpio.h中定义
+
+# 2.17.2 宏定义说明
+
+# 2.17.2.1 AF0.GPIO
+
+define AF0. GPIO 0
+
+GPIO复用功能0，模拟功能在文件 Iks32mc08x.gpio.h 第 106 行定义.
+
+# 2.17.2.2 AF10.CAN
+
+define AF10. CAN 10  GPIO复用功能10，CAN功能  在文件 Iks32mc08x.gpio.h 第 116 行定义.
+
+# 2.17.2.3 AF11.SIF
+
+define AF11. SIF 11  GPIO复用功能11，SIF功能  在文件 Iks32mc08x.gpio.h 第 117 行定义.
+
+# 2.17.2.4 AF1.SYSAF
+
+define AF1. SYSAF 1  GPIO复用功能1，SYS.AF、CMP、CLOCK等数字信号输出功能  在文件 Iks32mc08x.gpio.h 第 107 行定义.
+
+# 2.17.2.5 AF2.HALL
+
+define AF2. HALL 2  GPIO复用功能2，HALL功能  在文件 Iks32mc08x.gpio.h 第 108 行定义.
+
+# 2.17.2.6 AF3.MCPWM
+
+define AF3. MCPWM 3
+
+GPIO复用功能3，MCPWM功能在文件 Iks32mc08x_gpio.h 第 109 行定义.
+
+# 2.17.2.7 AF4.UART
+
+2.17.2.7 AF4.UART#define AF4.UART 4  GPIO复用功能4，UART功能在文件 Iks32mc08x_gpio.h 第 110 行定义.
+
+# 2.17.2.8 AF5.SPI
+
+2.17.2.8 AF5.SPI#define AF5.SPI 5  GPIO复用功能5，SPI功能在文件 Iks32mc08x_gpio.h 第 111 行定义.
+
+# 2.17.2.9 AF6.I2C
+
+define AF6. I2C 6
+
+GPIO复用功能6，I2C功能在文件 Iks32mc08x_gpio.h 第 112 行定义.
+
+# 2.17.2.10 AF7_TIMER01
+
+2.17.2.10 AF7_TIMER01#define AF7_TIMER01 7  GPIO复用功能7，Timer0、Timer1功能在文件 Iks32mc08x_gpio.h 第 113 行定义.
+
+# 2.17.2.11 AF8_TIMER23
+
+define AF8_TIMER23 8
+
+GPIO复用功能8，Timer2、Timer3、QEP0、QEP1功能在文件lks32mc08x_gpio.h第114行定义.
+
+# 2.17.2.12 AF9_DEBUG
+
+define AF9_DEBUG 9
+
+GPIO复用功能9，ADCtriggerdebug功能在文件lks32mc08x_gpio.h第115行定义.
+
+# 2.17.2.13 GPIO0
+
+define GPIO0 ((GPIO.TypeDef *) GPIO0_BASE) GPIO0结构体基地址定义在文件lks32mc08x_gpio.h第45行定义.
+
+# 2.17.2.14 GPIO1
+
+define GPIO1 ((GPIO.TypeDef *) GPIO1_BASE)
+
+GPIO1结构体基地址定义
+
+在文件lks32mc08x_gpio.h第51行定义.
+
+# 2.17.2.15 GPIO2
+
+define GPIO2 ((GPIO.TypeDef *) GPIO2_BASE)
+
+GPIO2结构体基地址定义
+
+在文件lks32mc08x_gpio.h第57行定义.
+
+# 2.17.2.16 GPIO3
+
+define GPIO3（(GPIO_TypeDef \*) GPIO3. BASE)
+
+GPIO3结构体基地址定义
+
+在文件lks32mc08x_gpio.h第63行定义.
+
+# 2.17.2.17 GPIO_Pin.0
+
+define GPIO_Pin.0 BIT0
+
+<GPIOpin脚定义，pin.0脚
+
+在文件lks32mc08x_gpio.h第121行定义.
+
+# 2.17.2.18 GPIO_Pin.1
+
+define GPIO_Pin.1 BIT1
+
+GPIOpin脚定义，pin.1脚
+
+在文件lks32mc08x_gpio.h第122行定义.
+
+# 2.17.2.19 GPIO_Pin.10
+
+define GPIO_Pin.10 BIT10
+
+GPIOpin脚定义，pin.10脚
+
+在文件lks32mc08x_gpio.h第131行定义.
+
+# 2.17.2.20 GPIO_Pin.11
+
+define GPIO_Pin.11 BIT11
+
+GPIOpin脚定义，pin.11脚
+
+在文件lks32mc08x_gpio.h第132行定义.
+
+# 2.17.2.21 GPIO.Pin.12
+
+define GPIO.Pin.12 BIT12
+
+GPIOpin脚定义，pin.12脚
+
+在文件lks32mc08x.gpio.h第133行定义
+
+# 2.17.2.22 GPIO.Pin.13
+
+define GPIO.Pin.13 BIT13
+
+GPIOpin脚定义，pin.13脚
+
+在文件lks32mc08x.gpio.h第134行定义
+
+# 2.17.2.23 GPIO.Pin.14
+
+define GPIO.Pin.14 BIT14
+
+GPIOpin脚定义，pin.14脚
+
+在文件lks32mc08x.gpio.h第135行定义
+
+# 2.17.2.24 GPIO.Pin.15
+
+define GPIO.Pin.15 BIT15
+
+GPIOpin脚定义，pin.15脚
+
+在文件lks32mc08x.gpio.h第136行定义
+
+# 2.17.2.25 GPIO.Pin.2
+
+define GPIO.Pin.2 BIT2
+
+GPIOpin脚定义，pin.2脚
+
+在文件lks32mc08x.gpio.h第123行定义
+
+# 2.17.2.26 GPIO.Pin.3
+
+define GPIO.Pin.3 BIT3
+
+GPIOpin脚定义，pin.3脚
+
+在文件lks32mc08x.gpio.h第124行定义
+
+# 2.17.2.27 GPIO.Pin.4
+
+define GPIO.Pin.4 BIT4
+
+GPIOpin脚定义，pin.4脚
+
+在文件lks32mc08x.gpio.h第125行定义
+
+# 2.17.2.28 GPIO.Pin.5
+
+define GPIO.Pin.5 BIT5
+
+GPIOpin脚定义，pin.5脚
+
+在文件lks32mc08x.gpio.h第126行定义
+
+# 2.17.2.29 GPIO.Pin.6
+
+define GPIO.Pin.6 BIT6
+
+GPIOpin脚定义，pin.6脚
+
+在文件lks32mc08x.gpio.h第127行定义
+
+# 2.17.2.30 GPIO.Pin.7
+
+define GPIO.Pin.7 BIT7
+
+GPIOpin脚定义，pin.7脚
+
+在文件lks32mc08x.gpio.h第128行定义
+
+# 2.17.2.31 GPIO.Pin.8
+
+define GPIO.Pin.8 BIT8
+
+GPIOpin脚定义，pin.8脚
+
+在文件lks32mc08x.gpio.h第129行定义
+
+# 2.17.2.32 GPIO.Pin.9
+
+define GPIO.Pin.9 BIT9
+
+GPIOpin脚定义，pin.9脚
+
+在文件lks32mc08x.gpio.h第130行定义
+
+# 2.17.2.33 GPIO.Pin.ALL
+
+2.17.2.33 GPIO.Pin.ALL#define GPIO.Pin.ALL (uint32_t) 0xFFFFGPIOpin脚定义，所有pin脚在文件lks32mc08x.gpio.h第137行定义
+
+# 2.17.2.34 GPIO.Pin.NONE
+
+define GPIO.Pin.NONE 0
+
+GPIOpin脚定义，无pin脚
+
+在文件lks32mc08x.gpio.h第120行定义
+
+# 2.17.2.35 GPIO.PinSource.0
+
+define GPIO.PinSource.0 0
+
+GPIOpin脚定义，pin.0脚
+
+在文件lks32mc08x.gpio.h第140行定义
+
+# 2.17.2.36 GPIO.PinSource.1
+
+define GPIO.PinSource.1 1
+
+GPIOpin脚定义，pin- 1脚
+
+在文件lks32mc08x.gpio.h第141行定义
+
+# 2.17.2.37 GPIO.PinSource.10
+
+define GPIO.PinSource.10 10
+
+GPIOpin脚定义，pin- 10脚
+
+在文件lks32mc08x.gpio.h第150行定义
+
+# 2.17.2.38 GPIO.PinSource.11
+
+define GPIO.PinSource.11 11
+
+GPIOpin脚定义，pin- 11脚
+
+在文件lks32mc08x.gpio.h第151行定义
+
+# 2.17.2.39 GPIO.PinSource.12
+
+define GPIO.PinSource.12 12
+
+GPIOpin脚定义，pin- 12脚
+
+在文件lks32mc08x.gpio.h第152行定义
+
+# 2.17.2.40 GPIO.PinSource.13
+
+define GPIO.PinSource.13 13
+
+GPIOpin脚定义，pin- 13脚
+
+在文件lks32mc08x.gpio.h第153行定义
+
+# 2.17.2.41 GPIO.PinSource.14
+
+define GPIO.PinSource.14 14
+
+GPIOpin脚定义，pin.14脚
+
+在文件lks32mc08x.gpio.h第154行定义
+
+# 2.17.2.42 GPIO.PinSource.15
+
+define GPIO.PinSource.15 15
+
+GPIOpin脚定义，pin.15脚
+
+在文件lks32mc08x.gpio.h第155行定义
+
+# 2.17.2.43 GPIO.PinSource.2
+
+define GPIO.PinSource.2 2
+
+GPIOpin脚定义，pin.2脚
+
+在文件lks32mc08x.gpio.h第142行定义
+
+# 2.17.2.44 GPIO.PinSource.3
+
+define GPIO.PinSource.3 3
+
+GPIOpin脚定义，pin.3脚
+
+在文件lks32mc08x.gpio.h第143行定义
+
+# 2.17.2.45 GPIO.PinSource.4
+
+define GPIO.PinSource.4 4
+
+GPIOpin脚定义，pin.4脚在文件lks32mc08x.gpio.h第144行定义
+
+# 2.17.2.46 GPIO PinSource.5
+
+define GPIO PinSource.5 5 GPIO pin脚定义，pin.5脚在文件 Iks32mc08x_gpio.h 第 145 行定义.
+
+# 2.17.2.47 GPIO PinSource.6
+
+define GPIO PinSource.6 6 GPIO pin脚定义，pin.6脚在文件 Iks32mc08x_gpio.h 第 146 行定义.
+
+# 2.17.2.48 GPIO PinSource.7
+
+define GPIO PinSource.7 7 GPIO pin脚定义，pin.7脚在文件 Iks32mc08x_gpio.h 第 147 行定义.
+
+# 2.17.2.49 GPIO PinSource.8
+
+define GPIO PinSource.8 8 GPIO pin脚定义，pin.8脚在文件 Iks32mc08x_gpio.h 第 148 行定义.
+
+# 2.17.2.50 GPIO PinSource.9
+
+define GPIO PinSource.9 9 GPIO pin脚定义，pin.9脚在文件 Iks32mc08x_gpio.h 第 149 行定义.
+
+# 2.17.3 枚举类型说明
+
+# 2.17.3.1 BitAction
+
+enum BitAction GPIO寄存器写入量枚举
+
+枚举值
+
+<table><tr><td>Bit_RESET</td><td></td></tr><tr><td>Bit.SET</td><td></td></tr></table>
+
+在文件lks32mc08x.gpio.h第68行定义.
+
+# 2.17.3.2 GPIOModeTypeDef
+
+enum GPIOModeTypeDef
+
+GPIO模式选择枚举
+
+枚举值
+
+<table><tr><td>GPIO.Mode_IN</td><td>GPIO Input Mode</td></tr><tr><td>GPIO.Mode_OUT</td><td>GPIO Output Mode</td></tr><tr><td>GPIO.Mode_ANA</td><td>GPIO Analog In/Out Mode,用作ANA时需禁止输入输出</td></tr></table>
+
+在文件lks32mc08x.gpio.h第69行定义.
+
+# 2.17.3.3 GPIOPuPdTypeDef
+
+enum GPIOPuPdTypeDef
+
+GPIO输出模式选择枚举
+
+枚举值
+
+<table><tr><td>GPIO.PuPd.NOPULL</td><td>高阻态</td></tr><tr><td>GPIO.PuPd.UP</td><td>上拉</td></tr></table>
+
+在文件lks32mc08x.gpio.h第79行定义.
+
+# 2.17.4 函数说明
+
+# 2.17.4.1 GPIO_Init()
+
+void GPIO_Init ( GPIO_TypeDef \* GPIOx, GPIOInitTypeDef  $\ast$  GPIO.InitStruct)
+
+函数名称: void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStructure)
+
+功能描述: GPIO初始化函数
+
+参见
+
+参见被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIOInitStruct: GPIO初始化结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.InitTypeDef GPIO.InitStruct; //P2.11输入模式 GPIO.StructInit(&GPIO.InitStruct); //初始化结构体 GPIO.InitStruct.GPIOMode  $=$  GPIOMode.IN; //GPIO输入模式 GPIO.InitStruct.GPIO.Pid  $=$  GPIO.Pid.1; GPIO.InitStruct.GPIO.Puid  $=$  GPIO.Pud.NOPULL; GPIO.Init(GPIO2, &GPIO.InitStruct); //P0.2输出模式 GPIO.StructInit(&GPIO.InitStruct); //初始化结构体 GPIO.InitStruct.GPIOMode  $=$  GPIOMode.OUT; //GPIO输出模式 GPIO.InitStruct.GPIO.Pid  $=$  GPIO.Pid.3; GPIO.InitStruct.GPIO.Puid  $=$  GPIO.Pud.NOPULL; GPIO.Init(GPIO10, &GPIO.InitStruct); //P3.2开漏输出 GPIO.StructInit(&GPIO.InitStruct); //初始化结构体 GPIO.InitStruct.GPIOMode  $=$  GPIOMode.OUT; //GPIO输出模式 GPIO.InitStruct.GPIO.Pid  $=$  GPIO.Pid.2; //没能开漏模式 GPIO.InitStruct.GPIO.Puid  $=$  GPIO.Pud.NOPULL; //关闭上拉，配置为高阻态 GPIO.Init(GPIO3, &GPIO.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件 Iks32mc08x.gpio.c 第 59 行定义.
+
+# 2.17.4.2 GPIO.LockRegister()
+
+void GPIO_LockRegister GPIOIOTypeDef \* GPIOx, uint16_t GPIO_Pin )
+
+函数名称：void GPIO_LockRegister(GPIO_TypeDef\* GPIOx,uint16_t GPIO_Pin)
+
+功能描述：GPIO寄存器保护锁定
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin: 指定的Pin（GPIO_Pin.0～GPIO_Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：上锁后GPIO输入/输出/上下拉/开漏/功能选择不能被修改
+
+警告
+
+无
+
+示例代码：
+
+GPIO.LockRegister(GPIO, GPIO_Pin.0); //P0.0上锁
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件 Iks32mc08x.gpio.c 第 419 行定义.
+
+# 2.17.4.3 GPIO_PinAConfig()
+
+void GPIO_PinAConfig ( GPIO_TypeDef \* GPIOx, uint32. t GPIO PinSource, uint32. t GPIOAF)
+
+函数名称：void GPIO_PinAConfig(GPIO_TypeDef\* GPIOx,uint32. t GPIO_PinSource,uint32. t GPIO_AF)
+
+功能描述：GPIO复用功能选择
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="14">输入参数:</td><td colspan="2">GPIOx: GPIO对象,参数可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource(GPIO_PinSource.0~GPIO_PinSource.15)
+GPIO.AF:指定复用功能</td></tr><tr><td>复用功能名称</td><td>说明</td></tr><tr><td>AF0 GPIO</td><td>模拟功能</td></tr><tr><td>AF1_SYSAF</td><td>SYS.AF、CMP、CLOCK等数字信号输出功能</td></tr><tr><td>AF2.HALL</td><td>HALL功能</td></tr><tr><td>AF3.MCPWM</td><td>MCPWM功能</td></tr><tr><td>AF4UART</td><td>UART功能</td></tr><tr><td>AF5.SPI</td><td>SPI功能</td></tr><tr><td>AF6.I2C</td><td>I2C功能</td></tr><tr><td>AF7.TIMER01</td><td>Timer0、Timer1功能</td></tr><tr><td>AF8.TIMER23</td><td>Timer2、Timer3、QEP0、QEP1功能</td></tr><tr><td>AF9.DEBUG</td><td>ADC trigger debug功能</td></tr><tr><td>AF10.CAN</td><td>CAN功能</td></tr><tr><td>AF11.SIF</td><td>SIF功能</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.PinAConfig(GPIO1, GPIO_Pin_0, AF4_UART); //P1.0复用为串口功能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第496行定义.
+
+# 2.17.4.4 GPIO_ReadInputData()
+
+uint32_t GPIO_ReadInputData( GPIO_TypeDef * GPIOx )
+
+函数名称：uint32_t GPIO_ReadInputData(GPIO_TypeDef* GPIOx)
+
+功能描述：读取GPIO的输入数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：输入数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_IN_VALUE = 0;  GPIO_IN_VALUE = GPIO_ReadInputData(GPIO0); //读取P0.0~P0.15输入电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.gpio.c第217行定义
+
+# 2.17.4.5 GPIO_ReadInputDataBit()
+
+uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef * GPIOx, uint16_t GPIO_Pin)
+
+函数名称：uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+
+功能描述：读取GPIO的指定Pin的输入值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin: 指定的Pin（GPIO_Pin.0～GPIO_Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：指定Pin输入数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_IN_VALUE = 0; GPIO_IN_VALUE = GPIO_ReadInputDataBit(GPIO0, GPIO_Pin_0); //读取P0.0输入电平 1为高电平，0为低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.gpio.c第182行定义.
+
+# 2.17.4.6 GPIO_ReadOutputData()
+
+uint32_t GPIO_ReadOutputData(GPIOTypeDef * GPIOx)
+
+函数名称：uint32_t GPIO_ReadOutputData(GPIO_TypeDef* GPIOx)
+
+功能描述：读取GPIO的输出数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：输出数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_OUT_VALUE = 0; GPIO_OUT_VALUE = GPIO_ReadOutputData(GPIO0); //读取P0.0~P0.15输出电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件 Iks32mc08x_gpio.c 第 280 行定义.
+
+# 2.17.4.7 GPIO_ReadOutputDataBit()
+
+uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef * GPIOx, uint16_t GPIO_Pin)
+
+函数名称：uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+
+功能描述：读取GPIO的指定Pin的输出值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选 (GPIO0~GPIO3)
+GPIO_Pin: 指定的Pin (GPIO_Pin.0~GPIO_Pin.15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：指定IO输出数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_OUT_VALUE = 0; GPIO_OUT_VALUE = GPIO_ResetOutputDataBit(GPIO0, GPIO_Pin_0); //读取P0.0输出电平 1为高电平，0为低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.gpio.c第245行定义.
+
+# 2.17.4.8 GPIO_ResetBits()
+
+void GPIO_ResetBits(GPIO1. TypeDef * GPIOx, uint16_t GPIO_Pin)
+
+函数名称：void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+
+功能描述：GPIO指定Pin置1
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选 (GPIO0~GPIO3)
+GPIO_Pin: 指定的Pin (GPIO_Pin_0~GPIO_Pin_15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIOResetBits(GPIOO, GPIOPin_O);//P0.0输出低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第333行定义
+
+函数调用图：
+
+# 2.17.4.9 GPIO_SetBits()
+
+void GPIO_SetBits(GPIOTypeDef * GPIOx, uint16_t GPIOPin)
+
+函数名称：void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+
+功能描述：GPIO指定Pin置1
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO.Pin:指定的Pin（GPIO.Pin.0～GPIO.Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.SetBits(GPIOO, GPIO.Pin.0); //P0.0输出高电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件 Iks32mc08x_gpio.c 第 307 行定义.
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/924bd17ce80fd70bdc5450426547949b8c5f853336cc0974e2967b5f8346ca39.jpg)
+
+# 2.17.4.10 GPIO.StructInit()
+
+void GPIO.StructInit ( GPIO.InitTypeDef  $\ast$  GPIO.InitStruct)
+
+函数名称：void GPIO.StructInit(GPIO.InitTypeDef\* GPIO.InitStruct)
+
+功能描述：GPIO结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIO.InitStruct: GPIO初始化结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.InitTypeDef GPIO.InitStruct; GPIO.StructInit(&GPIO.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第151行定义
+
+# 2.17.4.11 GPIO_UnlockRegister()
+
+void GPIO_UnlockRegister ( GPIO_TypeDef \* GPIOx, uint16. t GPIO Pin )
+
+函数名称：void GPIO_UnlockRegister(GPIO_TypeDef\* GPIOx,uint16. t GPIO Pin)
+
+功能描述：GPIO寄存器保护解锁
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin:指定的Pin（GPIO_Pin_0～GPIO_Pin_15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：解锁后GPIO输入/输出/上下拉/开漏/功能选择可以被修改
+
+警告
+
+无
+
+示例代码：
+
+GPIO.UnlockRegister(GPIOx, GPIOPin, 0); //P0.0解锁
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第449行定义.
+
+# 2.17.4.12 GPIO-Write()
+
+void GPIO- Write ( GPIO- TypeDef * GPIOx, uint32_t Val)
+
+函数名称：void GPIO- Write(GPIO, GPIOx, uint32_t Val)
+
+功能描述：向GPIO写入数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选 (GPIO0～GPIO3)
+BitVal:写入的Bit值 (0x00～0xffff)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO- WriteBit(GPIO0, 0x01); // 0x1, 0置1，输出高电平，P0.1~P0.15值不变保持上一时刻状态
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.gpio.c第393行定义.
+
+# 2.17.4.13 GPIO_WriteBit()
+
+void GPIO_WriteBit ( GPIO_TypeDef \* GPIOx, uint16. t GPIO Pin, BitAction BitVal)
+
+函数名称：void GPIO_WriteBit(GPIOTypeDef\* GPIOx，uint16. t GPIO Pin, BitAction BitVal)
+
+功能描述：向GPIO指定的Pin写入数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO.Pin: 指定的Pin（GPIO.Pin_0～GPIO.Pin_15）
+BitVal: 写入的Bit值（Bit_RESET 或 Bit_SET）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO_WriteBit(GPIO0, GPIOPin.0, Bit_RESET); //P0.0输出低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第360行定义
+
+这是这个函数的调用关系图:
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/f00bd1582d2a10237af70a23718e532b95853082998e4aca5a8cf06f9e6017e8.jpg)
+
+# 2.18 lks32mc08x.gpio.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x.GPIO.H 00015 #define _LKS32MC08x.GPIO.H 00016 00017 00018 /\* Includes 00019 #include"lks32mc08x.h" 00020 #include"basic.h" 00021 00025 typedef struct 00026 { 00027 _IO uint32_t PFE; 00028 _IO uint32_t POE; 00029 _IO uint32_t PDI; 00030 _IO uint32_t PDO; 00031 _IO uint32_t PUE; 00032 _IO uint32_t PDE; 00033 _IO uint32_t PODE; 00034 _IO uint32_t LCKR; 00035 _IO uint32_t F3210; 00036 _IO uint32_t F7654; 00037 _IO uint32_t FBA98; 00038 _IO uint32_t FFEDC; 00039 } GPIO.TypeDef; 00040 00044 #ifndef GPIOO 00045 #define GPIOO ((GPIO.TypeDef \*) GPIOO.BASE) 00046 #endif 00050 #ifndef GPIO1 00051 #define GPIO1 ((GPIO.TypeDef \*) GPIO1_BASE) 00052 #endif 00056 #ifndef GPIO2 ((GPIO.TypeDef \*) GPIO2_BASE) 00057 #define GPIO2 00058 #endif 00062 #ifndef GPIO3 00063 #define GPIO3 ((GPIO.TypeDef \*) GPIO3_BASE) 00064 #endif 00065 00069 typedef enum 00070 { 00071 GPIO_Mode_IN  $= 0\times 00$  00072 GPIO_Mode_OUT  $= 0\times 01$  00073 GPIO_Mode_ANA  $= 0\times 02$  00074 }GPIOMode.TypeDef; 00075 00079 typedef enum 00080 { 00081 GPIO.PuPdNOPULL  $= 0\times 00$  00082 GPIO.PuPdUP  $= 0\times 01$  00083 }GPIOPuPd.TypeDef; 00084 00088 typedef enum 00089 { 00090 Bit_RESET  $= 0$  //写0 00091 Bit.SET //写1 00092 }BitAction;
+
+00093 00097 typedef struct 00098 { 00099 uint32. t GPIO.Pin; 00100 GPIOModeTypeDef GPIOMode; 00101 GPIOPuPdTypeDef GPIOPuPd; 00102 uint32. t GPIO.PoDena; 00103 GPIOInitTypeDef; 00104 00105 00106 #define AF0. GPIO 00107 #define AF1. SYSAF 1 00108 #define AF2. HALL 2 00109 #define AF3. MCPWM 3 00110 #define AF4. UART 4 00111 #define AF5. SPI 5 00112 #define AF6. I2C 6 00113 #define AF7. TIMER01 7 00114 #define AF8. TIMER23 8 00115 #define AF9. DEBUG 9 00116 #define AF10. CAN 10 00117 #define AF11. SIF 1 00119 /\* GPIO pin定位\*/ 00120 #define GPIO.Pin.NONE 0 00121 #define GPIO.Pin.0 BIT0 00122 #define GPIO.Pin.1 BIT1 00123 #define GPIO.Pin.2 BIT2 00124 #define GPIO.Pin.3 BIT3 00125 #define GPIO.Pin.4 BIT4 00126 #define GPIO.Pin.5 BIT5 00127 #define GPIO.Pin.6 BIT6 00128 #define GPIO.Pin.7 BIT7 00129 #define GPIO.Pin.8 BIT8 00130 #define GPIO.Pin.9 BIT9 00131 #define GPIO.Pin.10 BIT10 00132 #define GPIO.Pin.11 BIT11 00133 #define GPIO.Pin.12 BIT12 00134 #define GPIO.Pin.13 BIT13 00135 #define GPIO.Pin.14 BIT14 00136 #define GPIO.Pin.15 BIT15 00137 #define GPIO.Pin.ALL (uint32. t) 0xFFFF 00139 /\* GPIO复用功能.pin脚定义\*/ 00140 #define GPIO.PinSource.0 00141 #define GPIO.PinSource.1 00142 #define GPIO.PinSource.2 00143 #define GPIO.PinSource.3 00144 #define GPIO.PinSource.4 00145 #define GPIO.PinSource.5 00146 #define GPIO.PinSource.6 00147 #define GPIO.PinSource.7 00148 #define GPIO.PinSource.8 00149 #define GPIO.PinSource.9 00150 #define GPIO.PinSource.10 00151 #define GPIO.PinSource.11 00152 #define GPIO.PinSource.12 00153 #define GPIO.PinSource.13 00154 #define GPIO.PinSource.14 00155 #define GPIO.PinSource.15 00156 #define GPIO.PinSource.16 00157 /\* 初始化、配置函数\* 00158 void GPIO.Init(GPIO.TypeDef\* GPIOx, GPIO.InitTypeDef\* GPIO.InitStruct); 00159 void GPIO.StructInit(GPIO.InitTypeDef\* GPIO.InitStruct); 00160 00161 void GPIO.LockRegister(GPIO.TypeDef\* GPIOx,uint16_t GPIO.Pin); 00162 void GPIO.UnlockRegister(GPIO.TypeDef\* GPIOx,uint16_t GPIO.Pin); 00163 00164 /\* GPIO读写函数\* 00165 uint8. t GPIO.ReadInputDataBit(GPIO.TypeDef\* GPIOx, uint16_t GPIO.Pin); 00166 uint32. t GPIO.ReadInputData(GPIO.TypeDef\* GPIOx); 00167 uint8. t GPIO.ReadOutputDataBit(GPIO.TypeDef\* GPIOx, uint16_t GPIO.Pin); 00168 uint32. t GPIO.ReadOutputData(GPIO.TypeDef\* GPIOx); 00169 00170 void GPIO.SetBits(GPIO.TypeDef\* GPIOx, uint16_t GPIO.Pin); 00171 void GPIO.ResetBits(GPIO.TypeDef\* GPIOx, uint16_t GPIO.Pin); 00172 void GPIO.Write(GPIO.TypeDef\* GPIOx, uint32. t Val); 00173 void GPIO.WriteBit(GPIO.TypeDef\* GPIOx, uint16_t GPIO.Pin, BitAction BitVal); 00174 00175 /\* GPIO功能选择函数\* 00176 void GPIO.PinAConfig(GPIO.TypeDef\* GPIOx, uint32. t GPIO.PinSource, uint32. t GPIO.AF); 00177 00178 #endif /\* _lks32mc08x.GPIO.H \*/ 00179 00180 00181 00182 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*
+
+# 2.19 Include/lks32mc08x_hall.h 文件参考
+
+文件名称：lks32mc08x_hall.h  文件标识：无  内容摘要：HALL驱动头文件  其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x_hall.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/15551553d6a7ef7781240b298a1e4998e0bc057cc899f93d752b727a59a9179e.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/c936bc8fe847941c8566dbfdfeab4b60e62f8f378f2b5857b2def0b1c9559388.jpg)
+
+# 结构体
+
+结构体- struct HALL_TypeDef  HALL寄存器结构体句柄- struct HALL_InitTypeDef  HALL结构体基地址定义
+
+# 宏定义
+
+宏定义- #define HALL_CLK_DIV1 ((uint32_t)0x00)  HALL时钟为系统主时钟1分频- #define HALL_CLK_DIV2 ((uint32_t)0x01)  HALL时钟为系统主时钟2分频- #define HALL_CLK_DIV4 ((uint32_t)0x02)  HALL时钟为系统主时钟4分频- #define HALL_CLK_DIV8 ((uint32_t)0x03)  HALL时钟为系统主时钟8分频- #define HALL_CAPTURE_EVENT ((uint32_t)0x00010000)  HALL中断使能和标志定义，HALL信号变化中断- #define HALL_OVERFLOW_EVENT ((uint32_t)0x00020000)  HALL中断使能和标志定义，HALL计数溢出中断
+
+# 函数
+
+- void HALL_Init (HALL_InitTypeDef *HALL_InitStructure)  函数名称: void HALL_Init(HALL_InitTypeDef *HALL_InitStructure)- void HALL_StructInit (HALL_InitTypeDef *HALL_InitStructure)  函数名称: void HALL_StructInit(HALL_InitTypeDef *HALL_InitStructure)- uint32_t HALL_GetFilterValue (void)  函数名称: uint32_t HALL_GetFilterValue(void)- uint32_t HALL_GetCaptureValue (void)  函数名称: uint32_t HALL_GetCaptureValue(void)- uint32_t HALL_WIDCount (void)  函数名称: uint32_t HALL_WIDCount(void)- uint32_t HALL_GetCount (void)  函数名称: uint32_t HALL_GetCount(void)- uint32_t HALL_GetIRQFlag (uint32_t tempFlag)  函数名称: uint32_t HALL_GetIRQFlag(uint32_t tempFlag)- void HALL_ClearIRQFlag (uint32_t tempFlag)  函数名称: uint32_t HALL_ClearIRQFlag (uint32_t tempFlag)
+
+# 2.19.1 详细描述
+
+文件名称：lks32mc08x_hall.h  文件标识：无  内容摘要：HALL驱动头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年04月19日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.h中定义
+
+# 2.19.2 宏定义说明
+
+# 2.19.2.1 HALL.CAPTURE.EVENT
+
+define HALL.CAPTURE.EVENT ((uint32. t)0x00010000)
+
+HALL中断使能和标志定义，HALL信号变化中断
+
+在文件lks32mc08x.hall.h第60行定义.
+
+# 2.19.2.2 HALLCLKDIV1
+
+define HALLCLKDIV1 ((uint32. t)0x00)
+
+HALL时钟为系统主时钟1分频
+
+在文件lks32mc08x.hall.h第56行定义.
+
+# 2.19.2.3 HALLCLKDIV2
+
+define HALLCLKDIV2 ((uint32. t)0x01)HALL时钟为系统主时钟2分频在文件lks32mc08x.hall.h第56行定义.
+
+# 2.19.2.4 HALLCLKDIV4
+
+define HALLCLKDIV4 ((uint32. t)0x02)
+
+HALL时钟为系统主时钟4分频
+
+在文件lks32mc08x.hall.h第57行定义.
+
+# 2.19.2.5 HALLCLKDIV8
+
+define HALLCLKDIV8 ((uint32. t)0x03)
+
+HALL时钟为系统主时钟8分频
+
+在文件lks32mc08x.hall.h第58行定义.
+
+# 2.19.2.6 HALL.OVERFLOW.EVENT
+
+define HALL.OVERFLOW.EVENT ((uint32_t)0x00020000)
+
+HALL中断使能和标志定义，HALL计数溢出中断
+
+在文件lks32mc08x.hall.h第61行定义
+
+# 2.19.3 函数说明
+
+# 2.19.3.1 HALL.ClearIRQFlag()
+
+void HALL.ClearIRQFlag ( uint32_t tempFlag)
+
+函数名称：uint32_t HALL_ClearIRQFlag(uint32_t tempFlag)
+
+功能描述：清除HALL中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">tempFlag:</td></tr><tr><td>HALL_CAPTURE_EVENT</td><td>HALL信号变化中断</td></tr><tr><td>HALL_OVERFLOW_EVENT</td><td>HALL计数溢出中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+if（HALL.GetIRQFlag（HALL.CAPTURE_EVENT））//读取HALL信号变化中断标志位{HALL.ClearIRQFlag（HALL.CAPTURE_EVENT）；//清除HALL信号变化中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年5月20日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_hall.c 第 247 行定义.
+
+# 2.19.3.2 HALL.GetCaptureValue()
+
+uint32_t HALL.GetCaptureValue( void )
+
+函数名称：uint32_t HALL_GetCaptureValue(void)
+
+功能描述：取得HALL值，未滤波结果，即采样的原始HALL状态值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：未滤波的HALL信号结果值，第三位有效，其它位恒为0
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：uint32_t HALL.Value = 0;  HALL.Value = HALL.GetCaptureValue(); //读取未滤波的HALL结果值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第135行定义
+
+# 2.19.3.3 HALL.GetCount()
+
+uint32_t HALL.GetCount (void)
+
+函数名称：uint32_t HALL_GetCount(void)
+
+功能描述：读取实时HALL计数器值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：实时HALL计数器值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：uint32_t HALL.Value = 0;  HALL.Value = HALL.GetCount(); //读取实时HALL计数器值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_hall.c 第 185 行定义.
+
+# 2.19.3.4 HALL.GetFilterValue()
+
+uint32_t HALL.GetFilterValue (void)
+
+函数名称：uint32_t HALL_GetFilterValue(void)
+
+功能描述：取得HALL值，滤波结果
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：经过滤波的HALL信号结果值，第三位有效，其它位恒为0
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：uint32_t HALL.Value = 0;  HALL.Value = HALL.GetFilterValue(); //读取经过滤波的HALL结果值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_hall.c 第 110 行定义.
+
+# 2.19.3.5 HALL_GetIRQFlag()
+
+uint32_t HALL_GetIRQFlag ( uint32_t tempFlag)
+
+函数名称：uint32_t HALL_GetIRQFlag(uint32_t tempFlag)
+
+功能描述：读取HALL中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">tempFlag:</td></tr><tr><td>HALL_CAPTURE_EVENT</td><td>HALL信号变化中断</td></tr><tr><td>HALL_OVERFLOW_EVENT</td><td>HALL计数溢出中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：HALL中断标志为1即对应标志位置位，为0即对应标志位末置位
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(HALL.GetIRQFlag(HALL.CAPTURE_EVENT)) //读取HALL信号变化中断标志位{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年5月20日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第216行定义.
+
+# 2.19.3.6 HALL_Init()
+
+void HALL_Init {    HALL_InitTypeDef *HALL_InitStruct }
+
+函数名称：void HALL_Init(HALL_InitTypeDef* HALL_InitStruct)
+
+功能描述：HALL初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>HALL_InitTypeDef HALL_InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+# 警告
+
+无
+
+示例代码：
+
+HALLInitTypeDef HALLInitStruct; HALLStructInit(&HALLInitStruct); // 初始化结构体 HALLInitStruct.HALL_Ena  $=$  ENABLE; // 模块使能 HALLInitStruct.ClockDivision  $=$  HALL_CLK_DIV1; // 设置Hall模块时钟分频系数 HALLInitStruct.CountTH  $=$  9600000; // Hall模块计数模值，计数超过模值会产生超时中断 HALLInitStruct.FilterLen  $=$  512; // Hall信号数字滤波长度512个时钟周期 HALLInitStruct.Filter75Jma  $=$  ENABLE; // Hall信号滤波方式，7列5模式或者全1有效模式 HALLInitStruct.Expstruct.HALL_Ena  $=$  ENABLE; // 指定中断使能 HALLInitStruct.OverFlow.Rq_Ena  $=$  ENABLE; // 超时中断使能 HALLInitStruct.softIE  $=$  DISABLE; // 软件中断使能 HALLInit(&HALLInitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第46行定义
+
+函数调用图：
+
+void HALLStructInit( HALLInitTypeDef  $\ast$  HALLInitStruct)
+
+函数名称：voidHALLStructInit(HALLInitTypeDef\*HALLInitStruct)
+
+功能描述：HALL结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>HALL_InitTypeDef HALL_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+HALL_InitTypeDef HALL_InitStructure; HALL_StructInit(&HALL_InitStructure); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第78行定义
+
+# 2.19.3.8 HALL_WIDCount()
+
+uint32_t HALL_WIDCount (void)
+
+函数名称：uint32_t HALL_WIDCount(void)
+
+功能描述：读取HALL信号变化事件时刻HALL计数值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：获取三颗HALL信号任何一个信号发生变化事件时刻的HALL计数器的计数值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+uint32_t HALL.Value = 0;  HALL.Value = HALL_WIDCount(t, //读取HALL信号变化事件时刻HALL计数值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第160行定义.
+
+# 2.20 lks32mc08x_hall.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x_HALL.h 00015 #define _LKS32MC08x_HALL.h 00016 00017 /\*Includes 00018 #include"lks32mc08x.lib.h" 00019 00023 typedef struct 00024 { 00025 _IO uint32_t CFG; 00026 _IO uint32_t INFO; 00027 _IO uint32_t WIDTH; 00028 _IO uint32_t TH; 00029 _IO uint32_t CNT; 00030 } HALLTypeDef; 00031 00035 #ifndef HALL 00036 #define HALL ((HALL_typeDef \*)HALL.BASE) 00037 #endif 00038
+
+00042 typedef struct 00043 { 00044 uint16. t FilterLen; 00045 uint8. t ClockDivision; 00046 uint8. t Filter75. Ena; 00047 uint8. t HALL. Ena; 00048 uint8. t Capture.IRQ. Ena; 00049 uint8. t Overflow.IRQ. Ena; 00050 uint32. t CountTH; 00051 uint8. t softIE; 00052 } HALL.InitTypeDef; 00053 00054 00055 #define HALL.CLK.DIV1 ((uint32. t)0x00) 00056 #define HALL.CLK.DIV2 ((uint32. t)0x01) 00057 #define HALL.CLK.DIV4 ((uint32. t)0x02) 00058 #define HALL.CLK.DIV8 ((uint32. t)0x03) 00059 #define HALL.CLK.DIV9 ((uint32. t)0x00010000) 00060 #define HALL.CAPTURE.EVENT ((uint32. t)0x00010000) 00061 #define HALL.OVERFLOW.EVENT ((uint32. t)0x00020000) 00063 void HALL.Init(HALL.InitTypeDef \*HALL.InitStruct); 00064 void HALL.StructInit (HALL.InitTypeDef \*HALL.InitStruct); 00065 00066 uint32. t HALL.GetFilterValue(void); 00067 uint32. t HALL.GetCaptureValue(void); 00068 uint32. t HALL.WIDCount(void); 00069 uint32. t HALL.GetCount(void); 00070 00071 uint32. t HALL.GetIRQFlag(uint32. t tempFlag); 00072 void HALL.ClearIRQFlag(uint32. t tempFlag); 00073 00074 #endif /\*..lks32mc08x.HALL.H \*/ 00075 00076 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* (C) COPYRIGHT LINKO SEMICONDUCTOR \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*/
+
+# 2.21 Include/lks32mc08x.i2c.h 文件参考
+
+文件名称：lks32mc08x.i2c.h  文件标识：无  内容摘要：I2C驱动头文件  其它说明：无
+
+include "lks32mc08x.i1b.h"  lks32mc08x.i2c.h 的引用(Include)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/f55944926529478c6b4ba621c8c8a98f47b0803e30a17144fadd91f8fa4900eb.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/2f268914c117ecda5031c99087b243088c77b5999bca796c871a15317e1074ee.jpg)
+
+# 结构体
+
+- struct I2C_TypeDef  I2C寄存器结构体句柄  
+- struct I2C.InitTypeDef  I2C结构体基地址定义
+
+# 函数
+
+·void I2C_Init (I2C_TypeDef  $*12Cx$  ,I2C_InitTypeDef  $*12C$  InitStruct) 函数名称：voidI2C_InitI2C._TypeDef\*I2Cx,I2C_InitTypeDef\*I2C.InitStruct) ·void I2C_StructInit (I2C_InitTypeDef  $*12C$  InitStruct) 函数名称：voidI2C_StructInit(I2C_InitTypeDef\*I2C.InitStruct) ·void I2C_SendData (I2C_TypeDef  $*12Cx$  ,uint8_t n) 函数名称：voidI2C_SendData(I2C_TypeDef  $*12Cx$  uint8_t n) ·uint8_t I2C_ReadData (I2C_TypeDef  $*12Cx$  函数名称：uint8.1I2C_ReadData(I2C_TypeDef  $*12Cx$  ·void I2c_dma_rx (u8 addr,u8 \*data,u8 len) 函数名称：voidI2c_dma_rx(u8 addr,u8 \*data,u8 len) ·void I2c_dma_tx (u8 addr,u8 \*data,u8 len) 函数名称：voidI2c_dma_tx(u8 addr,u8 \*data,u8 len) ·void I2c_dma.init (void) 函数名称：voidI2c_dma_init(void) ·void I2c_dma_state_over (void) 函数名称：voidI2c_dma_state_over()
+
+# 2.21.1 详细描述
+
+文件名称： Iks32mc08x_i2c.h文件标识：无内容摘要：I2C驱动头文件其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.h 中定义.
+
+# 2.21.2 函数说明
+
+# 2.21.2.1 i2c.dma.init()
+
+void i2c.dma.init（ void
+
+函数名称：voidi2c.dma.init（void)
+
+功能描述：DMA硬件初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+i2c.dma.init（）；//I2C的相关DMA模块硬件初始化
+
+修改日志：
+
+在文件lks32mc08x.i2c.c第364行定义
+
+函数调用图：
+
+这是这个函数的调用关系图：
+
+# 2.21.2.2 i2c_dma_rx()
+
+void i2c_dma_rx (u8 addr,u8 \* data,u8 len)
+
+函数名称：void i2c_dma_rx（u8 addr,u8 \*data,u8 len)
+
+功能描述：I2C数据接收函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>addr: IIC发送地址 data: 发送数据缓冲器 len: 发送数据长度</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 i2c_Buff[8] = {0x00};  i2c_dma_rx(0x23, i2c_Buff, 8); //将接收0x23地址的从机8个字节存储在i2c_Buff数组内
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_i2c.c第327行定义.
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/8b086aef8e754744643609973b18ec9e4ebfbc5caf6fbe43a20afddb7770b869.jpg)
+
+# 2.21.2.3 i2c_dma_state_over()
+
+void i2c_dma_state_over (void)
+
+函数名称：void i2c_dma_state_over()
+
+功能描述：I2C发送完成函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+void I2C0_IRQHandler (void) { I2C- >SCR = 0; i2c.dma.state.over(); // iic传输完成 }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.i2c.c第233行定义
+
+# 2.21.2.4 i2c.dma.tx()
+
+void i2c.dma.tx { u8 addr, u8 * data, u8 len }
+
+函数名称：void i2c.dma.tx(u8 addr, u8 *data, u8 len)
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>addr: IIC发送地址 data: 发送数据缓冲器 len: 发送数据长度</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 i2c_Buff[8] = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};  i2c_dma_tx(0x23, i2c_Buff, 8); // 发生给0x23地址的从机8个字节i2c_Buff数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.c 第 285 行定义.
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/5301e5c6b0d6a659665dbaa0fcc990b198a6908b1863f522a092800ad3090d56.jpg)
+
+# 2.21.2.5 I2C_Init()
+
+void I2C_Init (I2C_TypeDef *I2Cx,I2C.InitTypeDef *I2C.InitStruct)
+
+函数名称：void I2C_Init(I2C_TypeDef *I2Cx, I2C_InitTypeDef *I2C.InitStruct)
+
+功能描述：I2C初始化
+
+参见
+
+被引用内容：SYS_ModuleClockCmd() SYS.SoftResetModule();
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2Cx: I2C, I2C_InitTypeDef *I2C_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：I2C_InitTypeDef I2C_InitStructure;I2C_StructInit(&I2C_InitStructure); // 初始化结构体I2C_InitStructure.ADRCMP = DISABLE; // I2C 硬件地址比较使能开关，只有在 DMA 模式下开启才有效。I2C_InitStructure.MST_MODE = ENABLE; // I2C 主模式使能I2C_InitStructure.SLV_MODE = ENABLE; // I2C 从模式使能I2C_InitStructure.DMA = ENABLE; // I2C DMA传输使能I2C_InitStructure.BaudRate = 100000; // I2C 波特率I2C_InitStructure.IE = ENABLE; // I2C 中断使能I2C_InitStructure.TC_IE = ENABLE; // I2C 数据传输完成中断使能I2C_InitStructure.BUS_ERR_IE = DISABLE; // I2C 总线错误事件中断使能I2C_InitStructure.STOP_IE = DISABLE; // I2C STOP 事件中断使能I2C_InitStructure.BURST_NACK = ENABLE; // I2C 传输，NACK 事件中断使能I2C_InitStructure.BURST_ADDRCMP = DISABLE; // I2C 传输，硬件地址匹配中断使能I2C_Init(I2C, &I2C_InitStructure);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.c 第 51 行定义.
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/881f649d181994d270294fe478ee82e6b00ede30d58446aebeceac0f8bb3406c.jpg)
+
+# 2.21.2.6 I2C_ReadData()
+
+uint8_t I2C_ReadData (I2C_TypeDef * I2Cx)
+
+函数名称：uint8_t I2C_ReadData(I2C_TypeDef * I2Cx)
+
+功能描述：I2C 读缓冲区数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>I2Cx:I2C</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：I2C 接收的一字节数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 I2C.Value = 0;  I2C.Value = I2C_ReadData(I2C); //I2C接收的一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.c 第 164 行定义.
+
+# 2.21.2.7 I2C_SendData()
+
+void I2C_SendData(I2C::I2CDef * I2Cx, uint8_t n)
+
+函数名称：void I2C_SendData(I2C_TypeDef * I2Cx, uint8_t n)
+
+功能描述：I2C发送数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2Cx:I2C, n:要发生的一字节数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：I2C_SendData(I2C, 0x12); //发生0x12数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.c 第 138 行定义.
+
+# 2.21.2.8 I2C_StructInit()
+
+void I2C_StructInit( I2C InitTypeDef * I2C_InitStructure )
+
+函数名称：void I2C_StructInit(I2C_InitStructure)
+
+功能描述：I2C结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2C_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+I2C.InitTypeDef I2C.InitStruct; I2C.StructInit(&I2C.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.i2c.c 第 104 行定义.
+
+# 2.22 Iks32mc08x.i2c.h
+
+# 浏览该文件的文档
+
+00001 00015 #ifndef _LKS32MC08x.I2C.I 00016 #define _LKS32MC08x.I2C.I 00017 00018 #include"lks32mc08xl.lib.h" 00019 00023 typedef struct 00024 { 00025 _IO uint32_t ADDR; 00026 _IO uint32_t GTC; 00027 _IO uint32_t SCR; 00028 _IO uint32_t DATA; 00029 _IO uint32_t MSCR; 00030 _IO uint32_t BCR; 00031 }I2CTypeDef; 00032 00033 00037 #ifndef I2C 00038 #define I2C ((I2CTypeDef *) I2C0_BASE) 00039 #endif 00040 00044 typedef struct 00045 { 00046 u8 ADRCMP ; 00047 u8 MST_MODE 00048 u8 SLV_MODE 00049 u8 DMA ; 00050 u32 BaudRate ; 00051 u8 IE ; 00052 u8 TC_IE 00053 u8 BUS_ERR_IE ; 00054 u8 STOP_IE 00055 u8 BURST_NACK 00056 u8 BURST_ADDR_CMP ; 00057 }I2C_InitTypeDef; 00058 00059 void I2C_Init(I2CTypeDef *I2Cx, I2C_InitTypeDef *I2C_InitStructure); 00060 void I2C_StructInit(I2C_InitStructure) ; 00061 00062 void I2C_SendData(I2CTypeDef *I2Cx, uint8_t n); 00063 uint8_t I2C_ReadData(I2CTypeDef *I2Cx); 00064 00065 // i2c&dma发送接收 00066 void i2c_dma_rx(u8 addr, u8 *data, u8 len); 00067 void i2c_dma_tx(u8 addr, u8 *data, u8 len); 00068 void i2c_dma_init(void); 00069 void i2c_dma_state_over(void); 00070 00071 #endif /*_lks32mc08x.I2C.H */ 00072 00073 00074 00075 / \* (C) COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*END OF FILE\*\*\*
+
+# 2.23 Include/lks32mc08x.iwdg.h文件参考
+
+文件名称：lks32mc08x.IWDG.h文件标识：无内容摘要：看门狗驱动头文件其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x.iwdg.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/869b911eddf213bb695cdc977df173d397f6a7fb9bf6e191b9a10ac3b8933119.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/17139b94f14ad1fb771234bc11e4a23722fd6e5195e0e47ca1a877867a7b58f6.jpg)
+
+# 结构体
+
+- struct IWDG_InitTypeDef IWDG寄存器结构体句柄
+
+# 宏定义
+
+- #define WDT_RTH_2S 3  看门狗超时复位时间1秒- #define WDT_RTH_4S 2  看门狗超时复位时间4秒- #define WDT_RTH_8S 1  看门狗超时复位时间8秒- #define WDT_RTH_64S 0  看门狗超时复位时间6秒
+
+# 函数
+
+- void IWDG_Init (IWDG_InitTypeDef *)  函数名称：void IWDG_Init(IWDG_InitTypeDef *this)- void IWDG_StrutInit (IWDG_InitTypeDef *)  函数名称：void IWDG_StrutInit(IWDG_InitTypeDef *this)- void IWDG_DISABLE (void)  函数名称：void IWDG_DISABLE(void)- void IWDG_ENABLE (void)  函数名称：void IWDG_ENABLE(void)- void IWDG_Feed (uint32_t timeOut)  函数名称：void IWDG_Feed(uint32_t timeOut)
+
+# 2.23.1 详细描述
+
+文件名称： Iks32mc08x_IwDG.h文件标识：无内容摘要：看门狗驱动头文件其它说明：无
+
+版权所有
+
+(C)2015,LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.h 中定义。
+
+# 2.23.2 宏定义说明
+
+# 2.23.2.1 WDT.RTH.2S
+
+define WDT.RTH.2S 3
+
+看门狗超时复位时间1秒
+
+在文件 Iks32mc08x_iwdg.h 第29行定义。
+
+# 2.23.2.2 WDT.RTH.4S
+
+define WDT.RTH.4S 2
+
+看门狗超时复位时间4秒
+
+在文件 Iks32mc08x_iwdg.h 第30行定义。
+
+# 2.23.2.3 WDT.RTH.64S
+
+define WDT.RTH.64S 0
+
+看门狗超时复位时间64秒
+
+在文件 Iks32mc08x.iwdg.h 第 32 行定义.
+
+# 2.23.2.4 WDT.RTH.8S
+
+define WDT.RTH.8S 1
+
+看门狗超时复位时间8秒
+
+在文件 Iks32mc08x.iwdg.h 第 31 行定义.
+
+# 2.23.3 函数说明
+
+# 2.23.3.1 IWDG DISABLE()
+
+void IWDG_DISABLE（void ）
+
+函数名称：voidIWDG_DISABLE（void)
+
+功能描述：关闭看门狗模块
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG DISABLE(); //关闭射门狗模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 104 行定义.
+
+# 2.23.3.2 IWDG.ENABLE()
+
+void IWDG_ENABLE（void
+
+函数名称：void IWDG_ENABLE(void)
+
+功能描述：打开看门狗模块
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回返回值：无
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG_ENABLE(); //打开看门狗模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x.iwdg.c 第 128 行定义.
+
+# 2.23.3.3 IWDG_Feed()
+
+void IWDG_Feed ( uint32_t timeout)
+
+函数名称：void IWDG_Feed(uint32_t timeout)
+
+功能描述：看门狗喂狗
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>timeOut: 看门狗复位时间
+WDT.RTH.2S 3s
+WDT.RTH.4S 2s
+WDT.RTH.8S 1s
+WDT.RTH.64S 0s</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+警告无
+
+示例代码：
+
+示例代码：IWDG.Feed(WDT.RTH.2S); //看门狗喂狗，且设置下一次复位时间为2s
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.iwdg.c第157行定义.
+
+# 2.23.3.4 IWDG.Init()
+
+void IWDG.Init (IWDG.InitTypeDef *this)
+
+函数名称：void IWDG_Init(IWDG_InitTypeDef *this)
+
+功能描述：看门狗初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>IWDG.InitTypeDef *this 看门狗配置结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：IWDG.InitTypeDef IWDG.InitStruct;IWDGStrutInit（&IWDG.InitStruct); //初始化结构体IWDG.InitStruct.WDG_EN  $=$  ENABLE; //使能看门狗IWDG.InitStruct.RTH  $=$  WDT.RTH- 2S；//设置看门狗2S后复位芯片IWDG.Init（&IWDG.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 40 行定义.
+
+# 2.23.3.5 IWDG_StrutInit()
+
+void IWDG_StrutInit (IWDG_InitTypeDef *this)
+
+函数名称：void IWDG_StrutInit(IWDG_InitTypeDef *this)功能描述：看门狗配置结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>IWDG_InitTypeDef *this 看门狗配置结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：IWDG.InitTypeDef IWDG.InitStruct;IWDG.StrutInit(&IWDG.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x.iwdg.c 第 76 行定义.
+
+# 2.24 Iks32mc08x.iwdg.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x.IwdG.H 00015 #define _LKS32MC08x.IwdG.H 00016 00017 /\*Includes 00018 #include"lks32mc08x.lib.h" 00019 00023 typedef struct 00024 { 00025 u32_WDG_EN; 00026 u32_RTH; 00027 ]IWDG.InitTypeDef; 00028 00029 #define WDT.RTH_2S 3 00030 #define WDT.RTH_4S 2 00031 #define WDT.RTH_8S 1 00032 #define WDT.RTH_64S 0 00034 void IWDG.Init(Iwdg.InitTypeDef \*); //看门狗初始化 00035 void IWDG.StrutInit(Iwdg.InitTypeDef \*); //看门狗配置结构体初始化 00036 void IWDG.DISABLE(void); //关闭看门狗 00037 void IWDG荫ABLE(void); //使能看门狗 00038 void IWDG.Feed(uint32_t timeOut); //看门狗喂狗 00039 #endif /\*Lks32mc08x.Iwdg.H \*/ 00040 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* （C）COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
+
+# 2.25 Include/lks32mc08x.lib.h文件参考
+
+文件名称：LKS32MC08x.lib.h文件标识：无内容摘要：LIB库函数头文件其它说明：无
+
+include"lks32mc08x. h" #include"basic.h" #include"lks32mc08x. adc.h" #include"lks32mc08x. can.h" #include"lks32mc08x. emp.h" #include"lks32mc08x. dma.h" #include"lks32mc08x. dac.h" #include"lks32mc08x.dsp.h"
+
+include "lks32mc08. x.exti.h" #include "lks32MC08. x. flash.h" #include "lks32mc08. x.pio.h" #include "lks32mc08. x. lall.h" #include "lks32mc08. x.12c.h" #include "lks32mc08. x.ncpwm.h" #include "lks32mc08. x.nvr.h" #include "lks32mc08. x.opa.h" #include "lks32mc08. x.spi.h" #include "lks32mc08. x.sys.h" #include "lks32mc08. x. tim.h" #include "lks32mc08. x. uart.h" #include "lks32mc08. x. wdg.h" #include "lks32mc08. x. imp.h" lks32mc08x.lib.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/442acea2bf36895984c2a1e91504202169a406f7bbb8764e259cc62e6b19529c.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/22cab79a9d99c4c70a9a23f411edd2d1f90393251edd70031e9387a8b4193e81.jpg)
+
+# 2.25.1 详细描述
+
+文件名称： LKS32MC08x.lib.h  文件标识：无  内容摘要：LIB库函数头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月11日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.lib.h中定义
+
+# 2.26 Iks32mc08x.lib.h
+
+# 浏览该文件的文档
+
+00001 00015 #ifndef _LKS32MC08x.LIB.h 00016 #define _LKS32MC08x.LIB.h 00017 00018 #include"lks32mc08x.h" 00019 #include"basic.h" 00020 00021 #include"lks32mc08x.adch" 00022 #include"lks32mc08x.camp.h" 00023 #include"lks32mc08x.cmp.h" 00024 #include"lks32mc08x.dma.h" 00025 #include"lks32mc08x.adch" 00026 #include"lks32mc08x.dsp.h" 00027 #include"lks32mc08x.ext.h" 00028 #include"lks32mc08x.fia.h" 00029 #include"lks32mc08x.fpa.h" 00030 #include"lks32mc08x.gpi.h" 00031 #include"lks32mc08x.hal.h" 00032 #include"lks32mc08x.mcpwm.h" 00033 #include"lks32mc08x.nvr.h" 00034 #include"lks32mc08x.opah" 00035 #include"lks32mc08x.spi.h" 00036 #include"lks32mc08x.sys.h" 00037 #include"lks32mc08x.tmi.h" 00038 #include"lks32mc08x.uar.h" 00039 #include"lks32mc08x.spi.h" 00040 #include"lks32mc08x.ivd.h" 00041 #include"lks32mc08x.tmp.h" 00042 00043 #endif /\*_LKS32MC08x.LIB.h\*/ 00044 00045 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+# 2.27 Include/lks32mc08x.mcpwm.h 文件参考
+
+文件名称：lks32mc08x.mcpwm.h  文件标识：无  内容摘要：mcpwm驱动头文件  其它说明：无
+
+include"lks32mc08x.h" #include"basic.h" lks32mc08x.mcpwm.h的引用(include)关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/ab63dfd86a93b79dfa3c4a760ed75f5a08341b252fa54addaf34a477e0d6ea75.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/8b0b8bf373f1b6c5e216eda9d37fb91a7c439370f14b1ab2c673f0f87a9043a0.jpg)
+
+# 结构体
+
+结构体- struct MCPWM.InitTypeDef  MCPWM初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 宏定义
+
+宏定义- #define MCPWM.MOE_ENABLE_MASK ((uint16_t)0x0040)  打开MOE位- #define MCPWM.MOE DISABLE_MASK ((uint16_t)~0x0040)  关MOE位- #define CENTRAL_PWM.MODE 0  中心对齐PWM模式- #define EDGE_PWM.MODE 1  边沿对齐PWM模式- #define HIGH_LEVEL 1  高电平- #define LOW_LEVEL 0  低电平- #define HIGH_LEVEL_ACTIVE 0  高电平有效- #define LOW_LEVEL_ACTIVE 1  低电平有效- #define FAIL_SEL_CMP 1  Fail事件来源比较器- #define FAIL_SEL_IO 0  Fail事件来源比较器- #define MCPWM_UPDATE_REG()  手动更新占空比寄存器值到实际运行寄存器中- #define MCPWM.TO_IRQ_EN_BIT0  计数器计数值回到MCPWM.TH1中断使能- #define MCPWM.T1_IRQ_EN_BIT1  计数器计数值回到CPU断使能- #define MCPWM.TH00_IRQ_EN_BIT2  计数器计数值回到MCPWM.TH00中断使能- #define MCPWM.TH01_IRQ_EN_BIT3  计数器计数值回到MCPWM.TH01中断使能- #define MCPWM.TH01_IRQ_EN_BIT4  计数器计数值回到MCPWM.TH10中断使能- #define MCPWM.TH11_IRQ_EN_BIT5  计数器计数值回到MCPWM.TH11中断使能- #define MCPWM.TH20_IRQ_EN_BIT6  计数器计数值回到MCPWM.TH20中断使能
+
+- #define MCPWM.TH21.IRQ-EN BIT7    计数器计数值回到MCPWM.TH21中断使能- #define MCPWM.TH30.IRQ-EN BIT8    计数器计数值回到MCPWM.TH30中断使能- #define MCPWM.TH31.IRQ-EN BIT9    计数器计数值回到MCPWM.TH31中断使能- #define MCPWM.TMR0.IRQ-EN BIT10    计数器计数值回到MCPWM.TMR0中断使能- #define MCPWM.TMR1.IRQ-EN BIT11    计数器计数值回到MCPWM.TMR1中断使能- #define MCPWM.TMR2.IRQ-EN BIT12    计数器计数值回到MCPWM.TMR0中断使能- #define MCPWM.TMR3.IRQ-EN BIT13    计数器计数值回到MCPWM.TMR1中断使能- #define MCPWM.SHADELIQ-EN BIT14    MCPWM.TH/MCPWM.TH00-MCPWM.TH31/ \ MCPWM.TR0-MCPWM.TR3等寄存器更新到MCPWM实际运行系统中断使能- #define MCPWM.CH0-SHORT.IRQ-EN BIT0    MCPWMCH0_P和CH0N同时有效中断使能- #define MCPWM.CH1-SHORT.IRQ-EN BIT1    MCPWMCH1_P和CH1N同时有效中断使能- #define MCPWM.CH2-SHORT.IRQ-EN BIT2    MCPWMCH2_P和CH2N同时有效中断使能- #define MCPWM.CH3-SHORT.IRQ-EN BIT3    MCPWMCH3_P和CH3N同时有效中断使能- #define MCPWM.FAIL0.IRQ-EN BIT4    MCPWM.FAIL0中断使能- #define MCPWM.FAIL1.IRQ-EN BIT5    MCPWM.FAIL1中断使能- #define MCPWM.T0.IRQ-IF BIT0    计数器计数值回到MCPWM.TH中断标志位- #define MCPWM.T1_IRQ-IF BIT1    计数器计数值回到0中断标志位- #define MCPWM.TH00.IRQ_IF BIT2    计数器计数值回到MCPWM.TH00中断标志位- #define MCPWM.TH01_IRQ_IF BIT3    计数器计数值回到MCPWM.TH01中断标志位- #define MCPWM.TH10.IRQ_IF BIT4    计数器计数值回到MCPWM.TH10中断标志位- #define MCPWM.TH11.IRQ_IF BIT5    计数器计数值回到MCPWM.TH11中断标志位- #define MCPWM.TH20.IRQ_IF BIT6    计数器计数值回到MCPWM.TH20中断标志位- #define MCPWM.TH21.IRQ_IF BIT7    计数器计数值回到MCPWM.TH21中断标志位- #define MCPWM.TH30.IRQ_IF BIT8    计数器计数值回到MCPWM.TH30中断标志位- #define MCPWM.TH31.IRQ_IF BIT9    计数器计数值回到MCPWM.TH31中断标志位- #define MCPWM.TMR0.IRQ_IF BIT10    计数器计数值回到MCPWM.TMR0中断标志位
+
+- #define MCPWM_TMR1_IRQ_IF BIT11    计数器计数值回到MCPWM_TMR1中断标志位- #define MCPWM_TMR2_IRQ_IF BIT12    计数器计数值回到MCPWM_TMR0中断标志位- #define MCPWM_TMR3_IRQ_IF BIT13    计数器计数值回到MCPWM_TMR1中断标志位- #define MCPWM_SHADE_IRQ_IF BIT14    MCPWM_TH/MCPWM_TH00-MCPWM_TH31/ \ MCPWM_TR0-MCPWM_TR3等寄存器更新到MCPWM实际运行系统中断标志位- #define MCPWM_CH0_SHORT_IRQ_IF BIT15    MCPWMCH0_P和CH0N同时有效中断标志位- #define MCPWM_CH1_SHORT_IRQ_IF BIT16    MCPWMCH1_P和CH1N同时有效中断标志位- #define MCPWM_CH2_SHORT_IRQ_IF BIT17    MCPWMCH2_P和CH2N同时有效中断标志位- #define MCPWM_CH3_SHORT_IRQ_IF BIT18    MCPWMCH3_P和CH3N同时有效中断标志位- #define MCPWM_FAIL0_IRQ_IF BIT19    MCPWM_FAIL0中断标志位- #define MCPWM_FAIL1_IRQ_IF BIT20    MCPWM_FAIL1中断标志位
+
+# 函数
+
+- void PWMOutputs (FuncState t_state)    函数名称: void PWMOutputs (FuncState t_state)- void MCPWM_Init (MCPWM_InitTypeDef *MCPWM_InitStructure)    函数名称: void MCPWM_Init (MCPWM_InitTypeDef *MCPWM_InitStructure)- void MCPWM_StructInit (MCPWM_InitStructure *MCPWM_InitStructure)    函数名称: void MCPWM_StructInit (MCPWM_InitStructure *MCPWM_InitStructure)- u16 MCPWM_GetIRQFlag (uint32_t INT_flag)    函数名称: u16 MCPWM_GetIRQFlag (uint32_t INT_flag)- void MCPWM.ClearIRQFlag (uint32_t INT_flag)    函数名称: void MCPWM.ClearIRQFlag (uint32_t INT_flag)
+
+# 2.27.1 详细描述
+
+文件名称：lks32mc08x_mcpwm.h文件标识：无内容摘要：mcpwm驱动头文件其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年05月21日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_mcpwm.h 中定义.
+
+# 2.27.2 宏定义说明
+
+# 2.27.2.1 CENTRAL_PWM_MODE
+
+define CENTRAL_PWM_MODE 0
+
+中心对齐PWM模式
+
+在文件 Iks32mc08x_mcpwm.h 第 185 行定义.
+
+# 2.27.2.2 EDGE_PWM_MODE
+
+define EDGE_PWM_MODE 1边沿对齐PWM模式在文件 Iks32mc08x_mcpwm.h 第 186 行定义.
+
+# 2.27.2.3 FAIL_SEL_CMP
+
+define FAIL_SEL_CMP 1
+
+Fail事件来源比较器在文件 Iks32mc08x_mcpwm.h 第 194 行定义.
+
+# 2.27.2.4 FAIL_SEL_IO
+
+define FAIL_SEL_IO 0
+
+Fail事件来源比较器在文件 Iks32mc08x_mcpwm.h 第 195 行定义.
+
+# 2.27.2.5 HIGH_LEVEL
+
+define HIGH_LEVEL 1
+
+高电平
+
+高电平在文件 Iks32mc08x_mcpwm.h 第 188 行定义.
+
+# 2.27.2.6 HIGH_LEVEL_ACTIVE
+
+define HIGH_LEVEL_ACTIVE 0
+
+高电平有效
+
+高电平有效在文件 Iks32mc08x_mcpwm.h 第 189 行定义.
+
+# 2.27.2.7 LOW_LEVEL
+
+define LOW_LEVEL 0
+
+低电平
+
+在文件 Iks32mc08x_mcpwm.h 第 189 行定义.
+
+# 2.27.2.8 LOW_LEVEL_ACTIVE
+
+define LOW_LEVEL_ACTIVE 1
+
+低电平有效
+
+在文件 Iks32mc08x_mcpwm.h 第 192 行定义.
+
+# 2.27.2.9 MCPWM_CH0_SHORT_IRQ_EN
+
+define MCPWM_CH0_SHORT_IRQ_EN BITO
+
+MCPWMCH0. P和CH0N同时有效中断使能
+
+在文件 Iks32mc08x_mcpwm.h 第 222 行定义.
+
+# 2.27.2.10 MCPWM.CH0.SHORT_IRQ.IF
+
+define MCPWM.CH0_SHORT_IRQ.IF BIT15MCPWMCH0. P和CH0N同时有效中断标志位在文件 Iks32mc08x_mcpwm.h 第 246 行定义.
+
+# 2.27.2.11 MCPWM.CH1.SHORT_IRQ.EN
+
+define MCPWM.CH1_SHORT_IRQ.EN BIT1MCPWMCH1. P和CH1N同时有效中断使能在文件 Iks32mc08x_mcpwm.h 第 223 行定义.
+
+# 2.27.2.12 MCPWM.CH1.SHORT_IRQ.IF
+
+define MCPWM.CH1_SHORT_IRQ.IF BIT16MCPWMCH1. P和CH1N同时有效中断标志位在文件 Iks32mc08x_mcpwm.h 第 247 行定义.
+
+# 2.27.2.13 MCPWM.CH2.SHORT_IRQ.EN
+
+define MCPWM.CH2_SHORT_IRQ.EN BIT2MCPWMCH2. P和CH2N同时有效中断使能在文件 Iks32mc08x_mcpwm.h 第 224 行定义.
+
+# 2.27.2.14 MCPWM.CH2.SHORT_IRQ.IF
+
+define MCPWM.CH2_SHORT_IRQ.IF BIT17MCPWMCH2. P和CH2N同时有效中断标志位在文件 Iks32mc08x_mcpwm.h 第 248 行定义.
+
+# 2.27.2.15 MCPWM.CH3.SHORT_IRQ.EN
+
+define MCPWM.CH3.SHORT_IRQ.EN BIT3  MCPWMCH3. P和CH3N同时有效中断使能在文件 Iks32mc08x_mcpwm.h 第 225 行定义.
+
+# 2.27.2.16 MCPWM.CH3.SHORT_IRQ.IF
+
+define MCPWM.CH3_SHOrT_IRQ.IF BIT18  MCPWMCH3. P和CH3N同时有效中断标志位在文件 Iks32mc08x_mcpwm.h 第 249 行定义.
+
+# 2.27.2.17 MCPWM.FAIL0_IRQ.EN
+
+define MCPWM.FAIL0_IRQ_EN BIT4  MCPWM.FAIL0中断使能在文件 Iks32mc08x_mcpwm.h 第 226 行定义.
+
+# 2.27.2.18 MCPWM.FAIL0_IRQ.IF
+
+define MCPWM.FAIL0_IRQ.IF BIT19
+
+MCPWM.FAIL0中断标志位
+
+在文件 Iks32mc08x_mcpwm.h 第 250 行定义.
+
+# 2.27.2.19 MCPWM.FAIL1_IRQ.EN
+
+define MCPWM.FAIL1. IRQ_EN BIT5
+
+MCPWM.FAIL1中断使能在文件
+
+在文件 Iks32mc08x_mcpwm.h 第 227 行定义.
+
+# 2.27.2.20 MCPWM.FAIL1_IRQ_IF
+
+define MCPWM_FAIL1_IRQ_IF BIT20
+
+# MCPWM_FAIL1中断标志位
+
+在文件 Iks32mc08x_mcpwm.h 第 251 行定义.
+
+# 2.27.2.21 MCPWM.MOE DISABLE.MASK
+
+define MCPWM.MOE DISABLE.MASK ((uint16_t) ~ 0x0040)
+
+关MOE位
+
+在文件 Iks32mc08x_mcpwm.h 第 183 行定义.
+
+# 2.27.2.22 MCPWM.MOE.ENABLE.MASK
+
+define MCPWM.MOE.ENABLE.MASK ((uint16_t) 0x0040)
+
+打开MOE位
+
+在文件 Iks32mc08x_mcpwm.h 第 182 行定义.
+
+# 2.27.2.23 MCPWM.SHADE.IRQ.EN
+
+define MCPWM.SHADE.IRQ_EN BIT14
+
+MCPWM.TH/MCPWM.TH00- MCPWM.TH31/ \ MCPWM.TR0- MCPWM.TR3等寄存器更新到MCPWM实际运行系统中断使能
+
+在文件 Iks32mc08x_mcpwm.h 第 220 行定义.
+
+# 2.27.2.24 MCPWM.SHADE.IRQ.IF
+
+define MCPWM.SHADE.IRQ_IF BIT14
+
+MCPWM.TH/MCPWM.TH00- MCPWM.TH31/ \ MCPWM.TR0- MCPWM.TR3等寄存器更新到MCPWM实际运行系统中断标志位
+
+在文件 Iks32mc08x_mcpwm.h 第 244 行定义.
+
+# 2.27.2.25 MCPWM.T0.IRQ.EN
+
+define MCPWM.T0. IRQ_EN BIT3
+
+计数器计数值回到MCPWM.TH中断使能在文件 Iks32mc08x_mcpwm.h 第 205 行定义.
+
+# 2.27.2.26 MCPWM.T0.IRQ.IF
+
+define MCPWM.T0. IRQ.IF BIT3
+
+计数器计数值回到MCPWM.TH中断标志位在文件 Iks32mc08x_mcpwm.h 第 229 行定义.
+
+# 2.27.2.27 MCPWM.T1.IRQ.EN
+
+define MCPWM.T1. IRQ.EN BIT3
+
+计数器计数值回到0中断使能
+
+在文件 Iks32mc08x_mcpwm.h 第 206 行定义.
+
+# 2.27.2.28 MCPWM.T1.IRQ.IF
+
+define MCPWM.T1. IRQ.IF BIT3
+
+计数器计数值回到0中断标志位
+
+在文件 Iks32mc08x_mcpwm.h 第 230 行定义.
+
+# 2.27.2.29 MCPWM.TH00.IRQ.EN
+
+define MCPWM.TH00. IRQ.EN BIT2
+
+计数器计数值回到MCPWM.TH00中断使能在文件 Iks32mc08x_mcpwm.h 第 207 行定义.
+
+# 2.27.2.30 MCPWM.TH00_IRQ.LIF
+
+define MCPWM.TH00_IRQ_IF BIT2
+
+计数器计数值回到MCPWM.TH00中断标志位在文件lks32mc08x_mcpwm.h第291行定义.
+
+# 2.27.2.31 MCPWM.TH01_IRQ.EN
+
+define MCPWM.TH01. IRQ_EN BIT3
+
+计数器计数值回到MCPWM.TH01中断使能在文件lks32mc08x_mcpwm.h第208行定义.
+
+# 2.27.2.32 MCPWM.TH01_IRQ.LIF
+
+define MCPWM.TH01. IRQ_IF BIT3
+
+计数器计数值回到MCPWM.TH01中断标志位在文件lks32mc08x_mcpwm.h第232行定义.
+
+# 2.27.2.33 MCPWM.TH10_IRQ.EN
+
+define MCPWM.TH10. IRQ_EN BIT4
+
+计数器计数值回到MCPWM.TH10中断使能在文件lks32mc08x_mcpwm.h第209行定义.
+
+# 2.27.2.34 MCPWM.TH10_IRQ.LIF
+
+define MCPWM.TH10. IRQ_IF BIT4
+
+计数器计数值回到MCPWM.TH10中断标志位在文件lks32mc08x_mcpwm.h第233行定义.
+
+# 2.27.2.35 MCPWM.TH11_IRQ.EN
+
+define MCPWM.TH11. IRQ_EN BIT5
+
+计数器计数值回到MCPWM.TH11中断使能在文件 Iks32mc08x_mcpwm.h 第 210 行定义.
+
+# 2.27.2.36 MCPWM.TH11_IRQ.IF
+
+define MCPWM.TH11. IRQ.IF BIT5
+
+计数器计数值回到MCPWM.TH11中断标志位在文件 Iks32mc08x_mcpwm.h 第 234 行定义.
+
+# 2.27.2.37 MCPWM.TH20_IRQ.EN
+
+define MCPWM.TH20. IRQ.EN BIT6
+
+计数器计数值回到MCPWM.TH20中断使能在文件 Iks32mc08x_mcpwm.h 第 211 行定义.
+
+# 2.27.2.38 MCPWM.TH20_IRQ.IF
+
+define MCPWM.TH20. IRQ.IF BIT6
+
+计数器计数值回到MCPWM.TH20中断标志位在文件 Iks32mc08x_mcpwm.h 第 235 行定义.
+
+# 2.27.2.39 MCPWM.TH21_IRQ.EN
+
+define MCPWM.TH21. IRQ.EN BIT7
+
+计数器计数值回到MCPWM.TH21中断使能在文件 Iks32mc08x_mcpwm.h 第 212 行定义.
+
+# 2.27.2.40 MCPWM.TH21_IRQ.LIF
+
+define MCPWM.TH21. IRQ_IF BT7
+
+计数器计数值回到MCPWM.TH21中断标志位在文件lks32mc08x_mcpwm.h第296行定义.
+
+# 2.27.2.41 MCPWM.TH30_IRQ.EN
+
+define MCPWM.TH30. IRQ_EN BT8
+
+计数器计数值回到MCPWM.TH30中断使能在文件lks32mc08x_mcpwm.h第213行定义.
+
+# 2.27.2.42 MCPWM.TH30_IRQ.LIF
+
+define MCPWM.TH30. IRQ_IF BT8
+
+计数器计数值回到MCPWM.TH30中断标志位在文件lks32mc08x_mcpwm.h第237行定义.
+
+# 2.27.2.43 MCPWM.TH31_IRQ.EN
+
+define MCPWM.TH31. IRQ_EN BT9
+
+计数器计数值回到MCPWM.TH31中断使能在文件lks32mc08x_mcpwm.h第214行定义.
+
+# 2.27.2.44 MCPWM.TH31_IRQ.LIF
+
+define MCPWM.TH31. IRQ_IF BT9
+
+计数器计数值回到MCPWM.TH31中断标志位在文件lks32mc08x_mcpwm.h第238行定义.
+
+# 2.27.2.45 MCPWM.TMR0.IRQ.EN
+
+define MCPWM.TMR0. IRQ_EN BIT10
+
+计数器计数值回到MCPWM.TMR0中断使能在文件lks32mc08x_mcpwm.h第215行定义.
+
+# 2.27.2.46 MCPWM.TMR0.IRQ.IF
+
+define MCPWM.TMR0. IRQ.IF BIT10
+
+计数器计数值回到MCPWM.TMR0中断标志位在文件lks32mc08x_mcpwm.h第239行定义.
+
+# 2.27.2.47 MCPWM.TMR1.IRQ.EN
+
+define MCPWM.TMR1. IRQ.EN BIT11
+
+计数器计数值回到MCPWM.TMR1中断使能在文件lks32mc08x_mcpwm.h第216行定义.
+
+# 2.27.2.48 MCPWM.TMR1.IRQ.IF
+
+define MCPWM.TMR1. IRQ.IF BIT11
+
+计数器计数值回到MCPWM.TMR1中断标志位在文件lks32mc08x_mcpwm.h第240行定义.
+
+# 2.27.2.49 MCPWM.TMR2.IRQ.EN
+
+define MCPWM.TMR2. IRQ.EN BIT12
+
+计数器计数值回到MCPWM.TMR0中断使能在文件lks32mc08x_mcpwm.h第217行定义.
+
+# 2.27.2.50 MCPWM.TMR2_IRQ.IF
+
+define MCPWM.TMR2. IRQ_IF BT12计数器计数值回到MCPWM.TMR0中断标志位在文件lks32mc08x_mcpwm.h第241行定义.
+
+# 2.27.2.51 MCPWM.TMR3_IRQ.EN
+
+define MCPWM.TMR3. IRQ_EN BT13计数器计数值回到MCPWM.TMR1中断使能在文件lks32mc08x_mcpwm.h第218行定义.
+
+# 2.27.2.52 MCPWM.TMR3_IRQ.IF
+
+define MCPWM.TMR3. IRQ_IF BT13计数器计数值回到MCPWM.TMR1中断标志位在文件lks32mc08x_mcpwm.h第242行定义.
+
+# 2.27.2.53 MCPWM.UPDATE_REG
+
+define MCPWM.UPDATE_REG（）
+
+值：{ MCPWM.UPDATE  $=$  0x00ff;  $\lambda$  1
+
+手动更新占空比寄存器值到实际运行寄存器中在文件lks32mc08x_mcpwm.h第203行定义.
+
+# 2.27.3 函数说明
+
+# 2.27.3.1 MCPWM.ClearIRQFlag()
+
+void MCPWM.ClearIRQFlag（ uint32. t INT_flag)
+
+函数名称：void MCPWM.ClearIRQFlag(uint32_t INT_flag)功能描述：清除MCPWM中断标志
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="15">输入参数:</td><td rowspan="15">MCPWM.T0.IRQ.IF
+MCPWM.T1.IRQ.IF
+MCPWM.TH00.IRQ.IF
+MCPWM.TH01.IRQ.IF
+MCPWM.TH10.IRQ.IF
+MCPWM.TH11.IRQ.IF
+MCPWM.TH20.IRQ.IF
+MCPWM.TH21.IRQ.IF
+MCPWM.TH30.IRQ.IF
+MCPWM.TH31.IRQ.IF
+MCPWM.THRO.IRQ.IF
+MCPWM.THIR1.IRQ.IF
+MCPWM.THIR2.IRQ.IF
+MCPWM.THIR3.IRQ.IF
+MCPWM.SHADE.IRQ.IF</td><td>BIT0</td><td>计数器计数值回
+到MCPWM.TH中断标志位</td></tr><tr><td>BIT1</td><td>计数器计数值回到0中断
+标志位</td></tr><tr><td>BIT2</td><td>计数器计数值回
+到MCPWM.TH00中断标志
+位</td></tr><tr><td>BIT3</td><td>计数器计数值回
+到MCPWM.TH01中断标志
+位</td></tr><tr><td>BIT4</td><td>计数器计数值回
+到MCPWM.TH10中断标志
+位</td></tr><tr><td>BIT5</td><td>计数器计数值回
+到MCPWM.TH11中断标志
+位</td></tr><tr><td>BIT6</td><td>计数器计数值回
+到MCPWM.TH20中断标志
+位</td></tr><tr><td>BIT7</td><td>计数器计数值回
+到MCPWM.TH21中断标志
+位</td></tr><tr><td>BIT8</td><td>计数器计数值回
+到MCPWM.TH30中断标志
+位</td></tr><tr><td>BIT9</td><td>计数器计数值回
+到MCPWM.TH31中断标志
+位</td></tr><tr><td>BIT10</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT11</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT12</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT13</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT14</td><td>MCPWM.TH/MCPWM.←
+TH00-MCPWM.TH31/←
+MCPWM.TR0-MCPWM.←
+TR3等寄存器更新
+到MCPWM/实际运行系统
+中断标志位</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(MCPWM.GetIRQFlag(MCPWM_T0_IQ_EN))//获取MCPWM的计数器计数值回到MCPWM_TH中断标志  {      MCPWM.ClearIRQFlag(MCPWM_T0_IQ_EN); //清除MCPWM的计数器计数值回到MCPWM_TH中断标志  }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_mcpwm.c第303行定义
+
+# 2.27.3.2 MCPWM.GetIRQFlag()
+
+u16 MCPWM.GetIRQFlag (    uint32_t INT_flag)
+
+函数名称：u16 MCPWM_GetIRQFlag(uint32_t INT_flag)
+
+功能描述：获取MCPWM中断标志
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="15">输入参数:</td><td rowspan="15">MCPWM.T0.IRQ.IF
+MCPWM.T1.IRQ.IF
+MCPWM.TH00.IRQ.IF
+MCPWM.TH01.IRQ.IF
+MCPWM.TH10.IRQ.IF
+MCPWM.TH11.IRQ.IF
+MCPWM.TH20.IRQ.IF
+MCPWM.TH21.IRQ.IF
+MCPWM.TH30.IRQ.IF
+MCPWM.TH31.IRQ.IF
+MCPWM.THIR0.IRQ.IF
+MCPWM.THIR1.IRQ.IF
+MCPWM.THIR2.IRQ.IF
+MCPWM.THIR3.IRQ.IF
+MCPWM.SHAD2.IRQ.IF</td><td>BIT0</td><td>计数器计数值回
+到MCPWM.TH中断标志位</td></tr><tr><td>BIT1</td><td>计数器计数值回到0中断
+标志位</td></tr><tr><td>BIT2</td><td>计数器计数值回
+到MCPWM.TH00中断标志
+位</td></tr><tr><td>BIT3</td><td>计数器计数值回
+到MCPWM.TH01中断标志
+位</td></tr><tr><td>BIT4</td><td>计数器计数值回
+到MCPWM.TH10中断标志
+位</td></tr><tr><td>BIT5</td><td>计数器计数值回
+到MCPWM.TH11中断标志
+位</td></tr><tr><td>BIT6</td><td>计数器计数值回
+到MCPWM.TH20中断标志
+位</td></tr><tr><td>BIT7</td><td>计数器计数值回
+到MCPWM.TH21中断标志
+位</td></tr><tr><td>BIT8</td><td>计数器计数值回
+到MCPWM.TH30中断标志
+位</td></tr><tr><td>BIT9</td><td>计数器计数值回
+到MCPWM.TH31中断标志
+位</td></tr><tr><td>BIT10</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT11</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT12</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT13</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT14</td><td>MCPWM.TH/MCPWM.←
+TH00-MCPWM.TH31/←
+MCPWM.TR0-MCPWM.←
+TR3等寄存器更新
+到MCPWM/实际运行系统
+中断标志位</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+
+# 返回
+
+返回值：读对应标志位是否为1，1位置位，0为未置位
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(MCPWM.GetIRQFlag(MCPWM(TO_IRQ_EN)))//获取MCPWM的计数器计数值回到MCPWM_TH中断标志{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_mcpwm.c第224行定义
+
+# 2.27.3.3 MCPWM.Init()
+
+void MCPWM.Init （ MCPWM.InitTypeDef \* MCPWM.InitStruct )
+
+函数名称：void MCPWM_Init(MCPWM.InitTypeDef \*MCPWM.InitStruct)功能描述：MCPWM初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数：
+
+<table><tr><td>输入参数:</td><td>MCPWM.InitTypeDef * MCPWM.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：MCPWM_InitTypeDef MCPWM.InitStructure;  MCPWM_StructInit(&MCPWM.InitStructure); //初始化MCPWM相关结构体  MCPWM.InitStructure.CJK.DIV = PWM_PRSC; //MCPWM时钟分频设置  MCPWM.InitStructure.MCLKEN = ENABLE; //模块时钟开启  MCPWM.InitStructure.MCPWMCnt_EN = ENABLE; //主计数器开始计数功能开关  MCPWM.InitStructure.MCPWMWorkModeCH0 = CENTRAL_PWM_MODE; //MCPWMCH0工作模式，中心对齐PWM模式  MCPWM.InitStructure.MCPWMWorkModeCH1 = CENTRAL_PWM_MODE; //通道工作模式设置，中心对齐或边沿对齐  MCPWM.InitStructure.MCPWMWorkModeCH2 = CENTRAL_PWM_MODE;  MCPWM.InitStructure.MCPWMWorkModeCH3 = CENTRAL_PWM_MODE;  MCPWM.Init(&MCPWM.InitStructure);
+
+修改日志：
+
+修改日志：在文件lks32mc08x_mcpwm.c第109行定义。函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/b4904e24f8de5a310faac8c73a818271851d133563b6790f44538ad980d1848a.jpg)
+
+# 2.27.3.4 MCPWM.StructInit()
+
+void MCPWM.StructInit ( MCPWM.InitTypeDef  $\ast$  MCPWM.InitStruct)
+
+函数名称：void MCPWM.StructInit(MCPWM.InitTypeDef  $\ast$  MCPWM.InitStruct)功能描述：MCPWM结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>MCPWM.InitTypeDef *MCPWM.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：MCPWM.InitTypeDef MCPWM.InitStructure; MCPWM.StructInit(&MCPWM.InitStructure); //初始化MCPWM相关结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年05月21日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_mcpwm.c 第 74 行定义.
+
+# 2.27.3.5 PWMOutputs()
+
+void PWMOutputs (FuncState t_state)
+
+函数名称：void PWMOutputs(FuncState t_state)
+
+功能描述：MCPWM波形输出使能与失能函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>FuncState t.state ENABLE: 使能, DISABLE:使能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+PWMOutputs（ENABLE）//使能MCpwm输出
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年05月21日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_mcpwm.c第38行定义.
+
+# 2.28 lks32mc08x_mcpwm.h
+
+# 浏览该文件的文档
+
+00001 00015 #ifndef _LKS08X_PWM.H 00016 #define _LKS08X_PWM.H 00017 00018 /\*Includes 00019 #include"lks32mc08x.h" 00020 #include"basic.h" 00021 00022 00026 typedef struct 00027 { 00033 uint16. t MCPWM.PERIOD; 00035 uint8. t CLKDIV; 00036 uint8. t MCLK_EN; 00037 uint8. t MCPWM.Cnt_EN; 00038 uint8. t GPIO.BKIN_Filter; 00039 uint8. t CMP.BKIN_Filter; 00041 uint16. t MCPWM.WorkModeCH0; 00042 uint16. t MCPWM.WorkModeCH1; 00043 uint16. t MCPWM.WorkModeCH2; 00044 uint16. t MCPWM.WorkModeCH3;
+
+00046 uint16. t TriggerPoint; 00047 uint16. t TriggerPoint; 00048 uint16. t TriggerPoint; 00049 uint16. t TriggerPoint; 00055 uint16. t DeadTimeCHON; 00061 uint16. t DeadTimeCHOP; 00067 uint16. t DeadTimeCHIN; 00073 uint16. t DeadTimeCHLP; 00079 uint16. t DeadTimeCH2P; 00085 uint16. t DeadTimeCH2P; 00091 uint16. t DeadTimeCH3N; 00097 uint16. t DeadTimeCH3P; 00098 00099 uint8. t CHON_Polarity_NV; 00100 uint8. t CHOP_Polarity_NV; 00101 uint8. t CHIN_Polarity_NV; 00102 uint8. t CHLP_Polarity_NV; 00103 uint8. t CH2N_Polarity_NV; 00104 uint8. t CH2P_Polarity_NV; 00105 uint8. t CH3N_Polarity_NV; 00106 uint8. t CH3P_Polarity_NV; 00108 uint8. t CHOP_SCTRLP; 00109 uint8. t CHON_SCTRLN; 00110 uint8. t CHIP_SCTRLN; 00111 uint8. t CHIN_SCTRLN; 00112 uint8. t CH2P_SCTRLP; 00113 uint8. t CH2N_SCTRLN; 00114 uint8. t CH3P_SCTRLP; 00115 uint8. t CHON_S; 00117 uint8. t CHO_NS; 00118 uint8. t CHI_PS; 00119 uint8. t CHI_PS; 00120 uint8. t CHI_NS; 00121 uint8. t CH2_PS; 00122 uint8. t CH2_NS; 00123 uint8. t CH3_NS; 00124 uint8. t CH3_PS; 00126 uint8. t Switch_CHON_CHOP; 00127 uint8. t Switch_CHIN_CHOP; 00128 uint8. t Switch_CH2N_CHOP; 00129 uint8. t Switch_CH3N_CHOP; 00131 uint8. t MCPWM_UpdateInterval; 00132 uint8. t MCPWM_UpdateGEN; 00133 uint8. t MCPWM_T1_UpdateGEN; 00134 uint8. t MCPWM_Auto_ERRGEN; 00136 uint8. t FAIL0_INPUT_EN; 00137 uint8. t FAIL1_INPUT_EN; 00138 uint8. t FAIL0_Signal_Sel; 00139 uint8. t FAIL1_Signal_Sel; 00140 uint8. t FAIL0_Polarity; 00141 uint8. t FAIL1_Polarity; 00142 uint8. t DebugMode_PWM; 00144 uint8. t CHOP_default_output; 00145 uint8. t CHON_default_output; 00146 uint8. t CHIP_default_output; 00147 uint8. t CHIN_default_output; 00148 uint8. t CH2P_default_output; 00149 uint8. t CH2N_default_output; 00150 uint8. t CH3P_default_output; 00151 uint8. t CH3N_default_output; 00153 uint8. t TO_Update_INT_EN; 00154 uint8. t T1_Update_INT_EN; 00156 uint8. t TH00_Match_INT_EN; 00157 uint8. t TH01_Match_INT_EN; 00158 uint8. t TH10_Match_INT_EN; 00159 uint8. t TH11_Match_INT_EN; 00160 uint8. t TH20_Match_INT_EN; 00161 uint8. t TH21_Match_INT_EN; 00162 uint8. t TH30_Match_INT_EN; 00163 uint8. t TH31_Match_INT_EN; 00165 uint8. t TMRO_Match_INT_EN; 00166 uint8. t TMR0_Match_INT_EN; 00167 uint8. t TMR2_Match_INT_EN; 00168 uint8. t TMR3_Match_INT_EN; 00170 uint8. t MCPWM_REG_UPDATE_INT_EN; 00172 uint8. t FAIL0_INT_EN; 00173 uint8. t FAIL1_INT_EN; 00175 uint8. t IO0_PPE; 00176 uint8. t IO1_PPE; 00177 uint8. t IO2_PPE; 00178 uint8. t IO3_PPE; 00180 } MCPWM_InitTypeDef; 00181 00182 #define MCPWM_MOE_ENABLE_MASK ((uint16_t)0x0040) 00183 #define MCPWM_MOE_DISABLE_MASK ((uint16_t)0x0040) 00185 #define CENTRAL_PWM_MODE 00186 #define EDGE_PWM_MODE 1
+
+00188 #define HIGH_LEVEL 1 00189 #define LOW_LEVEL 0 00191 #define HIGH_LEVEL_ACTIVE 0 00192 #define LOW_LEVEL_ACTIVE 1 00194 #define FAIL_SEL_CMP 1 00195 #define FAIL_SEL_IO 0 00197 #define MCPWM_UPDATE_REG() \ 00198 { 00199 MCPWM_UPDATE  $=$  0x00ff; \ 00200 00202 #define MCPWM.TO.IRQN BYTO 00203 #define MCPWM.T1.IRQN BYT1 00204 #define MCPWM.TH00.IRQN BYT2 00205 #define MCPWM.TH01.IRQN BYT3 00206 #define MCPWM.TH10.IRQN BYT4 00207 #define MCPWM.TH11.IRQN BYT5 00208 #define MCPWM.TH20.IRQN BYT6 00209 #define MCPWM.TH21.IRQN BYT7 00210 #define MCPWM.TH30.IRQN BYT8 00211 #define MCPWM.TH31.IRQN BYT9 00212 #define MCPWM.TMR0.IRQN BYT10 00213 #define MCPWM.TMR1.IRQN BYT11 00214 #define MCPWM.TMR2.IRQN BYT12 00215 #define MCPWM.TMR3.IRQN BYT13 00216 #define MCPWM.SHADE.IRQN BYT14 00219 #define MCPWM.CH0.SHORT.IRQN BYT0 00220 #define MCPWM.CH1.SHORT.IRQN BYT1 00221 #define MCPWM.CH2.SHORT.IRQN BYT2 00222 #define MCPWM.CH3.SHORT.IRQN BYT3 00223 #define MCPWM.FAIL10.IRQN BYT4 00224 #define MCPWM.FAIL1.IRQN BYT5 00226 #define MCPWM.TO.IRQN BYT0 00227 #define MCPWM.T1.IRQN BYT1 00228 #define MCPWM.TH00.IRQN BYT2 00229 #define MCPWM.TH01.IRQN BYT3 00230 #define MCPWM.TH10.IRQN BYT4 00231 #define MCPWM.TH11.IRQN BYT5 00232 #define MCPWM.TH20.IRQN BYT5 00233 #define MCPWM.TH21.IRQN BYT7 00234 #define MCPWM.TH30.IRQN BYT8 00235 #define MCPWM.TH31.IRQN BYT9 00236 #define MCPWM.TMR0.IRQN BYT10 00237 #define MCPWM.TMR1.IRQN BYT11 00238 #define MCPWM.TMR2.IRQN BYT12 00239 #define MCPWM.TMR3.IRQN BYT13 00240 #define MCPWM.SHADE.IRQN BYT14 00243 #define MCPWM.CH0.SHORT.IRQN BYT15 00244 #define MCPWM.CH1.SHORT.IRQN BYT16 00245 #define MCPWM.CH2.SHORT.IRQN BYT17 00246 #define MCPWM.CH3.SHORT.IRQN BYT18 00247 #define MCPWM.FAIL0.IRQN BYT19 00248 #define MCPWM.FAIL1.IRQN BYT20 00250 void PMOutputs(FuncState t_state); 00251 void MCPWM.Init (MCPWM.InitTypeDef *MCPWM.InitStruct); 00252 void MCPWM.StructInit (MCPWM.InitTypeDef *MCPWM.InitStruct); 00253 u16 MCPWM.GetIRQFlag (uint32_t INT_flag); 00254 void MCPWM.ClearIRQFlag (uint32_t INT_flag); 00255 #endif /*...CHANHOM.PWM.h */ 00256 00257 / \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*/
+
+# 2.29 Include/lks32mc08x.nvr.h 文件参考
+
+文件名称：#ks32mc08x.nvr.h  文件标识：无  内容摘要：NVR驱动头文件  其它说明：无
+
+include "lks32mc08x.h"lks32mc08x.nvr.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/aa17989c55c8d7bb7ed62cbb4a269010d9f9ce7eaff14a603de28355e536a1eb.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/481d1f3c01dde746fb879c4e5c7f05a4717a466a3ab6e848f6f4b3452b0992d9.jpg)
+
+# 函数
+
+- uint32_t Read_NVR (uint32_t adr) 读取NVR 1KB大小的用户区函数- uint32_t Read Trim (uint32_t adr) 读取芯片模块校正值函数
+
+# 2.29.1 详细描述
+
+文件名称：lks32mc08x.nvr.h  文件标识：无  内容摘要：NVR驱动头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年07月25日</td><td>1.0</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_nvr.h 中定义.
+
+# 2.29.2 函数说明
+
+# 2.29.2.1 ReadNVR()
+
+uint32_t ReadNVR (    uint32_t adr)
+
+读取NVR 1KB大小的用户区函数
+
+示例代码：读取NVR用户地址0的数据
+
+uint32_t LKS_NVRValue = 0  LKS_NVRValue = ReadNVR(0x001, //范围0x000~0x400 1KB空间
+
+这是这个函数的调用关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/396688ebb6138869d56d183fea325b9a5398d6fd1bda153273b830a9b98a1cd2.jpg)
+
+# 2.29.2.2 ReadTrim()
+
+uint32_t ReadTrim (    uint32_t adr)
+
+读取芯片模块校正值函数
+
+# 示例代码：读取芯片ID
+
+uint32_t LKS_ID1; uint32_t LKS_ID2; uint32_t LKS_ID3; uint32_t LKS_ID4; LKS_ID1 = Read.Trim（0x0000084C); LKS_ID2 = Read.Trim（0x00000850); LKS_ID3 = Read.Trim（0x00000854); LKS_ID4 = Read.Trim（0x00000858);
+
+这是这个函数的调用关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/9dc40c6171c8302eac979277acc74231485be23ff60ad8eac1ef8f5c4f6da053.jpg)
+
+# 2.30 Iks32mc08x.nvr.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef LKS32MC08X.NVR.h 00015 #define LKS32MC08X.NVR.H 00016 00017 #include"lks32mc08x.h" 00018 00027 uint32_t Read.NVR(uint32_t adr); 00028 00043 uint32_t Read.Trim(uint32_t adr); 00044 00045 00046 #endif 00047 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* 00048 /\* END OF FILE
+
+# 2.31 Include/lks32mc08x_opa.h文件参考
+
+文件名称：lks32mc08x_opa.h文件标识：无内容摘要：OPA驱动头文件其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x_opa.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/8fa512c1e499c156b8a89d7afc8571d33e1151b8e1587899495bc40a47546fd1.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/c46fb53a3bff0bea43840ab1d8b6d356a18418ea13c2310098a2c83d49782c7c.jpg)
+
+# 结构体
+
+结构体- struct OPA_InitTypeDefOPA初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 宏定义
+
+宏定义- #define PGA_GAIN_200x00反馈电阻200:10.2- #define PGA_GAIN_9P50x01反馈电阻190:20.2- #define PGA_GAIN_60x02反馈电阻180:30.4- #define PGA_GAIN_4P250x03反馈电阻170:40.4
+
+# 枚举
+
+枚举- enum enumOPA {  $\mathsf{OPA0} = 0$ $\mathsf{OPA1} = 1$ $\mathsf{OPA2} = 2$ $\mathsf{OPA3} = 3$  }
+
+# 函数
+
+函数- void OPA_Init (enumOPA opa, OPA_InitTypeDef *OPA_InitStructure)函数名称：void OPA_Init (enumOPA opa, OPA_InitTypeDef* OPA_InitStructure)- void OPA_StructInit (OPA_InitTypeDef *OPA_InitStructure)函数名称：void OPA_StructInit(OPA_InitStructure)
+
+# 2.31.1 详细描述
+
+文件名称：lks32mc08x_opa.h文件标识：无内容摘要：OPA驱动头文件其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_opa.h 中定义。
+
+# 2.31.2 宏定义说明
+
+# 2.31.2.1 PGA.GAIN.20
+
+define PGA.GAIN.20 0x00反馈电阻200:10.2在文件 Iks32mc08x_opa.h 第 46 行定义。
+
+# 2.31.2.2 PGA.GAIN.4P25
+
+define PGA.GAIN.4P25 0x03反馈电阻170:40.4在文件 Iks32mc08x_opa.h 第 49 行定义。
+
+# 2.31.2.3 PGA.GAIN.6
+
+define PGA.GAIN.6 0x02反馈电阻180:30.4在文件 Iks32mc08x_opa.h 第 48 行定义。
+
+# 2.31.2.4 PGA.GAIN.9P5
+
+define PGA.GAIN.9P5 0x01反馈电阻190:20.2在文件 Iks32mc08x_opa.h 第 47 行定义。
+
+# 2.31.3 枚举类型说明
+
+# 2.31.3.1 enumOPA
+
+enum enumOPA
+
+枚举值
+
+<table><tr><td>OPA0</td><td>OPA0模块</td></tr><tr><td>OPA1</td><td>OPA1模块</td></tr><tr><td>OPA2</td><td>OPA2模块</td></tr><tr><td>OPA3</td><td>OPA3模块</td></tr></table>
+
+在文件 Iks32mc08x_opa.h 第 21 行定义.
+
+# 2.31.4 函数说明
+
+# 2.31.4.1 OPA.Init()
+
+void OPA.Init (enumOPA opa,OPA.InitTypeDef *OPA.InitStruct)
+
+函数名称：voidOPA.Init(enumOPA opa,OPA.InitTypeDef*OPA.InitStruct)
+
+功能描述：OPA初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>enumOPA opa, OPA.InitTypeDef *OPA.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+OPA.InitTypeDefOPA.InitStruct;OPA.StructInit（&OPA.InitStruct); //初始化结构体OPA.InitStruct.OPA.CLENa  $=$  ENABLE; //使能OPAOPA.InitStruct.OPA.Gain  $=$  PGA.GAIN_20; //OPA内部增益电阻选择200：10.2OPA.Init(OPAO,&OPA.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_opa.c第41行定义
+
+# 2.31.4.2OPA.OUT()
+
+voidOPA.OUT（enumOPA opa,FuncState state）
+
+函数名称：voidOPA.OUT（enumOPA.opa,FuncState state)
+
+功能描述：OPA外部输出，输出到外部P2.7引脚
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>enumOPA opa, FuncState state</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+OPA_OUT（OPA0，ENABLE）；//将OPA0输出通过外部P2.7引脚送出
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_opa.c第144行定义.
+
+# 2.31.4.3OPA.StructInit()
+
+voidOPAStructInit（OPA.InitTypeDef  $\ast$  OPA.InitStruct)
+
+函数名称：voidOPA.StructInit(OPA_InitTypeDef  $\ast$  OPA.InitStruct)
+
+功能描述：OPA结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>OPA.InitTypeDef *OPA.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+OPA.InitTypeDef OPA.InitStruct;OPA.StructInit（&OPA.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_opa.c第106行定义
+
+# 2.32 lks32mc08x_opa.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x.OPA.R 00015 #define _LKS32MC08x.OPA.R 00016 00017 00018 /\*Includes 00019 #include"lks32mc08x.lib.h" 00020 00021 typedef enum 00022 00023  $\mathrm{OPA0} = 0$  00024  $\mathrm{OPA1} = 1$  00025  $\mathrm{OPA2} = 2$  00026  $\mathrm{OPA3} = 3$  00027 }enumOPA; 00028 00032 typedef struct 00033 { 00041 uint32_t OPA.Gain; 00042 uint32_t OPA.CLEna; 00043 }OPA.InitTypeDef; 00044 00045 - PGA操作相关定义 00046 #define PGA.GAIN.20 0x00 00047 #define PGA.GAIN.9P5 0x01 00048 #define PGA.GAIN.6 0x02 00049 #define PGA.GAIN.4P25 0x03 00051 void OPA.Init（enumOPA opa,OPA.InitTypeDef\*OPA.InitStruct); 00052 void OPA.StructInit(OPA.InitTypeDef\*OPA.InitStruct); 00053 void OPA.OUT（enumOPA opa,FuncState state); 00054 00055 #endif /\*_lks32mc08x.OPA.H \*/ 00056 00057 00058 00059 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* (C) COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*END OF FILE\*\*\*
+
+# 2.33 Include/lks32mc08x_spi.h文件参考
+
+文件名称：lks32mc08x_spi.h文件标识：无内容摘要：SPI驱动头文件其它说明：无
+
+include "lks32mc08x_lib.h"lks32mc08x_spi.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/561ada5a634b172cf1ac565137f03c3bcb3df3537306c961e012d1365f0dc929.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/5fe2422d2ceb794a261584b5b37cbb52c8fff266f39bda99a2fb61b775559818.jpg)
+
+# 结构体
+
+结构体- struct SPI_TypeDefSPF寄存器结构体句柄- struct SPI.InitTypeDefSPF结构体基地址定义
+
+# 宏定义
+
+宏定义- #define SPI_FIRSTSENDLSB 1低位先传- #define SPI_FIRSTSEND MSB 0高位先传- #define SPI_DMA_ENABLE 0使能DMA搬运- #define SPI_DMA_DISABLE 1禁止DMA搬运- #define SPI_IRQEna Enable BIT7中断使能定义，SPI中断使能- #define SPI_IRQEna_TransDone BIT6中断使能定义，传输完成中断- #define SPI_IRQEna_SsErr BIT5中断使能定义，传输异常事件中断- #define SPI_IRQEna_DataOver BIT4中断使能定义，传输溢出事件中断- #define SPI_IF_TransDone BIT2中断标志定义，传输完成中断标志位- #define SPI_IF_SsErr BIT1中断标志定义，传输异常中断标志位- #define SPI_IF_DataOver BIT0中断标志定义，传输溢出中断标志位
+
+# 枚举
+
+枚举- enum SPI_Mode { SPI_Master = 0x01, SPI_Slave = 0x00 }  SPI模式配置枚举- enum SPI_Duplex { SPI_Full = 0x0, SPI_Half_Tx = 0x2, SPI_Half_Rx = 0x3 }  SPI工作模式配置枚举
+
+# 函数
+
+·void SPI_Init(SPI_TypeDef  $\ast$  SPIx,SPI_InitTypeDef  $\ast$  SPI_InitStructure) 函数名称：voidSPI_Init(SPI_TypeDef\*SPIx,SPI_InitTypeDef\*SPI_InitStructure) ·voidSPI_StructInit(SPI_InitTypeDef  $\ast$  SPI_InitStructure) 函数名称：voidSPI_Init(SPI_TypeDef\*SPIx,SPI_InitTypeDef\*SPI_InitStructure) ·uint8_tSPI_GetIRQFlag(SPI_TypeDef  $\ast$  SPIx,u8IRQ_Flag) 函数名称：uint8. tSPI_GetIRQFlag(SPI_TypeDef  $\ast$  SPIx,u8IRQ_Flag) ·voidSPI_ClearIRQFlag(SPI_TypeDef  $\ast$  SPIx,u8IRQ_Flag) 函数名称：voidSPI_ClearIRQFlag(SPI_TypeDef  $\ast$  SPIx,u8IRQ_Flag) ·voidSPI_SendData(SPI_TypeDef  $\ast$  SPIx,uint8. t n) 函数名称：voidSPI_SendData(SPI_TypeDef  $\ast$  SPIx,uint8. t n) ·uint8. tSPI_ReadData(SPI_TypeDef  $\ast$  SPIx) 函数名称：uint8. tSPI_ReadData(SPI_TypeDef  $\ast$  SPIx)
+
+# 2.33.1 详细描述
+
+文件名称：lks32mc08x_spi.h  文件标识：无  内容摘要：SPI驱动头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件lks32mc08x_spi.h中定义.
+
+# 2.33.2 宏定义说明
+
+# 2.33.2.1 SPI_DMA DISABLE
+
+define SPI_DMA_DISABLE 1
+
+# 禁止DMA搬运
+
+在文件 Iks32mc08x.spi.h 第 100 行定义.
+
+# 2.33.2.2 SPI_DMA_ENABLE
+
+define SPI_DMA_ENABLE 0
+
+# 使能DMA搬运
+
+在文件 Iks32mc08x.spi.h 第 99 行定义.
+
+# 2.33.2.3 SPI_FIRSTSEND.LSB
+
+define SPI_FIRSTSEND.LSB 1
+
+低位先传
+
+在文件 Iks32mc08x.spi.h 第 96 行定义.
+
+# 2.33.2.4 SPI_FIRSTSEND.MSB
+
+define SPI_FIRSTSEND.MSB 0
+
+高位先传
+
+在文件 Iks32mc08x.spi.h 第 97 行定义.
+
+# 2.33.2.5 SPI_IF_DataOver
+
+define SPI_IF_DataOver BIT0
+
+中断标志定义，传输溢出中断标志位
+
+在文件 Iks32mc08x.spi.h 第 109 行定义.
+
+# 2.33.2.6 SPI_IF_SSErr
+
+define SPI_IF_SSErr BIT1
+
+中断标志定义，传输异常中断标志位在文件 Iks32mc08x.spi.h 第 108 行定义.
+
+# 2.33.2.7 SPI_IF_TranDone
+
+define SPI_IF_TranDone BIT2
+
+中断标志定义，传输完成中断标志位
+
+在文件 Iks32mc08x.spi.h 第 107 行定义.
+
+# 2.33.2.8 SPI_IRQEna_DataOver
+
+define SPI_IRQEna_DataOver BIT4
+
+中断使能定义，传输溢出事件中断
+
+在文件 Iks32mc08x.spi.h 第 105 行定义.
+
+# 2.33.2.9 SPI_IRQEna_Enable
+
+define SPI_IRQEna_Enable BIT7
+
+中断使能定义，SPI中断使能
+
+在文件 Iks32mc08x.spi.h 第 102 行定义.
+
+# 2.33.2.10 SPI_IRQEna_SSErr
+
+define SPI_IRQEna_SSErr BIT5
+
+中断使能定义，传输异常事件中断
+
+在文件 Iks32mc08x.spi.h 第 104 行定义.
+
+# 2.33.2.11 SPI.IRQEna.TranDone
+
+define SPI.IRQEna.TranDone BIT6
+
+中断使能定义，传输完成中断
+
+在文件 Iks32mc08x.spi.h 第 103 行定义.
+
+# 2.33.3 枚举类型说明
+
+# 2.33.3.1 SPI_Duplex
+
+enum SPI_Duplex
+
+SPI工作模式配置枚举
+
+枚举值  
+
+<table><tr><td>SPI.Full</td><td>SPI全双工</td></tr><tr><td>SPI.Half.Tx</td><td>SPI半双工仅发送</td></tr><tr><td>SPI.Half.Rx</td><td>SPI半双工仅接收</td></tr></table>
+
+在文件 Iks32mc08x.spi.h 第 33 行定义.
+
+# 2.33.3.2 SPI_Mode
+
+enum SPI_Mode
+
+SPI模式配置枚举
+
+枚举值
+
+<table><tr><td>SPI.Master</td><td>SPI主模式</td></tr><tr><td>SPI.Slave</td><td>SPI从模式</td></tr></table>
+
+在文件 Iks32mc08x.spi.h 第 24 行定义.
+
+# 2.33.4 函数说明
+
+# 2.33.4.1 SPI_ClearIRQFlag()
+
+void SPI_ClearIRQFlag (SPI.TypeDef *SPIx, u8 IRQ_Flag)
+
+函数名称：void SPI_ClearIRQFlag(SPI.TypeDef *SPIx, u8 IRQ_Flag)
+
+功能描述：清除SPI中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">SPIx: SPI IRQ_Flag:</td></tr><tr><td>SPI_IF_TransDone</td><td>传输完成中断标志位</td></tr><tr><td>SPI_IF_SSEAr</td><td>传输异常中断标志位</td></tr><tr><td>SPI_IF_DataOver</td><td>传输溢出中断标志位</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(SPI.GetIRQFlag(SPI,SPI_IF_TransDone))//获取传输完成中断标志位{SPI_ClearIRQFlag(SPI,SPI_IF_TransDone);//清除传输完成中断标志位}
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_spi.c 第 227 行定义.
+
+# 2.33.4.2 SPI_GetIRQFlag()
+
+uint8_t SPI_GetIRQFlag (SPI_TypeDef *SPIx, u8 IRQ_Flag)
+
+函数名称：uint8_t SPI_GetIRQFlag(SPI_TypeDef *SPIx, u8 IRQ_Flag)
+
+功能描述：获取SPI中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">SPIx: SPI IRQ_Flag:</td></tr><tr><td>SPI_IF_TranDone</td><td>传输完成中断标志位</td></tr><tr><td>SPI_IF_SSEr</td><td>传输异常中断标志位</td></tr><tr><td>SPI_IF_DataOver</td><td>传输溢出中断标志位</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为 0
+
+示例代码：
+
+if(SPI.GetIRQFlag(SPI,SPI_IF_TranDone))//获取传输完成中断标志位{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_spi.c 第 186 行定义.
+
+# 2.33.4.3 SPI_Init()
+
+void SPI_Init (SPI_TypeDef *SPIx, SPI_InitTypeDef *SPI_InitStructure)
+
+函数名称：void SPI_Init(SPI_TypeDef* SPIx, SPI_InitStructure)
+
+功能描述：SPI初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI, SPI_InitTypeDef *SPI_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SPI_InitTypeDef SPI_InitStructure; SPI_StructInit(&SPI_InitStructure); //SPI结构体初始化 SPI_InitStructure.Duplex = SPI_Full; //双工模式设置 SPI_InitStructure.Mode = SPI_Master; //master主机模式 SPI_InitStructure.EN = ENABLE; //使能SPI模块 SPI_InitStructure.DMA = SPI_DMA_DISABLE; //选择SPI搬移方式，由MCU搬运数据到SPI SPI_InitStructure.Trig = 0; //内部自动触发传输 SPI_InitStructure.DataOrder = SPI_FIRSTSEND_MSB; //该字节先发送 MSB SPI_InitStructure.CPHA = 0; //第一个沿为发送数据时刻 SPI_InitStructure.CPOL = 0; //CLK默认高电平 SPI_InitStructure.BaudRate = 30; //传输速度96MHZ/(2*(30+1)) = 1.548MHZ SPI_InitStructure.BYLength = 0; //发送零个字节 SPI_InitStructure.IRQEna = DISABLE; //关闭SPI各中断 SPI_InitStructure.SPI, &SPI_InitStructure); //SPI初始化程序
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_spi.c 第 49 行定义.
+
+函数调用图：
+
+# 2.33.4.4 SPI_ReadData()
+
+uint8_t SPI_ReadData (SPI_TypeDef *SPIx)
+
+函数名称：uint8_t SPI_ReadData(SPI_TypeDef *SPIx)
+
+功能描述：SPI读缓冲区数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 SPI_RXValue = 0;  SPI_RXValue = SPI_ReadData(SPI); //SPI接收一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.spi.c第155行定义
+
+# 2.33.4.5 SPI_SendData()
+
+void SPI_SendData(SPI.typeDef *SPIx, uint8_t n)
+
+函数名称：void SPI_SendData(SPI_TypeDef *SPIx, uint8_t n)
+
+功能描述：SPI发送数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI, n: 发送一字节数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SPI_SendData（SPI,0x12）；//SPI发送0x12一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.spi.c第129行定义.
+
+# 2.33.4.6 SPI_StructInit()
+
+void SPI_StructInit (SPI_InitTypeDef *SPI_InitStructure)
+
+函数名称：void SPI_Init(SPI_TypeDef* SPIx, SPI_InitStructure)
+
+功能描述：SPI结构体初始化
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI, SPI_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+SPIInitTypeDef SPIInitStruct;  SPIStructInit(&SPIInitStruct);
+
+//SPI结构体初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.spi.c 第 90 行定义.
+
+# 2.34 Iks32mc08x.spi.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x_SPI.R 00015 #define _LKS32MC08x_SPI.R 00016 00017 00018 /\* Includes 00019 #include "lks32mc08x.lib.h" 00020 00024 typedef enum 00025 00026 SPIMaster  $=$  Ox01, 00027 SPI.Slave  $=$  Ox00 00028 }SPIMode; 00029 00033 typedef enum 00034 { 00035 SPI_Full  $= 0\times 0$  00036 SPIHalfTx  $=$  Ox2, 00037 SPI_Half_Rx  $=$  Ox3 00038 }SPI_Duplex; 00039 00043 typedef struct 00044 { 00045 _IO uint32_t CFG; 00046 _IO uint32_t IE; 00047 _IO uint32_t DIV; 00048 _IO uint32_t TX_DATA; 00049 _IO uint32_t RX_DATA; 00050 _IO uint32_t SIZE; 00051 }SPITypeDef; 00052 00056 _ifndef SPI 00057 #define SPI ((SPITypeDef  $\ast$  )SPI0. BASE) 00058 #endif 00059 00063 typedef struct 00064 { 00069 SPI_Duplex Duplex; 00070 uint8_t SS; 00075 SPI.Mode Mode; 00076 uint8_t CPHA; 00077 uint8_t CPOL; 00078 uint8_t DataOrder; 00079 uint8_t EN; 00088 uint8_t IRQEna; 00089 uint8_t Trig; 00090 uint8_t DMA; 00091 uint8_t BaudRate; 00093 uint8_t ByteLength; 00094 }SPI_InitTypeDef; 00095 00096 #define SPI_FIRSTSEND_LSD 1 00097 #define SPI_FIRSTSEND_MSE 0 00099 #define SPI_DMA_ENABLE 0
+
+00100 #define SPI_DMA_DISABLE 1 00102 #define SPI_IRQEna_Enable BIT7 00103 #define SPI_IRQEna_TranDone BIT6 00104 #define SPI_IRQEna_SsErr BIT5 00105 #define SPI_IRQEna_DataOver BIT4 00107 #define SPI_IF_TranDone BIT2 00108 #define SPI_IF_SsErr BIT1 00109 #define SPI_IF_DataOver BIT0 00111 void SPI_Init(SPITypeDef \*sPIx, SPI_InitTypeDef \*SPI_InitStruct); 00112 void SPI_StructInit(SPI_InitTypeDef \*SPI_InitStructure); 00113 00114 uint8_t SPI_GetIRQFlag(SPI_InitTypeDef \*sPIx,u8 IRQ_Flag); 00115 void SPI_ClearIRQFlag(SPI_TypeDef \*sPIx,u8 IRQ_Flag); 00116 00117 void SPI_SendData(SPI_TypeDef \*sPIx, uint8_t n); 00118 uint8_t SPI_ReadData(SPI_TypeDef \*sPIx); 00119 #endif /\*lks32mc08x_SPIH\*/ 00120 00121 00122 00123 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+# 2.35 Include/lks32mc08x_sys.h 文件参考
+
+文件名称：lks32mc08x_sys.h  文件标识：无  内容摘要：sys驱动头文件  其它说明：无
+
+include"lks32mc08x_lib.h"#include <stdlib.h>lks32mc08x_sys.h 的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/e243a3cab6cb8f91ddfcd938283fbc7d70992bd42c72a7a93b69db6cc7127fd0.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/20515a23135b765d7ad8001a24c69f3e7312bc7fec5c42defaf08633660e59a0.jpg)
+
+# 结构体
+
+- struct WAKE_InitTypeDef  低功耗时钟配置中间变量  
+- struct SYS_InitTypeDef  系统初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 宏定义
+
+- #define SYS.PLLSRSEL.RCH 0x00 /*使用4MHz RC时钟*/- #define SYS.PLLSRSEL.CRYSTAL 0x01 /*使用晶体时钟*/- #define SYS.PLREDIV_4 0x00 /*在PLL分频基础上再/4*/- #define SYS.PLREDIV_1 0x01 /*在PLL分频基础上不再分频*/- #define SYS.Clk.SPIDiv1 0SP时钟分频，占时未使用- #define SYS.Clk.SPIDiv2 1SP时钟分频，占时未使用- #define SYS.Clk.SPIDiv4 2SP时钟分频，占时未使用- #define SYS.Clk.SPIDiv6 3SP时钟分频，占时未使用- #define SYS.Clk.UARTDiv1 0UART时钟分频，占时未使用- #define SYS.Clk.UARTDiv2 1UART时钟分频，占时未使用- #define SYS.Clk.UARTDiv4 2UART时钟分频，占时未使用- #define SYS.Clk.UARTDiv8 3UART时钟分频，占时未使用- #define SYS.Module.I2C BIT5I2C模块- #define SYS.Module.HALL BIT1HALL模块- #define SYS.Module.TIMER BIT2TIMER模块- #define SYS.Module.MCPWM BIT3模块- #define SYS.Module.UART0 BIT4MCPWM模块- #define SYS.Module.UART1 BIT5UART1模块- #define SYS.Module.DSP BIT6I2C模块- #define SYS.Module.CAN BIT7I2C模块- #define SYS.Module.SPI BIT8I2C模块- #define SYS.AnalogModule.ADC BIT0ADC模块- #define SYS.AnalogModule.OPA0 BIT2OPA0模块- #define SYS.AnalogModule.OPA1 BIT3OPA1模块- #define SYS.AnalogModule.OPA2 BIT4OPA2模块- #define SYS.AnalogModule.OPA3 BIT5OPA3模块- #define SYS.AnalogModule.CMP0 BIT6
+
+CMP0模块- #define SYS_AnalogModule.CMP1 BIT7CMP1模块- #define SYS_AnalogModule.BGP BIT8BGP模块- #define SYS_AnalogModule.RCH BIT10RCH模块- #define SYS_AnalogModule.DAC BIT12DAC模块- #define SYS_AnalogModule.TMP BIT13温度传感器模块- #define SYS_AnalogModule.XTAL BIT14晶振模块- #define SYS_AnalogModule.PLL BIT15PLL模块- #define SYS_WD_TimeOut2s 0看门狗超时时间2s复位- #define SYS_WD_TimeOut4s 1看门狗超时时间4s复位- #define SYS_WD_TimeOut8s 2看门狗超时时间8s复位- #define SYS_WD_TimeOut64s 3看门狗超时时间64s复位- #define SYS_RstSrc.LPCR 0x01复位信号源：内部1.5V电源管理复位- #define SYS_RstSrc.HPCR 0x02复位信号源：内部3.3V电源管理- #define SYS_RstSrc.KEYBOARD 0x04复位信号源：按键复位- #define SYS_RstSrc.WDT 0x08复位信号源：WDT复位- #define SYS_Wakelntrval.025s 0x00休眠唤醒间隔时间0.25s- #define SYS_Wakelntrval.05s 0x01休眠唤醒间隔时间0.5s- #define SYS_Wakelntrval.1s 0x02休眠唤醒间隔时间1s- #define SYS_Wakelntrval.2s 0x03休眠唤醒间隔时间2s- #define SYS_Wakelntrval.4s 0x04休眠唤醒间隔时间4s- #define SYS_Wakelntrval.8s 0x05休眠唤醒间隔时间8s- #define SYS_Wakelntrval.16s 0x06休眠唤醒间隔时间16s- #define SYS_Wakelntrval.32s 0x07休眠唤醒间隔时间32s- #define WAKEIO_P0.0 BIT0系统低功耗时使用P0.0作为唤醒IO- #define WAKEIO_P0.1 BIT1系统低功耗时使用P0.1作为唤醒IO
+
+- #define WAKEIO_P1_0 BIT2  系统低功耗时使用P1.0作为唤醒IO- #define WAKEIO_P1_1 BIT3  系统低功耗时使用P1.0作为唤醒IO
+
+# 枚举
+
+- enum enumWakeTrigLevel { WAKETRIG_LOW, WAKETRIG_HIGH }  低功耗IO唤醒电平枚举成员
+
+# 函数
+
+- void SYS.Init (SYS.InitTypeDef *SYS.InitStruct)  函数名称: void SYS.Init(SYS.InitTypeDef* SYS.InitStruct)- void SYS.StructInit (SYS.InitTypeDef *SYS.InitStruct)  函数名称: void SYS.StructInit(SYS.InitTypeDef* SYS.InitStruct)- uint32_t SYS.GetRstSource (void)  函数名称: uint32_t SYS.GetRstSource(void)- void SYS.ClearRst (void)  函数名称: void SYS.ClearRst(void)- void SYS.WatchDogCmd (FuncState state)  函数名称: void SYS.WatchDogCmd (FuncState state)- void SYS.FeedDog (uint32_t timeOut)  函数名称: void SYS.FeedDog (uint32_t timeOut)- void SYS.FallSleep (void)  函数名称: void SYS.FallSleep (void)- void SYS.SetWakeInterval (uint32_t nInterval)  函数名称: void SYS.SetWakeInterval (uint32_t nInterval)- void Switch2PLL (void)  函数名称: void Switch2PLL (void)- void Switch2HRC (void)  函数名称: void Switch2HRC (void)- void SetWakeIO (uint32_t wakeIO, enumWakeTrigLevel trigLevel, uint8_t ena)  函数名称: void SetWakeIO (uint32_t wakeIO, enumWakeTrigLevel trigLevel, bool ena)- void SYS.ModuleClockCmd (uint32_t nModule, FuncState state)  函数名称: void SYS.ModuleClockCmd (uint32_t nModule, FuncState state)- void SYS.AnalogModuleClockCmd (uint32_t nModule, FuncState state)  函数名称: void SYS.AnalogModuleClockCmd (uint32_t nModule, FuncState state)- void SYS.SoftResetModule (uint32_t nModule)  函数名称: void SYS.SoftResetModule (uint32_t nModule)- void DSP_Init (void)  函数名称: void DSP_Init (void)
+
+# 2.35.1 详细描述
+
+文件名称： Iks32mc08x_sys.h文件标识：无内容摘要： sys驱动头文件其它说明：无
+
+版权所有
+
+(C)2015,LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.h 中定义.
+
+# 2.35.2 宏定义说明
+
+# 2.35.2.1 SYS_AnalogModule.ADC
+
+define SYS_AnalogModule.ADC BITO
+
+ADC模块
+
+在文件 Iks32mc08x_sys.h 第 91 行定义.
+
+# 2.35.2.2 SYS_AnalogModule.BGP
+
+define SYS_AnalogModule.BGP BIT8
+
+BGP模块
+
+在文件 Iks32mc08x_sys.h 第 98 行定义.
+
+# 2.35.2.3 SYS_AnalogModule.CMP0
+
+define SYS_AnalogModule.CMP0 BIT6
+
+# CMP0模块
+
+CMP0模块在文件 Iks32mc08x_sys.h 第 96 行定义.
+
+# 2.35.2.4 SYS_AnalogModule.CMP1
+
+define SYS_AnalogModule.CMP1 BIT7
+
+# CMP1模块
+
+CMP1模块在文件 Iks32mc08x_sys.h 第 97 行定义.
+
+# 2.35.2.5 SYS_AnalogModule.DAC
+
+define SYS_AnalogModule.DAC BIT12
+
+# DAC模块
+
+在文件 Iks32mc08x_sys.h 第 100 行定义.
+
+# 2.35.2.6 SYS_AnalogModule.OPA0
+
+define SYS_AnalogModule.OPA0 BIT2
+
+# OPA0模块
+
+OPA0模块在文件 Iks32mc08x_sys.h 第 92 行定义.
+
+# 2.35.2.7 SYS_AnalogModule.OPA1
+
+define SYS_AnalogModule.OPA1 BIT3
+
+# OPA1模块
+
+OPA1模块在文件 Iks32mc08x_sys.h 第 93 行定义.
+
+# 2.35.2.8 SYS_AnalogModule.OPA2
+
+define SYS_AnalogModule.OPA2 BIT4
+
+# OPA2模块
+
+在文件 Iks32mc08x_sys.h 第 94 行定义.
+
+# 2.35.2.9 SYS_AnalogModule.OPA3
+
+define SYS_AnalogModule.OPA3 BIT5
+
+# OPA3模块
+
+在文件 Iks32mc08x_sys.h 第 95 行定义.
+
+# 2.35.2.10 SYS_AnalogModule.PL
+
+define SYS_AnalogModule.PL BIT15
+
+# PLL模块
+
+在文件 Iks32mc08x_sys.h 第 103 行定义.
+
+# 2.35.2.11 SYS_AnalogModule.RCH
+
+define SYS_AnalogModule.RCH BIT10
+
+# RCH模块
+
+在文件 Iks32mc08x_sys.h 第 99 行定义.
+
+# 2.35.2.12 SYS_AnalogModule.TMP
+
+define SYS_AnalogModule.TMP BIT13
+
+# 温度传感器模块
+
+在文件 Iks32mc08x_sys.h 第 101 行定义.
+
+# 2.35.2.13 SYS.AnalogModule.XTAL
+
+define SYS.AnalogModule.XTAL BIT14
+
+# 晶振模块
+
+晶振模块在文件 Iks32mc08x_sys.h 第 102 行定义.
+
+# 2.35.2.14 SYS.Clk.SPIDiv1
+
+define SYS.Clk.SPIDiv1 0
+
+SPI时钟分频，占时未使用
+
+在文件 Iks32mc08x_sys.h 第 68 行定义.
+
+# 2.35.2.15 SYS.Clk.SPIDiv2
+
+define SYS.Clk.SPIDiv2 1SPI时钟分频，占时未使用在文件 Iks32mc08x_sys.h 第 69 行定义.
+
+# 2.35.2.16 SYS.Clk.SPIDiv4
+
+define SYS.Clk.SPIDiv4 2
+
+SPI时钟分频，占时未使用
+
+在文件 Iks32mc08x_sys.h 第 70 行定义.
+
+# 2.35.2.17 SYS.Clk.SPIDiv8
+
+define SYS.Clk.SPIDiv8 3
+
+SPI时钟分频，占时未使用
+
+在文件 Iks32mc08x_sys.h 第 71 行定义.
+
+# 2.35.2.18 SYS.Clk.UARTDiv1
+
+define SYS.Clk.UARTDiv1 0UART时钟分频，占时未使用在文件 Iks32mc08x_sys.h 第 74 行定义.
+
+# 2.35.2.19 SYS.Clk.UARTDiv2
+
+define SYS.Clk.UARTDiv2 1UART时钟分频，占时未使用在文件 Iks32mc08x_sys.h 第 75 行定义.
+
+# 2.35.2.20 SYS.Clk.UARTDiv4
+
+define SYS.Clk.UARTDiv4 2UART时钟分频，占时未使用在文件 Iks32mc08x_sys.h 第 76 行定义.
+
+# 2.35.2.21 SYS.Clk.UARTDiv6
+
+define SYS.Clk.UARTDiv6 3
+
+UART时钟分频，占时未使用在文件 Iks32mc08x_sys.h 第 77 行定义.
+
+# 2.35.2.22 SYS_Module_CAN
+
+define SYS_Module_CAN BIT7
+
+# I2C模块
+
+在文件 Iks32mc08x_sys.h 第 87 行定义.
+
+# 2.35.2.23 SYS.Module.DSP
+
+define SYS Module.DSP BIT6
+
+# I2C模块
+
+在文件 Iks32mc08x_sys.h 第 86 行定义.
+
+# 2.35.2.24 SYS Module HALL
+
+define SYS Module HALL BIT5
+
+# HALL模块
+
+在文件 Iks32mc08x_sys.h 第 81 行定义.
+
+# 2.35.2.25 SYS Module I2C
+
+define SYS Module I2C BIT0
+
+# I2C模块
+
+在文件 Iks32mc08x_sys.h 第 80 行定义.
+
+# 2.35.2.26 SYS Module MCPWM
+
+define SYS Module MCPWM BIT3
+
+# 模块
+
+在文件 Iks32mc08x_sys.h 第 83 行定义.
+
+# 2.35.2.27 SYS Module SPI
+
+define SYS Module SPI BIT8
+
+# I2C模块
+
+在文件 Iks32mc08x_sys.h 第 88 行定义.
+
+# 2.35.2.28 SYS.Module_TIMER
+
+define SYS_Module_TIMER BIT2
+
+# TIMER模块
+
+在文件 Iks32mc08x_sys.h 第 82 行定义.
+
+# 2.35.2.29 SYS.Module.UART0
+
+define SYS_Module_UART0 BIT4
+
+# MCPWM模块
+
+在文件 Iks32mc08x_sys.h 第 84 行定义.
+
+# 2.35.2.30 SYS.Module.UART1
+
+define SYS_Module_UART1 BIT5
+
+UART1模块
+
+在文件 Iks32mc08x_sys.h 第 85 行定义.
+
+# 2.35.2.31 SYS.PLREDIV.1
+
+define SYS.PLREDIV.1 0x01 /*在PLL分频基础上不再分频*/在文件 Iks32mc08x_sys.h 第 65 行定义.
+
+# 2.35.2.32 SYS.PLREDIV.4
+
+define SYS.PLREDIV.4 0x00 /*在PLL分频基础上再/4*/
+
+在文件 Iks32mc08x_sys.h 第 64 行定义.
+
+# 2.35.2.33 SYS.PLLSRSEL.CRYSTAL
+
+define SYS.PLLSRSEL.CRYSTAL 0x01 /*使用晶体时钟*/在文件 Iks32mc08x_sys.h 第 61 行定义.
+
+# 2.35.2.34 SYS.PLLSRSEL.RCH
+
+define SYS.PLLSRSEL.RCH 0x00 /*使用4MHz RC时钟*/在文件 Iks32mc08x_sys.h 第 60 行定义.
+
+# 2.35.2.35 SYS_RstSrc.HPOR
+
+define SYS_RstSrc.HPOR 0x02
+
+复位信号源：内部3.3V电源管理
+
+在文件 Iks32mc08x_sys.h 第 113 行定义.
+
+# 2.35.2.36 SYS_RstSrc.KEYBOARD
+
+define SYS_RstSrc.KEYBOARD 0x04
+
+复位信号源：按键复位
+
+在文件 Iks32mc08x_sys.h 第 114 行定义.
+
+# 2.35.2.37 SYS_RstSrc.LPOR
+
+define SYS_RstSrc.LPOR 0x01
+
+复位信号源：内部1.5V电源管理复位
+
+在文件 Iks32mc08x_sys.h 第 112 行定义.
+
+# 2.35.2.38 SYS_RstSrc_WDT
+
+define SYS_RstSrc_WDT 0x08
+
+复位信号源：WDT复位
+
+在文件 Iks32mc08x_sys.h 第 115 行定义.
+
+# 2.35.2.39 SYS_Wakelnterval.025s
+
+define SYS_WakeInterval_025s 0x00
+
+休眠唤醒间隔时间0.25s
+
+在文件 Iks32mc08x_sys.h 第 118 行定义.
+
+# 2.35.2.40 SYS_Wakelnterval.05s
+
+define SYS_WakeInterval_05s 0x01
+
+休眠唤醒间隔时间0.5s
+
+在文件 Iks32mc08x_sys.h 第 119 行定义.
+
+# 2.35.2.41 SYS_Wakelnterval.16s
+
+define SYS_WakeInterval_16s 0x06
+
+休眠唤醒间隔时间16s
+
+在文件 Iks32mc08x_sys.h 第 124 行定义.
+
+# 2.35.2.42 SYS_Wakelnterval.1s
+
+define SYS_WakeInterval_1s 0x02
+
+休眠唤醒间隔时间1s
+
+在文件 Iks32mc08x_sys.h 第 120 行定义.
+
+# 2.35.2.43 SYS.Wakelntrval.2s
+
+define SYS.WakeInterval.2s 0x03
+
+休眠唤醒间隔时间2s
+
+在文件 Iks32mc08x_sys.h 第 121 行定义.
+
+# 2.35.2.44 SYS.Wakelntrval.32s
+
+define SYS.WakeInterval.32s 0x07
+
+休眠唤醒间隔时间32s
+
+在文件 Iks32mc08x_sys.h 第 125 行定义.
+
+# 2.35.2.45 SYS.Wakelntrval.4s
+
+define SYS.WakeInterval.4s 0x04
+
+休眠唤醒间隔时间4s
+
+在文件 Iks32mc08x_sys.h 第 122 行定义.
+
+# 2.35.2.46 SYS.Wakelntrval.8s
+
+define SYS.WakeInterval.8s 0x05
+
+休眠唤醒间隔时间8s
+
+在文件 Iks32mc08x_sys.h 第 123 行定义.
+
+# 2.35.2.47 SYS.WD_TimeOut2s
+
+define SYS.WD_TimeOut2s 0
+
+看门狗超时时间2s复位
+
+在文件 Iks32mc08x_sys.h 第 106 行定义.
+
+# 2.35.2.48 SYS.WD.TimeOut4s
+
+define SYS.WD.TimeOut4s 1
+
+看门狗超时时间4s复位
+
+在文件 Iks32mc08x_sys.h 第 107 行定义.
+
+# 2.35.2.49 SYS.WD.TimeOut64s
+
+define SYS.WD.TimeOut64s 3
+
+看门狗超时时间64s复位
+
+在文件 Iks32mc08x_sys.h 第 109 行定义.
+
+# 2.35.2.50 SYS.WD.TimeOut8s
+
+define SYS.WD.TimeOut8s 2
+
+看门狗超时时间8s复位
+
+在文件 Iks32mc08x_sys.h 第 108 行定义.
+
+# 2.35.2.51 WAKEIO.P0.0
+
+define WAKEIO.P0.0 BIT0
+
+系统低功耗时使用P0.0作为唤醒IO在文件 Iks32mc08x_sys.h 第 128 行定义.
+
+# 2.35.2.52 WAKEIO.P0.1
+
+define WAKEIO.P0.1 BIT1
+
+系统低功耗时使用P0.1作为唤醒IO在文件 Iks32mc08x_sys.h 第 129 行定义.
+
+# 2.35.2.53 WAKEIO.P1.0
+
+define WAKEIO.P1.0 BIT2系统低功耗时使用P1.0作为唤醒IO在文件 Iks32mc08x_sys.h 第 130 行定义.
+
+# 2.35.2.54 WAKEIO.P1.1
+
+define WAKEIO.P1.1 BIT3系统低功耗时使用P1.1作为唤醒IO在文件 Iks32mc08x_sys.h 第 131 行定义.
+
+# 2.35.3 枚举类型说明
+
+# 2.35.3.1 enumWakeTrigLevel
+
+enum enumWakeTrigLevel
+
+低功耗IO唤醒电平枚举成员
+
+枚举值
+
+<table><tr><td>WAKETRIG_LOW</td></tr><tr><td>WAKETRIG_HIGH</td></tr></table>
+
+在文件 Iks32mc08x_sys.h 第 24 行定义.
+
+# 2.35.4 函数说明
+
+# 2.35.4.1 DSP_Init()
+
+void DSP_Init (void)
+
+函数名称：void DSP_Init(void)功能描述：DSP时钟使能
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>无</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+启示例代码：```bashDSP_Init(1, //DSP引|使能)```
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第605行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/0950923329a7aa0d519d91b68f97b655246c77fa21dc00ff211f92a433247b5e.jpg)
+
+# 2.35.4.2 SetWakeIO()
+
+void SetWakeIO (    uint32_t wakeIO,    enumWakeTrigLevel trigLevel,    uint8_t ena )
+
+函数名称：void SetWakeIO(uint32_t wakeIO, enumWakeTrigLevel trigLevel, bool ena)
+
+功能描述：设置休眠唤醒IO
+
+参见
+
+唤醒电平选择枚举：enumWakeTrigLevel
+
+参数  
+
+<table><tr><td>输入参数:</td><td></td></tr><tr><td rowspan="3"></td><td>wakeIO = WAKEIO.P1.1; P1.1 外部唤醒使能。1: 使能; 0: 禁用
+wakeIO = WAKEIO.P1.0; P1.0 外部唤醒使能。1: 使能; 0: 禁用
+wakeIO = WAKEIO.P0.1; P0.1 外部唤醒使能。1: 使能; 0: 禁用
+wakeIO = WAKEIO.P0.0; P0.0 外部唤醒使能。1: 使能; 0: 禁用</td></tr><tr><td>enumWakeTrigLevel:
+唤醒电平选择:
+0: 低电平唤醒
+1: 高电平唤醒</td></tr><tr><td>ena:
+ENABLE: 开启IO唤醒
+DISABLE: 关闭IO唤醒</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SetWakeIO(WAKEIO.P0.0,WAKETRIG_LOW,ENABLE); //系统休眠时，使能P0.0作为低功耗唤醒IO，低电平唤醒
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第278行定义.
+
+# 2.35.4.3 Switch2HRC()
+
+void Switch2HRC (void)
+
+函数名称：voidSwitch2HRC（void)
+
+功能描述：休眠唤醒前一时刻，关闭高速时钟与BGP和掉电检测电路函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：系统低功耗休眠使用
+
+警告
+
+无
+
+示例代码：
+
+Switch2PLL();
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第374行定义.
+
+# 2.35.4.4 Switch2PLL()
+
+void Switch2PLL ( void )
+
+函数名称：voidSwitch2PLL（void)
+
+功能描述：休眠唤醒后，系统时钟切换到PLL时钟函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：系统低功耗唤醒使用
+
+警告
+
+无
+
+示例代码：
+
+Switch2PLL();
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 345 行定义.
+
+函数调用图：
+
+# 2.35.4.5 SYS_AnalogModuleClockCmd()
+
+void SYS_AnalogModuleClockCmd (    uint32_t nModule,    FuncState state)
+
+函数名称：void SYS_AnalogModuleClockCmd(uint32_t nModule, FuncState state)
+
+功能描述：模拟模块使能和停止
+
+参见
+
+被调用枚举：FuncState
+
+参数  
+
+<table><tr><td rowspan="15">输入参数:</td><td colspan="3">state: ENABLE使能, DISABLE关闭
+nModule: 参数可选:</td></tr><tr><td>宏定义</td><td>说明</td><td></td></tr><tr><td>SYS AnalogModule_ADC</td><td>BIT0</td><td>ADC模块</td></tr><tr><td>SYS AnalogModule(OPA0</td><td>BIT2</td><td>OPA0模块</td></tr><tr><td>SYS AnalogModule(OPA1</td><td>BIT3</td><td>OPA1模块</td></tr><tr><td>SYS AnalogModule(OPA2</td><td>BIT4</td><td>OPA2模块</td></tr><tr><td>SYS AnalogModule(OPA3</td><td>BIT5</td><td>OPA3模块</td></tr><tr><td>SYS AnalogModule.CMP0</td><td>BIT6</td><td>CMP0模块</td></tr><tr><td>SYS AnalogModule.CMP1</td><td>BIT7</td><td>CMP1模块</td></tr><tr><td>SYS AnalogModule.BGP</td><td>BIT8</td><td>BGP模块</td></tr><tr><td>SYS AnalogModule.RCH</td><td>BIT10</td><td>RCH模块</td></tr><tr><td>SYS AnalogModule.DAC</td><td>BIT12</td><td>DAC模块</td></tr><tr><td>SYS AnalogModule.TMP</td><td>BIT13</td><td>温度传感器</td></tr><tr><td>SYS AnalogModule.XTAL</td><td>BIT14</td><td>晶振</td></tr><tr><td>SYS AnalogModule.PLL</td><td>BIT15</td><td>PLL模块</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS AnalogModuleClockCmd（SYS AnalogModule.PLL,ENABLE）；//使能PLL模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 583 行定义.
+
+这是这个函数的调用关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/2445e996282d9e1df37de9049d19ae318cb778a32c7279bcb745bcd3ddb715de.jpg)
+
+# 2.35.4.6 SYS.ClearRst()
+
+void SYS.ClearRst (void)
+
+函数名称：void SYS.ClearRst(void)
+
+功能描述：SYS清除复位标志记录
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：请注意由于复位记录工作于低速时钟域，清除执行完成需要一定时间，不应清除后立即读记录状态
+
+警告
+
+无
+
+示例代码：
+
+u32 RSET_VALUE = 0;SYS.ClearRst(); //清除复位标志记录delay_ms(1);RSET_VALUE = SYS.GetRstSource(); //读取复位源记录值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第141行定义.
+
+# 2.35.4.7 SYS_FallSleep()
+
+void SYS_FallSleep (void)
+
+函数名称：void SYS_FallSleep(void)
+
+功能描述：触发系统进入休眠状态
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS.FallSleep（）；//触发系统进入休眠状态
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第199行定义
+
+# 2.35.4.8 SYS.FeedDog()
+
+void SYS.FeedDog ( uint32_t timeout)
+
+函数名称：void SYS.FeedDog(uint32_t timeout)
+
+功能描述：喂狗
+
+参见
+
+参见被调用函数：无
+
+参数
+
+<table><tr><td rowspan="5">输入参数:</td><td colspan="3">timeOut: 看门狗超时时间</td></tr><tr><td>SYS_WD_TimeOut2s</td><td>0</td><td>2s 复位</td></tr><tr><td>SYS_WD_TimeOut4s</td><td>1</td><td>4s 复位</td></tr><tr><td>SYS_WD_TimeOut8s</td><td>2</td><td>8s 复位</td></tr><tr><td>SYS_WD_TimeOut64s</td><td>3</td><td>64s 复位</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS_FeedDog（SYS_WD_TimeOut（2s）；//看门狗喂狗且设置下一次如果2s不喂狗则芯片复位
+
+修改日志：
+
+在文件lks32mc08x_sys.c第473行定义
+
+# 2.35.4.9 SYS.GetRstSource()
+
+uint32_t SYS_GetRstSource（void)
+
+函数名称：uint32_tSYS_GetRstSource（void)
+
+功能描述：获得SYS复位源信号
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>无</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：复位源记录值
+
+注解
+
+注解其它说明：返回值位介绍
+
+警告
+
+无
+
+<table><tr><td>BIT3</td><td>看门狗复位发生标志</td><td>高有效</td></tr><tr><td>BIT2</td><td>按键复位发生标志</td><td>高有效</td></tr><tr><td>BIT1</td><td>HPOR 复位发生标志</td><td>高有效</td></tr><tr><td>BIT0</td><td>LPOR 复位发生标志</td><td>高有效</td></tr></table>
+
+示例代码：
+
+示例代码：u32 RSET.VALUE = 0; RSET.VALUE = SYS.GetRstSource(); //读取复位源记录值如 RSET.VALUE = 0x01; 则LPOR发生复位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第175行定义.
+
+# 2.35.4.10 SYS.Init()
+
+void SYS.Init（ SYS.InitTypeDef  $\ast$  SYS.InitStruct)
+
+函数名称：void SYS.Init（SYS.InitTypeDef\*SYS.InitStruct)
+
+功能描述：SYS模块初始化函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SYS_InitTypeDef* SYS_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：一般不使用该函数，因为涉及模块较多，比较杂乱，对应里面的配置在各模块初始化单独配置。
+
+警告
+
+无
+
+示例代码：
+
+SYS.InitTypeDef SYS.InitStruct;SYS.StructInit(&SYS.InitStruct);SYS.InitStruct.PLLOrcSel  $=$  SYS.PLLSRSEL_RCH; //使用内部4MHz晶振作为时钟输入源SYS.Init(&SYS.InitStruct)
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第47行定义
+
+# 2.35.4.11 SYS_ModuleClockCmd()
+
+void SYS_ModuleClockCmd (    uint32_t nModule,    FuncState state)
+
+函数名称：void SYS_ModuleClockCmd(uint32_t nModule, FuncState state)功能描述：数字模块时钟使能和停止
+
+参见
+
+被调用枚举：FuncState
+
+参数
+
+<table><tr><td rowspan="11">输入参数:</td><td colspan="3">state: ENABLE使能, DISABLE关闭
+nModule: 参数可选:</td></tr><tr><td>宏定义</td><td>原始值</td><td>说明</td></tr><tr><td>SYS Module I2C</td><td>BIT0</td><td>I2C模块</td></tr><tr><td>SYS Module FAIL</td><td>BIT1</td><td>HAIL模块</td></tr><tr><td>SYS Module TIMER</td><td>BIT2</td><td>UTIMER模块</td></tr><tr><td>SYS Module MCPWM</td><td>BIT3</td><td>MCPWM模块</td></tr><tr><td>SYS Module UART0</td><td>BIT4</td><td>UART0模块</td></tr><tr><td>SYS Module UART1</td><td>BIT5</td><td>UART1模块</td></tr><tr><td>SYS Module DSP</td><td>BIT6</td><td>DSP模块</td></tr><tr><td>SYS Module CAN</td><td>BIT7</td><td>CAN模块</td></tr><tr><td>SYS Module SPI</td><td>BIT8</td><td>SPI模块</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS Module Clock Cmd (SYS Module SPI, ENABLE); //使能SPI时钟
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 550 行定义.
+
+这是这个函数的调用关系图:
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/f47518a98ef566ff940c871a80ce49aa950658facfe70ab2006905a52a9c025c.jpg)
+
+# 2.35.4.12 SYS_SetWakeInterval()
+
+void SYS_SetWakeInterval (    uint32_t nInterval)
+
+函数名称: void SYS_SetWakeInterval(uint32_t nInterval)
+
+功能描述: 设置系统休眠唤醒周期
+
+参见
+
+被调用函数: 无
+
+参数  
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="3">nInterval: 唤醒时间</td></tr><tr><td>宏定义</td><td>原始值</td><td>说明</td></tr><tr><td>SYS.WakeInterval.025s</td><td>0x00</td><td>0.25s</td></tr><tr><td>SYS.WakeInterval.05s</td><td>0x01</td><td>0.5s</td></tr><tr><td>SYS.WakeInterval.1s</td><td>0x02</td><td>1s</td></tr><tr><td>SYS.WakeInterval.2s</td><td>0x03</td><td>2s</td></tr><tr><td>SYS.WakeInterval.4s</td><td>0x04</td><td>4s</td></tr><tr><td>SYS.WakeInterval.8s</td><td>0x05</td><td>8s</td></tr><tr><td>SYS.WakeInterval.16s</td><td>0x06</td><td>16s</td></tr><tr><td>SYS.WakeInterval.32s</td><td>0x07</td><td>32s</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS.SetWakeInterval（SYS.WakeInterval.1s）；//系统休眠时，设置系统在1s后唤醒
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第297行定义
+
+# 2.35.4.13 SYS.SoftResetModule()
+
+void SYS_SoftResetModule (    uint32_t nModule)
+
+函数名称：void SYS_SoftResetModule(uint32. t nModule)
+
+功能描述：数字模块软复位
+
+参见
+
+参见被调用枚举：无
+
+参数  
+
+<table><tr><td rowspan="11">输入参数:</td><td colspan="3">state: ENABLE使能, DISABLE关闭
+nModule: 参数可选:</td></tr><tr><td>宏定义</td><td>原始值</td><td>说明</td></tr><tr><td>SYS_Module.12C</td><td>BIT0</td><td>I2C模块</td></tr><tr><td>SYS_Module.HALL</td><td>BIT1</td><td>HALL模块</td></tr><tr><td>SYS_Module.TIMER</td><td>BIT2</td><td>UTIMER模块</td></tr><tr><td>SYS_Module.MCPWM</td><td>BIT3</td><td>MCPWM模块</td></tr><tr><td>SYS_Module.UART0</td><td>BIT4</td><td>UART0模块</td></tr><tr><td>SYS_Module.UART1</td><td>BIT5</td><td>UART1模块</td></tr><tr><td>SYS_Module.DSP</td><td>BIT6</td><td>DSP模块</td></tr><tr><td>SYS_Module.CAN</td><td>BIT7</td><td>CAN模块</td></tr><tr><td>SYS_Module.SPI</td><td>BIT8</td><td>SPI模块</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：//软复位SPI模块，清除SPI寄存器配置，FC指针复位SYS_SoftResetModule(SYS_Module.SPI);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：增加延时函数，等待寄存器复位完毕与释放复位操作。
+
+在文件lks32mc08x_sys.c第637行定义.函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/0e981bf3f1dac87eab7c4e3467d984d7fb97768ef733fe894e2bd557ea019f59.jpg)
+
+这是这个函数的调用关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/0beb237fb74d57648aba6bc0dc90b00bf5e7bf0082fb77d9169cdeee3281a66a.jpg)
+
+# 2.35.4.14 SYS.StructInit()
+
+void SYS.StructInit ( SYS.InitTypeDef * SYS.InitStruct )
+
+函数名称：void SYS.StructInit(SYS.InitTypeDef* SYS.InitStruct)
+
+功能描述：SYS结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SYS_InitTypeDef* SYS_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS.InitTypeDef SYS.InitStruct; SYS.StructInit(&SYS.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第104行定义.
+
+# 2.35.4.15 SYS.WatchDogCmd()
+
+void SYS.WatchDogCmd (FuncState state)
+
+函数名称：void SYS.WatchDogCmd(FuncState state)
+
+功能描述：看门狗模块使能函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>state: ENABLE使能看门狗/DISABLE关闭开门狗</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYSWatchDogCmd（ENABLE）;//使能看门狗模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第405行定义
+
+# 2.36 lks32mc08x_sys.h
+
+# 浏览该文件的文档
+
+00001 00015 #ifndef _LKS32MC08x.Sys.f 00016 #define _LKS32MC08x.Sys.f 00017 00018 00019 /\*Includes 00020 #include"lks32mc08x.ltb.h" 00021 #include <stdbool.h> 00022 00024 typedef enum 00025 { 00026 WAKETRIG.LOW，//输入lD低电平唤醒 00027 WAKETRIG.HIGH，//输入D高电平唤醒 00028 }enumWakeTrigLevel; 00029 00033 typedef struct 00034 { 00035 uint32t AFE_REG5_RECORD; 00036 uint32t AFE_REG6_RECORD; 00037 uint32t CLK_CFG_REGORD;
+
+00038}WAKE_InitTypeDef; 00039 00043 typedef struct 00044{ 00045 uint32_t PLLSrcSel; 00047 uint32_t PLL_DivSel; 00048 uint32_t PLL_ReDiv; 00050 uint32_t Clk_DivSPI; 00051 uint32_t Clk_DivUART; 00052 uint32_t Clk_FEN; 00054 uint32_t WDT_Ena; 00055 uint32_t PORFilter_Ena; 00056 }SYS_InitTypeDef; 00057 00058 00059 /*PLL信号输入源选择*/ 00060 #define SYS_PLLSSEL_RCH, 0x00 /*使用4MHz RC时钟*/ 00061 #define SYS_PLLSSEL_CRYS_TAL 0x01 /*使用晶体时钟*/ 00062 00063 /*PLL再分频定义*/ 00064 #define SYS_PLLREDIV_4 0x00 /*在PLL分频基础上再/4*/ 00065 #define SYS_PLLREDIV_1 0x01 /*在PLL分频基础上不再分频*/ 00066 00067 /*SPI时钟分频*/ 00068 #define SYS.Clk_SPIDiv1 0 00069 #define SYS.Clk_SPIDiv2 1 00070 #define SYS.Clk_SPIDiv4 2 00071 #define SYS.Clk_SPIDiv8 3 00073 /*UART时钟分频*/ 00074 #define SYS.Clk_UARTDiv1 0 00075 #define SYS.Clk_UARTDiv2 1 00076 #define SYS.Clk_UARTDiv4 2 00077 #define SYS.Clk_UARTDiv8 3 00079 /*数字模块位定义*/ 00080 #define SYS Module_I2C BIT0 00081 #define SYS Module_HALL BIT1 00082 #define SYS Module_TIMER BIT2 00083 #define SYS Module_MCPWM BIT3 00084 #define SYS Module_UARTO BIT4 00085 #define SYS Module_UART1 BIT5 00086 #define SYS Module DSP BIT6 00087 #define SYS Module_CAN BIT7 00088 #define SYS Module_SPI BIT8 00090 /*模拟模块定义*/ 00091 #define SYS AnalogModuleADC BIT0 00092 #define SYS AnalogModuleOPA0 BIT2 00093 #define SYS AnalogModuleOPA1 BIT3 00094 #define SYS AnalogModuleOPA2 BIT4 00095 #define SYS AnalogModuleOPA3 BIT5 00096 #define SYS AnalogModuleCMP0 BIT7 00097 #define SYS AnalogModuleCMP1 BIT8 00098 #define SYS AnalogModuleBGP BIT7 00099 #define SYS AnalogModuleRCH BIT10 00100 #define SYS AnalogModuleDAC BIT12 00101 #define SYS AnalogModuleTMP BIT13 00102 #define SYS AnalogModuleKTAI BIT14 00103 #define SYS AnalogModulePLL BIT15 00105 /*看门狗超时间*/ 00106 #define SYS.WD.TimeOut2s 0 00107 #define SYS.WD.TimeOut4s 1 00108 #define SYS.WD.TimeOut8s 2 00109 #define SYS.WD.TimeOut64s 3 00111 /*复位信号源定义*/ 00112 #define SYS.RstSrc_LPOR 0x01 00113 #define SYS.RstSrc.HPOR 0x02 00114 #define SYS.RstSrc.KEYBOARD 0x04 00115 #define SYS.RstSrc.NDT 0x08 00117 /*休眠唤醒间隔时间*/ 00118 #define SYS.WakeInterval025s 0x00 00119 #define SYS.WakeInterval05s 0x01 00120 #define SYS.WakeInterval1s 0x02 00121 #define SYS.WakeInterval2s 0x03 00122 #define SYS.WakeInterval4s 0x04 00123 #define SYS.WakeInterval8s 0x05 00124 #define SYS.WakeInterval16s 0x06 00125 #define SYS.WakeInterval22s 0x07 00127 /*低功耗唤醒IO选择*/ 00128 #define WAKEIO_P0.0 BIT0 00129 #define WAKEIO_P0.1 BIT1 00130 #define WAKEIO_P1.0 BIT2 00131 #define WAKEIO_P1.1 BIT3 00133 /*系统设置*/ 00134 void SYS_Init(SYS.InitTypeDef* SYS.InitStruct); 00135 void SYS.StructInit(SYS.InitTypeDef* SYS.InitStruct); 00136 /*复位源*/ 00137 uint32_t SYS.GetRstSource(void);
+
+00139 void SYS.ClearRst(void);0014000141 /\*看门狗\*/00142 void SYSWatchDogCmd(FuncState state);00143 void SYS_FeedDog(uint32_t timeOut);0014400145 /\*POR滤波\*/00146 //void SYS_PORFilterCmd(FuncState state);0014700148 /\*休眠、唤醒、时钟切换\*/00149 void SYS_FallSleep(void);00150 void SYS_SetWakeInterval(uint32_t nInterval);00151 void Switch2PLL(void);00152 void Switch2HRC(void);00153 void SetWakeIO(uint32_t wakeIO, enumWakeTrigLevel trigLevel, uint8_t ena);0015400155 /\*控制a路时钟使能\*/00156 void SYS ModuleClockCmd(uint32_t nModule, FuncState state);0015700158 /\*控制模拟模块时钟使能\*/00159 void SYS AnalogModuleClockCmd(uint32_t nModule, FuncState state);0016000161 /\*软复位各模块\*/00162 void SYS_SoftResetModule(uint32_t nModule);0016300164 /\*IAP_MODE\*/00165 //允许进入IAP_MODE，在软复位以后0016600167 /\*DSP模块初始化\*/00168 void DSP_Init(void);0016900170 #endif /\*..lks32mc08xSYS.H\*/00171001720017300174 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*
+
+# 2.37 Include/lks32mc08x_tim.h文件参考
+
+文件名称： lks32mc08x_tim.h文件标识：无内容摘要： TIM驱动头文件其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x_tim.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/6420838425967edd92a226f87681e0fff7a456e72d118b39e1fd9a5632f09d67.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/3924599c6c3182b4a67b585bbf8830159a95fd12d69e96f7582db272731117b3.jpg)
+
+# 结构体
+
+- struct TIM_TimerTypeDef
+
+定时器寄存器结构体句柄- struct TIM.ECDTypeDef  编码器寄存器结构体句柄- struct TIM.TimerInitTypeDef- struct TIM.ECDInitTypeDef
+
+# 宏定义
+
+- #define TIM.Clk.Div1 0x00  TIMER0结构体基地址定义- #define TIM.Clk.Div2 0x01  Timer工作频率48M- #define TIM.Clk.Div4 0x02  Timer工作频率24M- #define TIM.Clk.Div8 0x03  Timer工作频率12M- #define ECD.Clk.Div1 0x00  ECD工作频率96M- #define ECD.Clk.Div2 0x01  ECD工作频率48M- #define ECD.Clk.Div4 0x02  ECD工作频率24M- #define ECD.Clk.Div8 0x03  ECD工作频率12M- #define TIMER_IF_CH1 BIT2  中断标志定义, Timer_CH1中断, 比较或捕获中断- #define TIMER_IF_CH0 BIT1  中断标志定义, Timer_CHO中断, 比较或捕获中断- #define TIMER_IF_ZERO BIT0  中断标志定义, Timer 过零中断- #define ECD_IRQEna.None 0  编码器中断使能, 配置定义无使能- #define ECD_IRQEna.UnderFlow BIT0  编码器中断使能, 使能下溢中断- #define ECD_IRQEna.OverFlow BIT1  编码器中断使能, 使能上溢中断- #define ECD_IF_UNDERFLOW BIT0  编码器中断标志定义, Encoder下溢中断- #define ECD_IF_OVERFLOW BIT1  编码器中断标志定义, Encoder上溢中断- #define TIMER_CapMode_None ((uint32_t)0x00000000)  捕获模式定义, 无捕获- #define TIMER_CapMode_Rise ((uint32_t)0x00000001)  捕获模式定义, 上升沿捕获- #define TIMER_CapMode_Fall ((uint32_t)0x00000002)  捕获模式定义, 下降沿捕获- #define TIMER_CapMode_RiseFall ((uint32_t)0x00000003)  捕获模式定义, 双沿捕获- #define TIMER.OPMode_CAP ((uint32_t)0x0000001)  工作模式, 捕获模式
+
+- #define TIMER.OPMode.CMP ((uint32_t)0x0000000)  工作模式,比较模式- #define ECD_Mode_T1 ((uint32_t)0x00)  counting on T1- #define ECD_Mode_T1_T2 ((uint32_t)0x01)  counting on T1&T2- #define ECD_Mode_CCWSIGN ((uint32_t)0x02)  CCW+SIGN, 仅计数信号上升沿- #define ECD_Mode_CCWCW ((uint32_t)0x03)  CCW+CW, 仅计数信号上升沿- #define ECD_Mode_CCWSIGN_UpDown ((uint32_t)0x06)  符号加脉冲信号计数模式,信号的上下沿均计数- #define ECD_Mode_CCWCW_UpDown ((uint32_t)0x07)  CCW+CW双脉冲信号计数模式,信号的上下沿均计数
+
+# 枚举
+
+- enum TimerIRQEnaDef {  TimerIRQEna_None = 0, TimerIRQEna_Zero = BIT0, TimerIRQEna.CH0 = BIT1, TimerIRQEna.CH1 = BIT2,  TimerIRQEna_All = 0x07}  中断使能配置定义
+
+# 函数
+
+- void TIM_TimerInit(TIM_TimerTypeDef *TIMERx, TIM_TimerInitTypeDef *TIM_TimerInitStruct)  函数名称: void TIM_TimerInit(TIM_TimerTypeDef *TIMERx, TIM_TimerInitTypeDef *TIM_TimerInitStruct)- void TIM_TimerStrutInit(TIM_TimerInitTypeDef *TIM_TimerInitStruct)  函数名称: void TIM_TimerStrutInit(TIM_TimerInitTypeDef *TIM_TimerInitStruct)- void TIM_TimerCmd(TIM_TimerTypeDef *TIMERx, FuncState state)  函数名称: void TIM_TimerCmd(TIM_TimerTypeDef *TIMERx, FuncState state)- uint32_t TIM_GetIRQFlag(TIM_TimerTypeDef *TIMERx, u32 timer_if)  函数名称: uint32_t TIM_GetIRQFlag(TIM_TimerTypeDef *TIMERx, u32 timer_if)- void TIM_ClearIRQFlag(TIM_TimerTypeDef *TIMERx, uint32_t tempFlag)  函数名称: uint32_t TIM_ClearIRQFlag(TIM_TimerTypeDef *TIMERx, u32 timer_if)- uint32_t TIM_Timer_GetCount(TIM_TimerTypeDef *TIM_TIMERx)  函数名称: uint32_t TIM_Timer_GetCount(TIM_TimerTypeDef *TIMERx)- uint32_t TIM_Timer_GetCMPT0(TIM_TimerTypeDef *TIM_TIMERx)  函数名称: uint32_t TIM_Timer_GetCMPT0(TIM_TimerTypeDef *TIM_TIMERx)- uint32_t TIM_Timer_GetCMPT1(TIM_TimerTypeDef *TIM_TIMERx)  函数名称: uint32_t TIM_Timer_GetCMPT1(TIM_TimerTypeDef *TIM_TIMERx)- void TIM_ECDInit(TIM_ECDTypeDef *ECDx, TIM_ECDInitTypeDef *TIM_ECDInitStruct)  函数名称: void TIM_ECDInit(TIM_ECDTypeDef *ECDx, TIM_ECDInitTypeDef *TIM_ECDInitStruct)- void TIM_ECDStructInit(TIM_ECDInitTypeDef *TIM_ECDInitStruct)  函数名称: void TIM_ECDInit(TIM_ECDTypeDef *ECDx, TIM_ECDInitTypeDef *TIM_ECDInitStruct)- void TIM_ECDCmd(TIM_ECDTypeDef *ECDx, FuncState state)  函数名称: void TIM_ECDCmd(TIM_ECDTypeDef *ECDx, FuncState state)- uint32_t TIM_ECD_GetCount(TIM_ECDTypeDef *TIM_ECDx)  函数名称: uint32_t TIM_ECD_GetCount(TIM_ECDTypeDef *TIM_ECDx)- uint32_t ECD_GetIRQFlag(TIM_ECDTypeDef *ECDx, u32 timer_if)  函数名称: uint32_t ECD_GetIRQFlag(TIM_ECDTypeDef *ECDx, uint32_t tempFlag)  函数名称: void ECD_ClearIRQFlag(TIM_ECDTypeDef *ECDx, uint32_t tempFlag)
+
+# 2.37.1 详细描述
+
+文件名称： Iks32mc08x_tim.h  文件标识：无  内容摘要：TIM驱动头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_tim.h 中定义.
+
+# 2.37.2 宏定义说明
+
+# 2.37.2.1 ECD.Clk.Div1
+
+define ECD.Clk.Div1 0x00
+
+ECD工作频率96M
+
+在文件 Iks32mc08x_tim.h 第 85 行定义.
+
+# 2.37.2.2 ECD.Clk.Div2
+
+define ECD.Clk.Div2 0x01
+
+ECD工作频率48M
+
+在文件 Iks32mc08x_tim.h 第 86 行定义.
+
+# 2.37.2.3 ECD.Clk.Div4
+
+define ECD.Clk.Div4 0x02
+
+# ECD工作频率24M
+
+在文件 Iks32mc08x.tim.h 第 87 行定义.
+
+# 2.37.2.4 ECD.Clk.Div8
+
+define ECD.Clk.Div8 0x03
+
+# ECD工作频率12M
+
+在文件 Iks32mc08x.tim.h 第 88 行定义.
+
+# 2.37.2.5 ECD.IF.OVERFLOW
+
+define ECD.IF.OVERFLOW BIT1
+
+编码器中断标志定义,Encoder上溢中断
+
+在文件 Iks32mc08x.tim.h 第 112 行定义.
+
+# 2.37.2.6 ECD.IF.UNDERFLOW
+
+define ECD.IF.UNDERFLOW BIT0
+
+编码器中断标志定义,Encoder下溢中断
+
+在文件 Iks32mc08x.tim.h 第 111 行定义.
+
+# 2.37.2.7 ECD.IRQEna.None
+
+define ECD.IRQEna.None 0
+
+编码器中断使能,配置定义无使能
+
+在文件 Iks32mc08x.tim.h 第 107 行定义.
+
+# 2.37.2.8 ECD.IRQEna.OverFlow
+
+define ECD.IRQEna.OverFlow BIT1编码器中断使能，使能上溢中断在文件 Iks32mc08x.tim.h 第 109 行定义.
+
+# 2.37.2.9 ECD.IRQEna.UnderFlow
+
+define ECD.IRQEna.UnderFlow BIT0编码器中断使能，使能下溢中断在文件 Iks32mc08x.tim.h 第 108 行定义.
+
+# 2.37.2.10 ECD.Mode_CCWCW
+
+define ECD.Mode_CCWCW ((uint32_t) 0x03)CCW+CW, 仅计数信号上升沿在文件 Iks32mc08x.tim.h 第 126 行定义.
+
+# 2.37.2.11 ECD.Mode_CCWCW_UpDown
+
+define ECD.Mode_CCWCW_UpDown ((uint32_t) 0x07)CCW+CW 双脉冲信号计数模式, 信号的上下沿均计数在文件 Iks32mc08x.tim.h 第 128 行定义.
+
+# 2.37.2.12 ECD.Mode_CCWSIGN
+
+define ECD_Mode_CCWSIGN ((uint32_t) 0x02)CCW+SIGN, 仅计数信号上升沿在文件 Iks32mc08x.tim.h 第 125 行定义.
+
+# 2.37.2.13 ECD_Mode_CCWSIGN_UpDown
+
+define ECD_Mode_CCWSIGN_UpDown ((uint32_t)0x06)
+
+符号加脉冲信号计数模式，信号的上下沿均计数在文件 Iks32mc08x_tim.h 第 127 行定义.
+
+# 2.37.2.14 ECD_Mode_T1
+
+define ECD_Mode_T1 ((uint32_t)0x00)
+
+counting on T1
+
+在文件 Iks32mc08x_tim.h 第 123 行定义.
+
+# 2.37.2.15 ECD_Mode_T1_T2
+
+define ECD_Mode_T1_T2 ((uint32_t)0x01)
+
+counting on T1&T2
+
+在文件 Iks32mc08x_tim.h 第 124 行定义.
+
+# 2.37.2.16 TIM.Clk.Div1
+
+define TIM.Clk.Div1 0x00
+
+TIMER0结构体基地址定义
+
+TIMER1结构体基地址定义 TIMER2结构体基地址定义 TIMER3结构体基地址定义 ECDO结构体基地址定义 ECD1结构体基地址定义 Timer工作频率96M
+
+在文件 Iks32mc08x_tim.h 第 80 行定义.
+
+# 2.37.2.17 TIM.Clk.Div2
+
+define TIM.Clk.Div2 0x01
+
+Timer工作频率48M
+
+在文件 Iks32mc08x_tim.h 第 81 行定义.
+
+# 2.37.2.18 TIM.Clk.Div4
+
+define TIM.Clk.Div4 0x02
+
+Timer工作频率24M
+
+在文件 Iks32mc08x.tim.h 第 82 行定义.
+
+# 2.37.2.19 TIM.Clk.Div8
+
+define TIM.Clk.Div8 0x03
+
+Timer工作频率12M
+
+在文件 Iks32mc08x.tim.h 第 83 行定义.
+
+# 2.37.2.20 TIMER.CapMode.Fall
+
+define TIMER.CapMode_Fall ((uint32_t) 0x00000002)捕获模式定义,下降沿捕获在文件 Iks32mc08x.tim.h 第 116 行定义.
+
+# 2.37.2.21 TIMER.CapMode.None
+
+define TIMER.CapMode_None ((uint32_t) 0x00000000)
+
+捕获模式定义,无捕获
+
+在文件 Iks32mc08x.tim.h 第 114 行定义.
+
+# 2.37.2.22 TIMER.CapMode.Rise
+
+define TIMER.CapMode.Rise ((uint32_t) 0x00000001)
+
+捕获模式定义,上升沿捕获
+
+在文件 Iks32mc08x.tim.h 第 115 行定义.
+
+# 2.37.2.23 TIMER.CapMode.RiseFall
+
+define TIMER.CapMode.RiseFall ((uint32_t)0x00000003)
+
+捕获模式定义，双沿捕获
+
+在文件 Iks32mc08x.tim.h 第 117 行定义.
+
+# 2.37.2.24 TIMER.IF_CH0
+
+define TIMER.IF_CH0 BIT1
+
+中断标志定义，TimerCH0中断，比较或捕获中断
+
+在文件 Iks32mc08x.tim.h 第 103 行定义.
+
+# 2.37.2.25 TIMER.IF_CH1
+
+define TIMER.IF_CH1 BIT2中断标志定义，TimerCH1中断，比较或捕获中断在文件 Iks32mc08x.tim.h 第 102 行定义.
+
+# 2.37.2.26 TIMER.IF_ZERO
+
+define TIMER.IF_ZERO BIT0
+
+中断标志定义，Timer过零中断
+
+在文件 Iks32mc08x.tim.h 第 104 行定义.
+
+# 2.37.2.27 TIMER.OPMode.CAP
+
+define TIMER.OPMode.CAP ((uint32_t)0x00000001)
+
+工作模式，捕获模式
+
+在文件 Iks32mc08x.tim.h 第 119 行定义.
+
+# 2.37.2.28 TIMER.OPMode.CMP
+
+define TIMER.OPMode.CMP (uint32_t) 0x0000000)
+
+工作模式，比较模式
+
+在文件lks32mc08x.tim.h第120行定义.
+
+# 2.37.3 枚举类型说明
+
+# 2.37.3.1 Timer.IRQEnaDef
+
+enum Timer.IRQEnaDef
+
+中断使能配置定义
+
+枚举值  
+
+<table><tr><td>Timer.IRQEna.None</td><td></td></tr><tr><td>Timer.IRQEna.Zero</td><td>使能过零中断</td></tr><tr><td>Timer.IRQEna.CHO</td><td>使能CH0中断，含比较、捕获中断</td></tr><tr><td>Timer.IRQEna.OH1</td><td>使能OH1中断，含比较、捕获中断</td></tr><tr><td>Timer.IRQEna.All</td><td>使能Timer全部中断</td></tr></table>
+
+在文件lks32mc08x.tim.h第93行定义.
+
+# 2.37.4 函数说明
+
+# 2.37.4.1 ECD.ClearIRQFlag()
+
+void ECD.ClearIRQFlag(TIM_ECDTypeDef * ECDx, uint32_t tempFlag)
+
+函数名称：void ECD.ClearIRQFlag(TIM_ECDTypeDef * ECDx, uint32_t tempFlag)
+
+功能描述：清除ECD中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">ECDx: ECD0/ECD1
+timer_if:</td></tr><tr><td>ECD_IF_UNDERFLOW</td><td>Encoder下溢中断</td></tr><tr><td>ECD_IF_OVERFLOW</td><td>Encoder上溢中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(ECD.GetIRQFlag(ECD0,ECD_IF_OVERFLOW))//获取编码器上溢中断标志 { ECD.ClearIRQFlag(ECD0,ECD_IF_OVERFLOW);//清除编码器上溢中断标志 }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_tim.c第712行定义.
+
+# 2.37.4.2 ECD.GetIRQFlag()
+
+uint32_t ECD.GetIRQFlag ( TIM_ECDTypeDef * ECDx, u32 timer_if)
+
+函数名称：uint32_t ECD.GetIRQFlag(TIM_ECDTypeDef * ECDx, u32 timer_if)功能描述：获取ECD中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">ECDx: ECD0/ECD1
+timer_if:</td></tr><tr><td>ECD_IF_UNDERFLOW</td><td>Encoder下溢中断</td></tr><tr><td>ECD_IF_OVERFLOW</td><td>Encoder上溢中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(ECD.GetIRQFlag(ECD0,ECD- IF_OVERFLOW))//获取上溢中断标志{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第649行定义
+
+# 2.37.4.3 TIM_ClearIRQFlag()
+
+void TIM_ClearIRQFlag (TIM.TimerTypeDef * TIMERx, uint32_t tempFlag)
+
+函数名称：uint32. t TIM_ClearIRQFlag(TIM_TimerTypeDef * TIMERx, u32 timer_if)
+
+功能描述：清除TIM中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>TIMER_IF_CH1</td><td>Timer CH1中断，比较或捕获中断</td></tr><tr><td>TIMER_IF_CH0</td><td>Timer CH0中断，比较或捕获中断</td></tr><tr><td>TIMER_IF_ZERO</td><td>Timer 过零中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(TIMGetIRQFlag(TIMER0,TIMER_IF_CH0))//判断UTimer0的CHO是否发生比较中断TIM.ClearIRQFlag(TIMER0,TIMER_IF_CH0)；//清除UTimer0通道0比较中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第337行定义.
+
+# 2.37.4.4 TIM_ECD_GetCount()
+
+uint32_t TIM_ECD_GetCount（ TIM_ECDTypeDef  $\ast$  TIM_ECDx)
+
+函数名称：uint32. t TIM_ECD_GetCount(TIM_ECDTypeDef  $\ast$  TIM_ECDx)
+
+功能描述：编码器计数值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ECDx: ECD0/ECD1</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+uint32_t ECD0. Value = 0;  ECD0. Value = TIM_ECD_GetCount(ECDO); //获取编码器0计数值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_tim.c第618行定义
+
+# 2.37.4.5 TIM_ECDCmd()
+
+void TIM_ECDCmd ( TIM_ECDTypeDef * ECDx, FuncState state )
+
+函数名称：void TIM_ECDCmd(TIM_ECDTypeDef * ECDx, FuncState state)
+
+功能描述：编码器ECDx使能和停止
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>ECDx: ECD0/ECD1
+FuncState state: 使能与失能</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：TIM_ECDCmd(ECD0, ENABLE); // ECD0模块使能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第568行定义
+
+# 2.37.4.6 TIM.ECDInit()
+
+void TIM_ECDInit（ TIM_ECDTypeDef \* ECDx, TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct )
+
+函数名称：void TIM_ECDInit(TIM_ECDTypeDef  $\ast$  ECDx,TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct)
+
+功能描述：编码器初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd();
+
+参数
+
+<table><tr><td>输入参数：</td><td>ECDx: ECD0/ECD1
+TIM_ECDInitTypeDef *TIM_ECDInitStruct</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TIM_ECDInitTypeDef TIM_ECDInitStruct; TIM_ECDStructInit(&TIM_ECDInitStruct); TIM_ECDInitStruct.ECD_ClockDiv  $=$  ECD_Clk_Div1; //96M TIM_ECDInitStruct.ECD_Filler0  $=$  10; //CHO滤波，滤波宽度为Timer_FilTE0+8 TIM_ECDInitStruct.ECD_Filler1  $=$  10; //CH1滤波 TIM_ECDInitStruct.ECD_Mode  $=$  ECD_Mode_CCWSIGN; //CCW+SIGN，仅计数信号上升沿 TIM_ECDInitStruct.ECD_TH 4096; //计数门限 TIM_ECDInitStruct.ECD_IRQEna  $=$  ECD_IRQEna_OverFlow; //使能上溢中断 TIM_ECDInit(ECD0,&TIM_ECDInitStruct); TIM_ECDCmd(ECD0,ENABLE); //使能ECDO模块
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：增加定时器时钟使能函数
+
+在文件lks32mc08x.tim.c第467行定义.
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/ec81f112344e8170fa625cf7651e5b417866b81b555365a161cd7bdd982d5674.jpg)
+
+# 2.37.4.7 TIM.ECDStructInit()
+
+void TIM_ECDStructInit ( TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct )
+
+函数名称：void TIM_ECDInit(TIM_ECDTypeDef  $\ast$  ECDx,TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct)
+
+功能描述：编码器结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_ECDInitTypeDef *TIM_ECDInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：TIM_ECDInitTypeDef TIM_ECDInitStruct; TIM_ECDStructInit(&TIM_ECDInitStruct); //编码器结构体初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_tim.c 第 538 行定义.
+
+# 2.37.4.8 TIM_GetIRQFlag()
+
+uint32_t TIM_GetIRQFlag ( TIM_TimerTypeDef * TIMERx, u32 timer_if)
+
+函数名称：uint32_t TIM_GetIRQFlag(TIM_TimerTypeDef * TIMERx, u32 timer_if)
+
+功能描述：获取TIM中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>TIMER_IF_CH1</td><td>Timer CH1中断,比较或捕获中断</td></tr><tr><td>TIMER_IF_CH0</td><td>Timer CH0中断,比较或捕获中断</td></tr><tr><td>TIMER_IF_ZERO</td><td>Timer 过零中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：0或1，对应中断标志置位返回1，未置位返回0
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(TIM_GetIRQFlag(TIMERO,TIMER_IF_CH0)) //判断UTimer0的CH0是否发生比较中断{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第266行定义
+
+# 2.37.4.9 TIM_Timer.GetCMPT0()
+
+uint32_t TIM_Timer.GetCMPT0(TIM_TimerTypeDef *TIM_TIMERx)
+
+函数名称：uint32_t TIM_Timer.GetCMPT0(TIM_TimerTypeDef *TIM_TIMERx)
+
+功能描述：获取定时器通道0捕获值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：定时器通道0捕获值
+
+注解
+
+其它说明：当定时器发生捕获事件时，将捕获时刻的cnt值存储到该寄存器中
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：uint32_t TIMER0. CAPValue = 0; TIMER0. CAPValue = TIM.Timer.GetCMPT0(TIMERO); //获取定时器0捕获值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第402行定义.
+
+# 2.37.4.10 TIM_Timer.GetCMPT1()
+
+uint32_t TIM_Timer.GetCMPT1(TIM.TimerTypeDef * TIM_TIMERx)
+
+函数名称：uint32_t TIM_Timer.GetCMPT1(TIM_TimerTypeDef * TIM_TIMERx)
+
+功能描述：获取定时器通道1捕获值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：定时器通道1捕获值
+
+注解
+
+其它说明：当定时器发生捕获事件时，将捕获时刻的cnt值存储到该寄存器中
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：uint32_t TIMER0. CAPValue = 0;  TIMER0. CAPValue = TIM.Timer.GetCMP1(TIMERO); //获取定时器0捕获值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第427行定义.
+
+# 2.37.4.11 TIM_Timer.GetCount()
+
+uint32_t TIM_Timer.GetCount(TIM.TimerTypeDef * TIMERx)
+
+函数名称：uint32_t TIM_Timer.GetCount(TIM.TimerTypeDef * TIMERx)
+
+功能描述：获取Timer计数值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIMERx: TIMER0/TIMER1/TIMER2/TIMER3</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：uint32_t TIMER0. Value = 0;  TIMER0. Value = TIM.Timer.GetCount(TIMERO); //获取定时器0计数值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第377行定义.
+
+# 2.37.4.12 TIM_TimerCmd()
+
+void TIM_TimerCmd ( TIM.TimerTypeDef \* TIMERx, FuncState state)
+
+函数名称：void TIM_TimerCmd(TIM_TimerTypeDef \*TIMERx,FuncState state)
+
+功能描述：定时器TIMERx使能和停止
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIMERx: TIMERO/TIMER1/TIMER2/TIMER3 FuncState state: 使能与失能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TIM.TimerCmd(TIMERO, ENABLE); // Timer0模块使能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第196行定义.
+
+# 2.37.4.13 TIM_TimerInit()
+
+void TIM_TimerInit ( TIM.TimerTypeDef  $\ast$  TIMERx, TIM.TimerInitTypeDef  $\ast$  TIM.TimerInitStruct)
+
+函数名称：void TIM_TimerInit(TIM_TimerTypeDef  $\ast$  TIMERx,TIM_TimerInitTypeDef  $\ast$  TIM_TimerInitStruct)
+
+功能描述：定时器初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIMERx: TIMERO/TIMER1/TIMER2/TIMER3 TIM_TimerInitTypeDef *TIM_TimerInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TIM.TimerInitTypeDef TIM_InitStruct; TIM.TimerStrutInit（&TIMInitStruct); //Timer结构体初始化 TIM.InitStruct.Timer.ClackDiv  $=$  TIM.Clk.Divl; //设置Timer模块时钟1分频系数 TIM.InitStruct.Timer.CHG_WorkMode  $=$  TIMER.OPMode.CMP; //设置TimerCH0为比较模式 TIM.InitStruct.Timer.CHG_Output  $= 0$  //计数器回零时，比较模式输出极性控制 TIM.InitStruct.Timer.CHG_WorkMode  $=$  TIMER.OPMode.CMP; //设置TimerCH1为比较模式 //计数器回零时，比较模式输出极性控制 TIM.InitStruct.Timer.CHG_Output  $= 0$  //定时器计数门限较值500us TIM.InitStruct.Timer.TH  $=$  48000; //设置比较模式的CH0存储初始值25s转空比 TIM.InitStruct.Timer.CMO  $= 1$  24000; //设置比较模式的CH1存储初始值24000 TIM.InitStruct.Timer.IQEna  $=$  Timer.IQEna.CH0; //开启Timer模块比较中断 TIM.TimerInit（TIMER0,&TIM_InitStruct); TIM.TimerCmd（TIMER0，ENABLE);//Timer0模块使能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：去除定时器使能接口
+
+在文件lks32mc08x.tim.c第55行定义函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/a6737fc16db30c424107c2583435fab86e8c490e47fcf027a538085230148ad5.jpg)
+
+# 2.37.4.14 TIM_TimerStrutInit()
+
+void TIM.TimerStrutInit（ TIM.TimerInitTypeDef  $\ast$  TIM.TimerInitStruct)
+
+函数名称：void TIM.TimerStrutInit(TIM.TimerInitTypeDef  $\ast$  TIM.TimerInitStruct)
+
+功能描述：定时器结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_TimerInitTypeDef *TIM_TimerInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：TIM.TimerInitTypeDef TIM_initStruct; TIM.TimerStrutInit(&TIM_initStruct); // Timer结构体初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_tim.c 第 157 行定义.
+
+# 2.38 Iks32mc08x_tim.h
+
+# 浏览该文件的文档
+
+00001 00014 #ifndef _LKS32MC08x_TIM.H 00015 #define _LKS32MC08x_TIM.H 00016 00017 /\*Includes 00018 #include"lks32mc08x_t16. h" 00019 00023 typedef struct 00024 { 00025 _IO uint32. t CFG; 00026 _IO uint32. t TH; 00027 _IO uint32. t CMP0; 00028 _IO uint32. t CMPT1; 00029 _IO uint32. t EVT; 00030 _IO uint32. t EVT; 00031 } TIM.TimerTypeDef; 00032 00036 typedef struct 00037 { 00038 _IO uint32. t CFG;
+
+00039 _IO uint32. t TH;00040 _IO uint32. t CNT;00041 } TIM.ECDTypeDef;0004200046 #ifndef TIMERO00047 #define TIMERO ((TIM.TimerTypeDef *) UTIMER_BASE)00048 #endif00052 #ifndef TIMER100053 #ifndef TIMER1 ((TIM.TimerTypeDef *) UTIMER_BASE+0x20))00054 #endif00058 #ifndef TIMER200059 #define TIMER2 ((TIM.TimerTypeDef *) UTIMER_BASE+0x40))00060 #endif00064 #ifndef TIMER300065 #define TIMER3 ((TIM.TimerTypeDef *) UTIMER_BASE+0x60))00066 #endif00070 #ifndef ECD000071 #define ECD0 ((TIM.ECDTypeDef *) UTIMER_BASE+0x80))00072 #endif00076 #ifndef ECD100077 #define ECD1 ((TIM.ECDTypeDef *) UTIMER_BASE+0x90))00078 #endif0007900080 #define TIM.Clk.Div1 0x000081 #define TIM.Clk.Div2 0x010082 #define TIM.Clk.Div4 0x020083 #define TIM.Clk.Div8 0x030085 #define ECD.Clk.Div1 0x000086 #define ECD.Clk.Div2 0x010087 #define ECD.Clk.Div4 0x020088 #define ECD.Clk.Div8 0x030093 typedef enum00094 {00095 Timer.IRQEna.None = 0,00096 Timer.IRQEna.Zero = BIT0,00097 Timer.IRQEna.CHO = BIT1,00098 Timer.IRQEna.CH1 = BIT2,00099 Timer.IRQEna.All1 = 0x07,00100 } Timer.IRQEnaDef;0010100102 #define TIMER_IF.CH1 BIT200103 #define TIMER_IF.CHO BIT100104 #define TIMER_IF.ZERO BIT000107 #define ECD.IRQEna.None 00108 #define ECD.IRQEna.UnderFlow BIT00109 #define ECD.IRQEna.OverFlow BIT100111 #define ECD.IF.UNDERFLOW BIT00112 #define ECD.IF.OVERFLOW BIT100114 #define TIMER.CapMode.None ((uint32.t)0x00000000)00115 #define TIMER.CapMode.Risk ((uint32.t)0x00000001)00116 #define TIMER.CapMode.Fall ((uint32.t)0x00000002)00117 #define TIMER.CapMode.RiseFall ((uint32.t)0x00000003)00119 #define TIMER.OPMode.CAP ((uint32.t)0x0000001)00120 #define TIMER.OPMode.CMP ((uint32.t)0x0000000)00123 #define ECD.Mode.T1 ((uint32.t)0x00)00124 #define ECD.Mode.T1.T2 ((uint32.t)0x01)00125 #define ECD.Mode.CCWSGN ((uint32.t)0x02)00126 #define ECD.Mode.CCWSGN.UpDown ((uint32.t)0x03)00127 #define ECD.Mode.CCWSGN.UpDown ((uint32.t)0x06)00128 #define ECD.Mode.CCWSC.UpDown ((uint32.t)0x07)00131 typedef struct00132 {00138 uint32_t Timer.CHO.WorkMode;00146 uint32_t Timer.CHO.CapMode;00147 uint32_t Timer.CHO.OutMode;00153 uint32_t Timer.CHO.WorkMode;00161 uint32_t Timer.CHI.CapMode;00162 uint32_t Timer.CHI.OutMode;00164 uint32_t Timer.HH;00165 uint32_t Timer.CMD0;00166 uint32_t Timer.CMP1;00168 uint32_t Timer.Filter0;00169 uint32_t Timer.Filter1;00178 uint32_t Timer.ClockDiv;00183 uint32_t Timer.IRQEna;00184 } TIM.TimerInitTypeDef;0018500186 typedef struct00187 {00197 uint32_t ECD.Mode;00198 uint32_t ECD.TH;00206 uint32_t ECD.ClockDiv;00207 uint32_t ECD.Filter0;00208 uint32_t ECD.Filter1;00209 uint32_t ECD.IRQEna;00216 uint32_t ECD.IRQEna;00217 } TIM.ECDInitTypeDef;
+
+00218 00219 00220 /\*Timer初始化\*/ 00221 void TIM.TimerInit(TIM.TimerTypeDef \*TIMERx,TIM.TimerInitTypeDef \*TIM.TimerInitStruct); 00222 void TIM.TimerStrutInit(TIM.TimerInitTypeDef \*TIM.TimerInitStruct); 00223 //void TIM.StartTimer(TIM.TimerTypeDef \*TIMERx); 00224 //void TIM.StopTimer(TIM.TimerTypeDef \*TIMERx); 00225 void TIM.TimerCmd(TIM.TimerTypeDef \*TIMERx,FuncState state); 00226 00227 /\*TIM获取中断标志\*/ 00228 uint32_t TIM.GetIRQFlag(TIM.TimerTypeDef \*TIMERx,u32 timer_if); 00229 /\*TIM中断清除\*/ 00230 void TIM.ClearIRQFlag(TIM.TimerTypeDef \*TIMERx,uint32_t tempFlag); 00231 00232 uint32_t TIM.Timer.GetCount(TIM.TimerTypeDef \*TIM.TIMERx); 00233 uint32_t TIM.Timer.GetCMP0(TIM.TimerTypeDef \*TIM.TIMERx); 00234 uint32_t TIM.Timer.GetCMP1(TIM.TimerTypeDef \*TIM.TIMERx); 00235 00236 /\*ECD初始化\*/ 00237 void TIM.ECDInit(TIM.ECDTypeDef \*ECDx,TIM.ECDInitTypeDef \*TIM.ECDInitStruct); 00238 void TIM.ECDStructInit(TIM.ECDInitTypeDef \*TIM.ECDInitStruct); 00239 void TIM.ECDCmd(TIM.ECDTypeDef \*ECDx,FuncState state); 00240 00241 uint32_t TIM.ECD.GetCount(TIM.ECDTypeDef \*TIM.ECDx); 00242 /\*ECD获取中断标志\*/ 00243 uint32_t ECD.GetIRQFlag(TIM.ECDTypeDef \*ECDx,u32 timer_if); 00244 /\*ECD中断清除\*/ 00245 void ECD.ClearIRQFlag(TIM.ECDTypeDef \*ECDx,uint32_t tempFlag); 00246 #endif /\*..lks32mc08x.TIMH\*/ 00247 00248 00249 00250 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* C COPYRIGHT LINKO SEMICONDUCTOR \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*/
+
+# 2.39 Include/lks32mc08x.tmp.h 文件参考
+
+文件名称：lks32mc08x.tmp.h  文件标识：无  内容摘要：芯片内置温度传感器驱动头文件  其它说明：无
+
+include "lks32mc08x_lib.h"  lks32mc08x.tmp.h 的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/fe245a14d75f3f18505923ab4224709e2a4b19f8ec61ce9b9faa128ac0c1e503.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/38363bce848630b0e893b7e532af287a07a55d929031eccdedd4257cba48a701.jpg)
+
+# 结构体
+
+- struct Stru_TemperatureCol.Def  芯片内置温度传感器初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 函数
+
+函数- void TempSensor.Init(void)  函数名称: void TempSensor.Init(void)- s16 GetCurrentTemperature(s16 ADC_value)  函数名称: s16 GetCurrentTemperature(s16 ADC_value)
+
+# 2.39.1 详细描述
+
+文件名称： Iks32mc08x.tmp.h文件标识：无内容摘要：芯片内置温度传感器驱动头文件其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tmp.h中定义
+
+# 2.39.2 函数说明
+
+# 2.39.2.1 GetCurrentTemperature()
+
+s16 GetCurrentTemperature( s16 ADC_value )
+
+函数名称：s16 GetCurrentTemperature(s16 ADC_value)
+
+功能描述：获取当前温度值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADC_value: ADC通道14为温度传感器, ADC采样结果值</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：t_Temperature：当前温度值，单位：1个Lsb代表0.1度
+
+注解
+
+其它说明：ADC_value输入的ADC值不区分左右对齐，函数内已经进行ADC结果左右对齐判断
+
+警告
+
+无
+
+示例代码：
+
+s16 temp_value = 0; temp_value = GetCurrentTemperature(ADC0. DATA0); //获取当前温度值，单位0.1度
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tmp.c第69行定义
+
+# 2.39.2.2 TempSensor.Init()
+
+void TempSensor.Init（void
+
+函数名称：void TempSensor.Init(void)
+
+功能描述：温度传感器初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TempSensor_Init(); //温度传感器初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tmp.c第39行定义
+
+函数调用图：
+
+# 2.40 lks32mc08x.tmp.h
+
+浏览该文件的文档0000100014 #ifndef LKS32MC08x_TMP_H00015 #define LKS32MC08x_TMP_H
+
+00016 00017 #include"lks32mc08x.lib.h" 00018 00022 typedef struct 00023 { 00024 ul6 nCofA; 00025 ul6 nOffsetB; 00027 } Stru.TempertureCof.Def; 00028 00029 void TempSensor_Init(void); 00030 s16 GetCurrentTemperature(0.0) ADC.value); 00031 00032 #endif /\*.CONNIE_TMP_H_\* 00033 00034 00035 00036 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+# 2.41 Include/lks32mc08x_uart.h 文件参考
+
+文件名称：lks32mc08x_uart.h  文件标识：无  内容摘要：UART驱动头文件  其它说明：无
+
+include"lks32mc08x_lib.h"lks32mc08x_uart.h的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/ae44c83fafadcb2e0e8e94a63ce3fcdc815adf60185e7bfd02fba0c23a3f950d.jpg)
+
+此图展示该文件直接或间接的被哪些文件引用了：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/b15745fc735df1af6fcb80477ea32ae76db9459966ddf7edeeb42da4a1a1430b.jpg)
+
+# 结构体
+
+结构体- struct UART_TypeDef  UART寄存器结构体句柄- struct UART_InitTypeDef  UART初始化结构体句柄，初始化时请定义该句柄，并用其它地址来传参
+
+# 宏定义
+
+- #define UART_WORDLENGTH_8b0 串口0结构体基地址定义- #define UART_WORDLENGTH_7b1 7bit数据位- #define UART_STOPBITS_1b0 无停止位- #define UART_STOPBITS_2b1 1bit停止位- #define UART_FIRSTSENDLSB0 低端先发送- #define UART_FIRSTSENDMSB1 高端先发送- #define UART_IRQEna.SendOverBIT0 使能发送完成中断- #define UART_IRQEna_RcvOverBIT1 使能接收完成中断- #define UART_IRQEna.SendBufEmptyBIT2 使能发送缓冲区空中断- #define UART_IRQEna_StopErrorBIT3 使能停止位错误- #define UART_IRQEna.CheckErrorBIT4 使能校验错误- #define UART_IRQEna_TX_DMA_REBIT5 发送完成DMA请求使能- #define UART_IRQEna_RX_DMA_REBIT6 接收完成DMA请求使能- #define UART_IRQEna_TX_BUF_DMA_REBIT7 发送缓冲区空DMA请求使能- #define UART_IF_SendOverBIT0 发送完成中断- #define UART_IF_RcvOverBIT1 接收完成中断- #define UART_IF_SendBufEmptyBIT2 发送缓冲区空中断- #define UART_IF_StopErrorBIT3 停止位错误- #define UART_IF_CheckErrorBIT4 校验错误
+
+# 枚举
+
+- enum UART_ParityMode [ UART_Parity  $\mathbb{N}O = 0\times 00$  , UART_Parity.EVEN  $=$  0x01,UART_Parity.ODD  $=$  0x02}串口奇偶校验配置枚举成员
+
+# 函数
+
+- void UART_Init (UART的秘密 *UARTx, UART_InitTypeDef *UART_InitStruct)  函数名称: void UART_Init(UART的秘密 *UARTx, EUART_InitTypeDef *UART_InitStruct)- void UART_StructInit (UART_initTypeDef *UART_InitStructure)  函数名称: void UART_StructInit(UART_initTypeDef *UART_InitStructure)- void UART_SendData (UART秘密 *UARTx, uint32_t n)  函数名称: void UART_SENDDATA(UART秘密 *UARTx, uint32_t n)- uint32_t UART_ReadData (UART秘密 *UARTx)  函数名称: uint32_t UART_ReadData(UART秘密 *UARTx)- uint8_t UART_SendAddr_485 (UART秘密 *UARTx, uint8_t n)  函数名称: uint8_t UART_SendAddr_485 (UART秘密 *UARTx, uint8_t n)- uint8_t UART_SendData_485 (UART秘密 *UARTx, uint8_t n)  函数名称: uint8_t UART_SendData_485 (UART秘密 *UARTx, uint8_t n)- uint32_t UART_GetIRQFlag (UART秘密 *UARTx, uint32_t tempFlag)  函数名称: uint32_t UART_GetIRQFlag(UART秘密 *UARTx, uint32_t tempFlag)- void UART_ClearIRQFlag (UART秘密 *UARTx, uint32_t tempFlag)  函数名称: void UART_ClearIRQFlag(UART秘密 *UARTx, uint32_t nFlag)
+
+# 2.41.1 详细描述
+
+文件名称：lks32mc08x.uart.h  文件标识：无  内容摘要：UART驱动头文件  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.h中定义
+
+# 2.41.2 宏定义说明
+
+# 2.41.2.1 UART_FIRSTSEND.LSB
+
+define UART_FIRSTSEND.LSB 0
+
+低端先发送
+
+在文件 Iks32mc08x.uart.h 第 97 行定义.
+
+# 2.41.2.2 UART_FIRSTSEND.MSB
+
+define UART_FIRSTSEND.MSB 1
+
+高端先发送
+
+在文件 Iks32mc08x.uart.h 第 98 行定义.
+
+# 2.41.2.3 UART_IF_CheckError
+
+define UART_IF_CheckError BIT4
+
+校验错误
+
+在文件 Iks32mc08x.uart.h 第 117 行定义.
+
+# 2.41.2.4 UART_IF_RcvOver
+
+define UART_IF_RcvOver BIT1
+
+接收完成中断
+
+在文件 Iks32mc08x.uart.h 第 114 行定义.
+
+# 2.41.2.5 UART_IF_SendBufEmpty
+
+define UART_IF_SendBufEmpty BIT2
+
+发送缓冲区空中断
+
+在文件 Iks32mc08x.uart.h 第 115 行定义.
+
+# 2.41.2.6 UART_IF_SendOver
+
+define UART_IF_SendOver BIT0
+
+发送完成中断
+
+在文件 Iks32mc08x.uart.h 第 113 行定义.
+
+# 2.41.2.7 UART_IF_StopError
+
+define UART_IF_StopError BIT3
+
+停止位错误
+
+在文件 Iks32mc08x.uart.h 第 116 行定义.
+
+# 2.41.2.8 UART_IRQEna.CheckError
+
+define UART_IRQEna.CheckError BIT4
+
+使能校验错误
+
+在文件 Iks32mc08x.uart.h 第 105 行定义.
+
+# 2.41.2.9 UART_IRQEna_RcvOver
+
+define UART_IRQEna_RcvOver BIT1
+
+使能接收完成中断
+
+在文件 Iks32mc08x.uart.h 第 102 行定义.
+
+# 2.41.2.10 UART_IRQEna_RX_DMA_RE
+
+define UART_IRQEna_RX_DMA_RE BIT6
+
+接收完成DMA请求使能
+
+在文件 Iks32mc08x.uart.h 第 109 行定义.
+
+# 2.41.2.11 UART_IRQEna_SendBuffEmpty
+
+define UART_IRQEna_SendBuffEmpty BIT2
+
+使能发送缓冲区空中断
+
+在文件 Iks32mc08x.uart.h 第 103 行定义.
+
+# 2.41.2.12 UART_IRQEna_SendOver
+
+define UART_IRQEna_SendOver BIT0
+
+使能发送完成中断
+
+在文件 Iks32mc08x.uart.h 第 101 行定义.
+
+# 2.41.2.13 UART_IRQEna_StopError
+
+define UART_IRQEna_StopError BIT3
+
+使能停止位错误
+
+在文件 Iks32mc08x.uart.h 第 104 行定义.
+
+# 2.41.2.14 UART_IRQEna_TX_BUF_DMA.RE
+
+define UART_IRQEna_TX_BUF_DMA.RE BIT7
+
+发送缓冲区空DMA请求使能
+
+在文件 Iks32mc08x.uart.h 第 110 行定义.
+
+# 2.41.2.15 UART_IRQEna_TX_DMA.RE
+
+define UART_IRQEna_TX_DMA.RE BIT5
+
+发送完成DMA请求使能
+
+在文件 Iks32mc08x.uart.h 第 108 行定义.
+
+# 2.41.2.16 UART_STOPBITS.1b
+
+define UART_STOPBITS.1b 0
+
+无停止位
+
+在文件 Iks32mc08x.uart.h 第 94 行定义.
+
+# 2.41.2.17 UART_STOPBITS.2b
+
+define UART_STOPBITS.2b 1
+
+1bit停止位
+
+在文件 Iks32mc08x.uart.h 第 95 行定义.
+
+# 2.41.2.18 UART_WORDLENGTH.7b
+
+define UART_WORDLENGTH.7b 1
+
+7bit数据位
+
+在文件 Iks32mc08x.uart.h 第 92 行定义.
+
+# 2.41.2.19 UART_WORDLENGTH.8b
+
+define UART_WORDLENGTH.8b 0
+
+串口0结构体基地址定义
+
+串口1结构体基地址定义 系统时钟（UART使用系统时钟分频）8bit数据位
+
+在文件 Iks32mc08x.uart.h 第 91 行定义.
+
+# 2.41.3 枚举类型说明
+
+# 2.41.3.1 UART_ParityMode
+
+enum UART_ParityMode
+
+串口奇偶校验配置枚举成员
+
+枚举值  
+
+<table><tr><td>UART_Parity.NO</td><td>无奇偶校验</td></tr><tr><td>UART_Parity_EVEN</td><td>偶校验</td></tr><tr><td>UART_Parity_ODD</td><td>奇校验</td></tr></table>
+
+在文件lks32mc08x.uart.h第22行定义
+
+# 2.41.4 函数说明
+
+# 2.41.4.1 UART_ClearIRQFlag)
+
+void UART_ClearIRQFlag ( UART_TypeDef * UARTx, uint32_t tempFlag)
+
+函数名称：void UART_ClearIRQFlag(UART_TypeDef * UARTx, uint32_t nFlag)
+
+功能描述：清除UART中断标志
+
+参见
+
+被引用内容：UART0、UART1
+
+参数
+
+<table><tr><td rowspan="7">输入参数:</td><td colspan="2">UART_TypeDef: UART0/UART1
+tempFlag参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>UART_IF_SendOver</td><td>发送完成中断</td></tr><tr><td>UART_IF_RovOver</td><td>接收完成中断</td></tr><tr><td>UART_IF_SendBufEmpty</td><td>发送缓冲区空中断</td></tr><tr><td>UART_IF_StopError</td><td>停止位错误</td></tr><tr><td>UART_IF_CheckError</td><td>校验错误</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（UART_GetIRQFlag（UARTO，UART_IF_SendOver））//获取发送完成中断标志位UART_ClearIRQFlag（UARTO，UART_IF_SendOver）//清除发送完成中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第339行定义
+
+# 2.41.4.2 UART_GetIRQFlag()
+
+uint32_t UART_GetIRQFlag ( UART_TypeDef * UARTx, uint32_t tempFlag)
+
+函数名称：uint32_t UART_GetIRQFlag(UART_TypeDef * UARTx, uint32_t tempFlag)
+
+功能描述：获取UART中断标志
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td rowspan="7">输入参数:</td><td colspan="2">UART_TypeDef: UART0/UART1
+tempFlag参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>UART_IF_SendOver</td><td>发送完成中断</td></tr><tr><td>UART_IF_RcvOver</td><td>接收完成中断</td></tr><tr><td>UART_IF_SendPrefEmpty</td><td>发送缓冲区空中断</td></tr><tr><td>UART_IF_StopError</td><td>停止位错误</td></tr><tr><td>UART_IF_CheckError</td><td>校验错误</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if（UART_GetIRQFlag（UARTO，UART_IF_SendOver））//获取发送完成中断标志位UART_ClearIRQFlag（UARTO，UART_IF_SendOver）//清除发送完成中断标志位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第300行定义
+
+# 2.41.4.3 UART_Init()
+
+void UART_Init UART_TypeDef * UARTx, UART_InitTypeDef * UART_InitStructure
+
+函数名称: void UART_Init(UART_TypeDef* UARTx, EUART_InitTypeDef* UART_InitStruct)
+
+功能描述: UART初始化函数
+
+参见
+
+参见被引用内容: SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1; UARTInitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：串口波特率计算使用UART_MCU_MCLK系统时钟进行计算，使用前需要确认系统时钟频率
+
+警告
+
+无
+
+示例代码：
+
+UART_InitTypeDef UART_InitStruct; UART_StructInit(&UART_InitStruct); UART_InitStructure.BaudRate = 38400; // 设置波特率38400 UART_InitStructure.WordLength = UART_WORDBITS_8b; // 发送数据长度8位 UART_InitStructure.StopBits = UART_STOPBITS_1b; // 停止位1位 UART_InitStructure.FirstSend = UART_FIRSTSEND_LSB; // 先发送LSB UART_InitStructure.ParityMode = UART_Parity_NO; // 先奇偶校验 UART_InitStructure.IRQEna = UART.IRQEna_SendOver | UART.IRQEna_RcvOver; // 串口中断使能 UART_Init(UART0, &UART_InitStruct);
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_uart.c 第 44 行定义.
+
+函数调用图：
+
+# 2.41.4.4 UART.ReadData()
+
+uint32. t UART.ReadData ( UART_TypeDef \* UARTx )
+
+函数名称：uint32. t UART.ReadData（UART_TypeDef \*UARTx)
+
+功能描述：UART读缓冲区数据
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：返回串口接收缓冲区的1Byte数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 UART.BUFF = 0; UART.BUFF = UART.ReadData（UART0）；//读取串口0接收一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.uart.c 第 181 行定义.
+
+# 2.41.4.5 UART_SendAddr.485()
+
+uint8_t UART_SendAddr_485 ( UART_TypeDef * UARTx, uint8_t n)
+
+函数名称：uint8_t UART_SendAddr_485(UART_TypeDef * UARTx, uint8_t n)
+
+功能描述：发送485通讯中需要接收数据的从机地址
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1, n: 要发生1Byr地址</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：1：发送失败，0：发送成功
+
+注解
+
+其它说明：cnt作用是延时防止程序卡死。在发送数据后立即发送地址的情况下，会判断等待发送缓冲区空在进行地址发送，如果长时间还未发送完成（cnt计数时间），则跳出while循环。如果串口波特率较低cnt计数已满，会出现数据还未发送完成进行下一个数据发送，为了避免此类问题发送可以增加cnt值。
+
+警告
+
+无
+
+示例代码：
+
+UART_SendAddr_485（UART0,0x55）；//串口0发送485从机接收地址为0x55
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第208行定义.
+
+# 2.41.4.6 UART_SendData()
+
+void UART_SendData ( UART_TypeDef * UARTx, uint32_t n)
+
+函数名称：void UART_SENDDATA(UART_TypeDef * UARTx, uint32_t n)
+
+功能描述：UART发送数据
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1, n: 要发生1Byte数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+UART_SendData（UART0，  $0\times 12$  ；//串口0发送  $0\times 12$  一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.uart.c 第 155 行定义.
+
+# 2.41.4.7 UART_SendData.485(
+
+uint8_t UART_SendData_485 ( UART_TypeDef * UARTx, uint8_t n)
+
+函数名称：uint8_t UART_SendData_485(UART_TypeDef * UARTx, uint8_t n)
+
+功能描述：发送485通讯中的数据信息
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1, n: 要发生1Byrt数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：1：发送失败，0：发送成功
+
+注解
+
+其它说明：cnt作用是延时防止程序卡死。在发送数据后立即发送地址的情况下，会判断等待发送缓冲区空在进行地址发送，如果长时间还未发送完成（cnt计数时间），则跳出while循环。如果串口波特率较低cnt计数已满，会出现数据还未发送完成进行下一个数据发送，为了避免此类问题发送可以增加cnt值。
+
+警告
+
+无
+
+示例代码：
+
+UART_SendData_485（UART0,0x12）；//串口0发送485数据为0x12
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第250行定义.
+
+# 2.41.4.8 UART_StructInit()
+
+void UART_StructInit ( UART_InitTypeDef  $\ast$  UART_InitStructure)
+
+函数名称：void UART_StructInit(UART_InitStructure)
+
+功能描述：UART结构体初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>UART_InitStructure</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+UART_InitStructure UART_InitStructure; UART_StructInit(&UART_InitStructure); //初始化UART相关配置结构体变量
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_uart.c 第 119 行定义.
+
+# 2.42 Iks32mc08x uart.h
+
+# 浏览该文件的文档
+
+00001 00016 #ifndef _LKS32MC08x.UART.H 00017 #define _LKS32MC08x.UART.H 00018 00019 #include"lks32mc08x.lib.h" 00020 00022 typedef enum 00023 { 00024 UART_Parity.NO  $= 0\times 00$  00025 UART_Parity.EVEN  $= 0\times 01$  00026 UART_Parity_ODD  $= 0\times 02$  00027 } UART_ParityMode; 00028 00032 typedef struct 00033 { 00034 _IO uint32_t CTRL; 00035 _IO uint32_t DIVH; 00036 _IO uint32_t DIVL; 00037 _IO uint32_t BUF; 00038 _IO uint32_t ADD; 00039 _IO uint32_t STT; 00040 _IO uint32_t IE; 00041 _IO uint32_t IF; 00042 _IO uint32_t INV; 00043 } UART_TypeDef; 00044 00048 typedef struct 00050 { 00051 uint32_t BaudRate; 00052 uint8_t StopBits; 00053 uint8_t FirstSend; 00054 UART_ParityMode; 00055 UART_ParityMode ParitMode; 00056 uint8_t MultiValuePena; 00057 uint8_t Bit9Value; 00059 uint16_t Match485Addr; 00067 uint8_t IRQEna; 00068 uint8_t RXD_INV; 00069 uint8_t TXD_INV; 00070 } UART_InitTypeDef; 00074 #ifndef UART0 ((UART_TypeDef \*) UART0. BASE) 00075 #define UART0 ((UART_IypeDef \*) UART0. BASE) 00076 #endif 00080 #ifndef UART1 ((UART_IypeDef \*) UART1. BASE) 00081 #define UART1 ((UART_IypeDef \*) UART1. BASE) 00082 #endif 00083 00087 #ifndef UART_MCUMCLK 00088 #define UART_MCUMCLK (96000000LL) 00089 #endif 00090 00091 #define UART_WORDLENGTH.S0.0 00092 #define UART_WORDLENGTH.T0.1 00094 #define UART_STOPBITS.1b 00095 #define UART_STOPBITS.2b 00097 #define UART_FIRSTSEND.LS1 00098 #define UART_FIRSTSEND.MSB 1 00100 /\*中断使能定义\*/ 00101 #define UART_IRQEna_SendOver BIT0 00102 #define UART_IRQEna_RcvOver BIT1 00103 #define UART_IRQEna_SendRuffEmpty BIT2 00104 #define UART_IRQEna_StopError BIT3 00105 #define UART_IRQEna_CheckError BIT4 00107 /\*DMA请求使能定义\*/
+
+00108 #define UART.IRQEna.RX.DMA.RE BIT5 00109 #define UART.IRQEna.RX.DMA.RE BIT6 00110 #define UART.IRQEna.RX.BUTDMA.RE BIT7 00112 /\*中断标志定义\*/ 00113 #define UART.IF_SendOver BIT0 00114 #define UART.IF_RcvOver BIT1 00115 #define UART.IF_SendBufEmpty BIT2 00116 #define UART.IF_StopError BIT3 00117 #define UART.IF_CheckError BIT4 00119 void UART_Init (UART.TypeDef \*UARTx, UART_InitTypeDef \*UART_InitStruct); 00120 void UART_StructInit (UART.IIstTypeDef \*UART InitStruct); 00121 00122 void UART_SendData (UART.TypeDef \*UARTx, uint32_t n); 00123 uint32_t UART_ReadData (UART.TypeDef \*UARTx); 00124 00125 uint8_t UART_SendAddr.485 (UART.TypeDef \*UARTx, uint8_t n); 00126 uint8_t UART_SendData.485 (UART.TypeDef \*UARTx, uint8_t n); 00127 00128 uint32_t UART.GetIRQFlag (UART.TypeDef \*UARTx, uint32_t tempFlag); 00129 void UART.ClearIRQFlag (UART.TypeDef \*UARTx, uint32_t tempFlag); 00130 00131 00132 00133 #endif /\*  $\perp$  kIs32mc08x.AuRT.H \*/ 00134 00135 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+# 2.43 Source/lks32mc08x.adc.c文件参考
+
+文件名称：lks32mc08x.adc.c  文件标识：无  内容摘要：ADC外设驱动程序  其它说明：无
+
+include"lks32mc08x.adc.h"lks32mc08x.adc.c的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/dd803e3242c10843de063f090dca36ab50b47de62620b17813eb39af2cfbe89d.jpg)
+
+# 函数
+
+- void ADC_Init (ADC_TypeDef \*ADCx,ADC.InitTypeDef \*ADC_InitStructure) 函数名称：void ADC_Init(ADC_TypeDef \*ADCx,ADC.InitTypeDef \*ADC_InitStructure) 
+- void ADC_StructInit (ADC.InitTypeDef \*ADC_InitStructure) 函数名称：void ADC_StructInit(ADC.initTypeDef \*ADC_initStruct) 
+- void ADC.ClearIRQFlag (ADC_TypeDef \*ADCx, uint16.t INT_flag) 函数名称：void ADC.ClearIRQFlag(ADC_TypeDef \*ADCx, uint16.t INT_flag) 
+- u16 ADC.GetIRQFlag (ADC_TypeDef \*ADCx, uint16.t INT_flag) 函数名称：uint16.t ADC.GetIRQFlag(ADC_TypeDef \*ADCx, uint16.t INT_flag) 
+- void ADC.ChannelConfig (ADC_TypeDef \*ADCx,CHNx CHNum, uint16.t nChannel) 函数名称：void ADC.ChannelConfig(ADC_TypeDef \*ADCx,CHNx CHNum, uint16.t ChannelL0,uint16.t Channel.1) 
+- s16 ADC.GetConversionValue (DATx DATNum) 函数名称：s16 ADC.GetConversionValue(DATNx DATNum) 
+- void ADC_SoftTrgEN (ADC_TypeDef \*ADCx,FuncState state) 函数名称：void ADC_SoftTrgEN(ADC_TypeDef \*ADCx,FuncState state)
+
+# 2.43.1 详细描述
+
+文件名称： Iks32mc08x_adc.c文件标识：无内容摘要：ADC外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015,LINKOSEMCONDUCTORCo.td
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>Howlet</td><td>修改</td></tr></table>
+
+修改日志：调用NWR.Tim访问ADC加载值
+
+在文件Iks32mc08x_adc.c中定义
+
+# 2.43.2 函数说明
+
+# 2.43.2.1 ADC.ChannelConfig()
+
+void ADC.ChannelConfig (ADC.TypeDef \*ADCx,CHNx CHNum, uintl6. t nChannel )
+
+函数名称：void ADC.ChannelConfig(ADC_TypeDef\*ADCx,CHNx CHNum, uintl6. t Channel.0 ,uintl6. t Channel  $\leftarrow$  .1)
+
+功能描述：ADC采样通道设置
+
+参见
+
+被引用内容：CHNx
+
+参数
+
+<table><tr><td>输入参数：</td><td>ADCx, 08系列固定选择ADC0 CHNum为枚举类型，对应0-19；Channel.0为采样通道序号对应0-19 nChannel: ADC.CHannel.0～ADC.CHannel.19</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+ADC.ChannelConfig（ADC0,CHN0,ADC.CHANNEL.3）；//配置ADC第0次采样ADC通道3的信号ADC.ChannelConfig（ADC0,CHN1,ADC.CHANNEL.0）；//配置ADC第1次采样ADC通道0的信号
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_adc.c第263行定义
+
+# 2.43.2.2 ADC.ClearIRQFlag()
+
+void ADC.ClearIRQFlag（ADC.TypeDef \*ADCx, uint16. t INT- flag)
+
+函数名称：void ADC.ClearIRQFlag(ADC.TypeDef\*ADCx，uint16. t INT_flag)
+
+功能描述：ADC中断标志位清零
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="10">输入参数:</td><td>ADCx:</td><td>ADC0</td></tr><tr><td>INT_flag:</td><td>ADC中断标志</td></tr><tr><td>ADC_DAT0.OV_IRQ.IF</td><td>ADC_DAT0超阈值中断标志位</td></tr><tr><td>ADC_H_CONFLICT_IRQ.IF</td><td>硬件触发冲突标志</td></tr><tr><td>ADC_S_CONFLICT_IRQ.IF</td><td>软件触发冲突标志</td></tr><tr><td>ADC_EOS3_IRQ.IF</td><td>第四段扫描结束中断标志</td></tr><tr><td>ADC_EOS2_IRQ.IF</td><td>第三段扫描结束中断标志</td></tr><tr><td>ADC_EOS1_IRQ.IF</td><td>第二段扫描结束中断标志</td></tr><tr><td>ADC_EOS0_IRQ.IF</td><td>第一段扫描结束中断标志</td></tr><tr><td>ADC_ALL_IRQ.IF</td><td>ADC全部中断标志位——可用于初始化</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(ADC.GetIRQFlag(ADC0,ADC_EOS0. IRQ.IF))//获取第一段扫描结束中断标志ADC.ClearIRQFlag(ADC0,ADC_EOS0. IRQ.IF)//第一段扫描结束中断标志
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.adc.c第188行定义
+
+# 2.43.2.3 ADC.GetConversionValue()
+
+s16 ADC.GetConversionValue ( DATx DATNum )
+
+函数名称：s16 ADC.GetConversionValue(DATNx DATNum)
+
+功能描述：读ADC采样值
+
+参见
+
+被引用内容：DATx
+
+参数
+
+<table><tr><td>输入参数:</td><td>DATx: 读取第几次采样结果值</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：对应x次采样结果值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+s16 ADC_samp0 = 0; ADC_samp0 = ADC_GetConversionValue(DATA); //读取ADC第0次采样结果
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.adc.c第294行定义.
+
+# 2.43.2.4 ADC.GetIRQFlag()
+
+u16 ADC.GetIRQFlag (ADCTypeDef *ADCx, uint16_t INT_flag)
+
+函数名称：uint16_t ADC_GetIRQFlag(ADC_TypeDef* ADCx, uint16_t INT_flag)
+
+功能描述：获取ADC中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td>ADCx:</td><td>ADC0</td></tr><tr><td>INT_flag:</td><td>ADC中断标志</td></tr><tr><td>ADC_DAT0.OV_IRQ.IF</td><td>ADC_DAT0超阈值中断标志位</td></tr><tr><td>ADC_H_CONFLICT_IRQ.IF</td><td>硬件触发冲突标志</td></tr><tr><td>ADC_S_CONFLICT_IRQ.IF</td><td>软件触发冲突标志</td></tr><tr><td>ADC_EOS3_IRQ.IF</td><td>第四段扫描结束中断标志</td></tr><tr><td>ADC_EOS2_IRQ.IF</td><td>第三段扫描结束中断标志</td></tr><tr><td>ADC_EOS1_IRQ.IF</td><td>第二段扫描结束中断标志</td></tr><tr><td>ADC_EOS0_IRQ.IF</td><td>第一段扫描结束中断标志</td></tr><tr><td>ADC_ALL_IRQ.IF</td><td>ADC全部中断标志位——可用于初始化</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：读对应标志位是否为1，1位置位，0为未置位
+
+注解
+
+其它说明：无
+
+警告
+
+只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(ADC.GetIRQFlag(ADC0,ADC_EOS0_IRQ_IF))//获取第一段扫描结束中断标志  {      ADC.ClearIRQFlag(ADC0,ADC_EOS0_IRQ_IF)//第一段扫描结束中断标志  }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_adc.c第226行定义.
+
+# 2.43.2.5 ADC_Init()
+
+void ADC_Init ( ADC_TypeDef \*ADCx ADC.InitTypeDef \*ADC.InitStruct)
+
+函数名称：void ADC_Init(ADC_TypeDef \*ADCx,ADC InitTypeDef \*ADC InitStruct)
+
+功能描述：ADC初始化函数
+
+参见
+
+被引用内容：SYS_AnalogModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx: ADC0, ADC_InitTypeDef *ADC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+ADCInitTypeDef ADCInitStructure;ADC_structInit（&ADC_InitStructure); //初始化结构体ADCInitStructure.ADC_CLKDIV  $=$  ADC_Clock_48M; //ADC时钟选择48MHzADCInitStructure.Align  $=$  ADC_LEFT_ALIGN; //ADC数据输出左对齐ADCInitStructure.TriggemMode  $=$  ADC_2SEG_TRG; //设置ADC转换模式为双股式采样ADCInitStructure.FirSegCn  $\equiv$  ADC_2_TiMEs_SAMPLE; //第一段共采样2个通道ADCInitStructure.SecSegCn  $\equiv$  ADC_2_TiMEs_SAMPLE; //第二段共采样0个通道ADCInitStructure.ThrSegCn  $\equiv$  0; //第三段共采样0个通道ADCInitStructure.FouSegCn  $\equiv$  0; //第四段共采样0个通道ADCInitStructure.ReFvOl  $=$  RefC1_2V4; //ADC基准电压  $= 1 + 1$  ADCInitStructure.Gain  $0 = 0\times 0$  //ADC_DAT0- ADC_DAT9（BIT0\~BIT9）采样保持电路增益设置2/3 ADCInitStructure.Gain1  $= 0\times 0$  //ADC_DAT10- ADC_DAT9（BIT10\~BIT19）采样保持待电路增益设置2/3 ADC_InitStructure.GasSample  $=$  DISABLE; //关闭连续采样//打开UTIMERTO_TI硬件触发采样ADCInitStructure.MCPWM_Trigger_En  $=$  ADC_MCPWM_T0_TRG|ADC_MCPWM_T1_TRG://开启UTIMER硬件第一段和第二段触发采样ADCInitStructure.UTIMER_Trigger_En  $=$  DISABLE; //关闭UTIMER硬件触发采样ADCInitStructure.TriggemCnt  $= 0$  //发生（TriggemCnt  $^{+1}$  次触发事件执行一段转换动作ADCInitStructure.IE  $=$  ADC_EOSO_IRQ_EN|ADC_EOS1_IRQ_EN; //ADC第一、二段采样结束中断使能ADC_Init（ADC0,&ADC_InitStructure);
+
+修改日志：
+
+在文件lks32mc08x.adc.c第59行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/b562759182042f766b852b0e3144770a7f45d12f0e76c941778bb1d88b0390c0.jpg)
+
+# 2.43.2.6 ADC_SoftTrgEN()
+
+void ADC_SoftTrgEN (ADC_TypeDef *ADCx, FuncState state)
+
+函数名称：void ADC_SoftTrgEN(ADC_TypeDef*ADCx, FuncState state)
+
+功能描述：ADC采样软件触发使能
+
+参见
+
+被引用内容：FuncState
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx, 08系列固定选择ADC0 state: ENABLE触发, DISABLE不触发</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：ADC0 SWT写0x5AA5仅触发一次，完成后自动清零，等待下次软件触发
+
+警告
+
+无
+
+示例代码：
+
+ADC_SoftTrgEN(ADC0, ENABLE); //软件触发一次ADC采样
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_adc.c第398行定义
+
+# 2.43.2.7 ADC.StructInit()
+
+void ADC_StructInit(ADC精准扶贫TypeDef * ADC精准扶贫Struct)
+
+函数名称：void ADC_StructInit(ADC_InitStructure)
+
+功能描述：ADC结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADC_InitTypeDef *ADC_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+ADC_InitStructureADC_InitStructure;ADC_InitStructure（&ADC_InitStructure);//初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>Howlet</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.adc.c第186行定义
+
+# 2.44 lks32mc08x.adc.c
+
+# 浏览该文件的文档
+
+00001 00020 #include"1ks32mc08x.adc.h" 00021 00059 void ADC_Init(ADCTypeDef \*ADCx,ADC_InitStructure) 00060 { 00061 uintl6. t_reg; 00062 00063 SYS_AnalogModuleClockCmd（SYS-AnalogModule_ADC,ENABLE）；//ADC模块使能 00064 00065 SYS_WR_PROTECT  $= 0\times 7\mathrm{A}83$  //解除系统寄存器写保护 00066 SYS_AFE_REG1  $=$  ADC_InitStruct- >RefVol  $< < 3$  //ADC基准电压选择 00067 SYS_AFE_REG7  $=$  ADC_InitStruct- >ADCCLKDIV  $< < 4$  //ADC时钟选择 00068 SYS_WR_PROTECT  $= 0\times 0$  //关闭系统寄存器写操作// 00069 00070 ADCx- >IE  $=$  ADC_InitStruct- >IE; 00071 00072 t.reg  $=$  （ADC.InitStruct- >Align）丨（ADC.InitStruct- >DAT0. TH.Type<<1) 00073 ADCx- >CFG  $=$  t.reg; 00074 00075 t.reg  $=$  （ADC.InitStruct- >MCPWM_Trigger.En）丨（ADC.InitStruct- >UTIMER_Trigger.En<<4）
+
+00076 (ADC.InitStruct- >TriggerCnt << 8) | (ADC.InitStruct- >TriggerMode << 12) |00077 (ADC.InitStruct- >ConSample << 14);00078ADCx- >TRG = t.reg; // TRIG00080ADCx- >CHNTO = ADC.InitStruct- >FirSeg.Ch | (ADC.InitStruct- >SecSeg.Ch << 8);00082 ADCx- >CHNT1 = ADC.InitStruct- >ThrSeg.Ch | (ADC.InitStruct- >FouSeg.Ch << 8);00083 ADCx- >DAT0. TH = ADC.InitStruct- >DAT0. TH;00084 ADCx- >GAIN.0 = ADC.InitStruct- >Gain0;00085 ADCx- >GAIN.1 = ADC.InitStruct- >Gain1;00086 if (ADC.InitStruct- >Allign == 0)00087 {ADCx- >DC.A0 = Read.Trim(0x00000310) << 4;00088 ADCx- >DC.A1 = Read.Trim(0x00000314) << 4;00089 ADCx- >AMC.A0 = Read.Trim(0x00000318);00090 ADCx- >AMC.A1 = Read.Trim(0x0000031C);00091 ADCx- >DC.B0 = Read.Trim(0x00000320) << 4;00092 ADCx- >DC.B1 = Read.Trim(0x00000324) << 4;00093 ADCx- >AMC.B0 = Read.Trim(0x00000328);00094 ADCx- >AMC.B1 = Read.Trim(0x0000032C);00095 ADCx- >DC.B0 = Read.Trim(0x00000320) << 4;00096 ADCx- >DC.B1 = Read.Trim(0x00000324) << 4;00097 ADCx- >AMC.B0 = Read.Trim(0x00000328);00098 ADCx- >AMC.B1 = Read.Trim(0x0000032C);00100 else00101ADCx- >DC.A0 = Read.Trim(0x00000310);00102 ADCx- >DC.A1 = Read.Trim(0x00000314);00103 ADCx- >AMC.A0 = Read.Trim(0x00000318);00104 ADCx- >AMC.A1 = Read.Trim(0x0000031C);00105 ADCx- >DC.B0 = Read.Trim(0x00000320);00106 ADCx- >DC.B1 = Read.Trim(0x00000324);00107 ADCx- >AMC.B0 = Read.Trim(0x00000328);00108 ADCx- >AMC.A1 = Read.Trim(0x0000032C);00109 ADCx- >DC.B0 = Read.Trim(0x00000320);00110 ADCx- >DC.B1 = Read.Trim(0x00000324);00111 ADCx- >AMC.B0 = Read.Trim(0x00000328);00112 ADCx- >AMC.B1 = Read.Trim(0x0000032C);00113 }00114}0011500136 void ADC_structInit(ADC.InitTypeDef *ADC_InitStructure)00137 {ADC.InitStruct- >IE = 0;00138 ADC.InitStruct- >Allign = 0;00139 ADC.InitStruct- >FirSeg.Ch = 0;00140 ADC.InitStruct- >ConSample = 0;00141 ADC InitStruct- >TriggerCnt = 0;00142 ADC InitStruct- >FirSeg.Ch = 0;00143 ADC InitStruct- >SecSeg.Ch = 0;00144 ADC InitStruct- >ThrSeg.Ch = 0;00145 ADC InitStruct- >FouSeg.Ch = 0;00146 ADC InitStruct- >Trigger.Mode = 0;00147 ADC InitStruct- >MCPWLRTrigger.En = 0;00148 ADC InitStruct- >UTIMLRTrigger.En = 0;00149 ADC InitStruct- >DAT0. THType = 0;00150 ADC InitStruct- >Gain1 = 0;00151 ADC InitStruct- >Gain = 0;00152 ADC InitStruct- >RefVol = 0;00153}00154 void ADC.ClearIRQFlag(ADCTypeDef *ADCx, uint16_t INT_flag)00155 ADCx- >IF = INT_flag;00156 ADCx- >IF = INT_flag;00157 ADCx- >IF = INT_flag;00158 ADCx- >IF = INT_flag;00159 ADCx- >IF = INT_flag;00160 ADCx- >IF = INT_flag;00161 ADCx- >IF = INT_flag;00162 u16 ADC.GetIRQFlag(ADCTypeDef *ADCx, uint16_t INT_flag)00163 u8 ADCIRQFlag = 0;00164 u8 ADCIRQFlag = 0;00165 u8 ADCIRQFlag = 0;00166 u8 ADCIRQFlag = 0;00167 u8 ADCIRQFlag = 0;00168 u8 ADCIRQFlag = 0;00169 u8 ADCIRQFlag = 0;00170 u8 ADCIRQFlag = 0;00171 u8 ADCIRQFlag = 0;00172 u8 ADCIRQFlag = 0;00173 u8 ADCIRQFlag = 0;00174 u8 ADCIRQFlag = 0;00175 u8 ADCIRQFlag = 0;00176 u8 ADCIRQFlag = 0;00177 u8 ADCIRQFlag = 0;00178 u8 ADCIRQFlag = 0;00179 u8 ADCIRQFlag = 0;00180 u8 ADCIRQFlag = 0;00181 u8 ADCIRQFlag = 0;00182 u8 ADCIRQFlag = 0;00183 u8 ADCIRQFlag = 0;00184 u8 ADCIRQFlag = 0;00185 u8 ADCIRQFlag = 0;00186 u8 ADCIRQFlag = 0;00187 u8 ADCIRQFlag = 0;00188 u8 ADCIRQFlag = 0;00189 u8 ADCIRQFlag = 0;00190 u8 ADCIRQFlag = 0;00191 u8 ADCIRQFlag = 0;00192 u16 ADC.GetIRQFlag(ADCTypeDef *ADCx, uint16_t INT_flag)00227 {00228 u8 ADCIRQFlag = 0;00229 u8 ADCIRQFlag = 0;00230 {ADCIRQFlag = 1;00231 }00232 }00233 else00234 {ADCIRQFlag = 0;00235 ADCIRQFlag = 0;00236 }00237 return ADCIRQFlag;00238 }00239 ADCx- >ADC.x, uint16_t nChannel)00264 {00265 u32 *p;00266 u32 reg;00267 p = (u32 *) & ADCx- >CHNO;00268 reg = p[CHNum >> 1];00269 reg & = (0xff << (8 * (CHNum & 1)));00270 reg |= nChannel & (8 * (CHNum & 1));00271 p[CHNum >> 1] = reg;
+
+00272} 00273 00294 s16 ADC.GetConversionValue(DATx DATNum) 00295{ 00296 if (DATNum  $= =$  DAT0) 00297 { 00298 return ADC0DAT0 00299 00300 } 00301 { 00302 return ADC0DAT1 00303 } 00304 else if (DATNum  $= =$  DAT2) 00305 { 00306 return ADC0DAT2 00307 } 00308 else if (DATNum  $= =$  DAT3) 00309 { 00310 return ADC0DAT3 00311 } 00312 else if (DATNum  $= =$  DAT4) 00313 { 00314 return ADC0DAT4 00315 } 00316 else if (DATNum  $= =$  DAT5) 00317 { 00318 return ADC0DAT5 00319 } 00320 else if (DATNum  $= =$  DAT6) 00321 { return ADC0DAT6 00322 } 00323 else if (DATNum  $= =$  DAT7) 00324 { 00325 return ADC0DAT7 00326 } 00327 else if (DATNum  $= =$  DAT8) 00328 { 00329 return ADC0DAT8 00330 } 00331 else if (DATNum  $= =$  DAT9) 00332 { 00333 return ADC0DAT9 00334 } 00335 else if (DATNum  $= =$  DAT10) 00336 { 00337 return ADC0DAT11; 00338 } 00339 else if (DATNum  $= =$  DAT11) 00340 { 00341 return ADC0DAT11; 00342 } 00343 else if (DATNum  $= =$  DAT12) 00344 { 00345 return ADC0DAT12; 00346 } 00347 else if (DATNum  $= =$  DAT13) 00348 { 00349 return ADC0DAT13; 00350 } 00351 else if (DATNum  $= =$  DAT14) 00352 { 00353 return ADC0DAT14; 00354 } 00355 else if (DATNum  $= =$  DAT15) 00356 { 00357 return ADC0DAT15; 00358 return ADC0DAT15; 00359 } 00360 else if (DATNum  $= =$  DAT16) 00361 { 00362 return ADC0DAT16; 00363 } 00364 else if (DATNum  $= =$  DAT17) 00365 { 00366 return ADC0DAT17; 00367 } 00368 else if (DATNum  $= =$  DAT18) 00369 { 00370 return ADC0DAT19; 00371 } 00372 else // (DATNum  $= =$  DAT19) 00373 { 00374 return ADC0DAT19; 00375 } 00376 00377} 00378 void ADC_SoftTrgEN(ADC_TypeDef *ADCx, FuncState state)
+
+00399{ 00400 if(state  $= =$  ENABLE) 00401 { 00402 ADC0. SWT  $=$  0x5AA); 00403 1 00404} 00405 00406 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* (C) COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*\*END OF FILE\*\*\*\*
+
+# 2.45 Source/lks32mc08x_can.c文件参考
+
+文件名称：lks32mc08x_can.c文件标识：无内容摘要：CAN外设驱动程序其它说明：无
+
+include"lks32mc08x_can.h"lks32mc08x_can.c的引用（Include）关系图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/0022306d48dcbe726d21ebe76f537d40f5a78dc02ca376864f98eaa182f160da.jpg)
+
+# 函数
+
+·void CAN_Init(CAN_TypeDef \*CANx, CAN_InitTypeDef \*CAN_InitStructure) 函数名称：void CAN_Init(CAN_TypeDef\* CANx, CAN_InitTypeDef\* CAN_InitStructure) ·void CAN_StructInit(CAN_InitTypeDef \*CAN_InitStructure) 函数名称：void CAN_StructInit(CAN_InitTypeDef \*CAN_InitStructure) ·void CAN_Sleep (u32 Baud) 函数名称：void CAN_Sleep(u32 Baud) ·void CAN_Manual_Awake (void) 函数名称：void CAN_Manual_Awake(void) ·void SFF_ID_Filter (u32 acr, u32 amr, u8 rtr.acr, u8 rtr.amr, u8 Byte1_acr, u8 Byte1_amr, u8 Byte2_acr, u8 Byte2.amr) 函数名称：void SFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr, u8 Byte1_acr,u8 Byte1_amr,u8 Byte2_acr,u8 Byte2.amr) ·void EFF_ID_Filter (u32 acr, u32 amr, u8 rtr.acr, u8 rtr.amr) 函数名称：void EFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr) ·void ID1_Filter_Dual (u32 acr1, u32 amr1, u8 rtr.acr1, u8 rtr.amr1, u8 Byte_acr1, u8 Byte_amr1, u8 ide) 函数名称：void ID1_Filter_Dual(u32 acr1, u32 amr1,u8 rtr.acr1, u8 rtr.amr1,u8 Byte_acr1,u8 Byte_amr1,u8 ide) ·void ID2_Filter_Dual (u32 acr2, u32 amr2, u8 rtr.acr2, u8 rtr.amr2, u8 ide) 函数名称：void ID2_Filter_Dual(u32 acr2, u32 amr2,u8 rtr.acr2,u8 rtr.amr2,u8 ide) ·u8 My_CAN_Send.Msg (u32 id, u8 ide, u8 rtr, u8 \*msg, u8 len) 函数名称：u8 My_CAN_Send.Msg(u32 id,u8 ide,u8 rtr,const u8 \*msg,u8 len) ·u8 CANReceive.Msg (uint32_t \*id, u8 \*ide, u8 \*rtr, u8 \*buf) 函数名称：u8 CANReceive.Msg(uint32_t\* id,u8\* ide,u8\* rtr,u8 \*buf) ·uint8_t CAN_ReadState (CAN_TypeDef \*CANx, uint32_t sr) 函数名称：uint8_t CAN_ReadState(CAN_TypeDef\* CANx, uint32_t sr) ·enumLossposition CAN_ReadALC (void)
+
+函数名称：enumLossposition CAN.ReadALC(void)- uint8. t CAN_ReadRXERRCNT (void)函数名称：uint8. t CAN_ReadRXERRCNT(void)- uint8. t CAN_ReadTXERRCNT (void)函数名称：uint8. t CAN_ReadTXERRCNT(void)- void CAN ReceFramlnfor (uint8. t *cnt, uint8. t *rbsa)函数名称：void CAN ReceFramlnfor(uint8. t* cnt, uint8. t* rbsa)- void CAN_ReadErrorCode (enumErrortype *errtype, enumErrortime *errtim, enumErrposition *errpos)函数名称：void CAN_ReadErrorCode (enumErrortype* errtype, enumErrortime* errtim, enumErrposition* errpos)- uint32. t CAN_GetIRQFlag (void)函数名称：uint32. t CAN_GetIRQFlag(void)
+
+# 2.45.1 详细描述
+
+文件名称：lks32mc08x.can.c  文件标识：无  内容摘要：CAN外设驱动程序  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c中定义
+
+# 2.45.2 函数说明
+
+# 2.45.2.1 CAN GetIRQFlag()
+
+uint32. t CAN.GetIRQFlag (void)
+
+函数名称：uint32. t CAN_GetIRQFlag(void)
+
+功能描述：获取中断标志与清除中断标志位
+
+参见
+
+被应用枚举：enumErrortype，enumErrortime，enumErrposition
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：TIM中断标志
+
+注解
+
+其它说明：CAN中断标志位为读清除
+
+警告
+
+无
+
+示例代码：
+
+u8 CAN_SR 0;CAN_SR = CAN_GetIRQFlag（）//获取CAN中断标志位且清除CAN中断标志位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第832行定义
+
+# 2.45.2.2 CAN_Init()
+
+void CAN_Init (CAN_TypeDef *CANx, CAN_InitTypeDef *CAN_InitStructure)
+
+函数名称：void CAN_Init(CAN_TypeDef* CANx, CAN_InitTypeDef* CAN_InitStructure)
+
+功能描述：ADC初始化函数
+
+参见
+
+被调用函数：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>CANx: CAN, CAN_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CAN_InitTypeDef CAN_InitStruct; CAN_StructInit(&CAN_InitStructure); //Can波特率：500Kbps CAN_InitStructure.CAN_Btr0 = 0x05; CAN_InitStructure.CAN_Btr1 = 0x1C; CAN_InitStructure.CAN_DMAEn = DISABLE; CAN_InitStructure.CAN_DMAEnIn = CAN_PRAMEN; CAN_InitStructure.CAN_ErWarShre = 50; //错误与警告门限值为50 //开启接收中断使能，发送完毕当前帧中断使能，错误报警中断使能 CAN_InitStructure.IRQEna = CAN_IE.RFIFONOEMPTY | CAN_IE.TXDONE | CAN_IE.WEREF; CAN_Init(CAN, &CAN_InitStructure);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第47行定义
+
+函数调用图：
+
+![](C:/Users/Administrator/MinerU/LKS32MC08x库函数说明.pdf-9684f2e3-f19b-46c4-9de5-1bd229613f9a/images/80790f4ccb5b47331142aa95fa6dc583ee6010afe476c1d92041d39223d293be.jpg)
+
+# 2.45.2.3 CAN Manual_Awake()
+
+void CANManual_Awake (void)
+
+函数名称：void CAN Manual_Awake(void)
+
+功能描述：CAN手动休眠唤醒函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CAN Manual_Awake(); //唤醒CAN休眠
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第153行定义.
+
+# 2.45.2.4 CAN_ReadALC()
+
+enumLossposition CAN_ReadALC (void)
+
+函数名称：enumLosspositionCAN_ReadALC（void)
+
+功能描述：获取仲裁丢失的具体位置
+
+参见
+
+被应用枚举：enumLossposition
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：返回仲裁丢失具体位置enumLossposition
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(CAN_ReadALC() == CAN_READID0) //总线仲裁丢失在ID的第一位{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第699行定义
+
+# 2.45.2.5 CAN.ReadErrorCode()
+
+void CAN_ReadErrorCode (enumErrortype \* errtype, enumErrortime \* errtim, enumErrposition \* errpos )
+
+函数名称：void CAN_ReadErrorCode(enumErrortype\* errtype,enumErrortime  $\ast$  errtim,enumErrposition\* errpos)
+
+功能描述：获取总线错误类型和错误位置
+
+参见
+
+被应用枚举：enumErrortype，enumErrortime，enumErrposition
+
+参数
+
+<table><tr><td>输入参数：</td><td>errtype：总线错误类型
+errtim：总线错误发生时刻
+errpos：错误发生的位置</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+us errtype  $= 0$  errtime  $= 0$  errlocation  $= 0$  //存储变量申请 CAN_ReadErrorCode(err.type,err.time,err.location);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.can.c 第 805 行定义.
+
+# 2.45.2.6 CAN.ReadRXERRCNT()
+
+uint8_t CAN_ReadRXERRCNT (void)
+
+函数名称：uint8_t CAN_ReadRXERRCNT(void)
+
+功能描述：获取接收错误计数值
+
+参见
+
+被应用枚举：enumLossposition
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：返回接收错误计数值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 err.value = 0;err.value = CAN_ReadRXERRCNT(); //获取错误计数值个数
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.can.c 第 724 行定义.
+
+# 2.45.2.7 CAN.ReadState()
+
+uint8_t CAN.ReadState ( CAN.TypeDef * CANx, uint32_t sr)
+
+函数名称：uint8_t CAN_ReadState(CAN_TypeDef* CANx, uint32_t sr)
+
+功能描述：获取CAN状态
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="2">sr:读取指定状态或者所有状态结果</td></tr><tr><td>CAN_ONBUS</td><td>1: CAN 模块，处于 BUS OFF 状态，无数据发送接收动作
+0: CAN 模块，可以发送数据到 CAN 总线，或接收 CAN 总线数据</td></tr><tr><td>CAN_ERROV</td><td>1: CAN 传输产生的错误总数达到或超过 CAN_EWL 规定值
+0: CAN 传输产生的错误总数低于 CAN_EWL 规定值</td></tr><tr><td>CAN_TXING</td><td>1: CAN 模块并在发送一帧数据
+0: CAN 模块没有发送数据的动作</td></tr><tr><td>CAN_RXING</td><td>1: CAN 模块正在接收一帧数据
+0: CAN 模块没有接收数据的动作</td></tr><tr><td>CAN_TRNASDONE</td><td>1: 最近一次传输已完成
+0: 最近一次传输未完成</td></tr><tr><td>CAN_TFIFOEMPTY</td><td rowspan="2">1: TFIFO 空，可以写入发送数据
+0: TFIFO 非空，内部数据没有发送完毕
+1: RFIIFO 存在的帧太多，已满，导致数据丢失
+0: RFIIFO 未满
+1: RFIIFO 存在一帧或多帧数据，可以通过 RFIIFO 寄存器读取
+0: RFIIFO 没有有效帧数据</td></tr><tr><td>CAN_RFIFOEMPTY</td></tr><tr><td>CAN_DATAAVAIL</td><td rowspan="2">1: RFIIFO 存在一帧或多帧数据，可以通过 RFIIFO 寄存器读取
+0: RFIIFO 没有有效帧数据</td></tr><tr><td>CAN_ALLSR</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+
+返回
+
+返回值：返回指定状态结果或者所有状态结果
+
+<table><tr><td>CAN.ONBUS</td><td>1: CAN 模块，处于 BUS OFF 状态，无数据发送接收动作
+0: CAN 模块，可以发送数据到 CAN 总线，或接收 CAN 总线数据</td></tr><tr><td>CAN.ERROR</td><td>1: CAN 传输产生的错误总数达到或超过 CAN_EWL 规定值
+0: CAN 传输产生的错误总数低于 CAN_EWL 规定值</td></tr><tr><td>CAN_TXING</td><td>1: CAN 模块正在发送一帧数据
+0: CAN 模块没有发送数据的动作</td></tr><tr><td>CAN_RXING</td><td>1: CAN 模块正在接收一帧数据
+0: CAN 模块没有接收数据的动作</td></tr><tr><td>CAN_TINASDONE</td><td>1: 最近一次传输已完成
+0: 最近一次传输未完成</td></tr><tr><td>CAN_TFIFOEMPTY</td><td>1: TFIFO 空，可以写入发送数据
+0: TFIFO 非空，内部数据没有发送完毕</td></tr><tr><td>CAN_RFIFOEMPTY</td><td>1: RFIFO 存入的帧太多，已满，导致数据丢失
+0: RFIFO 未满</td></tr><tr><td>CAN_DATAAVAIL</td><td>1: RFIFO 存有一帧或多帧数据，可以通过 RFIFO 寄存器读取
+0: RFIFO 没有有效帧数据</td></tr><tr><td>CAN_ALLSR</td><td>读取全部状态</td></tr></table>
+
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+//判断CAN的RFIFO是否存有一帧或多帧数据，此时是否可以通过RFIFO寄存器读取if(CAN.ReadState(CAN, CAN_DATAAVAIL) == CAN_DATAAVAIL) {
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第673行定义.
+
+# 2.45.2.8 CAN_ReadTXERRCNT()
+
+uint8_t CAN_ReadTXERRCNT ( void)
+
+函数名称：uint8_t CAN_ReadTXERRCNT(void)
+
+功能描述：获取发送错误计数值
+
+参见
+
+被应用枚举：enumLossposition
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：返回发送错误计数值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 err.value = 0; err.value = CAN_ReadTXERRCNT(); // 获取错误计数值个数
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第749行定义.
+
+# 2.45.2.9 CAN_ReceFramInfo(r)
+
+void CAN_ReceFramInfor (    uint8_t * cnt,    uint8_t * rbsa)
+
+函数名称：void CAN_ReceFramInfo(uint8_t* cnt, uint8_t* rbsa)
+
+功能描述：获取接收缓冲区有效接收帧数与第一帧有效接收数据在RFIFO的位置
+
+参见
+
+参见被应用枚举：enumLossposition
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>cnt: 有效帧个数
+rbsa: RFIFO的大小为32字节，rbsa存储第一帧有效接收数据在RFIFO的位置0-31</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：u8 frames.number = 0, RFIFO_location = 0; //存储变量申请CAN_ReceFramInfor(frames_number, RFIFO_location); //frames.number接收缓冲区存储帧个数，RFIFO_location缓冲区最早读取的帧位置
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月29日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件lks32mc08x_can.c第776行定义
+
+# 2.45.2.10 CANReceive.Msg()
+
+u8 CANReceive.Msg (    uint32_t *id,    u8 *ide,    u8 *rtr,    u8 *buf)
+
+函数名称：u8 CANReceive.Msg(uint32_t *id, u8 *ide, u8 *rtr, u8 *buf)
+
+功能描述：CAN轮询接收数据程序
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>id: 接收帧id
+ide: 接收帧的类型，标准/扩展帧
+rtr: 接收帧的类型，远程帧/数据帧
+*buf: 接收帧的数据存储缓存区</td></tr></table>
+
+
+返回
+
+返回值：0：接收完成 10：接收失败
+
+注解
+
+其它说明：1、id：标准ID(11位)/扩展ID(11位+18位)2、ide：0，标准帧；1，扩展帧3、rtr：0，数据帧；1，远程帧。
+
+警告
+
+无
+
+示例代码：
+
+//can.par.id存储接收帧ID，can.par.ide存储接收帧类型标准/扩展帧，can.par.rtr存储接收帧类型远程帧/数据帧，can.par.RX存储接收帧数据CANReceive.Msg(&(can.par.id),&(can.par.ide),&(can.par.rtr),can.par.RX);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年08月10日</td><td>1.0</td><td>ZKW</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_can.c 第 562 行定义.
+
+# 2.45.2.11 CAN_Sleep()
+
+void CAN_Sleep (u32 Baud)
+
+函数名称：void CAN_Sleep(u32 Baud)
+
+功能描述：CAN开启休眠函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>Baud: 波特率，单位Kbps</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：休眠唤醒有两种：1、软件清零CAN_MOD[4]，即自动退出休眠模式。，2、一旦检测到CAN总线的活动，即自动退出休眠模式。
+
+警告
+
+无
+
+示例代码：
+
+CAN Sleep(500); //开启CAN休眠，CAN比特率500kbps
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_can.c 第 116 行定义.
+
+# 2.45.2.12 CAN_StructInit()
+
+void CAN_StructInit CAN_InitStructure  $\ast$  CAN.InitStruct)
+
+函数名称：void CAN_StructInit(CAN_InitStructure)
+
+功能描述：CAN结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>CAN_InitStructure</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：CAN_InitStructure CAN_InitStructure; CAN_StructInit(&CAN_InitStructure); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第85行定义
+
+# 2.45.2.13 EFF_ID.Filter()
+
+void EFF_ID.Filter (u32 acr,u32 amr,u8 rtr.acr,u8 rtr-amr)
+
+函数名称：void EFF_ID.Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr-amr)
+
+功能描述：CAN扩展帧单ID过滤，采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>acr: ID值。
+amr: 屏蔽位
+rtr.acr: 接收（1远程/0数据帧）帧类型选择
+rtr.amr: 远程/数据帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：1、扩展帧29位ID长度2、amr：屏蔽位对应0表示此为对应ID必须匹配才会接收
+
+警告
+
+无
+
+# 示例代码：
+
+示例1：//扩展帧接收滤波：ID:0x10005A5A，数据帧EFF_ID_Filter(0x10005A5A,0x00,0x0,0x0);//接收的扩展帧只有满足ID地址为0x10005A5A且为数据帧才会接收示例2：//扩展帧接收滤波：ID:0x10005A5A，数据帧和远程帧（因为rtr.amr为1，所以接收帧类型不需要匹配也可以接收）EFF_ID_Filter(0x10005A5A,0x00,0x0,0x1);//接收的扩展帧只有满足ID地址为0x10005A5A的数据帧和远程帧才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第253行定义
+
+# 2.45.2.14 ID1.Filter.Dual()
+
+void ID1. Filter.Dual（ u32 acr1, u32 aml, u8 rtr.acrl, u8 rtr.amrl, u8 Byte.acrl, u8 Byte.amrl, u8 ide)
+
+函数名称：void ID1. Filter.Dual(u32 acr1, u32 amr1, u8 rtr.acr1, u8 rtr.amr1, u8 Byte.acr1, u8 Byte.amr1, u8 ide)
+
+功能描述：CAN双ID过滤中ID1滤波设置采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>acr1: ID1值（标志帧ID11位，扩展帧ID范围1D28～ID13即ID高16位有效）
+amr1: ID1屏蔽位
+rtr.acr1: 接收（1远程/0数据帧）帧类型选择（只支持SFF模式，扩展帧配置无效）
+rtr.amr1: 远程/标志帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收（只支持SFF模式，扩展帧配置无效）
+Byte.acr1: 数据帧第1个Byte低4位滤波选择（只支持SFF模式，扩展帧配置无效）
+Byte.amr1: 数据帧第1个Byte低4位屏蔽位（只支持SFF模式，扩展帧配置无效）
+ide: 0标准(SFF模式)/1扩展帧</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+其它说明：1、SFF模式为标准帧模式2、扩展帧时，只对ID的bit13- bit28即ID高16位进行筛选过滤3、因为双滤波ID1函数兼容标志准和扩展帧滤波（标准帧和扩展帧的双滤波有区别），所以该函数的形参部分只支持标准帧模式配置使用，扩展帧模式配置无效。
+
+警告
+
+无
+
+示例代码：
+
+示例代码：示例1：//标准帧ID1接收滤波：ID：0X75A，数据帧ID1- Filter_Dual（0X75A，0x00，0x0，0x0，0x00，0）；//接收的标准帧只有满足ID地址为0X75A且为数据帧且接收数据（不是帧的第一个数据，而是数据区的第一个数据）的第1个Byte低4位为0XF才会接收。示例2：//扩展帧ID1接收滤波：ID：0xFECCB的扩展帧ID1- Filter_Dual（0xFECCB，0x00，0x0，0x0，0x00，0x00，1）；//接收的扩展帧只有满足ID地址为0xFECCB才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第321行定义
+
+# 2.45.2.15 ID2.Filter_Dual()
+
+void ID2. Filter_Dual（ u32 acr2, u32 amr2, u8 rtr.acr2, u8 rtr.amr2, u8 ide)
+
+函数名称：void ID2. Filter_Dual(u32 acr2,u32 amr2,u8 rtr.acr2,u8 rtr.amr2,u8 ide)
+
+功能描述：CAN双ID过滤中ID2滤波设置采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数  
+
+<table><tr><td>输入参数:</td><td>acr2: ID2值（范围1D28～ID13即ID高16位有效）
+amr2: ID2屏蔽位
+rtr.acr2: 接收（1远程/0数据帧）帧类型选择（只支持SFF标准帧模式，扩展帧配置无效）
+rtr.amr2: 远程/标志帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收（只支持SFF标准帧模式，扩展帧配置无效）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+其它说明：1、SFF模式为标准帧模式2、扩展帧时，只对ID的bit13、bit28即ID高16位进行筛选过滤3、因为双滤波ID1函数兼容标志准和扩展帧滤波（标准帧和扩展帧的双滤波有区别），所以该函数的形参部分只支持标准帧模式配置使用，扩展帧模式配置无效。
+
+警告
+
+无
+
+示例代码：
+
+示例1：//标准帧ID2接收滤波：ID：0X75A，数据帧ID2. Filter.Dual（0X75A，0x00，0x0，0x0，0）；//接收的标准帧只有满足ID地址为0X75A且为数据帧才会接收。示例2：//扩展帧ID2接收滤波：ID：0xFECCB的扩展帧ID2. Filter.Dual（0xFECCB，0x00，0x0，0x0,1）；//接收的扩展帧只有满足ID地址为0xFECCB才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_can.c第388行定义
+
+# 2.45.2.16 My.CAN_Send.Msg()
+
+u8 My.CAN_Send.Msg（ u32 id, u8 ide, u8 rtr, u8 \* msg, u8 len)
+
+函数名称：u8 My.CAN_Send.Msg(u32 id,u8 ide,u8 rtr,const u8 \*msg,u8 len)
+
+功能描述：CAN轮询发送数据程序采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>id: 发送id
+ide: 标准/扩展帧
+rtr: 远程帧/数据帧
+*msg: 发送的数据
+len: 发送字节长度</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：0：发送成功10：发送失败
+
+注解
+
+其它说明：1、id：标准ID(11位)/扩展ID(11位+18位)2、ide：0，标准帧；1，扩展帧3、rtr：0，数据帧；1，远程帧。
+
+警告
+
+无
+
+示例代码：
+
+示例1：u8 Can.TX[8] = {0x81, 0x23, 0x33, 0x44, 0x15, 0x26, 0x37, 0x48}; // 发送数据 ID:0x03，标准帧，数据帧。数据，数据长度8字节My.CAN_Send.Msg(0x5A, 0, 0, Can.TX, 8);示例2：u8 Can.TX[8] = {0x81, 0x23, 0x33, 0x44, 0x15, 0x26, 0x37, 0x48}; // 发送数据 ID:0x03，扩展帧，数据帧。数据，数据长度8字节My.CAN_Send.Msg(0x10005A5A, 1, 0, Can.TX, 8);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年08月10日</td><td>1.0</td><td>ZKW</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMQ</td><td>创建</td></tr></table>
+
+修改日志：增加自测模式发送数据功能
+
+在文件lks32mc08x.can.c第457行定义.
+
+# 2.45.2.17 SFF_ID_Filter()
+
+void SFF_ID_Filter (u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr,u8 Bytel.acr,u8 Bytel.amr,u8 Byte2. acr,u8 Byte2. amr)
+
+函数名称：void SFF_ID_Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr,u8 Byte1_acr,u8 Byte1_amr,u8 Byte2_acr,u8 Byte2. amr)功能描述：CAN标准帧单ID过滤，采用2.0B协议
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>acr: ID值。
+amr: 屏蔽位
+rtr.acr: 接收（1远程/0数据帧）帧类型选择
+rtr.amr: 远程/数据帧滤波屏蔽位，0表示只接收rtr.acr类型帧，为1表示远程/0标志帧均接收
+Byte1.acr: 数据第一个字节
+Byte1.amr: 第一个字节屏蔽位
+Byte2.acr: 数据第二个字节
+Byte2.amr: 第二个字节屏蔽位</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+1、标准帧11位ID长度2、amr：屏蔽位对应0表示此为对应ID必须匹配才会接收
+
+警告
+
+无
+
+示例代码：
+
+示例代码：示例1：//标准帧接收单滤波：ID:0x5A，数据帧，BYTE1:0x81, BYTE:0x23SFF_ID_Filter(0x5A, 0x00, 0x0, 0x0, 0x81, 0x00, 0x23, 0x00);//接收的标准帧只有满足ID地址为0x5A的数据帧且第一个数据字节为0x81，第二个字节为0x23才会接收示例2：//标准帧接收单滤波：ID:0x5A和0x5B（因为amr第一位为1，所以第一位可以为1或0，无需匹配即可接收），数据帧，BYTE1:0x81, BYTE:0x23SFF_ID_Filter(0x5A, 0x00, 0x0, 0x0, 0x81, 0x00, 0x23, 0x00);//接收的标准帧只有满足ID地址为0x5A和0x5B的数据帧且第一个数据字节为0x81，第二个字节为0x23才会接收
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年01月16日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.can.c第197行定义
+
+# 2.46 lks32mc08x.can.c
+
+# 浏览该文件的文档
+
+00001 00015 #include"1ks32mc08x.can.c.h" 00016 00017 00047 void CAN_Init(CAN TypeDef \*CANx, CAN InitTypeDef \*CAN InitStruct) 00048{ 00049 SYS ModuleClockCmd(SYS Module CAN,ENABLE); 00050 CAN- >MOD  $\begin{array}{rl}{=}&{1< < 0}\end{array}$  ；//复位模式 00051 if (CAN Init Struct- >CAN DMAEn) 00052 { 00053 CANx- >CMR  $\begin{array}{rl}{|}&{=}\end{array}$  BIT5; 00054 00055 } 00056 else 00057 { 00058 } 00059 CANx- >EWLR  $=$  CAN Init Struct- >CAN ErrWarThre; 00060 CANx- >BTR0  $=$  CAN Init Struct- >CAN_Btr0; 00061 CANx- >BTR1  $=$  CAN Init Struct- >CAN_Btrl; 00062 CANx- >MOD  $=$  CAN Init Struct- >CAN WorkMode;
+
+00063 CANx- >EIR  $=$  CAN.InitStruct- >IRQEna;00064 了00085 void CAN.StructInit(CAN.InitTypeDef \*CAN.InitStruct)00086 {00087 CAN.InitStruct- >CAN.DMAEn  $=$  DISABLE;00088 CAN.InitStruct- >CAN.WorkMode  $=$  CAN.NORMAL.MODE;00089 CAN.InitStruct- >CAN.BrrWarThre  $=$  120;00090 /\*波特率选择500K\*//波特率选择500K\*/00091 CAN.InitStruct- >CAN.Btr0  $=$  0x05;00092 CAN.InitStruct- >CAN.Btr1  $=$  0x1C;00093 CAN.InitStruct- >IRQEna  $=$  1x0;00094 }0009500116 void CAN.Sleep(u32 Baud)00117 {00118 u32 rate  $= 0$  ，t_cnt  $= 0$  00119 CAN.MODE  $\epsilon =$  "BIT0://正常输出模式00120 rate  $=$  1152000 /Baud；//此值为主频96MHz进行计算，主频48MHz写入的Baud适当加大00121 for (t_cnt  $= 0$  ；t_cnt  $<$  rate;t_cnt  $^{+ + }$  )//等待11个波特率周期，进入正常工作模式00122 {00123 _NOP();00124 CAN.MODE  $\equiv$  BIT4;00125 rate  $=$  1632000 /Baud；//此值为主频96MHz进行计算，主频48MHz写入的Baud适当加大00126 //等待16个波特率周期，正式进入休眠等待16个波特率周期，正式进入休眠00127 for (t_cnt  $= 0$  ;t_cnt  $<$  rate;t_cnt  $^{+ + }$  00128 {00129 {00130 _NOP();00131 }00132}00133 00153 void CAN.Manual.Awake(void)00154 {00155 CAN.MODE  $\epsilon =$  "BIT0;00156 CAN.MODE  $\epsilon =$  "BIT4;00157 }00158 00197 void SFF.ID.Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr,u8 Bytel.acr,u8 Bytel.amr,u8 Byte2. acr,u8 Byte2. amr)00198 {00199 CAN- >MOD  $\vert = 1< < 0$  ；//复位模式00200 CAN- >MOD  $\vert = 1< < 3$  ；//单滤波ID，一个32位长的滤波ID00201 acr  $\epsilon =$  0x7ff;00202 amr  $\epsilon =$  0x7ff;00203 rtr.acr  $\epsilon =$  0x1;00206 rtr.amr  $\epsilon =$  0x1;00207 CAN.ACR0  $=$  (u8)(acr  $< >3$  ；00208 CAN.ACR1  $=$  (u8)(acr  $< >5$  ）|(rtr.acr<<4);00210 CAN.ACR2  $=$  Bytel.acr;00211 CAN.ACR3  $=$  Byte2. acr;00212 CAN.AMR0  $=$  (u8)(amr  $< >3$  ；00214 CAN.AMR1  $=$  (u8)(amr  $< 5$  ）|(rtr.amr  $< < 4$  ）|0x0f;00215 CAN.AMR2  $=$  Byte1. amr;00216 CAN.AMR3  $=$  Byte2. amr;00217 00218 CAN- >MOD  $\epsilon =$  （1<<0；//正常输出模式00219}00220 00253 void EFF.ID.Filter(u32 acr,u32 amr,u8 rtr.acr,u8 rtr.amr)00254 {00255 CAN- >MOD  $\vert = 1< < 0$  ；//复位模式00256 CAN- >MOD  $\vert = 1< < 3$  ；//单滤波ID，一个32位长的滤波ID00257 00258 acr  $\epsilon =$  0x1ffffff;00259 amr  $\epsilon =$  0x1ffffff;00260 rtr.acr  $\epsilon =$  0x1;00261 rtr.amr  $\epsilon =$  0x1;00262 /\*可接收的ID寄存器，当输入帧的ID同此匹配，则被CAN模块接受00264配合AMR寄存器，可同一类，0匹配。\*/00265 CAN.ACR3  $=$  (u8)(acr  $< >3$  ）|(rtr.acr<<2);00266 CAN.ACR2  $=$  (u8)(acr  $< >5$  ）;00267 CAN.ACR1  $=$  (u8)(acr  $< >13$  ；00268 CAN.ACR0  $=$  (u8)(acr  $>21$  ；00269 /\*配合ACR寄存器，同输入ID进行匹配。AMR寄存器某一位为0，标识00270 对应位需要同ACR匹配；为1，标识ID对应位不需要同ACR匹配\*/00271 CAN.AMR3  $=$  (u8)((amr  $< < 3$  ）|(rtr.amr  $< < 2$  ）|0x03);00272 CAN.AMR2  $=$  (u8)(amr  $< >5$  ）;00273 CAN.AMR1  $=$  (u8)(amr  $< >13$  ；00274 CAN.AMR0  $=$  (u8)(amr  $>21$  ；00275 CAN- >MOD  $\epsilon =$  （1<<0；//正常输出模式00276 00277}
+
+00278 00279 00321 void ID1- FilterDual(u32 acrl, u32 amrl, u8 rtr.acrl, u8 rtr.amrl, u8 Byte.acrl, u8 idc) 00322 { 00323 CAN- >MOD  $\vert = 1< < 0$  //RESET MODE 00324 CAN- >MOD  $\epsilon = \mathrm{\bar{\epsilon}}(1< < 3)$  ；//双滤波ID 00325 rtr.acrl  $\epsilon = 0\times 1$  00326 rtr.amrl  $\epsilon = 0\times 1$  00327 if（ide）/\*扩展帧\*/ 00329 { 00330 acrl  $\epsilon = 0$  x1fffff; 00331 CAN- ACR1  $=$  （u8）（acr1  $> > 13$  ； 00332 CAN- ACR0  $=$  （u8）（acr1  $> > 21$  ； 00333 00334 CAN- AMR1  $=$  （u8）（amrl  $> > 13$  ； 00335 CAN- AMR0  $=$  （u8）（amrl  $> > 21$  ； 00336 1 00337 else/\*标准帧\*/ 00338 { 00339 acrl  $\epsilon = 0\times 7$  ff; 00340 CAN- ACR0  $=$  （u8）（acr1  $> > 3$  ； 00341 CAN- ACR1  $=$  （u8）（acr1  $< < 5$  ）|（rtr.acrl  $< < 4$  ）|（Byte.acrl  $> > 4$  ； 00342 CAN- ACR3  $\epsilon = 0\times \mathrm{F0}$  00343 CAN- ACR3  $\vert =$  （u8）（Byte.acrl & 0x0F); 00344 00345 CAN- AMR0  $=$  （u8）（amrl  $> > 3$  ； 00346 CAN- AMR1  $=$  （u8）（amrl  $< < 5$  ）|（rtr.amrl  $< < 4$  ）|（Byte.amrl  $> > 4$  ； 00347 CAN- AMR3  $\epsilon = 0\times \mathrm{F0}$  00348 CAN- AMR3  $\vert =$  （u8）（Byte.amrl & 0x0F); 00349 1 00350 CAN- >MOD  $\epsilon = \mathrm{\bar{\epsilon}}(1< < 0$  ；//正常输出模式 00351 1 00352 00358 void ID2- FilterDual(u32 acr2, u32 amr2, u8 rtr.acr2, u8 rtr.amr2, u8 ide) 00389 { 00390 CAN- >MOD  $\epsilon = 1< < 0$  //RESET MODE 00391 CAN- >MOD  $\epsilon = \mathrm{\bar{\epsilon}}(1< < 3)$  ；//双滤波ID 00392 rtr.acr2  $\epsilon = 0\times 1$  00393 rtr.amr2  $\epsilon = 0\times 1$  00394 if（ide）//externed 00395 { 00396 acr2  $\epsilon = 0$  x1fffff; 00397 CAN- ACR3  $=$  （u8）（acr2  $> > 13$  ； 00398 CAN- ACR2  $=$  （u8）（acr2  $> > 21$  ； 00399 00400 CAN- AMR3  $=$  （u8）（amr2  $> > 13$  ； 00401 CAN- AMR2  $=$  （u8）（amr2  $> > 21$  ； 00402 1 00403 else 00404 { 00405 acr2  $\epsilon = 0\times 7$  ff; 00406 CAN- ACR3  $\epsilon = 0\times 0$  ff; 00407 CAN- ACR2  $=$  （u8）（acr2  $> > 3$  ； 00408 CAN- ACR3  $\vert =$  （u8）（acr2  $< < 5$  ）|（rtr.acr2 << 4); 00409 00410 CAN- AMR3  $\epsilon = 0\times 0$  ff; 00411 CAN- AMR2  $=$  （u8）（amr2  $> > 3$  ； 00412 CAN- AMR3  $\vert =$  （u8）（amr2  $< < 5$  ）|（rtr.amr2  $> > 4$  ； 00413 1 00414 CAN- >MOD  $\epsilon = \mathrm{\bar{\epsilon}}(1< < 0$  ；//正常输出模式 00415 1 00416 00457 u8 My.CAN.SendMsg(u32 id, u8 ide, u8 rtr, u8 +msg, u8 len) 00458 { 00459 u8 frame.inf  $= 0$  00460 u16  $\mathrm{\textit{i}} = \mathrm{\textit{0}}$  00461 00462 if (CAN- >SR & 0X04) // TFIFO 空 00463 { 00464 CAN- >MOD  $\epsilon = \mathrm{\bar{\epsilon}}(1< < 0$  ；//正常输出模式 00465 frame.inf  $\vert =$  id << 7；//0标准/1扩展帧 00466 frame.inf  $\vert =$  rtr << 6；//0，数据帧；1，遥控帧 00467 frame.inf  $\vert =$  lox << 0；//发送数据长度 00468 CAN- >TXRX0  $=$  frame.inf；//发送TX帧信息 00469 if (0 == ide) //标准帧 00470 { 00471 id  $\epsilon = 0\times 7$  ff; 00472 //发送接收寄存器1 00473 CAN- >TXRX1  $=$  id >> 3; //TX ID0 00474 CAN- >TXRX2  $=$  （id & 0X07）<< 5；//TX ID1 00475 CAN- >TXRX3  $=$  msg[0]; //TX DATA0 00476 CAN- >TXRX4  $=$  msg[1]; //TX DATA1 00477 CAN- >TXRX5  $=$  msg[2]; //TX DATA2 00478 CAN- >TXRX6  $=$  msg[3]; //TX DATA3 00479 CAN- >TXRX7  $=$  msg[4]; //TX DATA4 00480 CAN- >TXRX8  $=$  msg[5]; //TX DATA5
+
+00481 CAN- >TXRX9 = msg[6]; // TX DATA600482 CAN- >TXRXA = msg[7]; // TX DATA700483 }00484 else //扩展帧00485 {00486 id &= 0X1F1FFFFF;00487 CAN- >TXRX1 = (u8)(id >> 21); // TX ID000488 CAN- >TXRX2 = (u8)(id >> 13) & 0xFF); // TX ID1000489 CAN- >TXRX3 = (u8)(id >> 5) & 0xFF); // TX ID2000490 CAN- >TXRX4 = (u8)(id & 0xff) << 3); // TX ID3000491 CAN- >TXRX5 = msg[1]; // TX DATA000492 CAN- >TXRX6 = msg[1]; // TX DATA1000493 CAN- >TXRX7 = msg[2]; // TX DATA2000494 CAN- >TXRX8 = msg[3]; // TX DATA3000495 CAN- >TXRX9 = msg[4]; // TX DATA4000496 CAN- >TXRXA = msg[5]; // TX DATA5000497 CAN- >TXRXB = msg[6]; // TX DATA600498 CAN- >TXRXC = msg[7]; // TX DATA700499 }00500 if ((CAN- >MOD) & CAN_SELFTEST_MODE) /*CAN工作在自测模式*/00501 {00502 CAN- >CMR |= 1 << 4; // CAN发送数据的同时也将数据接收回来00503 }00504 else00505 {00506 CAN- >CMR |= 1 << 0; // CAN发送传输请求00507 }00508 while (!(CAN- >SR & 0X08)) //最近一次是否传输完成00509 {00510 if (i++) >= 0xffff)00511 {return 0xff; //发送失败00512 }00513 }00514 return 0; //发送完成00515 }00516 else // TFIFO非空00517 {00518 return 0xff; //发送失败00519 }00520 }00521 }0052200523 us CANReceiveMsg(utint32, t *id, us *id8, us *rtr, us *buf)00553 {00554 u8 reg_inf;00555 if (CAN- >SR & 0X01) // RFIFO存有一帧或多帧数据，可以通过RFIFO寄存器读取00556 {00557 CAN- >MOD & = "1 << 0); //正常输出模式00558 reg_inf = CAN- >TXRX0; //读取的一帧或多帧数据00560 if (reg_inf & 0x40) // EFF（扩展）帧00561 {00562 *ide = 1;00563 *id = (CAN- >TXRX1 << 21) | (CAN- >TXRX2 << 13) | (CAN- >TXRX3 << 5) | (CAN- >TXRX4 >> 3); //获取ID00564 if (reg_inf = 0x40)00565 {00566 *rtr = 1; //遥控帧00567 }00568 else00569 {00570 *rtr = 0; //数据帧00571 }00572 buf[0] = CAN- >TXRX5; //获取数据00573 buf[1] = CAN- >TXRX6;00574 buf[2] = CAN- >TXRX7;00575 buf[3] = CAN- >TXRX8;00576 buf[4] = CAN- >TXRX9;00577 buf[5] = CAN- >TXRXA;00578 buf[6] = CAN- >TXRXB;00579 buf[7] = CAN- >TXRXC;00580 }00581 else // SFF（标准）帧00582 {00583 *ide = 0;00584 if (reg_inf = 0x40)00585 {00586 }00587 }00588 else00589 {00590 *rtr = 0;00591 }00592 *id = ((CAN- >TXRX1 << 3) | (CAN- >TXRX2 >> 5));00593 buf[0] = CAN- >TXRX3;
+
+00595 buf[1]  $=$  CAN- >TXRX4; 00596 buf[2]  $=$  CAN- >TXRX5; 00597 buf[3]  $=$  CAN- >TXRX6; 00598 buf[4]  $=$  CAN- >TXRX7; 00599 buf[5]  $=$  CAN- >TXRX8; 00600 buf[6]  $=$  CAN- >TXRX9; 00601 buf[7]  $=$  CAN- >TXRXA; 00602 1 00603 00604 CAN- >CMR  $\mathbf{\mu} = \mathbf{0}\times \mathbf{0}\mathbf{4}$  ；//释放接收缓冲区 00605 00606 return 0；//接收完成 00607 1 00608 else // fifo is empty 00609 { 00610 return 0xff；//接收异常 00611 1 00612 1 00613 00614 00673 uint8. t CAN.ReadState(CANTypeDef \*CANx, uint32. t sr) 00674 { 00675 return (uint8. t) (CAN- >SR & sr); 00676 00677 00699 enumLossposition CAN.ReadALc(void) 00700 { 00701 return (enumLossposition)CAN.ALC; 00702 00703 00724 uint8. t CAN.ReadRXERRCNT(void) 00725 { 00726 return CAN_RXERR; 00727 1 00728 00749 uint8. t CAN.ReadTXERRCNT(void) 00750 { 00751 return CAN_TXERR; 00752 1 00753 00776 void CAN_ReceFramInfor(uint8. t *cnt, uint8. t *rbsa) 00777 { 00778 *cnt  $=$  CAN_RMC; 00779 \*rbsa  $=$  CAN_RBSA; 00780 1 00781 00805 void CAN_ReadErrorCode(enumErrortype \*errtype,enumErrortime \*errtim,enumErrposition \*errpos) 00806 { 00807 \*errtype  $=$  (enumErrortype)（(CAN_ECC &  $0\times 0$  ）>>6); 00808 \*errtim  $=$  (enumErrortime)（(CAN_ECC &  $0\times 20$  ）>>5); 00809 \*errpos  $=$  (enumErrorposition)（CAN_ECC &  $0\times 1f$  ； 00810 1 00811 00832 uint32. t CAN.GetIRQFlag(void) 00833 { 00834 return CAN.INTR; 00835 }
+
+# 2.47 Source/lks32mc08x.cmp.c文件参考
+
+文件名称：lks32mc08x.cmp.c  文件标识：无  内容摘要：cmp外设驱动程序  其它说明：无
+
+include "lks32mc08x.cmp.h"  lks32mc08x.cmp.c的引用（Include）关系图：
+
+![](images/7701b9ecaf0a6f2cdebdcc9a558764a32c69316452d9408c1974a3057878c992.jpg)
+
+# 函数
+
+函数- void CMP_Init (CMP_InitTypeDef *this)- 函数名称: CMP_Init (CMP_InitTypeDef *this)- void CMP_StructInit (CMP_InitTypeDef *CMP_InitStructure)- 函数名称: void CMP_StructInit (CMP_InitTypeDef *CMP_InitStructure)- u8 CMP_GetIRQFlag (u8 CMPx)- 函数名称: u8 CMP_GetIRQFlag (u8 CMPx)- void CMP_ClearIRQFlag (u8 CMPx)
+
+# 2.47.1 详细描述
+
+文件名称：lks32mc08x.cmp.c文件标识：无内容摘要：cmp外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年3月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.cmp.c中定义
+
+# 2.47.2 函数说明
+
+# 2.47.2.1 CMP_ClearIRQFlag()
+
+void CMP_ClearIRQFlag (u8 CMPx)
+
+函数名称：void CMP_ClearIRQFlag(u8 CMPx)
+
+功能描述：清除TIM中断标志
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP0, CMP1即获取CMP0和CMP1中断标志位</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（CMP.GetIRQFlag（CMP1））//获取CMP1中断标志位CMP.ClearIRQFlag（CMP1）；//清除CMP1中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月11日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.cmp.c第197行定义
+
+# 2.47.2.2 CMP_GetIRQFlag()
+
+u8 CMP.GetIRQFlag（u8 CMPx)
+
+函数名称：u8CMP.GetIRQFlag（u8CMPx)
+
+功能描述：读取比较器中断
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP0, CMP1即获取CMP0和CMP1中断标志位</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：TIM中断标志0/1
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（CMP.GetIRQFlag（CMP1））//获取CMP1中断标志位CMP.ClearIRQFlag（CMP1）；//清除CMP1中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月21日</td><td>1.0</td><td>Yangzj</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.cmp.c第148行定义
+
+# 2.47.2.3 CMP_Init()
+
+void CMP_Init (CMP_InitTypeDef *this)
+
+函数名称：CMP_Init（CMP_InitTypeDef\*this)
+
+功能描述：CMP初始化
+
+参见
+
+被调用函数：SYS AnalogModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CMP.InitTypeDef CMP.InitStruct CMP.StructInit（&CMP_InitStruct), CMP.InitStruct.CLK10. EN  $=$  ENABLE ； //比较器1/0滤波时钟使能 CMP.InitStruct.FIL.CLK10. DIV16  $= 15$  ； //比较器1/0滤波系数 0- 0xF CMP.InitStruct.FIL.CLK10. DIV2  $= 0$  ； //比较器1/0滤波相位系数  $0 - 0\times 3$  最终分频系数为 (DIV16+1)<DIV2 CMP.CMP InitStruct.CMP.ET  $= 0$  0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 CMP.InitStruct.CMP.HYS  $= 0$  ； //比较器同差选择 0：回差20mV1：回差0mV CMP.InitStruct.CMP.1EN  $=$  ENABLE ； //比较器1使能 CMP.InitStruct.CMP1. EN  $=$  ENABLE ； //比较器1信号输入使能影响比较器数字模块信号，模拟部 分不受影响 CMP.InitStruct.CMP1. SELF  $=$  CMP1. SELF_IP2； //比较器1信号正确选择见CMP1. SELF.CMP1. IP0比较器 定义 CMP.InitStruct.CMP1. SELN  $=$  CMP SELN.DAC ； //比较器1信号负端选择 CMP.InitStruct.CMP1. IE  $=$  ENABLE ； //比较器1中断使能 CMP.InitStruct.CMP1.POL  $= 0$  ； //比较器1极性选择 0：高电平有效1：低电平有效 只影响比较器中断 CMP.InitStruct.CMP1.RE  $=$  DISABLE ； //比较器1DMA请求使能 CMP.InitStruct.CMP1.IRQ.TRIG  $=$  DISABLE ； //比较器1边沿触发使能 CMP.InitStruct.CMP1.CHN3PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN3P通道使能比较器1开窗 CMP.InitStruct.CMP1.CHN2PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN2P通道使能比较器1开窗 CMP.InitStruct.CMP1.CHN1PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN1P通道使能比较器1开窗 CMP.InitStruct.CMP1.CHN0PWIN.EN  $=$  DISABLE ； //MCPWM模块CHN0P通道使能比较器1开窗 CMP.InitStruct.CMP1.W.PWM.POL  $=$  DISABLE ； //比较器1开窗FWH信号极性选择0：高电平有效：1：低 电平有效
+
+CMP.Init（&CMP.InitStruct）
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年11月26日</td><td>1.0</td><td>Howlet Li</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.cmp.c第56行定义.
+
+函数调用图：
+
+# 2.47.2.4 CMP.StructInit()
+
+void CMP_StructInit ( CMP.InitTypeDef  $\ast$  CMP.InitStruct)
+
+函数名称：void CMP_StructInit(CMP_InitTypeDef  $\ast$  CMP.InitStruct)
+
+功能描述：ADC结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>CMP.InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+CMP_StructInit CMP.InitStructure; CMP_StructInit(&CMP.InitStructure); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2018年11月26日</td><td>1.0</td><td>Howlet Li</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件 Iks32mc08x.cmp.c 第 121 行定义.
+
+# 2.48 Iks32mc08x.cmp.c
+
+# 浏览该文件的文档.
+
+00001 00014 #include"1ks32mc08x.cmp.h" 00015 00056 void CMP.Init (CMP.InitTypeDef  $\ast$  this) 00057 { 00058 //Comparator初始化 00059 SYS.AnalogModuleClockCmd (SYS.AnalogModule.CMP1,this- >CMP1. EN); 00060 SYS.AnalogModuleClockCmd (SYS.AnalogModule.CMP0,this- >CMP0. EN); 00061 SYS.WR.PROTECT  $=$  0x7FB3; 00062 00063 SYS.AFE.REG3  $=$  (this- >CMP0. SELN <<2)|(this- >CMP1. SELN <<4)|(this- >CMP0. SELP <<8)| 00064 (this- >CMP1. SELP <<12)|(this- >CMP.HYS <<7); 00065 00066 /\*CMP.HYS比较器滞回功能默认  $20mV$  ，写0关闭  $\ast_{j}$  00067 00068 SYS.AFE.REG1  $=$  this- >CMP.FT;  $\neq \neq$  快速比较，Enable后30nS  $\neq \neq$  00069 00070 SYS.AFE.REG5  $=$  (this- >CMP0. EN <<6)|(this- >CMP1. EN <<7); 00071 00072 SYS.WR.PROTECT  $= 0$  00073 00074 CMP- > IE  $=$  (this- >CMP1. IE <<1)|(this- >CMP0. IE); 00075 if(this- >CLK10. EN  $= =$  DISABLE) 00076 { 00077 if(this- >CMP1. INEN || this- >CMP0. INEN) 00078 { 00079 CMP- >TCLK  $=$  BIT3; 00080 00081 } 00082 else 00083 CMP- >TCLK  $= 0$  00084 } 00085 } 00086 else 00087 { 00088 CMP- >TCLK  $=$  (this- >FILCLK10. DIV16 <<4)|(this- >CLK10. EN <<3)| 00089 (this - > FILCLK10. DIV2); 00090 } 00091 CMP- >CFG  $=$  (this- >CMP1. W.PWM.POL <<7)|(this- >CMP1. RQ_TRIG <<6)| 00092 (this - > CMP0. IN.EN <<5)|(this- >CMP0. INL <<<<4)| 00093 (this - > CMP0. INEN <<1)|(this- >CMP0. RQ.TEN <<2)| 00094 (this - > CMP0. W.PWM.POL <<3)|(this- >CMP0. POL); 00095 CMP- > BLCWIN  $=$  (this- >CMP1. CHN3P_WIN.EN <<7)|(this- >CMP1. CHNP_WIN.EN <<6)| 00096 (this - > CMP1. CHN1P_WIN.EN <<5)|(this- >CMP1. CHNOP_WIN.EN <<4)| 00097 (this - > CMP0. CHN3P_WIN.EN <<3)|(this- >CMP0. CHNP2P_WIN.EN <<2)| 00098 (this - > CMP0. CHN1P_WIN.EN <<1)|(this- >CMP0. CHNOP_WIN.EN); 00099 CMP- >IF  $= 3$  00100} 00121 void CMP_StructInit (CMP.InitTypeDef\* CMP.InitStruct) 00122 { 00123 memset (CMP.InitStruct,0,sizeof (CMP.InitTypeDef)); 00124 } 00125 00148 u8 CMP.GetIRQFlag(u8 CMP); 00149 { 00150 if(CMPx  $= =$  CMP0) 00151 { 00152 if(CMP_IF&BIT0) 00153 { 00154 return 0; 00155 } 00156 else 00157 { 00158 return 1;
+
+00159 1 00160 1 00161 else if  $\mathbb{C}\mathbb{M}\mathbb{P}\mathbb{X} = =$  CMP1 00162 { 00163 ifCMP_IF&BIT1) 00164 { 00165 return 0; 00166 1 00167 else 00168 { 00169 return 1; 00170 1 00171 1 00172 return 0; 00173 1 00174 00197 void CMP_ClearIPOFlag(u8 CMPx) 00198{ 00199 ifCMPx  $= =$  CMP0) 00200 { 00201 CMP_IF  $=$  BIT0; 00202 00203 else ifCMPx  $= =$  CMP1 00204 { 00205 CMP_IF  $=$  BIT1; 00206 1 00207}
+
+# 2.49 Source/lks32mc08x_dac.c 文件参考
+
+文件名称： LKS32MC08x_dac.c  文件标识：无  内容摘要：DAC外设驱动程序  其它说明：无
+
+include "lks32mc08x_dac.h"  #include "string.h"  lks32mc08x_dac.c 的引用(Include)关系图：
+
+![](images/e3137603fc2fb1149d6eace41e823eb4d45fa1c3603ec0ab11890b80f27fa25d.jpg)
+
+# 函数
+
+- void DAC_StructInit(DAC_InitTypeDef *DAC_InitStructure)  函数名称：void DAC_StructInit(DAC_InitTypeDef* DAC_InitStructure)  
+- void DAC_Init(DAC_InitTypeDef* DAC_InitStructure)  函数名称：void DAC_init(DAC_InitTypeDef* DAC_InitStructure)  
+- void DAC_OutputValue(uint32_t DACValue)  函数名称：void DAC_OutputValue(uint32_t DACValue)  
+- void DAC_OutputVoltage(uint16_t DACVoltage)  函数名称：void DAC_OutputVoltage(uint32_t DACVoltage)
+
+# 2.49.1 详细描述
+
+文件名称： LKS32MC08x.dac.c文件标识：无内容摘要： DAC外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015,LINKOSEMCONDUCTORCo.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c中定义
+
+# 2.49.2 函数说明
+
+# 2.49.2.1 DAC_Init()
+
+void DAC_Init DAC_InitTypeDef  $\ast$  DAC_InitStruct)
+
+函数名称：void DAC.init(DAC.InitTypeDef  $\ast$  DAC InitStruct)
+
+功能描述：DAC初始化函数
+
+参见
+
+被调用函数：SYS AnalogModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>DAC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DACInitTypeDef DACInitStructure; DACStructInit(&DACInitStructure); DACInitStructure.DAC_GAIN  $=$  DAC_RANGE_1V2;//DAC量程为1.2V DACInitStructure.DACOUT_IN  $=$  DISABLE; //DAC通过IOP0[0]输出 DACInit(&DACInitStructure); //DAC初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_dac.c第64行定义
+
+函数调用图：
+
+![](images/f1b4af4932b330d4c12321657e0776d71c23b40bc66051c9b42cdcc506a15a84.jpg)
+
+# 2.49.2.2 DACOutputValue()
+
+void DACOutputValue ( uint32_t DACValue )
+
+函数名称：void DACOutputValue(uint32_t DACValue)功能描述：DAC输出数字量数值设置
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>DACValue:DAC输出电压对应数字量</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DACOutputValue（2048);//DAC输出2048\*1.2/4096=0.6V
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c第114行定义
+
+# 2.49.2.3 DAC-OutputVoltage()
+
+void DACOutputVoltage（ uint16_t DACVoltage )
+
+函数名称：void DAC_OutputVoltage(uint32_t DACVoltage)
+
+功能描述：DAC输出模拟量数值设置
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>DACVoltage:DAC输出电压对应数字量</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：输入变量DACVoltage为Q12格式，即输出1V对应DACVoltage  $= 1< < 12 = 4096$
+
+警告
+
+无
+
+示例代码：
+
+DACOutputVoltage（BIT12  $\ast$  0.6）//DAC输出0.6V
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c第142行定义
+
+# 2.49.2.4 DAC_StructInit()
+
+void DAC_StructInit( DAC_InitTypeDef  $\ast$  DAC_InitStructure
+
+函数名称：void DAC_StructInit(DAC_InitTypeDef  $\ast$  DAC_InitStructure)
+
+功能描述：DAC结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DAC_structInit DAC_InitStructure; DAC_structInit（&DAC_InitStructure）；//初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dac.c第37行定义
+
+# 2.50 lks32mc08x.dac.c
+
+# 浏览该文件的文档
+
+00001 00001 #include"1ks32mc08x.dac.h" 00014 #include"string.h" 00016 00037 void DAC_structInit（DAC_InitTypeDef\* DAC_InitStructure) 00038{ 00039 memset（DAC_InitStructure,0,sizeof（DAC_InitStructure); 00040 00064 void DAC_Init（DAC_InitStructure) 00065 { 00066 SYS_AnalogModuleClockCmd（SYS_AnalogModule_DAC,ENABLE); /\*DAC时钟使能\*/ 00067 00068 SYS_WR_PROTECT  $=$  0x7a83; /\*解锁寄存器写保护\*/ 00069 00070 SYS_AFE_REG1  $\epsilon_{\mathrm{S}} = \mathrm{\Lambda}^{\mathrm{c}}$  （0x32)0x03<<6; /\*DAC增益寄存器清零\*/ 00071 SYS_AFE_REG1  $\begin{array}{rl}{| =} & {} \end{array}$  DAC_InitStructure- >DAC_GAIN<<6; /\*设置DAC满量程为1.2U\*/ 00072 00073 if (((SYS_AFE_REG1  $> > 6$  ）&0x03)  $= =$  DAC_RANGE_LV2)
+
+00074 {/\*加载DAC1.2V量程校正值\*/ 00075 SYS.AFE.DACD  $=$  Read.Trim（0x00000344); 00076 SYS.AFE.DAC.AMC  $=$  Read.Trim（0x00000334); 00077 1 00078 else if（（（SYS.AFE.REG1>>6)&0x03）  $= =$  DAC_RANGE_3V0) 00079 {/\*加载DAC3.0V量程校正值\*/ 00080 SYS.AFE.DACD  $=$  Read.Trim（0x00000340); 00081 SYS.AFE.DAC.AMC  $=$  Read.Trim（0x00000330); 00082 1 00083 else if（（（SYS.AFE.REG1>>6)&0x03）  $= =$  DAC_RANGE_4V85) 00084 {/\*加载DAC4.85V量程校正值\*/ 00085 SYS.AFE.DACD  $=$  Read.Trim（0x00000348); 00086 SYS.AFE.DAC.AMC  $=$  Read.Trim（0x00000338); 00087 1 00088 00089 SYS.AFE.REG3  $=$  DAC_InitStructure- >DACOUT_EN<<11;/\*DAC输出配置\*/ 00090 00091 SYS.WR_PROTECT  $=$  0xffff；/\*锁定寄存器写保护\*/ 00092 1 00093 00094 00114 void DACOutputValue（uint132. t DACValue) 00115 { 00116 if（DACValue  $> = 4095$  00117 { 00118 DACValue  $= 4095$  00119 1 00120 SYS.AFE.DAC  $=$  DACValue; 00121 1 00122 00142 void DACOutputVoltage(uint16. t DACVoltage) 00143 { 00144 u32 temp  $= 0$  00145 u32 range  $= 0$  00146 if（（（SYS.AFE.REG1>>6)&0x03）  $= =$  DAC_RANGE_1V2) 00147 {/\*加载DAC1.2V量程校正值\*/ 00148 range  $=$  (uint16. t)((1.0/1.2)\*BIT12); 00149 1 00150 else if（（（SYS.AFE.REG1>>6)&0x03）  $= =$  DAC_RANGE_3V0) 00151 {/\*加载DAC3.0V量程校正值\*/ 00152 range  $=$  (uint16. t)((1.0/3.0)\*BIT12); 00153 1 00154 else if（（（SYS.AFE.REG1>>6)&0x03）  $= =$  DAC_RANGE_4V85) 00155 {/\*加载DAC4.85V量程校正值\*/ 00157 range  $=$  (uint16. t)((1.0/4.85)\*BIT12); 00158 1 00159 00160 temp  $=$  （DACVoltage  $^*$  range  $^+$  BIT11) >>12; 00161 if(temp  $> = 4095$  00163 { 00164 temp  $= 4095$  00165 1 00166 SYS.AFE.DAC  $=$  temp; 00167 00168 00169 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*（C）COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
+
+# 2.51 Source/lks32mc08x.dma.c 文件参考
+
+文件名称：LKS32MC08x.dma.c文件标识：无内容摘要：DMA外设驱动程序其它说明：无
+
+include "lks32mc08x.dma.h" #include "string.h"
+
+lks32mc08x.dma.c的引用(Include)关系图：
+
+![](images/79ac6345e81f9cfccc374981fedd8aae9a67d3e3776b84bde7557e6612b30fd4.jpg)
+
+# 函数
+
+- void DMA_StructInit (DMA_InitTypeDef *DMAInitStruct)  函数名称: void DMA_StructInit(DMA_InitTypeDef *DMAInitStruct)- void DMA_Init (DMA_RegTypeDef *DMAx, DMA_InitTypeDef *DMAInitStruct)  函数名称: void DMA_Init(DMA_RegTypeDef *DMAx, DMA_InitTypeDef *DMAInitStruct)- void DMA_CHx_EN (DMA_RegTypeDef *DMAx, u32 Channel_EN)  函数名称: void DMA_CHx_EN(DMA_RegTypeDef *DMAx, u32 Channel_EN)- uint32_t DMA_GetIRQFlag (DMA_RegTypeDef *DMAx, u32 timer.if)  函数名称: uint32_t DMA_GetIRQFlag(DMA_RegTypeDef *DMAx, u32 timer.if)- void DMA_ClearIRQFlag (DMA_RegTypeDef *DMAx, uint32_t tempFlag)  函数名称: void DMA_ClearIRQFlag(DMA_RegTypeDef *DMAx, uint32_t tempFlag)
+
+# 2.51.1 详细描述
+
+文件名称： LKS32MC08x.dma.c文件标识：无内容摘要： DMA外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年8月1日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：增加DMA通道使能函数，读取和清除DAM中断标志位函数
+
+在文件 Iks32mc08x.dma.c 中定义.
+
+# 2.51.2 函数说明
+
+# 2.51.2.1 DMA_CHx.EN()
+
+void DMA_CHx_EN DMA_RegTypeDef \* DMAx, u32 Channel_EN)
+
+函数名称：void DMA_CHx_EN(DMA_RegTypeDef \*DMAx,u32Channel_EN)
+
+功能描述：使能DMA通道
+
+参见
+
+被引用内容：DMAx可选：DMA_CH0，DMA_CH1，DMA_CH2，DMA_CH3
+
+参数
+
+<table><tr><td>输入参数:</td><td>DMAx: DMA通道选择
+Channel EN: ENABLE: 使能DMA通道, DISABLE: 关闭DMA通道使能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DMA_CHx_EN(DMA_CH0,ENABLE); //使能DMA通道0
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dma.c第135行定义
+
+# 2.51.2.2 DMA_ClearIRQFlag)
+
+void DMA_ClearIRQFlag DMA.RegTypeDef  $\ast$  DMAX, uint32. t tempFlag)
+
+函数名称：void DMA_ClearIRQFlag(DMA.RegTypeDef  $\ast$  DMAX，uint32. t tempFlag)
+
+功能描述：清除DMA中断标志
+
+参见
+
+被引用内容：DMAx可选：DMA.CH0，DMA.CH1，DMA.CH2，DMA.CH3
+
+参数
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="2">DMAx: DMA通道选择
+timer.if参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>DMA_CH0.FIF</td><td>通道0完成中断标志</td></tr><tr><td>DMA_CH1.FIF</td><td>通道1完成中断标志</td></tr><tr><td>DMA_CH2.FIF</td><td>通道2完成中断标志</td></tr><tr><td>DMA_CH3.FIF</td><td>通道3完成中断标志</td></tr><tr><td>DMA_CH0.FIF</td><td>通道0错误中断标志</td></tr><tr><td>DMA_CH1.FIF</td><td>通道1错误中断标志</td></tr><tr><td>DMA_CH2.FIF</td><td>通道2错误中断标志</td></tr><tr><td>DMA_CH3.FIF</td><td>通道3错误中断标志</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（DMA.GetIRQFlag（DMA.CHO，DMA_CH0_1F））//获取DMA通道0完成中断标志 DMA.ClearIRQFlag（DMA.CHO，DMACH0_1F）//清除DMA通道0完成中断标志
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dma.c第234行定义
+
+# 2.51.2.3 DMA_GetIRQFlag()
+
+uint32_t DMA_GetIRQFlag (DMA.RegTypeDef * DMAx, u32 timer_if)
+
+函数名称：uint32_t DMA_GetIRQFlag(DMA.RegTypeDef * DMAx, u32 timer_if)
+
+功能描述：获取DMA中断标志
+
+参见
+
+被引用内容：DMAx可选：DMA_CH0，DMA_CH1，DMA_CH2，DMA_CH3
+
+参数
+
+<table><tr><td rowspan="11">输入参数:</td><td colspan="2">DMAx: DMA通道选择</td></tr><tr><td colspan="2">timer_if参数可选:</td></tr><tr><td>寄定义</td><td>说明</td></tr><tr><td>DMA_CH0_FIF</td><td>通道 0 完成中断标志</td></tr><tr><td>DMA_CH1_FIF</td><td>通道 1 完成中断标志</td></tr><tr><td>DMA_CH2_FIF</td><td>通道 2 完成中断标志</td></tr><tr><td>DMA_CH3_FIF</td><td>通道 3 完成中断标志</td></tr><tr><td>DMA_CH0_EIF</td><td>通道 0 错误中断标志</td></tr><tr><td>DMA_CH1_EIF</td><td>通道 1 错误中断标志</td></tr><tr><td>DMA_CH2_EIF</td><td>通道 2 错误中断标志</td></tr><tr><td>DMA_CH3_EIF</td><td>通道 3 错误中断标志</td></tr></table>
+
+参见
+
+参数
+
+输出参数： 无
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(DMA_GetIRQFlag（DMA_CH0,DMA_CH0_1F））//获取DMA通道0完成中断标志
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月13日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.dma.c第178行定义
+
+# 2.51.2.4 DMA_Init()
+
+void DMA_Init DMA_RegTypeDef \* DMAx, DMA.InitTypeDef  $\ast$  DMAInitStruct)
+
+函数名称：void DMA_Init(DMA_RegTypeDef \*DMAx,DMA InitTypeDef \*DMAInitStruct)
+
+功能描述：DMA初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADCx: ADC0, ADC_InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 memaddr[25]  $=$  {0x11,0x12,0x13}；//发送数据缓冲区 DMA_InitTypeDef DMA_InitStructure; DMA_StructInit（&DMA_InitStructure); DMA_InitStructure.DMA_IRQ_EN  $=$  DMA.TCIE; //DMA传输完成中断使能 DMA_InitStructure.DMA_DIR  $=$  MEMORY2PERI; //内存至外设 DMA_InitStructure.DMA.CIRC  $=$  DISABLE; //关闭循环传输模式 DMA_InitStructure.DMA.CIRC  $=$  DISABLE; //外设地址写输校是否递增，高有效 DMA_InitStructure.DMA.MINC  $=$  ENABLE; //内存地址第二轮是否在第一轮地址的基础上递增（轮内地址一定递 增），高有效 DMA_InitStructure.DMA.PBTW  $=$  DMA_BYTE_TRANS; //外设访问位宽，0:byte,1:half- word,2:word DMA_InitStructure.DMA.MBTW  $=$  DMA_BYTE_TRANS; //内存访问位宽，0:byte,1:half- word,2:word DMA_InitStructure.DMA.REQ_EN  $=$  DMA.CH3_CAN.REQ_EN; //CAN DMA请求使能，高有效 DMA_InitStructure.DMA.TIMES  $= 5$  //DMA通道x每轮数据搬运次数1- 511 DMA_InitStructure.DMA_ROUND  $= 5$  //DMA通道x采样轮数1- 256 DMA_InitStructure.DMA.CPAR  $=$  （u32)&CAN.TXXRO; //DMA通道x外设地址 DMA_InitStructure.DMA.CMAR  $=$  （u32)memaddr; //DMA通道x内存地址 DMA_Init（DMA.CH3,&DMA_InitStructure); DMA.CHx.EN（DMA.CH3,ENABLE); //使能DMA.CH3通道
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>Howlet Li</td><td>创建</td></tr></table>
+
+修改日志：去除初始化使能DMA通道，改为DMA_CHx_EN（）函数使能DMA通道
+
+在文件lks32mc08x_dma.c第101行定义
+
+这是这个函数的调用关系图:
+
+# 2.51.2.5 DMA.StructInit()
+
+void DMA_StructInit DMA格局 ( DMA格局 * DMA格局)
+
+函数名称: void DMA_StructInitDMA格局 * DMA格局)
+
+功能描述: DMA结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>DMA InitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码:
+
+DMA格局 * DMA格局)DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA格局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 & DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 * DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 &DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA全局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局*DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *MA大局 *DMA大局 *DMA大局 *MA大局 *DMA大局 *MA大局 *DMA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA全局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 *MA大局 &MA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMA大局 *DMFA大局 *DMA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFMA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA全局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA全局 *DMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMFA大局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMFA大局 *DMFA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMFA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMFA全局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMFA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA全局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA全局 *DMMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMA全局 *DMMA全局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMFA大局 *DMMFA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *DMMA大局 *D
+
+参见被引用内容：无参数DMA InitTypeDef 无返回值：无注解其它说明：无警告无示例代码:DMA InitTypeDef DMA InitStructure;DMA StructInit（&DMA_InitStructure）；//初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>Howlet</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.dma.c 第 55 行定义.
+
+# 2.52 Iks32mc08x.dma.c
+
+# 浏览该文件的文档
+
+00001 00020 #include"1ks32mc08x.dma.h" 00021 #include"string.h" 00022 00023 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* 00024 函数名称： void DMA_structInit(DMA_InitTypeDef \*DMAInitStruct) 00025 功能描述： DMA结构初始化 00026 操作的表： 无 00027 输入参数： 无 00028 输出参数： 无 00029 返回值： 无 00030 其它说明： 00031 修改日期 版本号 修改人 修改内容 00032 00033 2020.08.1 V1.0 howlet 创建 00034 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/ 00055 void DMA_structInit(DMA_InitTypeDef \*DMAInitStruct) 00056{ 00057 memset(DMAInitStruct,0,sizeof(DMAInitTypeDef)); 00058 00059 00101 void DMA_Init(DMARegTypeDef \*DMAx, DMAInitTypeDef \*DMAInitStruct) 00102 { 00103 /\*通道配置寄存器疑值\*/ 00104 DMax- >DMA.CCR  $= 0$  00105 DMax- >DMA.CTMS  $=$  DMAInitStruct- >DMA.TIMES|（DMAInitStruct- >DMA.ROUNDE  $< 16$  ；/\*传输次数寄存器\*/ 00106 DMax- >DMA.CPAR  $=$  DMAInitStruct- >DMA.CPAR; /\*外设地址寄存器\*/ 00107 DMax- >DMA.CMAR  $=$  DMAInitStruct- >DMA.CMAR; /\*内存地址寄存器\*/ 00108 DMax- >DMA.CCR  $=$  (DMAInitStruct- >DMA.IRQ.EN<<1）|（DMAInitStruct- >DMA.DIR<<4）|\ 00109 (DMAInitStruct- >DMA.MINC<<7）|\ 00110 (DMAInitStruct- >DMA.MINC<<7）|\ 00111 (DMAInitStruct- >DMA.REQ.EN<<12); 00112 DMA_CTRL  $=$  0x0001; /\*enable dma, mcu has higher priorit \*/ 00113} 00114 00135 void DMA_CHx.EN(DMA.RegTypeDef \*DMAx,u32 Channel.EN) 00136{ 00137 if(Channel.EN) 00138 { 00139 { DMax- >DMA.CCR  $=$  BIT0;  $\neq$  使能DMA搬运  $\ast$  00140 }else{ 00141 DMax- >DMA.CCR  $\epsilon =$  BIT0;  $\neq$  关闭通道使能  $\ast$  00142 } 00143} 00144 00178 uint32_t DMA_GetIRQFlag(DMA_RegTypeDef \*DMAx,u32 timer.if) 00179{ 00180 u8 reg  $= 0$  00181 if((DMAx- >DMA.CCR &BIT1)/\*传输完成中断使能\*/ 00182 { 00183 reg  $=$  timer.if &0x0f; 00184 if(DMA_IF &reg) 00185 { 00186 {return 1; 00187 1 00188 } 00189 if((DMAx- >DMA.CCR &BIT2)/\*错误中断使能\*/ 00190 { 00191 reg  $=$  timer.if &0xf0; 00192 if(DMA_IF &reg) 00193 { 00194 return 1;
+
+00195 1 00196 1 00197 return 0; 00198 1 00199 00234 void DMA.ClearIRQFlag(DMA_RegTypeDef \*DMax , uint32. t tempFlag) 00235{ 00236 DMA_IF  $=$  tempFlag; 00237}
+
+# 2.53 Source/lks32mc08x.dsp.c文件参考
+
+文件名称：lks32mc08x.dsp.c文件标识：无内容摘要：DSP驱动程序其它说明：无
+
+include"lks32mc08x.dsp.h"lks32mc08x.dsp.c的引用（Include）关系图：
+
+![](images/4baf67f783b9a80304591a733a8a246664bd559c76ee444143a8b1836df5c5b4.jpg)
+
+# 函数
+
+- void DSP-Cmd (FuncState state) 函数名称：void DSP-Cmd(FuncState state)- void DSP-CalcDivision (stru_DiviComponents *stru_Divi)- void DSP-CalcCordic (stru_CordicComponents *Cordic, Arc_or_SinCFuction choose) 函数名称：void DSP-CalcCordic(stru_CordicComponents *Cordic, Arc_or_SinCFuction choose)- s16 DSP_CalcSprt (s16 X, s16 Y) 函数名称：s16 DSP_CalcSprt(s16 X, s16 Y)- uint32_t DSP_GetSqrt (uint32_t Data) 函数名称：uint32_t DSP_GetSqrt (uint32_t Data)
+
+# 变量
+
+- static volatile u8 dsp_flg 函数名称：void DSP-CalcDivision(stru_DiviComponents *stru_Divi)
+
+# 2.53.1 详细描述
+
+文件名称： Iks32mc08x_dsp.c文件标识：无内容摘要： DSP驱动程序其它说明：无
+
+版权所有
+
+(C)2015,LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：DSP调用函数内增加中断打断重新复位DSP功能
+
+在文件 Iks32mc08x_dsp.c 中定义.
+
+# 2.53.2 函数说明
+
+# 2.53.2.1 DSP-CalcCordic()
+
+void DSP_CalcCordic ( stru_CordicComponents *Cordic, Arc_or_SinCFuction choise)
+
+函数名称：void DSP_CalcCordic(stru_CordicComponents *Cordic, Arc_or_SinCFuction choise)
+
+功能描述：DSP三角运算
+
+参见
+
+被引用内容：stru_CordicComponents，Arc_or_SinCFuction，SYS_SoftResetModule()
+
+参数  
+
+<table><tr><td>输入参数:</td><td>Cordic:角度或坐标X和Y,choise:计算模式选择0Arctan;1sin/cos</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：
+
+其它说明：1、开方8个总线周期完成2、Theta(角度)为16位有符号定点数，表示范围  $(- (32768) \sim 32767)$  对应  $(- (\pi) \sim \pi)$ 3、SinValue值为16位有符号定点数，其中1bit符号位，15bit小数位；表示范围  $(- (1) \sim 1)$ 4、CosValue值为16位有符号定点数，其中1bit符号位，15bit小数位；表示范围  $(- (1) \sim 1)$ 5、ArctanX值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围  $(- (32768) \sim 32767)$ 6、ArctanY值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围  $(- (32768) \sim 32767)$ 7、ArctanValue值为16位有符号定点数，表示范围  $(- (32768) \sim 32767)$  对应  $(- (\pi) \sim \pi)$
+
+警告
+
+无
+
+示例代码：
+
+示例代码：struCordicComponents.CordicData; // 定义三角函数计算结构体变量示例1: CordicData.ArctanX = 100; // 坐标x赋值 取值范围  $(- (32768) \sim 32767)$ CordicData.ArctanY = 10; // 坐标y赋值 取值范围  $(- (32768) \sim 32767)$ DSP.CalcDivision(&CordicData, ARCTAN); arctan储存位置: CordicData.ArctanValue (输出范围  $- (32768) \sim 32767$  对应  $(- (\pi) \sim \pi)$ 示例2:CordicData.Theta = 0; // 角度赋值 取值范围  $(- (32768) \sim 32767)$  对应  $(- (\pi) \sim \pi)$ DSP.CalcDivision(&CordicData, SINCOS); sin结果储存位置: CordicData.SinValue (输出范围  $- (32768) \sim 32767$  对应  $(- (1) \sim 1)$ cos结果储存位置: CordicData.CosValue (输出范围  $- (32768) \sim 32767$  对应  $(- (1) \sim 1)$
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志:使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+在文件 Iks32mc08x.dsp.c 第 143 行定义.
+
+函数调用图:
+
+![](images/27db6303567eac507922315444965c31d3e246244350e5bc599f519eae6ade61.jpg)
+
+# 2.53.2.2 DSP.CalcDivision()
+
+void DSP.CalcDivision (    stru_DiviComponents * stru_Divi )
+
+在文件 Iks32mc08x.dsp.c 第 86 行定义.
+
+函数调用图:
+
+![](images/efa5de44c6f0dc1368f1f99b1d14e83da04b800117fdcff5c789e9960cfb7b56.jpg)
+
+# 2.53.2.3 DSP.CalcSprt()
+
+s16 DSP.CalcSprt (    s16 X,    s16 Y )
+
+函数名称：s16 DSP.CalcSprt(s16 X, s16 Y)
+
+功能描述：DSP两个数平方后开方运算
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>X和Y</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：sqrt(X^2+Y^2)结果值
+
+注解
+
+其它说明：
+
+其它说明：1、开方8个总线周期完成2、X值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)3、Y值为16位有符号定点数，Q15格式，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)4、输出结果sqrt(X^2+Y^2)：为16位有符号定点数，其中1bit符号位，15bit整数位，表示范围(- (32768)~32767)
+
+警告
+
+无
+
+示例代码：
+
+s16 DSP.Value = 0;  DSP.Value = DSP.CalcSqrt(40,100); //sqrt(50^2+100^2)  50的平方加100的平方后并模号
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+在文件lks32mc08x.dsp.c第198行定义.
+
+# 2.53.2.4 DSP-Cmd()
+
+void DSP-Cmd (FuncState state)
+
+函数名称：void DSP-Cmd（FuncState state)
+
+功能描述：DSP使能和关闭
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>state: ENABLE: 使能, DISABLE:失能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+DSP-Cmd（ENABLE）；//使能DSP时钟
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.dsp.c第49行定义
+
+函数调用图：
+
+# 2.53.2.5 DSP.GetSqrt()
+
+uint32_t DSP.GetSqrt ( uint32_t Data)
+
+函数名称：uint32_t DSP_GetSqrt(uint32_t Data)
+
+功能描述：DSP开平方函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>被开方数</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：开方根
+
+注解
+
+其它说明：
+
+1、开方8个总线周期完成2、被开方数Data为32位无符号数，即范围是  $(0\sim (2^{\wedge}31))$  3、开方根sqrt(Data)为16位无符号数，即范围是  $(0\sim (2^{\wedge}15))$
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：u16 GetSqrt.Value = 0;  GetSqrt.Value = DSP.GetSqrt(100); //sqrt(100) 100开根号结果为10
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+在文件lks32mc08x.dsp.c第239行定义.
+
+# 2.53.3 变量说明
+
+# 2.53.3.1 dsp.flg
+
+volatile u8 dsp.flg [static]
+
+函数名称：void DSP_CalcDivision(stru_DiviComponents  $\ast$  stru_Divi)
+
+功能描述：DSP使能和关闭
+
+参见
+
+被引用内容：stru_DiviComponents，SYS_SoftResetModule()
+
+参数
+
+<table><tr><td>输入参数:</td><td>.nID,被除数 .nDIS除数</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+# 注解
+
+其它说明：
+
+其它说明：1、除法10个总线周期完成2、被除数Dividend为32位大小，即范围是  $- (2^{\wedge}31 - 1)\sim (2^{\wedge}31 - 1)$ 3、除数Divisor为16位大小，即范围是  $- (2^{\wedge}15 - 1)\sim (2^{\wedge}15 - 1)$ 4、被除数不支持赋值为  $- 2^{\wedge}31$ ，除数不支持赋值为  $- 2^{\wedge}15$ 5、商Quotient为32位大小6、余数Remainder为16位大小
+
+警告
+
+无
+
+示例代码：
+
+示例代码：struDiviComponents DiviData; //定义除法函数计算结构体变量DiviData.Dividend = 100; //被除数赋值DSP.CalcDivision(&DiviData);除法的商储存位置：DiviData.Quotient除法的余数储存位置：DiviData.Remainder
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年5月25日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年4月18日</td><td>2.0</td><td>Zhu Jie</td><td>修改</td></tr></table>
+
+修改日志：使用结构体变量，增加防止DSP计算被打断逻辑语句<br>
+
+标志位，用于判断程序是否被打断
+
+在文件 Iks32mc08x.dsp.c 第 84 行定义.
+
+# 2.54 Iks32mc08x.dsp.c
+
+# 浏览该文件的文档
+
+00001 00001 #include"1ks32mc08x.dsp.c" 00020 00021 00022 00023 00043 void DSP.Cmd（FuncState state) 00044{ 00045 SYS ModuleClockCmd（SYS Module.DSP,state);/\*DSP时钟使能\*/ 00046} 00047 00084 static volatile u8 dsp.flog; 00085 void DSP.CalcDivision(struDiviComponents  $\#$  struDivi)
+
+00086 {00087 uint8. t dsp.flg_old;00088 do00089 {00090 dsp.flg++;00091 dsp.flg_old  $=$  dsp.flg;00092 SYS.Soft ResetMode(SYS.Module.DSP);00093 DSP.DID  $=$  stru.Divid  $=$  Dividend;  $j_{\ast}$  被除数寄存器赋值  $\ast /$ 00094 DSP.DIS  $=$  stru.Divid  $=$  Divisor;  $j_{\ast}$  除数寄存器赋值  $\ast /$ 0009500096 stru.Divid  $=$  >Quotient  $=$  DSP.quo;  $j_{\ast}$  取出离寄存器值  $\ast /$ 00097 stru.Divid  $=$  >Remiing  $=$  DSP.REM;  $j_{\ast}$  取出余数寄存器值  $\ast /$ 00098 } while (dsp.flg_old !  $=$  dsp.flg);  $j_{\ast}$  防止DSP计算被打断  $\ast /$ 00099}001000100 void DSP.CalcCordic(stru.CordicComponents \*Cordic, Arc.or.SinCFuction chcise)00144 {00145 uint8. t dsp.flg_old;00146 do00147 {00148 dsp.flg++;00149 dsp.flg_old  $=$  dsp.flg;00150 SYS.Soft ResetMode(SYS.Module.DSP);00151 if(choise)  $\ast$  SinCos 值计算  $\ast /$ 00152 {00153 DSP.SC  $=$  BIT2;  $j_{\ast}$  计算模式选择 Sin和Cos  $\ast /$ 00154 DSP.CORDIC.THETA  $=$  Cordic- >Theta;  $j_{\ast}$  角度寄存器赋值  $\ast /$ 00155 Cordic- >SinValue  $=$  DSP.CORDIC.SIN;  $j_{\ast}$  取出sin寄存器值  $\ast /$ 00156 Cordic- >CosValue  $=$  DSP.CORDIC.COS;  $j_{\ast}$  取出cos寄存器值  $\ast /$ 00157 }00158 else /\*Arctan 值计算  $\ast /$ 00159 {00160 DSP.SC  $=$  ("BIT2);  $j_{\ast}$  计算模式选择 Arctan  $\ast /$ 00161 DSP.CORDIC.X  $=$  Cordic- >ArctanX;  $j_{\ast}$  坐标X寄存器赋值  $\ast /$ 00162 DSP.CORDIC.Y  $=$  Cordic- >ArctanY;  $j_{\ast}$  坐标Y寄存器赋值  $\ast /$ 00163 Cordic- >ArctanValue  $=$  DSP.CORDIC.ARCTAN;  $j_{\ast}$  取出arctan寄存器值  $\ast /$ 00164 }00165 } while (dsp.flg_old !  $=$  dsp.flg);  $j_{\ast}$  防止DSP计算被打断  $\ast /$ 0016600167}0016800198 s16 DSP.CalcSprt(s16 X,s16 Y)00199 {00200 uint8. t dsp.flg_old;00201 do00202 {00203 dsp.flg++;00204 dsp.flg_old  $=$  dsp.flg;00205 DSP.CORDIC.X  $=$  Y;00206 DSP.CORDIC.Y  $=$  Y;00207 } while (dsp.flg_old !  $=$  dsp.flg);  $j_{\ast}$  防止DSP计算被打断  $\ast /$ 00208 return DSP.CORDIC.MOD;00209}0021000239 uint32. t DSP.GetSqrt(uint32. t Data)00240 {00241 uint8. t dsp.flg_old;00242 do00243 {00244 dsp.flg++;00245 dsp.flg_old  $=$  dsp.flg;00246 DSP.RAD  $=$  Data;  $j_{\ast}$  被开方寄存器赋值  $\ast /$ 00247 } while (dsp.flg_old !  $=$  dsp.flg);  $j_{\ast}$  防止DSP计算被打断  $\ast /$ 00248 return DSP.SQRT;00250}00251 00252 / \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \*/
+
+# 2.55 Source/lks32mc08x_exti.c 文件参考
+
+文件名称：lks32mc08x_exti.c  文件标识：无  内容摘要：EXTI外设驱动程序  其它说明：无
+
+include "lks32mc08x.exti.h"lks32mc08x.exti.c的引用(Include)关系图：
+
+![](images/d9f81b74320e0691e1cb6a0758dbf15054d59a5c6364439b1ea5876dc4a3e4e2.jpg)
+
+# 函数
+
+- void EXTI Trigger.Config(GPIO_TypeDef  $\ast$  GPIOx, uint32.t GPIO_PinSource, uint16.t EXTI Trigger) 函数名称：void EXTI Trigger.Config(GPIO_TypeDef  $\ast$  GPIOx, uint32.t GPIO_PinSource, uint16.t EXTI Trigger) 
+- u8 EXTI GetIROFlag(GPIO_TypeDef  $\ast$  GPIOx, uint32.t GPIO_PinSource) 函数名称：u8 EXTI GetIROFlag(GPIO_TypeDef  $\ast$  GPIOx, uint32.t GPIO_PinSource) 
+- void EXTI_ClearIROFlag(GPIO_TypeDef  $\ast$  GPIOx, uint32.t GPIO_PinSource) 函数名称：void EXTI_ClearIROFlag(GPIO_TypeDef  $\ast$  GPIOx, uint32.t GPIO_PinSource)
+
+# 2.55.1 详细描述
+
+文件名称：lks32mc08x.exti.c文件标识：无内容摘要：EXT1外设驱动程序其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+在文件lks32mc08x.exti.c中定义.
+
+# 2.55.2 函数说明
+
+# 2.55.2.1 EXTI.ClearIRQFlag()
+
+void EXTI.ClearIRQFlag ( GPIO_TypeDef \* GPIOx, uint32. t GPIO_PinSource )
+
+函数名称：void EXTI.ClearIRQFlag(GPIO_TypeDef \*GPIOx, uint32. t GPIO_PinSource)
+
+功能描述：清除外部中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象可选(GPIO0～GPIO3)
+GPIO.PadSource:指定的PadSource可选(GPIO.PinSource.0～GPIO.PinSource.15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(EXTI.GetIRQFlag(GPIOO, GPIO_PinSource.O)) //获取P0.0外部中断标志位{    EXTI.ClearIRQFlag(GPIOO, GPIO_PinSource.O); //清除P0.0外部中断标志位}
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件lks32mc08x_exti.c第124行定义.
+
+# 2.55.2.2 EXTI_GetIRQFlag()
+
+u8 EXTI_GetIRQFlag ( GPIO_TypeDef \* GPIOx, uint32. t GPIO_PinSource )
+
+函数名称：u8EXTI_GetIRQFlag(GPIO_TypeDef \*GPIOx, uint32. t GPIO_PinSource)
+
+功能描述：读取外部中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource可选(GPIO.PinSource.0~GPIO.PinSource.15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：中断标志，高有效
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(EXTI_GetIRQFlag(GPIOO, GPIO_PinSource.0))//获取P0.0外部中断标志位{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件 Iks32mc08x_exti.c 第 80 行定义.
+
+# 2.55.2.3 EXTI.Trigger.Config()
+
+void EXTI.Trigger.Config ( GPIO_TypeDef \* GPIOx, uint32. t GPIO_PinSource, uint16. t EXTI_Trigger)
+
+函数名称：void EXTI_Trigger.Config(GPIO_TypeDef \*GPIOx, uint32. t GPIO_PinSource, uint16. t EXTI_Trigger)
+
+功能描述：GPIO外部触发极性选择
+
+参见
+
+被引用内容：EXTIMode_TypeDef
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource可选(GPIO.PinSource_0~GPIO.PinSource_15)
+EXTI.Trigger:指定的触发极性</td></tr></table>
+
+参见
+
+EXTI_Trigger参数来源：EXTIMode_TypeDef
+
+参数
+
+<table><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回返回值：无
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+EXTI_Trigger.Config(GPIO0,GPI0. PinSource.0,EXTI_Trigger.Negedge); //P0.0信号下降沿触发外部中断事件
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月10日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件lks32mc08x_exti.c第38行定义.
+
+# 2.56 lks32mc08x_exti.c
+
+# 浏览该文件的文档
+
+00001 00014 #include"lks32mc08x_exti.h" 00015 00038 void EXTI_Trigger.Config(GPIO_TypeDef \*GPIox, uint32_t GPIO_PinSource, uint16_t EXTI_Trigger) 00039{ 00040 if(GPIOx  $= =$  GPIOO) 00041 { 00042 if(GPIO.PinSource  $>16$  00043 { 00044 return; 00045 00046 } 00047 { 00048 EXTI- >CR0  $=$  (EXTI- >CR0 & 0xfffc)|(EXTI_Trigger << (2  $\#$  GPIO_PinSource)); 00049 } 00050 else 00051 { 00052 EXTI- >CR1  $=$  (EXTI- >CR0 & 0xfffc)|(EXTI_Trigger << (2  $\#$  (GPIO_PinSource - 8))); 00053 } 00054 00055 } 00056 00080 u8 EXTI_GetIRQFlag(GPIO_TypeDef \*GPIox, uint32_t GPIO_PinSource) 00081{ 00082 if(GPIO_PinSource  $> = 16$  00083 { 00084 return 0; 00085 } 00086 if(GPIOx  $= =$  GPIOO) 00087 { 00088 if(EXTI_IF & (1<GPI0. PinSource)) 00089 { 00090 return 1; 00091 } 00092 else 00093 { 00094 return 0; 00095 } 00096 } 00097 return 0; 00098} 00099 00124 void EXTI_ClearIRQFlag(GPIO_TypeDef \*GPIox, uint32_t GPIO_PinSource) 00125{ 00126 if(GPIOx  $= =$  GPIOO) 00127 { 00128 EXTI_IF  $=$  (1<GPI0. PinSource); 00129 }
+
+00130} 00131 00132 00133 00134
+
+# 2.57 Source/lks32MC08x_flash.c文件参考
+
+文件名称： lks32mc08x_flash.c  文件标识：无  内容摘要：FLASH外设驱动程序  其它说明：无
+
+include"lks32MC08xFlash.h"lks32MC08xflash.c的引用(Include)关系图：
+
+![](images/5a935f828f65503d06fb60e9d158ca6a784de44bfa1bd9b207d3b133d15ed520.jpg)
+
+# 函数
+
+- void EraseSector (u32 adr, u16 nvr)  函数名称：void EraseSector(u32 adr, u16 nvr)  
+- int ProgramPage (u32 adr, u32 sz, u8 *buf, u16 nvr)  函数名称：int ProgramPage(u32 adr, u32 sz, u8 *buf, u16 nvr)  
+- u32 ReadFlash (uint32 L adr, u16 nvr)  函数名称：u32 ReadFlash(uint32 L adr, u16 nvr)  
+- void ReadMoreFlash (u32 adr, u32 sz, u32 *buf, u16 nvr)  函数名称：void ReadMoreFlash(u32 adr, u32 sz, u32 *buf, u16 nvr)
+
+# 变量
+
+- volatile u32 erase_flag = 0  flash擦除操作启动变量  
+- volatile u32 progm_flag = 0  flash编程操作启动变量
+
+# 2.57.1 详细描述
+
+文件名称：lks32mc08x_flash.c  文件标识：无  内容摘要：FLASH外设驱动程序  其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32MC08x_flash.c 中定义.
+
+# 2.57.2 函数说明
+
+# 2.57.2.1 EraseSector()
+
+void EraseSector (u32 adr,u16 nvr)
+
+函数名称：void EraseSector（u32 adr,u16 nvr)
+
+功能描述：Flash按扇区擦除操作
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>adr: 厨区地址(一个扇区512字节)
+nvr: 为0x800的时候擦除NVR,为0时擦除主Flash
+erase_flag: 调用函数前必须赋值0x9A0D361F,否则不执行擦除,用来防程序跑飞</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 Flash.Buff[2]  $=$  {0x12,0x23}； 事例1： erase_flag  $=$  0x9AD0361F；//擦除解锁 EraseSector（0x00000000，Flash.MAIN）；//擦除flash的main区域即存储程序区域 erase_flag  $=$  0x00；//擦除上锁 erase_flag  $=$  0xA9FDADC0C；//编程程解锁 ProgramPage（0x00000000，2,Flash.Buff，Flash.MAIN）；//编程flash的main区域即存储程序区域 erase_flag  $=$  0x00; //编程上锁 事例2： erase_flag  $=$  0x9AD0361F；//擦除解锁 EraseSector（0x00000000，Flash.NVR）；//擦除flash的NVR区域即独立的1KB用户存储区 erase_flag  $=$  0x00；//擦除上锁 erase_flag  $=$  0xA9D361F；//编程程解锁 EraseSector（0x00000000，2,Flash.Buff,Flash.NVR）；//编程flash的NVR区域即独立的1KB用户存储区 erase_flag  $=$  0x00; //编程上锁
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32MC08xFlash.c第128行定义
+
+# 2.57.2.3 ReadFlash()
+
+u32 ReadFlash ( uint32_t adr, u16 nvr)
+
+函数名称：u32 ReadFlash(uint32_t adr, u16 nvr)
+
+功能描述：读取FLASH数据函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>adr: 廊区地址(一个扇区512字节)
+nvr: 为0x800的时候擦除NVR,为0时擦除主Flash</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：读取的数据值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：事例1：u32 Flash_main = 0;Flash.nvr = ReadFlash(0x00000000, Flash.MAIN); //获取flash的main区域0x00000000地址一个word数据事例2：u32 Flash.nvr = 0;Flash.nvr = ReadFlash(0x00000000, Flash.NVR); //获取flash的NVR区域0x00000000地址一个word数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32MC08x.flash.c第217行定义
+
+函数调用图：
+
+![](images/007e14ba966771ab2ec9a7fb9658fca8f23579366b08e14923b48e7fa14f3578.jpg)
+
+这是这个函数的调用关系图:
+
+# 2.57.2.4 Read_More_Flash()
+
+void ReadMoreFlash (u32 adr,u32 sz,u32 \* buf,u16 nvr)
+
+函数名称：void Read_More_Flash(u32 adr, u32 sz, u32 \*buf, u16 nvr)
+
+功能描述：读取FLASH多地址数据函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>adr: 廊区地址(一个扇区512字节)
+nvr: 为0x800，读取MAIN数据，为0x0，读取NVR数据
+buf: 读取数据存储的地址
+sz: 读取sz个字</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：读取的数据值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：u32 Flash.Read.Buff[] = {0};  事例1:  Read.More.Flash(0x00000000, 4, Flash.Read.Buff, Flash.MAIN); //获取flash.fMain区域0x00000000地址4个word数据  事例2:  Read.More.Flash(0x00000000, 4, Flash.Read.Buff, Flash.NVR); //获取flash.fNVR区域0x00000000地址4个word数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2020年12月15日</td><td>1.1</td><td>DengT</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32MC08x.f1ash.c第273行定义
+
+函数调用图：
+
+![](images/113346633083ac03ec33e8c12d846f525a4abae392c64f68f07ab62af84376f7.jpg)
+
+# 2.57.3 变量说明
+
+# 2.57.3.1 erase.flag
+
+volatile u32 erase.flag = 0
+
+flash擦除操作启动变量
+
+在文件lks32MC08x.f1ash.c第21行定义
+
+# 2.57.3.2 progm.flag
+
+volatile u32 progm.flag = 0
+
+flash编程操作启动变量
+
+在文件lks32MC08x.f1ash.c第25行定义
+
+# 2.58 Iks32MC08x_flash.c
+
+# 浏览该文件的文档
+
+00001 00016 #include"1ks32MC08xFlash.h" 00017 00021 volatile u32 erase_flag \(=\) 0; 00025 volatile u32 progm_flag \(=\) 0; 00026 00056 void EraseSector(u32 adr, u16 nvr) 00057{ 00058 u32 keyl,key2,key3; 00059 00060 \(\mathrm{key1} = 0\mathrm{x0};\mathrm{key2} = 0\mathrm{x0};\mathrm{key3} = 0\mathrm{x0};\) 00061 if(erase_flag \(= =\) 0x000361F) 00062 {//get flash.cfg addr 00063 key1 \(=\) 0xB000060A; 00064 key1 \(=\) 0x6A001343; 00065 key2 \(=\) 0x6A01343; 00066 REG3( \(\mathtt{key3} = \mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathbf{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt{\mathtt}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} =}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}{}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+00172 FLASH_ADDR  $=$  （Addr&  $\sim \mathbb{O}\times \mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}\mathbb{O}}$  // address alignment00173 t.rD  $\mathrm{aD a = \star p + \Delta((p + 1)< < 8)}$ $^+$ $(\star (p + 2)< < 16)$ $^+$ $(\star (p + 3)< < 24)$  00174 if(t.rD  $\mathrm{a}\mathrm{t} =$  FLASH_RDATA)00175 {00176 t.rlt  $= 0$  00177 100178 p  $+ = 4$  00180 size - = 4;00181 Addr  $+ = 4$  00182 100183 00184 100185 FLASH_CFG  $\epsilon = \mathrm{\bar{\Omega}}0\times 08000800$  00186 key1  $= 0\times 0$  ;key2  $= 0\times 0$  .00187 progm_flag  $= 0$  00188 return (t_rlt);00189 100190 00217 u32 ReadFlash(uint32_t adr,u16 nvr)00218 {00219 uint32_t data;00220 if(nvr  $= =$  Flash_MAIN）//读取MIAN区域00221 {00222 FLASH_CFG  $\epsilon = \mathrm{\bar{\Omega}}\mathrm{BIT1}$  00223 FLASH_ADDR  $=$  adr;00224 data  $=$  FLASH_RDATA;00225 FLASH_CFG  $\epsilon = \mathrm{\bar{\Omega}}\mathrm{BIT1}$  //恢复MIAN操作00226 }else{00227 data  $=$  ReadNVR（addr);00228 100229 return data;00230 }00231}00232 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*函数名称： void MCwMDORegUpdate（void)00234 功能描述： 读取FLASH多地址数据函数00235 输入参数： adr：要读取数据的地址00236 nvr：为0x800，读取MAIN数据，为0x0，读取NVR数据00237 buf：读取数据存储的地址00238 sz：读取sz个字00239 输出参数： 读取的数据值00240 读回值： data00241 其它说明：00242 修改日期 版本号 修改人 修改内容00243 00244 2021/3/5 V1.0 创建00245 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/00273 void ReadMoreFlash（u32 adr,u32 sz,u32 \*buf,u16 nvr)00274 {00275 volatile u32 Addr  $= 0$  00276 volatile u32 size  $= 0$  00277 volatile u32 \*p;00278 size  $= \Xi \mathbb{Z}$  00279 Addr  $=$  adr;00280  $\mathrm{p} =$  buf;00281 while(size)00282 {00283  $\ast \mathrm{p} =$  ReadFlash(Addr,nvr);00284 while（!(FLASH_RDADY&BIT0））{00285 size  $= = 1$  00286 Addr  $+ = 4$  00287  $\mathrm{p}+ = 1$  00288 }00289 00290 00291 00292 00293
+
+# 2.59 Source/lks32mc08x_gpio.c 文件参考
+
+文件名称：lks32mc08x_gpio.c  文件标识：无  内容摘要：GPIO外设驱动程序  其它说明：无
+
+include "lks32mc08x.gpio.h"lks32mc08x.gpio.c的引用(Include)关系图：
+
+![](images/aded8ead626d079b565698e38791d9908fc2c4d521e4bad6bf11bc027c42d022.jpg)
+
+# 函数
+
+- void GPIO_Init(GPIO_TypeDef \*GPIOx, GPIO_InitTypeDef \*GPIO_InitStructure) 函数名称：void GPIO Init(GPIO. TypeDef\* GPIOx, GPIO InitTypeDef\* GPIO InitStruct) ·void GPIO StructInit (GPIO InitTypeDef \* GPIO InitStruct) 函数名称：void GPIO StructInit(GPIO. InitTypeDef\* GPIO. initStruct) ·uint8.t GPIO_ReadInputDataBit(GPIO. TypeDef \* GPIOx, uint16.t GPIO. Pin) 函数名称：uint8.t GPIO_ReadInputDataBit(GPIO. TypeDef\* GPIOx, uint16.t GPIO. Pin) ·uint32.t GPIO_ReadInputData (GPIO. TypeDef \* GPIOx) 函数名称：uint32.t GPIO.ReadInputData(GPIO. TypeDef\* GPIOx) ·uint8.t GPIO.ReadOutputDataBit(GPIO. TypeDef \* GPIOx, uint16.t GPIO. Pin) 函数名称：uint8.t GPIO.ReadOutputDataBit(GPIO. TypeDef\* GPIOx, uint16.t GPIO. Pin) ·uint32.t GPIO.ReadOutputData (GPIO. TypeDef \* GPIOx) 函数名称：uint32.t GPIO.ReadOutputData(GPIO. TypeDef\* GPIOx) ·void GPIO_SetBits(GPIO. TypeDef \* GPIOx, uint16.t GPIO. Pin) 函数名称：void GPIO_SetBits(GPIO. TypeDef\* GPIOx, uint16. t GPIO. Pin) ·void GPIO_ResetBits(GPIO. TypeDef \* GPIOx, uint16. t GPIO. Pin) 函数名称：void GPIO_ResetBits(GPIO. TypeDef\* GPIOx, uint16. t GPIO. Pin) ·void GPIO_WriteBit(GPIO. TypeDef \* GPIOx, uint16. t GPIO. Pin, BitAction BitVal) 函数名称：void GPIO_WriteBit(GPIO. TypeDef\* GPIOx, uint16. t GPIO. Pin, BitAction BitVal) ·void GPIO_Write (GPIO. TypeDef \* GPIOx, uint32. t Val) 函数名称：void GPIO_Write(GPIO. TypeDef\* GPIOx, uint32. t Val) ·void GPIO_LockRegister (GPIO. TypeDef \* GPIOx, uint16. t GPIO. Pin) 函数名称：void GPIO_LockRegister(GPIO. TypeDef\* GPIOx, uint16. t GPIO. Pin) ·void GPIO_UnlockRegister (GPIO. TypeDef \* GPIOx, uint16. t GPIO. Pin) 函数名称：void GPIO_UnlockRegister(GPIO. TypeDef\* GPIOx, uint16. t GPIO. Pin) ·void GPIO_PinAConfig (GPIO. TypeDef \* GPIOx, uint32. t GPIO. PinSource, uint32. t GPIO.AF) 函数名称：void GPIO_PinAConfig(GPIO. TypeDef\* GPIOx, uint32. t GPIO. PinSource, uint32. t GPIO.AF)
+
+# 2.59.1 详细描述
+
+文件名称： Iks32mc08x.gpio.c文件标识：无内容摘要： GPIO外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015,LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年6月19日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.gpio.c 中定义。
+
+# 2.59.2 函数说明
+
+# 2.59.2.1 GPIO_Init()
+
+void GPIO_Init ( GPIO_TypeDef \* GPIOx, GPIOInitTypeDef \* GPIOInitStruct ）
+
+函数名称：void GPIO_Init(GPIO_TypeDef\* GPIOx, GPIO_InitTypeDef\* GPIO_InitStruct)
+
+功能描述：GPIO初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIOInitStruct: GPIO初始化结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.InitTypeDef GPIO.InitStruct; //P2.11输入模式 GPIO.StructInit(&GPIO.InitStruct); //初始化结构体 GPIO.InitStruct.GPIOMode  $=$  GPIOMode.IN; //GPIO输入模式 GPIO.InitStruct.GPIO.Pud  $=$  GPIO.Pud1; GPIO.InitStruct.GPIO.Pud  $=$  GPIO.PudNOPULL; GPIO.Init(GPIO2, &GPIO.InitStruct); //P0.2输出模式 GPIO.StructInit(&GPIO.InitStruct); //初始化结构体 GPIO.InitStruct.GPIOMode  $=$  GPIOMode.OUT; //GPIO输出模式 GPIO.InitStruct.GPIO.Pud  $=$  GPIO.Pud3; GPIO.InitStruct.GPIO.Pud  $=$  GPIO.PudNOPULL; GPIO.Init(GPIO0, &GPIO.InitStruct); //P3.2开漏输出 GPIO.StructInit(&GPIO.InitStruct); //初始化结构体 GPIO.InitStruct.GPIOMode  $=$  GPIOMode.OUT; //GPIO输出模式 GPIO.InitStruct.GPIO.PudEna  $=$  ENABLE; //使能开漏模式 GPIO.InitStruct.GPIO.Pud  $=$  GPIO.Pud2; GPIO.InitStruct.GPIO.Pud  $=$  GPIO.PudNOPULL; //关闭上拉，配置为高阻态 GPIO.Init(GPIO3, &GPIO.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第59行定义.
+
+# 2.59.2.2 GPIO_LockRegister()
+
+void GPIO_LockRegister GPIO_TypeDef\* GPIOx, uint16_t GPIOPin
+
+函数名称：void GPIO_LockRegister(GPIO_TypeDef\* GPIOx,uint16_t GPIO_Pin)功能描述：GPIO寄存器保护锁定
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO.Pin:指定的Pin（GPIO.Pin.0～GPIO.Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：上锁后GPIO输入/输出/上下拉/开漏/功能选择不能被修改
+
+警告
+
+无
+
+示例代码：
+
+GPIO.LockRegister(GPIO, GPIO.Pin.0); //P0.0上锁
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第419行定义.
+
+# 2.59.2.3 GPIO.PinAFConfig(
+
+void GPIO.PinAFConfig GPIO.TypeDef \* GPIOx, uint32. t GPIO.PinSource, uint32. t GPIO.AF)
+
+函数名称：void GPIO.PinAFConfig(GPIO.TypeDef\* GPIOx, uint32. t GPIO.PinSource, uint32. t GPIO.AF)功能描述：GPIO复用功能选择
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="14">输入参数:</td><td colspan="2">GPIOx:GPIO对象,参数可选(GPIO0~GPIO3)
+GPIO.PadSource:指定的PadSource(GPIO_PinSource.0~GPIO_PinSource.15)
+GPIO.AF:指定复用功能</td></tr><tr><td>复用功能名称</td><td>说明</td></tr><tr><td>AF0_GPIO</td><td>模拟功能</td></tr><tr><td>AF1_SYSAF</td><td>SYS_AF、CMP、CLOCK等数字信号输出功能</td></tr><tr><td>AF2_HALL</td><td>HALL功能</td></tr><tr><td>AF3_MCPWM</td><td>MCPWM功能</td></tr><tr><td>AF4_UART</td><td>UART功能</td></tr><tr><td>AF5_SPI</td><td>SPI功能</td></tr><tr><td>AF6_I2C</td><td>I2C功能</td></tr><tr><td>AF7_TIMER01</td><td>Timer0、Timer1功能</td></tr><tr><td>AF8_TIMER23</td><td>Timer2、Timer3、QEP0、QEP1功能</td></tr><tr><td>AF9_DEBUG</td><td>ADC trigger debug功能</td></tr><tr><td>AF10_CAN</td><td>CAN功能</td></tr><tr><td>AF11_SIF</td><td>SIF功能</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.PinAFConfig(GPIO1, GPIO_Pin_0, AF4- UART); //P1.0复用为串口功能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件 Iks32mc08x.gpio.c 第 496 行定义.
+
+# 2.59.2.4 GPIO.ReadInputData()
+
+uint32_t GPIO_ReadInputData GPIOI_GPIoDef \* GPIOx)
+
+函数名称：uint32_t GPIO_ReadInputData(GPIO_IypeDef\* GPIOx)
+
+功能描述：读取GPIO的输入数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选(GPIO0~GPIO3)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：输入数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO- IN- VALUE  $= 0$  GPIO.IN_VALUE  $=$  GPIO_ReadInputData（GPIO）；//读取P0.0\*P0.15输入电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件 Iks32mc08x.gpio.c 第 217 行定义.
+
+# 2.59.2.5 GPIOReadInputDataBit()
+
+uint8_t GPIO_ReadInputDataBit ( GPIO_TypeDef \* GPIOx, uint16_t GPIO_Pin)
+
+函数名称：uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef\* GPIOx, uint16_t GPIO_Pin)
+
+功能描述：读取GPIO的指定Pin的输入值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选 (GPIO0~GPIO3)
+GPIO_Pin:指定的Pin (GPIO_Pin.0~GPIO_Pin.15)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：指定Pin输入数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_IN_VALUE  $= 0$  GPIO_IN_VALUE  $=$  GPIO_ReadInputDataBit(GPIOO,GPIO_Pin.0);//读取P0.0输入电平1为高电平，0为低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第182行定义
+
+# 2.59.2.6 GPIO_ReadOutputData()
+
+uint32_t GPIO_ReadOutputData GPIO_TypeDef \* GPIOx
+
+函数名称：uint32_t GPIO_ReadOutputData(GPIO_TypeDef\* GPIOx)
+
+功能描述：读取GPIO的输出数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选 (GPIO0～GPIO3)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：输出数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_OUT_VALUE  $= 0$  GPIO_OUT_VALUE  $=$  GPIO_ReadOutputData(GPIO0);//读取P0.0~P0.15输出电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x.gpio.c第280行定义
+
+# 2.59.2.7 GPIO_ReadOutputDataBit()
+
+uint8_t GPIO_ReadOutputDataBit ( GPIO_TypeDef \* GPIOx, uint16. t GPIO Pin )
+
+函数名称：uint8. t GPIO_ReadOutputDataBit(GPIO_TypeDef\* GPIOx，uint16. t GPIO Pin)
+
+功能描述：读取GPIO的指定Pin的输出值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin:指定的Pin（GPIO_Pin.0～GPIO_Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：指定IO输出数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 GPIO_OUT_VALUE  $= 0$  GPIO_OUT_VALUE  $=$  GPIO_ReadOutputDataBit(GPIOO,GPIO.Pin.0);//读取P0.0输出电平，1为高电平，0为低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第245行定义
+
+# 2.59.2.8 GPIO_ResetBits()
+
+void GPIO_ResetBits ( GPIO_TypeDef \* GPIOx, uint16. t GPIO Pin )
+
+函数名称：void GPIO_ResetBits(GPIO_TypeDef\* GPIOx，uint16. t GPIO_Pin)
+
+功能描述：GPIO指定Pin置1
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin:指定的Pin（GPIO_Pin.0～GPIO_Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO_ResetBits(GPIOO, GPIOPin- 0); //P0.0输出低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件lks32mc08x_gpio.c第333行定义.
+
+函数调用图:
+
+# 2.59.2.9 GPIO_SetBits()
+
+void GPIO_SetBits(GPIO_TypeDef * GPIOx, uint16_t GPIO_Pin)
+
+函数名称: void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+
+功能描述: GPIO 指定 Pin 置 1
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin:指定的Pin（GPIO_Pin.0～GPIO_Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码:
+
+GPIO_SetBits(GPIOO, GPIO_Pin.0); // P0.0 输出高电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件 Iks32mc08x_gpio.c 第 307 行定义.
+
+函数调用图:
+
+![](images/256613772e56899ca563864a39a90d2dd38a0b8fd2d5bd598217e06c7556d628.jpg)
+
+# 2.59.2.10 GPIO_StructInit()
+
+void GPIO_StructInit ( GPIO_InitStructure * GPIO_InitStructure )
+
+函数名称: void GPIO_StructInit(GPIO_InitStructure * GPIO_InitStructure)
+
+功能描述: GPIO结构体初始化
+
+参见
+
+被引用内容: 无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIO_InitStructure: GPIO初始化结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值: 无
+
+注解
+
+其它说明: 无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.InitTypeDef GPIO.InitStruct; GPIO.StructInit(&GPIO.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件lks32mc08x_gpio.c第151行定义.
+
+# 2.59.2.11 GPIO.UnlockRegister()
+
+void GPIO.UnlockRegister GPIOTypeDef * GPIOx, uint16_t GPIO_Pin)
+
+函数名称：void GPIO.UnlockRegister(GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin)
+
+功能描述：GPIO寄存器保护解锁
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO_Pin:指定的Pin（GPIO_Pin.0～GPIO_Pin.15）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：解锁后GPIO输入/输出/上下拉/开漏/功能选择可以被修改
+
+警告
+
+无
+
+示例代码：
+
+GPIOUnlockRegister(GPIO0, GPIO Pin.0); //P0.0解锁
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件lks32mc08x_gpio.c第449行定义.
+
+# 2.59.2.12 GPIO_Write()
+
+void GPIO_Write（ GPIO_TypeDef \* GPIOx, uint32_tVal)
+
+函数名称：void GPIO_Write(GPIO_TypeDef\* GPIOx,uint32. tVal)
+
+功能描述：向GPIO写入数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选 (GPIO0～GPIO3)
+BitVal:写入的Bit值 (0x00～0xffff)</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.WriteBit(GPIOO, 0x01); //P0.0置1，输出高电平，P0.1~P0.15值不变保持上一时刻状态
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志:<br>
+
+在文件 Iks32mc08x_gpio.c 第 393 行定义.
+
+# 2.59.2.13 GPIO_WriteBit()
+
+void GPIO_WriteBit(GPIOTypeDef * GPIOx, uint16_t GPIOPin, BitAction BitVal)
+
+函数名称：void GPIO_WriteBit(GPIOTypeDef* GPIOx, uint16_t GPIOPin, BitAction BitVal)
+
+功能描述：向 GPIO 指定的 Pin 写入数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>GPIOx: GPIO对象,参数可选（GPIO0～GPIO3）
+GPIO.Pin:指定的Pin（GPIO.Pin.0～GPIO.Pin.15）
+BitVal:写入的Bit值（Bit RESET 或 Bit SET）</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+GPIO.WriteBit(GPIOO, GPIOInit0_0_ Bit_RESET);//P0.0输出低电平
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年4月18日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：<br>
+
+在文件 Iks32mc08x_gpio.c 第 360 行定义.
+
+这是这个函数的调用关系图：
+
+![](images/026d0425f7769038bc46ee13e3c92cc9a5f91706e3e521e16cac8e1a4082cd41.jpg)
+
+# 2.60 Iks32mc08x_gpio.c
+
+# 浏览该文件的文档
+
+00001 00006 #include"1ks32mc08x.gpio.h" 00017 00018 00059 void GPIO_Init(GPIOTypeDef\* GPIOx, GPIO.InitTypeDef\* GPIO.InitStruct) 00060{ 00061 uint32. t pinpos  $=$  Ox00,pos  $=$  Ox00,currentpin  $=$  Ox00,tempreg  $=$  Ox00; 00062 00063 /Configure the port pins 00064 for (pinpos  $=$  Ox00; pinpos  $<$  Ox10; pinpos  $^{+ + }$  00065 { 00066 pos  $=$  ((uint32. t)0x01) << pinpos; 00067 00068 /  $^*$  Get the port pins position  $\neq j$  00069 currentpin  $=$  (GPIO.InitStruct- >GPIO.Pin)&pos; 00070 if (currentpin  $=$  pos) 00071 { 00072 if (GPIO.InitStruct- >GPIO.Mode  $= =$  GPIOMode.IN) 00073 { 00074 tempreg  $=$  GPIOx- >PIE; /\*使能输入  $\neq j$  00075 tempreg  $\begin{array}{rl}{\mathbb{I} =} & {} \end{array}$  (BIT0 << pinpos); 00076 GPIOx- >PIE  $=$  tempreg; 00077 00078 tempreg  $=$  GPIOx- >POE; /\*禁止输出  $\neq j$  00079 tempreg  $\begin{array}{rl}{\mathbb{I} =} & {} \end{array}$  (BIT0 << pinpos);
+
+00080 GPIOx- >POE  $=$  tempreg;00081 }00082 else if (GPIO.InitStruct- >GPIO.Mode  $= =$  GPIO.Mode_OUT)00083 {00084 tempreg  $=$  GPIOx- >PIE; /\*禁止输入\*/00085 tempreg  $=$  -(BIT0 << pinpos);00086 GPIOx- >PIE  $=$  tempreg;0008700088 tempreg  $=$  GPIOx- >POE; /\*使能输出\*/00089 tempreg  $=$  (BIT0 << pinpos);00090 GPIOx- >POE  $=$  tempreg;00091 }00092 else if (GPIO.InitStruct- >GPIOMode  $= =$  GPIO.Mode.ANA)00093 {00094 tempreg  $=$  GPIOx- >PIE; /\*禁止输入\*/00095 GPIOx- >PIE  $=$  tempreg;00096 tempreg  $=$  GPIOx- >POE; /\*禁止输出\*/00098 tempreg  $=$  -(BIT0 << pinpos);00099 GPIOx- >POE  $=$  tempreg;00100 }00101 }00102 }00103 if (GPIO.InitStruct- >GPIO.PuPd  $= =$  GPIO.PuPd.UP)00104 {00105 tempreg  $=$  GPIOx- >PUE;00106 tempreg  $=$  (BIT0 << pinpos);00107 GPIOx- >PUE  $=$  tempreg;00108 }00109 else if (GPIO.InitStruct- >GPIO.PuPd  $= =$  GPIO.PuPd.NOPULL)00111 tempreg  $=$  GPIOx- >PUE;00112 tempreg  $=$  -(BIT0 << pinpos);00113 GPIOx- >PUE  $=$  tempreg;00114 }0011500116 tempreg  $=$  GPIOx- >PODE;00117 if(GPIO.InitStruct- >GPIO.PODENA  $= =$  (uint32_t)ENABLE)00118 {00119 tempreg  $=$  (BIT0 << pinpos);00120 }00121 else00122 {00123 tempreg  $=$  -(BIT0 << pinpos);00124 }00125 GPIOx- >PODE  $=$  tempreg;00126 }00127 }00128}00129 void GPIO.StructInit(GPIO.InitTypeDef* GPIO.InitStruct)00151 {00152 GPIO.InitStruct- >GPIO.Pin  $=$  GPIO.Pin.NONE;00154 GPIO.InitStruct- >GPIO.Mode  $=$  GPIO.Mode.IN;00155 GPIO.InitStruct- >GPIO.PuPd  $=$  GPIO.PuPd.NOPULL;00156 GPIO.InitStruct- >GPIO.PODENA  $=$  DISABLE;00157 }00158 00159 00182 uint8.t GPIO.ReadInputDataBit(GPIO.TypeDef* GPIOx, uint16.t GPIO.Pin)00183 {00184 uint8.t bitstatus  $= \mathrm{- x00}$  00185 if ((GPIOx- >PDI & GPIO.Pin)  $! = 0$  00186 {00187 bitstatus  $=$  (uint8.t)Bit_SET;00188 }00189 else00190 {00191 bitstatus  $=$  (uint8.t)Bit_RESET;00192 }00193 return bitstatus;00194 }00195 00217 uint32. t GPIO.ReadInputData(GPIO.TypeDef* GPIOx)00218 {00219 return GPIOx- >PDI;00220 }00221 00222 00225 uint8. t GPIO.ReadOutputDataBit(GPIO.TypeDef* GPIOx, uint16. t GPIO.Pin)00246 {00247 uint8. t bitstatus  $= \mathrm{- x00}$  00248 if ((GPIOx- >PDO & GPIO.Pin)  $! = 0$  00249 {00250 }00251 else00252
+
+00253 {00254 { bitstatus  $=$  (uint8. t)Bit_RESET;00255 100256 return bitstatus;00257}0025800280 uint32. t GPIO.ReadOutputData(GPIO.TypeDef\* GPIOx)00281 {00282 return GPIOx- >PDO;00283}002840028500307 void GPIO.SetBits(GPIO.TypeDef\* GPIOx, uint16. t GPIO.Pin)00308 {00309 GPIOWriteBit(GPIOx, GPIO.Pin, Bit_SET);003100031100333 void GPIO.ResetBits(GPIO.TypeDef\* GPIOx, uint16. t GPIO.Pin)00334 {00335 GPIOWriteBit(GPIOx, GPIO.Pin, Bit_RESET);00336}0033700360 void GPIO.WriteBit(GPIO.TypeDef\* GPIOx, uint16. t GPIO.Pin, BitAction BitVal)00361 {00362 if (BitVal != Bit_RESET)00363 {00364 GPIOx- >PDO |= GPIO.Pin;00365 }00366 else00367 {00368 GPIOx- >PDO &= 'GPIO.Pin;00369 }00370}0037100393 void GPIO.Write(GPIO.TypeDef\* GPIOx, uint32. t Val)00394 {00395 GPIOx- >PDO |= Val;00396}0039700419 void GPIO.LockRegister(GPIO.TypeDef\* GPIOx, uint16. t GPIO.Pin)00420 {00421 LCKR.PRT = 0x5AC4; /*关闭写保护*/0042200423 GPIOx- >LCKR |= GPIO.Pin; /*锁定GPIO.x.Pin配置*/0042400425 LCKR.PRT = 0xFFF; /*开启写保护*/00426}0042700449 void GPIO.UnlockRegister(GPIO.TypeDef\* GPIOx, uint16. t GPIO.Pin)00450 {00451 LCKR.PRT = 0x5AC4; /*关闭写保护*/00452 GPIOx- >LCKR &= ('GPIO.Pin); /*解锁GPIO.x.Pin配置*/0045300454 LCKR.PRT = 0xFFF; /*开启写保护*/00455}00456}0045700496 void GPIO.PinAFCConfig(GPIO.TypeDef\* GPIOx, uint32. t GPIO.PinSource, uint32. t GPIO.AF)00499 {00498 uint32. t temp;00499 switch(GPIO.PinSource)00500 {00501 /*F3210*/00502 case 0:00503 {00504 temp = GPIOx- >F3210 & 0xFFF0; /*get F321*/00505 GPIOx- >F3210 = temp + GPIO.AF; /*F321 + F0*/00506 break;00507 }00508 case 1:00509 {00510 temp = GPIOx- >F3210 & 0xFFF0;00511 GPIOx- >F3210 = temp + (GPIO.AF << 4);00512 break;00513 }00514 case 2:00515 {/* 2020.8.13 Repair bug HL */00516 temp = GPIOx- >F3210 & 0xFFF0;00517 GPIOx- >F3210 = temp + (GPIO.AF << 8);00518 break;00519 }00520 case 3:00521 {00522 temp = GPIOx- >F3210 & 0xFFF0;00523 GPIOx- >F3210 = temp + (GPIO.AF << 12);00524 break;00525 }
+
+00526 /\*F7654\*/ 00527 case 4: 00528 { 00529 temp  $=$  GPIOx- >F7654 & 0xFF0; 00530 GPIOx- >F7654  $=$  temp  $^+$  GPIOAF; 00531 break; 00532 } 00533 case 5: 00534 { 00535 temp  $=$  GPIOx- >F7654 & 0xFF0; 00536 GPIOx- >F7654  $=$  temp  $^+$  (GPIOAF << 4); 00537 break; 00538 } 00539 case 6: 00540 { 00541 temp  $=$  GPIOx- >F7654 & 0xFF0; 00542 GPIOx- >F7654  $=$  temp  $^+$  (GPIOAF << 8); 00543 break; 00544 } 00545 case 7: 00546 { 00547 temp  $=$  GPIOx- >F7654 & 0x0FFF; 00548 GPIOx- >F7654  $=$  temp  $^+$  (GPIOAF << 12); 00549 break; 00550 } 00551 /\*FBA98\*/ 00552 case 8: 00553 { 00554 temp  $=$  GPIOx- >FBA98 & 0xFF0; 00555 GPIOx- >FBA98  $=$  temp  $^+$  GPIOAF; 00556 break; 00557 } 00558 case 9: 00559 { 00560 temp  $=$  GPIOx- >FBA98 & 0xFF0F; 00561 GPIOx- >FBA98  $=$  temp  $^+$  (GPIOAF << 4); 00562 break; 00563 } 00564 case 10: 00565 { 00566 temp  $=$  GPIOx- >FBA98 & 0xF0FF; 00567 GPIOx- >FBA98  $=$  temp  $^+$  (GPIOAF << 8); 00568 break; 00569 } 00570 case 11: 00571 { 00572 temp  $=$  GPIOx- >FBA98 & 0x0FFF; 00573 GPIOx- >FBA98  $=$  temp  $^+$  (GPIOAF << 12); 00574 break; 00575 } 00576 /\*FFEDC\*/ 00577 case 12: 00578 { 00579 temp  $=$  GPIOx- >FFEDC & 0xFF0; 00580 GPIOx- >FFEDC  $=$  temp  $^+$  GPIOAF; 00581 break; 00582 } 00583 case 13: 00584 { 00585 temp  $=$  GPIOx- >FFEDC & 0xFF0F; 00586 GPIOx- >FFEDC  $=$  temp  $^+$  (GPIOAF << 4); 00587 break; 00588 } 00589 case 14: 00590 { 00591 temp  $=$  GPIOx- >FFEDC & 0xF0FF; 00592 GPIOx- >FFEDC  $=$  temp  $^+$  (GPIOAF << 8); 00593 break; 00594 } 00595 case 15: 00596 { 00597 temp  $=$  GPIOx- >FFEDC & 0x0FFF; 00598 GPIOx- >FFEDC  $=$  temp  $^+$  (GPIOAF << 12); 00599 break; 00590 } 00601 default: 00602 break; 00603 } 00604 00605 00606 00607
+
+# 2.61 Source/lks32mc08x_hall.c 文件参考
+
+文件名称：lks32mc08x_hall.c  文件标识：无  内容摘要：HALL外设驱动程序  其它说明：无
+
+include"lks32mc08x_hall.h"lks32mc08x_hall.c的引用（Include）关系图：
+
+![](images/fef99b6ae88cfbe0e378b9c73c3c6db0823c96bf40b8fd27454b96f9eab519d0.jpg)
+
+# 函数
+
+- void HALL_Init (HALL_InitTypeDef *HALL_InitStructure)  函数名称：void HALL_Init(HALL_InitTypeDef *HALL_InitStructure)  
+- void HALL_StructInit(HALL_InitTypeDef *HALL_InitStructure)  函数名称：void HALL_StructInit(HALL_InitTypeDef *HALL_InitStructure)  
+- uint32_t HALL_GetFilterValue (void)  函数名称：uint32_t HALL_GetFilterValue(void)  
+- uint32_t HALL_GetCaptureValue (void)  函数名称：uint32_t HALL_GetCaptureValue(void)  
+- uint32_t HALL_WIDCount (void)  函数名称：uint32_t HALL_WIDCount(void)  
+- uint32_t HALL_GetCount (void)  函数名称：uint32_t HALL_GetCount(void)  
+- uint32_t HALL_GetIRQFlag (uint32_t tempFlag)  函数名称：uint32_t HALL_GetIRQFlag (uint32_t tempFlag)  
+- void HALL_ClearIRQFlag (uint32_t tempFlag)  函数名称：uint32_t HALL_ClearIRQFlag (uint32_t tempFlag)
+
+# 2.61.1 详细描述
+
+文件名称：lks32mc08x_hall.c  文件标识：无  内容摘要：HALL外设驱动程序  其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年04月19日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_hall.c 中定义.
+
+# 2.61.2 函数说明
+
+# 2.61.2.1 HALL.ClearIRQFlag()
+
+void HALL.ClearIRQFlag (    uint32_t tempFlag)
+
+函数名称：uint32_t HALL_ClearIRQFlag(uint32_t tempFlag)
+
+功能描述：清除HALL中断标志位
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">tempFlag:</td></tr><tr><td>HALL_CAPTURE_EVENT</td><td>HALL信号变化中断</td></tr><tr><td>HALL_OVERFLOW_EVENT</td><td>HALL计数溢出中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（HALL.GetIRQFlag（HALL.CAPTURE_EVENT））//读取HALL信号变化中断标志位{HALL.ClearIRQFlag（HALL.CAPTURE_EVENT）；//清除HALL信号变化中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年5月20日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_hall.c 第 247 行定义.
+
+# 2.61.2.2 HALL.GetCaptureValue()
+
+uint32_t HALL.GetCaptureValue( void )
+
+函数名称：uint32_t HALL_GetCaptureValue(void)
+
+功能描述：取得HALL值，未滤波结果，即采样的原始HALL状态值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：未滤波的HALL信号结果值，第三位有效，其它位恒为0
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+# 示例代码：
+
+示例代码：uint32_t HALL.Value = 0;  HALL.Value = HALL.GetCaptureValue(); //读取未滤波的HALL结果值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_hall.c 第 135 行定义.
+
+# 2.61.2.3 HALL.GetCount()
+
+uint32_t HALL.GetCount (void)
+
+函数名称：uint32_t HALL_GetCount(void)
+
+功能描述：读取实时HALL计数器值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：实时HALL计数器值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：uint32_t HALL.Value = 0;  HALL.Value = HALL.GetCount(); //读取实时HALL计数器值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_hall.c 第 185 行定义.
+
+# 2.61.2.4 HALL.GetFilterValue()
+
+uint32_t HALL.GetFilterValue (void)
+
+函数名称：uint32_t HALL_GetFilterValue(void)
+
+功能描述：取得HALL值，滤波结果
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：经过滤波的HALL信号结果值，第三位有效，其它位恒为0
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：uint32_t HALL.Value = 0;  HALL.Value = HALL.GetFilterValue(); //读取经过滤波的HALL结果值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_hall.c 第 110 行定义.
+
+# 2.61.2.5 HALL_GetIRQFlag()
+
+uint32_t HALL_GetIRQFlag ( uint32_t tempFlag)
+
+函数名称：uint32_t HALL_GetIRQFlag(uint32_t tempFlag)
+
+功能描述：读取HALL中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">tempFlag:</td></tr><tr><td>HALL_CAPTURE_EVENT</td><td>HALL信号变化中断</td></tr><tr><td>HALL_OVERFLOW_EVENT</td><td>HALL计数溢出中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：HALL中断标志为1即对应标志位置位，为0即对应标志位末置位
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(HALL.GetIRQFlag(HALL.CAPTURE_EVENT)) //读取HALL信号变化中断标志位{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年5月20日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第216行定义.
+
+# 2.61.2.6 HALL_Init()
+
+void HALL_Init {    HALL_InitTypeDef *HALL_InitStruct }
+
+函数名称：void HALL_Init(HALL_InitTypeDef* HALL_InitStruct)
+
+功能描述：HALL初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>HALL_InitTypeDef HALL_InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+# 警告
+
+无
+
+示例代码：
+
+HALL.InitTypeDef HALL.InitStruct; HALL.StructInit(&HALL.InitStruct); // 初始化结构体 HALL.InitStruct.HALL.Ena = ENABLE; // 模块使能 HALL.InitStruct.ClockDivision = HALL.CLK_DIV1; // 设置Hall模块时钟分频系数 HALL.InitStruct.CountTH = 9600000; // Hall模块计数模值，计数超过模值会产生超时中断 HALL.InitStruct.FilterLen = 512; // Hall信号数字滤波长度512个时钟周期 HALL.InitStruct.Filter75Jma = ENABLE; // Hall信号滤波方式，7列5模式或者全1有效模式 HALL.InitStruct.Expstruct.HALL.Ena = ENABLE; // 指定中断使能 HALL.InitStruct.OverFlow.Rq. - Ena = ENABLE; // 超时中断使能 HALL.InitStruct.softIE = DISABLE; // 软件中断使能 HALL.Init(&HALL.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第46行定义
+
+函数调用图：
+
+void HALL_StructInit( HALL.InitTypeDef * HALL.InitStruct )
+
+函数名称：void HALL_StructInit(HALL_initTypeDef* HALL_initStruct)
+
+功能描述：HALL结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>HALL_InitTypeDef HALL_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+HALL_InitTypeDef HALL_InitStructure; HALL_StructInit(&HALL_InitStructure); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第78行定义
+
+# 2.61.2.8 HALL_WIDCount()
+
+uint32_t HALL_WIDCount (void)
+
+函数名称：uint32_t HALL_WIDCount(void)
+
+功能描述：读取HALL信号变化事件时刻HALL计数值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：获取三颗HALL信号任何一个信号发生变化事件时刻的HALL计数器的计数值
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+uint32_t HALL.Value = 0;  HALL.Value = HALL_WIDCount(t, //读取HALL信号变化事件时刻HALL计数值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月26日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_hall.c第160行定义
+
+# 2.62 lks32mc08x_hall.c
+
+# 浏览该文件的文档
+
+00001 00014 #include"1ks32mc08x_hall.h" 00015 00016 00046 void HALLInit(HALLInitTypeDef\* HALLInitStruct) 00047{ 00048 SYS ModuleClockCmd(SYS Module.HALL,ENABLE); //HALL时钟使能 00049 00050 HALL- >CFG  $=$  （HALLInitStruct- >FilterLen）丨（HALLInitStruct- >ClockDivision <<16) 00051 |（HALLInitStruct- >Filter75. Ena <<20）丨（HALLInitStruct- >HALL.Ena <<24) 00052 |（HALLInitStruct- >CaptureIRQ.Ena <<28）丨（HALLInitStruct- >OverFlowIRQ.Ena <<29) 00053 |（HALLInitStruct- >softIE <<30); 00054 HALL- >TH  $=$  HALLInitStruct- >CountTH; 00055 HALL- >INFO  $= 0$  00056} 00057 00078 void HALLStructInit(HALLInitTypeDef\* HALLInitStruct) 00079{ 00080 HALLInitStruct- >FilterLen  $= 1023$  00081 HALLInitStruct- >ClockDivision  $=$  HALLCLKDIV1;
+
+00082 HALLInitStruct- >Filler75- Ena  $=$  ENABLE; 00083 HALLInitStruct- >HALLEna  $=$  ENABLE; 00084 HALLInitStruct- >Capture_IRQ_Ena  $=$  ENABLE; 00085 HALLInitStruct- >OverFlow.IRQ_Ena  $=$  DISABLE; 00086 HALLInitStruct- >CountTH  $=$  1000; 00087 HALLInitStruct- >softIE  $=$  DISABLE; 00088} 00089 00110 uint32. t HALL.GetFilterValue(void) 00111{ 00112 return (HALL- >INFO & 0x07); 00113} 00114 00135 uint32. t HALL.GetCaptureValue(void) 00136{ 00137 return (HALL- >INFO >>8)&0x07; 00138} 00139 00160 uint32. t HALL.WIDCount(void) 00161{ 00162 return HALL- >WIDTH; 00163 00164} 00185 uint32. t HALL.GetCount(void) 00186{ 00187 return HALL- >CNT; 00188} 00189 00190 00216 uint32. t HALL.GetIRQFlag(uint32. t tempFlag) 00217{ 00218 return (HALL- >INFO & tempFlag); 00219} 00220 00220 void HALL.ClearIRQFlag(uint32. t tempFlag) 00248{ 00249 HALL- >INFO  $=$  tempFlag; 00250} 00251 00252 00253 //C) COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*END OF FILE\*\*\*\*
+
+# 2.63 Source/lks32mc08x.i2c.c 文件参考
+
+文件名称：lks32mc08x.i2c.c  文件标识：无  内容摘要：I2C外设驱动程序  其它说明：无
+
+include"lks32mc08x.i2c.h"lks32mc08x.i2c.c的引用（Include）关系图：
+
+![](images/59f6406adc8c2df0224ff0c2f837e14739b8be55fb60786404d7f1cf2aecb39d.jpg)
+
+# 函数
+
+- void I2C_Init(I2C_TypeDef *l2Cx, I2C.InitTypeDef *l2C.InitStruct)  函数名称：void I2C_Init(I2C_TypeDef *l2Cx, I2C.InitTypeDef *l2C.InitStruct)  
+- void I2C_StructInit(I2C.InitTypeDef *l2C.InitStruct)  函数名称：void I2C_StructInit(I2C_InitTypeDef *l2C.InitStruct)  
+- void I2C_SendData(I2C_TypeDef *l2Cx, uint8_t n)
+
+函数名称：void I2C_SemData(I2C_TypeDef  $*12Cx$  uint8. t n)·uint8. t I2C_ReadData(I2C_TypeDef  $*12Cx$  函数名称：uint8. t I2C_ReadData(I2C_TypeDef  $*12Cx$  ·static void i2c_dma_delay cover()函数名称：static void i2c_dma_delay.over()·void i2c_dma_state_over()函数名称：void i2c_dma_state_over()·static void i2c_dma_state_start()函数名称：static void i2c_dma_state_start()·void i2c_dma_tx (u8 addr,u8 \*data,u8 len)函数名称：void i2c_dma_tx(u8 addr,u8 \*data,u8 len)·void i2c_dma_rx (u8 addr,u8 \*data,u8 len)函数名称：void i2c_dma_rx(u8 addr,u8 \*data,u8 len)·void i2c_dma_init (void)函数名称：void i2c_dma_init(void)
+
+# 变量
+
+·static volatile u8 i2c_dma_state  $= 0$  I2C发送状态
+
+# 2.63.1 详细描述
+
+文件名称： Iks32mc08x.i2c.c文件标识：无内容摘要： I2C外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.i2c.c 中定义
+
+# 2.63.2 函数说明
+
+# 2.63.2.1 i2c.dma.delay.over()
+
+static void i2c.dma.delay.over（）[static]
+
+函数名称：staticvoidi2c.dma.delay.over()
+
+功能描述：I2C发送接收等待函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+i2c.dma.delay.over（);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.i2c.c第188行定义
+
+这是这个函数的调用关系图:
+
+![](images/4b5d8d0093df3f27e602efd5787836e9d22e4a923be1f4a96d34f1b87aefa53a.jpg)
+
+# 2.63.2.2 i2c.dma.init()
+
+void i2c.dma.init (void)
+
+函数名称: void i2c.dma.init(void)
+
+功能描述: DMA硬件初始化
+
+参见
+
+被引用内容: 无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值: 无
+
+注解
+
+其它说明: 无
+
+警告
+
+无
+
+示例代码:
+
+i2c_dma.init(); // I2C的相关DMA模块硬件初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.i2c.c 第 364 行定义.
+
+函数调用图：
+
+这是这个函数的调用关系图：
+
+# 2.63.2.3 i2c.dma_rx()
+
+void i2c_dma_rx (u8 addr,u8 \* data,u8 len)
+
+函数名称：void i2c.dma_rx（u8addr,u8 \*data,u8len)
+
+功能描述：I2C数据接收函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>addr: IIC发送地址 data: 发送数据缓冲器 len: 发送数据长度</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 i2c_Buff[8] = {0x00};  i2c_dma_rx(0x23, i2c_Buff, 8); //将接收0x23地址的从机8个字节存储在i2c_Buff数组内
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_i2c.c第327行定义
+
+函数调用图：
+
+![](images/cf30a337df14cc967a80fbd0c116b88e908ed1b0c8ce55b24bbf2180b01af970.jpg)
+
+# 2.63.2.4 i2c.dma.state.over()
+
+void i2c.dma.state.over (void)
+
+函数名称：void i2c.dma.state.over()
+
+功能描述：I2C发送完成函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+void I2c0. IRQHandler (void) { I2C- >SCR = 0; i2c.dma_state.over(); // iic传输完成 }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.i2c.c 第 233 行定义.
+
+# 2.63.2.5 i2c.dma.state.start()
+
+static void i2c.dma.state.start（）[static]
+
+函数名称：staticvoidi2c.dma.state.start()
+
+功能描述：I2C开始发送
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+i2c.dma.state.start();
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_i2c.c第257行定义
+
+这是这个函数的调用关系图:
+
+![](images/685dda8743d7d8e0e6dd38e275ec8f934f8a04c7bcfb3f80eb96b82e986792fb.jpg)
+
+# 2.63.2.6 i2c.dma.tx()
+
+void i2c.dma.tx（ u8 addr, u8 \* data, u8 len)
+
+函数名称：void i2c.dma.tx（u8 addr,u8 \*data,u8 len)
+
+功能描述：I2C数据发送函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>addr: IIC发送地址 data: 发送数据缓冲器 len: 发送数据长度</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 i2c_Buff[8] = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};  i2c_dma_tx(0x23, i2c_Buff, 8); // 发生给0x23地址的从机8个字节i2c_Buff数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.i2c.c第285行定义
+
+函数调用图：
+
+![](images/5141507126c059656c6c26e4d93fe098b9a44dc0b54b6a0070e0efb082a0e406.jpg)
+
+# 2.63.2.7 I2C_Init()
+
+void I2C_Init (    I2C_TypeDef *I2Cx,    I2C.InitTypeDef *I2C.InitStruct)
+
+函数名称：void I2C_Init(I2C_TypeDef* I2Cx, I2C.InitTypeDef* I2C.InitStruct)
+
+功能描述：I2C初始化
+
+参见
+
+被引用内容：SYS_ModuleClockCmd() SYS.SoftResetModule();
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2Cx: I2C, I2C_InitTypeDef *I2C_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：I2C_InitTypeDef I2C_InitStructure; I2C_StructInit(&I2C_InitStructure); // 初始化结构体I2C_InitStructure.ADRCMP = DISABLE; // I2C 硬件地址比较使能开关，只有在 DMA 模式下开启才有效。I2C_InitStructure.MST_MODE = ENABLE; // I2C 主模式使能I2C_InitStructure.SLV_MODE = ENABLE; // I2C 从模式使能I2C_InitStructure.DMA = ENABLE; // I2C DMA传输使能I2C_InitStructure.BaudRate = 100000; // I2C 波特率I2C_InitStructure.IE = ENABLE; // I2C 中断使能I2C_InitStructure.TC.IE = ENABLE; // I2C 数据传输完成中断使能I2C_InitStructure.BUS_ERR.IE = DISABLE; // I2C 总线错误事件中断使能I2C_InitStructure.STOP.IE = DISABLE; // I2C 总线错误事件中断使能I2C_InitStructure.BURST.NACK = ENABLE; // I2C 传输、NACK 事件中断使能I2C_InitStructure.BURST.ADDRM = ENABLE; // I2C 传输、硬件地址匹配中断使能I2C_Init(I2C, &I2C_InitStructure);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.c 第 51 行定义.
+
+函数调用图：
+
+![](images/d967ea074c2cab5dc2cb984ab22fb2d53f39a14ff0e7af8bd08f782b4a86c1d5.jpg)
+
+# 2.63.2.8 I2C_ReadData()
+
+uint8_t I2C_ReadData (I2C_TypeDef *I2Cx)
+
+函数名称：uint8_t I2C_ReadData(I2C_TypeDef *I2Cx)
+
+功能描述：I2C读缓冲区数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2Cx:I2C</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：I2C接收的一字节数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 I2C.Value = 0;I2C.Value = I2C_ReadData(I2C); //I2C接收的一字节数据
+
+修改日志：
+
+在文件 Iks32mc08x_i2c.c 第 164 行定义.
+
+# 2.63.2.9 I2C_SendData()
+
+void I2C_SendData (I2C_TypeDef *I2Cx, uint8_t n)
+
+函数名称：void I2C_SendData(I2C_TypeDef *I2Cx, uint8_t n)
+
+功能描述：I2C发送数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2Cx:I2C, n:要发生的一字节数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+I2C_SendData(I2C, 0x12); //发生0x12数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.i2c.c 第 138 行定义.
+
+# 2.63.2.10 I2C.StructInit()
+
+void I2C.StructInit (I2C.InitTypeDef * I2C.InitStruct)
+
+函数名称：void I2C.StructInit(I2C.InitTypeDef* I2C.InitStruct)
+
+功能描述：I2C结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>I2C.InitTypeDef *I2C.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+I2C.InitTypeDef I2C.InitStruct;I2C.StructInit(&I2C.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年05月21日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.i2c.c 第 104 行定义.
+
+# 2.63.3 变量说明
+
+# 2.63.3.1 i2c.dma.state
+
+volatile u8 i2c.dma.state = 0 [static]
+
+# I2C发送状态
+
+在文件 Iks32mc08x.i2c.c 第 17 行定义.
+
+# 2.64 Iks32mc08x i2c.c
+
+# 浏览该文件的文档
+
+00001 00001 #include"1ks32mc08x.i2c.h" 00015 00016 00017 static volatile u8 i2c.dma.state  $= 0$  00051 void I2C- Init(I2C- TypeDef\* I2Cx,I2C- InitTypeDef\* I2C- InitStruct) 00052 { 00053 SYS ModuleClockCmd(Sys Module.I2C,ENABLE); 00055 SYS.SoftResetModule(I2y Module.I2C); 00056 { 00057 00058 u32 BaudRate; 00059 BaudRate =（（u64)96000000+（（I2C- InitStruct- >BaudRate\*17)>>1））/(I2C- InitStruct- >BaudRate\*17）- 1; 00060 SYS.WR.PROTECT  $=$  0x7MB3; //解除系统寄存器写保护 00061 SYS.CLK.DIV0  $=$  BaudRate; 00062 SYS.WR.PROTECT  $=$  0; //解除系统寄存器写保护 00063 } 00064 00065 I2Cx- >ADDR  $=$  I2C- InitStruct- >ADRCMP << 7; 00066 00067 I2Cx- >CFG  $=$  (I2C- InitStruct- >IE << 7)|(I2C- InitStruct- >TC.IE << 6) 00068 (I2C- InitStruct- >BUS_ERR.IE << 5)|(I2C- InitStruct- >STOP.IE << 4) 00069 (I2C- InitStruct- >MST.MODE << 1)|(I2C- InitStruct- >SLV.MODE << 0); 00070 00071 I2Cx- >SCR  $=$  0; 00072 00073 I2Cx- >MSCR  $=$  0; 00074 00075 I2Cx- >BCR  $=$  I2C- InitStruct- >BURST.NACK << 7|（I2C- InitStruct- >BURST.ADDR.CMP << 6) 00076 (I2C- InitStruct- >DMA << 5); 00077 if(I2C- InitStruct- >DMA) 00078 { 00079 I2c.dma.init(); 00080 } 00081 00082 } 00083 00104 void I2C- StructInit(I2C- InitTypeDef\* I2C- InitStruct) 00105 { 00106 I2C- InitStruct- >ADRCMP  $=$  DISABLE ; // I2C 硬件地址比较使能开关，只有在 DMA 模式下开启才有效。 00107 I2C- InitStruct- >MST.MODE  $=$  DISABLE ; // I2C 主模式使能 00108 I2C- InitStruct- >SLVM.MODE  $=$  DISABLE ; // I2C 从模式使能 00109 I2C- InitStruct- >DMA  $=$  DISABLE ; // I2C DMA传输使能 00110 I2C- InitStruct- >BaudRate  $=$  100000 ; // I2C 波特率 00111 I2C- InitStruct- >IE  $=$  DISABLE ; // I2C 中断使能 00112 I2C- InitStruct- >TC.IE  $=$  DISABLE ; // I2C 数据传输完成中断使能 00113 I2C- InitStruct- >BUS_ERR.IE  $=$  DISABLE ; // I2C 总线错误事件中断使能 00114 I2C- InitStruct- >STOP.IE  $=$  DISABLE ; // I2C STOP 事件中断使能 00115 I2C- InitStruct- >BURST.NACK  $=$  DISABLE ; // I2C 传输，NACK 事件中断使能 00116 I2C- InitStruct- >BURST.ADDR.CMP  $=$  DISABLE ; // I2C 传输，硬件地址匹配中断使能 00117 } 00118 00138 void I2C- SendData(I2C- TypeDef \*I2Cx, uint8. t n) 00139 { 00140 I2Cx- >DATA  $=$  n; 00141 } 00142 00143 00164 uint8. t I2C- ReadData(I2C- TypeDef \*I2Cx) 00165 { 00166 return I2Cx- >DATA; 00167 } 00168
+
+![](images/e9c780cd41c3e61075affc3a30793f4e8ce416c295b9b4a03974d6832d0be82b.jpg)
+
+00382} 00383 00384 00385 00386
+
+# 2.65 Source/lks32mc08x_iwdg.c文件参考
+
+文件名称：lks32mc08x_iwdg.c文件标识：无内容摘要：IwdG外设驱动程序其它说明：无
+
+include"lks32mc08x_iwdg.h"lks32mc08x_iwdg.c的引用（Include）关系图：
+
+![](images/010680e4a70be9599035a39908b597d140465e8ed70ca858170adff382d7d790.jpg)
+
+# 函数
+
+- void IWDG.Init (IWDG.InitTypeDef *this)  函数名称：void IWDG.Init(IWDG.InitTypeDef *this)- void IWDGStrutInit (IWDG.InitTypeDef *this)  函数名称：void IWDG.strutInit(IWDG.InitTypeDef *this)- void IWDG DISABLE (void)  函数名称：void IWDG DISABLE (void)- void IWDG.ENABLE (void)  函数名称：void IWDG.ENABLE (void)- void IWDG.Feed (uint32_t timeOut)  函数名称：void IWDG.Feed (uint32_t timeOut)
+
+# 2.65.1 详细描述
+
+文件名称：lks32mc08x_iwdg.c文件标识：无内容摘要：IwdG外设驱动程序其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 中定义。
+
+# 2.65.2 函数说明
+
+# 2.65.2.1 IWDG.DISABLE()
+
+void IWDG_DISABLE（ void )
+
+函数名称：voidIWDG_DISABLE（void)
+
+功能描述：关闭看门狗模块
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG_DISABLE(); //关闭看门狗模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 104 行定义。
+
+# 2.65.2.2 IWDG_ENABLE()
+
+void IWDG_ENABLE (void)
+
+函数名称：void IWDG_ENABLE(void)
+
+功能描述：打开看门狗模块
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG_ENABLE(); //打开看门狗模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 128 行定义.
+
+# 2.65.2.3 IWDG_Feed()
+
+void IWDG_Feed ( uint32_t timeout)
+
+函数名称：void IWDG_Feed(uint32_t timeout)
+
+功能描述：看门狗喂狗
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>timeOut: 看门狗复位时间
+WDT.RTH.2S 3s
+WDT.RTH.4S 2s
+WDT.RTH.8S 1s
+WDT.RTH.64S 0s</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG_Feed(WDT.RTH.2S); //看门狗喂狗，且设置下一次复位时间为2s
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 157 行定义.
+
+# 2.65.2.4 IWDG_Init()
+
+void IWDG_Init ( IWDG_InitTypeDef *this)
+
+函数名称：void IWDG_Init(IWDG_InitTypeDef *this)
+
+功能描述：看门狗初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>IWDG_InitTypeDef *this 看门狗配置结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG_InitTypeDef IWDG_InitStruct; IWDG_StructInit(&IWDG_InitStructure); //初始化结构体 IWDG_InitStructure.WDG_EN = ENABLE; //使能看门狗 IWDG_InitStructure.RTH = WDT.RTH_2S; //设置看门狗2s后复位芯片 IWDG_InitStructure.(RTH, RTH_EN, RTH_RTH_2S);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 40 行定义.
+
+# 2.65.2.5 IWDG_StrutInit()
+
+void IWDG_StrutInit ( IWDG_InitTypeDef *this)
+
+函数名称：void IWDG_StrutInit(IWDG_InitTypeDef *this)
+
+功能描述：看门狗配置结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>IWDG_InitTypeDef *this 看门狗配置结构体</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：IWDG_InitTypeDef IWDG_InitStruct; IWDG_StrutInit(&IWDG_InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2021年11月09日</td><td>1.0</td><td>YangZJ</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_iwdg.c 第 76 行定义.
+
+# 2.66 Iks32mc08x_iwdg.c
+
+# 浏览该文件的文档
+
+00001 00015 #include"lks32mc08x_iwdg.h" 00016 00040 void IwDG.Init(IwDG.InitTypeDef \*this) 00041 { 00042 SYS.WR.PROTECT  $=$  0xCAFE; 00043 SYS.WDT.CL  $\mathrm{\textit{R}} = \mathrm{\textit{0}}\times \mathrm{\textit{7}}\mathrm{\textit{8}}\mathrm{\textit{8}}$  |（this- >RTH<<1）|（1）; 00044 SYS.WR.PROTECT  $=$  0x7a83; 00045 if (this- >wDG.EN) 00046 { 00047 SYS.RST.CFG  $\mid =$  BITO; 00048 } 00049 else 00050 { 00051 SYS.RST.CFG  $\epsilon =$  BITO; 00052 } 00053 SYS.WR.PROTECT  $= 0$  00054} 00055 00076 void IwDG.Structinit(IwDG.InitTypeDef \*this) 00077{ 00078 this- >wDG.EN  $=$  DISABLE；//独立看门狗使能 00079 this- >RTH  $=$  WDT.RTH.4S；//看门狗超时复位时间（21位计数器，但低12恒位0） 00080 //SECOND2IwDGCT输入参数，秒 00081 //this- >DWK_EN  $=$  DISABLE; //深度休眠定时唤醒使能 00082 //this- >wTH  $=$  SECOND2IwDGCT（1）； //看门狗定时唤醒时间，大于复位时间后无效 00083 00084 00104 void IwDG.DISABLE（void) 00105{ 00106 SYS.RST.CFG  $\epsilon =$  "BITO; 00107} 00108 00128 void IwDG.ENABLE（void) 00129{ 00130 SYS.RST.CFG  $\mid =$  BITO; 00131} 00132 00157 void IwDG.Feed（uint32. t.timeOut） 00158{ 00159 00160 SYS.WR.PROTECT  $=$  0xCAFE; // 0xCAFE; 00161 00162 if (timeOut  $= =$  (uint32. t)WDT.RTH.64S) 00163 { 00164 SYS.WDT.CL  $\mathrm{\textit{R}} = \mathrm{\textit{0}}\times \mathrm{\textit{7}}\mathrm{\textit{8}}\mathrm{\textit{8}}$  //101 00165 } 00166 else if (timeOut  $= =$  (uint32. t)WDT.RTH.8S) 00167 { 00168 SYS.WDT.CL  $\mathrm{\textit{R}} = \mathrm{\textit{0}}\times \mathrm{\textit{7}}\mathrm{\textit{8}}\mathrm{\textit{8}}$  //1011 00169 } 00170 else if (timeOut  $= =$  (uint32. t)WDT.RTH.4S) 00171 { 00172 SYS.WDT.CL  $\mathrm{\textit{R}} = \mathrm{\textit{0}}\times \mathrm{\textit{7}}\mathrm{\textit{8}}\mathrm{\textit{8}}$  //1101 00173 } 00174 else // WDT.RTH.2S 00175 { 00176 SYS.WDT.CL  $\mathrm{\textit{R}} = \mathrm{\textit{0}}\times \mathrm{\textit{7}}\mathrm{\textit{8}}\mathrm{\textit{8}}$  //1111 00177 } 00178 00179 SYS.WR.PROTECT  $= 0$  00180} 00181 /\* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* \* (C) COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*END OF FILE\*\*\*\*/
+
+# 2.67 Source/lks32mc08x_mcpwm.c文件参考
+
+文件名称：lks32mc08x_mcpwm.c  文件标识：无  内容摘要：MCPWM外设驱动程序  其它说明：无
+
+include"lks32mc08x_MCPWM.h" #include"lks32mc08x.h" #include"lks32mc08x.sys.h" #include"string.h" lks32mc08x_mcpwm.c的引用（include）关系图：
+
+![](images/c8ff76b614a83919a0f53acee36aa0e6de356c8d94094fc4ccd8c8e9f34c7a50.jpg)
+
+# 函数
+
+- void PwMOutputs (FuncState t_state)  函数名称：void PwMOutputs(FuncState t_state)  
+- void MCPWM_StructInit(MCPWM.InitTypeDef *MCPWM.InitStruct)  函数名称：void MCPWM.StructInit(MCPWM.InitTypeDef *MCPWM.InitStruct)  
+- void MCPWM_Init(MCPWM.InitTypeDef *MCPWM.InitStruct)  函数名称：void MCPWM.Init(MCPWM.InitTypeDef *MCPWM.InitStruct)  
+- u16 MCPWM.GetIRQFlag (uint32_t INT_flag)  函数名称：u16 MCPWM.GetIRQFlag (uint32_t INT_flag)  
+- void MCPWM.ClearIRQFlag (uint32_t INT_flag)  函数名称：void MCPWM.ClearIRQFlag (uint32_t INT_flag)
+
+# 2.67.1 详细描述
+
+文件名称：lks32mc08x_mcpwm.c  文件标识：无  内容摘要：MCPWM外设驱动程序  其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年05月21日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_mcpwm.c 中定义。
+
+# 2.67.2 函数说明
+
+# 2.67.2.1 MCPWM_ClearIRQFlag()
+
+void MCPWM_ClearIRQFlag (    uint32_t INT_flag)
+
+函数名称：void MCPWM_ClearIRQFlag(uint32_t INT_flag)
+
+功能描述：清除 MCPWM 中断标志
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="15">输入参数:</td><td rowspan="15">MCPWM.T0.IRQ.IF
+MCPWM.T1.IRQ.IF
+MCPWM.TH00.IRQ.IF
+MCPWM.TH01.IRQ.IF
+MCPWM.TH10.IRQ.IF
+MCPWM.TH11.IRQ.IF
+MCPWM.TH20.IRQ.IF
+MCPWM.TH21.IRQ.IF
+MCPWM.TH30.IRQ.IF
+MCPWM.TH31.IRQ.IF
+MCPWM.THRO.IRQ.IF
+MCPWM.THIR1.IRQ.IF
+MCPWM.THIR2.IRQ.IF
+MCPWM.THIR3.IRQ.IF
+MCPWM.SHADE.IRQ.IF</td><td>BIT0</td><td>计数器计数值回
+到MCPWM.TH中断标志位</td></tr><tr><td>BIT1</td><td>计数器计数值回到0中断
+标志位</td></tr><tr><td>BIT2</td><td>计数器计数值回
+到MCPWM.TH00中断标志
+位</td></tr><tr><td>BIT3</td><td>计数器计数值回
+到MCPWM.TH01中断标志
+位</td></tr><tr><td>BIT4</td><td>计数器计数值回
+到MCPWM.TH10中断标志
+位</td></tr><tr><td>BIT5</td><td>计数器计数值回
+到MCPWM.TH11中断标志
+位</td></tr><tr><td>BIT6</td><td>计数器计数值回
+到MCPWM.TH20中断标志
+位</td></tr><tr><td>BIT7</td><td>计数器计数值回
+到MCPWM.TH21中断标志
+位</td></tr><tr><td>BIT8</td><td>计数器计数值回
+到MCPWM.TH30中断标志
+位</td></tr><tr><td>BIT9</td><td>计数器计数值回
+到MCPWM.TH31中断标志
+位</td></tr><tr><td>BIT10</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT11</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT12</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT13</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT14</td><td>MCPWM.TH/MCPWM.←
+TH00-MCPWM.TH31/←
+MCPWM.TR0-MCPWM.←
+TR3等寄存器更新
+到MCPWM/实际运行系统
+中断标志位</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(MCPWM.GetIRQFlag(MCPWM_T0_IQ_EN))//获取MCPWM的计数器计数值回到MCPWM_TH中断标志  {      MCPWM.ClearIRQFlag(MCPWM_T0_IQ_EN); //清除MCPWM的计数器计数值回到MCPWM_TH中断标志  }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_mcpwm.c第303行定义
+
+# 2.67.2.2 MCPWM.GetIRQFlag()
+
+u16 MCPWM.GetIRQFlag (    uint32_t INT_flag)
+
+函数名称：u16 MCPWM_GetIRQFlag(uint32_t INT_flag)
+
+功能描述：获取MCPWM中断标志
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="15">输入参数:</td><td rowspan="15">MCPWM.T0.IRQ.IF
+MCPWM.T1.IRQ.IF
+MCPWM.TH00.IRQ.IF
+MCPWM.TH01.IRQ.IF
+MCPWM.TH10.IRQ.IF
+MCPWM.TH11.IRQ.IF
+MCPWM.TH20.IRQ.IF
+MCPWM.TH21.IRQ.IF
+MCPWM.TH30.IRQ.IF
+MCPWM.TH31.IRQ.IF
+MCPWM.THRO.IRQ.IF
+MCPWM.THIR1.IRQ.IF
+MCPWM.THIR2.IRQ.IF
+MCPWM.THIR3.IRQ.IF
+MCPWM.SHADE.IRQ.IF</td><td>BIT0</td><td>计数器计数值回
+到MCPWM.TH中断标志位</td></tr><tr><td>BIT1</td><td>计数器计数值回到0中断
+标志位</td></tr><tr><td>BIT2</td><td>计数器计数值回
+到MCPWM.TH00中断标志
+位</td></tr><tr><td>BIT3</td><td>计数器计数值回
+到MCPWM.TH01中断标志
+位</td></tr><tr><td>BIT4</td><td>计数器计数值回
+到MCPWM.TH10中断标志
+位</td></tr><tr><td>BIT5</td><td>计数器计数值回
+到MCPWM.TH11中断标志
+位</td></tr><tr><td>BIT6</td><td>计数器计数值回
+到MCPWM.TH20中断标志
+位</td></tr><tr><td>BIT7</td><td>计数器计数值回
+到MCPWM.TH21中断标志
+位</td></tr><tr><td>BIT8</td><td>计数器计数值回
+到MCPWM.TH30中断标志
+位</td></tr><tr><td>BIT9</td><td>计数器计数值回
+到MCPWM.TH31中断标志
+位</td></tr><tr><td>BIT10</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT11</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT12</td><td>计数器计数值回
+到MCPWM.TMR0中断标志
+位</td></tr><tr><td>BIT13</td><td>计数器计数值回
+到MCPWM.TMR1中断标志
+位</td></tr><tr><td>BIT14</td><td>MCPWM.TH/MCPWM.←
+TH00-MCPWM.TH31/←
+MCPWM.TR0-MCPWM.←
+TR3等寄存器更新
+到MCPWM/实际运行系统
+中断标志位</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+# 返回
+
+返回值：读对应标志位是否为1，1位置位，0为未置位
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(MCPWM.GetIRQFlag(MCPWM(TO_IRQ_EN)))//获取MCPWM的计数器计数值回到MCPWM_TH中断标志{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_mcpwm.c第224行定义
+
+# 2.67.2.3 MCPWM.Init()
+
+void MCPWM.Init （ MCPWM.InitTypeDef \* MCPWM.InitStruct )
+
+函数名称：void MCPWM_Init(MCPWM.InitTypeDef \*MCPWM.InitStruct)功能描述：MCPWM初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数：
+
+<table><tr><td>输入参数:</td><td>MCPWM.InitTypeDef * MCPWM.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：MCPWM_InitTypeDef MCPWM.InitStructure;  MCPWM_StructInit(&MCPWM.InitStructure); //初始化MCPWM相关结构体  MCPWM.InitStructure.CJK.DIV = PWM_PRSC; //MCPWM时钟分频设置  MCPWM.InitStructure.MCLKEN = ENABLE; //模块时钟开启  MCPWM.InitStructure.MCPWMCnt_EN = ENABLE; //主计数器开始计数功能开关  MCPWM.InitStructure.MCPWMWorkModeCH0 = CENTRAL_PWM_MODE; //MCPWMCH0工作模式，中心对齐PWM模式  MCPWM.InitStructure.MCPWMWorkModeCH1 = CENTRAL_PWM_MODE; //通道工作模式设置，中心对齐或边沿对齐  MCPWM.InitStructure.MCPWMWorkModeCH2 = CENTRAL_PWM_MODE;  MCPWM.InitStructure.MCPWMWorkModeCH3 = CENTRAL_PWM_MODE;  MCPWM.Init(&MCPWM.InitStructure);
+
+修改日志：
+
+修改日志：在文件lks32mc08x_mcpwm.c第109行定义。函数调用图：
+
+![](images/d2080a7e7256515ee9d25c8ceea64d1bdf1a6d4be070e4eb8df325acb1f19a39.jpg)
+
+# 2.07.2.4 MCPWM.StructInit()
+
+void MCPWM.StructInit ( MCPWM.InitTypeDef  $\ast$  MCPWM.InitStruct)
+
+函数名称：void MCPWM.StructInit(MCPWM.InitTypeDef  $\ast$  MCPWM.InitStruct)功能描述：MCPWM结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>MCPWM.InitTypeDef *MCPWM.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：MCPWM.InitTypeDef MCPWM.InitStructure; MCPWM.StructInit(&MCPWM.InitStructure); //初始化MCPWM相关结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年05月21日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_mcpwm.c 第 74 行定义.
+
+# 2.67.2.5 PWMOutputs()
+
+void PWMOutputs (FuncState t_state)
+
+函数名称：void PWMOutputs(FuncState t_state)
+
+功能描述：MCPWM波形输出使能与失能函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>FuncState t_state ENABLE: 使能, DISABLE:使能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+PWMOutputs（ENABLE）//使能MCW输出
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2019年05月21日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_mcpwm.c第38行定义
+
+# 2.68 lks32mc08x_mcpwm.c
+
+# 浏览该文件的文档
+
+00001 00001 #include"1ks32mc08x.MCPWM.h" 00015 #include"1ks32mc08x.h" 00016 #include"1ks32mc08x.sys.h" 00017 #include"string.h" 00018 00038 void PMOutputs（FuncState t_state) 00039{ 00040 MCPWM.PRT  $=$  Ox0000DEAD; 00041 00042 if(t_state  $= =$  ENABLE) 00043 { 00044 MCPWM.FAIL  $=$  MCPWM.MOE.ANALBE_MASK; 00045 1 00046 else 00047 { 00048 MCPWM.FAIL  $\xi =$  MCPWM.MOE.DISABLE_MASK; 00049 1 00050 MCPWM.PRT  $=$  Ox0000CAFE; 00051 1 00052
+
+00053 00074 void MCPWM_structInit (MCPWM.InitTypeDef\* MCPWM.InitStruct) 00075 { 00076 00077 memset(MCPWM.InitStruct,0,sizeof(MCPWM.InitTypeDef)); 00078 00079 00080 00100 void MCPWM.Init(MCPWM.InitTypeDef\* MCPWM.InitStruct) 00110 { 00111 SYS ModuleClockCmd(SYS Module MCPWM,ENABLE);//MCPWM时钟使能 00112 00113 MCPWM.PRT  $=$  Ox0000DED; /enter password to unlock write protection  $\neq$  00114 MCPWM.TCLK  $=$  MCPWM.InitStruct- >CLKDIV MCPWM.InitStruct- >MCLK_EN << 00115 2) \ I (MCPWM.InitStruct- >MCPWM.Cnt_EN << 3) I (MCPWM.InitStruct- >GPIO.BKIN.Filter << 8) 00116 I (MCPWM.InitStruct- >CMP.BKIN.Filter << 12); 00117 00118 MCPWM.TH  $=$  MCPWM.InitStruct- >MCPWM.PERIOD; 00119 00120 MCPWM.TMR0  $=$  MCPWM.InitStruct- >TriggerPoint0; 00121 MCPWM.TMR1  $=$  MCPWM.InitStruct- >TriggerPoint1; 00122 MCPWM.TMR2  $=$  MCPWM.InitStruct- >TriggerPoint2; 00123 MCPWM.TMR3  $=$  MCPWM.InitStruct- >TriggerPoint3; 00124 00125 MCPWM.IO01  $=$  MCPWM.InitStruct- >CHON.Polarity.INV I (MCPWM.InitStruct- >CHOP.Polarity.INV << 1) I (MCPWM.InitStruct- >CHO.NS << 2) I (MCPWM.InitStruct- >CHO.PS 00127 << 3) \ I (MCPWM.InitStruct- >CHON.SCTRLN << 4) I (MCPWM.InitStruct- >CHOP.SCTRLP 00128 << 5) \ I (MCPWM.InitStruct- >Switch.CHON.CHOP << 6) I (MCPWM.InitStruct- >MCPWM.WorkModeCHO << 7) \ I (MCPWM.InitStruct- >CHIN.Polarity.INV << 8) I (MCPWM.InitStruct- >CHIP.Polarity.INV << 9) \ I (MCPWM.InitStruct- >CH1.NS << 10) I (MCPWM.InitStruct- >CH1.PS << 11) \ I (MCPWM.InitStruct- >CH1N.SCTRLN << 12) I (MCPWM.InitStruct- >CH1P.SCTRLP << 13) \ I (MCPWM.InitStruct- >Switch.CHIN.CH1P << 14) I (MCPWM.InitStruct- >MCPWM.WorkModeCH1 << 15) 00134 MCPWM.IO23  $=$  MCPWM.InitStruct- >CH2N.Polarity.INV I (MCPWM.InitStruct- >CH2P.Polarity.INV << 1) \ I (MCPWM.InitStruct- >CH2.NS << 2) I (MCPWM.InitStruct- >CH2.PS << 3) \ I (MCPWM.InitStruct- >CH2N.SCTRLN << 4) I (MCPWM.InitStruct- >CH2P.SCTRLP << 5) \ I (MCPWM.InitStruct- >Switch.CH2N.CH2P << 6) I (MCPWM.InitStruct- >MCPWM.WorkModeCH2 << 7) \ I (MCPWM.InitStruct- >CH3N.Polarity.INV << 8) I (MCPWM.InitStruct- >CH3P.Polarity.INV << 9) \ I (MCPWM.InitStruct- >CH3.NS << 10) I (MCPWM.InitStruct- >CH3.PS << 11) \ I (MCPWM.InitStruct- >CH3N.SCTRLN << 12) I (MCPWM.InitStruct- >CH3P.SCTRLP << 13) \ I (MCPWM.InitStruct- >Switch.CH3N.CH3P << 14) I (MCPWM.InitStruct- >MCPWM.WorkModeCH3 << 15) 00142 00143 MCPWM.PP  $=$  MCPWM.InitStruct- >IOO.PPE I (MCPWM.InitStruct- >IO1.PPE << 1) \ 00144 I (MCPWM.InitStruct- >IO2.PPE << 2) I (MCPWM.InitStruct- >IO3.PPE << 3) 00145 00146 MCPWM.FAIL  $=$  MCPWM.InitStruct- >FAIL0.Signal.Sel I (MCPWM.InitStruct- >FAIL1.Signal.Sel << 1) \ I (MCPWM.InitStruct- >FAIL0.Polarity << 2) 00147 (MCPWM.InitStruct- >FAIL1.Polarity << 3) \ I (MCPWM.InitStruct- >FAIL0.INPUT.EN << 4) I (MCPWM.InitStruct- >FAIL1.INPUT.EN << 5) \ 00150 I (MCPWM.InitStruct- >DebugMode.PWM_out << 7) \ 00151 (MCPWM.InitStruct- >CHOP.default.output << 8) I (MCPWM.InitStruct- >CHOP.default.output << 9) \ 00152 I (MCPWM.InitStruct- >CH1P.default.output << 10) I (MCPWM.InitStruct- >CH1N.default.output << 11) \ 00153 I (MCPWM.InitStruct- >CH2P.default.output << 12) I (MCPWM.InitStruct- >CH2N.default.output << 13) \ 00154 (MCPWM.InitStruct- >CH3P.default.output << 14) \ 00155 MCPWM.SDCFG  $=$  MCPWM.InitStruct- >MCPWM.UpdateInterval I (MCPWM.InitStruct- >MCPWM.TO.UpdateEN << 4) \ I (MCPWM.InitStruct- >MCPWM.TL.UpdateEN << 5) I (MCPWM.InitStruct- >MCPWM.Auto_ERR.EN << 6) 00158 00159 MCPWM.DTH00  $=$  MCPWM.InitStruct- >DeadTimeCHON;
+
+00160 MCPWM.DTH01  $=$  MCPWM.InitStruct- >DeadTimeCHOP; 00161 MCPWM.DTH10  $=$  MCPWM.InitStruct- >DeadTimeCHIN; 00162 MCPWM.DTH11  $=$  MCPWM.InitStruct- >DeadTimeCH1P; 00163 MCPWM.DTH20  $=$  MCPWM.InitStruct- >DeadTimeCH2N; 00164 MCPWM.DTH21  $=$  MCPWM.InitStruct- >DeadTimeCH2P; 00165 MCPWM.DTH30  $=$  MCPWM.InitStruct- >DeadTimeCH3N; 00166 MCPWM.DTH31  $=$  MCPWM.InitStruct- >DeadTimeCH3P; 00167 00168 MCPWM.EIF  $=$  0xffff; 00169 MCPWM.IE  $=$  MCPWM.InitStruct- >TO_Update_INT_EN | (MCPWM.InitStruct- >T1_Update_INT_EN << 1) 00170 | (MCPWM.InitStruct- >TH00_Match_INT_EN << 2) | (MCPWM.InitStruct- >TH01_Match_INT_EN << 3) | (MCPWM.InitStruct- >TH10_Match_INT_EN << 4) | 00171 | (MCPWM.InitStruct- >TH11_Match_INT_EN << 5) | 00172 (MCPWM.InitStruct- >TH21_Match_INT_EN << 7) | (MCPWM.InitStruct- >TH30_Match_INT_EN << 8) | 00173 | (MCPWM.InitStruct- >TH31_Match_INT_EN << 9) | 00174 | (MCPWM.InitStruct- >TMR0_Match_INT_EN << 10) | 00175 (MCPWM.InitStruct- >TMR1_Match_INT_EN << 11) | (MCPWM.InitStruct- >TMR2_Match_INT_EN << 12) | 00176 (MCPWM.InitStruct- >TMR3_Match_INT_EN << 13) | (MCPWM.InitStruct- >MCPWM_REG_UPDATE_INT_EN << 14); 00177 00178 MCPWM.EIE  $=$  (MCPWM.InitStruct- >FAIL0_INT_EN << 4) | (MCPWM.InitStruct- >FAIL1_INT_EN << 5); 00179 00180 MCPWM.UPDATE  $=$  0xffff; /\* write whatever value to trigger update \*/ 00181 00182 MCPWM.UPDATE  $= 0\times 00$  00183 00184 MCPWM.PRT  $=$  0x0000CASE; /\* write any value other than OxDEAD to enable write protection \*/ 00185 00186 00224 ul6 MCPWM.GetIRQFlag(uint32_t INT_flag) 00225 { 00226 u8 MCPWMIRQFlag  $=$  0; 00227 if(INT_flag  $< =$  BIT1) 00228 { 00229 if(MCPWM_IF & INT_flag & MCPWM.IE) 00230 { 00231 MCPWMIRQFlag  $= 1$  00232 } 00233 else 00234 { 00235 00236 } 00237 } 00238 else 00239 { 00240 if(MCPWM_EIF & INT_flag >> 15) & MCPWM.EIE) 00241 { 00242 MCPWMIRQFlag  $= 1$  00243 } 00244 else 00245 { 00246 MCPWMIRQFlag  $= 0$  00247 } 00248 } 00249 return MCPWMIRQFlag; 00250 } 00251 00252 00253 函数名称： void MCPWM.ClearIRQFlag(uint32_t INT_flag) 00254 功能描述： 无 MCPWM中断标志位 00255 操作的表： 无 00256 输入参数： 对应中断标志位例如 MCPWM.T0.IRQ_IF 00257 输出参数： 无 00258 返回值： 无 00259 其它说明： 读标志位是否为0 00260 修改日期 版本号 修改人 修改内容 00261 00262 2022/04/20 V1.0 Zhu Jie 创建 00263 00264 00303 void MCPWM.ClearIRQFlag (UINT32_t INT_flag) 00304 { 00305 if(INT_flag  $< =$  BIT1) 00306 { 00307 MCPWM_IF  $=$  INT_flag; 00308 00309 } 00310 else 00311 { 00312 MCPWM_EIF  $=$  (INT_flag >> 15); 00313 } 00314 }
+
+# 2.69 Source/lks32mc08x_opa.c 文件参考
+
+文件名称：lks32mc08x_opa.c  文件标识：无  内容摘要：OPA运放外设驱动程序  其它说明：无
+
+include"lks32mc08x_opa.h"lks32mc08x_opa.c的引用（Include）关系图：
+
+![](images/4ec1ce8e8cfd5744b6e390bcb259ce59b9d2d9c8100740fd60c2392bda66643f.jpg)
+
+# 函数
+
+- void OPA_Init (enumOPA_opa, OPA_InitTypeDef *OPA_InitStructure)  函数名称：void OPA_Init(numOPA_opa, OPA_InitTypeDef *OPA_InitStructure)  
+- void OPA_StructInit(OPA_InitTypeDef *OPA_InitStructure)  函数名称：void OPA_StructInit(OPA_InitStructure)  
+- void OPA_OUT (enumOPA_opa, FuncState state)  函数名称：void OPA_OUT(enumOPA_opa, FuncState state)
+
+# 2.69.1 详细描述
+
+文件名称：lks32mc08x_opa.c  文件标识：无  内容摘要：OPA运放外设驱动程序  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_opa.c 中定义。
+
+# 2.69.2 函数说明
+
+# 2.69.2.1 OPA_Init()
+
+void OPA_Init (enumOPA opa,OPA.InitTypeDef  $\ast$  OPA.InitStruct)
+
+函数名称：voidOPA_Init（enumOPAopa，OPA_InitTypeDef  $\ast$  OPA_InitStruct)
+
+功能描述：OPA初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>enumOPA opa, OPA_InitTypeDef *OPA_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+OPA.InitTypeDef OPA.InitStruct;OPA.StructInit（&OPA.InitStruct); //初始化结构体OPA.InitStruct.OPA.CLEna  $\equiv$  ENABLE; //使能OPAOPA.InitStruct.OPA.Gain  $=$  PGA.GAIN_20; //OPA内部增益电阻选择200：10.2OPA.Init（OPAO，&OPA.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_opa.c 第 41 行定义.
+
+# 2.69.2.2 OPA.OUT()
+
+void OPA.OUT (enumOPA opa, FuncState state)
+
+函数名称：voidOPA.OUT（enumOPAopa,FuncState state)
+
+功能描述：OPA外部输出，输出到外部P2.7引脚
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>enumOPA opa, FuncState state</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+OPA.OUT(OPA0,ENABLE); //将OPA0输出通过外部P2.7引脚送出
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_opa.c 第 144 行定义.
+
+# 2.69.2.3 OPA_StructInit()
+
+void OPA_StructInit (OPA.InitTypeDef *OPA.InitStruct)
+
+函数名称：void OPA_StructInit(OPA_InitTypeDef *OPA.InitStruct)
+
+功能描述：OPA结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>OPA.InitTypeDef *OPA.InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+OPA.InitTypeDef OPA.InitStruct;OPA.StructInit(&OPA.InitStruct); //初始化结构体
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_opa.c 第 106 行定义.
+
+# 2.70 Iks32mc08x_opa.c
+
+# 浏览该文件的文档.
+
+00001 00015 #include"1ks32mc08x_opa.h" 00016 00017 00041 void OPA_Init（enumOPA opa,OPA_InitTypeDef  $\ast$  OPA InitStruct) 00042 { 00043 uint32t tmp1,tmp2; 00044 SYS_WR_PROTECT  $=$  0x7e83; /\*解除系统寄存器写保护\*/ 00045 tmp1  $=$  SYS_AFE_REG0; 00046 tmp2  $=$  SYS_AFE_REG5; 00047 00048 if (opa  $= =$  OPA0) 00049 { 00050 tmp1  $\epsilon =$  （BIT0|BIT1); 00051 tmp1  $=$  OPA_InitStruct- >OPA.Gain; 00052 00053 tmp2  $\epsilon =$  BIT2; 00054 tmp2  $=$  OPA_InitStruct- >OPA.CLEna <<2; 00055 } 00056 elseif (opa  $= =$  OPA1) 00057 { 00058 tmp1  $\epsilon =$  （BIT2|BIT3); 00059 tmp1  $=$  （OPA.InitStruct- >OPA.Gain <<2); 00060 00061 tmp2  $\epsilon =$  BIT3; 00062 tmp2  $=$  （OPA.InitStruct- >OPA.CLEna <<3); 00063 } 00064 else if (opa  $= =$  OPA2) 00065 { 00066 tmp1  $\epsilon =$  （BIT4|BIT5); 00067 tmp1  $=$  （OPA.InitStruct- >OPA.Gain <<4); 00068 00069 tmp2  $\epsilon =$  BIT4; 00070 tmp2  $=$  （OPA.InitStruct- >OPA.CLEna <<4); 00071 } 00072 else if (opa  $= =$  OPA3) 00073 { 00074 tmp1  $\epsilon =$  （BIT6|BIT7); 00075 tmp1  $=$  （OPA.InitStruct- >OPA.Gain <<6); 00076 00077 tmp2  $\epsilon =$  BIT5; 00078 tmp2  $=$  （OPA.InitStruct- >OPA.CLEna <<5); 00079 } 00080 00081 SYS_AFE_REG0  $=$  tmp1; 00082 SYS_AFE_REG5  $=$  tmp2; 00083 SYS_WR_PROTECT  $=$  0x0; /\*开启系统寄存器写保护\*/ 00084 } 00085 00106 void OPA_StructInit(OPA.InitTypeDef  $\ast$  OPA.InitStruct) 00107 { 00108 OPA InitStruct- >OPA.Gain  $=$  PGA.GAIN.4P25; 00109 OPA InitStruct- >OPA.CLEna  $=$  DISABLE; 00110 } 00111 00112 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* 00113 函数名称： void OPA_OUT（enumOPA opa,FuncState state) 00114 功能描述： OPA外部输出，输出到外部p2.7引脚 00115 操作的表： 无 00116 输入参数： 无 00117 输出参数： 无 00118 返回值： 无 00119 其它说明： 00120 修改日期 版本号 修改人 修改内容 00121 00122 2022/4/20 V1.0 HuangMG 创建 00123 00124 void OPA_OUT（enumOPA opa,FuncState state) 00145 {
+
+00146 SYS.WR_PROTECT  $=$  0x7a83; /\*解除系统寄存器写保护\*/00147 if(state  $! =$  DISABLE)00148 {00149 if (opa  $= =$  OPA0)00150 {00151 SYS.AFE_REG2  $=$  0x01;00152 }00153 else if (opa  $= =$  DPA1)00154 {00155 SYS.AFE_REG2  $=$  0x02;00156 }00157 else if (opa  $= =$  DPA1)00158 {00159 SYS.AFE_REG2  $=$  0x03;00160 }00161 else if (opa  $= =$  DPA3)00162 {00163 SYS.AFE_REG2  $=$  0x04;00164 }00165 }else{00166 SYS.AFE_REG2  $=$  0x00;00167 }00168 SYS.WR_PROTECT  $=$  0x0; /\*开启系统寄存器写保护\*/00169 }00170 00171 /\*COPYRIGHT LINKO SEMICONDUCTOR \*\*\*\*END OF FILE\*\*\*/
+
+# 2.71 Source/lks32mc08x.spi.c文件参考
+
+文件名称：lks32mc08x.spi.c文件标识：无内容摘要：SPI外设驱动程序其它说明：无
+
+include"lks32mc08x.spi.h"lks32mc08x.spi.c的引用（Include）关系图：
+
+![](images/58598b2a9945e00d45e50dccd4ec9821a0cc559d73d5546f92f878e5f8beadb4.jpg)
+
+# 函数
+
+·void SPI.Init (SPI.TypeDef  $\ast$  SPIx,SPI.InitTypeDef  $\ast$  SPI.InitStruct) 函数名称：void SPI.Init(SPI.TypeDef\*SPIx,SPI.InitTypeDef\*SPI.InitStruct) ·void SPI.StructInit (SPI.InitTypeDef  $\ast$  SPI.InitStruct) 函数名称：void SPI.Init(SPI.TypeDef\*SPIx,SPI.InitTypeDef\*SPI.InitStruct) ·void SPI.SendData (SPI.TypeDef  $\ast$  SPIx, uint8. t n) 函数名称：void SPI.SendData(SPI.TypeDef  $\ast$  SPIx, uint8. t n) ·uint8. t SPI.ReadData (SPI.TypeDef  $\ast$  SPIx) 函数名称：uint8. t SPI.ReadData(SPI.TypeDef  $\ast$  SPIx) ·uint8. t SPI.GetlRQFlag (SPI.TypeDef  $\ast$  SPIx,u8 IRQ_Flag) 函数名称：uint8. t SPI.GetlRQFlag(SPI.TypeDef  $\ast$  SPIx,u8 IRQ_Flag) ·void SPI.ClearlRQFlag (SPI.TypeDef  $\ast$  SPIx,u8 IRQ_Flag) 函数名称：void SPI.ClearlRQFlag(SPI.TypeDef  $\ast$  SPIx,u8 IRQ_Flag)
+
+# 2.71.1 详细描述
+
+文件名称： Iks32mc08x.spi.c文件标识：无内容摘要： SPI外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015,LINKOSEMCONDUCTORCo.tld
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.spi.c 中定义
+
+# 2.71.2 函数说明
+
+# 2.71.2.1 SPI_ClearIRQFlag()
+
+void SPI_ClearIRQFlag (SPI_TypeDef *SPIx, u8 IRQ_Flag)
+
+函数名称：void SPI_ClearIRQFlag(SPI_TypeDef *SPIx, u8 IRQ_Flag)
+
+功能描述：清除SPI中断标志位
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">SPIx: SPI IRQ_Flag:</td></tr><tr><td>SPI_IF_TransDone</td><td>传输完成中断标志位</td></tr><tr><td>SPI_IF_SSElrl</td><td>传输异常中断标志位</td></tr><tr><td>SPI_IF_DataOver</td><td>传输溢出中断标志位</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（SPI_GetIRQFlag（SPI，SPI_IF_TransDone））//获取传输完成中断标志位{SPI_ClearIRQFlag（SPI，SPI_IF_TransDone）；//清除传输完成中断标志位1
+
+修改日志：
+
+在文件lks32mc08x.spi.c第227行定义
+
+# 2.71.2.2 SPI_GetIRQFlag()
+
+uint8_t SPI_GetIRQFlag (SPI_TypeDef *SPIx, u8 IRQ_Flag)
+
+函数名称：uint8_t SPI_GetIRQFlag(SPI_TypeDef *SPIx, u8 IRQ_Flag)功能描述：获取SPI中断标志位
+
+参见
+
+被引用内容：无
+
+参数  
+
+<table><tr><td rowspan="5">输入参数:</td><td colspan="2">SPIx: SPI IRQ_Flag:</td></tr><tr><td>SPI_IF_TransDone</td><td>传输完成中断标志位</td></tr><tr><td>SPI_IF_SSEAr</td><td>传输异常中断标志位</td></tr><tr><td>SPI_IF_DataOver</td><td>传输溢出中断标志位</td></tr><tr><td colspan="2"></td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if（SPI_GetIRQFlag（SPI,SPI_IF_TransDone））//获取传输完成中断标志位{1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月20日</td><td>1.0</td><td>Zhu Jie</td><td>创建</td></tr></table>
+
+修改日志：
+
+修改日志：在文件lks32mc08x.spi.c第186行定义.
+
+# 2.71.2.3 SPI_Init()
+
+void SPI_Init (SPI_TypeDef *SPIx, SPI_InitTypeDef *SPI_InitStructure)
+
+函数名称: void SPI_Init(SPI_TypeDef* SPIx, SPI_InitTypeDef* SPI_InitStructure)
+
+功能描述: SPI初始化函数
+
+参见
+
+参见被引用内容: SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI, SPI InitTypeDef *SPI InitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SPI_InitTypeDef SPI_InitStructure; SPI_StructInit(&SPI_InitStructure); //SPI结构体初始化 SPI_InitStructure.Duplex = SPI_Full; //双工模式设置 SPI_InitStructure.Mode = SPI_Master; //master主机模式 SPI_InitStructure.EN = ENABLE; //使能SPI模块 SPI_InitStructure.DMA = SPI_DMA_DISABLE; //选择SPI搬移方式，由MCU搬运数据到SPI SPI_InitStructure.Trig = 0; //内部自动触发传输 SPI_InitStructure.DataOrder = SPI_FIRSTSEND_MSB; //该字节先发送 MSB SPI_InitStructure.CPHA = 0; //第一个沿为发送数据时刻 SPI_InitStructure.CPOL = 0; //CLK默认高电平 SPI_InitStructure.BaudRate = 30; //传输速度96MHZ/(2*(30+1)) = 1.548MHZ SPI_InitStructure.ByteLength = 0; //发送零个字节 SPI_InitStructure.IRQEna = DISABLE; //关闭SPI各中断 SPI_InitStructure.SPI, &SPI_InitStructure()); //SPI初始化程序
+
+修改日志：
+
+在文件lks32mc08x.spi.c第49行定义.
+
+函数调用图：
+
+# 2.71.2.4 SPI_ReadData()
+
+uint8_t SPI_ReadData (SPI_TypeDef *SPIx)
+
+函数名称：uint8_t SPI_ReadData(SPI_TypeDef *SPIx)
+
+功能描述：SPI读缓冲区数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 SPI_RXValue = 0;SPI_RXValue = SPI_ReadData(SPI); //SPI接收一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.spi.c 第 155 行定义.
+
+# 2.71.2.5 SPI_SendData()
+
+void SPI_SendData (SPI_TypeDef *SPIx, uint8_t n)
+
+函数名称：void SPI_SendData(SPI_TypeDef *SPIx, uint8_t n)
+
+功能描述：SPI 发送数据
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI, n: 发送一字节数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SPI_SendData(SPI, 0x12); //SPI 发送 0x12 一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_spi.c 第 129 行定义.
+
+# 2.71.2.6 SPI_StructInit()
+
+void SPI_StructInit (SPI_InitTypeDef *SPI_InitStructure)
+
+函数名称：void SPI_InitStructure(
+
+功能描述：SPI结构体初始化
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>SPIx: SPI, SPI_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SPI_InitStructure SPI_InitStructure; SPI_StructInit(&SPI_InitStructure);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.spi.c 第 90 行定义.
+
+# 2.72 Iks32mc08x.spi.c
+
+# 浏览该文件的文档
+
+00001 00015 #include"1ks32mc08x.spi.h" 00016 00049 void SPIInit(SPITypeDef\* SPIx, SPIInitTypeDef\* SPIInitStruct) 00050{ 00051 SYS.WR_PROTECT  $= 0\times 7\exists 3$ $\neq \neq$  使能系统寄存器写操作  $\neq \neq$  00052 SYS.SFT.RST  $\begin{array}{rl}{\epsilon =} & {} \end{array}$  BIT8; //复位SPI 00053 SYS.SFT.RST  $\epsilon =$  BIT8; //释放SPI 00054 SYS.WR_PROTECT  $= 0\times 0$ $\neq \neq$  关闭系统寄存器写操作  $\neq \neq$  00055 SYS.ModuleClockCmd(SYS.Module.SPI,ENABLE); 00056 00057 SPix- >IE  $=$  SPI.InitStruct- >Trig <<3|（SPI.InitStruct- >IRQEnd ）; 00058 00059 SPix- >DIV  $=$  SPI.InitStruct- >BaudRate |（SPI.InitStruct- >DMA <<7); 00060 00061 SPix- >SIZE  $=$  SPI.InitStruct- >ByteLength; 00062 00063 SPix- >CFG  $=$  SPI.InitStruct- >EN |（SPI.InitStruct- >DataOrder <<1) 00064 |（SPI.InitStruct- >CPOL <<2)|（SPI.InitStruct- >CPMA <<3) 00065 |（SPI.InitStruct- >Mode <<4)|（SPI.InitStruct- >SS <<5) 00066 |（SPI.InitStruct- >Duplex <<6); 00067 00068} 00069 00090 void SPI_StructInit(SPI.initTypeDef\* SPI.InitStruct) 00091{ 00092 00093 SPI.initStruct- >Duplex  $=$  SPI.Full; 00094 SPI.initStruct- >SS  $= 0$  00095 SPI.initStruct- >Mode  $=$  SPI.Slave; 00096 SPI.initStruct- >CPOL  $= 0$  00097 SPI.initStruct- >CPHA  $= 0$  00098 SPI.initStruct- >DataOrder  $=$  DISABLE; 00099 SPI.initStruct- >EN  $= 0$  00100 00101 SPI.initStruct- >IRQEnd  $=$  DISABLE; 00102 SPI.initStruct- >Trig  $= 0$  00103 00104 SPI.initStruct- >DMA  $= 0$  00105 SPI.initStruct- >BaudRate  $= 3$  00106 00107 SPI.initStruct- >ByteLength  $= 0$  00108} 00109 00129 void SPI_SendData(SPI.TypeDef \*SPIx, uint8_t n) 00130{ 00131 SPix- >TX.DATA  $=$  n; 00132 00133 00134 00155 uint8_t SPI_ReadData(SPI.TypeDef \*SPIx) 00156{ 00157 return SPIx- >RX.DATA; 00158} 00159 00186 uint8_t SPI_GetIRQFlag(SPI.TypeDef \*SPIx,u8 IRQ_Flag) 00187{ 00188 u8 SPI_IRQFlag  $= 0$  00189 if(SPIx- >IE & IRQ_Flag) 00190 { 00191 SPI_IRQFlag  $= 1$  00192 } 00193 else 00194 {
+
+00195 SPIIRQFlag  $=$  0; 00196 1 00197 return SPIIRQFlag; 00198 1 00199 00227 void SPI.ClearIRQFlag(SPI._TypeDef \*sPIx,u8 IRQ_Flag) 00228 { 00229 SPix- >IE  $\vDash$  IRQ_Flag; 00230}
+
+# 2.73 Source/lks32mc08x_sys.c文件参考
+
+文件名称： lks32mc08x_sys.c文件标识：无内容摘要： SYS外设驱动程序其它说明：无
+
+include"lks32mc08x_sys.h"lks32mc08x_sys.c的引用（Include)关系图：
+
+![](images/c79dec70d3c5c61ff770df86f17c7a21d3dd29274154fbb92da53d824c59f1b1.jpg)
+
+# 函数
+
+- void SYS.Init (SYS.InitTypeDef \*SYS.InitStruct) 函数名称：void SYS.Init(SYS.InitTypeDef SYS.InitStruct) 
+- void SYS.StructInit (SYS.InitTypeDef \*SYS.InitStruct) 函数名称：void SYS.StructInit(SYS.InitTypeDef SYS.InitStruct) 
+- void SYS.ClearRst (void) 函数名称：void SYS.ClearRst(void) 
+- uint32.t SYS.GetRstSource (void) 函数名称：uint32.t SYS.GetRstSource(void) 
+- void SYS.FallSleep (void) 函数名称：void SYS.FallSleep(void) 
+- void SYS.SetWakeInterval (uint32.t nInterval) 函数名称：void SYS.SetWakeInterval(uint32.t nInterval) 
+- void SetWakeIO (uint32.t wakeIO, enumWakeTrigLevel trigLevel, uint8.t ena) 函数名称：void SetWakeIO(uint32.t wakeIO, enumWakeTrigLevel trigLevel, bool ena) 
+- static void SoftDelay (u32.cnt) 函数名称：static void SoftDelay(void) 
+- void Switch2PLL (void) 函数名称：void Switch2PLL(void) 
+- void Switch2HRC (void) 函数名称：void Switch2HRC(void) 
+- void SYS.WatchDogCmd (FuncState state) 函数名称：void SYS.WatchDogCmd(FuncState state) 
+- void SYS.EnablePORFilter (void) 函数名称：void SYS.EnablePORFilter(void)
+
+- void SYS_FeedDog (uint32_t timeOut)  函数名称: void SYS_FeedDog(uint32_t timeOut)- void SYS_ModuleClockCmd (uint32_t nModule, FuncState state)  函数名称: void SYS_ModuleClockCmd (uint32_t nModule, FuncState state)- void SYS.AnalogModuleClockCmd (uint32_t nModule, FuncState state)  函数名称: void SYS.AnalogModuleClockCmd (uint32_t nModule, FuncState state)- void SYS.SoftResetModule (uint32_t nModule)  函数名称: void SYS.SoftResetModule (uint32_t nModule)- void DSP_Init (void)  函数名称: void DSP_Init(void)
+
+# 变量
+
+- WAKE_InitTypeDef WAKE_InitStruct  低功耗初始化结构体定义
+
+# 2.73.1 详细描述
+
+文件名称： Iks32mc08x_sys.c  文件标识：无  内容摘要：SYS外设驱动程序  其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 中定义.
+
+# 2.73.2 函数说明
+
+# 2.73.2.1 DSP_Init()
+
+void DSP_Init (void)
+
+函数名称: void DSP_Init(void)  功能描述: DSP时钟使能
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>无</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+启示例代码：```bashDSP Instructions```
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第605行定义
+
+函数调用图：
+
+![](images/e366e3dad2cdcc7d66a46a6be6dfc1b783eb5e00958a04ddd4a4d9493da413f1.jpg)
+
+# 2.73.2.2 SetWakeIO()
+
+void SetWakeIO (    uint32_t wakeIO,    enumWakeTrigLevel trigLevel,    uint8_t ena )
+
+函数名称：void SetWakeIO(uint32_t wakeIO, enumWakeTrigLevel trigLevel, bool ena)
+
+功能描述：设置休眠唤醒IO
+
+参见
+
+唤醒电平选择枚举：enumWakeTrigLevel
+
+参数  
+
+<table><tr><td>输入参数:</td><td></td></tr><tr><td rowspan="3"></td><td>wakeIO = WAKEIO.P1.1; P1.1 外部唤醒使能。1: 使能; 0: 禁用
+wakeIO = WAKEIO.P1.0; P1.0 外部唤醒使能。1: 使能; 0: 禁用
+wakeIO = WAKEIO.P0.1; P0.1 外部唤醒使能。1: 使能; 0: 禁用
+wakeIO = WAKEIO.P0.0; P0.0 外部唤醒使能。1: 使能; 0: 禁用</td></tr><tr><td>enumWakeTrigLevel:
+唤醒电平选择:
+0: 低电平唤醒
+1: 高电平唤醒</td></tr><tr><td>ena:
+ENABLE: 开启IO唤醒
+DISABLE: 关闭IO唤醒</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SetWakeIO(WAKEIO.P0.0,WAKETRIG_LOW,ENABLE); //系统休眠时，使能P0.0作为低功耗唤醒IO，低电平唤醒
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 278 行定义.
+
+# 2.73.2.3 SoftDelay()
+
+static void SoftDelay（ u32 cnt)[static]
+
+函数名称：staticvoidSoftDelay（void)
+
+功能描述：延时函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>cnt: 延时cnt的空指令.NOP()</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：改函数只在此文件使用，主要用在Switch2PLL函数内
+
+警告
+
+无
+
+示例代码：
+
+SoftDelay（0xff）；//延时255个- NOP（时间1个- NOP大约按一个系统时钟周期计算
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 317 行定义.
+
+这是这个函数的调用关系图：
+
+![](images/cd5133ff039ea1b705ba03ffedd4b7744fc11f25a1817d63647692dd73169dae.jpg)
+
+# 2.73.2.4 Switch2HRC()
+
+void Switch2HRC (void)
+
+函数名称：void Switch2HRC(void)
+
+功能描述：休眠唤醒前一时刻，关闭高速时钟与BGP和掉电检测电路函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：系统低功耗休眠使用
+
+警告
+
+无
+
+示例代码：
+
+Switch2PLL();
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第374行定义.
+
+# 2.73.2.5 Switch2PLL()
+
+void Switch2PLL ( void )
+
+函数名称：voidSwitch2PLL（void)
+
+功能描述：休眠唤醒后，系统时钟切换到PLL时钟函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：系统低功耗唤醒使用
+
+警告
+
+无
+
+示例代码：
+
+Switch2PLL();
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第345行定义.
+
+函数调用图：
+
+# 2.73.2.6 SYS_AnalogModuleClockCmd()
+
+void SYS_AnalogModuleClockCmd ( uint32_t nModule, FuncState state)
+
+函数名称：void SYS_AnalogModuleClockCmd(uint32_t nModule, FuncState state)
+
+功能描述：模拟模块使能和停止
+
+参见
+
+被调用枚举：FuncState
+
+参数  
+
+<table><tr><td rowspan="15">输入参数:</td><td colspan="3">state: ENABLE使能, DISABLE关闭
+nModule: 参数可选:</td></tr><tr><td>宏定义</td><td>说明</td><td></td></tr><tr><td>SYS AnalogModule_ADC</td><td>BIT0</td><td>ADC模块</td></tr><tr><td>SYS AnalogModule(OPA0</td><td>BIT2</td><td>OPA0模块</td></tr><tr><td>SYS AnalogModule(OPA1</td><td>BIT3</td><td>OPA1模块</td></tr><tr><td>SYS AnalogModule(OPA2</td><td>BIT4</td><td>OPA2模块</td></tr><tr><td>SYS AnalogModule(OPA3</td><td>BIT5</td><td>OPA3模块</td></tr><tr><td>SYS AnalogModule.CMP0</td><td>BIT6</td><td>CMP0模块</td></tr><tr><td>SYS AnalogModule.CMP1</td><td>BIT7</td><td>CMP1模块</td></tr><tr><td>SYS AnalogModule.BGP</td><td>BIT8</td><td>BGP模块</td></tr><tr><td>SYS AnalogModule.RCH</td><td>BIT10</td><td>RCH模块</td></tr><tr><td>SYS AnalogModule.DAC</td><td>BIT12</td><td>DAC模块</td></tr><tr><td>SYS AnalogModule.TMP</td><td>BIT13</td><td>温度传感器</td></tr><tr><td>SYS AnalogModule.XTAL</td><td>BIT14</td><td>晶振</td></tr><tr><td>SYS AnalogModule.PLL</td><td>BIT15</td><td>PLL模块</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS AnalogModuleClockCmd（SYS AnalogModule.PLL,ENABLE);//使能PLL模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 583 行定义.
+
+这是这个函数的调用关系图：
+
+![](images/5cd7cecb554119e1c727a2a80e29dad26ee76d3b9cc047dd8829c6859ed6213e.jpg)
+
+# 2.73.2.7 SYS.ClearRst()
+
+void SYS.ClearRst (void)
+
+函数名称：void SYS.ClearRst(void)
+
+功能描述：SYS清除复位标志记录
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：请注意由于复位记录工作于低速时钟域，清除执行完成需要一定时间，不应清除后立即读记录状态
+
+警告
+
+无
+
+示例代码：
+
+u32 RSET_VALUE = 0;SYS.ClearRst(); //清除复位标志记录delay_ms(1);RSET_VALUE = SYS.GetRstSource(); //读取复位源记录值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第141行定义.
+
+# 2.73.2.8 SYS.EnablePORFilter()
+
+void SYS.EnablePORFilter( void )
+
+函数名称：void SYS.EnablePORFilter(void)
+
+功能描述：允许对POR进行滤波处理
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+该函数目前不开放，请不要使用
+
+示例代码：
+
+SYS.EnablePORFilter();
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.sys.c第439行定义
+
+# 2.73.2.9 SYS_FallSleep()
+
+void SYS_FallSleep（ void
+
+函数名称：voidSYS_FallSleep(void)
+
+功能描述：触发系统进入休眠状态
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>无</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS.FallSleep（）；//触发系统进入休眠状态
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第199行定义
+
+# 2.73.2.10 SYS.FeedDog()
+
+void SYS.FeedDog ( uint32_t timeout)
+
+函数名称：void SYS.FeedDog(uint32_t timeout)
+
+功能描述：喂狗
+
+参见
+
+参见被调用函数：无
+
+参数
+
+<table><tr><td rowspan="5">输入参数:</td><td colspan="3">timeOut: 看门狗超时时间</td></tr><tr><td>SYS_WD_TimeOut2s</td><td>0</td><td>2s 复位</td></tr><tr><td>SYS_WD_TimeOut4s</td><td>1</td><td>4s 复位</td></tr><tr><td>SYS_WD_TimeOut8s</td><td>2</td><td>8s 复位</td></tr><tr><td>SYS_WD_TimeOut64s</td><td>3</td><td>64s 复位</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS_FeedDog（SYS_WD_TimeOut（2s）；//看门狗喂狗且设置下一次如果2s不喂狗则芯片复位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第473行定义
+
+# 2.73.2.11 SYS.GetRstSource0
+
+uint32_t SYS_GetRstSource（ void
+
+函数名称：uint32_tSYS_GetRstSource（void)
+
+功能描述：获得SYS复位源信号
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>无</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：复位源记录值
+
+注解
+
+注解其它说明：返回值位介绍
+
+警告
+
+无
+
+<table><tr><td>BIT3</td><td>看门狗复位发生标志</td><td>高有效</td></tr><tr><td>BIT2</td><td>按键复位发生标志</td><td>高有效</td></tr><tr><td>BIT1</td><td>HPOR 复位发生标志</td><td>高有效</td></tr><tr><td>BIT0</td><td>LPOR 复位发生标志</td><td>高有效</td></tr></table>
+
+示例代码：
+
+示例代码：u32 RSET.VALUE = 0;  RSET.VALUE = SYS.GetRstSource(); //读取复位源记录值  如 RSET.VALUE = 0x01; 则LPOR发生复位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第175行定义
+
+# 2.73.2.12 SYS.Init()
+
+void SYS.Init（ SYS.InitTypeDef  $\ast$  SYS.InitStruct
+
+函数名称：void SYS.Init（SYS.InitTypeDef\*SYS.InitStruct)
+
+功能描述：SYS模块初始化函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SYS_InitTypeDef* SYS_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：一般不使用该函数，因为涉及模块较多，比较杂乱，对应里面的配置在各模块初始化单独配置。
+
+警告
+
+无
+
+示例代码：
+
+SYS InitTypeDef SYS InitStruct;SYS.StructInit(&SYS.InitStruct);SYS.InitStruct.PLl_SrcSel  $=$  SYS.PLLSRSEL_RCH; //使用内部4MHz晶振作为时钟输入源SYS.Init(&SYS.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第47行定义
+
+# 2.73.2.13 SYS ModuleClockCmd()
+
+void SYS ModuleClockCmd (    uint32_t nModule,    FuncState state)
+
+函数名称：void SYS ModuleClock Cmd(uint32_t nModule, FuncState state)功能描述：数字模块时钟使能和停止
+
+参见
+
+被调用枚举：FuncState
+
+参数
+
+<table><tr><td rowspan="11">输入参数:</td><td colspan="3">state: ENABLE使能, DISABLE关闭
+nModule: 参数可选:</td></tr><tr><td>宏定义</td><td>原始值</td><td>说明</td></tr><tr><td>SYS Module I2C</td><td>BIT0</td><td>I2C模块</td></tr><tr><td>SYS Module HALL</td><td>BIT1</td><td>HALL模块</td></tr><tr><td>SYS Module TIMER</td><td>BIT2</td><td>UTIMER模块</td></tr><tr><td>SYS Module MCPWM</td><td>BIT3</td><td>MCPWM模块</td></tr><tr><td>SYS Module UART0</td><td>BIT4</td><td>UART0模块</td></tr><tr><td>SYS Module UART1</td><td>BIT5</td><td>UART1模块</td></tr><tr><td>SYS Module DSP</td><td>BIT6</td><td>DSP模块</td></tr><tr><td>SYS Module CAN</td><td>BIT7</td><td>CAN模块</td></tr><tr><td>SYS Module SPI</td><td>BIT8</td><td>SPI模块</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS Module Clock Cmd (SYS Module SPI, ENABLE); //使能SPI时钟
+
+修改日志：
+
+在文件 Iks32mc08x_sys.c 第 550 行定义.
+
+这是这个函数的调用关系图:
+
+![](images/cb45a22e573e5eadf54218291a3af4e5dac8ab66eefa6edf0b82465e4e0ef308.jpg)
+
+# 2.73.2.14 SYS_SetWakeInterval()
+
+void SYS_SetWakeInterval (    uint32_t nInterval)
+
+函数名称: void SYS_SetWakeInterval(uint32_t nInterval)
+
+功能描述: 设置系统休眠唤醒周期
+
+参见
+
+被调用函数: 无
+
+参数  
+
+<table><tr><td rowspan="10">输入参数:</td><td colspan="3">nInterval: 唤醒时间</td></tr><tr><td>宏定义</td><td>原始值</td><td>说明</td></tr><tr><td>SYS.WakeInterval.025s</td><td>0x00</td><td>0.25s</td></tr><tr><td>SYS.WakeInterval.05s</td><td>0x01</td><td>0.5s</td></tr><tr><td>SYS.WakeInterval.1s</td><td>0x02</td><td>1s</td></tr><tr><td>SYS.WakeInterval.2s</td><td>0x03</td><td>2s</td></tr><tr><td>SYS.WakeInterval.4s</td><td>0x04</td><td>4s</td></tr><tr><td>SYS.WakeInterval.8s</td><td>0x05</td><td>8s</td></tr><tr><td>SYS.WakeInterval.16s</td><td>0x06</td><td>16s</td></tr><tr><td>SYS.WakeInterval.32s</td><td>0x07</td><td>32s</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS.SetWakeInterval（SYS.WakeInterval.1s）；//系统休眠时，设置系统在1s后唤醒
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.sys.c第297行定义
+
+# 2.73.2.15 SYS.SoftResetModule()
+
+void SYS_SoftResetModule (    uint32_t nModule)
+
+函数名称：void SYS_SoftResetModule(uint32. t nModule)
+
+功能描述：数字模块软复位
+
+参见
+
+参见被调用枚举：无
+
+参数  
+
+<table><tr><td rowspan="11">输入参数:</td><td colspan="3">state: ENABLE使能, DISABLE关闭
+nModule: 参数可选:</td></tr><tr><td>宏定义</td><td>原始值</td><td>说明</td></tr><tr><td>SYS_Module.12C</td><td>BIT0</td><td>I2C模块</td></tr><tr><td>SYS_Module.HALL</td><td>BIT1</td><td>HALL模块</td></tr><tr><td>SYS_Module.TIMER</td><td>BIT2</td><td>UTIMER模块</td></tr><tr><td>SYS_Module.MCPWM</td><td>BIT3</td><td>MCPWM模块</td></tr><tr><td>SYS_Module.UART0</td><td>BIT4</td><td>UART0模块</td></tr><tr><td>SYS_Module.UART1</td><td>BIT5</td><td>UART1模块</td></tr><tr><td>SYS_Module.DSP</td><td>BIT6</td><td>DSP模块</td></tr><tr><td>SYS_Module.CAN</td><td>BIT7</td><td>CAN模块</td></tr><tr><td>SYS_Module.SPI</td><td>BIT8</td><td>SPI模块</td></tr><tr><td>输出参数:</td><td colspan="3">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：//软复位SPI模块，清除SPI寄存器配置，FC指针复位SYS_SoftResetModule(SYS_Module.SPI);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月14日</td><td>1.1</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：增加延时函数，等待寄存器复位完毕与释放复位操作。
+
+在文件lks32mc08x_sys.c第637行定义.函数调用图：
+
+![](images/c492b6b9231b6f282f85e6ef169907a9444f65cd6d6ff6fe1c8560e35ac41393.jpg)
+
+这是这个函数的调用关系图：
+
+![](images/ca1b821a1b1ca1c681aa2dd25eb68f35210ef4121ba86fa3b558218ba96b4a24.jpg)
+
+# 2.73.2.16 SYS.StructInit()
+
+void SYS.StructInit ( SYS.InitTypeDef * SYS.InitStruct )
+
+函数名称：void SYS.StructInit(SYS.InitTypeDef* SYS.InitStruct)
+
+功能描述：SYS结构体初始化
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>SYS_InitTypeDef* SYS_InitStructure</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYS.InitTypeDef SYS.InitStruct; SYS.StructInit(&SYS.InitStruct);
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年07月02日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x_sys.c第104行定义.
+
+# 2.73.2.17 SYS.WatchDogCmd()
+
+void SYS.WatchDogCmd (FuncState state)
+
+函数名称：void SYS.WatchDogCmd(FuncState state)
+
+功能描述：看门狗模块使能函数
+
+参见
+
+被调用函数：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>state: ENABLE使能看门狗/DISABLE关闭开门狗</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+SYSWatchDogCmd（ENABLE）;//使能看门狗模块
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月28日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.sys.c第405行定义.
+
+# 2.73.3 变量说明
+
+# 2.73.3.1 WAKE.InitStruct
+
+WAKE.InitTypeDef WAKE.InitStruct
+
+低功耗初始化结构体定义
+
+在文件lks32mc08x.sys.c第22行定义.
+
+# 2.74 Iks32mc08x_sys.c
+
+# 浏览该文件的文档
+
+00001 00016 #include"1ks32mc08x.sys.h" 00017 00022 WAKE_InitTypeDef WAKE_InitStruct; 00023 00047 void SYS_Init(Sys.InitTypeDef  $\equiv$  SYS.InitStruct) 00048{ 00049 uint32t RCHPd,XTALPdn; 00050 uint32t tmp1,tmp2; 00051 SYS.WR.PROTECT  $= 0\times 7$  a83；/\*开启寄存器写使能\*/ 00052 tmp1  $=$  SYS.AFE.REG6; 00053 tmp1  $=$  SYS.PLLR.SrSel  $\epsilon_{*}^{*}$  15); 00054 tmp1  $\equiv$  (SYS.InitStruct- >PLL.SrSel << 15); 00055 SYS.AFE.REG6  $=$  tmp1; 00056 00057 if (SYS.InitStruct- >PLL.SrSel  $= =$  SYS.PLLSRSEL.CRYSTAL) 00058 { 00059 RCHPd  $=$  ENABLE; /\*RCH（4MHz）时钟关闭  $\ast$  00060 XTALPdn  $=$  ENABLE; /\*晶体起振电路开启\*/ 00061 } 00062 else 00063 { 00064 RCHPd  $=$  DISABLE; /\*RCH（4MHz）时钟不关闭  $\ast$  00065 XTALPdn  $=$  DISABLE; /\*晶体起振电路不开启\*/ 00066 } 00067 00068 tmp2  $=$  SYS.AFE.REG5; 00069 tmp2  $\epsilon =$  OxBBFF; 00070 tmp2  $\equiv$  (RCHPd << 10); 00071 tmp2  $\equiv$  (XTALPdn  $< < 14$  ； 00072 SYS.AFE.REG5  $=$  tmp2; 00073 00074 SYS.CLK.CFG  $=$  SYS.InitStruct- >PLL.DivSel  $^+$  (SYS.InitStruct- >PLL.ReDiv << 1); 00075 SYS.RST.CFG  $=$  SYS.InitStruct- >WDT.Ena | (SYS.InitStruct- >PORFilter.Ena << 1); 00076 00077 SYS.CLK.DIV0  $=$  SYS.InitStruct- >Clk.DivSPI; 00078 SYS.CLK.DIV2  $=$  SYS.InitStruct- >Clk.DivUART; 00079 SYS.CLK.FEN  $=$  SYS.InitStruct- >Clk.FEN; 00080 SYS.WR.PROTECT  $= 0\times 0$  0 00081 } 00082 00083 00104 void SYS.StructInit(Sys.InitTypeDef  $\ast$  SYS.InitStruct) 00105 { 00106 SYS.InitStruct- >PLL.SrSel  $=$  SYS.PLLSRSEL.RCH; 00107 SYS.InitStruct- >PLL.DivSel  $=$  OxFF; 00108 SYS.InitStruct- >PLL.ReDiv  $=$  SYS.PLREDIV_1; 00109 00110 SYS.InitStruct- >Clk.DivSPI  $=$  SYS.Clk.SPIDivl; 00111 SYS.InitStruct- >Clk.DivUART  $=$  SYS.Clk.UARTDivl; 00112 SYS.InitStruct- >Clk.REN  $= 0$  0 00113 00114 SYS.InitStruct- >WDT.Ena  $=$  DISABLE; 00115 SYS.InitStruct- >PORFilter.Ena  $=$  DISABLE; 00116 } 00117 00141 void SYS.ClearRst(void) 00142{ 00143 SYS.WR.PROTECT  $= 0\times 7$  a83; /\*开启寄存器写使能\*/ 00144 SYS.CLR.RST  $=$  OxDEAD; 00145 SYS.WR.PROTECT  $= 0\times 0$  0 00146 } 00147 00175 uint32.t SYS.GetRstSource(void) 00176{ 00177 return SYS.RST.SRC; 00178 } 00179 00199 void SYS.FallSleep(void) 00200{ 00201 SYS.WR.PROTECT  $= 0\times 7$  a83; /\*开启寄存器写使能\*/ 00202 SYS.CLK.SLP  $=$  OxDEAD; 00203 SYS.WR.PROTECT  $= 0\times 0$  0 00204 _WFI();/\*PC指针停止运行，等待中断\*/ 00205 } 00206 00237 void SYS.SetWakeInterval(uint32.t nInterval) 00238{ 00239 uint32.t tempReg  $=$  SYS.RST.CFG; 00240 SYS.WR.PROTECT  $= 0\times 7$  a83; /\*开启寄存器写使能\*/ 00241 tempReg  $\equiv$  (nInterval << 2); 00242 SYS.RST.CFG  $=$  tempReg;
+
+00243 SYS_WR_PROTECT  $= 0\times 0$  00244 00245 00278 void SetWakeIO(uint32_t wakeIO, enumWakeTrigLevel trigLevel, uint8_t ena) 00279{ 00280 if (ena  $= =$  ENABLE) 00281 { 00282 GPIO.WAKE_EN  $\parallel =$  wakeIO; 00283 00284 } 00285 { 00286 GPIO.WAKE_EN  $\xi =$  wakeIO; 00287 1 00288 00289 if (trigLevel  $= =$  WAKETRIG_HIGH) 00290 { 00291 GPIO.WAKE_POL  $\parallel =$  wakeIO; 00292 1 00293 else 00294 { 00295 GPIO.WAKE_POL  $\xi =$  wakeIO; 00296 00297 } 00317 static void SoftDelay（u32 cnt) 00318 { 00319 volatile u32 t_cnt; 00320 for (t_cnt  $= 0$  ;t_cnt  $<$  cnt;t_cnt++) 00321 { 00322 _NOP(); 00323 } 00324 00325 00345 void Switch2PLL(void) 00346{ 00347 SYS_WR_PROTECT  $= 0\times 7\& 83$  /★开启寄存器写使能\*/ 00348 SYS_AFE_REG5  $=$  WAKE_InitStruct.AFE_REG5_RECORD; /\*开启PLL,HRC,BGP\*/ 00349 SoftDelay（200); 00350 SYS_AFE_REG6  $=$  WAKE_InitStruct.AFE_REG6_RECORD; /\*开启掉电检测电路\*/ 00351 SYS_CLK_CFG  $=$  WAKE_InitStruct.CLK_CFG_RECORD; /\*将主时钟切换到PLL时钟\*/ 00352 SYS_WR_PROTECT  $= 0\times 0$  00353} 00354 00374 void Switch2HRC(void) 00375{ 00376 SYS_WR_PROTECT  $= 0\times 7\& 83$  /\*开启寄存器写使能\*/ 00377 WAKE_InitStruct.AFE_REG5_RECORD  $=$  SYS_AFE_REG5; 00378 WAKE_InitStruct.AFE_REG6_RECORD  $=$  SYS_AFE_REG6; 00379 WAKE_InitStruct.CLK_CFG_RECORD  $=$  SYS_CLK_CFG; 00380 SYS_CLK_CFG  $= 0$  切换到HRC时钟\*/ 00381 SYS_AFE_REG5  $= 0\times 5000$  /\*准备关闭PLL,HRC,BGP\*/ 00382 SYS_AFE_REG6  $\begin{array}{rl}{| =} & {1;} \end{array}$  关闭掉电检测电路\*/ 00383 SYS_WR_PROTECT  $= 0\times 0$  00384} 00385 00405 void SYS_WatchDogCmd（FuncState state) 00406{ 00407 SYS_WR_PROTECT  $= 0\times 7\& 83$  //解除写保护 00408 if (state  $= =$  ENABLE) 00409 { 00410 SYS_RST_CFG  $\parallel =$  BIT0; //使能看门狗 00411 00412 } 00413 else 00414 { 00415 SYS_RST_CFG  $\xi =$  （BIT0;）//关闭看门狗 00416 } 00417 SYS_WR_PROTECT  $= 0\times 0$  00418} 00419 00420 void SYS_EachIsPDE（filter::uid) 00440{ 00441 uint32_t tempReg  $=$  SYS_RST_CFG; 00442 SYS_WR_PROTECT  $= 0\times 7\& 83$  //解除系统寄存器写保护 00443 tempReg  $\parallel =$  BITl; 00444 SYS_RST_CFG  $=$  tempReg; 00445 SYS_WR_PROTECT  $= 0\times 0$  /\*关闭系统寄存器写操作\*/ 00446} 00447 00473 void SYSFeedDog(uint32_t timeOut) 00474{ 00475 SYS_WR_PROTECT  $= 0\times \mathrm{CAFE}$  //0xCAFE; 00476 00477 if (timeOut  $= =$  (uint32_t)SYS_WD_TimeOut64s) 00478 { 00479 SYS_WDT_CLR  $= 0\times 7989$  //1001 00480 } 00481 else if (timeOut  $= =$  (uint32_t)SYS_WD_TimeOut8s)
+
+00482 {00483 {SYS_WDT CLR  $=$  0x798B;//101100484 }00485 else if (timeOut  $= =$  (uint32. t)SYS_WD_TimeOut4s)00486 {00487 SYS.WDT CLR  $=$  0x798D;//110100488 }00489 else //SYS.WD_TimeOut2s00490 {00491 SYS.WDT CLR  $=$  0x798F;//111100492 }0049300494 SYS.WR_PROTECT  $= 0$  00495}0049600530 void SYS.ModuleClockCmd(uint32t nModule, FuncState state)00531{00532 SYS.WR_PROTECT  $=$  0x7983；//解除系统寄存器写保护0053300534 if (state  $! =$  DISABLE)00535 {00536 SYS.CLK.FEN  $\mid =$  nModule;00537 }00538 else00539 {00540 SYS.CLK.FEN  $\epsilon =$  "nModule;00541 }0054200543 SYS.WR_PROTECT  $= 0\times 0$  //关闭系统寄存器写操作\*/00544}0054500583 void SYS.AnalogModuleClockCmd(uint32t nModule,FuncState state)00584 {00585 SYS.WR_PROTECT  $= 0\times 7$  983；//解除系统寄存器写保护0058600587 if (state  $! =$  DISABLE)00588 {00589 SYS.AFE_REG5  $\mid =$  nModule;00590 }00591 else00592 {00593 SYS.AFE_REG5  $\epsilon =$  "nModule;00594 }00595 SYS.WR_PROTECT  $= 0\times 0$  //关闭系统寄存器写操作\*/00596}0059700637 void SYS.SoftResetModule(uint32. t nModule)00638 {00639 SYS.WR_PROTECT  $= 0\times 7$  983;00640 SYS.SFT_RST  $=$  nModule; //模块复位\*/00641 SoftDelay(0xff); //等待寄存器复位完毕\*/00642 SYS.SFT_RST  $\epsilon =$  "nModule; //释放复位操作\*/00643 SYS.WR_PROTECT  $= 0\times 0$  //关闭系统寄存器写操作\*/00644}0064500665 void DSP_Init(void)00666 {00667 SYS.ModuleClockCmd(SYS.Module.DSP,ENABLE);/\*DSP时钟使能\*/00668}0066900670 /\* \*END OF FILE\*\*\*/
+
+# 2.75 Source/lks32mc08x.tim.c 文件参考
+
+文件名称：lks32mc08x.tim.c  文件标识：无  内容摘要：定时器外设驱动程序  其它说明：无
+
+include "lks32mc08x.tim.h"lks32mc08x.tim.c的引用（Include）关系图：
+
+![](images/9e960746aeedd55afa977af833956f20677ef844593553999eaf55388d675114.jpg)
+
+# 函数
+
+·void TIM_TimerInit (TIM_TimerTypeDef \*TIMERx,TIM_TimerInitTypeDef \*TIM_TimerInitStruct) 函数名称：void TIM_Timerlnit(TIM_TimerTypeDef \*TIMERx,TIM_TimerInitTypeDef \*TIM_TimerInitStruct) ·void TIM_TimerStrutlnit(TIM_TimerInitTypeDef \*TIM_TimerInitStruct) 函数名称：void TIM_TimerStrutlnit(TIM_TimerlnitTypeDef \*TIM_TimerlnitStruct) ·void TIM_TimerCmd(TIM_TimerTypeDef \*TIMERx,FuncState state) 函数名称：void TIM_TimerCmd(TIM_TimerTypeDef \*TIMERx,FuncState state) ·uint32_t TIM_GetIRQFlag(TIM_TimerTypeDef \*TIMERx,u32 timer_if) 函数名称：uint32_t TIM_GetIRQFlag(TIM_TimerTypeDef \*TIMERx,u32 timer_if) ·void TIM_ClearIRQFlag(TIM_TimerTypeDef \*TIMERx, uint32_t tempFlag) 函数名称：uint32_t TIM_ClearIRQFlag(TIM_TimerTypeDef \*TIMERx,u32 timer_if) ·uint32_t TIM_Timer_GetCount(TIM_TimerTypeDef \*TIMERx) 函数名称：uint32_t TIM_Timer_GetCount(TIM_TimerTypeDef \*TIMERx) ·uint32_t TIM_Timer_GetCMPT0(TIM_TimerTypeDef \*TIM_TIMERx) 函数名称：uint32_t TIM_Timer_GetCMPT0(TIM_TimerTypeDef \*TIM_TIMERx) ·uint32_t TIM_Timer_GetCMPT1(TIM_TimerTypeDef \*TIM_TIMERx) 函数名称：uint32_t TIM_Timer_GetCMPT1(TIM_TimerTypeDef \*TIM_TIMERx) ·void TIM_ECDlnit(TIM_ECDTypeDef \*ECDx,TIM_ECDlnitTypeDef \*TIM_ECDlnitStruct) 函数名称：void TIM_ECDlnit(TIM_ECDTypeDef \*ECDx,TIM_ECDlnitTypeDef \*TIM_ECDlnitStruct) ·void TIM_ECDStructlnit(TIM_ECDlnitTypeDef \*TIM_ECDlnitStruct) 函数名称：void TIM_ECDlnit(TIM_ECDTypeDef \*ECDx,TIM_ECDlnitTypeDef \*TIM_ECDlnitStruct) ·void TIM_ECDCmd(TIM_ECDTypeDef \*ECDx,FuncState state) 函数名称：void TIM_ECDCmd(TIM_ECDTypeDef \*ECDx,FuncState state) ·uint32_t TIM_ECD_GetCount(TIM_ECDTypeDef \*TIM_ECDx) 函数名称：uint32_t TIM_ECD_GetCount(TIM_ECDTypeDef \*TIM_ECDx) ·uint32_t ECD_GetIRQFlag(TIM_ECDTypeDef \*ECDx,u32 timer_if) 函数名称：uint32_t ECD_GetIRQFlag(TIM_ECDTypeDef \*ECDx,u32 timer_if) ·void ECD_ClearIRQFlag(TIM_ECDTypeDef \*ECDx, uint32_t tempFlag) 函数名称：void ECD_ClearIRQFlag(TIM_ECDTypeDef \*ECDx，uint32_t tempFlag)
+
+# 2.75.1 详细描述
+
+文件名称：lks32mc08x.tim.c  文件标识：无  内容摘要：定时器外设驱动程序  其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_tim.c 中定义.
+
+# 2.75.2 函数说明
+
+# 2.75.2.1 ECD.ClearIRQFlag()
+
+void ECD.ClearIRQFlag (TIM.ECDTypeDef * ECDx, uint32_t tempFlag)
+
+函数名称：void ECD_ClearIRQFlag;TIM.ECDTypeDef * ECDx, uint32_t tempFlag;
+
+功能描述：清除ECD中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">ECDx: ECD0/ECD1</td></tr><tr><td>timer_if:</td><td></td></tr><tr><td>ECD_IF_UNDERFLOW</td><td>Encoder下溢中断</td></tr><tr><td>ECD_IF_OVERFLOW</td><td>Encoder上溢中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(ECD.GetIRQFlag(ECDO,ECD- IF_OVERFLOW)) //获取编码器上溢中断标志{    ECD.ClearIRQFlag(ECDO,ECD- IF_OVERFLOW); //清除编码器上溢中断标志}
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_tim.c 第 712 行定义.
+
+# 2.75.2.2 ECD.GetIRQFlag()
+
+uint32_t ECD.GetIRQFlag(TIM_ECDTypeDef * ECDx, u32 timer_if)
+
+函数名称：uint32_t ECD.GetIRQFlag(TIM_ECDTypeDef * ECDx, u32 timer_if)
+
+功能描述：获取ECD中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="3">输入参数:</td><td colspan="2">ECDx: ECD0/ECD1
+timer_if:</td></tr><tr><td rowspan="2">ECD_IF_UNDERFLOW
+ECD_IF_OVERFLOW</td><td>Encoder下溢中断</td></tr><tr><td>Encoder上溢中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(ECD.GetIRQFlag(ECDO,EOLOIF_OVERFLOW))//获取上溢中断标志 { }
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第649行定义
+
+# 2.75.2.3 TIM.ClearIRQFlag()
+
+void TIMClearIRQFlag ( TIM.TimerTypeDef  $\ast$  TIMERx, uint32. t tempFlag)
+
+函数名称：uint32. t TIM.ClearIRQFlag(TIM.TimerTypeDef  $\ast$  TIMERx,u32 timer.if)
+
+功能描述：清除TIM中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="5">输入参数:</td><td colspan="2">TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td colspan="2">timer_if:</td></tr><tr><td>TIMER_IF_CH1</td><td>Timer CH1中断,比较或捕获中断</td></tr><tr><td>TIMER_IF_CH0</td><td>Timer CH0中断,比较或捕获中断</td></tr><tr><td>TIMER_IF_ZERO</td><td>Timer 过零中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if(TIMGetIRQFlag（TIMERO,TIMER_IF_CH0））//判断UTimer0的CHO是否发生比较中断TIM.ClearIRQFlag（TIMERO,TIMER_IF_CH0）；//清除UTimer0通道0比较中断标志位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第337行定义.
+
+# 2.75.2.4 TIM_ECD.GetCount()
+
+uint32_t TIM_ECD.GetCount（TIM_ECDTypeDef \*TIM_ECDx）
+
+函数名称：uint32. tTIM_ECD.GetCount(TIM_ECDTypeDef \*TIM_ECDx)
+
+功能描述：编码器计数值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ECDx: ECDG/ECD1</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：uint32_t ECD0. Value = 0;  ECD0. Value = TIM_ECD_GetCount(ECD0); //获取编码器0计数值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第618行定义.
+
+# 2.75.2.5 TIM_ECDCmd()
+
+void TIM_ECDCmd ( TIM_ECDTypeDef * ECDx, FuncState state )
+
+函数名称：void TIM_ECDCmd(TIM_ECDTypeDef * ECDx, FuncState state)
+
+功能描述：编码器ECDx使能和停止
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ECDx: ECD0/ECD1 FuncState state: 使能与失能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：TIM_ECDCmd(ECDO, ENABLE); // ECDO模块使能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第568行定义.
+
+# 2.75.2.6 TIM_ECDInit()
+
+void TIM_ECDInit(TIM_ECDTypeDef * ECDx, TIM_ECDInitTypeDef * TIM_ECDInitStruct)
+
+函数名称：void TIM_ECDInit(TIM_ECDTypeDef * ECDx, TIM_ECDInitTypeDef * TIM_ECDInitStruct)
+
+功能描述：编码器初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd();
+
+参数
+
+<table><tr><td>输入参数:</td><td>ECDx: ECD0ECD1
+TIM_ECDInitTypeDef *TIM_ECDInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TIM_ECDInitTypeDef TIM_ECDInitStruct; TIM_ECDStructInit(&TIM_ECDInitStruct); TIM_ECDInitStruct.ECD_ClockDiv = ECD_Clk_Div1; //96M TIM_ECDInitStruct.ECD_Filler0 = 10; //CH0滤波，滤波宽度为1userFilter0*8 个时钟周期 ECD_Filler00*15 TIM_ECDInitStruct.ECD_Filler1 = 10; //CH+SIGN TIM_ECDInitStruct.ECD_Mode = ECD_Mode_CCWSIGN; //CCW+SIGN，仅计数信号上升沿 TIM_ECDInitStruct.ECD_TH = 4096; //计数门限 TIM_ECDInitStruct.ECD_IRQEna = ECD_IRQEna_OverFlow; //使能上溢中断 TIM_ECDInit(ECD0, &TIM_ECDInitStruct); TIM_ECDCmd(ECD0, ENABLE); //使能ECD0模块
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：增加定时器时钟使能函数
+
+在文件lks32mc08x.tim.c第467行定义
+
+函数调用图：
+
+![](images/b8a9aeef1555bf8de5c63a44dbd2c1cbe41758dba8bae7b362835285f08064ae.jpg)
+
+# 2.75.2.7 TIM.ECDStructInit()
+
+void TIM_ECDStructInit ( TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct )
+
+函数名称：void TIM_ECDInit(TIM_ECDTypeDef  $\ast$  ECDx,TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct)
+
+功能描述：编码器结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_ECDInitTypeDef *TIM_ECDInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：TIM_ECDInitTypeDef TIM_ECDInitStruct; TIM_ECDStructInit(&TIM_ECDInitStruct); //编码器结构体初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x.tim.c 第 538 行定义.
+
+# 2.75.2.8 TIM.GetIRQFlag()
+
+uint32_t TIM.GetIRQFlag (TIM.TimerTypeDef * TIMERx, u32 timer_if)
+
+函数名称：uint32_t TIM.GetIRQFlag(TIM.TimerTypeDef * TIMERx, u32 timer_if)
+
+功能描述：获取TIM中断标志
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td rowspan="4">输入参数:</td><td colspan="2">TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>TIMER_IF_CH1</td><td>Timer CH1中断, 比较或捕获中断</td></tr><tr><td>TIMER_IF_CH0</td><td>Timer CH0中断, 比较或捕获中断</td></tr><tr><td>TIMER_IF_ZERO</td><td>Timer 过零中断</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：0或1，对应中断标志置位返回1，未置位返回0
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if(TIM.GetIRQFlag(TIMERO,TIMER_IF_CH0)) //判断UTimer0的CHO是否发生比较中断{
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.tim.c 第 266 行定义.
+
+# 2.75.2.9 TIM.Timer.GetCMPT0()
+
+uint32_t TIM.Timer.GetCMPT0 ( TIM.TimerTypeDef * TIM_TIMERx )
+
+函数名称：uint32_t TIM.Timer.GetCMPT0(TIM.TimerTypeDef * TIM_TIMERx)
+
+功能描述：获取定时器通道0捕获值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：定时器通道0捕获值
+
+注解
+
+其它说明：当定时器发生捕获事件时，将捕获时刻的cnt值存储到该寄存器中
+
+警告
+
+无
+
+示例代码：
+
+uint32_t TIMER0_CAPValue = 0; TIMER0_CAPValue = TIM.Timer.GetCMPT0(TIMERO); //获取定时器0捕获值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.tim.c 第 402 行定义.
+
+# 2.75.2.10 TIM_Timer.GetCMPT1()
+
+uint32_t TIM_Timer.GetCMPT1(TIM_TimerTypeDef *TIM_TIMERx)
+
+函数名称：uint32_t TIM_Timer.GetCMPT1(TIM_TimerTypeDef *TIM_TIMERx)
+
+功能描述：获取定时器通道1捕获值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_TIMERx: TIMERO/TIMER1/TIMER2/TIMER3</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：定时器通道1捕获值
+
+注解
+
+其它说明：当定时器发生捕获事件时，将捕获时刻的cnt值存储到该寄存器中
+
+警告
+
+无
+
+示例代码：
+
+uint32_t TIMER0. CAPValue = 0; TIMER0. CAPValue = TIM_Timer.GetCMPT1(TIMERO); //获取定时器0捕获值
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第427行定义.
+
+# 2.75.2.11 TIM.Timer.GetCount()
+
+uint32_t TIM.Timer.GetCount (TIM.TimerTypeDef * TIMERx)
+
+函数名称：uint32_t TIM.Timer.GetCount(TIM.TimerTypeDef * TIMERx)
+
+功能描述：获取Timer计数值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIMERx: TIMER0/TIMER1/TIMER2/TIMER3</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+uint32_t TIMER0. Value = 0; TIMER0. Value = TIM.Timer.GetCount(TIMERO); //获取定时器0计数值
+
+修改日志：
+
+在文件lks32mc08x.tim.c第377行定义.
+
+# 2.75.2.12 TIM_TimerCmd()
+
+void TIM_TimerCmd (TIM.TimerTypeDef * TIMERx, FuncState state)
+
+函数名称：void TIM_TimerCmd(TIM_TimerTypeDef *TIMERx, FuncState state)
+
+功能描述：定时器TIMERx使能和停止
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIMERx: TIMERO/TIMER1/TIMER2/TIMER3 FuncState state: 使能与失能</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TIM_TimerCmd(TIMERO, ENABLE); // Timer0模块使能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第196行定义
+
+# 2.75.2.13 TIM_TimerInit()
+
+void TIM_TimerInit ( TIM.TimerTypeDef  $\ast$  TIMERx, TIM.TimerInitTypeDef  $\ast$  TIM.TimerInitStruct)
+
+函数名称：void TIM_TimerInit(TIM_TimerTypeDef  $\ast$  TIMERx,TIM_TimerInitTypeDef  $\ast$  TIM_TimerInitStruct)
+
+功能描述：定时器初始化函数
+
+参见
+
+被引用内容：SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIMERx: TIMER0/TIMER1/TIMER2/TIMER3
+TIM_TimerInitTypeDef *TIM_TimerInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TIM.TimerInitTypeDef TIM.initStruct; TIM.TimerStructInit(&TIM.initStruct); //设置Timer模块初始化 TIM.InitStruct.Timer.ClcckDiv  $\equiv$  TIM.Clk.Divl; //设置Timer模块时钟1的事务数 TIM.InitStruct.Timer.CHcWorkMode  $=$  TIMER.OPMode.CMP; //设置TimerCH0为比较模式 TIM.InitStruct.Timer.CHOutput  $= 0$  //计数器回零时，比较模式输出极性控制 TIM.InitStruct.Timer.CHcWorkMode  $=$  TIMER.OPMode.CMP; //设置TimerCH1为比较模式 TIM.InitStruct.Timer.CHOutput  $= 0$  //计数器回零时，比较模式输出极性控制 TIM.InitStruct.Timer.CHOutput  $= 0$  //是可错计数/计数开始位2400 //设置比较模式的CH0比较初始值258转空比 TIM.InitStruct.Timer.CM0  $=$  36000; //设置比较模式的CH1比较初始值24000 TIM.InitStruct.Timer.IRe1  $=$  24000; //开启Timer模块比较中断 TIM.InitStruct(TIMERO,ENCARLE); //Timer0模块使能
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2022年04月13日</td><td>1.0</td><td>HuangMG</td><td>修改</td></tr></table>
+
+修改日志：去除定时器使能接口
+
+在文件 Iks32mc08x.tim.c 第 55 行定义.
+
+函数调用图：
+
+# 2.75.2.14 TIM_TimerStrutInit()
+
+void TIM_TimerStrutInit ( TIM.TimerInitTypeDef  $\ast$  TIM.TimerInitStruct)
+
+函数名称：void TIM_TimerStrutInit(TIM_TimerInitTypeDef  $\ast$  TIM_TimerInitStruct)
+
+功能描述：定时器结构体初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>TIM_TimerInitTypeDef *TIM_TimerInitStruct</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+示例代码：TIM.TimerInitTypeDef TIM.initStruct; TIM.TimerStrutInit(&TIMInitStruct); // Timer结构体初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年06月06日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tim.c第157行定义.
+
+# 2.76 lks32mc08x.tim.c
+
+# 浏览该文件的文档
+
+00001 00001 #include"lks32mc08x.tim.c" 00015 00016 00017 00055 void TIM.TimerInit(TIM.TimerTypeDef \*TIMERx,TIM.TimerInitTypeDef \*TIM.TimerInitStruct) 00056{ 00057 uint32_t tempCfg; 00058 uint32_t tempIE; 00059 uint32_t tempVal; 00060 uint32_t tempFilter; 00061 uint32_t filter; 00062 uint32_t filterl; 00063 SYS_ModuleClockCmd(SYS.Module.TIMER,ENABLE); //打开Timer时钟 00064 00065 TIMERx- >CFG  $=$  TIM.TimerInitStruct- >Timer.CHO.CapMode | (TIM.TimerInitStruct- >Timer.CHO.WorkMode << 00066 2) 00067 |(TIM.TimerInitStruct- >Timer.CHOOutput << 3)| (TIM.TimerInitStruct- >Timer.CHI.CapMode << 4) 00068 |(TIM.TimerInitStruct- >Timer.CHI.WorkMode << 6)| (TIM.TimerInitStruct- >Timer.CHIOutput << 7) 00069 |(TIM.TimerInitStruct- >Timer.CIOckDiv << 8); 00070 TIMERx- >TH  $=$  TIM.TimerInitStruct- >Timer.IH; 00071 TIMERx- >CMPT0  $=$  TIM.TimerInitStruct- >Timer.CMP0; 00072 TIMERx- >CMPT1  $=$  TIM.TimerInitStruct- >Timer.CMP1; 00073 00074 /\*使能定时器\*/ 00075 /\*使能定时器中断\*/ 00076 /\*滤波参数\*/ 00077 tempCfg  $=$  UTIMER.CFG; 00078 tempIE  $=$  UTIMER_IE; 00079 filter0  $=$  TIM.TimerInitStruct- >Timer.Filter0 & 0x000F; /滤波参数只使用低四位  $\ast /$  00080 filterl  $=$  TIM.TimerInitStruct- >Timer.Filterl & 0x000F; 00081 if (TIMERx  $= =$  TIMER0) 00082 { 00083 tempCfg  $| =$  BIT4; 00084 tempVal  $= 0\times 0007$  00085 tempIE  $= \mathrm{"tempVal}$  00086 tempIE  $| =$  (TIM.TimerInitStruct- >Timer.IRQEna);
+
+00087 00088 tempFilter  $=$  UTIMER_FLT.TH01; 00089 tempFilter  $\epsilon =$  0xFF00; 00090 tempFilter  $=$  filter0; 00091 tempFilter  $=$  (filter1 << 4); 00092 UTIMER_FLT.TH01  $=$  tempFilter; 00093 } 00094 else if (TIMERx  $= =$  TIMER1) 00095 { 00096 tempCfg  $| =$  BIT5; 00097 tempVal  $=$  0x0038; 00098 tempIE  $\epsilon =$  tempVal; 00099 tempIE  $=$  (TIM.TimerInitStruct- >Timer_IRQEna << 3); 00100 00101 tempFilter  $=$  UTIMER_FLT.TH01; 00102 tempFilter  $\epsilon =$  0x00FF; 00103 tempFilter  $=$  (filter0 << 8); 00104 tempFilter  $=$  (filter1 << 12); 00105 UTIMER_FLT.TH01  $=$  tempFilter; 00106 } 00107 else if (TIMERx  $= =$  TIMER2) 00108 { 00109 tempCfg  $| =$  BIT6; 00110 tempVal  $=$  0x01C0; 00111 tempIE  $\epsilon =$  tempVal; 00112 tempIE  $=$  (TIM.TimerInitStruct- >Timer_IRQEna << 6); 00113 00114 tempFilter  $=$  UTIMER_FLT.TH23; 00115 tempFilter  $\epsilon =$  0xFF00; 00116 tempFilter  $=$  filter0; 00117 tempFilter  $=$  (filter1 << 4); 00118 UTIMER_FLT.TH23  $=$  tempFilter; 00119 } 00120 else if (TIMERx  $= =$  TIMER3) 00121 { 00122 tempCfg  $| =$  BIT7; 00123 tempVal  $=$  0x0E00; 00124 tempIE  $\epsilon =$  tempVal; 00125 tempIE  $=$  (TIM.TimerInitStruct- >Timer_IRQEna << 9); 00126 00127 tempFilter  $=$  UTIMER_FLT.TH23; 00128 tempFilter  $\epsilon =$  0x00FF; 00129 tempFilter  $=$  (filter0 << 8); 00130 tempFilter  $=$  (filter1 << 12); 00131 UTIMER_FLT.TH23  $=$  tempFilter; 00132 } 00133 UTIMER_CFG  $=$  tempCfg; 00134 UTIMER_IE  $=$  tempIE; 00135 } 00136 void TIM.TimerStrutInit(TIM.TimerInitTypeDef \*TIM.TimerInitStruct) 00158 { 00159 TIM.TimerInitStruct- >Timer_CH0.CapMode  $=$  TIMER.CapMode.None; 00160 TIM.TimerInitStruct- >Timer_CH0_WorkMode  $=$  TIMER.OPMode.CMP; 00161 TIM.TimerInitStruct- >Timer_CH0Output  $= 0$  00162 00163 TIM.TimerInitStruct- >Timer_CH1.CapMode  $=$  TIMER.CapMode.None; 00164 TIM.TimerInitStruct- >Timer_CH1_WorkMode  $=$  TIMER.OPMode.CMP; 00165 TIM.TimerInitStruct- >Timer_CH1Output  $= 0$  00166 00167 TIM.TimerInitStruct- >Timer_TH  $= 1000$  00168 TIM.TimerInitStruct- >Timer.CMP0  $= 500$  00169 TIM.TimerInitStruct- >Timer.CMP1  $= 500$  00170 TIM.TimerInitStruct- >Timer.Filter0  $= 0$  00171 TIM.TimerInitStruct- >Timer.Filter1  $= 0$  00172 TIM.TimerInitStruct- >Timer.ClockDiv  $=$  TIM.Clk.Div; 00173 TIM.TimerInitStruct- >Timer.IRQEna  $=$  Timer.IRQEna.None; 00174 } 00175 00196 void TIM.TimerCnd(TIM.TimerTypeDef  $=$  TIMERu, Function state) 00197 { 00198 if (state  $! =$  DISABLE) 00199 { 00200 if (TIMERx  $= =$  TIMER0) 00201 { 00202 UTIMER_CFG  $| =$  BIT4; 00203 } 00204 else if (TIMERx  $= =$  TIMER1) 00205 { 00206 UTIMER_CFG  $| =$  BIT5; 00207 } 00208 else if (TIMERx  $= =$  TIMER2) 00209 { 00210 UTIMER_CFG  $| =$  BIT6; 00211 } 00212 else if (TIMERx  $= =$  TIMER3) 00213 {
+
+00214 UTIMER_CFG |= BIT7;00215 }0021600217 }00218 else00219 {00220 if (TIMERx == TIMER0)00221 {00222 UTIMER_CFG & = 'BIT4;00223 }00224 else if (TIMERx == TIMER1)00225 {00226 UTIMER_CFG & = 'BIT5;00227 }00228 else if (TIMERx == TIMER2)00229 {00230 UTIMER_CFG & = 'BIT6;00231 }00232 else if (TIMERx == TIMER3)00233 {00234 UTIMER_CFG & = 'BIT7;00235 }00236 }00237 }002380023900266 uint32_t TIM_GetIRQFlag(TIM_TimerTypeDef *TIMERx, u32 timer_if)00267 {00268 if (TIMERx == TIMER0)00269 {00270 if ((TIMERIF & timer_if & UTIMER_IE) == 0)00271 {00272 return 0;00273 }else{00274 return 1;00275 }00276 }0027700278 if (TIMERx == TIMER1)00279 {00280 if (((UTIMER_IF>>3) & timer_if & (UTIMER_IE>>3)) == 0)00281 {00282 return 0;00283 }else{00284 return 1;00285 }00286 }0028700288 if (TIMERx == TIMER2)00289 {00290 if (((UTIMER_IF>>6) & timer_if & (UTIMER_IE>>6)) == 0)00291 {00292 return 0;00293 }else{00294 return 1;00295 }00296 }0029700298 if (TIMERx == TIMER3)00299 {00300 if (((UTIMER_IF>>9) & timer_if & (UTIMER_IE>>9)) == 0)00301 {00302 return 0;00303 }else{00304 return 1;00305 }00306 }00307 }00308 }0030900337 void TIM_ClearIRQFlag(TIM_TimerTypeDef *TIMERx, uint32_t tempFlag)00338 {00339 if (TIMERx == TIMER0)00340 {00341 UTIMER_IF = tempFlag;00342 }00343 if (TIMERx == TIMER1)00344 {00345 UTIMER_IF = tempFlag<<3;00346 }00347 if (TIMERx == TIMER2)00348 {00349 UTIMER_IF = tempFlag<<6;00350 }00351 if (TIMERx == TIMER3)00352 {00353 UTIMER_IF = tempFlag<<9;
+
+00354 1 00355 1 00356 00377 uint32. t TIM.Timer.GetCount(TIM.TimerTypeDef \*TIMERx) 00378 { 00379 return TIMERx- >CNT; 00380 1 00381 00402 uint32. t TIM.Timer.GetCMP10(TIM.TimerTypeDef \*TIM.TIMERx) 00403 { 00404 return TIM.TIMERx- >CHPT0; 00405 1 00406 00427 uint32. t TIM.Timer.GetCMP1(TIM.TimerTypeDef \*TIM.TIMERx) 00428 { 00429 return TIM.TIMERx- >CHPT1; 00430 1 00431 00467 void TIM.ECDInit(TIM.ECDTypeDef \*ECDx,TIM.ECDInitTypeDef \*TIM.ECDInitStruct) 00468 { 00469 uint32. t tempIE; 00470 uint32. t tempFilter; 00471 uint32. t filter; 00472 uint32. t filter; 00473 uint32. t tempTimerCfg; 00474 00475 SYS.ModuleClockCmd(SYS.Module_TIMER,ENABLE); /打开Timer时钟\*/ 00476 00477 ECDx- >CFG  $=$  TIM.ECDInitStruct- >ECD.Mode << 8; 00478 ECDx- >TH  $=$  TIM_ECDInitStruct- >ECD.TH; 00480 filter0  $=$  TIM_ECDInitStruct- >ECD.Filter0 & 0x000F; /滤波参数只使用低四位\*/ 00481 filterl  $=$  TIM_ECDInitStruct- >ECD.Filterl & 0x000F; 00482 tempIE  $=$  UTIMER_IE; 00483 if (ECDx  $= =$  ECD0) 00484 { 00485 tempFilter  $=$  UTIMER_FLT.TH23; 00486 tempFilter  $= 0\mathrm{X}$  OFF; 00487 tempFilter  $=$  filter0; 00488 tempFilter  $=$  (filterl << 4); 00489 UTIMER_FLT.TH23  $=$  tempFilter; 00490 00491 tempIE  $=$  (TIM_ECDInitStruct- >ECD_IRQEna << 12); 00492 00493 tempTimerCfg  $=$  TIMER2- >CFG; 00494 tempTimerCfg  $= \mathrm{T}$  (0x0300); 00495 tempTimerCfg  $=$  (TIM_ECDInitStruct- >ECD.ClockDiv << 8); 00496 TIMER2- >CFG  $=$  tempTimerCfg; 00497 UTIMER_CFG  $=$  BIT3; 00498 } 00499 else if (ECDx  $= =$  ECD1) 00500 { 00501 tempFilter  $=$  UTIMER_FLT.TH23; 00502 tempFilter  $= 0\mathrm{X}$  OFF; 00503 tempFilter  $=$  (filter0 << 8); 00504 tempFilter  $=$  (filterl << 12); 00505 UTIMER_FLT.TH23  $=$  tempFilter; 00506 00507 tempIE  $=$  (TIM_ECDInitStruct- >ECD_IRQEna << 14); 00508 00509 tempTimerCfg  $=$  TIMER3- >CFG; 00510 tempTimerCfg  $= \mathrm{T}$  (0x0300); 00511 tempTimerCfg  $=$  (TIM_ECDInitStruct- >ECD.ClockDiv << 8); 00512 TIMER3- >CFG  $=$  tempTimerCfg; 00513 UTIMER_CFG  $=$  BIT3; 00514 } 00515 UTIMER_IE  $=$  tempIE; 00516 } 00517 00538 void TIM_ECDStructInit(TIM_ECDInitTypeDef  $\ast$  TIM_ECDInitStruct) 00539 { 00540 TIM_ECDInitStruct- >ECD.Mode  $=$  ECD.Mode.T1; 00541 TIM_ECDInitStruct- >ECD.TH  $=$  1000; 00542 TIM_ECDInitStruct- >ECD.ClockDiv  $=$  TIM.C1k.Div1; 00543 TIM_ECDInitStruct- >ECD.Filter0  $= 0$  00544 TIM_ECDInitStruct- >ECD.Filterl  $= 0$  00545 TIM_ECDInitStruct- >ECD.IRQEna  $=$  ECD.IRQEna.UnderFlow|ECD.IRQEna.OverFlow; 00546 } 00547 00548 void TIM_ECDCmd(TIM_ECDTypeDef \*ECDx,FuncState state) 00569 { 00570 uint32. t tempEna; 00571 tempEna  $=$  UTIMER_CFG; 00572 00573 if (state  $! =$  DISABLE) 00574 { 00575 if (ECDx  $= =$  ECD0)
+
+00576 { 00577 tempEna  $| =$  BIT8; 00578 1 00579 else if (ECDx  $= =$  ECD1) 00580 { 00581 tempEna  $| =$  BIT9; 00582 1 00583 } 00584 else 00585 { 00586 if (ECDx  $= =$  ECD0) 00587 { 00588 tempEna  $\xi =$  BIT8; 00589 } 00590 else if (ECDx  $= =$  ECD1) 00591 { 00592 tempEna  $\xi =$  BIT9; 00593 } 00594 } 00595 UTIMER_CFG  $=$  tempEna; 00596} 00597 uint32. t TIM_ECD.GetCount(TIM_ECDTypeDef \*TIM_ECDx) 00618 { 00620 return TIM_ECDx- >CNT; 00621} 00622 00623 00649 uint32. t ECD.GetIRQflag(TIM_ECDTypeDef \*ECDx,u32 timer.if) 00650 { 00651 if(ECDx  $= =$  ECD0) 00652 { 00653 if(((UTIMER.IF>>12)&timer.if&(UTIMER.IE>>12))  $= = 0$  00654 { 00655 return 0; 00656 }else{ 00657 return 1; 00658 } 00659 } 00660 00661 if(ECDx  $= =$  ECD1) 00662 { 00663 if(((UTIMER.IF>>14)&timer.if&(UTIMER.IE>>14))  $= = 0$  00664 { 00665 return 0; 00666 }else{ 00667 return 1; 00668 } 00669 00670 return 0; 00671 00672 00673 00674 00675 函数名称： void ECD.ClearIRQFlag(TIM_ECDTypeDef \*ECDx，uint32. t tempFlag) 00676 功能描述： 清除ECD中断标志 00677 操作的表： 无 00678 输入参数： 无 00679 输出参数： 无 00680 返回值： 无 00681 其它说明： 00682 修改日期 版本号 修改人 修改内容 00683 00684 2022/4/13 V1.0 HuangMG 创建 00685 00712 void ECD.ClearIRQFlag(TIM_ECDTypeDef \*ECDx，uint32. t tempFlag) 00713 { 00714 if(ECDx  $= =$  ECD0) 00715 { 00716 UTIMER.IF  $=$  tempFlag<<12; 00717 } 00718 if(ECDx  $= =$  ECD1) 00719 { 00720 UTIMER.IF  $=$  tempFlag<<14; 00721 } 00722} 00723 (C)COPYRIGHTLINKOSEMICONDUCTOR \*\*\*\*ENDOFFILE\*\*\*
+
+# 2.77 Source/lks32mc08x_tmp.c 文件参考
+
+文件名称：lks32mc08x_tmp.c  文件标识：无
+
+内容摘要：芯片内置温度传感器外设驱动程序其它说明：无
+
+include"lks32mc08x. tmp.h"lks32mc08x. tmp.c的引用（Include）关系图：
+
+![](images/67c57c97a7316dcfc58bfb74b1ee01263e0b7ddb95f36b29f90ebc64d5c0832e.jpg)
+
+# 函数
+
+- void TempSensor.Init(void)函数名称：void TempSensor.Init(void)- s16 GetCurrentTemperature(s16 ADC_value)函数名称：s16 GetCurrentTemperature(s16 ADC_value)
+
+# 变量
+
+- Stru_TempertureCof.Def m_TempertureCof温度传感器系数
+
+# 2.77.1 详细描述
+
+文件名称：lks32mc08x. tmp.c文件标识：无内容摘要：芯片内置温度传感器外设驱动程序其它说明：无
+
+版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x. tmp.c中定义
+
+# 2.77.2 函数说明
+
+# 2.77.2.1 GetCurrentTemperature()
+
+s16 GetCurrentTemperature（ s16 ADC_value)
+
+函数名称：s16GetCurrentTemperature(s16ADC_value)
+
+功能描述：获取当前温度值
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>ADC_value: ADC通道14为温度传感器, ADC采样结果值</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：t_Temperature：当前温度值，单位：1个Lsb代表0.1度
+
+注解
+
+其它说明：ADC_value输入的ADC值不区分左右对齐，函数内已经进行ADC结果左右对齐判断
+
+警告
+
+无
+
+示例代码：
+
+s16 temp.value  $= 0$  中 temp.value  $=$  10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000o
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tmp.c第69行定义
+
+# 2.77.2.2 TempSensor_Init()
+
+void TempSensor_Init (void)
+
+函数名称：void TempSensor_Init(void)
+
+功能描述：温度传感器初始化
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数:</td><td>无</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+TempSensor_Init(); //温度传感器初始化
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2015年11月5日</td><td>1.0</td><td>Howlet</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.tmp.c第39行定义.
+
+函数调用图：
+
+# 2.77.3 变量说明
+
+# 2.77.3.1 m_TemperatureCof
+
+Stru_TempertureCof_Def m_TempertureCof
+
+温度传感器系数
+
+在文件lks32mc08x.tmp.c第18行定义
+
+# 2.78 lks32mc08x.tmp.c
+
+# 浏览该文件的文档
+
+00001 00016 #include"lks32mc08x.tmp.h" 00017 00018 Stru_TempertureCof_Def m_TempertureCof; 00039 void TempSensor_Init(void) 00040 { 00041 SYS.WR_PROTECT  $= 0\times 7\pm 83$  . /\*解除系统寄存器写保护\*/ 00042 SYS.APE.REG5  $\mid =$  BIT13; /\*打开温度传感器开关\*/ 00043 00044 m_TempertureCof.nCofB  $=$  Read.Trim（0x00000398); 00045 m_TempertureCof.nOffsetB  $=$  Read.Trim（0x0000039C); 00046 } 00047 00048 00069 s16 GetCurrentTemperature(s16 ADC.value) 00070 { 00071 s16 t_Temperature; 00072 if(ADC0- >CFG&BIT0); 00073 { 00074 t_Temperture  $=$  (m.TempertureCof.nOffsetB- ((s32)m_TempertureCof.nCofA  $\#$  ADC.value)/1000); 00075 } 00076 else 00077 { 00078 t_Temperture  $=$  (m.TempertureCof.nOffsetB- ((s32)m_TempertureCof.nCofA  $\#$  (ADC.value >> 4)) /1000); 00079 } 00080 00081 return t_Temperture; 00082 00083 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*（C）COPYRIGHTLINKO SEMICONDUCTOR \*\*\*\*\*ENDOFFILE\*\*\*\*/
+
+# 2.79 Source/lks32mc08x.uart.c文件参考
+
+文件名称：lks32mc08x.uart.c  文件标识：无  内容摘要：UART外设驱动程序  其它说明：无
+
+include"lks32mc08x.uart.h"lks32mc08x.uart.c的引用（Include）关系图：
+
+![](images/b0ea6ad68ed5b06d6f340a35ba0e970d7fcf7141a894a0e6e76d11ef5e558787.jpg)
+
+# 函数
+
+- void UART_Init (UART_TypeDef \*UARTx, UART_InitTypeDef \*UART_InitStructure) 函数名称：void UART Init(UART. TypeDefx UARTx, EUART InitTypeDefx UART InitStruct) -void UART_StructInit (UART InitTypeDef \*UART_InitStructure) 函数名称：void UART_StructInit(UART_InitTypeDefx UART_InitStructure) -void UART_SendData (UART_TypeDef \*UARTx, uint32.t n) 函数名称：void UART SENDDATA(UART_TypeDef \*UARTx, uint32.t n) -uint32.t UART_ReadData (UART_TypeDef \*UARTx) 函数名称：uint32.t UART_ReadData(UART_TypeDef \*UARTx) -uint8.t UART_SendAddr_485 (UART_TypeDef \*UARTx, uint8.t n) 函数名称：uint8.t UART_SendAddr_485(UART_TypeDef \*UARTx, uint8.t n) -uint8.t UART_SendData_485 (UART_TypeDef \*UARTx, uint8.t n) 函数名称：uint8.t UART_SendData_485(UART_TypeDef \*UARTx, uint8.t n) -uint32.t UART_GetIRQFlag (UART_TypeDef \*UARTx, uint32.t tempFlag) 函数名称：uint32.t UART_GetIRQFlag(UART_TypeDef \*UARTx, uint32.t tempFlag) -void UART_ClearIRQFlag (UART_TypeDef \*UARTx, uint32.t tempFlag) 函数名称：void UART_ClearIRQFlag(UART_TypeDef \*UARTx, uint32.t nFlag)
+
+# 2.79.1 详细描述
+
+文件名称：lks32mc08x.uart.c  文件标识：无  内容摘要：UART外设驱动程序  其它说明：无
+
+# 版权所有
+
+(C)2015, LINKO SEMICONDUCTOR Co.ltd
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.uart.c 中定义.
+
+# 2.79.2 函数说明
+
+# 2.79.2.1 UART.ClearIRQFlag()
+
+void UART.ClearIRQFlag ( UARTTypeDef \* UARTx, uint32_t tempFlag)
+
+函数名称：void UART_ClearIRQFlag(UART_TypeDef \*UARTx,uint32. t nFlag)
+
+功能描述：清除UART中断标志
+
+参见
+
+被引用内容：UART0、UART1
+
+参数
+
+<table><tr><td rowspan="7">输入参数:</td><td colspan="2">UART_TypeDef: UART0/UART1
+tempFlag参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>UART_IF_SendOver</td><td>发送完成中断</td></tr><tr><td>UART_IF_RcvOver</td><td>接收完成中断</td></tr><tr><td>UART_IF_SendBufEmpty</td><td>发送缓冲区空中断</td></tr><tr><td>UART_IF_StopError</td><td>停止位错误</td></tr><tr><td>UART_IF_CheckError</td><td>校验错误</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+if（UART_GetIRQFlag（UARTO，UART_IF_SendOver））//获取发送完成中断标志位UART_ClearIRQFlag（UARTO，UART_IF_SendOver）//清除发送完成中断标志位1
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第339行定义
+
+# 2.79.2.2 UART_GetIRQFlag()
+
+uint32_t UART_GetIRQFlag ( UART_TypeDef * UARTx, uint32_t tempFlag)
+
+函数名称：uint32_t UART_GetIRQFlag(UART_TypeDef * UARTx, uint32_t tempFlag)
+
+功能描述：获取UART中断标志
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td rowspan="7">输入参数:</td><td colspan="2">UART_TypeDef: UART0/UART1
+tempFlag参数可选:</td></tr><tr><td>宏定义</td><td>说明</td></tr><tr><td>UART_IF_SendOver</td><td>发送完成中断</td></tr><tr><td>UART_IF_RcvOver</td><td>接收完成中断</td></tr><tr><td>UART_IF_SendPrefEmpty</td><td>发送缓冲区空中断</td></tr><tr><td>UART_IF_StopError</td><td>停止位错误</td></tr><tr><td>UART_IF_CheckError</td><td>校验错误</td></tr><tr><td>输出参数:</td><td colspan="2">无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+警告只有对应中断使能后，改为才能读取，如果对应中断未使能，读取结果一直为0
+
+示例代码：
+
+if（UART_GetIRQFlag（UARTO，UART_IF_SendOver））//获取发送完成中断标志位UART_ClearIRQFlag（UARTO，UART_IF_SendOver）//清除发送完成中断标志位
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第300行定义
+
+# 2.79.2.3 UART_Init()
+
+void UART_Init UART_TypeDef * UARTx, UART_InitTypeDef * UART_InitStructure
+
+函数名称: void UART_Init(UART_TypeDef* UARTx, EUART_InitTypeDef* UART_InitStruct)
+
+功能描述: UART初始化函数
+
+参见
+
+参见被引用内容: SYS_ModuleClockCmd()
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1; UARTInitTypeDef</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+注解其它说明：串口波特率计算使用UART_MCU_MCLK系统时钟进行计算，使用前需要确认系统时钟频率
+
+警告
+
+无
+
+示例代码：
+
+UART_InitTypeDef UART_InitStruct; UART_StructInit(&UART_InitStruct); UART_InitStructure.BaudRate = 38400; // 设置波特率38400 UART_InitStructure.WordLength = UART_WORDBITS_8b; // 发送数据长度8位 UART_InitStructure.StopBits = UART_STOPBITS_1b; // 停止位1位 UART_InitStructure.FirstSend = UART_FIRSTSEND_LSB; // 先发送LSB UART_InitStructure.ParityMode = UART_Parity_NO; // 先奇偶校验 UART_InitStructure.IRQEna = UART.IRQEna_SendOver | UART.IRQEna_RcvOver; // 串口中断使能 UART_Init(UART0, &UART_InitStruct);
+
+修改日志：
+
+修改日志：在文件 Iks32mc08x_uart.c 第 44 行定义.
+
+函数调用图：
+
+# 2.79.2.4 UART.ReadData()
+
+uint32. t UART.ReadData ( UART_TypeDef \* UARTx )
+
+函数名称：uint32. t UART.ReadData（UART_TypeDef \*UARTx)
+
+功能描述：UART读缓冲区数据
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：返回串口接收缓冲区的1Byte数据
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+u8 UART.BUFF = 0; UART.BUFF = UART.ReadData（UART0）；//读取串口0接收一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.uart.c 第 181 行定义.
+
+# 2.79.2.5 UART_SendAddr.485()
+
+uint8_t UART_SendAddr_485 ( UART_TypeDef * UARTx, uint8_t n)
+
+函数名称：uint8_t UART_SendAddr_485(UART_TypeDef * UARTx, uint8_t n)
+
+功能描述：发送485通讯中需要接收数据的从机地址
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1, n: 要发生1Byr地址</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：1：发送失败，0：发送成功
+
+注解
+
+其它说明：cnt作用是延时防止程序卡死。在发送数据后立即发送地址的情况下，会判断等待发送缓冲区空在进行地址发送，如果长时间还未发送完成（cnt计数时间），则跳出while循环。如果串口波特率较低cnt计数已满，会出现数据还未发送完成进行下一个数据发送，为了避免此类问题发送可以增加cnt值。
+
+警告
+
+无
+
+示例代码：
+
+UART_SendAddr_485（UART0,0x55）；//串口0发送485从机接收地址为0x55
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第208行定义.
+
+# 2.79.2.6 UART_SendData()
+
+void UART_SendData ( UART_TypeDef * UARTx, uint32_t n)
+
+函数名称：void UART_SENDDATA(UART_TypeDef * UARTx, uint32_t n)
+
+功能描述：UART发送数据
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1, n: 要发生1Byte数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+UART_SendData（UART0，0x12）；//串口0发送  $0\times 12$  一字节数据
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x.uart.c 第 155 行定义.
+
+# 2.79.2.7 UART_SendData.485(
+
+uint8_t UART_SendData_485 ( UART_TypeDef * UARTx, uint8_t n)
+
+函数名称：uint8_t UART_SendData_485(UART_TypeDef * UARTx, uint8_t n)
+
+功能描述：发送485通讯中的数据信息
+
+参见
+
+被引用内容：UART0，UART1
+
+参数
+
+<table><tr><td>输入参数:</td><td>UART_TypeDef: UART0/UART1, n: 要发生1Byrt数据</td></tr><tr><td>输出参数:</td><td>无</td></tr></table>
+
+返回
+
+返回值：1：发送失败，0：发送成功
+
+注解
+
+其它说明：cnt作用是延时防止程序卡死。在发送数据后立即发送地址的情况下，会判断等待发送缓冲区空在进行地址发送，如果长时间还未发送完成（cnt计数时间），则跳出while循环。如果串口波特率较低cnt计数已满，会出现数据还未发送完成进行下一个数据发送，为了避免此类问题发送可以增加cnt值。
+
+警告
+
+无
+
+示例代码：
+
+UART_SendData_485（UART0,0x12）；//串口0发送485数据为0x12
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2012年04月21日</td><td>1.0</td><td>HuangMG</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件lks32mc08x.uart.c第250行定义.
+
+# 2.79.2.8 UART_StructInit()
+
+void UART_StructInit ( UART_InitTypeDef  $\ast$  UART_InitStructure)
+
+函数名称：void UART_StructInit(UART_InitStructure)
+
+功能描述：UART结构体初始化函数
+
+参见
+
+被引用内容：无
+
+参数
+
+<table><tr><td>输入参数：</td><td>UART_InitStructure</td></tr><tr><td>输出参数：</td><td>无</td></tr></table>
+
+返回
+
+返回值：无
+
+注解
+
+其它说明：无
+
+警告
+
+无
+
+示例代码：
+
+UART_InitStructure UART_InitStructure; UART_StructInit(&UART_InitStructure); //初始化UART相关配置结构体变量
+
+<table><tr><td>Date</td><td>Version</td><td>Author</td><td>Description</td></tr><tr><td>2016年05月21日</td><td>1.0</td><td>cfwu</td><td>创建</td></tr></table>
+
+修改日志：
+
+在文件 Iks32mc08x_uart.c 第 119 行定义.
+
+# 2.80 Iks32mc08x.uart.c
+
+# 浏览该文件的文档
+
+00001 00015 #include"1ks32mc08x.uart.h" 00016 00044 void UART_Init（UART TypeDef\* UARTx, UART_InitTypeDef\* UART InitStruct) 00045 { 00046 uint32t clkDivUART; 00047 uint32t divCoefficient; 00048 uint32t parity; 00049 uint32t parityEna; 00050 00051 if (UARTx  $= =$  UARTO) 00052 { 00053 SYS ModuleClockCmd(Sys Module UARTO,ENABLE); 00054 } 00055 else if (UARTx  $= =$  UART1) 00056 { 00057 SYS ModuleClockCmd(Sys Module UART1,ENABLE); 00058 } 00059 clkDivUART  $= 0$  00060 divCoefficient  $=$  UARTMCU_MCLK / UART InitStruct- >BaudRate / (1  $^+$  clkDivUART); 00062 while (divCoefficient  $>$  0xFFF) 00063 { 00064 clkDivUART  $^{+ + }$  00065 divCoefficient  $=$  UARTMCU_MCLK / UART InitStruct- >BaudRate / (1  $^+$  clkDivUART); 00066 } 00067 SYSCLKDIV2  $=$  clkDivUART; 00069 divCoefficient  $=$  divCoefficient - 1; 00070 UARTx- >DIVL  $=$  divCoefficient & 0xFF; 00071 UARTx- >DIVH  $=$  (divCoefficient & 0xFF00) >> 8; 00072 00073 if (UART InitStruct- >ParityMode  $= =$  UARTParity.EVEN) 00074 { 00075 parityEna  $=$  ENABLE; 00076 parity  $= 0$  00077 } 00078 else if (UART InitStruct- >ParityMode  $= =$  UARTParity.ODD) 00079 { 00080 parityEna  $=$  ENABLE; 00081 parity  $= 1$  00082 } 00083 else 00084 { 00085 parityEna  $=$  DISABLE; 00086 parity  $= 0$  00087 } 00088 UARTx- >CTRL  $=$  UART InitStruct- >WordLength | (UART InitStruct- >StopBits << 1) 00089 | (UART InitStruct- >FirstSend << 2) | (parity << 3) 00090 | (parityEna << 4) | (UART InitStruct- >MultiDropEna << 5) 00091 | (UART InitStruct- >Bit9Value << 6) ; 00092 00093 UARTx- >INV  $=$  (UART InitStruct- >TXD.INV << 1) | UART InitStruct- >RXD.INV; 00094 00095 UARTx- >ADR  $=$  UART InitStruct- >Match485Addr; 00096 UARTx- >IE  $=$  UART InitStruct- >IRQEna; 00097 } 00098 00119 void UART.StructInit (UART InitTypeDef\* UART InitStruct) 00120 { 00121 UART InitStruct- >BaudRate  $= 9600$  00122 UART InitStruct- >WordLength  $=$  UART WORDLENGTH_8b; 00123 UART InitStruct- >WordBits  $=$  UART STOPBITS_1b; 00124 UART InitStruct- >FirstSend  $=$  UART FIRSTSEND_LSB;
+
+00125 UARTInitStruct- >ParityMode  $=$  UART.ParityNO; 00126 00127 UARTInitStruct- >MultiDropEna  $=$  DISABLE; 00128 UARTInitStruct- >BitValue  $= 0$  00129 00130 UARTInitStruct- >Matth485Addr  $= 0$  00131 UARTInitStruct- >IRQIna  $= 0$  00132 UARTInitStruct- >RXDINV  $=$  DISABLE; 00133 UARTInitStruct- >TXDINV  $=$  DISABLE; 00134 00135 00155 void UART_SendData (UART_typeDef \*UARTx, uint32. t n) 00156{ 00157 UARTx- >BUFF  $= \Pi$  00158 00159 00181 uint32. t UART_ReadData (UART_typeDef \*UARTx) 00182{ 00183 return UARTx- >BUFF; 00184} 00185 00208 uint8. t UART_SendAddr485 (UART_typeDef \*UARTx, uint8. t n) 00209{ 00210 u32 cnt  $=$  0xffffff; 00211 UARTx- >CTRL  $\mid =$  BIT6; 00212 UARTx- >BUFF  $= \Pi$  00213 while（！（UARTx- >STT&BIT0））/\*发送缓冲区非空\*/ 00214 { 00215 if (cnt  $>0$  00216 { 00217 _NOP(); 00218 } 00220 else 00221 { 00222 return 1;/\*发送失败\*/ 00223 } 00224 } 00225 return 0;/\*发送成功\*/ 00226 } 00227 00250 uint8. t UART_SendData.485 (UART_typeDef \*UARTx, uint8. t n) 00251{ 00252 u32 cnt  $=$  0xffffff; 00253 UARTx- >CTRL  $\epsilon =$  BIT6; 00254 UARTx- >BUFF  $= \Pi$  00255 while（！（UARTx- >STT&BIT0））/\*发送缓冲区非空\*/ 00256 { 00257 if (cnt  $>0$  00258 { 00259 _NOP(); 00260 } 00261 } 00262 else 00263 { 00264 return 1;/\*发送失败\*/ 00265 } 00266 } 00267 return 0;/\*发送成功\*/ 00268} 00269 00300 uint32. t UART.GetIRQFlag (UART_typeDef \*UARTx, uint32. t tempFlag) 00301{ 00302 if((UARTx- >IF)&tempFlag&(UARTx- >IE)) 00303 { 00304 return 1; 00305 } 00306 return 0; 00307} 00308 00339 void UART.ClearIRQFlag (UART_typeDef \*UARTx, uint32. t tempFlag) 00340 { 00341 UARTx- >IF  $=$  tempFlag; 00342 } 00343 00344 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+LKS32MC08X库函数使用说明
+
+# Index
+
+ADC0 lks32mc08x adc.h, 130 ADC- 10 TIMES SAMPLE lks32mc08x adc.h, 130 ADC- 11 TIMES SAMPLE lks32mc08x adc.h, 130 ADC- 12 TIMES SAMPLE lks32mc08x adc.h, 130 ADC- 13 TIMES SAMPLE lks32mc08x adc.h, 130 ADC- 14 TIMES SAMPLE lks32mc08x adc.h, 131 ADC- 15 TIMES SAMPLE lks32mc08x adc.h, 131 ADC- 16 TIMES SAMPLE lks32mc08x adc.h, 131 ADC- 17 TIMES SAMPLE lks32mc08x adc.h, 131 ADC- 18 TIMES SAMPLE lks32mc08x adc.h, 131 ADC- 19 TIMES SAMPLE lks32mc08x adc.h, 132 ADC- 1_1 TIMES SAMPLE lks32mc08x adc.h, 132 ADC- 1SEG.TRG lks32mc08x adc.h, 132 ADC- 20 TIMES SAMPLE lks32mc08x adc.h, 132 ADC- 2 TIMES SAMPLE lks32mc08x adc.h, 132 ADC- 2SEG.TRG lks32mc08x adc.h, 133 ADC- 3 TIMES SAMPLE lks32mc08x adc.h, 133 ADC- 4 TIMES SAMPLE lks32mc08x adc.h, 133 ADC- 4SEG.TRG lks32mc08x adc.h, 133 ADC- 5 TIMES SAMPLE lks32mc08x adc.h, 133 ADC- 6 TIMES SAMPLE lks32mc08x adc.h, 134 ADC- 7 TIMES SAMPLE lks32mc08x adc.h, 134 ADC- 8 TIMES SAMPLE lks32mc08x adc.h, 134 ADC- 9 TIMES SAMPLE lks32mc08x adc.h, 134 ADC- ALL_IRQ.IF
+
+lks32mc08x adc.h, 134 ADC_CHANNEL_0 lks32mc08x adc.h, 135 ADC_CHANNEL_1 lks32mc08x adc.h, 135 ADC_CHANNEL_10 lks32mc08x adc.h, 135 ADC_CHANNEL_11 lks32mc08x adc.h, 135 ADC_CHANNEL_12 lks32mc08x adc.h, 135 ADC_CHANNEL_13 lks32mc08x adc.h, 136 ADC_CHANNEL_14 lks32mc08x adc.h, 136 ADC_CHANNEL_15 lks32mc08x adc.h, 136 ADC_CHANNEL_16 lks32mc08x adc.h, 136 ADC_CHANNEL_17 lks32mc08x adc.h, 136 ADC_CHANNEL_18 lks32mc08x adc.h, 137 ADC_CHANNEL_19 lks32mc08x adc.h, 137 ADC_CHANNEL_2 lks32mc08x adc.h, 137 ADC_CHANNEL_3 lks32mc08x adc.h, 137 ADC_CHANNEL_4 lks32mc08x adc.h, 137 ADC_CHANNEL_5 lks32mc08x adc.h, 138 ADC_CHANNEL_6 lks32mc08x adc.h, 138 ADC_CHANNEL_7 lks32mc08x adc.h, 138 ADC_CHANNEL_8 lks32mc08x adc.h, 138 ADC_CHANNEL_9 lks32mc08x adc.h, 138 ADC_ChannelConfig lks32mc08x adc.c, 438 lks32mc08x adc.h, 147 ADC_ClearIRQFlag lks32mc08x adc.c, 439 lks32mc08x adc.h, 148 ADC_CLK_DIV ADC_InitTypeDef, 8
+
+ADC-Clock_12M lks32mc08x adc.h, 139 ADC-Clock_24M lks32mc08x adc.h, 139 ADC-Clock_48M lks32mc08x adc.h, 139 ADC_DAT0_HTH lks32mc08x adc.h, 139 ADC_DAT0_LTH lks32mc08x adc.h, 139 ADC_DAT0_OV_IRQ_EN lks32mc08x adc.h, 139 ADC_DAT0_OV_IRQ_IF lks32mc08x adc.h, 140 ADC_EOS0_IRQ_EN lks32mc08x adc.h, 140 ADC_EOS0_IRQ_IF lks32mc08x adc.h, 140 ADC_EOS1_IRQ_EN lks32mc08x adc.h, 140 ADC_EOS1_IRQ_IF lks32mc08x adc.h, 140 ADC_EOS2_IRQ_EN lks32mc08x adc.h, 141 ADC_EOS2_IRQ_IF lks32mc08x adc.h, 141 ADC_EOS3_IRQ_EN lks32mc08x adc.h, 141 ADC_EOS3_IRQ_IF lks32mc08x adc.h, 141 ADC_GetConversionValue lks32mc08x adc.c, 441 lks32mc08x adc.h, 150 ADC_GetIRQFlag lks32mc08x adc.c, 441 lks32mc08x adc.h, 150 ADC_H_CONFLICT_IRQ_EN lks32mc08x adc.h, 141 ADC_H_CONFLICT_IRQ_IF lks32mc08x adc.h, 142 ADC_HARDWARE_T0_TRG lks32mc08x adc.h, 142 ADC_HARDWARE_T1_TRG lks32mc08x adc.h, 142 ADC_HARDWARE_T2_TRG lks32mc08x adc.h, 142 ADC_HARDWARE_T3_TRG lks32mc08x adc.h, 142 ADC_Init lks32mc08x adc.c, 443 lks32mc08x adc.h, 152 ADC_InitTypeDef, 7 ADC_CLK_DIV, 8 Align, 8 Con_Sample, 9 DAT0_TH, 9 DAT0_TH_Type, 9 FirSeg_Ch, 9
+
+FouSeg_Ch, 10Gain0, 10Gain1, 10IE, 10MCPWM_Trigger_En, 11RefVol, 11SecSeg_Ch, 12ThrSeg_Ch, 12Trigger_Cnt, 12Trigger_Mode, 12UTIMER_Trigger_En, 13ADC_LEFT_AALIGNlks32mc08x adc.h, 143ADC_MCPWM_T0_TRGIks32mc08x adc.h, 143ADC_MCPWM_T1_TRGIks32mc08x adc.h, 143ADC_MCPWM_T2_TRGIks32mc08x adc.h, 143ADC_MCPWM_T3_TRGIks32mc08x adc.h, 143ADC_RIGHT_ALIGNlks32mc08x adc.h, 144ADC_S･CONFLICT_IRQ_ENlks32mc08x adc.h, 144ADC_S･CONFLICT_IRQ_IFlks32mc08x adc.h, 144ADC_SofTrgENlks32mc08x adc.c, 444lks32mc08x adc.h, 153ADC_Structinitlks32mc08x adc.c, 445lks32mc08x adc.h, 154ADC_TypeDef, 13AMC_A0, 16AMC_A1, 16AMC_B0, 16AMC_B1, 16CFG, 16CHN0, 17CHN1, 17CHN2, 17CHN3, 17CHN4, 17CHN5, 18CHN6, 18CHN7, 18CHN8, 18CHN9, 18CHN70, 19CHNT1, 19DAT0, 19DAT0_TH, 19DAT1, 19DAT10, 20DAT11, 20DAT12, 20DAT13, 20
+
+DAT14, 20 DAT15, 21 DAT16, 21 DAT17, 21 DAT18, 21 DAT19, 21 DAT2, 22 DAT3, 22 DAT4, 22 DAT5, 22 DAT6, 22 DAT7, 23 DAT8, 23 DAT9, 23 DC_A0, 23 DC_A1, 23 DC_B0, 24 DC_B1, 24 GAIN_0, 24 GAIN_1, 24 IE, 24 IF, 25 SD0, 25 SD1, 25 SWT, 25 TRG, 25 ADC_UTIMER_T0_TRG Iks32mc08x_adc.h, 144 ADC_UTIMER_T1_TRG Iks32mc08x_adc.h, 144 ADC_UTIMER_T2_TRG Iks32mc08x_adc.h, 145 ADC_UTIMER_T3_TRG Iks32mc08x_adc.h, 145 ADDR I2C_TypeDef, 66 ADR UART_TypeDef, 121 ADRCMP I2C_InitTypeDef, 64 AF0_GPIO Iks32mc08x_gpio.h, 249 AF10_CAN Iks32mc08x_gpio.h, 249 AF11_SIF Iks32mc08x_gpio.h, 249 AF1_SYSAF Iks32mc08x_gpio.h, 249 AF2_HALL Iks32mc08x_gpio.h, 249 AF3_MCPWM Iks32mc08x_gpio.h, 249 AF4_UART Iks32mc08x_gpio.h, 250 AF5_SPI Iks32mc08x_gpio.h, 250 AF6_I2C Iks32mc08x_gpio.h, 250
+
+AF7_TIMER01 Iks32mc08x_gpio.h, 250 AF8_TIMER23 Iks32mc08x_gpio.h, 250 AF9_DEBUG Iks32mc08x_gpio.h, 251 AFE_REG5_RECORD WAKE_InitTypeDef, 124 AFE_REG6_RECORD WAKE_InitTypeDef, 124 ALC CAN_TypeDef, 29 Align ADC_InitTypeDef, 8 AMC_A0 ADC_TypeDef, 16 AMC_A1 ADC_TypeDef, 16 AMC_B0 ADC_TypeDef, 16 AMC_B1 ADC_TypeDef, 16 Arc_or_SinCFuction Iks32mc08x_dsp.h, 225 ARCTAN Iks32mc08x_dsp.h, 226 ArctanValue stru_CordicComponents, 101 ArctanX stru_CordicComponents, 101 ArctanY stru_CordicComponents, 101 BaudRate I2C_InitTypeDef, 64 SPI_InitTypeDef, 95 UART_InitTypeDef, 118 BCR I2C_TypeDef, 66 Bit9Value UART_InitTypeDef, 118 Bit_RESET Iks32mc08x_gpio.h, 259 Bit.SET Iks32mc08x_gpio.h, 259 BitAction Iks32mc08x_gpio.h, 258 BLCWIN CMP_TypeDef, 45 BTR0 CAN_TypeDef, 29 BTR1 CAN_TypeDef, 29 BUFF UART_TypeDef, 121 BURST_ADDR_CMP I2C_InitTypeDef, 64 BURST_NACK I2C_InitTypeDef, 64
+
+BUS_ERR_IE 12C_InitTypeDef, 64 ByteLength SPI_InitTypeDef, 95 CAN_ACTIVE_ERROR_FLAG Iks32mc08x_can.h, 168 CAN_ALLSR Iks32mc08x_can.h, 161 CAN_BITERROR Iks32mc08x_can.h, 168 CAN_Btr0 CAN_InitTypeDef, 26 CAN_Btr1 CAN_InitTypeDef, 26 CAN_CONNFIRM Iks32mc08x_can.h, 169 CAN_CONNFIRM_DELIMITER Iks32mc08x_can.h, 169 CAN_CRC Iks32mc08x_can.h, 168 CAN_CRC_DELIMITER Iks32mc08x_can.h, 169 CAN_DATA_FIELD Iks32mc08x_can.h, 168 CAN_DATAAVAIL Iks32mc08x_can.h, 161 CAN_DATALENGTHCODE Iks32mc08x_can.h, 168 CAN_DMAEn CAN_InitTypeDef, 27 CAN_ERROR_DELIMITER Iks32mc08x_can.h, 168 CAN_ERROR Iks32mc08x_can.h, 162 CAN_ErrWarThre CAN_InitTypeDef, 27 CAN_FILLERROR Iks32mc08x_can.h, 168 CAN_FORMATERROR Iks32mc08x_can.h, 168 CAN_FRAMEEND Iks32mc08x_can.h, 169 CAN_GetIRQFlag Iks32mc08x_can.c, 450 Iks32mc08x_can.h, 169 CAN_ID15_ID12 Iks32mc08x_can.h, 168 CAN_ID17_ID13 Iks32mc08x_can.h, 168 CAN_ID20_ID18 Iks32mc08x_can.h, 168 CAN_ID28_ID21 Iks32mc08x_can.h, 168 CAN_ID4_ID0 Iks32mc08x_can.h, 168 CAN_IDE Iks32mc08x_can.h, 168 CAN_IE_BUSERR
+
+Iks32mc08x_can.h, 162 CAN_IE_LOSTARB Iks32mc08x_can.h, 162 CAN_IE_PASSIVEERR Iks32mc08x_can.h, 162 CAN_IE_RFIFONOEMPTY Iks32mc08x_can.h, 162 CAN_IE_RFIFOV Iks32mc08x_can.h, 163 CAN_IE_TXDONE Iks32mc08x_can.h, 163 CAN_IE_WAKE Iks32mc08x_can.h, 163 CAN_IE_WERR Iks32mc08x_can.h, 163 CAN_IF_BUSERR Iks32mc08x_can.h, 163 CAN_IF_LOSTARB Iks32mc08x_can.h, 164 CAN_IF_PASSIVEERR Iks32mc08x_can.h, 164 CAN_IF_RFIFONOEMPTY Iks32mc08x_can.h, 164 CAN_IF_RFIFOV Iks32mc08x_can.h, 164 CAN_IF_TXDONE Iks32mc08x_can.h, 164 CAN_IF_WAKE Iks32mc08x_can.h, 165 CAN_IF_WERR Iks32mc08x_can.h, 165 CAN_Init Iks32mc08x_can.c, 451 Iks32mc08x_can.h, 170 CAN_InitTypeDef, 26 CAN_Btr0, 26 CAN_Btr1, 26 CAN_DMAEn, 27 CAN_ErrWarThre, 27 CAN_WorkMode, 27 IRQEna, 27 CAN_INTERMISSION Iks32mc08x_can.h, 168 CAN_KEEP0 Iks32mc08x_can.h, 168 CAN_KEEP1 Iks32mc08x_can.h, 168 CAN_LOST_ID0 Iks32mc08x_can.h, 169 CAN_LOST_ID1 Iks32mc08x_can.h, 169 CAN_LOST_ID2 Iks32mc08x_can.h, 169 CAN_LOST_ID3 Iks32mc08x_can.h, 169 CAN_LOST_ID4 Iks32mc08x_can.h, 169 CAN_LOST_ID5
+
+lks32mc08x.can.h, 169 CAN_LOST_ID6 lks32mc08x.can.h, 169 CAN_LOST_ID7 lks32mc08x.can.h, 169 CAN_LOST_ID8 lks32mc08x.can.h, 169 CAN_LOST_ID9 lks32mc08x.can.h, 169 CAN_LOST_IDA lks32mc08x.can.h, 169 CAN_LOST_IDE lks32mc08x.can.h, 169 CAN_LOST_SRTR lks32mc08x.can.h, 169 CAN_Manual_Awake lks32mc08x.can.c, 452 lks32mc08x.can.h, 171 CAN_MONITOR_MODE lks32mc08x.can.h, 165 CAN_NORMAL_MODE lks32mc08x.can.h, 165 CAN_ONBUS lks32mc08x.can.h, 165 CAN_OTHERERROR lks32mc08x.can.h, 168 CAN_OVERLOAD_FLAG lks32mc08x.can.h, 169 CAN_PASSIVE_ERROR lks32mc08x.can.h, 168 CAN_ReadALC lks32mc08x.can.c, 453 CAN_ReadErrorCode lks32mc08x.can.c, 454 CAN_ReadRXERRCNT lks32mc08x.can.c, 456 CAN_ReadState lks32mc08x.can.c, 457 lks32mc08x.can.h, 172 CAN_ReadTXERRCNT lks32mc08x.can.c, 458 CAN_RECE_PROCESS lks32mc08x.can.h, 167 CAN_ReceiveMsg lks32mc08x.can.c, 461 lks32mc08x.can.h, 174 CAN_RFIFOEMPTY lks32mc08x.can.h, 166 CAN_RTR lks32mc08x.can.h, 168 CAN_RXING lks32mc08x.can.h, 166 CAN_SELFTEST_MODE lks32mc08x.can.h, 166 CAN_SEND_PROCESS lks32mc08x.can.h, 167
+
+CAN_Sleep lks32mc08x.can.c, 462 lks32mc08x.can.h, 175 CAN_SRTR lks32mc08x.can.h, 168 CAN_START lks32mc08x.can.h, 168 CAN_Structinit lks32mc08x.can.c, 463 lks32mc08x.can.h, 176 CAN_TFIFOEMPTY lks32mc08x.can.h, 166 CAN_TOLERATE_DOMNANT lks32mc08x.can.h, 168 CAN_TRNASDONE lks32mc08x.can.h, 167 CAN_TXING lks32mc08x.can.h, 167 CAN_TypeDef, 28 ALC, 29 BTR0, 29 BTR1, 29 CMR, 30 ECC, 30 EIR, 30 EWLR, 30 IR, 30 MOD, 31 null0, 31 null1, 31 null2, 31 null3, 31 RBSA, 31 RMC, 32 RXERR, 32 SR, 32 TXERR, 32 TXRX0, 32 TXRX1, 33 TXRX2, 33 TXRX3, 33 TXRX4, 33 TXRX5, 33 TXRX6, 34 TXRX7, 34 TXRX8, 34 TXRX9, 34 TXRXA, 34 TXRXB, 35 TXRC, 35 CAN_WorkMode CAN_InitTypeDef, 27 Capture_IRQ_Ena HALL_InitTypeDef, 60 CENTRAL_PWM_MODE lks32mc08x_mcpwm.h, 313 CFG ADC_TypeDef, 16
+
+CMP- TypeDef, 46HALL- TypeDef, 62I2C- TypeDef, 66SPI- TypeDef, 99TIM_ECDTypeDef, 110TIM_TimerTypeDef, 116CH0- NSMCPWM- InitTypeDef, 72CH0- PSMCPWM- InitTypeDef, 73CH0N- default_outputMCPWM- InitTypeDef, 73CH0N- Polarity_INVMCPWM- InitTypeDef, 73CH0N- SCTRLNMCPWM- InitTypeDef, 73CHOP- default_outputMCPWM- InitTypeDef, 74CHOP_Polarity_INVMCPWM- InitTypeDef, 74CHOP_SCTRLPMCPWM- InitTypeDef, 74CH1- NSMCPWM- InitTypeDef, 74CH1- PSMCPWM- InitTypeDef, 75CH1N- default_outputMCPWM- InitTypeDef, 75CH1N- Polarity_INVMCPWM- InitTypeDef, 75CH1N- SCTRLNMCPWM- InitTypeDef, 75CH1P- default_outputMCPWM- InitTypeDef, 76CH1P- Polarity_INVMCPWM- InitTypeDef, 76CH1P- SCTRLPMCPWM- InitTypeDef, 76CH2- NSMCPWM- InitTypeDef, 76CH2- PSMCPWM- InitTypeDef, 77CH2N- default_outputMCPWM- InitTypeDef, 77CH2N- Polarity_INVMCPWM- InitTypeDef, 77CH2N- SCTRLNMCPWM- InitTypeDef, 77CH2P- default_outputMCPWM- InitTypeDef, 78CH2P_Polarity_INVMCPWM- InitTypeDef, 78CH2P_SCTRLPMCPWM- InitTypeDef, 78CH3- NSMCPWM- InitTypeDef, 78CH3- PSMCPWM- InitTypeDef, 79
+
+CH3N- default_outputMCPWM- InitTypeDef, 79CH3N- Polarity_INVMCPWM- InitTypeDef, 79CH3N- SCTRLNMCPWM- InitTypeDef, 79CH3P- default_outputMCPWM- InitTypeDef, 80CH3P- SCTRLPMCPWM- InitTypeDef, 80CHN0ADC- TypeDef, 17lks32mc08x_adc.h, 146CHN1ADC- TypeDef, 17lks32mc08x_adc.h, 146CHN10lks32mc08x_adc.h, 146CHN11lks32mc08x_adc.h, 146CHN12lks32mc08x_adc.h, 146CHN13lks32mc08x_adc.h, 146CHN14lks32mc08x_adc.h, 146CHN15lks32mc08x_adc.h, 146CHN16lks32mc08x_adc.h, 146CHN17lks32mc08x_adc.h, 146CHN18lks32mc08x_adc.h, 146CHN19lks32mc08x_adc.h, 146CHN2ADC- TypeDef, 17lks32mc08x_adc.h, 146CHN3ADC- TypeDef, 17lks32mc08x_adc.h, 146CHN4ADC- TypeDef, 17lks32mc08x_adc.h, 146CHN5ADC- TypeDef, 18lks32mc08x_adc.h, 146CHN6ADC- TypeDef, 18lks32mc08x_adc.h, 146CHN7ADC- TypeDef, 18lks32mc08x_adc.h, 146CHN8ADC- TypeDef, 18
+
+lks32mc08x adc.h, 146 CHN9 ADC- TypeDef, 18 lks32mc08x adc.h, 146 CHNT0 ADC- TypeDef, 19 CHNT1 ADC- TypeDef, 19 CHNx lks32mc08x adc.h, 145 CLK10- EN CMP- InitTypeDef, 37 CLK.CFG.RECORD WAKE InitTypeDef, 124 CLK.DIV MCPWM- InitTypeDef, 80 Clk.DivSPI SYS- InitTypeDef, 105 Clk.DivUART SYS- InitTypeDef, 105 Clk.FEN SYS- InitTypeDef, 105 ClockDivision HALL- InitTypeDef, 60 CMP0 lks32mc08x.cmp.h, 188 CMP0. CHNOP_WIN_EN CMP- InitTypeDef, 37 CMP0. CHN1P_WIN_EN CMP- InitTypeDef, 38 CMP0. CHN2P_WIN_EN CMP- InitTypeDef, 38 CMP0. CHN3P_WIN_EN CMP- InitTypeDef, 38 CMP0. EN CMP- InitTypeDef, 38 CMP0. IE CMP- InitTypeDef, 38 CMP0. IN_EN CMP- InitTypeDef, 39 CMP0. IRQ_TRIG CMP- InitTypeDef, 39 CMP0. POL CMP- InitTypeDef, 39 CMP0. SELN CMP- InitTypeDef, 39 CMP0. SELP CMP- InitTypeDef, 40 CMP0. SELP_IP0 lks32mc08x.cmp.h, 189 CMP0. SELP_IP1 lks32mc08x.cmp.h, 189 CMP0. SELP_IP2 lks32mc08x.cmp.h, 189 CMP0. SELP_IP3 lks32mc08x.cmp.h, 189 CMP0. SELP_IP4 lks32mc08x.cmp.h, 189
+
+CMP0. SELP_OPA0_IP lks32mc08x.cmp.h, 190 CMP0. SELP_OPA0_OUT lks32mc08x.cmp.h, 190 CMP0. SELP_OPA1_OUT lks32mc08x.cmp.h, 190 CMP0. W_PWM_POL CMP- InitTypeDef, 40 CMP1 lks32mc08x.cmp.h, 190 CMP1. CHNOP_WIN_EN CMP- InitTypeDef, 41 CMP1. CHN1P_WIN_EN CMP- InitTypeDef, 41 CMP1. CHN2P_WIN_EN CMP- InitTypeDef, 41 CMP1. CHN3P_WIN_EN CMP- InitTypeDef, 41 CMP1. EN CMP- InitTypeDef, 41 CMP1. IE CMP- InitTypeDef, 42 CMP1. IN_EN CMP- InitTypeDef, 42 CMP1. IRQ_TRIG CMP- InitTypeDef, 42 CMP1. POL CMP- InitTypeDef, 42 CMP1. SELN CMP- InitTypeDef, 42 CMP1. SELP CMP- InitTypeDef, 43 CMP1. SELP_AVSS lks32mc08x.cmp.h, 190 CMP1. SELP_IP0 lks32mc08x.cmp.h, 191 CMP1. SELP_IP1 lks32mc08x.cmp.h, 191 CMP1. SELP_IP2 lks32mc08x.cmp.h, 191 CMP1. SELP_IP3 lks32mc08x.cmp.h, 191 CMP1. SELP_OPA2_OUT lks32mc08x.cmp.h, 191 CMP1. SELP_OPA3_IP lks32mc08x.cmp.h, 192 CMP1. SELP_OPA3_OUT lks32mc08x.cmp.h, 192 CMP1. W_PWM_POL CMP_BKIN_Filter MCPWM- InitTypeDef, 80 CMP- ClearIRQFlag lks32mc08x.cmp.c, 475 lks32mc08x.cmp.h, 196 CMP- FT CMP- InitTypeDef, 44 CMP- GetIRQFlag
+
+lks32mc08x.cmp.c, 476 lks32mc08x.cmp.h, 197 CMP_HYS CMP_InitTypeDef, 44 CMP_HYS_0mV lks32mc08x.cmp.h, 192 CMP_HYS_20mV lks32mc08x.cmp.h, 192 CMP_Init lks32mc08x.cmp.c, 477 lks32mc08x.cmp.h, 198 CMP InitTypeDef, 35 CLK10_EN, 37 CMP0_CHN0P_WIN_EN, 37 CMP0.CHN1P_WIN_EN, 38 CMP0.CHN2P_WIN_EN, 38 CMP0.CHN3P_WIN_EN, 38 CMP0_EN, 38 CMP0_IE, 38 CMP0_IN_EN, 39 CMP0_IRQ_TRIG, 39 CMP0_POL, 39 CMP0_SELN, 39 CMP0_SELP, 40 CMP0_W_PWM_POL, 40 CMP1.CHN0P_WIN_EN, 41 CMP1.CHN1P_WIN_EN, 41 CMP1.CHN2P_WIN_EN, 41 CMP1.CHN3P_WIN_EN, 41 CMP1_EN, 41 CMP1_IE, 42 CMP1_IN_EN, 42 CMP1_IRQ_TRIG, 42 CMP1_POL, 42 CMP1_SELN, 42 CMP1_SELP, 43 CMP1_W_PWM_POL, 43 CMP_FT, 44 CMP_HYS, 44 FIL_CLK10_DIV16, 44 FIL_CLK10_DIV2, 44 CMP_SELN_DAC lks32mc08x.cmp.h, 192 CMP_SELN_HALL_MID lks32mc08x.cmp.h, 193 CMP_SELN_IN lks32mc08x.cmp.h, 193 CMP_SELN_REF lks32mc08x.cmp.h, 193 CMP_StructInit lks32mc08x.cmp.c, 479 lks32mc08x.cmp.h, 200 CMP_TypeDef, 45 BLCWIN, 45 CFG, 46 DATA, 46 IE, 46 IF, 46
+
+TCLK, 46CMPT0TIM.TimerTypeDef, 116CMPT1TIM.TimerTypeDef, 116CMRCAN_TypeDef, 30CNTHALL_TypeDef, 62TIM_ECDTypeDef, 110TIM.TimerTypeDef, 116Con例外ADC_InitTypeDef, 9CosValuestru_CordicComponents, 101CountTHHALL_InitTypeDef, 60CPHASPI_InitTypeDef, 96CPOLSPI_InitTypeDef, 96CR0EXTI_TypeDef, 54CR1EXTI_TypeDef, 54CTRLUART_TypeDef, 122DAC_GAINDAC_InitTypeDef, 47DAC_Initlks32mc08x_dac.c, 482lks32mc08x_dac.h, 204DAC_InitStructureDef, 47DAC_GAIN, 47DACOUT_EN, 47DAC_OutputValuelks32mc08x_dac.c, 483lks32mc08x_dac.h, 205DAC_OutputVoltagelks32mc08x_dac.c, 484lks32mc08x_dac.h, 206DAC_RANGE_1V2lks32mc08x_dac.h, 203DAC_RANGE_3V0lks32mc08x_dac.h, 204DAC_RANGE_4V85lks32mc08x_dac.h, 204DAC_StructInitlks32mc08x_dac.c, 485lks32mc08x_dac.h, 207DACOUT_ENDAC_InitStructureDef, 47DAT0ADC_TypeDef, 19lks32mc08x_adc.h, 146DAT0_THADC_InitStructureDef, 9ADC_TypeDef, 19
+
+DAT0_TH_Type ADC_InitTypeDef, 9 DAT1 ADC_TypeDef, 19 Iks32mc08x_adc.h, 146 DAT10 ADC_TypeDef, 20 Iks32mc08x_adc.h, 146 DAT11 ADC_TypeDef, 20 Iks32mc08x_adc.h, 147 DAT12 ADC_TypeDef, 20 Iks32mc08x_adc.h, 147 DAT13 ADC_TypeDef, 20 Iks32mc08x_adc.h, 147 DAT14 ADC_TypeDef, 20 Iks32mc08x_adc.h, 147 DAT15 ADC_TypeDef, 21 Iks32mc08x_adc.h, 147 DAT16 ADC_TypeDef, 21 Iks32mc08x_adc.h, 147 DAT17 ADC_TypeDef, 21 Iks32mc08x_adc.h, 147 DAT18 ADC_TypeDef, 21 Iks32mc08x_adc.h, 147 DAT19 ADC_TypeDef, 21 Iks32mc08x_adc.h, 147 DAT2 ADC_TypeDef, 22 Iks32mc08x_adc.h, 146 DAT3 ADC_TypeDef, 22 Iks32mc08x_adc.h, 146 DAT4 ADC_TypeDef, 22 Iks32mc08x_adc.h, 146 DAT5 ADC_TypeDef, 22 Iks32mc08x_adc.h, 146 DAT6 ADC_TypeDef, 22 Iks32mc08x_adc.h, 146 DAT7 ADC_TypeDef, 23 Iks32mc08x_adc.h, 146 DAT8 ADC_TypeDef, 23 Iks32mc08x_adc.h, 146 DAT9 ADC_TypeDef, 23
+
+lks32mc08x_adc.h, 146 DATA CMP_TypeDef, 46 I2C_TypeDef, 67 DataOrder SPI_InitTypeDef, 96 DATx Iks32mc08x_adc.h, 146 DC_A0 ADC_TypeDef, 23 DC_A1 ADC_TypeDef, 29 DC_B0 ADC_TypeDef, 24 DC_B1 ADC_TypeDef, 24 DeadTimeCHON MCPWM_InitTypeDef, 81 DeadTimeCHOP MCPWM_InitTypeDef, 81 DeadTimeCH1N MCPWM_InitTypeDef, 81 DeadTimeCH1P MCPWM_InitTypeDef, 81 DeadTimeCH2N MCPWM_InitTypeDef, 82 DeadTimeCH2P MCPWM_InitTypeDef, 82 DeadTimeCH3N MCPWM_InitTypeDef, 82 DeadTimeCH3P MCPWM_InitTypeDef, 82 DebugMode_PWM_out MCPWM_InitTypeDef, 83 DIV SPI_TypeDef, 99 DIVH UART_TypeDef, 122 Dividend stru_DiviComponents, 102 Divisor stru_DiviComponents, 103 DIVL UART_TypeDef, 122 DMA I2C_InitTypeDef, 64 SPI_InitTypeDef, 96 DMA_BYTE_TRANS Iks32mc08x.dma.h, 211 DMA_CCR DMA RegTypeDef, 52 DMA_CH0- ADC0. REQ EN Iks32mc08x.dma.h, 211 DMA_CH0_EIF Iks32mc08x.dma.h, 212 DMA_CH0_FIF Iks32mc08x.dma.h, 212 DMA_CH0_TIMER0. REQ_EN
+
+lks32mc08x.dma.h, 212DMA.CH0. TIMER1. REQ.ENlks32mc08x.dma.h, 212DMA.CH1_EIFlks32mc08x.dma.h, 212DMA_CH1_FIFlks32mc08x.dma.h, 213DMA_CH1_MCPWM.REQNlks32mc08x.dma.h, 213DMA_CH1_SPI_RX.REQNlks32mc08x.dma.h, 213DMA_CH1_TIMER2. REQ.ENlks32mc08x.dma.h, 213DMA_CH2_EIFlks32mc08x.dma.h, 213DMA_CH2_FIFlks32mc08x.dma.h, 214DMA_CH2_SPI_TX.REQNlks32mc08x.dma.h, 214DMA_CH2_TIMER3. REQ.ENlks32mc08x.dma.h, 214DMA_CH2_UART0. REQ.ENlks32mc08x.dma.h, 214DMA_CH3_CAN.REQNlks32mc08x.dma.h, 214DMA_CH3_EIFlks32mc08x.dma.h, 215DMA_CH3_FIFlks32mc08x.dma.h, 215DMA_CH3_I2C.REQNlks32mc08x.dma.h, 215DMA_CH3_UART1. REQ.ENlks32mc08x.dma.h, 215DMA_CHx_ENlks32mc08x.dma.c, 489lks32mc08x.dma.h, 217DMA_CIRCDMA_InitTypeDef, 49DMA.ClearIRQFlaglks32mc08x.dma.c, 490lks32mc08x.dma.h, 218DMA_CMARDMA_InitTypeDef, 49DMA_RegTypeDef, 53DMA_CPARDMA_InitTypeDef, 49DMA_RegTypeDef, 53DMA_CTRLDMA_InitTypeDef, 49DMA_GetIRQFlaglks32mc08x.dma.c, 491lks32mc08x.dma.h, 219DMA_HALFWORD_TRANSlks32mc08x.dma.h, 215DMA_Initlks32mc08x.dma.c, 492
+
+lks32mc08x.dma.h, 221DMA.InitTypeDef, 48DMA.CIRC, 49DMA.CMAR, 49DMA.CPAR, 49DMA.DIR, 49DMA.IRQ.EN, 49DMA.MBTW, 50DMA.MINC, 50DMA.PBTW, 50DMA.PINC, 51DMA.REQ.EN, 51DMA.ROUND, 51DMA.TIMES, 52DMA.IRQ.ENDMA.InitTypeDef, 49DMA.MBTWDMA.InitTypeDef, 50DMA.MINCDMA.InitTypeDef, 50DMA.PBTWDMA.InitTypeDef, 50DMA.PINCDMA.InitTypeDef, 51DMA.RegTypeDef, 52DMA.CCR, 52DMA.CMAR, 53DMA.CPAR, 53DMA.CTMS, 53DMA.REQ.ENDMA.InitTypeDef, 51DMA.ROUNDDMA.InitTypeDef, 51DMA.StructInitlks32mc08x.dma.c, 494lks32mc08x.dma.h, 222DMA.TCIElks32mc08x.dma.h, 216DMA.TEIElks32mc08x.dma.h, 216DMA.TIMESDMA.InitTypeDef, 52DMA.WORD_TRANSlks32mc08x.dma.h, 216DSP_CalcCordiclks32mc08x.dsp.c, 497lks32mc08x.dsp.h, 226DSP.CalcDivisionlks32mc08x.dsp.c, 499lks32mc08x.dsp.h, 227DSP.CalcSprtlks32mc08x.dsp.c, 499lks32mc08x.dsp.h, 228DSP.Cmdlks32mc08x.dsp.c, 500lks32mc08x.dsp.h, 229dsp_flglks32mc08x.dsp.c, 503
+
+DSP_GetSqrt Iks32mc08x.dsp.c, 502 Iks32mc08x.dsp.h, 230 DSP_Init Iks32mc08x.sys.c, 598 Iks32mc08x.sys.h, 369 Duplex SPI_InitTypeDef, 96 ECC CAN-TypeDef, 30 ECD_ClearRQFlag Iks32mc08x.tim.c, 624 Iks32mc08x.tim.h, 399 ECD_Clk_Div1 Iks32mc08x.tim.h, 393 ECD_Clk_Div2 Iks32mc08x.tim.h, 393 ECD_Clk_Div4 Iks32mc08x.tim.h, 393 ECD_Clk_Div8 Iks32mc08x.tim.h, 394 ECD_ClockDiv TIM_ECDInitTypeDef, 107 ECD_Filter0 TIM_ECDInitTypeDef, 108 ECD_Filter1 TIM_ECDInitTypeDef, 108 ECD_GetIRQFlag Iks32mc08x.tim.c, 625 Iks32mc08x.tim.h, 400 ECD_IF_OVERFLOW Iks32mc08x.tim.h, 394 ECD_IF_UNDERFLOW Iks32mc08x.tim.h, 394 ECD_IRQEna TIM_ECDInitTypeDef, 108 ECD_IRQEna_None Iks32mc08x.tim.h, 394 ECD_IRQEna_Overflow Iks32mc08x.tim.h, 394 ECD_IRQEna_UnderFlow Iks32mc08x.tim.h, 395 ECD_Mode TIM_ECDInitTypeDef, 108 ECD_Mode_CCWCW Iks32mc08x.tim.h, 395 ECD_Mode_CCWCW_UpDown Iks32mc08x.tim.h, 395 ECD_Mode_CCWSIGN Iks32mc08x.tim.h, 395 ECD_Mode_CCWSIGN_UpDown Iks32mc08x.tim.h, 395 ECD_Mode_T1 Iks32mc08x.tim.h, 396 ECD_Mode_T1_T2 Iks32mc08x.tim.h, 396 ECD_TH TIM_ECDInitTypeDef, 109
+
+EDGE_PWM_MODE Iks32mc08x.mcpwm.h, 313 EFF_ID_Filter Iks32mc08x.can.c, 464 Iks32mc08x.can.h, 177 EIR CAN_TypeDef, 30 EN EXTI_TypeDef, 54 SPI_InitTypeDef, 97 enumErrortime Iks32mc08x.can.h, 167 enumErrtype Iks32mc08x.can.h, 168 enumErrposition Iks32mc08x.can.h, 168 enumLossposition Iks32mc08x.can.h, 169 enumOPA Iks32mc08x_opa.h, 337 enumWakeTrigLevel Iks32mc08x.sys.h, 369 erase_flag Iks32MC08x_flash.c, 517 Iks32MC08x_flash.h, 245 EraseSector Iks32MC08x_flash.c, 512 Iks32MC08x_flash.h, 241 EVT TIM.TimerTypeDef, 116 EWLR CAN-TypeDef, 30 EXTI Iks32mc08x.exti.h, 234 EXTI.ClearIRQFlag Iks32mc08x.exti.c, 507 Iks32mc08x.exti.h, 235 EXTI.GetIRQFlag Iks32mc08x.exti.c, 508 Iks32mc08x.exti.h, 236 EXTI.Trigger.Config Iks32mc08x.exti.c, 509 Iks32mc08x.exti.h, 231 EXTI.Trigger_Edge Iks32mc08x.exti.h, 235 EXTI.Trigger.Negedge Iks32mc08x.exti.h, 235 EXTI.Trigger.None Iks32mc08x.exti.h, 235 EXTI.Trigger.Posedge Iks32mc08x.exti.h, 235 EXTI.TypeDef, 53 CR0, 54 CR1, 54 EN, 54 IF, 54 POL, 54 EXTIMode_TypeDef
+
+lks32mc08x_exti.h, 234F3210 GPIO_TypeDef, 56F7654 GPIO_TypeDef, 57FAIL0. INPUT_EN MCPWM.InitTypeDef, 83FAIL0. INT_EN MCPWM.InitTypeDef, 83FAIL0. Polarity MCPWM.InitTypeDef, 83FAIL0. Signal.Sel MCPWM.InitTypeDef, 84FAIL1. INPUT_EN MCPWM.InitTypeDef, 84FAIL1. INT_EN MCPWM.InitTypeDef, 84FAIL1. Polarity MCPWM.InitTypeDef, 84FAIL1. Signal.Sel MCPWM.InitTypeDef, 85FAIL_SEL_CMP lks32mc08x_mcpwm.h, 313FAIL_SEL_IO lks32mc08x_mcpwm.h, 313FBA98 GPIO_TypeDef, 57FFEDC GPIO_TypeDef, 57FIL_CLK10_DIV16 CMP_InitTypeDef, 44FIL_CLK10_DIV2 CMP_InitTypeDef, 44Filter75_Ena HALL_InitTypeDef, 60FilterLen HALL_InitTypeDef, 60FirSeg_Ch ADC._InitTypeDef, 9FirstSend UART_InitTypeDef, 118Flash_MAIN lks32MC08x_flash.h, 240Flash_NVR lks32MC08x_flash.h, 240FouSeg_Ch ADC._InitTypeDef, 10Gain0 ADC._InitTypeDef, 10Gain1 ADC._InitTypeDef, 10GAIN_0 ADC._TypeDef, 24GAIN_1 ADC._TypeDef, 24GetCurrentTemperature lks32mc08x.tmp.c, 645
+
+lks32mc08x.tmp.h, 417 GPIO0 lks32mc08x.gpio.h, 251 GPIO1 lks32mc08x.gpio.h, 251 GPIO2 lks32mc08x.gpio.h, 251 GPIO3 lks32mc08x.gpio.h, 251 GPIO_BKIN_Filter MCPWM.InitTypeDef, 85 GPIO_Init lks32mc08x.gpio.c, 521 lks32mc08x.gpio.h, 259 GPIO_InitTypeDef, 55 GPIO_Mode, 55 GPIO_Pin, 55 GPIO_PODEna, 55 GPIO_PuPd, 56 GPIO_LockRegister lks32mc08x.gpio.c, 522 lks32mc08x.gpio.h, 261 GPIO_Mode GPIO_InitTypeDef, 55 GPIO_Mode_ANA lks32mc08x.gpio.h, 259 GPIO_Mode_IN lks32mc08x.gpio.h, 259 GPIO_Mode_OUT lks32mc08x.gpio.h, 259 GPIO_Pin GPIO_InitTypeDef, 55 GPIO_Pin_0 lks32mc08x.gpio.h, 252 GPIO_Pin_1 lks32mc08x.gpio.h, 252 GPIO_Pin_10 lks32mc08x.gpio.h, 252 GPIO_Pin_11 lks32mc08x.gpio.h, 252 GPIO_Pin_12 lks32mc08x.gpio.h, 252 GPIO_Pin_13 lks32mc08x.gpio.h, 253 GPIO_Pin_14 lks32mc08x.gpio.h, 253 GPIO_Pin_15 lks32mc08x.gpio.h, 253 GPIO_Pin_2 lks32mc08x.gpio.h, 253 GPIO_Pin_3 lks32mc08x.gpio.h, 253 GPIO_Pin_4 lks32mc08x.gpio.h, 254 GPIO_Pin_5 lks32mc08x.gpio.h, 254 GPIO_Pin_6 lks32mc08x.gpio.h, 254
+
+GPIO_Pin_7 Iks32mc08x_gpio.h, 254 GPIO_Pin_8 Iks32mc08x_gpio.h, 254 GPIO_Pin_9 Iks32mc08x_gpio.h, 255 GPIO_Pin_ALL Iks32mc08x_gpio.h, 255 GPIO_Pin_NONE Iks32mc08x_gpio.h, 255 GPIO_PinAFCConfig Iks32mc08x_gpio.c, 523 Iks32mc08x_gpio.h, 262 GPIO_PinSource.0 Iks32mc08x_gpio.h, 255 GPIO_PinSource.1 Iks32mc08x_gpio.h, 255 GPIO_PinSource_10 Iks32mc08x_gpio.h, 256 GPIO_PinSource_11 Iks32mc08x_gpio.h, 256 GPIO_PinSource_12 Iks32mc08x_gpio.h, 256 GPIO_PinSource_13 Iks32mc08x_gpio.h, 256 GPIO_PinSource_14 Iks32mc08x_gpio.h, 256 GPIO_PinSource_15 Iks32mc08x_gpio.h, 257 GPIO_PinSource_2 Iks32mc08x_gpio.h, 257 GPIO_PinSource_3 Iks32mc08x_gpio.h, 257 GPIO_PinSource_4 Iks32mc08x_gpio.h, 257 GPIO_PinSource_5 Iks32mc08x_gpio.h, 257 GPIO_PinSource_6 Iks32mc08x_gpio.h, 258 GPIO_PinSource_7 Iks32mc08x_gpio.h, 258 GPIO_PinSource_8 Iks32mc08x_gpio.h, 258 GPIO_PinSource_9 Iks32mc08x_gpio.h, 258 GPIO_PODEna GPIO_InitTypeDef, 55 GPIO_PuPd GPIO_InitTypeDef, 56 GPIO_PuPd_NOPULL Iks32mc08x_gpio.h, 259 GPIO_PuPd_UP Iks32mc08x_gpio.h, 259 GPIO_ReadInputData Iks32mc08x_gpio.c, 525 Iks32mc08x_gpio.h, 263 GPIO_ReadInputDataBit Iks32mc08x_gpio.c, 526
+
+Iks32mc08x_gpio.h, 264 GPIO_ReadOutputData Iks32mc08x_gpio.c, 527 Iks32mc08x_gpio.h, 265 GPIO_ReadOutputDataBit Iks32mc08x_gpio.c, 527 Iks32mc08x_gpio.h, 266 GPIO_ResetBits Iks32mc08x_gpio.c, 528 Iks32mc08x_gpio.h, 267 GPIO_SetBits Iks32mc08x_gpio.c, 530 Iks32mc08x_gpio.h, 268 GPIO_StructInit Iks32mc08x_gpio.c, 531 Iks32mc08x_gpio.h, 269 GPIO_TypeDef, 56 F3210, 56 F7654, 57 FBA98, 57 FFEDC, 57 LCKR, 57 PDE, 57 PDI, 58 PDO, 58 PIE, 58 PODE, 58 POE, 58 PUE, 59 GPIO_UnlockRegister Iks32mc08x_gpio.c, 532 Iks32mc08x_gpio.h, 270 GPIO_Write Iks32mc08x_gpio.c, 533 Iks32mc08x_gpio.h, 271 GPIO_WriteBit Iks32mc08x_gpio.c, 534 Iks32mc08x_gpio.h, 272 GPIOMode_TypeDef Iks32mc08x_gpio.h, 259 GPIOPuPd_TypeDef Iks32mc08x_gpio.h, 259
+
+lks32mc08x_hall.c, 541 lks32mc08x_hall.h, 280 HALL_GetCount lks32mc08x_hall.c, 542 lks32mc08x_hall.h, 281 HALL_GetFilterValue lks32mc08x_hall.c, 543 lks32mc08x_hall.h, 282 HALL_GetIRQFlag lks32mc08x_hall.c, 544 lks32mc08x_hall.h, 283 HALL_Init lks32mc08x_hall.c, 545 lks32mc08x_hall.h, 284 HALL_InitTypeDef, 59 Capture_IRQ_Ena, 60 ClockDivision, 60 CountTH, 60 Filter75_Ena, 60 FilterLen, 60 HALL_Ena, 60 Overflow_IRQ_Ena, 61 softIE, 61 HALL_OVERFLOW_EVENT lks32mc08x_hall.h, 278 HALL_StructInit lks32mc08x_hall.c, 546 lks32mc08x_hall.h, 285 HALL_TypeDef, 61 CFG, 62 CNT, 62 INFO, 62 TH, 62 WIDTH, 62 HALL_WIDCount lks32mc08x_hall.c, 547 lks32mc08x_hall.h, 286 HIGH_LEVEL lks32mc08x_mcpwm.h, 313 HIGH_LEVEL_ACTIVE lks32mc08x_mcpwm.h, 314 i2c_dma_delay_over lks32mc08x_i2c.c, 550 i2c_dma_init lks32mc08x_i2c.c, 552 lks32mc08x_i2c.h, 289 i2c_dma_rx lks32mc08x_i2c.c, 553 lks32mc08x_i2c.h, 291 i2c_dma_state lks32mc08x_i2c.c, 562 i2c_dma_state_over lks32mc08x_i2c.c, 554 lks32mc08x_i2c.h, 292 i2c_dma_state_start lks32mc08x_i2c.c, 555 i2c_dma_tx lks32mc08x_i2c.c, 557
+
+lks32mc08x_i2c.h, 293 I2C_Init lks32mc08x_i2c.c, 558 lks32mc08x_i2c.h, 294 I2C_InitTypeDef, 63 ADRCMP, 64 BaudRate, 64 BURST_ADDR_CMP, 64 BURST_NACK, 64 BUS_ERR_IIE, 64 DMA, 64 IE, 65 MST_MODE, 65 SLV_MODE, 65 STOP_IE, 65 TC_IE, 65 I2C_ReadData lks32mc08x_i2c.c, 559 lks32mc08x_i2c.h, 296 I2C_SendData lks32mc08x_i2c.c, 560 lks32mc08x_i2c.h, 297 I2C_StructInit lks32mc08x_i2c.c, 561 lks32mc08x_i2c.h, 298 I2C_TypeDef, 66 ADDR, 66 BCR, 66 CFG, 66 DATA, 67 MSCR, 67 SCR, 67 ID1_Filter_Dual lks32mc08x_can.c, 465 lks32mc08x_can.h, 178 ID2_Filter_Dual lks32mc08x_can.c, 466 lks32mc08x_can.h, 179 IE ADC_InitTypeDef, 10 ADC_TypeDef, 24 CMP_TypeDef, 46 I2C_InitTypeDef, 66 SPI_TypeDef, 99 UART_TypeDef, 122 IF ADC_TypeDef, 25 CMP_TypeDef, 46 EXTI_TypeDef, 54 UART_TypeDef, 122 Include/lks32mc08x adc.h, 125, 155 Include/lks32mc08x_can.h, 158, 183 Include/lks32mc08x_cmp.h, 185, 201 Include/lks32mc08x_da.h, 202, 208 Include/lks32mc08x_dma.h, 209, 223 Include/lks32mc08x_dsb.h, 224, 231 Include/lks32mc08x_exfi.h, 232, 238 Include/lks32MC08xFLASH.h, 239, 245
+
+Include/lks32mc08x.gpio.h, 245, 274Include/lks32mc08x_hall.h, 276, 287Include/lks32mc08x_i2c.h, 288, 299Include/lks32mc08x_iwdg.h, 300, 307Include/lks32mc08x_lib.h, 307, 509Include/lks32mc08x_mcpwm.h, 309, 330Include/lks32mc08x_nvr.h, 332, 335Include/lks32mc08x_opa.h, 335, 341Include/lks32mc08x_spi.h, 341, 353Include/lks32mc08x_sys.h, 354, 388Include/lks32mc08x_tim.h, 390, 414Include/lks32mc08x_tmp.h, 416, 419Include/lks32mc08x_uart.h, 420, 436INFOHALL_TypeDef, 62INVUART_TypeDef, 123IOO_PPEMCPWM_InitTypeDef, 85IO1_PPEMCPWM_InitTypeDef, 85IO2_PPEMCPWM_InitTypeDef, 86IO3_PPEMCPWM_InitTypeDef, 86IRCAN_TypeDef, 30IRQEnaCAN_InitTypeDef, 27SPI_InitTypeDef, 97UART_InitTypeDef, 118IWDG_DISABLElks32mc08x_iwdg.c, 566lks32mc08x_iwdg.h, 302IWDG_ENABLElks32mc08x_iwdg.c, 567lks32mc08x_iwdg.h, 303IWDG_Feedlks32mc08x_iwdg.c, 568lks32mc08x_iwdg.h, 304IWDG_Initlks32mc08x_iwdg.c, 569lks32mc08x_iwdg.h, 305IWDG_InitTypeDef, 67RTH, 68WDG_EN, 68IWDG_StrutInitlks32mc08x_iwdg.c, 570lks32mc08x_iwdg.h, 306LCKRGPIO_TypeDef, 57lks32mc08x_adc.ADC_ChannelConfig, 438ADC_ClearIRQFlag, 439ADC_GetConversionValue, 441ADC_GetIRQFlag, 441ADC_Init, 443ADC_SoftTrgEN, 444
+
+ADC_StructInit, 445lks32mc08x_adc.hADC0, 130ADC.10_TIMES_SAMPLE, 130ADC.11_TIMES_SAMPLE, 130ADC.12_TIMES_SAMPLE, 130ADC.13_TIMES_SAMPLE, 130ADC.14_TIMES_SAMPLE, 131ADC.15_TIMES_SAMPLE, 131ADC.16_TIMES_SAMPLE, 131ADC.17_TIMES_SAMPLE, 131ADC.18_TIMES_SAMPLE, 131ADC.19_TIMES_SAMPLE, 132ADC.1_TIMES_SAMPLE, 132ADC.1SEG_TRG, 132ADC.20_TIMES_SAMPLE, 132ADC.2_TIMES_SAMPLE, 132ADC.2SEG_TRG, 133ADC.3_TIMES_SAMPLE, 133ADC.4_TIMES_SAMPLE, 133ADC.4SEG_TRG, 133ADC.5_TIMES_SAMPLE, 133ADC.6_TIMES_SAMPLE, 134ADC.7_TIMES_SAMPLE, 134ADC.8_TIMES_SAMPLE, 134ADC.9_TIMES_SAMPLE, 134ADC.ALL_IRQ_IF, 134ADC.CHANNEL_0, 135ADC.CHANNEL_1, 135ADC.CHANNEL_10, 135ADC.CHANNEL_10, 135ADC.CHANNEL_11, 135ADC.CHANNEL_12, 135ADC.CHANNEL_13, 136ADC.CHANNEL_14, 136ADC.CHANNEL_15, 136ADC.CHANNEL_16, 136ADC.CHANNEL_17, 136ADC.CHANNEL_18, 137ADC.CHANNEL_19, 137ADC.CHANNEL_2, 137ADC.CHANNEL_3, 137ADC.CHANNEL_4, 137ADC.CHANNEL_5, 138ADC.CHANNEL_6, 138ADC.CHANNEL_7, 138ADC.CHANNEL_8, 138ADC.CHANNEL_9, 138ADC.CHannelConfig, 147ADC.ClearIRQFlag, 148ADC.Clock_12M, 139ADC.Clock_24M, 139ADC.Clock_48M, 139ADC.DAT0_LTH, 139ADC.DAT0_LTH, 139ADC.DAT0_OV_IRQ_EN, 139ADC.DAT0_OV_IRQ_IF, 140ADC.EOS0_IRQ_EN, 140ADC.EOS0_IRQ_IF, 140
+
+ADC.EOS1_IRQ_EN, 140ADC.EOS1_IRQ_IF, 140ADC.EOS2_IRQ_EN, 141ADC.EOS2_IRQ_IF, 141ADC.EOS3_IRQ_EN, 141ADC.EOS3_IRQ_IF, 141ADC.GetConversionValue, 150ADC.GetIRQFlag, 150ADC.H_CONFLICT_IRQ_EN, 141ADC.H_CONFLICT_IRQ_IF, 142ADC.Hardware_T0_TRG, 142ADC.HARDWARE_T1_TRG, 142ADC.HARDWARE_T2_TRG, 142ADC.HARDWARE_T3_TRG, 142ADC.Init, 152ADC.LEFT_ALIGN, 143ADC.MCPWM_T0_TRG, 143ADC.MCPWM_T1_TRG, 143ADC.MCPWM_T2_TRG, 143ADC.MCPWM_T3_TRG, 143ADC.RIGHT_ALIGN, 144ADC.S_CONFLICT_IRQ_EN, 144ADC.S_CONFLICT_IRQ_IF, 144ADC.SoftTrgEN, 153ADC.StructInit, 154ADC.UTIMER_T0_TRG, 144ADC.UTIMER_T1_TRG, 144ADC.UTIMER_T2_TRG, 145ADC.UTIMER_T3_TRG, 145CHN0, 146CHN1, 146CHN10, 146CHN11, 146CHN12, 146CHN13, 146CHN14, 146CHN15, 146CHN16, 146CHN17, 146CHN18, 146CHN19, 146CHN2, 146CHN3, 146CHN4, 146CHN5, 146CHN6, 146CHN7, 146CHN8, 146CHN9, 146CHNx, 145DAT0, 146DAT1, 146DAT10, 146DAT11, 147DAT12, 147DAT13, 147DAT14, 147DAT15, 147
+
+DAT16, 147DAT17, 147DAT18, 147DAT19, 147DAT2, 146DAT3, 146DAT4, 146DAT5, 146DAT6, 146DAT7, 146DAT8, 146DAT9, 146DATx, 146RefVol.1V2, 145RefVol.2V4, 145lks32mc08x.can.cCAN.GetIRQFlag, 450CAN.Init, 451CAN.Manual.Awake, 452CAN.ReadALC, 453CAN.ReadErrorCode, 454CAN.ReadRXERRCNT, 456CAN.ReadState, 457CAN.ReadTXERRCNT, 458CAN.ReceFramInfor, 459CAN.ReceiveMsg, 461CAN.Sleep, 462CAN.StructInit, 463EFF.iD.Filter, 464ID1. Filter.Dual, 465ID2. Filter.Dual, 466My.CAN.Send.Mag, 467SFF.iD.Filter, 469lks32mc08x.can.hCAN.ACTIVE_ERROR_FLAG, 168CAN.ALLSR, 161CAN.BITERROR, 168CAN.CONNFIRM, 169CAN.CONNFIRM_DELIMITER, 169CAN.CRC, 168CAN.CRC_DELIMITER, 169CAN.DATA.FIELD, 168CAN.DATA.AVAIL, 161CAN.DATA.LENGTHCODE, 168CAN.ERROR_DELIMITER, 168CAN.ERROR, 162CAN.FILTER, 168CAN.FORMATERROR, 168CAN.FRAMEEND, 169CAN.GetIRQFlag, 169CAN.ID15.ID12, 168CAN.ID17.ID13, 168CAN.ID20.ID18, 168CAN.ID28.ID21, 168CAN.ID4.ID0, 168CAN.IDE, 168CAN.IE.BUSERR, 162CAN.IE.LOSTARB, 162
+
+CAN.IE.PASSIVEERRR, 162CAN.IE.RFIFONOEMPTY, 162CAN.IE.RFIFOOV, 163CAN.IE.TXDONE, 163CAN.IE.WAKE, 163CAN.IE.WERR, 163CAN.IF.BUSERR, 163CAN.IF.LOSTARB, 164CAN.IF.PASSIVEERRR, 164CAN.IF.RFIFONOEMPTY, 164CAN.IF.RFIFOOV, 164CAN.IF.TXDONE, 164CAN.IF.WAKE, 165CAN.IF.WERR, 165CAN.Init, 170CAN.interMISSION, 168CAN.KEEP0, 168CAN.KEEP1, 168CAN.LOST.ID0, 169CAN.LOST.ID1, 169CAN.LOST.ID2, 169CAN.LOST.ID3, 169CAN.LOST.ID4, 169CAN.LOST.ID5, 169CAN.LOST.ID6, 169CAN.LOST.ID7, 169CAN.LOST.ID8, 169CAN.LOST.ID9, 169CAN.LOST.IDA, 169CAN.LOST.IDE, 169CAN.LOST.SRTR, 169CAN.Manual.Awake, 171CAN.MONITOR_MODE, 165CAN.NORMAL_MODE, 165CAN.ONBUS, 165CAN.OTHERERROR, 168CAN.OVERLOAD_FLAG, 169CAN.PASSIVE_ERROR, 168CAN.ReadState, 172CAN.RECE.PROCESS, 167CAN.ReceiveMsg, 174CAN.RFIFOEMPTY, 166CAN.RTR, 168CAN.RXING, 166CAN.SELFTEST_MODE, 166CAN.SEND.PROCESS, 167CAN.Sleep, 175CAN.SRTR, 168CAN.START, 168CAN.StructInit, 176CAN.TFIFOEMPTY, 166CAN.TOLERATE.DOMINANT, 168CAN.TRNASDONE, 167CAN.TXING, 167EFF_ID_Filter, 177enumErrortime, 167enumErrortype, 168enumErrposition, 168
+
+enumLossposition, 169ID1- Filter_Dual, 178ID2- Filter_Dual, 179My.CAN_Send.Msg, 180null0, 168null1, 168null2, 168null3, 168null4, 168SFF_ID_Filter, 182lks32mc08x_cmp.cCMP_OleanIQRFlag, 475CMP_GetIRQFlag, 476CMP_Init, 477CMP_StructInit, 479lks32mc08x_cmp.hCMP0, 188CMP0_SELP_IP0, 189CMP0_SELP_IP1, 189CMP0_SELP_IP2, 189CMP0_SELP_IP3, 189CMP0_SELP_IP4, 189CMP0_SELP_OPAD_IP, 190CMP0_SELP_OPAD_OUT, 190CMP0_SELP_OPAD_OUT, 190CMP1, 190CMP1_SELP_AVSS, 190CMP1_SELP_IP0, 191CMP1_SELP_IP1, 191CMP1_SELP_IP2, 191CMP1_SELP_IP3, 191CMP1_SELP_OPAD_OUT, 191CMP1_SELP_OPAD_IP, 192CMP1_SELP_OPAD_OUT, 192CMP.ClearIRQFlag, 196CMP.GetIRQFlag, 197CMP.HYS_0mV, 192CMP.HYS_20mV, 192CMP.Init, 198CMP_SELN_DAC, 192CMP_SELN_HALL_MID, 193CMP_SELN_IN, 193CMP_SELN_REF, 193CMP_StructInit, 200SELN.CMP_IN, 193SELN_DAC, 193SELN_HALL_MID, 194SELN_REF, 194SELP.CMP_IP0, 194SELP.CMP_IP1, 194SELP.CMP_IP2, 194SELP.CMP_IP3, 195SELP.CMP_IP4, 195SELP.CMPOPA0P, 195SELP.CMPOPA0OUT, 195SELP.CMPOPA1OUT, 195SELP.CMPOPA2OUT, 196SELP.CMPOPA3P, 196
+
+SELP.CMP.OPA3OUT, 196 Iks32mc08x.dac.c DAC_Init, 482 DAC_OutputValue, 483 DAC_OutputVoltage, 484 DAC_StructInit, 485 Iks32mc08x.dac.h DAC_Init, 204 DAC_OutputValue, 205 DAC_OutputVoltage, 206 DAC_RANGE_1V2, 203 DAC_RANGE_3V0, 204 DAC_RANGE_4V85, 204 DAC_StructInit, 207 Iks32mc08x.dma.c DMA_CHx_EN, 489 DMA_ClearIRQFlag, 490 DMA_GetIRQFlag, 491 DMA_Init, 492 DMA_StructInit, 494 Iks32mc08x.dma.h DMA_BYTE_TRANS, 211 DMA_CH0.ADC0.REQ_EN, 211 DMA_CH0_EIF, 212 DMA_CH0_FIF, 212 DMA_CH0_TIMER0.REQ_EN, 212 DMA_CH0_TIMER1.REQ_EN, 212 DMA_CH1_EIF, 212 DMA_CH1_FIF, 213 DMA_CH1_MCPWM.REQ_EN, 213 DMA_CH1_SPI_RX.REQ_EN, 213 DMA_CH1_TIMER2.REQ_EN, 213 DMA_CH2_EIF, 213 DMA_CH2_FIF, 214 DMA_CH2_SPI_TX.REQ_EN, 214 DMA_CH2_TIMER3.REQ_EN, 214 DMA_CH2_UART0.REQ_EN, 214 DMA_CH3_CAN.REQ_EN, 214 DMA_CH3_EIF, 215 DMA_CH3_FIF, 215 DMA_CH3_I2C.REQ_EN, 215 DMA_CH3_UART1.REQ_EN, 215 DMA_CHx_EN, 217 DMA_ClearIRQFlag, 218 DMA_GetIRQFlag, 219 DMA_HALFWORD_TRANS, 215 DMA_Init, 221 DMA_StructInit, 222 DMA_TCIE, 216 DMA_TEIE, 216 DMA_WORD_TRANS, 216 MEMORY2PERI, 216 PERI2MEMORY, 216 Iks32mc08x.dsp.c DSP.CalcCordic, 497 DSP.CalcDivision, 499 DSP.CalcSprt, 499 DSP.Cmd, 500
+
+dsp.flg, 503 DSP.GetSqrt, 502 Iks32mc08x.dsp.h Arc_or.SinCFuction, 225 ARCTAN, 226 DSP.CalcCordic, 226 DSP.CalcDivision, 227 DSP.CalcSprt, 228 DSP.Cmd, 229 DSP.GetSqrt, 230 SINCOS, 226 Iks32mc08x.ext.c EXTI.ClearIRQFlag, 507 EXTI.GetIRQFlag, 508 EXTI.Trigger.Contig, 509 Iks32mc08x.exti.h EXTI, 234 EXTI.ClearIRQFlag, 235 EXTI.GetIRQFlag, 236 EXTI.Trigger.Contig, 237 EXTI.Trigger.Edge, 235 EXTI.Trigger.Negedge, 235 EXTI.Trigger.None, 235 EXTI.Trigger.Poseedge, 235 EXTIMode._TypeDef, 234 Iks32MC08x.flash.c erase_flag, 517 EraseSector, 512 progm_flag, 517 ProgramPage, 513 ReadFlash, 514 Read.More_Flash, 516 Iks32MC08x.flash.h erase_flag, 245 EraseSector, 241 Flash.MAIN, 240 Flash.NVR, 240 progm_flag, 245 ProgramPage, 242 Read.More_Flash, 243 Iks32mc08x.gpio.c GPIO_Init, 521 GPIO.LockRegister, 522 GPIO.PinAFConfig, 523 GPIO.ReadInputData, 525 GPIO.ReadInputDataBit, 526 GPIO.ReadOutputData, 527 GPIO.ReadOutputDataBit, 527 GPIO.ResetBits, 528 GPIO.SetBits, 530 GPIO.StructInit, 531 GPIO.UnlockRegister, 532 GPIO.Write, 533 GPIO.WriteBit, 534 Iks32mc08x.gpio.h AF0_GPIO, 249 AF10_CAN, 249 AF11_SIF, 249
+
+AF1. SYSAF, 249AF2. HALL, 249AF3. MCPWM, 249AF4. UART, 250AF5. SPI, 250AF6. I2C, 250AF7. TIMER01, 250AF8. TIMER23, 250AF9. DEBUG, 251BitRESET, 259Bit.SET, 259BitAction, 259GPIO0, 251GPIO1, 251GPIO2, 251GPIO3, 251GPIO.Init, 259GPIO.LockRegister, 261GPIO.Mode_ANA, 259GPIO.Mode_IN, 259GPIO.Mode_OUT, 259GPIO.Pin.0, 252GPIO.Pin.1, 252GPIO.Pin.10, 252GPIO.Pin.11, 252GPIO.Pin.12, 252GPIO.Pin.13, 253GPIO.Pin.14, 253GPIO.Pin.15, 253GPIO.Pin.2, 253GPIO.Pin.3, 253GPIO.Pin.4, 254GPIO.Pin.5, 254GPIO.Pin.6, 254GPIO.Pin.7, 254GPIO.Pin.8, 254GPIO.Pin.9, 255GPIO.Pin.ALL, 255GPIO.Pin.NONE, 255GPIO_PinAConfig, 262GPIO_PinSource.0, 255GPIO_PinSource.1, 255GPIO_PinSource.10, 256GPIO_PinSource.11, 256 GPIO_PinSource.12, 256 GPIO_PinSource.13, 256 GPIO_PinSource.14, 256 GPIO_PinSource.15, 257 GPIO_PinSource.2, 257 GPIO_PinSource.3, 257 GPIO_PinSource.4, 257 GPIO_PinSource.5, 257 GPIO_PinSource.6, 258 GPIO_PinSource.7, 258 GPIO_PinSource.8, 258 GPIO_PinSource.9, 258 GPIO_PuPd_NOPULL, 259 GPIO_PuPd_UP, 259
+
+GPIO ReadingData, 263 GPIO ReadingDataBit, 264 GPIO_ReadOutputData, 265 GPIO_ReadOutputDataBit, 266 GPIO_ResetBits, 267 GPIO_SetBits, 268 GPIO_StructInit, 269 GPIO_UnlockRegister, 270 GPIO_Write, 271 GPIO_WriteBit, 272 GPIOMode_TypeDef, 259 GPIO Pul_d_typeDel, 259 Iks32mc08x_hall.c HALL_ClearIcQFlag, 540 HALL_GetCaptureValue, 541 HALL_GetCount, 542 HALL_GetFilterValue, 543 HALL_GetIRQFlag, 544 HALL_Init, 545 HALL_StructInit, 546 HALL_WIDCount, 547 Iks32mc08x_hall.h HALL_CAPTURE_EVENT, 277 HALL_ClearIRQFlag, 279 HALL_CLK_DIV1, 278 HALL_CLK_DIV2, 278 HALL_CLK_DIV4, 278 HALL_CLK_DIV8, 278 HALL_GetCaptureValue, 280 HALL_GetCount, 281 HALL_GetFilterValue, 282 HALL_GetIRQFlag, 283 HALL_Init, 284 HALL_OVERFLOW_EVENT, 278 HALL_StructInit, 285 HALL_WIDCount, 286 Iks32mc08x_i2c.c i2c.dma_delay_over, 550 i2c.dma_init, 552 i2c.dma_rx, 553 i2c.dma_state, 562 i2c.dma_state_over, 554 i2c.dma_state_start, 555 i2c.dma_tx, 557 i2C_Init, 558 i2C_ReadData, 559 i2C_SendData, 560 i2C_StructInit, 561 Iks32mc08x_i2c.h i2c.dma_init, 289 i2c.dma_rx, 291 i2c.dma_state_over, 292 i2c.dma_tx, 293 i2C_Init, 294 i2C_ReadData, 296 i2C_SendData, 297 i2C_StructInit, 298 Iks32mc08x_iwdg.c
+
+IWDG_DISABLE, 566IWDG_ENABLE, 567IWDG_Feed, 568IWDG_Init, 569IWDG_StrutInit, 570lks32mc08x.iwdg.hIWDG_DISABLE, 302IWDG_ENABLE, 303IWDG_Feed, 304IWDG_Init, 305IWDG_StrutInit, 306WDT_RTH_2S, 301WDT_RTH_4S, 301WDT_RTH_64S, 301WDT_RTH_8S, 302lks32mc08x.mcpwm.cMCPWM.ClearIRQFlag, 573MCPWM_GetIRQFlag, 575MCPWM_Init, 577MCPWM_StructInit, 578PWMOutputs, 579lks32mc08x.mcpwm.hCENTRAL_PWM_MODE, 313EDGE_PWM_MODE, 313FAIL_SEL_CMP, 313FAIL_SEL_IO, 313HIGH_LEVEL, 313HIGH_LEVEL_ACTIVE, 314LOW_LEVEL, 314LOW_LEVEL_ACTIVE, 314MCPWM_CH0_SHORT_IRQ_EN, 314MCPWM_CH0_SHORT_IRQ_IF, 314MCPWM_CH1_SHORT_IRQ_EN, 315MCPWM_CH1_SHORT_IRQ_IF, 315MCPWM_CH2_SHORT_IRQ_EN, 315MCPWM_CH2_SHORT_IRQ_IF, 315MCPWM_CH3_SHORT_IRQ_EN, 315MCPWM_CH3_SHORT_IRQ_IF, 316MCPWM_ClearIRQFlag, 323MCPWM_FAIL0_IRQ_EN, 316MCPWM_FAIL0_IRQ_IF, 316MCPWM_FAIL1_IRQ_EN, 316MCPWM_FAIL1_IRQ_IF, 316MCPWM_GetIRQFlag, 325MCPWM_Init, 327MCPWM_MOE_DISABLE_MASK, 317MCPWM_MOE_ENABLE_MASK, 317MCPWM_SHADE_IRQ_EN, 317MCPWM_SHADE_IRQ_IF, 317MCPWM_StructInit, 328MCPWM_T0_IRQ_EN, 317MCPWM_T0_IRQ_IF, 318MCPWM_T1_IRQ_EN, 318MCPWM_T1_IRQ_IF, 318MCPWM_TH00_IRQ_EN, 318MCPWM_TH00_IRQ_IF, 318MCPWM_TH01_IRQ_EN, 319MCPWM_TH01_IRQ_IF, 319
+
+MCPWM.TH10_IRQ_EN, 319MCPWM.TH10_IRQ_IF, 319MCPWM.TH11_IRQ_EN, 319MCPWM.TH11_IRQ_IF, 320MCPWM.TH20_IRQ_EN, 320MCPWM.TH20_IRQ_IF, 320MCPWM.TH21_IRQ_EN, 320MCPWM.TH21_IRQ_IF, 320MCPWM.TH30_IRQ_EN, 321MCPWM.TH30_IRQ_IF, 321MCPWM.TH31_IRQ_EN, 321MCPWM.TH31_IRQ_IF, 321MCPWM.TMR0_IRQ_EN, 321MCPWM.TMR0_IRQ_IF, 322MCPWM.TMR1_IRQ_EN, 322MCPWM.TMR1_IRQ_IF, 322MCPWM.TMR2_IRQ_EN, 322MCPWM.TMR2_IRQ_IF, 322MCPWM.TMR3_IRQ_EN, 323MCPWM.TMR3_IRQ_IF, 323MCPWM.UPDATE_REG, 323PWMOutputs, 329lks32mc08x.nvr.hRead.NVR, 334Read.Trim, 334lks32mc08x.opa.cOPA_Init, 584OPA_OUT, 585OPA_StructInit, 586lks32mc08x.opa.henumOPA, 337OPA0, 338OPA1, 338OPA2, 338OPA3, 338OPA Init, 338OPA_OUT, 339OPA_StructInit, 340PGA.GAIN.20, 337PGA.GAIN.4P25, 337PGA.GAIN.6, 337PGA.GAIN.9P5, 337lks32mc08x.spi.cSPI.ClearIRQFlag, 589SPI.GetIRQFlag, 590SPI.Init, 591SPI.ReadData, 593SPI.SendData, 594SPI.StructInit, 595lks32mc08x.spi.hSPI.ClearIRQFlag, 346SPI.DMA DISABLE, 343SPI.DMA ENABLE, 344SPI.Duplex, 346SPI.FIRSTSEND_LSB, 344SPI.FIRSTSEND MSB, 344SPI.Full, 346SPI.GetIRQFlag, 348
+
+SPI Half.Rx, 346SPI Half.Tx, 346SPI IF. DataOver, 344SPI IF. SSErr, 344SPI IF. TranDone, 345SPI Init, 349SPI IRQEna. DataOver, 345SPI IRQEna. Enable, 345SPI IRQEna. SSErr, 345SPI IRQEna. TranDone, 345SPI Master, 346SPI Mode, 346SPI ReadData, 350SPI SendData, 351SPI Slave, 346SPI StructInit, 352lks32mc08x.sys.cDSP Init, 598SetWakeIO, 599SoftDelay, 601Switch2HRC, 602Switch2PLL, 603SYS. AnalogModuleClockCmd, 604SYS. ClearRst, 606SYS. EnablePORFilter, 607SYS. FallSleep, 608SYS. FeedDog, 609SYS. GetRstSource, 610SYS. Init, 611SYS. ModuleClockCmd, 612SYS. SetWakeInterval, 614SYS. SoftResetModule, 615SYS. StructInit, 617SYS. WatchDogCmd, 618WAKE. InitStruct, 619lks32mc08x. sys.hDSP Init, 369enumWakeTrigLevel, 369SetWakeIO, 370Switch2HRC, 372Switch2PLL, 373SYS. AnalogModule.ADC, 358SYS. AnalogModule.BGP, 358SYS. AnalogModule.CMPO, 358SYS. AnalogModule.CMP1, 359SYS. AnalogModule.DAC, 359SYS. AnalogModule.OPA0, 359SYS. AnalogModule.OPA1, 359SYS. AnalogModule.OPA2, 359SYS. AnalogModule.OPA3, 359SYS. AnalogModule.PL1, 360SYS. AnalogModule.RCH, 360SYS. AnalogModule.TMP, 360SYS. AnalogModule.XTAL, 360SYS. AnalogModule.ClockCmd, 374SYS. ClearRst, 376SYS. Clk.SPIDiv1, 361SYS. Clk.SPIDiv2, 361
+
+SYS.Clk.SPIDiv4, 361SYS.Clk.SPIDiv8, 361SYS.Clk.UARTDiv1, 361SYS.Clk.UARTDiv2, 362SYS.Clk.UARTDiv4, 362SYS.Clk.UARTDiv8, 362SYS.FallSleep, 377SYS. FeedDog, 378SYS. GetRstSource, 379SYS. Init, 380SYS. Module.CAN, 362SYS. Module.DSP, 362SYS. Module.HAL, 363SYS. Module.I2C, 363SYS. Module.MCPWM, 363SYS. Module.SPI, 363SYS. Module. TIMER, 363SYS. Module.UART0, 364SYS. Module.UART1, 364SYS. ModuleClockCmd, 381SYS. PLLREDIV. 1, 364SYS. PLLREDIV. 4, 364SYS. PLLSRSEL.CRYSTAL, 364SYS. PLLSRSEL.RCH, 365SYS. RstSrc.HPOR, 365SYS. RstSrc.KEYBOARD, 365SYS. RstSrc.LPOR, 365SYS. RstSrc.WDT, 365SYS. SetWakeInterval, 383SYS. SoftResetModule, 384SYS. StructInit, 386SYS. WakeInterval. 025s, 366SYS. WakeInterval. 05s, 366SYS. WakeInterval. 16s, 366SYS. WakeInterval. 1s, 366SYS. WakeInterval. 2s, 366SYS. WakeInterval. 32s, 367SYS. WakeInterval. 4s, 367SYS. WakeInterval. 8s, 367SYS. WatchDogCmd, 387SYS. WD. TimeOut2s, 367SYS. WD. TimeOut4s, 367SYS. WD. TimeOut64s, 368SYS. WD. TimeOut8s, 368WAKEIO. P0.0, 368WAKEIO. P0.1, 368WAKEIO. P1.0, 368WAKEIO. P1.1, 369WAKETRIG.HIGH, 369WAKETRIG.LOW, 369lks32mc08x. tim.cECD.ClearIRQFlag, 624ECD. GetIRQFlag, 625TIM. ClearIRQFlag, 626TIM. ECD. GetCount, 627TIM. ECDCmd, 628TIM. ECDInit, 629TIM. ECDStructInit, 630
+
+TIM_GetIRQFlag, 631TIM_Timer.GetCMPT0, 633TIM_Timer.GetCMPT1, 634TIM_Timer.GetCount, 634TIM_TimerCmd, 635TIM_TimerInit, 636TIM_TimerStrutInit, 638lks32mc08x.tim.hECD_ClearIRQFlag, 399ECD_Clk_Div1, 393ECD_Clk_Div2, 393ECD_Clk_Div4, 393ECD_Clk_Div8, 394ECD_GetIRQFlag, 400ECD_IF_OVERFLOW, 394ECD_IF_UNDERFLOW, 394ECD_IRQEna_None, 394ECD_IRQEna_Overflow, 394ECD_IRQEna_UnderFlow, 395ECD_Mode_CCWCW, 395ECD_Mode_CCWCW_UpDown, 395ECD_Mode_CCWSIGN, 395ECD_Mode_CCWSIGN_UpDown, 395ECD_Mode_T1, 396ECD_Mode_T1_T2, 396TIM_ClearIRQFlag, 401TIM_Clk_Div1, 396TIM_Clk_Div2, 396TIM_Clk_Div4, 396TIM_Clk_Div8, 397TIM_ECD_GetCount, 402TIM_ECDCmd, 403TIM_ECDInit, 404TIM_ECDStructInit, 406TIM_GetIRQFlag, 407TIM_Timer.GetCMPT0, 408TIM_Timer.GetCMPT1, 409TIM_Timer.GetCount, 410TIM_TimerCmd, 411TIM_TimerInit, 412TIM_TimerStrutInit, 413TIMER_CAPMode_Fall, 397TIMER_CAPMode_None, 397TIMER_CAPMode_Rise, 397TIMER_CAPMode_RiseFall, 397TIMER_IF_CH0, 398TIMER_IF_CH1, 398TIMER_IF_ZERO, 398Timer_IRQEna_All, 399Timer_IRQEna_CH0, 399Timer_IRQEna_CH1, 399Timer_IRQEna_None, 399Timer_IRQEna_Zero, 399Timer_IRQEnaDef, 399TIMER.OPMode_CAP, 398TIMER.OPMode_CMP, 398lks32mc08x.tmp.cGetCurrentTemperature, 645
+
+m_TemperatureCof, 647TempSensor_Init, 646lks32mc08x_tmp.hGetCurrentTemperature, 417TempSensor_Init, 418lks32mc08x_uart.cUART_ClearIRQFlag, 649UART_GetIRQFlag, 649UART_Init, 651UART_ReadData, 653UART_SendAddr, 485, 654UART_SendData, 655UART_SendData, 485, 656UART_StructInit, 657lks32mc08x_uart.hUART_ClearIRQFlag, 427UART_FIRSTSENDLSB, 422UART_FIRSTSENDMSB, 423UART_GetIRQFlag, 428UART_IF_CheckError, 423UART_IF_RcvOver, 423UART_IF_SendButEmpty, 423UART_IF_SendOver, 423UART_IF_StopError, 424UART_Init, 429UART_IRQEna_CheckError, 424UART_IRQEna_RcvOver, 424UART_IRQEna_RX_DMA_RE, 424UART_IRQEna_SendBufEmpty, 424UART_IRQEna_SendOver, 425UART_IRQEna_StopError, 425UART_IRQEna_TX_BUF_DMA_RE, 425UART_IRQEna_TX_DMA_RE, 425UART_Parity.EVEN, 427UART_Parity.NO, 427UART_Parity_ODD, 427UART_ParityMode, 426UART_ReadData, 431UART_SendAddr, 485, 432UART_SendData, 433UART_SendData, 485, 434UART_STOPBITS, 1b, 425UART_STOPBITS, 2b, 426UART_StructInit, 435UART_WORDLENGTH, 7b, 426UART_WORDLENGTH, 8b, 426LOW_LEVELlks32mc08x_mcpwm.h, 314LOW_LEVEL_ACTIVElks32mc08x_mcpwm.h, 314m_TemperatureCoflks32mc08x_tmp.c, 647Match485AddrUART_InitTypeDef, 119MCLK_ENMCPWM_InitTypeDef, 86MCPWM_Auto_ERR_ENMCPWM_InitTypeDef, 86
+
+MCPWM.CH0- SHORT_IRQ_EN Iks32mc08x- mcpwm.h, 314 MCPWM.CH0- SHORT_IRQ- IF Iks32mc08x- mcpwm.h, 314 MCPWM.CH1- SHORT_IRQ_EN Iks32mc08x- mcpwm.h, 315 MCPWM.CH1- SHORT_IRQ- IF Iks32mc08x- mcpwm.h, 315 MCPWM.CH2- SHORT_IRQ_EN Iks32mc08x- mcpwm.h, 315 MCPWM.CH2- SHORT_IRQ- IF Iks32mc08x- mcpwm.h, 315 MCPWM.CH3- SHORT_IRQ_EN Iks32mc08x- mcpwm.h, 315 MCPWM.CH3- SHORT_IRQ- IF Iks32mc08x- mcpwm.h, 316 MCPWM.ClearIRQFlag Iks32mc08x- mcpwm.c, 573 Iks32mc08x- mcpwm.h, 323 MCPWM.Cnt.EN MCPWM.InitTypeDef, 86 MCPWM.FA10.1RQ.EN Iks32mc08x- mcpwm.h, 316 MCPWM.FA10.1RQ- IF Iks32mc08x- mcpwm.h, 316 MCPWM.FA11.1RQ.EN Iks32mc08x- mcpwm.h, 316 MCPWM.FA11.1RQ- IF Iks32mc08x- mcpwm.h, 316 MCPWM.GetIRQFlag Iks32mc08x- mcpwm.c, 575 Iks32mc08x- mcpwm.h, 325 MCPWM.Init Iks32mc08x- mcpwm.c, 577 Iks32mc08x- mcpwm.h, 327 MCPWM.InitTypeDef, 68 CH0- NS, 72 CH0- PS, 73 CHON.default_output, 73 CHON.Polarity_IRQ, 73 CHON.SCTRLN, 73 CHOP_default_output, 74 CHOP_Polarity_IRQ, 74 CHOP_SCTRLP, 74 CH1- NS, 74 CH1- PS, 75 CH1N_default_output, 75 CH1N.Polarity_IRQ, 75 CH1N.SCTRLN, 75 CH1P_default_output, 76 CH1P_Polarity_IRQ, 76 CH1P_SCTRLP, 76 CH2- NS, 76 CH2- PS, 77 CH2N.default_output, 77 CH2N_Polarity_IRQ, 77 CH2N_SCTRLN, 77 CH2P_default_output, 78
+
+CH2P_Polarity_IRQ, 78 CH2P_SCTRLP, 78 CH3- NS, 78 CH3- PS, 79 CH3N.default_output, 79 CH3N_Polarity_IRQ, 79 CH3N_SCTRLN, 79 CH3P_default_output, 80 CH3P_Polarity_IRQ, 80 CH3P_SCTRLP, 80 CLK_DIV, 80 CMP_BKIN_Filter, 80 DeadTimeCHON, 81 DeadTimeCHOP, 81 DeadTimeCH1N, 81 DeadTimeCH1P, 81 DeadTimeCH2N, 82 DeadTimeCH2P, 82 DeadTimeCH3N, 82 DeadTimeCH3P, 82 DebugMode_PWM_out, 83 FAIL0- INPUT_EN, 83 FAIL0- INT_EN, 83 FAIL0- Polarity, 83 FAIL0- Signal_Sel, 84 FAIL1- INPUT_EN, 84 FAIL1- INT_EN, 84 FAIL1- Polarity, 84 FAIL1- Signal_Sel, 85 GPIO_BKIN_Filter, 85 IO0- PPE, 85 IO1- PPE, 85 IO2- PPE, 86 IO3- PPE, 86 MCLK_EN, 86 MCPWM.Auto_EPR_EN, 86 MCPWM.Cnt_EN, 86 MCPWM.PERIOD, 87 MCPWM.REG.UPDATE_INT_EN, 87 MCPWM.T0_UpdateEN, 87 MCPWM.T1_UpdateEN, 87 MCPWM.UpdateInterval, 87 MCPWM.WorkModeCH0, 88 MCPWM.WorkModeCH1, 88 MCPWM.WorkModeCH2, 88 MCPWM.WorkModeCH3, 88 Switch.CHON_CHOP, 89 Switch.CH1N_CHIP, 89 Switch.CH2N_CH2P, 89 Switch.CH3N_CH3P, 89 T0_Update_INT_EN, 89 T1_Update_INT_EN, 90 TH00- Match_INT_EN, 90 TH01- Match_INT_EN, 90 TH10- Match_INT_EN, 90 TH11- Match_INT_EN, 90 TH20- Match_INT_EN, 91 TH21- Match_INT_EN, 91
+
+TH30 Match INT EN, 91 TH31 Match INT EN, 91 TMR0 Match INT EN, 91 TMR1 Match INT EN, 92 TMR2 Match INT EN, 92 TMR3 Match INT EN, 92 TriggerPoint0, 92 TriggerPoint1, 92 TriggerPoint2, 93 TriggerPoint3, 93 MCPWM.MOE DISABLE_MASK lks32mc08x.mcpwm.h, 317 MCPWM.MOE.ENABLE.MASK lks32mc08x.mcpwm.h, 317 MCPWM.PERIOD MCPWM.InitTypeDef, 87 MCPWM.REG_UPDATE_INT_EN MCPWM.InitTypeDef, 87 MCPWM.SHADE_IRQ_EN lks32mc08x.mcpwm.h, 317 MCPWM.SHADE_IRQ_IF lks32mc08x.mcpwm.h, 317 MCPWM.StructInit lks32mc08x.mcpwm.c, 578 lks32mc08x.mcpwm.h, 328 MCPWM.TO_IRQ_EN lks32mc08x.mcpwm.h, 317 MCPWM.TO_IRQ_IF lks32mc08x.mcpwm.h, 318 MCPWM.TO.UpdateEN MCPWM.InitTypeDef, 87 MCPWM.T1.IRQ.EN lks32mc08x.mcpwm.h, 318 MCPWM.T1.IRQ_IF lks32mc08x.mcpwm.h, 318 MCPWM.T1. UpdateEN MCPWM.InitTypeDef, 87 MCPWM.TH00. IRQ_EN lks32mc08x.mcpwm.h, 318 MCPWM.TH00. IRQ_IF lks32mc08x.mcpwm.h, 318 MCPWM.TH01. IRQ_EN lks32mc08x.mcpwm.h, 319 MCPWM.TH01. IRQ_IF lks32mc08x.mcpwm.h, 319 MCPWM.TH10. IRQ_EN lks32mc08x.mcpwm.h, 319 MCPWM.TH10. IRQ_IF lks32mc08x.mcpwm.h, 319 MCPWM.TH11. IRQ_EN lks32mc08x.mcpwm.h, 319 MCPWM.TH11. IRQ_IF lks32mc08x.mcpwm.h, 320 MCPWM.TH20. IRQ_EN lks32mc08x.mcpwm.h, 320 MCPWM.TH20. IRQ_IF lks32mc08x.mcpwm.h, 320 MCPWM.TH21. IRQ_EN
+
+lks32mc08x.mcpwm.h, 320 MCPWM.TH21. IRQ_IF lks32mc08x.mcpwm.h, 320 MCPWM.TH30. IRQ_EN lks32mc08x.mcpwm.h, 321 MCPWM.TH30. IRQ_IF lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQ_IF lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 321 MCPWM.TH31. IRQENA MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 323 MCPWM.TH31. IRQ_EN lks32mc08x.mcpwm.h, 323 MCPWM.Trigger.ENA DC- InitTypeDef, 11 MCPWM.UpdateDef, 86 lks32mc08x.mcpwm.h, 323 MCPWM.UpdateInterval MCPWM.InitTypeDef, 87 MCPWM.WorkModeCH0 MCPWM.InitTypeDef, 88 MCPWM.WorkModeCH1 MCPWM.InitTypeDef, 88 MCPWM.WorkModeCH2 MCPWM.InitTypeDef, 88 MCPWM.WorkModeCH3 MCPWM.InitTypeDef, 88 MEMORY2PERI lks32mc08x.dma.h, 216 MOD CAN.TypeDef, 31 Mode SPI InitTypeDef, 87 MSCR I2C.TypeDef, 67 MST_MODE I2C.InitTypeDef, 65 MultiDropEna UART_InitTypeDef, 119 My.CAN.Send.Msg lks32mc08x.can.d, 467 lks32mc08x.can.h, 180 nCofA Stru_TemperatureCof_Def, 104
+
+nOffsetB Stru_TemperatureCof_Def, 104 null0 CAN_TypeDef, 31 Iks32mc08x_can.h, 168 null1 CAN_TypeDef, 31 Iks32mc08x_can.h, 168 null2 CAN_TypeDef, 31 Iks32mc08x_can.h, 168 null3 CAN_TypeDef, 31 Iks32mc08x_can.h, 168 null4 Iks32mc08x_can.h, 168 OPA0 Iks32mc08x_opa.h, 338 OPA1 Iks32mc08x_opa.h, 338 OPA2 Iks32mc08x_opa.h, 338 OPA3 Iks32mc08x_opa.h, 338 OPA_CLEna OPA_InitTypeDef, 94 OPA_Gain OPA_InitTypeDef, 94 OPA_Init Iks32mc08x_opa.c, 584 Iks32mc08x_opa.h, 338 OPA_InitTypeDef, 93 OPA_CLEna, 94 OPA_Gain, 94 OPA_OUT Iks32mc08x_opa.c, 585 Iks32mc08x_opa.h, 339 OPA_StructInit Iks32mc08x_opa.c, 586 Iks32mc08x_opa.h, 340 Overflow.IRQ_Ena HALL_InitTypeDef, 61 ParityMode UART_InitTypeDef, 119 PDE GPIO_TypeDef, 57 PDI GPIO_TypeDef, 58 PDO GPIO_TypeDef, 58 PERI2MEMORY Iks32mc08x_dma.h, 216 PGA_GAIN_20 Iks32mc08x_opa.h, 337 PGA_GAIN_4P25 Iks32mc08x_opa.h, 337 PGA_GAIN_6
+
+lks32mc08x_opa.h, 337 PGA_GAIN_9P5 lks32mc08x_opa.h, 337 PIE GPIO_TypeDef, 58 PLL_DivSel SYS_InitTypeDef, 106 PLL_ReDiv SYS_InitTypeDef, 106 PLL_SrcSel SYS_InitTypeDef, 106 PODE GPIO_TypeDef, 58 POE GPIO_TypeDef, 58 POL EXTl_TypeDef, 54 PORFilter_Ena SYS_InitTypeDef, 106 progm_flag Iks32MC08x_flash.c, 517 Iks32MC08x_flash.h, 245 ProgramPage Iks32MC08x_flash.c, 513 Iks32MC08x_flash.h, 242 PUE GPIO_TypeDef, 59 PWMOutputs Iks32mc08x_mcpwm.c, 579 Iks32mc08x_mcpwm.h, 329 Quotient stru_DiviComponents, 103 RBSA CAN_TypeDef, 31 Read_Flash Iks32MC08x_flash.c, 514 Read_More_Flash Iks32MC08x_flash.c, 516 Iks32MC08x_flash.h, 243 Read_NVR Iks32mc08x_nvr.h, 334 Read.Trim Iks32mc08x_nvr.h, 334 RefVol ADC_InitTypeDef, 11 RefVol_1V2 Iks32mc08x_adc.h, 145 RefVol_2V4 Iks32mc08x_adc.h, 145 Remainder stru_DiviComponents, 103 RMC CAN_TypeDef, 32 RTH IWDG_InitTypeDef, 68 RX_DATA SPI_TypeDef, 99
+
+RXD_INV UART_InitTypeDef, 119 RXERR CAN_TypeDef, 32 SCR I2C_TypeDef, 67 SD0 ADC_TypeDef, 25 SD1 ADC_TypeDef, 25 SecSeg_Ch ADC_InitTypeDef, 12 SELN.CMP_IN Iks32mc08x.cmp.h, 193 SELN.DAC Iks32mc08x.cmp.h, 193 SELN.HALL_MID Iks32mc08x.cmp.h, 194 SELN.REF Iks32mc08x.cmp.h, 194 SELP.CMP_IP0 Iks32mc08x.cmp.h, 194 SELP.CMP_IP1 Iks32mc08x.cmp.h, 194 SELP.CMP_IP2 Iks32mc08x.cmp.h, 194 SELP.CMP_IP3 Iks32mc08x.cmp.h, 195 SELP.CMP_IP4 Iks32mc08x.cmp.h, 195 SELP.CMP_OPA0IP Iks32mc08x.cmp.h, 195 SELP.CMP_OPA0OUT Iks32mc08x.cmp.h, 195 SELP.CMP_OPA1OUT Iks32mc08x.cmp.h, 195 SELP.CMP_OPA2OUT Iks32mc08x.cmp.h, 196 SELP.CMP_OPA3IP Iks32mc08x.cmp.h, 196 SELP.CMP_OPA3OUT Iks32mc08x.cmp.h, 196 SetWakeIO Iks32mc08x.sys.c, 599 Iks32mc08x.sys.h, 370 SFF_ID_Filter Iks32mc08x.can.c, 469 Iks32mc08x.can.h, 182 SINCOS Iks32mc08x.dsp.h, 226 SinValue stru_CordicComponents, 101 SIZE SPI_TypeDef, 99 SLV.MODE I2C_InitTypeDef, 65 SoftDelay Iks32mc08x.sys.c, 601
+
+softIE HALL_InitTypeDef, 61 Source/lks32mc08x.ad.c, 437, 446 Source/lks32mc08x.can.c, 449, 470 Source/lks32mc08x.cmp.c, 474, 480 Source/lks32mc08x.dac.c, 481, 486 Source/lks32mc08x.dma.c, 487, 495 Source/lks32mc08x.dsp.c, 496, 504 Source/lks32mc08x.ext.c, 505, 510 Source/lks32MC08x.flash.c, 511, 518 Source/lks32mc08x.gpo.c, 519, 535 Source/lks32mc08x.nati.c, 508, 548 Source/lks32mc08x.i2c.c, 549, 563 Source/lks32mc08x.iwdg.c, 565, 571 Source/lks32mc08x.mcpwm.c, 572, 580 Source/lks32mc08x.opi.c, 583, 587 Source/lks32mc08x.spi.c, 588, 596 Source/lks32mc08x.sys.c, 597, 620 Source/lks32mc08x.tim.c, 622, 639 Source/lks32mc08x.tmp.c, 643, 647 Source/lks32mc08x.uart.c, 648, 658 SPI.ClearIRQFlag Iks32mc08x.spi.c, 589 Iks32mc08x.spi.h, 346 SPI_DMA_DISABLE Iks32mc08x.spi.h, 343 SPI_DMA_ENABLE Iks32mc08x.spi.h, 344 SPI_Duplex Iks32mc08x.spi.h, 346 SPI_FIRSTSENDLSB Iks32mc08x.spi.h, 344 SPI_FIRSTSEND.MSB Iks32mc08x.spi.h, 344 SPI_Full Iks32mc08x.spi.h, 346 SPI_GetIRQFlag Iks32mc08x.spi.c, 590 Iks32mc08x.spi.h, 348 SPI_Half_Rx Iks32mc08x.spi.h, 346 SPI_Half_Tx Iks32mc08x.spi.h, 346 SPI_IF_DataOver Iks32mc08x.spi.h, 344 SPI_IF_SSError Iks32mc08x.spi.h, 344 SPI_IF_TranDone Iks32mc08x.spi.h, 345 SPI_Init Iks32mc08x.spi.c, 591 Iks32mc08x.spi.h, 349 SPI_InitTypeDef, 94 BaudRate, 95 ByteLength, 95 CPHA, 96 CPOL, 96 DataOrder, 96
+
+DMA, 96Duplex, 96EN, 97IRQEna, 97Mode, 97SS, 98Trig, 98SPI_IRQEna_DataOverlks32mc08x_spi.h, 345SPI_IRQEna_Enablelks32mc08x_spi.h, 345SPI_IRQEna:SSElks32mc08x_spi.h, 345SPI_IRQEna_TranDonelks32mc08x_spi.h, 345SPI_Masterlks32mc08x_spi.h, 346SPI_Modelks32mc08x_spi.h, 346SPI_ReadDatalks32mc08x_spi.c, 593lks32mc08x_spi.h, 350SPI_SendDatalks32mc08x_spi.c, 594lks32mc08x_spi.h, 351SPI_Slavelks32mc08x_spi.h, 346SPI_Structinitlks32mc08x_spi.c, 595lks32mc08x_spi.h, 352SPI_TypeDef, 98CFG, 99DIV, 99IE, 99RX_DATA, 99SIZE, 99TX_DATA, 100SRCAN_TypeDef, 32SSPI_InitTypeDef, 98STOP_IEI2C_InitTypeDef, 65StopBitsUART_InitTypeDef, 120stru_CordicComponents, 100ArctanValue, 101ArctanX, 101ArctanY, 101CosValue, 101SinValue, 101Theta, 102stru_DiviComponents, 102Dividend, 102Divisor, 103Quotient, 103Remainder, 103Stru_TempertureCof_Def, 103
+
+nCofA, 104nOffsetB, 104STTUART_TypeDef, 123Switch2HRClks32mc08x_sys.c, 602lks32mc08x_sys.h, 372Switch2PLLLks32mc08x_sys.c, 603lks32mc08x_sys.h, 373Switch_CHON_CHOPMCPWM.InitTypeDef, 89Switch_CH1N_CH1PMCPWM.InitTypeDef, 89Switch_CH2N_CH2PMCPWM.InitTypeDef, 89Switch_CH3N_CH3PMCPWM.InitTypeDef, 89SWTADC_TypeDef, 25SYS AnalogModule.ADClks32mc08x_sys.h, 358SYS AnalogModule.BGPks32mc08x_sys.h, 358SYS AnalogModule.CMPOLks32mc08x_sys.h, 358SYS AnalogModule.CMP1lks32mc08x_sys.h, 359SYS AnalogModule.DAClks32mc08x_sys.h, 359SYS AnalogModule.OFAOLks32mc08x_sys.h, 359SYS AnalogModule.OFA1lks32mc08x_sys.h, 359SYS AnalogModule.OFA2lks32mc08x_sys.h, 359SYS AnalogModule.OFA3lks32mc08x_sys.h, 360SYS AnalogModule.PLLSks32mc08x_sys.h, 360SYS AnalogModule.RCHAks32mc08x_sys.h, 360SYS AnalogModule.TMPlks32mc08x_sys.h, 360SYS AnalogModule.XTALlks32mc08x_sys.h, 360SYS AnalogModule.ClockCmdlks32mc08x_sys.c, 604lks32mc08x_sys.h, 374SYS.ClearRslks32mc08x_sys.c, 606lks32mc08x_sys.h, 376SYS.Clk_SPIDiv1lks32mc08x_sys.h, 361SYS.Clk_SPIDiv2lks32mc08x_sys.h, 361SYS.Clk_SPIDiv4lks32mc08x_sys.h, 361
+
+SYS.Clk_SPIDiv8 Iks32mc08x.sys.h, 361 SYS.Clk_UARTDiv1 Iks32mc08x.sys.h, 361 SYS.Clk_UARTDiv2 Iks32mc08x.sys.h, 362 SYS.Clk_UARTDiv4 Iks32mc08x.sys.h, 362 SYS.Clk_UARTDiv8 Iks32mc08x.sys.h, 362 SYS.EnablePORFilter Iks32mc08x.sys.c, 607 SYS.FallSleep Iks32mc08x.sys.c, 608 Iks32mc08x.sys.h, 377 SYS.FeedDog Iks32mc08x.sys.c, 609 Iks32mc08x.sys.h, 378 SYS.GetRstSource Iks32mc08x.sys.c, 610 Iks32mc08x.sys.h, 379 SYS.Init Iks32mc08x.sys.c, 611 Iks32mc08x.sys.h, 380 SYS.InitTypeDef, 104 Clk_DivSPI, 105 Clk_DivUART, 105 Clk_FEN, 105 PLL_DivSel, 106 PLL_ReDiv, 106 PLL_SrcSel, 106 PORFilter_Ena, 106 WDT_Ena, 106 SYS.Module_CAN Iks32mc08x.sys.h, 362 SYS.Module_DSP Iks32mc08x.sys.h, 362 SYS.Module_HALL Iks32mc08x.sys.h, 363 SYS.Module_I2C Iks32mc08x.sys.h, 363 SYS.Module_MCPWM Iks32mc08x.sys.h, 363 SYS.Module_SPI Iks32mc08x.sys.h, 363 SYS.Module_TIMER Iks32mc08x.sys.h, 363 SYS.Module_UART0 Iks32mc08x.sys.h, 364 SYS.Module_UART1 Iks32mc08x.sys.h, 364 SYS.ModuleClockCmd Iks32mc08x.sys.c, 612 Iks32mc08x.sys.h, 381 SYS.PLLREDIV_1 Iks32mc08x.sys.h, 364 SYS.PLLREDIV_4 Iks32mc08x.sys.h, 364
+
+SYS.PLLSRSEL.CRYSTAL Iks32mc08x.sys.h, 364 SYS.PLLSRSEL.RCH Iks32mc08x.sys.h, 365 SYS.RstSrc.HPOR Iks32mc08x.sys.h, 365 SYS.RstSrc.KEYBOARD Iks32mc08x.sys.h, 365 SYS.RstSrc.LPOR Iks32mc08x.sys.h, 365 SYS.RstSrc.WDT Iks32mc08x.sys.h, 365 SYS.SetWakeInterval Iks32mc08x.sys.c, 614 Iks32mc08x.sys.h, 383 SYS.SoftResetModule Iks32mc08x.sys.c, 615 Iks32mc08x.sys.h, 384 SYS.StructInit Iks32mc08x.sys.c, 617 Iks32mc08x.sys.h, 386 SYS.WakeInterval.025s Iks32mc08x.sys.h, 366 SYS.WakeInterval.05s Iks32mc08x.sys.h, 366 SYS.WakeInterval.16s Iks32mc08x.sys.h, 366 SYS.WakeInterval.1s Iks32mc08x.sys.h, 366 SYS.WakeInterval.2s Iks32mc08x.sys.h, 366 SYS.WakeInterval.32s Iks32mc08x.sys.h, 367 SYS.WakeInterval.4s Iks32mc08x.sys.h, 367 SYS.WakeInterval.8s Iks32mc08x.sys.h, 367 SYS.WatchDogCmd Iks32mc08x.sys.c, 618 Iks32mc08x.sys.h, 387 SYS.WD_TimeOut2s Iks32mc08x.sys.h, 367 SYS.WD_TimeOut4s Iks32mc08x.sys.h, 367 SYS.WD_TimeOut64s Iks32mc08x.sys.h, 368 SYS.WD_TimeOut8s Iks32mc08x.sys.h, 368 T0_Update_INT_EN MCPWM.InitTypeDef, 89 T1_Update_INT_EN MCPWM.InitTypeDef, 90 TC_IE I2C_InitTypeDef, 65 TCLK CMP_TypeDef, 46 TempSensor.Init Iks32mc08x_tmp.c, 646
+
+lks32mc08x.tmp.h, 418 TH HALL_TypeDef, 62 TIM.ECDTypeDef, 110 TIM_TimerTypeDef, 117 TH00_Match_INT_EN MCPWM_InitTypeDef, 90 TH01_Match_INT_EN MCPWM_InitTypeDef, 90 TH10_Match_INT_EN MCPWM_InitTypeDef, 90 TH11_Match_INT_EN MCPWM_InitTypeDef, 90 TH20_Match_INT_EN MCPWM_InitTypeDef, 91 TH21_Match_INT_EN MCPWM_InitTypeDef, 91 TH30_Match_INT_EN MCPWM_InitTypeDef, 91 TH31_Match_INT_EN MCPWM_InitTypeDef, 91 Theta stru_CordicComponents, 102 ThrSeg.Ch ADC_InitTypeDef, 12 TIM_ClearlRQFlag lks32mc08x.tim.c, 626 lks32mc08x.tim.h, 401 TIM_Clk_Div1 lks32mc08x.tim.h, 396 TIM_Clk_Div2 lks32mc08x.tim.h, 396 TIM_Clk_Div4 lks32mc08x.tim.h, 396 TIM_Clk_Div8 lks32mc08x.tim.h, 397 TIM_ECD_GetCount lks32mc08x.tim.c, 627 lks32mc08x.tim.h, 402 TIM_ECDCmd lks32mc08x.tim.c, 628 lks32mc08x.tim.h, 403 TIM_ECDInit lks32mc08x.tim.c, 629 lks32mc08x.tim.h, 404 TIM_ECDInitTypeDef, 107 ECD_ClockDiv, 107 ECD_Filter0, 108 ECD_Filter1, 108 ECD_IRQEna, 108 ECD_Mode, 108 ECD_TH, 109 TIM_ECDStructInit lks32mc08x.tim.c, 630 lks32mc08x.tim.h, 406 TIM_ECDTypeDef, 109 CFG, 110 CNT, 110
+
+TH, 110TIM_GetIRQFlaglks32mc08x.tim.c, 631lks32mc08x.tim.h, 407TIM_Timer_GetCMPT0lks32mc08x.tim.c, 633lks32mc08x.tim.h, 408TIM_Timer_GetCMPT1lks32mc08x.tim.c, 634lks32mc08x.tim.h, 409TIM_Timer_GetCountlks32mc08x.tim.c, 634lks32mc08x.tim.h, 410TIM_TimerCmdlks32mc08x.tim.c, 635lks32mc08x.tim.h, 411TIM_TimerInitlks32mc08x.tim.c, 636lks32mc08x.tim.h, 412TIM_TimerInitTypeDef, 110Timer_CHO.CapMode, 111Timer_CHO.WorkMode, 112Timer_CHOOutput, 112Timer_CH1_CapMode, 112Timer_CH1_WorkMode, 113Timer_CH1Output, 113Timer_ClockDiv, 113Timer_CMP, 114Timer_CMP1, 114Timer_Filter0, 114Timer_Filter1, 114Timer_IRQEna, 115Timer_TH, 115TIM_TimerStrutInitlks32mc08x.tim.c, 638lks32mc08x.tim.h, 413TIM_TimerTypeDef, 115CFG, 116CMPT0, 116CMPT1, 116CNT, 116EVT, 116TH, 117TIMER.CapMode_Falllks32mc08x.tim.h, 397TIMER.CapMode_Nonelks32mc08x.tim.h, 397TIMER.CapMode_Riselks32mc08x.tim.h, 397TIMER.CapMode_RiseFalllks32mc08x.tim.h, 397Timer_CH0.CapModeTIM_TimerInitTypeDef, 111Timer_CH0_WorkModeTIM_TimerInitTypeDef, 112Timer_CH0OutputTIM_TimerInitTypeDef, 112Timer_CH1_CapMode
+
+TIM_TimerlnitTypeDef, 112 Timer_CH1_WorkMode TIM_TimerlnitTypeDef, 113 Timer_CH1Output TIM_TimerlnitTypeDef, 113 Timer_ClockDiv TIM_TimerlnitTypeDef, 113 Timer_CMP0 TIM_TimerlnitTypeDef, 114 Timer_CMP1 TIM_TimerlnitTypeDef, 114 Timer_Filero TIM_TimerlnitTypeDef, 114 Timer_Filter1 TIM_TimerlnitTypeDef, 114 TIMER_IF_CH0 Iks32mc08x_tim.h, 398 TIMER_IF_CH1 Iks32mc08x_tim.h, 398 TIMER_IF_ZERO Iks32mc08x_tim.h, 398 Timer_IRQEna TIM_TimerlnitTypeDef, 115 Timer_IRQEna_All Iks32mc08x_tim.h, 399 Timer_IRQEna_CH0 Iks32mc08x_tim.h, 399 Timer_IRQEna_CH1 Iks32mc08x_tim.h, 399 Timer_IRQEna_None Iks32mc08x_tim.h, 399 Timer_IRQEna_Zero Iks32mc08x_tim.h, 399 Timer_IRQEnaDef Iks32mc08x_tim.h, 399 TIMER_OPMode_CAP Iks32mc08x_tim.h, 398 TIMER_OPMode_CMP Iks32mc08x_tim.h, 398 Timer_TH TIM_TimerlnitTypeDef, 115 TMR0_Match_INT_EN MCPWM_InitTypeDef, 91 TMR1_Match_INT_EN MCPWM_InitTypeDef, 92 TMR2_Match_INT_EN MCPWM_InitTypeDef, 92 TMR3_Match_INT_EN MCPWM_InitTypeDef, 92 TRG ADC_TypeDef, 25 Trig SPI_InitTypeDef, 98 TriggerCnt ADC_InitTypeDef, 12 Trigger_Mode ADC_InitTypeDef, 12 TriggerPoint0
+
+MCPWM_InitTypeDef, 92 TriggerPoint1 MCPWM_InitTypeDef, 92 TriggerPoint2 MCPWM_InitTypeDef, 93 TriggerPoint3 MCPWM_InitTypeDef, 93 TX_DATA SPI_TypeDef, 100 TXD.INV UART_InitTypeDef, 120 TXERR CAN_TypeDef, 32 TXRX0 CAN_TypeDef, 32 TXRX1 CAN_TypeDef, 33 TXRX2 CAN_TypeDef, 33 TXRX3 CAN_TypeDef, 33 TXRX4 CAN_TypeDef, 33 TXRX5 CAN_TypeDef, 33 TXRX6 CAN_TypeDef, 34 TXRX7 CAN_TypeDef, 34 TXRX8 CAN_TypeDef, 34 TXRX9 CAN_TypeDef, 34 TXRXA CAN_TypeDef, 34 TXRXB CAN_TypeDef, 35 TXRXC CAN_TypeDef, 35 UART_ClearIRQFlag Iks32mc08x.uart.c, 649 Iks32mc08x.uart.h, 427 UART_FIRSTSEND LSB Iks32mc08x.uart.h, 422 UART_FIRSTSEND.MSB Iks32mc08x.uart.h, 423 UART_GetIRQFlag Iks32mc08x.uart.c, 650 Iks32mc08x.uart.h, 428 UART_IF_CheckError Iks32mc08x.uart.h, 423 UART_IF_RcvOver Iks32mc08x.uart.h, 423 UART_IF_SendBufEmpy Iks32mc08x.uart.h, 423 UART_IF_SendOver Iks32mc08x.uart.h, 423 UART_IF_StopError
+
+lks32mc08x.uart.h, 424 UART_Init lks32mc08x.uart.c, 651 lks32mc08x.uart.h, 429 UART_InitTypeDef, 117 BaudRate, 118 Bit9Value, 118 FirstSend, 118 IRQEna, 118 Match485Addr, 119 MultiDropEna, 119 ParityMode, 119 RXD_INV, 119 StopBits, 120 TXD_INV, 120 WordLength, 120 UART_IRQEna_CheckError lks32mc08x.uart.h, 424 UART_IRQEna_RcvOver lks32mc08x.uart.h, 424 UART_IRQEna_RX_DMA.RE lks32mc08x.uart.h, 424 UART_IRQEna_SendBuffEmpty lks32mc08x.uart.h, 424 UART_IRQEna_SendOver lks32mc08x.uart.h, 425 UART_IRQEna_StopError lks32mc08x.uart.h, 425 UART_IRQEna_TX_BUF_DMA.RE lks32mc08x.uart.h, 425 UART_IRQEna_TX_DMA.RE lks32mc08x.uart.h, 425 UART_Parity EVEN lks32mc08x.uart.h, 427 UART_Parity_NO lks32mc08x.uart.h, 427 UART_Parity_ODD lks32mc08x.uart.h, 427 UART_ParityMode lks32mc08x.uart.h, 426 UART_ReadData lks32mc08x.uart.c, 653 lks32mc08x.uart.h, 431 UART_SendAddr.485 lks32mc08x.uart.c, 654 lks32mc08x.uart.h, 432 UART_SendData lks32mc08x.uart.c, 655 lks32mc08x.uart.h, 433 UART_SendData.485 lks32mc08x.uart.c, 656 lks32mc08x.uart.h, 434 UART_STOPBITS_1b lks32mc08x.uart.h, 425 UART_STOPBITS_2b lks32mc08x.uart.h, 426 UART_Structinit lks32mc08x.uart.c, 657
+
+lks32mc08x.uart.h, 435 UART_TypeDef, 121 ADR, 121 BUFF, 121 CTRL, 122 DIVH, 122 DIVL, 122 IE, 122 IF, 122 INV, 123 STT, 123 UART_WORDLENGTH.7b lks32mc08x.uart.h, 426 UART_WORDLENGTH.8b lks32mc08x.uart.h, 426 UTIMER_Trigger_En ADC_InitTypeDef, 13 WAKE_InitStruct lks32mc08x.sys.c, 619 WAKE_InitTypeDef, 123 AFE_REG5_RECORD, 124 AFE_REG6_RECORD, 124 CLK_CFG_RECORD, 124 WAKEIO_P0.0 lks32mc08x.sys.h, 368 WAKEIO_P0.1 lks32mc08x.sys.h, 368 WAKEIO_P1.0 lks32mc08x.sys.h, 368 WAKEIO_P1.1 lks32mc08x.sys.h, 369 WAKETRIG_HIGH lks32mc08x.sys.h, 369 WAKETRIG_LOW lks32mc08x.sys.h, 369 WDG_EN IWDG_InitTypeDef, 68 WDT_Ena SYS InitTypeDef, 106 WDT_RTH_2S lks32mc08x.iwdg.h, 301 WDT_RTH_4S lks32mc08x.iwdg.h, 301 WDT_RTH_64S lks32mc08x.iwdg.h, 301 WDT_RTH_8S lks32mc08x.iwdg.h, 302 WIDTH HALL_TypeDef, 62 WordLength UART_InitTypeDef, 120

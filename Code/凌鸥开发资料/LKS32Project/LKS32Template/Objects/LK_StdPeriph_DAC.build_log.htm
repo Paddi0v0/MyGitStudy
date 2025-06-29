@@ -1,0 +1,155 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=32B1Q-NUNX4-8T23P-M8DEM-1XVRE-0EUHS
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.38.0
+Dialog DLL:      TARMCM1.DLL V1.14.2.0
+ 
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\凌鸥开发资料\LKS32Project\LKS32Template\LK_StdPeriph_Flash.uvprojx
+Project File Date:  06/06/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling startup_lks32mc08x.s...
+compiling lks32mc08x_exti.c...
+compiling interrupt.c...
+.\Include\hardware_init.h(25): error:  #147-D: declaration is incompatible with "void DAC_Init(DAC_InitTypeDef *)"  (declared at line 37 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h")
+  void DAC_Init(void);
+.\Include\hardware_init.h(26): error:  #147-D: declaration is incompatible with "void CMP_Init(CMP_InitTypeDef *)"  (declared at line 180 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h")
+  void CMP_Init(void);
+.\Include\hardware_config.h(123): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_20"  (declared at line 46 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_20                    0                   /* 反馈电阻200:10 */
+.\Include\hardware_config.h(124): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_9P5"  (declared at line 47 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_9P5                   1                   /* 反馈电阻190:20 */
+.\Include\hardware_config.h(125): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_6"  (declared at line 48 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_6                     2                   /* 反馈电阻180:30 */
+.\Include\hardware_config.h(126): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_4P25"  (declared at line 49 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_4P25                  3                   /* 反馈电阻170:40 */
+AppFunction\interrupt.c: 4 warnings, 2 errors
+compiling lks32MC08x_Flash.c...
+compiling main.c...
+.\Include\hardware_init.h(25): error:  #147-D: declaration is incompatible with "void DAC_Init(DAC_InitTypeDef *)"  (declared at line 37 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h")
+  void DAC_Init(void);
+.\Include\hardware_init.h(26): error:  #147-D: declaration is incompatible with "void CMP_Init(CMP_InitTypeDef *)"  (declared at line 180 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h")
+  void CMP_Init(void);
+.\Include\hardware_config.h(123): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_20"  (declared at line 46 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_20                    0                   /* 反馈电阻200:10 */
+.\Include\hardware_config.h(124): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_9P5"  (declared at line 47 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_9P5                   1                   /* 反馈电阻190:20 */
+.\Include\hardware_config.h(125): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_6"  (declared at line 48 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_6                     2                   /* 反馈电阻180:30 */
+.\Include\hardware_config.h(126): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_4P25"  (declared at line 49 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_4P25                  3                   /* 反馈电阻170:40 */
+Source\main.c: 4 warnings, 2 errors
+compiling lks32mc08x_adc.c...
+compiling lks32mc08x_gpio.c...
+compiling hardware_init.c...
+.\Include\hardware_init.h(25): error:  #147-D: declaration is incompatible with "void DAC_Init(DAC_InitTypeDef *)"  (declared at line 37 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h")
+  void DAC_Init(void);
+.\Include\hardware_init.h(26): error:  #147-D: declaration is incompatible with "void CMP_Init(CMP_InitTypeDef *)"  (declared at line 180 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h")
+  void CMP_Init(void);
+.\Include\hardware_config.h(123): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_20"  (declared at line 46 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_20                    0                   /* 反馈电阻200:10 */
+.\Include\hardware_config.h(124): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_9P5"  (declared at line 47 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_9P5                   1                   /* 反馈电阻190:20 */
+.\Include\hardware_config.h(125): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_6"  (declared at line 48 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_6                     2                   /* 反馈电阻180:30 */
+.\Include\hardware_config.h(126): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_4P25"  (declared at line 49 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_4P25                  3                   /* 反馈电阻170:40 */
+AppFunction\hardware_init.c(44): warning:  #223-D: function "NVIC_EnableIRQ" declared implicitly
+  	  NVIC_EnableIRQ(UART0_IRQn); //打开串口0中断        
+AppFunction\hardware_init.c(45): warning:  #223-D: function "NVIC_SetPriority" declared implicitly
+  		NVIC_SetPriority(UART0_IRQn, 2);//ADC0中断优先级配置
+AppFunction\hardware_init.c: 6 warnings, 2 errors
+compiling lks32mc08x_cmp.c...
+compiling lks32mc08x_DMA.c...
+compiling lks32mc08x_hall.c...
+compiling lks32mc08x_i2c.c...
+compiling lks32mc08x_MCPWM.c...
+compiling lks32mc08x_spi.c...
+compiling lks32mc08x_sys.c...
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(198): warning:  #223-D: function "NVIC_DisableIRQ" declared implicitly
+      NVIC_DisableIRQ(TIMER0_IRQn);   /*关闭TIMER0中断*/
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(222): warning:  #223-D: function "__WFI" declared implicitly
+      __WFI(); /*PC指针停止运行，等待中断*/
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(340): warning:  #223-D: function "__NOP" declared implicitly
+          __NOP();
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(369): warning:  #223-D: function "NVIC_ClearPendingIRQ" declared implicitly
+      NVIC_ClearPendingIRQ(PWRDN_IRQn);               /* 清除电源检测中断标志 */
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(370): warning:  #223-D: function "NVIC_EnableIRQ" declared implicitly
+      NVIC_EnableIRQ(PWRDN_IRQn);                     /* 打开电源检测中断 */
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(402): warning:  #223-D: function "NVIC_DisableIRQ" declared implicitly
+      NVIC_DisableIRQ(PWRDN_IRQn); /* 关闭电源检测中断 */
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(701): warning:  #223-D: function "NVIC_ClearPendingIRQ" declared implicitly
+          NVIC_ClearPendingIRQ(PWRDN_IRQn);
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(726): warning:  #223-D: function "NVIC_DisableIRQ" declared implicitly
+      NVIC_DisableIRQ(PWRDN_IRQn); /* 关闭电源检测中断 */
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(727): warning:  #223-D: function "NVIC_ClearPendingIRQ" declared implicitly
+      NVIC_ClearPendingIRQ(PWRDN_IRQn);
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(739): warning:  #223-D: function "NVIC_SystemReset" declared implicitly
+      NVIC_SystemReset();      // 软复位
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(764): warning:  #223-D: function "NVIC_SetPriority" declared implicitly
+          NVIC_SetPriority(PWRDN_IRQn, 0); /*PWRDN_IRQn中断优先级设置为0*/
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(765): warning:  #223-D: function "NVIC_EnableIRQ" declared implicitly
+          NVIC_EnableIRQ(PWRDN_IRQn);      /* 打开电源检测中断 */
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c(770): warning:  #223-D: function "NVIC_DisableIRQ" declared implicitly
+          NVIC_DisableIRQ(PWRDN_IRQn); /* 关闭电源检测中断 */
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c: 13 warnings, 0 errors
+compiling GPIO_KEY.c...
+compiling lks32mc08x_uart.c...
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_uart.c(214): warning:  #223-D: function "__NOP" declared implicitly
+              __NOP();
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_uart.c(256): warning:  #223-D: function "__NOP" declared implicitly
+              __NOP();
+LKS32MC08x_Periph_Driver\Source\lks32mc08x_uart.c: 2 warnings, 0 errors
+compiling lks32mc08x_tim.c...
+compiling UART.c...
+.\Include\hardware_init.h(25): error:  #147-D: declaration is incompatible with "void DAC_Init(DAC_InitTypeDef *)"  (declared at line 37 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h")
+  void DAC_Init(void);
+.\Include\hardware_init.h(26): error:  #147-D: declaration is incompatible with "void CMP_Init(CMP_InitTypeDef *)"  (declared at line 180 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h")
+  void CMP_Init(void);
+.\Include\hardware_config.h(123): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_20"  (declared at line 46 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_20                    0                   /* 反馈电阻200:10 */
+.\Include\hardware_config.h(124): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_9P5"  (declared at line 47 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_9P5                   1                   /* 反馈电阻190:20 */
+.\Include\hardware_config.h(125): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_6"  (declared at line 48 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_6                     2                   /* 反馈电阻180:30 */
+.\Include\hardware_config.h(126): warning:  #47-D: incompatible redefinition of macro "PGA_GAIN_4P25"  (declared at line 49 of ".\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h")
+  #define PGA_GAIN_4P25                  3                   /* 反馈电阻170:40 */
+USER\UART\UART.c: 4 warnings, 2 errors
+compiling delay.c...
+".\Objects\LK_StdPeriph_DAC.axf" - 8 Error(s), 33 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Linko
+                https://www.lksmcu.com/index.php/LKS08Series/Linko.LKS08x.1.1.7.pack
+                Linko.LKS08x.1.1.7
+                LKS08 Device Family Pack
+
+<h2>Collection of Component include folders:</h2>
+  C:/Keil_v5/Arm/Packs/Linko/LKS08x/1.1.7/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.\objects\bldc_sensorless_lib.o: LKS_BLDC_LIB\BLDC_sensorless_Lib.c
+.\objects\bldc_sensorless_lib.o: LKS_BLDC_LIB\Global_Variable.h
+.\objects\bldc_sensorless_lib.o: C:\Users\25739\AppData\Local\Arm\Packs\Linko\LKS07x\1.0.8\Device\Include\lks32mc07x.h
+.\objects\bldc_sensorless_lib.o: C:\Users\25739\AppData\Local\Arm\Packs\Linko\LKS07x\1.0.8\Device\Include\basic.h
+.\objects\bldc_sensorless_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\bldc_sensorless_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\bldc_sensorless_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\bldc_sensorless_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bldc_sensorless_lib.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bldc_sensorless_lib.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h
+.\objects\bldc_sensorless_lib.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\bldc_sensorless_lib.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\bldc_sensorless_lib.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\bldc_sensorless_lib.o: LKS_BLDC_LIB\MC_IPD.h
+.\objects\bldc_sensorless_lib.o: LKS_BLDC_LIB\ON_fly_start.h
+.\objects\bldc_sensorless_lib.o: LKS_BLDC_LIB\bldc_control.h
+.\objects\bldc_sensorless_lib.o: LKS_BLDC_LIB\mc_type.h

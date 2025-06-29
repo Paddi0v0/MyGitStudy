@@ -1,0 +1,12 @@
+.\objects\delay.o: USER\Delay\delay.c
+.\objects\delay.o: USER\Delay\delay.h
+.\objects\delay.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h
+.\objects\delay.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h
+.\objects\delay.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h
+.\objects\delay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\delay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\delay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\delay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\delay.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c
+.\objects\delay.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h
+.\objects\delay.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h

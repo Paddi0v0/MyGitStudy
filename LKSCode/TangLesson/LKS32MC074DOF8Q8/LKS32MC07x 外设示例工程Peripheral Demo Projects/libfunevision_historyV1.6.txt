@@ -1,0 +1,16 @@
+libfunevision_historyV1.6
+1、更正uart.c和uart.h半/全双工变量名称（DUPLEX ）。
+
+libfunevision_historyV1.5
+1、增加MCPWM 12路PWM时钟同步功能，12路PWM输出无相位差。
+2、增加CAN内外回环例程。
+
+libfunevision_historyV1.4
+1、CMP.c文件，函数CMP_Cmd（）内增加SYS_ModuleClockCmd(SYS_Module_CMP,state);//数字电路时钟使能。
+
+libfunevision_historyV1.3
+1、修正CAN发送函数内等待CAN发送完成判断条件，修正后可支持连续发生CAN数据，不需要在两帧之间加延时函数等待CAN发送完成再发送下一帧。
+2、修改GPIO_WriteBit和GPIO_Write函数，操作GPIOx->BSRR和GPIOx->BRR进行GPIO置1和清零。
+
+libfunevision_historyV1.2
+更新CAN ID滤波函数将CAN模式配置为复位模式后没有在还原为正常模式，导致程序不运行一次发送函数就无法接收问题。

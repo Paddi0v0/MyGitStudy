@@ -1,0 +1,34 @@
+    LDRWI   R1 0x0
+    LDRWI   R2 0x10
+    LDRWI   R3 16
+    #ADDI    R4 R0 16
+    ASRI    R4 R2 16
+    ASRI    R5 R2 0x10
+    ASRI    R6 R2 0X10
+    ASRI    R7 R2 0
+    LSLI    R4 R4 16
+    LSLI    R5 R5 0x10
+    LSLI    R6 R5 0X10
+    LSLI    R7 R2 0
+    # MACI    R0 R7 1
+    # MACA    R0 R7 1
+
+    DIV     R7 R5 R1
+    #DIV     R6 R2 R1
+    #ADD     R0 R0
+    #ADD     R8 R0 R0
+    R1      0x7FFFFFF0
+    R2      0x1000
+    #R4      0xFFFFFFF0
+    #ADD     R3 R1 R2
+    #SUB     R2 R4 R2
+    SQRT    R5 R4 # DIV not finished yet.
+    LDRWI   R4 63
+    # JUMP    R0
+    # JUMPI   511
+    R6  0x5555
+    R4  65535
+    # R7 0xFFFFFFFF0
+    # MAC R0 R0
+    IRQ
+    END

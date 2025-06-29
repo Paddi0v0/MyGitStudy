@@ -1,0 +1,365 @@
+Dependencies for Project 'LK_StdPeriph_UART', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\Source\main.c)(0x612C9D4D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+I (.\USER\Delay\delay.h)(0x6034E467)
+I (.\USER\LED\gpio_led.h)(0x603CB60D)
+I (.\USER\KEY\gpio_key.h)(0x603633CB)
+I (.\USER\UTimer\utimer.h)(0x603706DA)
+I (.\USER\WDT_0\WDT.h)(0x60373F80)
+I (.\USER\UART\UART.h)(0x6040A114)
+F (.\Source\startup_lks32mc08x.s)(0x60373900)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include--pd "__UVISION_VERSION SETA 534"--list .\listings\startup_lks32mc08x.lst --xref -o .\objects\startup_lks32mc08x.o --depend .\objects\startup_lks32mc08x.d)
+F (.\AppFunction\hardware_init.c)(0x61A88C78)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\hardware_init.o --omf_browse .\objects\hardware_init.crf --depend .\objects\hardware_init.d)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+I (.\USER\LED\gpio_led.h)(0x603CB60D)
+I (.\USER\KEY\gpio_key.h)(0x603633CB)
+I (.\USER\UTimer\utimer.h)(0x603706DA)
+I (.\USER\WDT_0\WDT.h)(0x60373F80)
+I (.\USER\UART\UART.h)(0x6040A114)
+F (.\AppFunction\interrupt.c)(0x61A88C7E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\interrupt.o --omf_browse .\objects\interrupt.crf --depend .\objects\interrupt.d)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+I (.\USER\LED\gpio_led.h)(0x603CB60D)
+I (.\USER\UTimer\utimer.h)(0x603706DA)
+I (.\USER\UART\UART.h)(0x6040A114)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_adc.c)(0x5FD8BB6B)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_adc.o --omf_browse .\objects\lks32mc08x_adc.crf --depend .\objects\lks32mc08x_adc.d)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_cmp.c)(0x5F460E54)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_cmp.o --omf_browse .\objects\lks32mc08x_cmp.crf --depend .\objects\lks32mc08x_cmp.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (D:\keli5\APPlication\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_DMA.c)(0x5F300B6F)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_dma.o --omf_browse .\objects\lks32mc08x_dma.crf --depend .\objects\lks32mc08x_dma.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_DMA.h)(0x5F300B65)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (D:\keli5\APPlication\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_exti.c)(0x61A8643F)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_exti.o --omf_browse .\objects\lks32mc08x_exti.crf --depend .\objects\lks32mc08x_exti.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x61A835DC)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32MC08x_Flash.c)(0x61406666)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_flash.o --omf_browse .\objects\lks32mc08x_flash.crf --depend .\objects\lks32mc08x_flash.d)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_Flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_nvr.h)(0x61A8B3BF)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_gpio.c)(0x5F3F3623)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_gpio.o --omf_browse .\objects\lks32mc08x_gpio.crf --depend .\objects\lks32mc08x_gpio.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_hall.c)(0x5F460EA8)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_hall.o --omf_browse .\objects\lks32mc08x_hall.crf --depend .\objects\lks32mc08x_hall.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_i2c.c)(0x5F2FF468)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_i2c.o --omf_browse .\objects\lks32mc08x_i2c.crf --depend .\objects\lks32mc08x_i2c.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x5DC39608)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_MCPWM.c)(0x5F460F47)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_mcpwm.o --omf_browse .\objects\lks32mc08x_mcpwm.crf --depend .\objects\lks32mc08x_mcpwm.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (D:\keli5\APPlication\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_spi.c)(0x5F2FF464)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_spi.o --omf_browse .\objects\lks32mc08x_spi.crf --depend .\objects\lks32mc08x_spi.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x5DC32B32)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c)(0x5F82ADFE)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_sys.o --omf_browse .\objects\lks32mc08x_sys.crf --depend .\objects\lks32mc08x_sys.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_tim.c)(0x5F460EFB)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_tim.o --omf_browse .\objects\lks32mc08x_tim.crf --depend .\objects\lks32mc08x_tim.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_uart.c)(0x5F460DF5)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\lks32mc08x_uart.o --omf_browse .\objects\lks32mc08x_uart.crf --depend .\objects\lks32mc08x_uart.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_nvr.o)(0x5FD8BE6A)()
+F (.\USER\LED\GPIO_LED.c)(0x603CB5F8)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\gpio_led.o --omf_browse .\objects\gpio_led.crf --depend .\objects\gpio_led.d)
+I (USER\LED\gpio_led.h)(0x603CB60D)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\USER\Delay\delay.h)(0x6034E467)
+F (.\USER\KEY\GPIO_KEY.c)(0x6034F000)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\gpio_key.o --omf_browse .\objects\gpio_key.crf --depend .\objects\gpio_key.d)
+I (USER\KEY\gpio_key.h)(0x603633CB)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\USER\Delay\delay.h)(0x6034E467)
+F (.\USER\Delay\delay.c)(0x6034E433)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (USER\Delay\delay.h)(0x6034E467)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+F (.\USER\UTimer\UTimer.c)(0x603706DA)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\utimer.o --omf_browse .\objects\utimer.crf --depend .\objects\utimer.d)
+I (USER\UTimer\utimer.h)(0x603706DA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+F (.\USER\WDT_0\WDT.c)(0x60373F15)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\wdt.o --omf_browse .\objects\wdt.crf --depend .\objects\wdt.d)
+I (USER\WDT_0\WDT.h)(0x60373F80)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+F (.\USER\UART\UART.c)(0x613B527A)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay -I .\USER\UTimer -I .\USER\WDT_0 -I .\USER\UART-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include-D__UVISION_VERSION="534"-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (USER\UART\UART.h)(0x6040A114)
+I (.\Include\hardware_config.h)(0x603CB575)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h)(0x5FC3A337)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h)(0x60B4E42E)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\keli5\APPlication\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c)(0x5CF25DE4)
+I (C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h)(0x5CF25DE4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x5FA4C682)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x6034E3D7)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x61A8B9C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x5F3FD78C)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_flash.h)(0x61403640)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x5FFBF1C3)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x5F2EA009)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x5D006650)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x5F4D0C01)
+I (.\Include\hardware_init.h)(0x5FFBF5F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_NVR.h)(0x61A8B3BF)

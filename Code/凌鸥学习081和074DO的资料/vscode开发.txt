@@ -1,0 +1,14 @@
+默认VSCODE安装JLINK的地址C:\Users\Administrator\.eide\tools\jlink\
+把JLinkDevices.xml这个文件里添加上LKS的芯片
+我写好了如下：
+  <Device>
+  <ChipInfo Vendor="LKS" Name="LKS32MC081C8T8" Core="JLINK_CORE_CORTEX_M0" WorkRAMAddr="0x20000000" WorkRAMSize="0x00002000" />
+  <FlashBankInfo Name="Internal Flash" BaseAddr="0x00000000" MaxSize="0x00010000" Loader="Devices/LKS/LKS32MC08x.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+
+  <Device>
+  <ChipInfo Vendor="LKS" Name="LKS32MC074DOF8Q8" Core="JLINK_CORE_CORTEX_M0" WorkRAMAddr="0x20000000" WorkRAMSize="0x00003000" />
+  <FlashBankInfo Name="Internal Flash" BaseAddr="0x00000000" MaxSize="0x00020000" Loader="Devices/LKS/LKS32MC07x.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+  </Device>
+然后教程如下https://discuss.em-ide.com/d/312-jlink
+然后再C:\Users\Administrator\.eide\tools\jlink\路径下的Devices中，新建LKS文件夹，然后把按教程把解压keil包里的FLASH文件，拷贝过来即可！

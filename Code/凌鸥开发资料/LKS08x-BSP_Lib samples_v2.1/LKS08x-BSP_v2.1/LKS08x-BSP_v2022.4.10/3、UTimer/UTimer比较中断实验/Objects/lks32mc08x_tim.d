@@ -1,0 +1,12 @@
+.\objects\lks32mc08x_tim.o: LKS32MC08x_Periph_Driver\Source\lks32mc08x_tim.c
+.\objects\lks32mc08x_tim.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h
+.\objects\lks32mc08x_tim.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\basic.h
+.\objects\lks32mc08x_tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\lks32mc08x_tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\lks32mc08x_tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\lks32mc08x_tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lks32mc08x_tim.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.c
+.\objects\lks32mc08x_tim.o: C:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include\core_cm0.h
+.\objects\lks32mc08x_tim.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h
+.\objects\lks32mc08x_tim.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h
+.\objects\lks32mc08x_tim.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h

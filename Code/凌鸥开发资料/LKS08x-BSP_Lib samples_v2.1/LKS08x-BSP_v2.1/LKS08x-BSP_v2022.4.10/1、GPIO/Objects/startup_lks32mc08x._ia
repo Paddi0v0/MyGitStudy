@@ -1,0 +1,4 @@
+--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"
+-IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include
+--pd "__UVISION_VERSION SETA 536"
+--list .\listings\startup_lks32mc08x.lst --xref -o .\objects\startup_lks32mc08x.o --depend .\objects\startup_lks32mc08x.d "Source\startup_lks32mc08x.s"

@@ -1,0 +1,715 @@
+Dependencies for Project 'LK_StdPeriph_GPIO', Target 'LK_StdPeriph_GPIO': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\Source\main.c)(0x685EB892)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\Include\hardware_init.h)(0x685EA0B4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\AppFunction\hardware_init.c)(0x685EB4F2)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\hardware_init.o --omf_browse .\objects\hardware_init.crf --depend .\objects\hardware_init.d)
+I (.\Include\hardware_init.h)(0x685EA0B4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\AppFunction\interrupt.c)(0x685EAA2E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\interrupt.o --omf_browse .\objects\interrupt.crf --depend .\objects\interrupt.d)
+I (.\Include\hardware_config.h)(0x66D91848)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+I (.\Include\hardware_init.h)(0x685EA0B4)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_adc.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_adc.o --omf_browse .\objects\lks32mc08x_adc.crf --depend .\objects\lks32mc08x_adc.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_can.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_can.o --omf_browse .\objects\lks32mc08x_can.crf --depend .\objects\lks32mc08x_can.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_cmp.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_cmp.o --omf_browse .\objects\lks32mc08x_cmp.crf --depend .\objects\lks32mc08x_cmp.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_dac.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_dac.o --omf_browse .\objects\lks32mc08x_dac.crf --depend .\objects\lks32mc08x_dac.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_dma.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_dma.o --omf_browse .\objects\lks32mc08x_dma.crf --depend .\objects\lks32mc08x_dma.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_dsp.c)(0x677EAF6A)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_dsp.o --omf_browse .\objects\lks32mc08x_dsp.crf --depend .\objects\lks32mc08x_dsp.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_exti.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_exti.o --omf_browse .\objects\lks32mc08x_exti.crf --depend .\objects\lks32mc08x_exti.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32MC08x_flash.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_flash.o --omf_browse .\objects\lks32mc08x_flash.crf --depend .\objects\lks32mc08x_flash.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_Flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_gpio.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_gpio.o --omf_browse .\objects\lks32mc08x_gpio.crf --depend .\objects\lks32mc08x_gpio.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_hall.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_hall.o --omf_browse .\objects\lks32mc08x_hall.crf --depend .\objects\lks32mc08x_hall.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_i2c.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_i2c.o --omf_browse .\objects\lks32mc08x_i2c.crf --depend .\objects\lks32mc08x_i2c.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_iwdg.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_iwdg.o --omf_browse .\objects\lks32mc08x_iwdg.crf --depend .\objects\lks32mc08x_iwdg.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_mcpwm.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_mcpwm.o --omf_browse .\objects\lks32mc08x_mcpwm.crf --depend .\objects\lks32mc08x_mcpwm.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_MCPWM.h)(0x68587703)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_opa.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_opa.o --omf_browse .\objects\lks32mc08x_opa.crf --depend .\objects\lks32mc08x_opa.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_spi.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_spi.o --omf_browse .\objects\lks32mc08x_spi.crf --depend .\objects\lks32mc08x_spi.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_sys.c)(0x677EAF6A)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_sys.o --omf_browse .\objects\lks32mc08x_sys.crf --depend .\objects\lks32mc08x_sys.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_tim.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_tim.o --omf_browse .\objects\lks32mc08x_tim.crf --depend .\objects\lks32mc08x_tim.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_uart.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_uart.o --omf_browse .\objects\lks32mc08x_uart.crf --depend .\objects\lks32mc08x_uart.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_tmp.c)(0x66D91848)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DLKS32MC081C8T8 -D_RTE_-o .\objects\lks32mc08x_tmp.o --omf_browse .\objects\lks32mc08x_tmp.crf --depend .\objects\lks32mc08x_tmp.d)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tmp.h)(0x68587651)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_lib.h)(0x68587788)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\lks32mc08x.h)(0x67A48596)
+I (C:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include\basic.h)(0x66D6DB8C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm0.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8ED122)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E8306C2)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8ED122)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_adc.h)(0x6858763A)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_can.h)(0x685876BD)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_cmp.h)(0x685876C4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dma.h)(0x685876CA)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dac.h)(0x685876D0)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_dsp.h)(0x685876D5)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_exti.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h)(0x66D91848)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32MC08x_flash.h)(0x685876E2)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_hall.h)(0x685876F8)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_i2c.h)(0x685876FE)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_mcpwm.h)(0x68587703)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_nvr.h)(0x68587707)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_opa.h)(0x6858770F)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h)(0x68587715)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h)(0x68587719)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_tim.h)(0x68587678)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_uart.h)(0x6858766E)
+I (.\LKS32MC08x_Periph_Driver\Include\lks32mc08x_iwdg.h)(0x68587659)
+F (.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_nvr.lib)(0x66D91848)()
+F (.\LKS32MC08x_Periph_Driver\Source\startup_lks32mc08x.s)(0x66D91848)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_LK_StdPeriph_GPIO-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "LKS32MC081C8T8 SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_lks32mc08x.lst --xref -o .\objects\startup_lks32mc08x.o --depend .\objects\startup_lks32mc08x.d)

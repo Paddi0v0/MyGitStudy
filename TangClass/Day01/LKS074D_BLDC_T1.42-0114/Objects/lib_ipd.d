@@ -1,0 +1,17 @@
+.\objects\lib_ipd.o: LKS_BLDC_LIB\Lib_IPD.c
+.\objects\lib_ipd.o: LKS_BLDC_LIB\Global_Variable.h
+.\objects\lib_ipd.o: C:\Users\25739\AppData\Local\Arm\Packs\Linko\LKS07x\1.0.8\Device\Include\lks32mc07x.h
+.\objects\lib_ipd.o: C:\Users\25739\AppData\Local\Arm\Packs\Linko\LKS07x\1.0.8\Device\Include\basic.h
+.\objects\lib_ipd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\lib_ipd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\lib_ipd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\lib_ipd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lib_ipd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\lib_ipd.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h
+.\objects\lib_ipd.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\lib_ipd.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\lib_ipd.o: C:\Users\25739\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\lib_ipd.o: LKS_BLDC_LIB\MC_IPD.h
+.\objects\lib_ipd.o: LKS_BLDC_LIB\ON_fly_start.h
+.\objects\lib_ipd.o: LKS_BLDC_LIB\bldc_control.h
+.\objects\lib_ipd.o: LKS_BLDC_LIB\mc_type.h
