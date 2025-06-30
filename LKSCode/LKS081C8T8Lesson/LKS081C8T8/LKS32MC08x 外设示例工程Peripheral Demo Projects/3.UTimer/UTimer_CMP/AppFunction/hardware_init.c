@@ -34,6 +34,7 @@ void Hardware_init(void)
     __disable_irq();                  /* 关闭中断 中断总开关 */
     SYS_WR_PROTECT = 0x7a83;          /* 使能系统寄存器写操作*/
     FLASH_CFG |= 0x00080000;          /* enable prefetch ，FLASH预取加速使能*/
+	
     GPIO_init();                      /* GPIO初始化 */
     UTimer_init();                    /* UTimer初始化 */
 	  SoftDelay(100);                   /* 等待硬件初始化完毕*/

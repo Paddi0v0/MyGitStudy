@@ -1,0 +1,116 @@
+{
+    "name": "02_呼吸灯",
+    "target": "Debug",
+    "toolchain": "AC5",
+    "toolchainLocation": "C:\\Keil_v5\\Arm\\ARMCC",
+    "toolchainCfgFile": "c:\\Users\\Administrator\\.cursor\\extensions\\cl.eide-3.21.4-universal\\res\\data\\models\\win32/arm.v5.model.json",
+    "buildMode": "fast|multhread",
+    "showRepathOnLog": true,
+    "threadNum": 12,
+    "rootDir": "c:\\Users\\Administrator\\Desktop\\MyGitStudy\\LKSCode\\LKS081C8T8Lesson\\EIDE\\02_呼吸灯",
+    "dumpPath": "build\\Debug",
+    "outDir": "build\\Debug",
+    "ram": 8192,
+    "rom": 32768,
+    "incDirs": [
+        "../../../../../../../../Keil_v5/Arm/INC/Linko/LKS32MC08x",
+        "Drivers/Include",
+        "Include"
+    ],
+    "libDirs": [
+        "Drivers/Source/lks32mc08x_nvr.lib"
+    ],
+    "defines": [],
+    "sourceList": [
+        "AppFunction/hardware_init.c",
+        "AppFunction/interrupt.c",
+        "AppFunction/mygpio_init.c",
+        "Drivers/Source/lks32MC08x_Flash.c",
+        "Drivers/Source/lks32mc08x_DMA.c",
+        "Drivers/Source/lks32mc08x_MCPWM.c",
+        "Drivers/Source/lks32mc08x_adc.c",
+        "Drivers/Source/lks32mc08x_can.c",
+        "Drivers/Source/lks32mc08x_cmp.c",
+        "Drivers/Source/lks32mc08x_dac.c",
+        "Drivers/Source/lks32mc08x_dsp.c",
+        "Drivers/Source/lks32mc08x_exti.c",
+        "Drivers/Source/lks32mc08x_gpio.c",
+        "Drivers/Source/lks32mc08x_hall.c",
+        "Drivers/Source/lks32mc08x_i2c.c",
+        "Drivers/Source/lks32mc08x_iwdg.c",
+        "Drivers/Source/lks32mc08x_nvr.lib",
+        "Drivers/Source/lks32mc08x_opa.c",
+        "Drivers/Source/lks32mc08x_spi.c",
+        "Drivers/Source/lks32mc08x_sys.c",
+        "Drivers/Source/lks32mc08x_tim.c",
+        "Drivers/Source/lks32mc08x_tmp.c",
+        "Drivers/Source/lks32mc08x_uart.c",
+        "Drivers/Source/startup_lks32mc08x.s",
+        "Source/main.c"
+    ],
+    "alwaysInBuildSources": [],
+    "sourceParams": {},
+    "options": {
+        "version": 4,
+        "beforeBuildTasks": [],
+        "afterBuildTasks": [
+            {
+                "name": "axf to elf",
+                "command": "axf2elf -d \"C:\\Keil_v5\\Arm\\ARMCC\" -i \"${outDir}\\02_呼吸灯.axf\" -o \"${outDir}\\02_呼吸灯.elf\" > \"${outDir}\\axf2elf.log\""
+            }
+        ],
+        "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable",
+            "microcontroller-cpu": "cortex-m0",
+            "microcontroller-fpu": "cortex-m0",
+            "microcontroller-float": "cortex-m0",
+            "target": "cortex-m0"
+        },
+        "c/cpp-compiler": {
+            "optimization": "level-0",
+            "one-elf-section-per-function": true,
+            "c99-mode": true,
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "warnings": "all-warnings"
+        },
+        "asm-compiler": {},
+        "linker": {
+            "output-format": "elf",
+            "xo-base": "",
+            "ro-base": "0x00000000",
+            "rw-base": "0x20000000",
+            "link-scatter": [
+                "c:/Users/Administrator/Desktop/MyGitStudy/LKSCode/LKS081C8T8Lesson/EIDE/02_呼吸灯/build/Debug/02_呼吸灯.sct"
+            ]
+        }
+    },
+    "env": {
+        "MY_STC": "c:/Keil_v5/C51/INC/STC",
+        "MY_LKS": "c:/Keil_v5/Arm/INC/Linko/LKS32MC08x",
+        "MY_LKS_07": "c:/Keil_v5/Arm/INC/Linko/LKS32MC07x",
+        "workspaceFolder": "c:\\Users\\Administrator\\Desktop\\MyGitStudy\\LKSCode\\LKS081C8T8Lesson\\EIDE\\02_呼吸灯",
+        "workspaceFolderBasename": "02_呼吸灯",
+        "OutDir": "c:\\Users\\Administrator\\Desktop\\MyGitStudy\\LKSCode\\LKS081C8T8Lesson\\EIDE\\02_呼吸灯\\build\\Debug",
+        "OutDirRoot": "build",
+        "OutDirBase": "build\\Debug",
+        "ProjectName": "02_呼吸灯",
+        "ConfigName": "Debug",
+        "ProjectRoot": "c:\\Users\\Administrator\\Desktop\\MyGitStudy\\LKSCode\\LKS081C8T8Lesson\\EIDE\\02_呼吸灯",
+        "ExecutableName": "c:\\Users\\Administrator\\Desktop\\MyGitStudy\\LKSCode\\LKS081C8T8Lesson\\EIDE\\02_呼吸灯\\build\\Debug\\02_呼吸灯",
+        "ChipPackDir": "",
+        "ChipName": "",
+        "SYS_Platform": "win32",
+        "SYS_DirSep": "\\",
+        "SYS_DirSeparator": "\\",
+        "SYS_PathSep": ";",
+        "SYS_PathSeparator": ";",
+        "SYS_EOL": "\r\n",
+        "EIDE_BUILDER_DIR": "c:\\Users\\Administrator\\.cursor\\extensions\\cl.eide-3.21.4-universal\\res\\tools\\win32\\unify_builder",
+        "EIDE_BINARIES_VER": "12.0.1",
+        "EIDE_MSYS": "C:\\Users\\Administrator\\.eide\\bin\\builder\\msys\\bin",
+        "ToolchainRoot": "C:\\Keil_v5\\Arm\\ARMCC"
+    },
+    "sysPaths": []
+}
