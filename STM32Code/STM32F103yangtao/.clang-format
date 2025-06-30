@@ -1,0 +1,61 @@
+# ---------- 嵌入式 C 专用 .clang-format ----------
+#Language:               C          # 仅作用于 C
+BasedOnStyle:           LLVM       # 以 LLVM 为基准，便于后续微调
+
+# === 缩进 ===
+IndentWidth:            4          # 4 空格缩进
+ContinuationIndentWidth: 4        # 换行续行时同样 4 空格
+TabWidth:               4          # Tab 等价于 4 空格
+UseTab:                 Never      # 强制使用空格
+IndentCaseLabels:       false      # case 不再缩进（符合多数嵌入式习惯）
+IndentPPDirectives:     None  # 预处理指令保持 # 顶格，其余缩进 AfterHash 整行整体右移而不是 # 顶格，可以设BeforeHash  啥也不要None
+
+
+# === 括号 / 换行风格 ===
+BreakBeforeBraces:      Allman     # 函数与语句  { 紧跟在行尾Attach
+#AllowShortFunctionsOnASingleLine: InlineOnly  # 仅当函数体很短且无换行时才单行
+#AllowShortIfStatementsOnASingleLine: true
+#AllowShortLoopsOnASingleLine:      true
+#AllowShortBlocksOnASingleLine:     true
+
+# === 对齐 & 可读性 ===
+PointerAlignment:       Right       # Leftint* ptr;  而非 int *ptr;
+AlignConsecutiveAssignments: false  # 连续赋值对齐 =
+AlignConsecutiveDeclarations: false # 连续声明对齐类型/变量名
+AlignTrailingComments:  true
+AlignOperands:          true
+
+
+# === 其它常用微调 ===
+ColumnLimit:            200        # 超过 100 列再自动换行（0 表示不限制）
+ReflowComments:         false       # 自动把长注释折行
+MaxEmptyLinesToKeep:    1          # 连续空行最多保留 1 行
+KeepEmptyLinesAtTheStartOfBlocks: false
+SortIncludes:           false      # 不自动调整 include 顺序（手写顺序更安全）
+
+
+
+# ===== 可选增强 =====
+# 1. 全部禁止“单行 if/for/函数”——更易读：
+AllowShortFunctionsOnASingleLine:   None
+AllowShortIfStatementsOnASingleLine: true  # 禁止单行循环
+AllowShortLoopsOnASingleLine:       false
+AllowShortBlocksOnASingleLine:      false
+#
+# 2. 指针限定符空格风格（如果你习惯 `const char * ptr`）：
+SpaceAroundPointerQualifiers: Before
+
+# 简单记忆：
+# Before＝限定符“前”有空格
+# After ＝限定符“后”有空格
+# Both ＝前后都有
+# Default＝保持 PointerAlignment 原样，不额外动空格
+
+#
+# 3. 多行初始化列表末尾补逗号，方便后续增删：
+# C++ 才生效，写 C 可忽略
+# InsertTrailingCommas:        Wrapped
+#
+# ---------- 结束 ----------
+
+# ---------- 嵌入式 C 专用 .clang-format ----------
