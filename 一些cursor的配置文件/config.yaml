@@ -1,0 +1,108 @@
+CompileFlags:
+  Remove:
+    - --apcs=interwork
+    - --li
+    - --diag_suppress=1
+    - --diag_suppress=1295
+    - --cpu
+    - Cortex-M3
+    - --c99
+    - --split_sections
+    - --no_depend_system_headers
+    - --depend
+  Add:
+    - -mcpu=cortex-m3
+    - -mthumb
+    - -D__nothrow=nothrow
+    - -U__STRICT_ANSI__
+    - -DSTM32F10X_MD
+    - -DUSE_STDPERIPH_DRIVER
+    
+    #- -include
+    #- C:/Keil_v5/Arm/INC/Linko/LKS32MC08x/lks32mc08x.h
+    # for stm32f10x.h
+    #- -include
+    #- C:/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include/stm32f10x.h
+
+    - -xc
+    - -std=c99
+    - --target=arm-none-eabi
+    - -nostdinc
+    - -ffreestanding
+    - -ferror-limit=0
+    - -Wno-unknown-pragmas
+    - -D__GNUC__=9
+
+    - -fms-extensions 
+    - -fdeclspec
+
+    - -D__MICROLIB
+    - -Dcode=
+    - -D__C51__
+    - -Didata=
+    - -Dxdata=
+    - -Dpdata=
+    - -Dreentrant=
+    - -Dsfr=volatile unsigned char
+    - -Dsfr16=volatile unsigned int
+    - -Dsbit=volatile unsigned char
+    - -Dbit=unsigned char
+    - -Dinterrupt=__attribute__((interrupt))
+    - -D_MALLOC_MEM_=
+
+    - -D__value_in_regs=
+    - -D__softfp=
+    - -D__svc(x)=
+
+    - -isystem
+    - C:/Keil_v5/Arm/ARMCC/include
+    - -isystem
+    - C:/Keil_v5/Arm/ARMCC/include/RTE
+    - -isystem
+    - C:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Include
+
+    - -isystem
+    - C:/Stm32Bin/arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi/arm-none-eabi/include
+    - -isystem
+    - C:/Stm32Bin/arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.2.1/include
+
+    - -isystem
+    - C:/Keil_v5/C51/INC
+    - -isystem
+    - C:/Keil_v5/C51/INC/STC
+
+    - -I
+    - ../Include
+    - -I
+    - ../DriversInclude
+    - -I
+    - ../HardwareINC
+    - -I
+    - ../HardwareSRC
+    - -I
+    - C:/Keil_v5/Arm/INC/Linko/LKS32MC08x
+    - -I
+    - C:/Keil_v5/Arm/INC/Linko/LKS32MC07x
+
+    
+
+
+Diagnostics:
+  UnusedIncludes: None
+  Suppress:
+    - Wmicrosoft-extensions
+    - redefinition_different_typedef
+    - init_element_not_constant
+    - pp_including_mainfile_in_preamble
+  ClangTidy:
+    Add:    ["clang-analyzer-*"]
+    Remove: ["hicpp-*"]
+
+Index:
+  Background: Build
+
+Completion:
+  AllScopes: true
+
+InlayHints:
+  Enabled: true

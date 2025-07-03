@@ -1,0 +1,47 @@
+下面给你一份「一键换驱动→调通 OpenOCD → 再切回 Segger 驱动」的完整流程，截图所示的 Zadig 就是核心工具。
+先把 VS Code / OpenOCD / J-Link Commander 等全部关掉，只保留 Zadig。
+一、把 J-Link 驱动换成 WinUSB（供 OpenOCD 使用）
+0. 前提：J-Link 已插好并亮灯，Windows 设备管理器能看到 “J-Link” 条目（可能在“通用串行总线设备”下，也可能在 “Jungo”）。
+以管理员身份运行 Zadig。
+菜单 Options → 勾选 “List All Devices” 和 “Ignore Hubs or Composite Parents”。
+顶部下拉框里选中 J-Link（有时显示 “SEGGER J-Link” 或 “J-Link [Interface 0]”）。
+如果下拉框空白，说明 Windows 没识别到 J-Link——排查 USB 线、供电、接口；
+如果有多个接口，只需把 Interface 0 换成 WinUSB，其它 CDC/MSC 接口不动也行。
+确认左侧 Current Driver 是 “JLink” 或 “JLink WinUSB” 之类；右侧 Target Driver 选 WinUSB (libusb)（Zadig 默认就是）。
+点 “Replace Driver” / “Install Driver”，等待进度条完成 → 弹出绿色 “Driver Installation: SUCCESS”。
+打开设备管理器，J-Link 应该出现在 “通用串行总线设备” 下，右键属性 → Driver Provider 显示 “libusb-win32” 或 “Microsoft”。
+现在回到 VS Code 点击 Debug，OpenOCD 应打印
+Apply to lks32.cfg
+若仍报 “No J-Link device found”，说明换的不是正确接口或还有旧驱动残留，再回 Zadig 检查是否漏换。
+二、调试 OK 以后，如何切回 Segger 原生驱动
+方法 A：用 Zadig 还原
+再次打开 Zadig → 选中同一个 J-Link。
+右侧 Target Driver 选 JLink（如果下拉框里没有，可选 “USB Serial Converter” 或手动浏览 INF，见方法 B）。
+点击 “Replace Driver” → 成功后设备管理器中 provider 变回 “SEGGER”。
+方法 B：用 Segger 官方安装包
+下载并运行 “J-Link Software and Documentation Pack”（Segger 官网）。
+安装向导里会自动检测 USB 设备并覆盖掉 WinUSB，整个过程 30 秒。
+装完后拔插 J-Link，设备管理器显示 “J-Link” 在 “Universal Serial Bus controllers / Jungo” 下即恢复。
+方法 C：设备管理器手动更新
+设备管理器 → 右键 “J-Link” → Update driver → Browse my computer → Let me pick → 选 “SEGGER J-Link” → 下一步安装。
+没有该条目就点 “Have Disk…”，路径填
+Apply to lks32.cfg
+选 jlink.inf → 安装即可。
+小提示
+驱动来回切换不会影响 J-Link 内部固件；必要时 Segger 工具会提示更新固件，照做即可。
+如果你偶尔需要用 Segger Ozone/Commander，再切回 Segger 驱动即可；要用 OpenOCD 就切成 WinUSB。
+Zadig 操作前一定确保已选中正确设备，避免误替换键盘/鼠标驱动。
+照此流程操作，WinUSB 驱动到位后 OpenOCD 就能识别 J-Link，不会再报 LIBUSB_ERROR_NOT_FOUND，调试链路即可正常工作；需要用 Segger 家族软件时再按上面的步骤切回来即可。
+
+Zadig 选项小技巧
+• 菜单 Options
+勾 “List All Devices” 显示全部接口
+取消 “Ignore Hubs or Composite Parents” 板载-OB 方案通常是 Composite 设备，必须取消忽略才能看到 Interface 0。
+真正要换的是 Interface 0；其它 CDC/MSC 接口不用动。
+快速自检清单
+☐ 插拔 USB，设备管理器是否多出/少了新设备？名称是什么？
+☐ 开发板或 J-Link 本体指示灯是否点亮？
+☐ 若用独立 J-Link，用 Segger 的 JLink.exe 看能否连接；若连不上，仍是硬件或线缆问题。
+☐ 确定调试器型号后，launch.json 的 interface cfg 是否对应？
+☐ Zadig 下拉框里取消 “Ignore Hubs…”，目标设备是否出现？
+把以上硬件识别问题解决后，再谈 WinUSB/Segger 驱动的切换；否则 OpenOCD 无论如何都找不到设备。

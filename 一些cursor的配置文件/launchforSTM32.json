@@ -1,0 +1,59 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32F103-Debug",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/${workspaceFolderBasename}.elf",
+            "device": "STM32F103C8",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+
+            "openOCDLaunchCommands": [
+                "debug_level 2",          // 日常使用，排障时改 3
+                "adapter speed 4000",     // kHz，连不上再降
+                "gdb_memory_map enable",  // 只烧录变动页
+                "gdb_flash_program enable",// 同上
+                "set WORKAREASIZE 0x10000"    // 增加工作区大小，避免复杂程序调试问题
+            ],
+
+            
+            "preLaunchCommands": [
+                "monitor reset halt",         // 复位并暂停目标
+                "monitor sleep 100",           // 等待100ms确保稳定（比原配置更精简）
+                "load",                       // 加载程序
+                "monitor reset halt"          // 加载后再次复位并暂停
+            ],
+            "runToEntryPoint": "main",
+
+
+            /* ===== 其他 ===== */
+            "svdFile": "C:/ST/STM32CubeCLT_1.18.0/STMicroelectronics_CMSIS_SVD/STM32F103.svd",
+            "gdbPath": "arm-none-eabi-gdb.exe",
+            "showDevDebugOutput": "none", //需要排障时手动临时调 "raw" 即可。
+
+            "overrideLaunchCommands": [
+                "set confirm off",            // 禁用确认提示
+                "set mem inaccessible-by-default off", // 允许访问所有内存区域
+                "set pagination off",         // 禁用GDB分页
+                "set print pretty on"     // 优化变量显示
+            ],
+
+            "postLaunchCommands": [
+                "monitor arm semihosting disable", // 禁用半主机模式（如不需要打印功能）
+               // "monitor halt",                   // 确保目标处于暂停状态
+                //"break main",                     // 在main函数设置断点
+               //"continue"                        // 继续执行到main断点
+            ],
+            "liveWatch": {
+          "enabled": true,
+          "updateInterval": 4000    // 添加更新间隔
+        },
+        }
+    ]
+}

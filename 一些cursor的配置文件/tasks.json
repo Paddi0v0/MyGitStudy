@@ -1,0 +1,64 @@
+{
+    /*
+一、常用触发方式
+Ctrl + Shift + B → 直接执行默认 Build 任务。
+Ctrl + Shift + P 输入 Run Task → 选择 Size / Flash-Only / Clean / Rebuild 等。
+launch.json 里可以写 "preLaunchTask": "Build"，让 F5 调试前自动编译。
+想给 Clean、Rebuild 设热键：File → Preferences → Keyboard Shortcuts，搜索任务名即可绑定。
+二、各任务的实际意义
+Build —— 编译生成 .elf；源码改动后必跑它。
+Size  —— 打印 ROM/RAM 占用，方便随时监控大小。
+Flash-Only —— 量产或 Release 固件时快速烧录，不占用调试器。
+Clean —— 删除中间文件，解决“奇怪玄学问题”或磁盘减负。
+Rebuild —— 先 Clean 再 Build，确保全量重新编译。
+三、字段解释速查表
+label   任务名称/ID
+type   执行环境：shell / process（单独程序）
+command 命令行字符串，和终端一模一样
+group  把任务归类，kind:"build" + isDefault:true 就能被 Ctrl+Shift+B 调用
+problemMatcher 让 VS Code 识别错误格式，自动高亮源码行
+version  tasks.json 文件结构的版本号，写 2.0.0 就行
+总结一句：
+tasks.json 的作用 = “把常用命令写成按钮”。
+不用时放着也不碍事；想省操作步骤时，它就是你的加速器。
+    */
+    "version": "2.0.0",     // VS Code 内置任务系统的配置版本
+    "tasks": [              // ⬇ 每一个对象就是一个“任务”
+      {
+        "label": "Build",   // 任务名字，列表里显示，也是 launch.json 里引用的标识
+        "type": "shell",    // VS Code 帮你启动一个 shell（cmd / bash / pwsh）来执行 command
+        "command": "cmake --build build --target all -j",
+                            // 真正要跑的终端指令：这里是 CMake 的增量编译
+        "group": {          // ⬇ 把它归到“build”分组；Ctrl+Shift+B 默认会找 build 组
+          "kind": "build",
+          "isDefault": true // 标记为本组默认任务 → 直接 Ctrl+Shift+B 就执行它
+        },
+        "problemMatcher": [ "$gcc" ] // 解析 gcc 输出，VS Code 能把报错定位到源码
+      },
+  
+      {
+        "label": "Size",    // 随时看看固件大小
+        "type": "shell",
+        "command": "arm-none-eabi-size build/Debug/GccStm32Template.elf"
+      },
+  
+      {
+        "label": "Flash-Only", // 只烧录、不调试
+        "type": "shell",
+        "command": "openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c \"program build/Debug/GccStm32Template.elf verify reset exit\""
+                            // OpenOCD 命令：下载 + 校验 + 复位 + 退出
+      },
+  
+      {
+        "label": "Clean",   // 删除上次编译生成的文件
+        "type": "shell",
+        "command": "cmake --build build --target clean"
+      },
+  
+      {
+        "label": "Rebuild", // 先 clean 再全量编译
+        "type": "shell",
+        "command": "cmake --build build --clean-first --target all -j"
+      }
+    ]
+  }

@@ -1900,38 +1900,38 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       260         52          0          0          0       3926   app2core.o
+       260         52          0          0          0       3994   app2core.o
        884        106          0          0         76      13538   bemf_check0824.o
-      1164        150          0         10        138       7215   fault_detection.o
-       894        112          0          2          0      11485   foc_drive.o
-         0          0        108          6        892      66762   global_variable.o
-      1560        142          0          0          0      21589   hardware_init.o
-       466         82          0          6          0       9708   interrupt.o
-       438          8          0          0          0       2772   lks32mc08x_adc.o
-       342         14          0          0          0       1852   lks32mc08x_cmp.o
-       544         28          0          0          0       4388   lks32mc08x_gpio.o
-       104          8          0          0          0       1802   lks32mc08x_hall.o
-       810         34          0          0          0       6881   lks32mc08x_mcpwm.o
-       648         80          0          0          0      14996   lks32mc08x_sys.o
-       576          8          0          0          0       2904   lks32mc08x_tim.o
-        60         14          0          4          0        992   lks32mc08x_tmp.o
-       290         22          0          0          0       2102   lks32mc08x_uart.o
-        16          0          0          0          0        539   main.o
-      2490         98         48          0          0      23128   mc_hall.o
-        48          6          0          0          0        669   mc_math.o
-       312          0          0          0          0       2140   pid_regulators.o
-       128          0          0          0        108       3471   powercalculation.o
-       128          0          0          0          0       1802   process_control.o
-       694         54          0          0       3260       9854   segger_rtt.o
-       616         44          0          0          0       2390   signalchain_sample.o
-       280         38          0          0          0        679   speedscan.o
-        40         14        192          0        768        756   startup_lks32mc08x.o
-      4186        440          0          0         18      16411   state_machine.o
-       428         60          0          0          0       2128   system_init.o
-       160         26          0          0          0       2525   task_scheduler.o
+      1164        150          0         10        138       7315   fault_detection.o
+       894        112          0          2          0      11609   foc_drive.o
+         0          0        108          6        892      66966   global_variable.o
+      1560        142          0          0          0      21769   hardware_init.o
+       466         82          0          6          0       9912   interrupt.o
+       438          8          0          0          0       2808   lks32mc08x_adc.o
+       342         14          0          0          0       1888   lks32mc08x_cmp.o
+       544         28          0          0          0       4456   lks32mc08x_gpio.o
+       104          8          0          0          0       1834   lks32mc08x_hall.o
+       810         34          0          0          0       6941   lks32mc08x_mcpwm.o
+       648         80          0          0          0      15116   lks32mc08x_sys.o
+       576          8          0          0          0       2952   lks32mc08x_tim.o
+        60         14          0          4          0       1012   lks32mc08x_tmp.o
+       290         22          0          0          0       2134   lks32mc08x_uart.o
+        16          0          0          0          0        551   main.o
+      2490         98         48          0          0      23260   mc_hall.o
+        48          6          0          0          0        677   mc_math.o
+       312          0          0          0          0       2168   pid_regulators.o
+       128          0          0          0        108       3523   powercalculation.o
+       128          0          0          0          0       1834   process_control.o
+       694         54          0          0       3260       9966   segger_rtt.o
+       616         44          0          0          0       2422   signalchain_sample.o
+       280         38          0          0          0        691   speedscan.o
+        40         14        192          0        768        768   startup_lks32mc08x.o
+      4186        440          0          0         18      16619   state_machine.o
+       428         60          0          0          0       2164   system_init.o
+       160         26          0          0          0       2561   task_scheduler.o
 
     ----------------------------------------------------------------------
-     18586       1640        380         28       5268     239404   Object Totals
+     18586       1640        380         28       5268     241448   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         20          0          0          0          8          0   (incl. Padding)
 
@@ -2010,8 +2010,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     27352       2092        924        124       5380     287085   Grand Totals
-     27352       2092        924        124       5380     287085   ELF Image Totals
+     27352       2092        924        124       5380     289129   Grand Totals
+     27352       2092        924        124       5380     289129   ELF Image Totals
      27352       2092        924        124          0          0   ROM Totals
 
 ==============================================================================

@@ -1,0 +1,43 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=build/Debug"
+    ],
+    "files.encoding": "gbk", // 文件默认编码为GBK（适合中文Windows环境）
+    "files.autoGuessEncoding": false, // 关闭自动识别，永远相信上面那条
+    "EIDE.ARM.ARMCC5.InstallDirectory": "C:\\Keil_v5\\Arm\\ARMCC", // ARMCC5编译器安装路径（EIDE专用）
+    "EIDE.ARM.ARMCC6.InstallDirectory": "C:\\Keil_v5\\Arm\\ARMCLANG", // ARMCC6编译器安装路径（EIDE专用）
+    "EIDE.Builder.EnvironmentVariables": [
+        "# Name=Value",
+        "MY_STC=c:/Keil_v5/C51/INC/STC",
+        "MY_LKS=c:/Keil_v5/Arm/INC/Linko/LKS32MC08x",
+        "MY_LKS_07=c:/Keil_v5/Arm/INC/Linko/LKS32MC07x",
+        "MY_STM32F103=c:/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include"
+    ],
+    "C_Cpp.default.compilerPath": "C:/Stm32Bin/mingw64/bin/gcc.exe", // C/C++默认编译器路径
+    "EIDE.ARM.Option.AxfToElf": true, // EIDE选项：将AXF文件转换为ELF文件
+    "EIDE.Option.EnableTelemetry": false, // 关闭EIDE的遥测/统计功能
+    "cursor.cpp.enablePartialAccepts": true, // Cursor插件：启用部分代码建议接受
+    "update.mode": "none", // 关闭自动更新
+    "update.enableWindowsBackgroundUpdates": false, // 禁止Windows后台自动更新
+    "cursor.general.disableHttp2": true, // Cursor插件：禁用HTTP2协议
+    // 关闭微软扩展的 IntelliSense（Cursor 默认已禁用，纯备注）
+   // C_Cpp.intelliSenseEngine = disabled
+    // 用户设置或工作区设置
+
+    "[c]": { // 针对C语言文件的专用设置
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd", // C文件默认格式化工具为clangd
+        "editor.formatOnSave": true // C文件保存时自动格式化
+    },
+    "EIDE.Toolchain.AnyGcc.InstallDirectory": "C:\\Stm32Bin\\arm-gnu-toolchain-14.2.rel1-mingw-w64-x86_64-arm-none-eabi",
+    "EIDE.Toolchain.AnyGcc.ToolPrefix": "arm-none-eabi-",
+    "cortex-debug.variableUseNaturalFormat": true,
+    "EIDE.OpenOCD.ExePath": "C:\\Stm32Bin\\OpenOCD\\bin\\openocd.exe",
+
+    /*
+    "editor.autoClosingBrackets": "never", // 输入左括号时不自动补全右括号
+    "editor.autoClosingQuotes": "never", // 输入引号时不自动补全右引号
+    "editor.autoClosingDelete": "never", // 删除左括号/引号时不自动删除右侧配对符号
+    "editor.formatOnType": false, // 输入时不自动格式化代码
+    "editor.autoClosingComments": false // 输入/*时不自动补全为/**/
+    
+}
