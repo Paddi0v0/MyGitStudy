@@ -1,4 +1,0 @@
---c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\..\..\..\Keil_v5\Arm\INC\Linko\LKS32MC08x -I Drivers\Include -I Include
--IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include
--D__UVISION_VERSION="538" -DLKS32MC081C8T8
--o .\build\keil\lks32mc08x_cmp.o --omf_browse .\build\keil\lks32mc08x_cmp.crf --depend .\build\keil\lks32mc08x_cmp.d "Drivers/Source/lks32mc08x_cmp.c"

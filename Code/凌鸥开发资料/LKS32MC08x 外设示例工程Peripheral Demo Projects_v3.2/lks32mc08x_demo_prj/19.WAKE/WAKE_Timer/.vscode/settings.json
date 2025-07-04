@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "gpio_led.h": "c",
-        "lks32mc08x_uart.h": "c",
-        "lks32mc08x_opa.h": "c",
-        "lks32mc08x_sys.h": "c"
-    }
-}

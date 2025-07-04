@@ -1,6 +1,0 @@
---cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"
--I.\RTE\_LK_StdPeriph_GPIO
--IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
--IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include
---pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "LKS32MC087M6S8 SETA 1" --pd "_RTE_ SETA 1"
---list .\listings\startup_lks32mc08x.lst --xref -o .\objects\startup_lks32mc08x.o --depend .\objects\startup_lks32mc08x.d "LKS32MC08x_Periph_Driver\Source\startup_lks32mc08x.s"

@@ -1,4 +1,0 @@
-CompileFlags:
-    Add:
-        - -IC:/Keil/C51/INC/
-    CompilationDatabase: ./build/Release

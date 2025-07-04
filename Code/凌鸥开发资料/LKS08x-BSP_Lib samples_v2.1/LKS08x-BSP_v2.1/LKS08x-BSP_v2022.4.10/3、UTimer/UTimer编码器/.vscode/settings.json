@@ -1,5 +1,0 @@
-{
-    "files.associations": {
-        "gpio_led.h": "c"
-    }
-}

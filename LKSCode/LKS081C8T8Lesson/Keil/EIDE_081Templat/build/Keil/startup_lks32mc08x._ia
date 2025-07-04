@@ -1,4 +1,0 @@
---cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"
--IC:\Keil_v5\Arm\Packs\Linko\LKS08x\1.1.7\Device\Include
---pd "__UVISION_VERSION SETA 538" --pd "LKS32MC081C8T8 SETA 1"
--o .\build\keil\startup_lks32mc08x.o --depend .\build\keil\startup_lks32mc08x.d "Drivers/Source/startup_lks32mc08x.s"

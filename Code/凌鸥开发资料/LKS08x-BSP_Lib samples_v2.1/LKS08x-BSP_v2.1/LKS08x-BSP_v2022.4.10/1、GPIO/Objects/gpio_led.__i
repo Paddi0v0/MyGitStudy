@@ -1,4 +1,0 @@
--c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\FreeMaster -I .\Include -I .\LKS32MC08x_Periph_Driver\Include -I .\Source -I .\USER\LED -I .\USER\KEY -I .\USER\Delay
--IC:\Users\yangy\AppData\Local\Arm\Packs\Linko\LKS08x\1.0.5\Device\Include
--D__UVISION_VERSION="536"
--o .\objects\gpio_led.o --omf_browse .\objects\gpio_led.crf --depend .\objects\gpio_led.d "USER\LED\GPIO_LED.c"
