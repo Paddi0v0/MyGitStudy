@@ -1,0 +1,105 @@
+{
+  "name": "2_STM32LED2Key",
+  "type": "ANY-GCC",
+  "dependenceList": [],
+  "srcDirs": [
+    "CMSISCoreInclude",
+    "DriversInclude",
+    "DriversSource",
+    "HardwareINC",
+    "HardwareSRC",
+    "UserSource"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "408437e9aa3e05c3e509edffa0402f5e"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [],
+      "toolchain": "ANY_GCC",
+      "compileConfig": {
+        "linkerScriptPath": "DriversInclude\\STM32F103XX_FLASH.ld",
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "stm32f1x",
+        "interface": "stlink",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "CMSISCoreInclude",
+          "DriversInclude",
+          "HardwareINC"
+        ],
+        "libList": [],
+        "defineList": [
+          "STM32F10X_MD",
+          "USE_STDPERIPH_DRIVER"
+        ]
+      },
+      "builderOptions": {
+        "ANY_GCC": {
+          "version": 1,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [
+            {
+              "name": "make hex",
+              "disable": false,
+              "abortAfterFailed": false,
+              "command": "\"${CompilerFolder}/${CompilerPrefix}objcopy\" -O ihex \"${OutDir}/${TargetName}.elf\" \"${OutDir}/${TargetName}.hex\""
+            },
+            {
+              "name": "make bin",
+              "disable": true,
+              "abortAfterFailed": false,
+              "command": "\"${CompilerFolder}/${CompilerPrefix}objcopy\" -O binary \"${OutDir}/${TargetName}.elf\" \"${OutDir}/${TargetName}.bin\""
+            }
+          ],
+          "global": {
+            "misc-control": "-mcpu=cortex-m3 -mthumb --specs=nosys.specs -Wl,--gc-sections"
+          },
+          "c/cpp-compiler": {
+            "one-elf-section-per-function": true,
+            "one-elf-section-per-data": true,
+            "C_FLAGS": "-c -xc -Og -g3",
+            "CXX_FLAGS": "-c -xc++ -Og -g3"
+          },
+          "asm-compiler": {
+            "ASM_FLAGS": "-c"
+          },
+          "linker": {
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "linker-type": "gcc"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}
