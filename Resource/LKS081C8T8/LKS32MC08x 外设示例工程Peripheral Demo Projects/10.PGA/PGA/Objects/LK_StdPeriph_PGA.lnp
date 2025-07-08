@@ -21,8 +21,8 @@
 ".\objects\lks32mc08x_tim.o"
 ".\objects\lks32mc08x_tmp.o"
 ".\objects\lks32mc08x_uart.o"
-".\LKS32MC08x_Periph_Driver\Source\lks32mc08x_nvr.lib"
 ".\objects\startup_lks32mc08x.o"
+".\lks32mc08x_periph_driver\Source\lks32mc08x_nvr.lib"
 --library_type=microlib --strict --scatter ".\Objects\LK_StdPeriph_PGA.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

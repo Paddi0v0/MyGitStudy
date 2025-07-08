@@ -463,24 +463,24 @@
     <File>
       <GroupNumber>3</GroupNumber>
       <FileNumber>23</FileNumber>
-      <FileType>4</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\LKS32MC08x_Periph_Driver\Source\lks32mc08x_nvr.lib</PathWithFileName>
-      <FilenameWithoutPath>lks32mc08x_nvr.lib</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>24</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\LKS32MC08x_Periph_Driver\Source\startup_lks32mc08x.s</PathWithFileName>
       <FilenameWithoutPath>startup_lks32mc08x.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>24</FileNumber>
+      <FileType>4</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\lks32mc08x_periph_driver\Source\lks32mc08x_nvr.lib</PathWithFileName>
+      <FilenameWithoutPath>lks32mc08x_nvr.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
