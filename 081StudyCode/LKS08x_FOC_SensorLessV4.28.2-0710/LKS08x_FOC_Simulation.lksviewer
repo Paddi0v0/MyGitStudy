@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lksscope appVersion="v1.3.9">
+    <params>
+        <param name="linkType" value="0"/>
+        <param name="jClock" value="10000000"/>
+        <param name="uClock" value="1000000"/>
+        <param name="commPort" value=""/>
+        <param name="commBaud" value="9600"/>
+        <param name="bleName" value=""/>
+        <param name="localIP" value=""/>
+        <param name="localPort" value=""/>
+        <param name="remoteIP" value=""/>
+        <param name="remotePort" value=""/>
+        <param name="rttAddr" value="2000000"/>
+        <param name="rttFreq" value="16000"/>
+        <param name="sampleInterval" value="10"/>
+        <param name="uiInterval" value="50"/>
+        <param name="maxPoint" value="200"/>
+        <param name="checkAxf" value="1"/>
+    </params>
+    <layouts>
+        <param name="geometry" value="AdnQywADAAD/////////9QAADwAAAAg0AAADOwAAAHgAABPKAAAIyQAAAAACAAAADwAAAAAAAAAAIgAADv8AAAgz"/>
+        <param name="state" value="AAAA/wAAAAD9AAAAAgAAAAAAAAE+AAADbfwCAAAAAvsAAAAIepdT41v8gioBAAAAUgAAAWEAAAAAAAAAAPwAAAG3AAACCAAAAAAA////+gAAAAACAAAAAvsAAAAIW/xRZVPYkc8BAAAAAP////8AAAAAAAAAAPsAAAAKgepbmk5JU9iRzwEAAAAA/////wAAAAAAAAAAAAAAAQAAAnsAAANt/AIAAAAV+wAAAAwAUgBUAFRUfU7kiEwAAAAAWAAAAOUAAAESAP////wAAABSAAAAwgAAAAAA/////AIAAAAC/AAAAFIAAADCAAAAAAD////8AQAAAAP7AAAABmVwUDwAMAEAAAFCAAACewAAAAAAAAAA/AAABVQAAAIsAAAAAAD////8AgAAAAL7AAAAFABJAGR1NW1BACB+2VuaACZTzZmIAAAAAEwAAAOYAAAASAD////8AAAATAAAA5gAAAAAAP////wCAAAAAvsAAAAWAFMAcABlAGUAZAAgftlbmgAmU82ZiAAAAABMAAADmAAAAEgA////+wAAAAqYepAGmM5owG1LAAAAAf4AAAHlAAAASAD////8AAACewAAAUUAAAAAAP////wCAAAAAvsAAAAUAEkAcXU1bUEAIH7ZW5oAJlPNmYgAAAAATAAAAb0AAABIAP////sAAAAKAFUAZAAmAFUAcQAAAABMAAADmAAAAEgA/////AAAASEAAAFjAAAAAAD////8AQAAAAL7AAAAEInCbUtWaABLAFAAJgBLAEkAAAADJAAABFwAAACrAP////sAAAAKAFIAVABUZXBjbgAAAAMkAAAEXAAAAAAAAAAA+wAAAAiP0IhMZeVf1wAAAAM0AAAArwAAAIEA////+wAAABAAVAByAGkAZwBnAGUAcgAwAAAAAFgAAAEqAAAAzgD////7AAAACABSAFUATgAxAQAAAFgAAAFlAAAAAAAAAAD7AAAABlvEW1hWaAAAAAMeAAAAxgAAAAAAAAAA+wAAAAYAUgBVAE4BAAAAWAAAAZMAAAAAAAAAAPsAAAAWZeBhHwBGAE8AQ3b4UXNjp1I2U9iRzwAAAAImAAABSQAAAAAAAAAA+wAAABIAUgBlAGMAbwByAGQAZQByADABAAACiwAAAT4AAAAAAAAAAPsAAAAKZeBhHwBGAE8AQwAAAAHhAAAAowAAAAAAAAAA+wAAAApnCWEfAEYATwBDAgAAAAYAAAFuAAABCgAAAOD7AAAAFABpAGQAJgBpAHF1NW1Bc69+xowDAgAAAYwAAACDAAABCgAAAOD7AAAABF8xeMEAAAACYwAAAYAAAABIAP////sAAAAGZvJ+vwA2AAAAAqEAAAFCAAAAAAAAAAD7AAAADABQAG8Ad1PNmYhQPAAAAALMAAABDgAAAAAAAAAA+wAAAARSn3OHAAAAAjkAAADiAAAASAD////7AAAABJZQUjYAAAAC3AAAAQcAAABmAP////sAAAASU811NVKoUr+YepAGmM5owG1LAAAAAo8AAAFVAAAASAD////7AAAABmbyfr8AOAAAAAI4AAAAfQAAAAAAAAAA+wAAAA5nCWEfAEYATwBDZvJ+vwEAAAEYAAACpwAAAAAAAAAA+wAAAAh1NWc6Y6dSNgAAAAAA/////wAAALEA////AAAPAAAAB5UAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAwAAAA4AdABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAEgB0AG8AbwBsAEIAYQByAF8AMgEAAAEU/////wAAAAAAAAAAAAAAFgB0AG8AbwBsAEIAYQByAEwAbwBnAG8BAAADi/////8AAAAAAAAAAA=="/>
+    </layouts>
+    <tabs curPage="0">
+        <tab geometry="AdnQywADAAAAAAAAAAAAAAAACygAAAdhAAAAAAAAAAD//////////wAAAAAAAAAADwAAAAAAAAAAAAAACygAAAdh" checked="1" state="AAAA/wAAAAD9AAAAAgAAAAAAAAE+AAADbfwCAAAAAvsAAAAIepdT41v8gioBAAAAUgAAAWEAAAAAAAAAAPwAAAG3AAACCAAAAAAA////+gAAAAACAAAAAvsAAAAIW/xRZVPYkc8BAAAAAP////8AAAAAAAAAAPsAAAAKgepbmk5JU9iRzwEAAAAA/////wAAAAAAAAAAAAAAAQAACykAAAdi/AIAAAAV+wAAAAwAUgBUAFRUfU7kiEwAAAAAWAAAAOUAAAAAAAAAAPwAAAAAAAAHYgAAAGYA/////AIAAAAC/AAAAAAAAAdiAAAAZgD////8AQAAAAP8AAAAAAAACykAAABzAP////wBAAAAAvsAAAAKU811NVKoUr8AVQIAAAKvAAAEUQAAAMgAAAC2+wAAAAZlcFA8ADABAAAAAAAACykAAABzAP////wAAAVUAAACLAAAAAAA/////AIAAAAC+wAAABQASQBkdTVtQQAgftlbmgAmU82ZiAAAAABMAAADmAAAAAAAAAAA/AAAAEwAAAOYAAAAAAD////8AgAAAAL7AAAAFgBTAHAAZQBlAGQAIH7ZW5oAJlPNmYgAAAAATAAAA5gAAAAAAAAAAPsAAAAKmHqQBpjOaMBtSwAAAAH+AAAB5QAAAAAAAAAA/AAAAnsAAAFFAAAAAAD////8AgAAAAL7AAAAFABJAHF1NW1BACB+2VuaACZTzZmIAAAAAEwAAAG9AAAAAAAAAAD7AAAACgBVAGQAJgBVAHEAAAAATAAAA5gAAAAAAAAAAPwAAAEhAAABYwAAAAAA/////AEAAAAB+wAAABCJwm1LVmgASwBQACYASwBJAAAAAyQAAARcAAAAAAAAAAD7AAAACI/QiExl5V/XAAAAAzQAAACvAAAAAAAAAAD7AAAAEABUAHIAaQBnAGcAZQByADAAAAAAWAAAASoAAAAAAAAAAPsAAAAIAFIAVQBOADEBAAAAWAAAAWUAAAAAAAAAAPsAAAAGW8RbWFZoAAAAAx4AAADGAAAAAAAAAAD7AAAABgBSAFUATgEAAABYAAABkwAAAAAAAAAA+wAAABZl4GEfAEYATwBDdvhRc2OnUjZT2JHPAAAAAiYAAAFJAAAAAAAAAAD7AAAAEgBSAGUAYwBvAHIAZABlAHIAMAEAAAKLAAABPgAAAAAAAAAA+wAAAApl4GEfAEYATwBDAAAAAeEAAACjAAAAAAAAAAD7AAAACmcJYR8ARgBPAEMC///6agAABHkAAAOxAAAAcvsAAAAUAGkAZAAmAGkAcXU1bUFzr37GjAMC///6agAABFgAAAOxAAAAiPsAAAAEXzF4wQAAAAJjAAABgAAAAAAAAAAA+wAAAAZm8n6/ADYAAAACoQAAAUIAAAAAAAAAAPsAAAAMAFAAbwB3U82ZiFA8AAAAAswAAAEOAAAAAAAAAAD7AAAABFKfc4cAAAACOQAAAOIAAAAAAAAAAPsAAAAEllBSNgAAAALcAAABBwAAAAAAAAAA+wAAABJTzXU1UqhSv5h6kAaYzmjAbUsAAAACjwAAAVUAAAAAAAAAAPsAAAAGZvJ+vwA4AAAAAjgAAAB9AAAAAAAAAAD7AAAADmcJYR8ARgBPAENm8n6/AgAAA14AAAOHAAAIfgAAA+b7AAAACgBSAFQAVGVwY24DAAABnQAAAkYAAAqFAAAFGQAAAAAAAAdiAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAA=" title="标签页0"/>
+    </tabs>
+    <forms>
+        <form type="0" title="Form"/>
+        <form lv-width="150,100,100,100,348,100,100,100,100,100" type="1" title="自定义参数">
+            <var size="4" location="" desc="ch1Buffer" type="Signed" ptrOffset="" bitSize="" bitOffset="" name="ch1Buffer" addr="0x20000158" isPtr=""/>
+            <var size="4" location="" desc="ch2Buffer" type="Signed" ptrOffset="" bitSize="" bitOffset="" name="ch2Buffer" addr="0x20000154" isPtr=""/>
+            <var size="4" location="" desc="ch3Buffer" type="Signed" ptrOffset="" bitSize="" bitOffset="" name="ch3Buffer" addr="0x2000008c" isPtr=""/>
+        </form>
+        <form lv-width="246,100,100,100,348,100,100,822,100,100" type="2" mapFile="./Obj/LKS_MC_Project.axf" title="导入参数"/>
+        <form page="-1" type="3" visible="0" floating="0" title="运行日志"/>
+        <form sync2File="0" syncFilePath="" encode="GBK" page="-1" type="4" visible="0" floating="0" checkTStamp="0" title="RTT命令行"/>
+        <form xTag="0" scrollType="0" trigName="" page="0" type="5" visible="1" xCount="35523.5" subMode="1" max="500" floating="1" lineStyle="1" scatterStyle="1" title="RTT数据" trigType="0" trigValue="0" min="-500" autoRange="1">
+            <var formula="#ff0000" desc="rtt_channel1.data0" unit="#ff0000" color="#ff0000" name="data0" subPlot="0"/>
+            <var formula="#00ff00" desc="rtt_channel1.data1" unit="#00ff00" color="#00ff00" name="data1" subPlot="1"/>
+            <var formula="#00ffff" desc="rtt_channel1.data2" unit="#00ffff" color="#00ffff" name="data2" subPlot="2"/>
+        </form>
+        <form lv-width="150,100,100,100,100" page="-1" type="12" visible="0" floating="0" title="电机控制">
+            <var desc="速度设定" step="1" name="" upper="100" lower="0"/>
+            <var desc="电流设定" step="1" name="" upper="100" lower="0"/>
+            <var desc="功率设定" step="1" name="" upper="100" lower="0"/>
+            <var desc="电机启停" step="1" name="" upper="1" lower="0"/>
+        </form>
+        <form page="-1" type="6" visible="0" floating="0" title="Form"/>
+        <form lv-width="225,128,90,100,100,60,100,100,120,100,100,100" page="0" type="7" visible="1" lv-hidden="" floating="0" title="数值0">
+            <var formula="" desc="电机启动标志位 置1启动" unit="" showType="Unsigned" interval="1" color="" name="struFOC_CtrProc.bMC_RunFlg" addr="0x20000087"/>
+            <var formula="" desc="电机运行状态机" unit="" showType="" interval="1" color="" name="struFOC_CtrProc.eSysState" addr="0x20000088"/>
+            <var formula="" desc="电机运行错误指示" unit="" showType="Unsigned" interval="10" color="" name="stru_Faults.R" addr="0x20000016"/>
+            <var formula="" desc="4096对应设定额定母线电压" unit="" showType="Unsigned" interval="1" color="" name="struFOC_CurrLoop.nVoltageCircleLim" addr="0x200000ce"/>
+            <var formula="" desc="Q轴电流设定值" unit="" showType="Signed" interval="1" color="" name="struFOC_CurrLoop.nQCur_Reference" addr="0x200000e6"/>
+            <var formula="" desc="D轴电流设定值" unit="" showType="Signed" interval="1" color="" name="struFOC_CurrLoop.nDCur_Reference" addr="0x200000e8"/>
+            <var formula="" desc="D轴电流反馈值" unit="" showType="Signed" interval="1" color="" name="struFOC_CurrLoop.mStatCurrDQ.nAxisD" addr="0x200000a6"/>
+            <var formula="" desc="Q轴电流反馈值" unit="" showType="Signed" interval="1" color="" name="struFOC_CurrLoop.mStatCurrDQ.nAxisQ" addr="0x200000a4"/>
+            <var formula="" desc="Ud电压反馈值范围±4096" unit="" showType="Signed" interval="1" color="" name="s16UmRohRef" addr="0x20000026"/>
+            <var formula="" desc="Uq电压反馈值范围±4096" unit="" showType="Signed" interval="1" color="" name="s16UtRohRef" addr="0x20000028"/>
+            <var formula="" desc="转速设定值" unit="" showType="Signed" interval="1" color="" name="struMotorSpeed.wSpeedRef" addr="0x200001d8"/>
+            <var formula="" desc="无感转速反馈值" unit="" showType="Signed" interval="1" color="" name="struMotorSpeed.wSpeedfbk" addr="0x200001dc"/>
+            <var formula="" desc="有感转速反馈值" unit="" showType="Signed" interval="1" color="" name="struHallProcess.wSpeedfbkHall" addr="0x200003cc"/>
+            <var formula="" desc="输入功率设定值" unit="" showType="Signed" interval="1" color="" name="struPower.wPowerRef" addr="0x200004f0"/>
+            <var formula="" desc="输入功率反馈值" unit="" showType="Signed" interval="1" color="" name="struPower.wPowerValue" addr="0x20000498"/>
+            <var formula="" desc="观测器KP" unit="" showType="Unsigned" interval="1" color="" name="struFluxOB_Param.nSTO_KP" addr="0x2000015c"/>
+            <var formula="" desc="观测器KI" unit="" showType="Unsigned" interval="1" color="" name="struFluxOB_Param.nSTO_KI" addr="0x2000015e"/>
+            <var formula="" desc="电流环KP" unit="" showType="Unsigned" interval="1" color="" name="struFluxOB_Param.nCurrLoopIniKP" addr="0x20000150"/>
+            <var formula="" desc="电流环KI" unit="" showType="Unsigned" interval="1" color="" name="struFluxOB_Param.nCurrLoopIniKI" addr="0x20000152"/>
+            <var formula="" desc="速度环KP" unit="" showType="Unsigned" interval="1" color="" name="struMotorSpeed.mSpeedPI.KP" addr="0x20000200"/>
+            <var formula="" desc="速度环KI" unit="" showType="Unsigned" interval="1" color="" name="struMotorSpeed.mSpeedPI.KI" addr="0x20000202"/>
+            <var formula="" desc="功率环KP" unit="" showType="Unsigned" interval="1" color="" name="struPower.struPowerPI.KP" addr="0x200004cc"/>
+            <var formula="" desc="功率环KI" unit="" showType="Unsigned" interval="1" color="" name="struPower.struPowerPI.KI" addr="0x200004ce"/>
+            <var formula="" desc="自动弱磁输出值" unit="" showType="Signed" interval="1" color="" name="struFOC_CurrLoop.npmsmSvcImFw" addr="0x2000014c"/>
+            <var formula="" desc="ADC读取点位器值" unit="" showType="Signed" interval="1" color="" name="struAppCommData.nVspADC" addr="0x200001c0"/>
+            <var formula="" desc="电位器速度设定值" unit="" showType="Signed" interval="1" color="" name="struAppCommData.wSpeedValue" addr="0x200001bc"/>
+            <var formula="" desc="Iq_Set" unit="" showType="Real" interval="10" color="" name="Iq_Set" addr="0x2000000c"/>
+        </form>
+        <form lv-width="200,171,146,100,100,60,100,100,120,100,100,100" page="0" type="7" visible="1" lv-hidden="" floating="1" title="有感FOC">
+            <var formula="" desc="HALL相序学习启动标志 1开启学习，2、复位后开始学习，3学习完成" unit="" showType="Unsigned" interval="1" color="" name="struHallProcess.bHallLearnFlg" addr="0x20000340"/>
+            <var formula="" desc="HALL相序学习结果" unit="" showType="Array-Unsigned8" interval="1" color="" name="struHallProcess.bHallCommTab" addr="0x200003a4"/>
+            <var formula="" desc="struMotorSpeed.wPowerLimitValue" unit="" showType="Signed" interval="10" color="" name="struMotorSpeed.wPowerLimitValue" addr="0x20000228"/>
+            <var formula="" desc="当前滤波后的Hall状态" unit="" showType="Unsigned" interval="1" color="" name="struHallProcess.bHallState" addr="0x2000032e"/>
+        </form>
+        <form lv-width="256,97,76,100,100,60,217,100,120,100,100,100" page="0" type="7" visible="1" lv-hidden="" floating="1" title="id&amp;iq电流环细调">
+            <var formula="" desc="D轴电流环KP" unit="" showType="Unsigned" interval="10" color="" name="struFOC_CurrLoop.mPI_Flux.KP" addr="0x2000012c"/>
+            <var formula="" desc="D轴电流环KI" unit="" showType="Unsigned" interval="10" color="" name="struFOC_CurrLoop.mPI_Flux.KI" addr="0x2000012e"/>
+            <var formula="" desc="Q轴电流环KP" unit="" showType="Unsigned" interval="10" color="" name="struFOC_CurrLoop.mPI_Torque.KP" addr="0x20000110"/>
+            <var formula="" desc="Q轴电流环KI" unit="" showType="Unsigned" interval="10" color="" name="struFOC_CurrLoop.mPI_Torque.KI" addr="0x20000112"/>
+        </form>
+        <form lv-width="150,93,55,100,100,60,100,100,120,100,100,100" page="-1" type="7" visible="0" lv-hidden="" floating="0" title="观测器KP&amp;KI">
+            <var formula="" desc="观测器KP" unit="" showType="Unsigned" interval="10" color="" name="struFluxOB_Param.nSTO_KP" addr="0x2000015c"/>
+            <var formula="" desc="观测器KI" unit="" showType="Unsigned" interval="10" color="" name="struFluxOB_Param.nSTO_KI" addr="0x2000015e"/>
+        </form>
+        <form lv-width="275,100,150,100,100,60,100,100,120,100,100,100" page="-1" type="7" visible="0" lv-hidden="" floating="0" title="限制">
+            <var formula="" desc="struPower.wSpeedLimitPowerSet" unit="" showType="" interval="10" color="" name="struPower.wSpeedLimitPowerSet" addr="0x200004e8"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="53.6464" title="Id电流 给定&amp;反馈" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struFOC_CurrLoop.mStatCurrDQ.nAxisD" color="#ff0000" name="struFOC_CurrLoop.mStatCurrDQ.nAxisD" subPlot="0"/>
+            <var desc="struFOC_CurrLoop.nDCur_Reference" color="#00ff00" name="struFOC_CurrLoop.nDCur_Reference" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="142.242" title="Iq电流 给定&amp;反馈" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struFOC_CurrLoop.mStatCurrDQ.nAxisQ" color="#ff0000" name="struFOC_CurrLoop.mStatCurrDQ.nAxisQ" subPlot="0"/>
+            <var desc="struFOC_CurrLoop.nQCur_Reference" color="#00ff00" name="struFOC_CurrLoop.nQCur_Reference" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="443.705" title="Speed 给定&amp;反馈" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struMotorSpeed.wSpeedfbk" color="#ff0000" name="struMotorSpeed.wSpeedfbk" subPlot="0"/>
+            <var desc="struMotorSpeed.wSpeedRef" color="#00ff00" name="struMotorSpeed.wSpeedRef" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="443.705" title="Ud&amp;Uq" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="s16UtRohRef" color="#ff0000" name="s16UtRohRef" subPlot="0"/>
+            <var desc="s16UmRohRef" color="#00ff00" name="s16UmRohRef" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="1384.08" title="弱磁" type="8" refName="" visible="0" filterType="1" lineStyle="0" xTag="0" trigValue="0" autoRange="1" scatterStyle="2" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struFOC_CurrLoop.npmsmSvcImFw" color="#ff0000" name="struFOC_CurrLoop.npmsmSvcImFw" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="167.343" title="顺逆风检测" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="t_FreqAvg" color="#ff0000" name="t_FreqAvg" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="722.499" title="功率" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struPower.wPowerValue" color="#ff0000" name="struPower.wPowerValue" subPlot="0"/>
+            <var desc="struPower.wPowerRef" color="#00ff00" name="struPower.wPowerRef" subPlot="0"/>
+        </form>
+        <form page="-1" floating="0" min="-500" subMode="0" max="500" trigName="" xCount="1000" title="反电动势顺逆风检测" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="stru_BEMF_Check.nBemfUVWAmpValue" color="#ff0000" name="stru_BEMF_Check.nBemfUVWAmpValue" subPlot="0"/>
+            <var desc="struAppCommData.nBemfTrackVolt" color="#00ff00" name="struAppCommData.nBemfTrackVolt" subPlot="0"/>
+            <var desc="stru_BEMF_Check.nBemf_FreqAve" color="#ff0000" name="stru_BEMF_Check.nBemf_FreqAve" subPlot="1"/>
+            <var desc="struAppCommData.wDirTrackFreq" color="#00ffff" name="struAppCommData.wDirTrackFreq" subPlot="1"/>
+        </form>
+        <form page="0" floating="1" min="-500" subMode="0" max="500" trigName="" xCount="1000" title="有感FOC曲线" type="8" refName="" visible="0" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struFOC_CurrLoop.nQCur_Reference" color="#00aa00" name="struFOC_CurrLoop.nQCur_Reference" subPlot="1"/>
+            <var desc="struFOC_CurrLoop.mStatCurrDQ.nAxisQ" color="#ff0000" name="struFOC_CurrLoop.mStatCurrDQ.nAxisQ" subPlot="1"/>
+            <var desc="struFOC_CurrLoop.mStatCurrDQ.nAxisD" color="#ff0000" name="struFOC_CurrLoop.mStatCurrDQ.nAxisD" subPlot="0"/>
+            <var desc="struFOC_CurrLoop.nDCur_Reference" color="#00aa00" name="struFOC_CurrLoop.nDCur_Reference" subPlot="0"/>
+            <var desc="struHallProcess.wSpeedfbkHall" color="#ff0000" name="struHallProcess.wSpeedfbkHall" subPlot="2"/>
+            <var desc="s16UmRohRef" color="#00aa00" name="s16UmRohRef" subPlot="3"/>
+            <var desc="s16UtRohRef" color="#ff0000" name="s16UtRohRef" subPlot="3"/>
+            <var desc="struMotorSpeed.wSpeedRef" color="#008000" name="struMotorSpeed.wSpeedRef" subPlot="2"/>
+        </form>
+        <form page="0" floating="1" min="-500" subMode="0" max="500" trigName="" xCount="1000" title="反电动势U" type="8" refName="" visible="1" filterType="1" lineStyle="1" xTag="0" trigValue="0" autoRange="1" scatterStyle="1" scrollType="0" trigType="0" refType="0" refValue="0">
+            <var desc="struBemfVolt.nPhaseU" color="#ff0000" name="struBemfVolt.nPhaseU" subPlot="0"/>
+        </form>
+        <form xTag="0" page="-1" type="9" visible="0" num="5000" xCount="231.617" subMode="0" interval="10" max="500" floating="0" lineStyle="1" scatterStyle="1" title="Trigger0" min="-500" autoRange="1">
+            <cond oper="正向越限" thres="30000" desc="" name="t_temp1"/>
+            <sample color="#ff0000" name="t_temp"/>
+        </form>
+    </forms>
+</lksscope>

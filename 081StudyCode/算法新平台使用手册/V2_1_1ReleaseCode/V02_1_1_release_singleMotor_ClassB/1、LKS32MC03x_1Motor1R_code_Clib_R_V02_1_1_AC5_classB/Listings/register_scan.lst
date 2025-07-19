@@ -1,0 +1,3295 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000                 THUMB
+    3 00000000         
+    4 00000000         
+    5 00000000         
+    6 00000000         ;  Rx_0scan 功能描述
+    7 00000000         ;  将Rx翻转到 0xFFFFFFFF,0xFFFFFFFE
+    8 00000000         ;             0x7FFFFFFF,0xBFFFFFFF,0xDFFFFFFF,0xEFFFFFF
+                       F
+    9 00000000         ;             0xF7FFFFFF,0xFBFFFFFF,0xFDFFFFFF,0xFEFFFFF
+                       F
+   10 00000000         ;             0xFF7FFFFF,0xFFBFFFFF,0xFFDFFFFF,0xFFEFFFF
+                       F
+   11 00000000         ;             ......    ,......    ,......    ,......
+   12 00000000         ;             0xFFFFFFF7,0xFFFFFFFB,0xFFFFFFFD,循环结束
+   13 00000000         ;   实现将Rx寄存器逐位有0变1的目的，检测寄存器各个位是否
+                       正常从0变1
+   14 00000000         
+   15 00000000         r0_0scan
+                               PROC
+   16 00000000                 EXPORT           r0_0scan
+   17 00000000         
+   18 00000000 B412            PUSH             {R1,R4}
+   19 00000002         
+   20 00000002         ;0xFFFFFFFF assign
+   21 00000002 2400            MOVS             R4, #0      ;R4 = 0 
+   22 00000004 43E2            MVNS             R2, R4      ;R4的值取反后赋给R2
+                                                            ,R2 = 0xFFFFFFFF
+   23 00000006 4610            MOV              R0, R2      ;R0 = R2 = 0xFFFFFF
+                                                            FF
+   24 00000008 4290            CMP              R0, R2      ;比较R0和R2，如果不
+                                                            相等R0检测fail
+   25 0000000A D10E            BNE              R0_0ScanFail
+   26 0000000C         
+   27 0000000C 2401            MOVS             R4, #1      ;R4 = 1            
+                                                                  
+   28 0000000E 43E2            MVNS             R2, R4      ;R4取反后赋值给R2,R
+                                                            2 = 0xFFFFFFFE
+   29 00000010 43E3            MVNS             R3, R4      ;R4 = R3 = 0xFFFFFF
+                                                            FE
+   30 00000012         
+   31 00000012         R0_0ScanStart
+   32 00000012         
+   33 00000012         ;0 assignment
+   34 00000012 4610            MOV              R0, R2      ;R0 = R2 = 0xFFFFFF
+                                                            FE
+   35 00000014 4290            CMP              R0, R2
+   36 00000016 D108            BNE              R0_0ScanFail
+   37 00000018         
+   38 00000018         
+   39 00000018 41E2            RORS             R2, R4      ;R2向右移1位，R2 = 
+                                                            0x7FFFFFF
+   40 0000001A 429A            CMP              R2, R3      ;比较R2和R3，不相同
+                                                            执行R0_0ScanStart  
+                                                                            
+   41 0000001C D1F9            BNE              R0_0ScanStart
+   42 0000001E         
+   43 0000001E         ; R1 check
+   44 0000001E 460A            MOV              R2, R1      ;测试相邻两个寄存器
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            是否受影响
+   45 00000020 BC12            POP              {R1, R4}
+   46 00000022 4291            CMP              R1, R2
+   47 00000024 D101            BNE              R0_0ScanFail
+   48 00000026         
+   49 00000026         R0_0ScanPass
+   50 00000026 20CC            MOVS             R0, #0xCC
+   51 00000028 E015            B                R0_1ScanEnd
+   52 0000002A         
+   53 0000002A         R0_0ScanFail
+   54 0000002A 20DD            MOVS             R0, #0xDD
+   55 0000002C         
+   56 0000002C         R0_0ScanEnd
+   57 0000002C         
+   58 0000002C 4770            BX               LR
+   59 0000002E                 ENDP
+   60 0000002E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+   61 0000002E         ;   Specific cpu reg 1-scan: R0
+   62 0000002E         ;   Cycles: 
+   63 0000002E         ;   Return value:
+   64 0000002E         ;       0xCC, Test passed
+   65 0000002E         ;       0xDD, Test failed
+   66 0000002E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+   67 0000002E         
+   68 0000002E         ;  rx_1scan 功能描述
+   69 0000002E         ;  将Rx翻转到 0x00000000
+   70 0000002E         ;             0x80000000,0x40000000,0x20000000,0x1000000
+                       0
+   71 0000002E         ;             0x08000000,0x04000000,0x02000000,0x0100000
+                       0
+   72 0000002E         ;             0x00800000,0x00400000,0x00200000,0x0010000
+                       0
+   73 0000002E         ;             ......    ,......    ,......    ,......
+   74 0000002E         ;             0x00000008,0x00000004,0x00000002,0x0000000
+                       1,循环结束
+   75 0000002E         ;   实现将Rx寄存器逐位有1变0的目的，检测寄存器各个位是否
+                       正常从1变0
+   76 0000002E         r0_1scan
+                               PROC
+   77 0000002E                 EXPORT           r0_1scan
+   78 0000002E         
+   79 0000002E B412            PUSH             {R1,R4}
+   80 00000030         
+   81 00000030         ;0x0000000
+   82 00000030 2400            MOVS             R4, #0      ;R4 = 0
+   83 00000032 4620            MOV              R0, R4      ;R0 = R4 = 0
+   84 00000034 42A0            CMP              R0, R4      ;比较R0和R4，不相等
+                                                            则fail         
+   85 00000036 D10D            BNE              R0_1ScanFail
+   86 00000038         
+   87 00000038 2401            MOVS             R4, #1      ;R4 = 1            
+                                                                  
+   88 0000003A 07E4            LSLS             R4, R4, #31 ;R4向左移31位，R4 =
+                                                             0x8000000
+   89 0000003C         
+   90 0000003C         R0_1ScanStart
+   91 0000003C         ;1 assignment
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   92 0000003C 4620            MOV              R0, R4
+   93 0000003E 42A0            CMP              R0, R4
+   94 00000040 D108            BNE              R0_1ScanFail
+   95 00000042         
+   96 00000042 0864            LSRS             R4, R4, #1
+   97 00000044 2C00            CMP              R4, #0
+   98 00000046 D1F9            BNE              R0_1ScanStart
+   99 00000048         
+  100 00000048         ; R1 check
+  101 00000048 460A            MOV              R2, R1      ;R2 = R1
+  102 0000004A BC12            POP              {R1, R4}
+  103 0000004C 4291            CMP              R1, R2
+  104 0000004E D101            BNE              R0_1ScanFail
+  105 00000050         
+  106 00000050         R0_1ScanPass
+  107 00000050 20CC            MOVS             R0, #0xCC
+  108 00000052 E000            B                R0_1ScanEnd
+  109 00000054         
+  110 00000054         R0_1ScanFail
+  111 00000054 20DD            MOVS             R0, #0xDD
+  112 00000056         
+  113 00000056         R0_1ScanEnd
+  114 00000056 4770            BX               LR
+  115 00000058                 ENDP
+  116 00000058         
+  117 00000058         
+  118 00000058         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  119 00000058         ;   Specific cpu reg 0-scan: R1
+  120 00000058         ;   Return value:
+  121 00000058         ;       0xCC, Test passed
+  122 00000058         ;       0xDD, Test failed
+  123 00000058         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  124 00000058         r1_0scan
+                               PROC
+  125 00000058                 EXPORT           r1_0scan
+  126 00000058         
+  127 00000058 B435            PUSH             {R0,R2,R4,R5}
+  128 0000005A         
+  129 0000005A         ;0xFFFFFFFF
+  130 0000005A 2400            MOVS             R4, #0
+  131 0000005C 43E5            MVNS             R5, R4
+  132 0000005E 4629            MOV              R1, R5
+  133 00000060 42A9            CMP              R1, R5
+  134 00000062 D111            BNE              R1_0ScanFail
+  135 00000064         
+  136 00000064 2401            MOVS             R4, #1
+  137 00000066 43E5            MVNS             R5, R4
+  138 00000068 43E3            MVNS             R3, R4
+  139 0000006A         
+  140 0000006A         R1_0ScanStart
+  141 0000006A         ;0 assignment
+  142 0000006A 4629            MOV              R1, R5
+  143 0000006C 42A9            CMP              R1, R5
+  144 0000006E D10B            BNE              R1_0ScanFail
+  145 00000070         
+  146 00000070 41E5            RORS             R5, R4
+  147 00000072 429D            CMP              R5, R3
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  148 00000074 D1F9            BNE              R1_0ScanStart
+  149 00000076         
+  150 00000076         ;R0 R2 check
+  151 00000076 4601            MOV              R1, R0
+  152 00000078 4613            MOV              R3, R2
+  153 0000007A BC35            POP              {R0,R2,R4,R5}
+  154 0000007C 4288            CMP              R0,R1
+  155 0000007E D103            BNE              R1_0ScanFail
+  156 00000080 429A            CMP              R2,R3
+  157 00000082 D101            BNE              R1_0ScanFail
+  158 00000084         
+  159 00000084         R1_0ScanPass
+  160 00000084 20CC            MOVS             R0, #0xCC
+  161 00000086 E000            B                R1_0ScanEnd
+  162 00000088         
+  163 00000088         R1_0ScanFail
+  164 00000088 20DD            MOVS             R0, #0xDD
+  165 0000008A         
+  166 0000008A         R1_0ScanEnd
+  167 0000008A 4770            BX               LR
+  168 0000008C                 ENDP
+  169 0000008C         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  170 0000008C         ;   Specific cpu reg 1-scan: R1
+  171 0000008C         ;   Return value:
+  172 0000008C         ;       0xCC, Test passed
+  173 0000008C         ;       0xDD, Test failed
+  174 0000008C         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  175 0000008C         r1_1scan
+                               PROC
+  176 0000008C                 EXPORT           r1_1scan
+  177 0000008C         
+  178 0000008C B405            PUSH             {R0,R2}
+  179 0000008E         
+  180 0000008E         ;0x00000000
+  181 0000008E 2300            MOVS             R3, #0
+  182 00000090 4619            MOV              R1, R3
+  183 00000092 4299            CMP              R1, R3
+  184 00000094 D110            BNE              R1_1ScanFail
+  185 00000096         
+  186 00000096 2301            MOVS             R3, #1
+  187 00000098 07DB            LSLS             R3, R3, #31
+  188 0000009A         
+  189 0000009A         R1_1ScanStart
+  190 0000009A         ;1 assignment
+  191 0000009A 4619            MOV              R1, R3
+  192 0000009C 4299            CMP              R1, R3
+  193 0000009E D10B            BNE              R1_1ScanFail
+  194 000000A0         
+  195 000000A0 085B            LSRS             R3, R3, #1
+  196 000000A2 2B00            CMP              R3, #0
+  197 000000A4 D1F9            BNE              R1_1ScanStart
+  198 000000A6         
+  199 000000A6         ;R0 R2 check
+  200 000000A6 4601            MOV              R1, R0
+  201 000000A8 4613            MOV              R3, R2
+  202 000000AA BC05            POP              {R0,R2}
+  203 000000AC 4288            CMP              R0,R1
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+  204 000000AE D103            BNE              R1_1ScanFail
+  205 000000B0 429A            CMP              R2,R3
+  206 000000B2 D101            BNE              R1_1ScanFail
+  207 000000B4         
+  208 000000B4         R1_1ScanPass
+  209 000000B4 20CC            MOVS             R0, #0xCC
+  210 000000B6 E000            B                R1_1ScanEnd
+  211 000000B8         
+  212 000000B8         R1_1ScanFail
+  213 000000B8 20DD            MOVS             R0, #0xDD
+  214 000000BA         
+  215 000000BA         R1_1ScanEnd
+  216 000000BA 4770            BX               LR
+  217 000000BC                 ENDP
+  218 000000BC         
+  219 000000BC         
+  220 000000BC         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  221 000000BC         ;   Specific cpu reg 0-scan: R2
+  222 000000BC         ;   Return value:
+  223 000000BC         ;       0xCC, Test passed
+  224 000000BC         ;       0xDD, Test failed
+  225 000000BC         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  226 000000BC         r2_0scan
+                               PROC
+  227 000000BC                 EXPORT           r2_0scan
+  228 000000BC         
+  229 000000BC B43A            PUSH             {R1,R3,R4,R5}
+  230 000000BE         
+  231 000000BE         ;0xFFFFFFFF
+  232 000000BE 2000            MOVS             R0, #0
+  233 000000C0 43C4            MVNS             R4, R0
+  234 000000C2 4622            MOV              R2, R4
+  235 000000C4 42A2            CMP              R2, R4
+  236 000000C6 D111            BNE              R2_0ScanFail
+  237 000000C8         
+  238 000000C8 2001            MOVS             R0, #1
+  239 000000CA 43C4            MVNS             R4, R0
+  240 000000CC 43C5            MVNS             R5, R0
+  241 000000CE         
+  242 000000CE         R2_0ScanStart
+  243 000000CE         ;0 assignment
+  244 000000CE 4622            MOV              R2, R4
+  245 000000D0 42A2            CMP              R2, R4
+  246 000000D2 D10B            BNE              R2_0ScanFail
+  247 000000D4         
+  248 000000D4 41C4            RORS             R4, R0
+  249 000000D6 42AC            CMP              R4, R5
+  250 000000D8 D1F9            BNE              R2_0ScanStart
+  251 000000DA         
+  252 000000DA         ; R1 R3 check
+  253 000000DA 4608            MOV              R0,R1
+  254 000000DC 461A            MOV              R2,R3
+  255 000000DE BC3A            POP              {R1,R3,R4,R5}
+  256 000000E0 4288            CMP              R0,R1
+  257 000000E2 D103            BNE              R2_0ScanFail
+  258 000000E4 429A            CMP              R2,R3
+  259 000000E6 D101            BNE              R2_0ScanFail
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  260 000000E8         
+  261 000000E8         R2_0ScanPass
+  262 000000E8 20CC            MOVS             R0, #0xCC
+  263 000000EA E000            B                R2_0ScanEnd
+  264 000000EC         
+  265 000000EC         R2_0ScanFail
+  266 000000EC 20DD            MOVS             R0, #0xDD
+  267 000000EE         
+  268 000000EE         R2_0ScanEnd
+  269 000000EE 4770            BX               LR
+  270 000000F0                 ENDP
+  271 000000F0         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  272 000000F0         ;   Specific cpu reg 1-scan: R2
+  273 000000F0         ;   Return value:
+  274 000000F0         ;       0xCC, Test passed
+  275 000000F0         ;       0xDD, Test failed
+  276 000000F0         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  277 000000F0         r2_1scan
+                               PROC
+  278 000000F0                 EXPORT           r2_1scan
+  279 000000F0         
+  280 000000F0 B40A            PUSH             {R1,R3}
+  281 000000F2         
+  282 000000F2         ;0x00000000
+  283 000000F2 2000            MOVS             R0, #0
+  284 000000F4 4602            MOV              R2, R0
+  285 000000F6 4282            CMP              R2, R0
+  286 000000F8 D110            BNE              R2_1ScanFail
+  287 000000FA         
+  288 000000FA 2001            MOVS             R0, #1
+  289 000000FC 07C0            LSLS             R0, R0, #31
+  290 000000FE         
+  291 000000FE         R2_1ScanStart
+  292 000000FE         ;1 assignment
+  293 000000FE 4602            MOV              R2, R0
+  294 00000100 4282            CMP              R2, R0
+  295 00000102 D10B            BNE              R2_1ScanFail
+  296 00000104         
+  297 00000104 0840            LSRS             R0, R0, #1
+  298 00000106 2800            CMP              R0, #0
+  299 00000108 D1F9            BNE              R2_1ScanStart
+  300 0000010A         
+  301 0000010A         ; R1 R3 check
+  302 0000010A 4608            MOV              R0,R1
+  303 0000010C 461A            MOV              R2,R3
+  304 0000010E BC0A            POP              {R1,R3}
+  305 00000110 4288            CMP              R0,R1
+  306 00000112 D1EB            BNE              R2_0ScanFail
+  307 00000114 429A            CMP              R2,R3
+  308 00000116 D1E9            BNE              R2_0ScanFail
+  309 00000118         
+  310 00000118         R2_1ScanPass
+  311 00000118 20CC            MOVS             R0, #0xCC
+  312 0000011A E000            B                R2_1ScanEnd
+  313 0000011C         
+  314 0000011C         R2_1ScanFail
+  315 0000011C 20DD            MOVS             R0, #0xDD
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+  316 0000011E         
+  317 0000011E         R2_1ScanEnd
+  318 0000011E 4770            BX               LR
+  319 00000120                 ENDP
+  320 00000120         
+  321 00000120         
+  322 00000120         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  323 00000120         ;   Specific cpu reg 0-scan: R3
+  324 00000120         ;   Return value:
+  325 00000120         ;       0xCC, Test passed
+  326 00000120         ;       0xDD, Test failed
+  327 00000120         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  328 00000120         r3_0scan
+                               PROC
+  329 00000120                 EXPORT           r3_0scan
+  330 00000120         
+  331 00000120 B434            PUSH             {R2,R4,R5}
+  332 00000122         ;0xFFFFFFFF
+  333 00000122 2000            MOVS             R0, #0
+  334 00000124 43C1            MVNS             R1, R0
+  335 00000126 460B            MOV              R3, R1
+  336 00000128 428B            CMP              R3, R1
+  337 0000012A D111            BNE              R3_0ScanFail
+  338 0000012C         
+  339 0000012C 2001            MOVS             R0, #1
+  340 0000012E 43C1            MVNS             R1, R0
+  341 00000130 43C5            MVNS             R5, R0
+  342 00000132         
+  343 00000132         R3_0ScanStart
+  344 00000132         ;0 assignment
+  345 00000132 460B            MOV              R3, R1
+  346 00000134 428B            CMP              R3, R1
+  347 00000136 D10B            BNE              R3_0ScanFail
+  348 00000138         
+  349 00000138 41C1            RORS             R1, R0
+  350 0000013A 42A9            CMP              R1, R5
+  351 0000013C D1F9            BNE              R3_0ScanStart
+  352 0000013E         
+  353 0000013E         ; R2 R4 check
+  354 0000013E 4610            MOV              R0, R2
+  355 00000140 4621            MOV              R1, R4
+  356 00000142 BC34            POP              {R2,R4,R5}
+  357 00000144 4290            CMP              R0, R2
+  358 00000146 D103            BNE              R3_0ScanFail
+  359 00000148 42A1            CMP              R1, R4
+  360 0000014A D101            BNE              R3_0ScanFail
+  361 0000014C         
+  362 0000014C         R3_0ScanPass
+  363 0000014C 20CC            MOVS             R0, #0xCC
+  364 0000014E E000            B                R3_0ScanEnd
+  365 00000150         
+  366 00000150         R3_0ScanFail
+  367 00000150 20DD            MOVS             R0, #0xDD
+  368 00000152         
+  369 00000152         R3_0ScanEnd
+  370 00000152 4770            BX               LR
+  371 00000154                 ENDP
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  372 00000154         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  373 00000154         ;   Specific cpu reg 1-scan: R3
+  374 00000154         ;   Return value:
+  375 00000154         ;       0xCC, Test passed
+  376 00000154         ;       0xDD, Test failed
+  377 00000154         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  378 00000154         r3_1scan
+                               PROC
+  379 00000154                 EXPORT           r3_1scan
+  380 00000154         
+  381 00000154 B414            PUSH             {R2,R4}
+  382 00000156         
+  383 00000156         ;0x00000000
+  384 00000156 2000            MOVS             R0, #0
+  385 00000158 4603            MOV              R3, R0
+  386 0000015A 4283            CMP              R3, R0
+  387 0000015C D110            BNE              R3_1ScanFail
+  388 0000015E         
+  389 0000015E 2001            MOVS             R0, #1
+  390 00000160 07C0            LSLS             R0, R0, #31
+  391 00000162         
+  392 00000162         R3_1ScanStart
+  393 00000162         ;1 assignment
+  394 00000162 4603            MOV              R3, R0
+  395 00000164 4283            CMP              R3, R0
+  396 00000166 D10B            BNE              R3_1ScanFail
+  397 00000168         
+  398 00000168 0840            LSRS             R0, R0, #1
+  399 0000016A 2800            CMP              R0, #0
+  400 0000016C D1F9            BNE              R3_1ScanStart
+  401 0000016E         
+  402 0000016E         ; R2 R4 check
+  403 0000016E 4610            MOV              R0, R2
+  404 00000170 4621            MOV              R1, R4
+  405 00000172 BC14            POP              {R2,R4}
+  406 00000174 4290            CMP              R0, R2
+  407 00000176 D103            BNE              R3_1ScanFail
+  408 00000178 42A1            CMP              R1, R4
+  409 0000017A D101            BNE              R3_1ScanFail
+  410 0000017C         
+  411 0000017C         R3_1ScanPass
+  412 0000017C 20CC            MOVS             R0, #0xCC
+  413 0000017E E000            B                R3_1ScanEnd
+  414 00000180         
+  415 00000180         R3_1ScanFail
+  416 00000180 20DD            MOVS             R0, #0xDD
+  417 00000182         
+  418 00000182         R3_1ScanEnd
+  419 00000182 4770            BX               LR
+  420 00000184                 ENDP
+  421 00000184         
+  422 00000184         
+  423 00000184         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  424 00000184         ;   Specific cpu reg 0-scan: R4
+  425 00000184         ;   Return value:
+  426 00000184         ;       0xCC, Test passed
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+  427 00000184         ;       0xDD, Test failed
+  428 00000184         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  429 00000184         r4_0scan
+                               PROC
+  430 00000184                 EXPORT           r4_0scan
+  431 00000184         
+  432 00000184 B438            PUSH             {R3,R4,R5}
+  433 00000186         
+  434 00000186         ;0xFFFFFFFF
+  435 00000186 2000            MOVS             R0, #0
+  436 00000188 43C1            MVNS             R1, R0
+  437 0000018A 460C            MOV              R4, R1
+  438 0000018C 428C            CMP              R4, R1
+  439 0000018E D111            BNE              R4_0ScanFail
+  440 00000190         
+  441 00000190 2001            MOVS             R0, #1
+  442 00000192 43C1            MVNS             R1, R0
+  443 00000194 43C2            MVNS             R2, R0
+  444 00000196         
+  445 00000196         R4_0ScanStart
+  446 00000196         ;0 assignment
+  447 00000196 460C            MOV              R4, R1
+  448 00000198 428C            CMP              R4, R1
+  449 0000019A D10B            BNE              R4_0ScanFail
+  450 0000019C         
+  451 0000019C 41C1            RORS             R1, R0
+  452 0000019E 4291            CMP              R1, R2
+  453 000001A0 D1F9            BNE              R4_0ScanStart
+  454 000001A2         
+  455 000001A2         ; R3 R5 check
+  456 000001A2 4618            MOV              R0, R3
+  457 000001A4 4629            MOV              R1, R5
+  458 000001A6 BC38            POP              {R3,R4,R5}
+  459 000001A8 4298            CMP              R0,R3
+  460 000001AA D103            BNE              R4_0ScanFail
+  461 000001AC 42A9            CMP              R1,R5
+  462 000001AE D101            BNE              R4_0ScanFail
+  463 000001B0         
+  464 000001B0         R4_0ScanPass
+  465 000001B0 20CC            MOVS             R0, #0xCC
+  466 000001B2 E000            B                R4_0ScanEnd
+  467 000001B4         
+  468 000001B4         R4_0ScanFail
+  469 000001B4 20DD            MOVS             R0, #0xDD
+  470 000001B6         
+  471 000001B6         R4_0ScanEnd
+  472 000001B6 4770            BX               LR
+  473 000001B8                 ENDP
+  474 000001B8         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  475 000001B8         ;   Specific cpu reg 1-scan: R4
+  476 000001B8         ;   Return value:
+  477 000001B8         ;       0xCC, Test passed
+  478 000001B8         ;       0xDD, Test failed
+  479 000001B8         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  480 000001B8         r4_1scan
+                               PROC
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+  481 000001B8                 EXPORT           r4_1scan
+  482 000001B8         
+  483 000001B8 B438            PUSH             {R3,R4,R5}
+  484 000001BA         
+  485 000001BA         ;0x00000000
+  486 000001BA 2000            MOVS             R0, #0
+  487 000001BC 4604            MOV              R4, R0
+  488 000001BE 4284            CMP              R4, R0
+  489 000001C0 D110            BNE              R4_1ScanFail
+  490 000001C2         
+  491 000001C2 2001            MOVS             R0, #1
+  492 000001C4 07C0            LSLS             R0, R0, #31
+  493 000001C6         
+  494 000001C6         R4_1ScanStart
+  495 000001C6         ;1 assignment
+  496 000001C6 4604            MOV              R4, R0
+  497 000001C8 4284            CMP              R4, R0
+  498 000001CA D10B            BNE              R4_1ScanFail
+  499 000001CC         
+  500 000001CC 0840            LSRS             R0, R0, #1
+  501 000001CE 2800            CMP              R0, #0
+  502 000001D0 D1F9            BNE              R4_1ScanStart
+  503 000001D2         
+  504 000001D2         ; R3 R5 check
+  505 000001D2 4618            MOV              R0, R3
+  506 000001D4 4629            MOV              R1, R5
+  507 000001D6 BC38            POP              {R3,R4,R5}
+  508 000001D8 4298            CMP              R0,R3
+  509 000001DA D103            BNE              R4_1ScanFail
+  510 000001DC 42A9            CMP              R1,R5
+  511 000001DE D101            BNE              R4_1ScanFail
+  512 000001E0         
+  513 000001E0         R4_1ScanPass
+  514 000001E0 20CC            MOVS             R0, #0xCC
+  515 000001E2 E000            B                R4_1ScanEnd
+  516 000001E4         
+  517 000001E4         R4_1ScanFail
+  518 000001E4 20DD            MOVS             R0, #0xDD
+  519 000001E6         
+  520 000001E6         R4_1ScanEnd
+  521 000001E6 4770            BX               LR
+  522 000001E8                 ENDP
+  523 000001E8         
+  524 000001E8         
+  525 000001E8         
+  526 000001E8         
+  527 000001E8         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  528 000001E8         ;   Specific cpu reg 0-scan: R5
+  529 000001E8         ;   Return value:
+  530 000001E8         ;       0xCC, Test passed
+  531 000001E8         ;       0xDD, Test failed
+  532 000001E8         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  533 000001E8         r5_0scan
+                               PROC
+  534 000001E8                 EXPORT           r5_0scan
+  535 000001E8         
+  536 000001E8 4633            MOV              R3, R6
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+  537 000001EA B430            PUSH             {R4,R5}
+  538 000001EC         ;0xFFFFFFFF
+  539 000001EC 2000            MOVS             R0, #0
+  540 000001EE 43C1            MVNS             R1, R0
+  541 000001F0 460D            MOV              R5, R1
+  542 000001F2 428D            CMP              R5, R1
+  543 000001F4 D110            BNE              R5_0ScanFail
+  544 000001F6         
+  545 000001F6 2001            MOVS             R0, #1
+  546 000001F8 43C1            MVNS             R1, R0
+  547 000001FA 43C2            MVNS             R2, R0
+  548 000001FC         
+  549 000001FC         R5_0ScanStart
+  550 000001FC         ;0 assignment
+  551 000001FC 460D            MOV              R5, R1
+  552 000001FE 428D            CMP              R5, R1
+  553 00000200 D10A            BNE              R5_0ScanFail
+  554 00000202         
+  555 00000202 41C1            RORS             R1, R0
+  556 00000204 4291            CMP              R1, R2
+  557 00000206 D1F9            BNE              R5_0ScanStart
+  558 00000208         
+  559 00000208         ; R4 R6 check
+  560 00000208 4620            MOV              R0, R4
+  561 0000020A BC30            POP              {R4,R5}
+  562 0000020C 42A0            CMP              R0, R4
+  563 0000020E D103            BNE              R5_0ScanFail
+  564 00000210 42B3            CMP              R3, R6
+  565 00000212 D101            BNE              R5_0ScanFail
+  566 00000214         
+  567 00000214         R5_0ScanPass
+  568 00000214 20CC            MOVS             R0, #0xCC
+  569 00000216 E000            B                R5_0ScanEnd
+  570 00000218         
+  571 00000218         R5_0ScanFail
+  572 00000218 20DD            MOVS             R0, #0xDD
+  573 0000021A         
+  574 0000021A         R5_0ScanEnd
+  575 0000021A 4770            BX               LR
+  576 0000021C                 ENDP
+  577 0000021C         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  578 0000021C         ;   Specific cpu reg 1-scan: R5
+  579 0000021C         ;   Return value:
+  580 0000021C         ;       0xCC, Test passed
+  581 0000021C         ;       0xDD, Test failed
+  582 0000021C         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  583 0000021C         r5_1scan
+                               PROC
+  584 0000021C                 EXPORT           r5_1scan
+  585 0000021C         
+  586 0000021C 4621            MOV              R1, R4
+  587 0000021E 462A            MOV              R2, R5
+  588 00000220 4633            MOV              R3, R6
+  589 00000222         
+  590 00000222         ;0x00000000
+  591 00000222 2000            MOVS             R0, #0
+  592 00000224 4605            MOV              R5, R0
+
+
+
+ARM Macro Assembler    Page 12 
+
+
+  593 00000226 4285            CMP              R5, R0
+  594 00000228 D10E            BNE              R5_1ScanFail
+  595 0000022A         
+  596 0000022A 2001            MOVS             R0, #1
+  597 0000022C 07C0            LSLS             R0, R0, #31
+  598 0000022E         
+  599 0000022E         R5_1ScanStart
+  600 0000022E         ;1 assignment
+  601 0000022E 4605            MOV              R5, R0
+  602 00000230 4285            CMP              R5, R0
+  603 00000232 D109            BNE              R5_1ScanFail
+  604 00000234         
+  605 00000234 0840            LSRS             R0, R0, #1
+  606 00000236 2800            CMP              R0, #0
+  607 00000238 D1F9            BNE              R5_1ScanStart
+  608 0000023A         
+  609 0000023A         ; R4 R6 check
+  610 0000023A 4615            MOV              R5, R2
+  611 0000023C 42A1            CMP              R1, R4
+  612 0000023E D103            BNE              R5_1ScanFail
+  613 00000240 42B3            CMP              R3, R6
+  614 00000242 D101            BNE              R5_1ScanFail
+  615 00000244         
+  616 00000244         R5_1ScanPass
+  617 00000244 20CC            MOVS             R0, #0xCC
+  618 00000246 E000            B                R5_1ScanEnd
+  619 00000248         
+  620 00000248         R5_1ScanFail
+  621 00000248 20DD            MOVS             R0, #0xDD
+  622 0000024A         
+  623 0000024A         R5_1ScanEnd
+  624 0000024A 4770            BX               LR
+  625 0000024C                 ENDP
+  626 0000024C         
+  627 0000024C         
+  628 0000024C         
+  629 0000024C         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  630 0000024C         ;   Specific cpu reg 0-scan: R6
+  631 0000024C         ;   Return value:
+  632 0000024C         ;       0xCC, Test passed
+  633 0000024C         ;       0xDD, Test failed
+  634 0000024C         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  635 0000024C         r6_0scan
+                               PROC
+  636 0000024C                 EXPORT           r6_0scan
+  637 0000024C         
+  638 0000024C 463B            MOV              R3, R7
+  639 0000024E B460            PUSH             {R5,R6}
+  640 00000250         ;0x00000000
+  641 00000250 2000            MOVS             R0, #0
+  642 00000252 43C1            MVNS             R1, R0
+  643 00000254 460E            MOV              R6, R1
+  644 00000256 428E            CMP              R6, R1
+  645 00000258 D110            BNE              R6_0ScanFailPop
+  646 0000025A         
+  647 0000025A 2001            MOVS             R0, #1
+  648 0000025C 43C1            MVNS             R1, R0
+
+
+
+ARM Macro Assembler    Page 13 
+
+
+  649 0000025E 43C2            MVNS             R2, R0
+  650 00000260         
+  651 00000260         R6_0ScanStart
+  652 00000260         ;0 assignment
+  653 00000260 460E            MOV              R6, R1
+  654 00000262         ; MOVS   R6, #8                                         
+                                                    ;ERROR injection
+  655 00000262 428E            CMP              R6, R1
+  656 00000264 D10A            BNE              R6_0ScanFailPop
+  657 00000266         
+  658 00000266 41C1            RORS             R1, R0
+  659 00000268 4291            CMP              R1, R2
+  660 0000026A D1F9            BNE              R6_0ScanStart
+  661 0000026C         
+  662 0000026C         ; R5 R7 check
+  663 0000026C 4628            MOV              R0, R5
+  664 0000026E BC60            POP              {R5, R6}
+  665 00000270 42A8            CMP              R0, R5
+  666 00000272 D104            BNE              R6_0ScanFail
+  667 00000274 42BB            CMP              R3, R7
+  668 00000276 D102            BNE              R6_0ScanFail
+  669 00000278         
+  670 00000278         R6_0ScanPass
+  671 00000278 20CC            MOVS             R0, #0xCC
+  672 0000027A E001            B                R6_0ScanEnd
+  673 0000027C         
+  674 0000027C         R6_0ScanFailPop
+  675 0000027C BC60            POP              {R5,R6}
+  676 0000027E         
+  677 0000027E         R6_0ScanFail
+  678 0000027E 20DD            MOVS             R0, #0xDD
+  679 00000280         
+  680 00000280         R6_0ScanEnd
+  681 00000280 4770            BX               LR
+  682 00000282                 ENDP
+  683 00000282         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  684 00000282         ;   Specific cpu reg 1-scan: R6
+  685 00000282         ;   Return value:
+  686 00000282         ;       0xCC, Test passed
+  687 00000282         ;       0xDD, Test failed
+  688 00000282         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  689 00000282         r6_1scan
+                               PROC
+  690 00000282                 EXPORT           r6_1scan
+  691 00000282         
+  692 00000282 4629            MOV              R1, R5
+  693 00000284 4632            MOV              R2, R6
+  694 00000286 463B            MOV              R3, R7
+  695 00000288         ;0x00000000
+  696 00000288 2000            MOVS             R0, #0
+  697 0000028A 4606            MOV              R6, R0
+  698 0000028C 4286            CMP              R6, R0
+  699 0000028E D10E            BNE              R6_1ScanFail
+  700 00000290         
+  701 00000290 2001            MOVS             R0, #1
+  702 00000292 07C0            LSLS             R0, R0, #31
+  703 00000294         
+
+
+
+ARM Macro Assembler    Page 14 
+
+
+  704 00000294         R6_1ScanStart
+  705 00000294         ;1 assignment
+  706 00000294 4606            MOV              R6, R0
+  707 00000296 4286            CMP              R6, R0
+  708 00000298 D109            BNE              R6_1ScanFail
+  709 0000029A         
+  710 0000029A 0840            LSRS             R0, R0, #1
+  711 0000029C 2800            CMP              R0, #0
+  712 0000029E D1F9            BNE              R6_1ScanStart
+  713 000002A0         
+  714 000002A0         ; R5 R7 check
+  715 000002A0 4616            MOV              R6, R2
+  716 000002A2 42A9            CMP              R1, R5
+  717 000002A4 D103            BNE              R6_1ScanFail
+  718 000002A6 42BB            CMP              R3, R7
+  719 000002A8 D101            BNE              R6_1ScanFail
+  720 000002AA         
+  721 000002AA         R6_1ScanPass
+  722 000002AA 20CC            MOVS             R0, #0xCC
+  723 000002AC E000            B                R6_1ScanEnd
+  724 000002AE         
+  725 000002AE         R6_1ScanFail
+  726 000002AE 20DD            MOVS             R0, #0xDD
+  727 000002B0         
+  728 000002B0         R6_1ScanEnd
+  729 000002B0 4770            BX               LR
+  730 000002B2                 ENDP
+  731 000002B2         
+  732 000002B2         
+  733 000002B2         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  734 000002B2         ;   Specific cpu reg 0-scan: R7
+  735 000002B2         ;   Return value:
+  736 000002B2         ;       0xCC, Test passed
+  737 000002B2         ;       0xDD, Test failed
+  738 000002B2         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  739 000002B2         r7_0scan
+                               PROC
+  740 000002B2                 EXPORT           r7_0scan
+  741 000002B2         
+  742 000002B2 B4C0            PUSH             {R6,R7}
+  743 000002B4 4643            MOV              R3, R8
+  744 000002B6         ;0xFFFFFFFF
+  745 000002B6 2000            MOVS             R0, #0
+  746 000002B8 43C1            MVNS             R1, R0
+  747 000002BA 460F            MOV              R7, R1
+  748 000002BC 428F            CMP              R7, R1
+  749 000002BE D110            BNE              R7_0ScanFail
+  750 000002C0         
+  751 000002C0 2001            MOVS             R0, #1
+  752 000002C2 43C1            MVNS             R1, R0
+  753 000002C4 43C2            MVNS             R2, R0
+  754 000002C6         
+  755 000002C6         R7_0ScanStart
+  756 000002C6         ;0 assignment
+  757 000002C6 460F            MOV              R7, R1
+  758 000002C8 428F            CMP              R7, R1
+  759 000002CA D10A            BNE              R7_0ScanFail
+
+
+
+ARM Macro Assembler    Page 15 
+
+
+  760 000002CC         
+  761 000002CC 41C1            RORS             R1, R0
+  762 000002CE 4291            CMP              R1, R2
+  763 000002D0 D1F9            BNE              R7_0ScanStart
+  764 000002D2         
+  765 000002D2         ; R6 R8 check
+  766 000002D2 4630            MOV              R0, R6
+  767 000002D4 BCC0            POP              {R6,R7}
+  768 000002D6 42B0            CMP              R0, R6
+  769 000002D8 D103            BNE              R7_0ScanFail
+  770 000002DA 4543            CMP              R3, R8
+  771 000002DC D101            BNE              R7_0ScanFail
+  772 000002DE         
+  773 000002DE         R7_0ScanPass
+  774 000002DE 20CC            MOVS             R0, #0xCC
+  775 000002E0 E000            B                R7_0ScanEnd
+  776 000002E2         
+  777 000002E2         R7_0ScanFail
+  778 000002E2 20DD            MOVS             R0, #0xDD
+  779 000002E4         
+  780 000002E4         R7_0ScanEnd
+  781 000002E4 4770            BX               LR
+  782 000002E6                 ENDP
+  783 000002E6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  784 000002E6         ;   Specific cpu reg 1-scan: R7
+  785 000002E6         ;   Return value:
+  786 000002E6         ;       0xCC, Test passed
+  787 000002E6         ;       0xDD, Test failed
+  788 000002E6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  789 000002E6         r7_1scan
+                               PROC
+  790 000002E6                 EXPORT           r7_1scan
+  791 000002E6         
+  792 000002E6 4631            MOV              R1, R6
+  793 000002E8 463A            MOV              R2, R7
+  794 000002EA 4643            MOV              R3, R8
+  795 000002EC         ;0x00000000
+  796 000002EC 2000            MOVS             R0, #0
+  797 000002EE 4607            MOV              R7, R0
+  798 000002F0 4287            CMP              R7, R0
+  799 000002F2 D10E            BNE              R7_1ScanFail
+  800 000002F4         
+  801 000002F4 2001            MOVS             R0, #1
+  802 000002F6 07C0            LSLS             R0, R0, #31
+  803 000002F8         
+  804 000002F8         R7_1ScanStart
+  805 000002F8         ;1 assignment
+  806 000002F8 4607            MOV              R7, R0
+  807 000002FA 4287            CMP              R7, R0
+  808 000002FC D109            BNE              R7_1ScanFail
+  809 000002FE         
+  810 000002FE 0840            LSRS             R0, R0, #1
+  811 00000300 2800            CMP              R0, #0
+  812 00000302 D1F9            BNE              R7_1ScanStart
+  813 00000304         
+  814 00000304         ; R6 R8 check
+  815 00000304 4617            MOV              R7, R2
+
+
+
+ARM Macro Assembler    Page 16 
+
+
+  816 00000306 42B1            CMP              R1, R6
+  817 00000308 D103            BNE              R7_1ScanFail
+  818 0000030A 4543            CMP              R3, R8
+  819 0000030C D101            BNE              R7_1ScanFail
+  820 0000030E         
+  821 0000030E         R7_1ScanPass
+  822 0000030E 20CC            MOVS             R0, #0xCC
+  823 00000310 E000            B                R7_1ScanEnd
+  824 00000312         
+  825 00000312         R7_1ScanFail
+  826 00000312 20DD            MOVS             R0, #0xDD
+  827 00000314         
+  828 00000314         R7_1ScanEnd
+  829 00000314 4770            BX               LR
+  830 00000316                 ENDP
+  831 00000316         
+  832 00000316         
+  833 00000316         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  834 00000316         ;   Specific cpu reg 0-scan: R8
+  835 00000316         ;   Return value:
+  836 00000316         ;       0xCC, Test passed
+  837 00000316         ;       0xDD, Test failed
+  838 00000316         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  839 00000316         r8_0scan
+                               PROC
+  840 00000316                 EXPORT           r8_0scan
+  841 00000316         
+  842 00000316 4640            MOV              R0, R8
+  843 00000318 4649            MOV              R1, R9
+  844 0000031A 463B            MOV              R3, R7
+  845 0000031C B403            PUSH             {R0,R1}
+  846 0000031E         ;0xFFFFFFFF
+  847 0000031E 2000            MOVS             R0, #0
+  848 00000320 43C1            MVNS             R1, R0
+  849 00000322 4688            MOV              R8, R1
+  850 00000324 4588            CMP              R8, R1
+  851 00000326 D110            BNE              R8_0ScanFail
+  852 00000328         
+  853 00000328 2001            MOVS             R0, #1
+  854 0000032A 43C1            MVNS             R1, R0
+  855 0000032C 43C2            MVNS             R2, R0
+  856 0000032E         
+  857 0000032E         R8_0ScanStart
+  858 0000032E         ;0 assignment
+  859 0000032E 4688            MOV              R8, R1
+  860 00000330 4588            CMP              R8, R1
+  861 00000332 D10A            BNE              R8_0ScanFail
+  862 00000334         
+  863 00000334 41C1            RORS             R1, R0
+  864 00000336 4291            CMP              R1, R2
+  865 00000338 D1F9            BNE              R8_0ScanStart
+  866 0000033A         
+  867 0000033A         ; R7 R9 check
+  868 0000033A BC03            POP              {R0,R1}
+  869 0000033C 4680            MOV              R8, R0
+  870 0000033E 42BB            CMP              R3, R7
+  871 00000340 D103            BNE              R8_0ScanFail
+
+
+
+ARM Macro Assembler    Page 17 
+
+
+  872 00000342 4549            CMP              R1, R9
+  873 00000344 D101            BNE              R8_0ScanFail
+  874 00000346         
+  875 00000346         R8_0ScanPass
+  876 00000346 20CC            MOVS             R0, #0xCC
+  877 00000348 E000            B                R8_0ScanEnd
+  878 0000034A         
+  879 0000034A         R8_0ScanFail
+  880 0000034A 20DD            MOVS             R0, #0xDD
+  881 0000034C         
+  882 0000034C         R8_0ScanEnd
+  883 0000034C 4770            BX               LR
+  884 0000034E                 ENDP
+  885 0000034E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  886 0000034E         ;   Specific cpu reg 1-scan: R8
+  887 0000034E         ;   Return value:
+  888 0000034E         ;       0xCC, Test passed
+  889 0000034E         ;       0xDD, Test failed
+  890 0000034E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  891 0000034E         r8_1scan
+                               PROC
+  892 0000034E                 EXPORT           r8_1scan
+  893 0000034E         
+  894 0000034E 4639            MOV              R1, R7
+  895 00000350 4642            MOV              R2, R8
+  896 00000352 464B            MOV              R3, R9
+  897 00000354         ;0x00000000
+  898 00000354 2000            MOVS             R0, #0
+  899 00000356 4680            MOV              R8, R0
+  900 00000358 4580            CMP              R8, R0
+  901 0000035A D10E            BNE              R8_1ScanFail
+  902 0000035C         
+  903 0000035C 2001            MOVS             R0, #1
+  904 0000035E 07C0            LSLS             R0, R0, #31
+  905 00000360         
+  906 00000360         R8_1ScanStart
+  907 00000360         ;1 assignment
+  908 00000360 4680            MOV              R8, R0
+  909 00000362 4580            CMP              R8, R0
+  910 00000364 D109            BNE              R8_1ScanFail
+  911 00000366         
+  912 00000366 0840            LSRS             R0, R0, #1
+  913 00000368 2800            CMP              R0, #0
+  914 0000036A D1F9            BNE              R8_1ScanStart
+  915 0000036C         
+  916 0000036C         ; R7 R9 check
+  917 0000036C 4690            MOV              R8, R2      ;recover R8
+  918 0000036E 42B9            CMP              R1, R7
+  919 00000370 D103            BNE              R8_1ScanFail
+  920 00000372 454B            CMP              R3, R9
+  921 00000374 D101            BNE              R8_1ScanFail
+  922 00000376         
+  923 00000376         R8_1ScanPass
+  924 00000376 20CC            MOVS             R0, #0xCC
+  925 00000378 E000            B                R8_1ScanEnd
+  926 0000037A         
+  927 0000037A         R8_1ScanFail
+
+
+
+ARM Macro Assembler    Page 18 
+
+
+  928 0000037A 20DD            MOVS             R0, #0xDD
+  929 0000037C         
+  930 0000037C         R8_1ScanEnd
+  931 0000037C 4770            BX               LR
+  932 0000037E                 ENDP
+  933 0000037E         
+  934 0000037E         
+  935 0000037E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  936 0000037E         ;   Specific cpu reg 0-scan: R9
+  937 0000037E         ;   Return value:
+  938 0000037E         ;       0xCC, Test passed
+  939 0000037E         ;       0xDD, Test failed
+  940 0000037E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  941 0000037E         r9_0scan
+                               PROC
+  942 0000037E                 EXPORT           r9_0scan
+  943 0000037E         
+  944 0000037E 4640            MOV              R0, R8
+  945 00000380 4649            MOV              R1, R9
+  946 00000382 4653            MOV              R3, R10
+  947 00000384 B403            PUSH             {R0,R1}
+  948 00000386         ;0xFFFFFFFF
+  949 00000386 2000            MOVS             R0, #0
+  950 00000388 43C1            MVNS             R1, R0
+  951 0000038A 4689            MOV              R9, R1
+  952 0000038C 4589            CMP              R9, R1
+  953 0000038E D110            BNE              R9_0ScanFail
+  954 00000390         
+  955 00000390 2001            MOVS             R0, #1
+  956 00000392 43C1            MVNS             R1, R0
+  957 00000394 43C2            MVNS             R2, R0
+  958 00000396         
+  959 00000396         R9_0ScanStart
+  960 00000396         ;0 scan
+  961 00000396 4689            MOV              R9, R1
+  962 00000398 4589            CMP              R9, R1
+  963 0000039A D10A            BNE              R9_0ScanFail
+  964 0000039C         
+  965 0000039C 41C1            RORS             R1, R0
+  966 0000039E 4291            CMP              R1, R2
+  967 000003A0 D1F9            BNE              R9_0ScanStart
+  968 000003A2         
+  969 000003A2         ; R8 R10 check
+  970 000003A2 BC03            POP              {R0,R1}
+  971 000003A4 4689            MOV              R9, R1      ;Recover R9
+  972 000003A6 4540            CMP              R0, R8
+  973 000003A8 D103            BNE              R9_0ScanFail
+  974 000003AA 4553            CMP              R3, R10
+  975 000003AC D101            BNE              R9_0ScanFail
+  976 000003AE         
+  977 000003AE         R9_0ScanPass
+  978 000003AE 20CC            MOVS             R0, #0xCC
+  979 000003B0 E000            B                R9_0ScanEnd
+  980 000003B2         
+  981 000003B2         R9_0ScanFail
+  982 000003B2 20DD            MOVS             R0, #0xDD
+  983 000003B4         
+
+
+
+ARM Macro Assembler    Page 19 
+
+
+  984 000003B4         R9_0ScanEnd
+  985 000003B4 4770            BX               LR
+  986 000003B6                 ENDP
+  987 000003B6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  988 000003B6         ;   Specific cpu reg 1-scan: R9
+  989 000003B6         ;   Return value:
+  990 000003B6         ;       0xCC, Test passed
+  991 000003B6         ;       0xDD, Test failed
+  992 000003B6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+  993 000003B6         r9_1scan
+                               PROC
+  994 000003B6                 EXPORT           r9_1scan
+  995 000003B6         
+  996 000003B6 4641            MOV              R1, R8
+  997 000003B8 464A            MOV              R2, R9
+  998 000003BA 4653            MOV              R3, R10
+  999 000003BC         ;0x00000000
+ 1000 000003BC 2000            MOVS             R0, #0
+ 1001 000003BE 4681            MOV              R9, R0
+ 1002 000003C0 4581            CMP              R9, R0
+ 1003 000003C2 D10E            BNE              R9_1ScanFail
+ 1004 000003C4         
+ 1005 000003C4 2001            MOVS             R0, #1
+ 1006 000003C6 07C0            LSLS             R0, R0, #31
+ 1007 000003C8         
+ 1008 000003C8         R9_1ScanStart
+ 1009 000003C8         ;1 scan
+ 1010 000003C8 4681            MOV              R9, R0
+ 1011 000003CA 4581            CMP              R9, R0
+ 1012 000003CC D109            BNE              R9_1ScanFail
+ 1013 000003CE         
+ 1014 000003CE 0840            LSRS             R0, R0, #1
+ 1015 000003D0 2800            CMP              R0, #0
+ 1016 000003D2 D1F9            BNE              R9_1ScanStart
+ 1017 000003D4         
+ 1018 000003D4         ; R8 R10 check
+ 1019 000003D4 4691            MOV              R9, R2      ;Recover R9
+ 1020 000003D6 4541            CMP              R1, R8
+ 1021 000003D8 D103            BNE              R9_1ScanFail
+ 1022 000003DA 4553            CMP              R3, R10
+ 1023 000003DC D101            BNE              R9_1ScanFail
+ 1024 000003DE         
+ 1025 000003DE         R9_1ScanPass
+ 1026 000003DE 20CC            MOVS             R0, #0xCC
+ 1027 000003E0 E000            B                R9_1ScanEnd
+ 1028 000003E2         
+ 1029 000003E2         R9_1ScanFail
+ 1030 000003E2 20DD            MOVS             R0, #0xDD
+ 1031 000003E4         
+ 1032 000003E4         R9_1ScanEnd
+ 1033 000003E4 4770            BX               LR
+ 1034 000003E6                 ENDP
+ 1035 000003E6         
+ 1036 000003E6         
+ 1037 000003E6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1038 000003E6         ;   Specific cpu reg 0-scan: R10
+
+
+
+ARM Macro Assembler    Page 20 
+
+
+ 1039 000003E6         ;   Return value:
+ 1040 000003E6         ;       0xCC, Test passed
+ 1041 000003E6         ;       0xDD, Test failed
+ 1042 000003E6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1043 000003E6         r10_0scan
+                               PROC
+ 1044 000003E6                 EXPORT           r10_0scan
+ 1045 000003E6         
+ 1046 000003E6 4649            MOV              R1, R9
+ 1047 000003E8 4652            MOV              R2, R10
+ 1048 000003EA 465B            MOV              R3, R11
+ 1049 000003EC B406            PUSH             {R1,R2}
+ 1050 000003EE         ;0xFFFFFFFF
+ 1051 000003EE 2000            MOVS             R0, #0
+ 1052 000003F0 43C1            MVNS             R1, R0
+ 1053 000003F2 468A            MOV              R10, R1
+ 1054 000003F4 458A            CMP              R10, R1
+ 1055 000003F6 D110            BNE              R10_0ScanFail
+ 1056 000003F8         
+ 1057 000003F8 2001            MOVS             R0, #1
+ 1058 000003FA 43C1            MVNS             R1, R0
+ 1059 000003FC 43C2            MVNS             R2, R0
+ 1060 000003FE         
+ 1061 000003FE         R10_0ScanStart
+ 1062 000003FE         ;0 scan
+ 1063 000003FE 468A            MOV              R10, R1
+ 1064 00000400 458A            CMP              R10, R1
+ 1065 00000402 D10A            BNE              R10_0ScanFail
+ 1066 00000404         
+ 1067 00000404 41C1            RORS             R1, R0
+ 1068 00000406 4291            CMP              R1, R2
+ 1069 00000408 D1F9            BNE              R10_0ScanStart
+ 1070 0000040A         
+ 1071 0000040A         ; R9 R11 check
+ 1072 0000040A BC06            POP              {R1,R2}
+ 1073 0000040C 4692            MOV              R10, R2     ;Recover R10
+ 1074 0000040E 4549            CMP              R1, R9
+ 1075 00000410 D103            BNE              R10_0ScanFail
+ 1076 00000412 455B            CMP              R3, R11
+ 1077 00000414 D101            BNE              R10_0ScanFail
+ 1078 00000416         
+ 1079 00000416         R10_0ScanPass
+ 1080 00000416 20CC            MOVS             R0, #0xCC
+ 1081 00000418 E000            B                R10_0ScanEnd
+ 1082 0000041A         
+ 1083 0000041A         R10_0ScanFail
+ 1084 0000041A 20DD            MOVS             R0, #0xDD
+ 1085 0000041C         
+ 1086 0000041C         R10_0ScanEnd
+ 1087 0000041C 4770            BX               LR
+ 1088 0000041E                 ENDP
+ 1089 0000041E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1090 0000041E         ;   Specific cpu reg 1-scan: R10
+ 1091 0000041E         ;   Return value:
+ 1092 0000041E         ;       0xCC, Test passed
+ 1093 0000041E         ;       0xDD, Test failed
+ 1094 0000041E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+ARM Macro Assembler    Page 21 
+
+
+                       ;
+ 1095 0000041E         r10_1scan
+                               PROC
+ 1096 0000041E                 EXPORT           r10_1scan
+ 1097 0000041E         
+ 1098 0000041E 4649            MOV              R1, R9
+ 1099 00000420 4652            MOV              R2, R10
+ 1100 00000422 465B            MOV              R3, R11
+ 1101 00000424         ;0x00000000
+ 1102 00000424 2000            MOVS             R0, #0
+ 1103 00000426 4682            MOV              R10, R0
+ 1104 00000428 4582            CMP              R10, R0
+ 1105 0000042A D10E            BNE              R10_1ScanFail
+ 1106 0000042C         
+ 1107 0000042C 2001            MOVS             R0, #1
+ 1108 0000042E 07C0            LSLS             R0, R0, #31
+ 1109 00000430         
+ 1110 00000430         R10_1ScanStart
+ 1111 00000430         ;1 scan
+ 1112 00000430 4682            MOV              R10, R0
+ 1113 00000432 4582            CMP              R10, R0
+ 1114 00000434 D109            BNE              R10_1ScanFail
+ 1115 00000436         
+ 1116 00000436 0840            LSRS             R0, R0, #1
+ 1117 00000438 2800            CMP              R0, #0
+ 1118 0000043A D1F9            BNE              R10_1ScanStart
+ 1119 0000043C         
+ 1120 0000043C         ;R9 R11 check
+ 1121 0000043C 4692            MOV              R10, R2     ;Recover R10
+ 1122 0000043E 4549            CMP              R1, R9
+ 1123 00000440 D103            BNE              R10_1ScanFail
+ 1124 00000442 455B            CMP              R3, R11
+ 1125 00000444 D101            BNE              R10_1ScanFail
+ 1126 00000446         
+ 1127 00000446         R10_1ScanPass
+ 1128 00000446 20CC            MOVS             R0, #0xCC
+ 1129 00000448 E000            B                R10_1ScanEnd
+ 1130 0000044A         
+ 1131 0000044A         R10_1ScanFail
+ 1132 0000044A 20DD            MOVS             R0, #0xDD
+ 1133 0000044C         
+ 1134 0000044C         R10_1ScanEnd
+ 1135 0000044C 4770            BX               LR
+ 1136 0000044E                 ENDP
+ 1137 0000044E         
+ 1138 0000044E         
+ 1139 0000044E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1140 0000044E         ;   Specific cpu reg 0-scan: R11
+ 1141 0000044E         ;   Return value:
+ 1142 0000044E         ;       0xCC, Test passed
+ 1143 0000044E         ;       0xDD, Test failed
+ 1144 0000044E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1145 0000044E         r11_0scan
+                               PROC
+ 1146 0000044E                 EXPORT           r11_0scan
+ 1147 0000044E         
+ 1148 0000044E 4651            MOV              R1, R10
+
+
+
+ARM Macro Assembler    Page 22 
+
+
+ 1149 00000450 465A            MOV              R2, R11
+ 1150 00000452 4663            MOV              R3, R12
+ 1151 00000454 B406            PUSH             {R1,R2}
+ 1152 00000456         
+ 1153 00000456 2000            MOVS             R0, #0
+ 1154 00000458 43C1            MVNS             R1, R0
+ 1155 0000045A 468B            MOV              R11, R1
+ 1156 0000045C 458B            CMP              R11, R1
+ 1157 0000045E D110            BNE              R11_0ScanFail
+ 1158 00000460         
+ 1159 00000460 2001            MOVS             R0, #1
+ 1160 00000462 43C1            MVNS             R1, R0
+ 1161 00000464 43C2            MVNS             R2, R0
+ 1162 00000466         
+ 1163 00000466         R11_0ScanStart
+ 1164 00000466         ;0 scan
+ 1165 00000466 468B            MOV              R11, R1
+ 1166 00000468 458B            CMP              R11, R1
+ 1167 0000046A D10A            BNE              R11_0ScanFail
+ 1168 0000046C         
+ 1169 0000046C 41C1            RORS             R1, R0
+ 1170 0000046E 4291            CMP              R1, R2
+ 1171 00000470 D1F9            BNE              R11_0ScanStart
+ 1172 00000472         
+ 1173 00000472         ; R10 R12 check
+ 1174 00000472 BC06            POP              {R1,R2}
+ 1175 00000474 4693            MOV              R11, R2     ;Recover R11
+ 1176 00000476 4551            CMP              R1, R10
+ 1177 00000478 D103            BNE              R11_0ScanFail
+ 1178 0000047A 4563            CMP              R3, R12
+ 1179 0000047C D101            BNE              R11_0ScanFail
+ 1180 0000047E         
+ 1181 0000047E         R11_0ScanPass
+ 1182 0000047E 20CC            MOVS             R0, #0xCC
+ 1183 00000480 E000            B                R11_0ScanEnd
+ 1184 00000482         
+ 1185 00000482         R11_0ScanFail
+ 1186 00000482 20DD            MOVS             R0, #0xDD
+ 1187 00000484         
+ 1188 00000484         R11_0ScanEnd
+ 1189 00000484 4770            BX               LR
+ 1190 00000486                 ENDP
+ 1191 00000486         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1192 00000486         ;   Specific cpu reg 1-scan: R11
+ 1193 00000486         ;   Return value:
+ 1194 00000486         ;       0xCC, Test passed
+ 1195 00000486         ;       0xDD, Test failed
+ 1196 00000486         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1197 00000486         r11_1scan
+                               PROC
+ 1198 00000486                 EXPORT           r11_1scan
+ 1199 00000486         
+ 1200 00000486 4651            MOV              R1, R10
+ 1201 00000488 465A            MOV              R2, R11
+ 1202 0000048A 4663            MOV              R3, R12
+ 1203 0000048C         ;0x00000000
+ 1204 0000048C 2000            MOVS             R0, #0
+
+
+
+ARM Macro Assembler    Page 23 
+
+
+ 1205 0000048E 4683            MOV              R11, R0
+ 1206 00000490 4583            CMP              R11, R0
+ 1207 00000492 D10E            BNE              R11_1ScanFail
+ 1208 00000494         
+ 1209 00000494 2001            MOVS             R0, #1
+ 1210 00000496 07C0            LSLS             R0, R0, #31
+ 1211 00000498         
+ 1212 00000498         R11_1ScanStart
+ 1213 00000498         ;1 scan
+ 1214 00000498 4683            MOV              R11, R0
+ 1215 0000049A 4583            CMP              R11, R0
+ 1216 0000049C D109            BNE              R11_1ScanFail
+ 1217 0000049E         
+ 1218 0000049E 0840            LSRS             R0, R0, #1
+ 1219 000004A0 2800            CMP              R0, #0
+ 1220 000004A2 D1F9            BNE              R11_1ScanStart
+ 1221 000004A4         
+ 1222 000004A4         ; R10 R12 check
+ 1223 000004A4 4693            MOV              R11, R2     ;Recoveer R11
+ 1224 000004A6 4551            CMP              R1, R10
+ 1225 000004A8 D103            BNE              R11_1ScanFail
+ 1226 000004AA 4563            CMP              R3, R12
+ 1227 000004AC D101            BNE              R11_1ScanFail
+ 1228 000004AE         
+ 1229 000004AE         R11_1ScanPass
+ 1230 000004AE 20CC            MOVS             R0, #0xCC
+ 1231 000004B0 E000            B                R11_1ScanEnd
+ 1232 000004B2         
+ 1233 000004B2         R11_1ScanFail
+ 1234 000004B2 20DD            MOVS             R0, #0xDD
+ 1235 000004B4         
+ 1236 000004B4         R11_1ScanEnd
+ 1237 000004B4 4770            BX               LR
+ 1238 000004B6                 ENDP
+ 1239 000004B6         
+ 1240 000004B6         
+ 1241 000004B6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1242 000004B6         ;   Specific cpu reg 0-scan: R12
+ 1243 000004B6         ;   Return value:
+ 1244 000004B6         ;       0xCC, Test passed
+ 1245 000004B6         ;       0xDD, Test failed
+ 1246 000004B6         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1247 000004B6         r12_0scan
+                               PROC
+ 1248 000004B6                 EXPORT           r12_0scan
+ 1249 000004B6         
+ 1250 000004B6 4659            MOV              R1, R11
+ 1251 000004B8 4662            MOV              R2, R12
+ 1252 000004BA 466B            MOV              R3, R13
+ 1253 000004BC B406            PUSH             {R1,R2}
+ 1254 000004BE         ;0xFFFFFFFF
+ 1255 000004BE 2000            MOVS             R0, #0
+ 1256 000004C0 43C1            MVNS             R1, R0
+ 1257 000004C2 468C            MOV              R12, R1
+ 1258 000004C4 458C            CMP              R12, R1
+ 1259 000004C6 D110            BNE              R12_0ScanFail
+ 1260 000004C8         
+
+
+
+ARM Macro Assembler    Page 24 
+
+
+ 1261 000004C8 2001            MOVS             R0, #1
+ 1262 000004CA 43C1            MVNS             R1, R0
+ 1263 000004CC 43C2            MVNS             R2, R0
+ 1264 000004CE         
+ 1265 000004CE         R12_0ScanStart
+ 1266 000004CE         ;0 scan
+ 1267 000004CE 468C            MOV              R12, R1
+ 1268 000004D0 458C            CMP              R12, R1
+ 1269 000004D2 D10A            BNE              R12_0ScanFail
+ 1270 000004D4         
+ 1271 000004D4 41C1            RORS             R1, R0
+ 1272 000004D6 4291            CMP              R1, R2
+ 1273 000004D8 D1F9            BNE              R12_0ScanStart
+ 1274 000004DA         
+ 1275 000004DA         ; R11 R13 check
+ 1276 000004DA BC06            POP              {R1,R2}
+ 1277 000004DC 4694            MOV              R12, R2     ;Recover R12
+ 1278 000004DE 458B            CMP              R11, R1
+ 1279 000004E0 D103            BNE              R12_0ScanFail
+ 1280 000004E2 459D            CMP              R13, R3
+ 1281 000004E4 D101            BNE              R12_0ScanFail
+ 1282 000004E6         
+ 1283 000004E6         R12_0ScanPass
+ 1284 000004E6 20CC            MOVS             R0, #0xCC
+ 1285 000004E8 E000            B                R12_0ScanEnd
+ 1286 000004EA         
+ 1287 000004EA         R12_0ScanFail
+ 1288 000004EA 20DD            MOVS             R0, #0xDD
+ 1289 000004EC         
+ 1290 000004EC         R12_0ScanEnd
+ 1291 000004EC 4770            BX               LR
+ 1292 000004EE                 ENDP
+ 1293 000004EE         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1294 000004EE         ;   Specific cpu reg 1-scan: R12
+ 1295 000004EE         ;   Return value:
+ 1296 000004EE         ;       0xCC, Test passed
+ 1297 000004EE         ;       0xDD, Test failed
+ 1298 000004EE         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1299 000004EE         r12_1scan
+                               PROC
+ 1300 000004EE                 EXPORT           r12_1scan
+ 1301 000004EE         
+ 1302 000004EE 4659            MOV              R1, R11
+ 1303 000004F0 4662            MOV              R2, R12
+ 1304 000004F2 466B            MOV              R3, R13
+ 1305 000004F4         ;0x00000000
+ 1306 000004F4 2000            MOVS             R0, #0
+ 1307 000004F6 4684            MOV              R12, R0
+ 1308 000004F8 4584            CMP              R12, R0
+ 1309 000004FA D10E            BNE              R12_1ScanFail
+ 1310 000004FC         
+ 1311 000004FC 2001            MOVS             R0, #1
+ 1312 000004FE 07C0            LSLS             R0, R0, #31
+ 1313 00000500         
+ 1314 00000500         R12_1ScanStart
+ 1315 00000500         ;1 scan
+ 1316 00000500 4684            MOV              R12, R0
+
+
+
+ARM Macro Assembler    Page 25 
+
+
+ 1317 00000502 4584            CMP              R12, R0
+ 1318 00000504 D109            BNE              R12_1ScanFail
+ 1319 00000506         
+ 1320 00000506 0840            LSRS             R0, R0, #1
+ 1321 00000508 2800            CMP              R0, #0
+ 1322 0000050A D1F9            BNE              R12_1ScanStart
+ 1323 0000050C         
+ 1324 0000050C         ;R11 R13 check
+ 1325 0000050C 4694            MOV              R12, R2     ;Recover R12
+ 1326 0000050E 458B            CMP              R11, R1
+ 1327 00000510 D103            BNE              R12_1ScanFail
+ 1328 00000512 459D            CMP              R13, R3
+ 1329 00000514 D101            BNE              R12_1ScanFail
+ 1330 00000516         
+ 1331 00000516         R12_1ScanPass
+ 1332 00000516 20CC            MOVS             R0, #0xCC
+ 1333 00000518 E000            B                R12_1ScanEnd
+ 1334 0000051A         
+ 1335 0000051A         R12_1ScanFail
+ 1336 0000051A 20DD            MOVS             R0, #0xDD
+ 1337 0000051C         
+ 1338 0000051C         R12_1ScanEnd
+ 1339 0000051C 4770            BX               LR
+ 1340 0000051E                 ENDP
+ 1341 0000051E         
+ 1342 0000051E         
+ 1343 0000051E         
+ 1344 0000051E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1345 0000051E         ;   Specific cpu reg 0-scan: R13
+ 1346 0000051E         ;   Attention! R13 is SP, so push/pop carefully
+ 1347 0000051E         ;   R13's lower 2bit are constant zero
+ 1348 0000051E         ;   Cycles: 
+ 1349 0000051E         ;   Return value:
+ 1350 0000051E         ;       0xCC, Test passed
+ 1351 0000051E         ;       0xDD, Test failed
+ 1352 0000051E         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1353 0000051E         r13_0scan
+                               PROC
+ 1354 0000051E                 EXPORT           r13_0scan
+ 1355 0000051E         
+ 1356 0000051E 4660            MOV              R0, R12
+ 1357 00000520 4672            MOV              R2, R14
+ 1358 00000522 B415            PUSH             {R0,R2,R4}
+ 1359 00000524 466C            MOV              R4, R13
+ 1360 00000526         
+ 1361 00000526         ;0xFFFFFF00
+ 1362 00000526 2000            MOVS             R0, #0
+ 1363 00000528 43C1            MVNS             R1, R0
+ 1364 0000052A 008A            LSLS             R2, R1, #2
+ 1365 0000052C 4695            MOV              R13, R2
+ 1366 0000052E 4595            CMP              R13, R2
+ 1367 00000530 D114            BNE              R13_0ScanFail
+ 1368 00000532         
+ 1369 00000532 2001            MOVS             R0, #1
+ 1370 00000534 43C1            MVNS             R1, R0
+ 1371 00000536 0080            LSLS             R0, #2
+ 1372 00000538 43C2            MVNS             R2, R0
+
+
+
+ARM Macro Assembler    Page 26 
+
+
+ 1373 0000053A 2001            MOVS             R0, #1
+ 1374 0000053C         R13_0ScanStart
+ 1375 0000053C         ;0 scan
+ 1376 0000053C 468D            MOV              R13, R1
+ 1377 0000053E         ;clear the lower two bits of R0 since SP is always multi
+                       ple of 4
+ 1378 0000053E         ;BIC    R1, R0, #%11
+ 1379 0000053E 088B            LSRS             R3, R1, #2
+ 1380 00000540 009B            LSLS             R3, #2
+ 1381 00000542 459D            CMP              R13, R3
+ 1382 00000544 D10A            BNE              R13_0ScanFail
+ 1383 00000546         
+ 1384 00000546 41C1            RORS             R1, R0
+ 1385 00000548 4291            CMP              R1, R2
+ 1386 0000054A D1F7            BNE              R13_0ScanStart
+ 1387 0000054C         
+ 1388 0000054C         ;R12 R14 check
+ 1389 0000054C 46A5            MOV              R13, R4
+ 1390 0000054E BC15            POP              {R0,R2,R4}
+ 1391 00000550 4584            CMP              R12, R0
+ 1392 00000552 D103            BNE              R13_0ScanFail
+ 1393 00000554 4596            CMP              R14, R2
+ 1394 00000556 D101            BNE              R13_0ScanFail
+ 1395 00000558         
+ 1396 00000558         R13_0ScanPass
+ 1397 00000558 20CC            MOVS             R0, #0xCC
+ 1398 0000055A E000            B                R13_0ScanEnd
+ 1399 0000055C         
+ 1400 0000055C         R13_0ScanFail
+ 1401 0000055C 20DD            MOVS             R0, #0xDD
+ 1402 0000055E         
+ 1403 0000055E         R13_0ScanEnd
+ 1404 0000055E 4770            BX               LR
+ 1405 00000560                 ENDP
+ 1406 00000560         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1407 00000560         ;   Specific cpu reg 1-scan: R13
+ 1408 00000560         ;   Attention! R13 is SP, so push/pop carefully
+ 1409 00000560         ;   Cycles: 
+ 1410 00000560         ;   Return value:
+ 1411 00000560         ;       0xCC, Test passed
+ 1412 00000560         ;       0xDD, Test failed
+ 1413 00000560         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1414 00000560         r13_1scan
+                               PROC
+ 1415 00000560                 EXPORT           r13_1scan
+ 1416 00000560         
+ 1417 00000560 B410            PUSH             {R4}
+ 1418 00000562 4661            MOV              R1, R12
+ 1419 00000564 4672            MOV              R2, R14
+ 1420 00000566 466C            MOV              R4, R13     ; saves SP
+ 1421 00000568         
+ 1422 00000568         ;0x00000000
+ 1423 00000568 2000            MOVS             R0, #0
+ 1424 0000056A 4685            MOV              R13, R0
+ 1425 0000056C 4585            CMP              R13, R0
+ 1426 0000056E D110            BNE              R13_1ScanFail
+ 1427 00000570         
+
+
+
+ARM Macro Assembler    Page 27 
+
+
+ 1428 00000570 2001            MOVS             R0, #1
+ 1429 00000572 07C0            LSLS             R0, R0, #31
+ 1430 00000574 1743            ASRS             R3, R0, #29 ;R3 = 0xFFFFFFFC
+ 1431 00000576         
+ 1432 00000576         R13_1ScanStart
+ 1433 00000576         ;1 scan
+ 1434 00000576 4685            MOV              R13, R0
+ 1435 00000578 4585            CMP              R13, R0
+ 1436 0000057A D10A            BNE              R13_1ScanFail
+ 1437 0000057C         
+ 1438 0000057C 0840            LSRS             R0, R0, #1
+ 1439 0000057E 2802            CMP              R0, #2
+ 1440 00000580 D1F9            BNE              R13_1ScanStart
+ 1441 00000582         
+ 1442 00000582         ;R12 R14 check
+ 1443 00000582 46A5            MOV              R13, R4
+ 1444 00000584 BC10            POP              {R4}
+ 1445 00000586 458C            CMP              R12, R1
+ 1446 00000588 D103            BNE              R13_1ScanFail
+ 1447 0000058A 4596            CMP              R14, R2
+ 1448 0000058C D101            BNE              R13_1ScanFail
+ 1449 0000058E         
+ 1450 0000058E         R13_1ScanPass
+ 1451 0000058E 20CC            MOVS             R0, #0xCC
+ 1452 00000590 E000            B                R13_1ScanEnd
+ 1453 00000592         
+ 1454 00000592         R13_1ScanFail
+ 1455 00000592 20DD            MOVS             R0, #0xDD
+ 1456 00000594         
+ 1457 00000594         R13_1ScanEnd
+ 1458 00000594 4770            BX               LR
+ 1459 00000596                 ENDP
+ 1460 00000596         
+ 1461 00000596         
+ 1462 00000596         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1463 00000596         ;   Specific cpu reg 0-scan: R14, R14 is LR
+ 1464 00000596         ;   Return value:
+ 1465 00000596         ;       0xCC, Test passed
+ 1466 00000596         ;       0xDD, Test failed
+ 1467 00000596         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1468 00000596         r14_0scan
+                               PROC
+ 1469 00000596                 EXPORT           r14_0scan
+ 1470 00000596         
+ 1471 00000596 4669            MOV              R1, R13
+ 1472 00000598 B402            PUSH             {R1}
+ 1473 0000059A 4673            MOV              R3, R14
+ 1474 0000059C         
+ 1475 0000059C         ;0xFFFFFFFF
+ 1476 0000059C 2000            MOVS             R0, #0
+ 1477 0000059E 43C1            MVNS             R1, R0
+ 1478 000005A0 468E            MOV              R14, R1
+ 1479 000005A2 458E            CMP              R14, R1
+ 1480 000005A4 D10E            BNE              R14_0ScanFail
+ 1481 000005A6         
+ 1482 000005A6 2001            MOVS             R0, #1
+ 1483 000005A8 43C1            MVNS             R1, R0
+
+
+
+ARM Macro Assembler    Page 28 
+
+
+ 1484 000005AA 43C2            MVNS             R2, R0
+ 1485 000005AC         
+ 1486 000005AC         R14_0ScanStart
+ 1487 000005AC         ;0 scan
+ 1488 000005AC 468E            MOV              R14, R1
+ 1489 000005AE 458E            CMP              R14, R1
+ 1490 000005B0 D108            BNE              R14_0ScanFail
+ 1491 000005B2         
+ 1492 000005B2 41C1            RORS             R1, R0
+ 1493 000005B4 4291            CMP              R1, R2
+ 1494 000005B6 D1F9            BNE              R14_0ScanStart
+ 1495 000005B8         
+ 1496 000005B8         ; R13 check
+ 1497 000005B8 469E            MOV              R14, R3
+ 1498 000005BA BC02            POP              {R1}
+ 1499 000005BC 458D            CMP              R13, R1
+ 1500 000005BE D1F5            BNE              R14_0ScanStart
+ 1501 000005C0         
+ 1502 000005C0         R14_0ScanPass
+ 1503 000005C0 20CC            MOVS             R0, #0xCC
+ 1504 000005C2 E000            B                R14_0ScanEnd
+ 1505 000005C4         
+ 1506 000005C4         R14_0ScanFail
+ 1507 000005C4 20DD            MOVS             R0, #0xDD
+ 1508 000005C6         
+ 1509 000005C6         R14_0ScanEnd
+ 1510 000005C6 4770            BX               LR
+ 1511 000005C8                 ENDP
+ 1512 000005C8         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1513 000005C8         ;   Specific cpu reg 1-scan: R14, R14 is LR
+ 1514 000005C8         ;   Return value:
+ 1515 000005C8         ;       0xCC, Test passed
+ 1516 000005C8         ;       0xDD, Test failed
+ 1517 000005C8         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+ 1518 000005C8         r14_1scan
+                               PROC
+ 1519 000005C8                 EXPORT           r14_1scan
+ 1520 000005C8         
+ 1521 000005C8 466A            MOV              R2, R13
+ 1522 000005CA 4673            MOV              R3, R14
+ 1523 000005CC         ;0x00000000
+ 1524 000005CC 2000            MOVS             R0, #0
+ 1525 000005CE 4686            MOV              R14, R0
+ 1526 000005D0 4586            CMP              R14, R0
+ 1527 000005D2 D10C            BNE              R14_1ScanFail
+ 1528 000005D4         
+ 1529 000005D4 2001            MOVS             R0, #1
+ 1530 000005D6 07C0            LSLS             R0, R0, #31
+ 1531 000005D8         
+ 1532 000005D8         R14_1ScanStart
+ 1533 000005D8         ;1 scan
+ 1534 000005D8 4686            MOV              R14, R0
+ 1535 000005DA 4586            CMP              R14, R0
+ 1536 000005DC D107            BNE              R14_1ScanFail
+ 1537 000005DE         
+ 1538 000005DE 0840            LSRS             R0, R0, #1
+ 1539 000005E0 2800            CMP              R0, #0
+
+
+
+ARM Macro Assembler    Page 29 
+
+
+ 1540 000005E2 D1F9            BNE              R14_1ScanStart
+ 1541 000005E4         ;R13 check
+ 1542 000005E4 469E            MOV              R14, R3
+ 1543 000005E6 4595            CMP              R13, R2
+ 1544 000005E8 D101            BNE              R14_1ScanFail
+ 1545 000005EA         
+ 1546 000005EA         R14_1ScanPass
+ 1547 000005EA 20CC            MOVS             R0, #0xCC
+ 1548 000005EC E000            B                R14_1ScanEnd
+ 1549 000005EE         
+ 1550 000005EE         R14_1ScanFail
+ 1551 000005EE 20DD            MOVS             R0, #0xDD
+ 1552 000005F0         
+ 1553 000005F0         R14_1ScanEnd
+ 1554 000005F0 4770            BX               LR
+ 1555 000005F2                 ENDP
+ 1556 000005F2         
+ 1557 000005F2         
+ 1558 000005F2         
+ 1559 000005F2                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
+ork --depend=.\objects\register_scan.d -o.\objects\register_scan.o -I.\RTE\_Lin
+ko_03x_Project -IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\
+Core\Include -IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Devic
+e\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 5
+36" --predefine="_RTE_ SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\reg
+ister_scan.lst 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: .text unused
+R0_0ScanEnd 0000002C
+
+Symbol: R0_0ScanEnd
+   Definitions
+      At line 56 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R0_0ScanEnd unused
+R0_0ScanFail 0000002A
+
+Symbol: R0_0ScanFail
+   Definitions
+      At line 53 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 25 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 36 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 47 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R0_0ScanPass 00000026
+
+Symbol: R0_0ScanPass
+   Definitions
+      At line 49 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R0_0ScanPass unused
+R0_0ScanStart 00000012
+
+Symbol: R0_0ScanStart
+   Definitions
+      At line 31 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 41 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R0_0ScanStart used once
+R0_1ScanEnd 00000056
+
+Symbol: R0_1ScanEnd
+   Definitions
+      At line 113 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 51 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 108 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R0_1ScanFail 00000054
+
+Symbol: R0_1ScanFail
+   Definitions
+      At line 110 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 85 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 94 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 104 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R0_1ScanPass 00000050
+
+Symbol: R0_1ScanPass
+   Definitions
+      At line 106 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R0_1ScanPass unused
+R0_1ScanStart 0000003C
+
+Symbol: R0_1ScanStart
+   Definitions
+      At line 90 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 98 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R0_1ScanStart used once
+R10_0ScanEnd 0000041C
+
+Symbol: R10_0ScanEnd
+   Definitions
+      At line 1086 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1081 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R10_0ScanEnd used once
+R10_0ScanFail 0000041A
+
+Symbol: R10_0ScanFail
+   Definitions
+      At line 1083 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1055 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1065 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1075 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1077 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R10_0ScanPass 00000416
+
+Symbol: R10_0ScanPass
+   Definitions
+      At line 1079 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R10_0ScanPass unused
+R10_0ScanStart 000003FE
+
+Symbol: R10_0ScanStart
+   Definitions
+      At line 1061 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1069 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R10_0ScanStart used once
+R10_1ScanEnd 0000044C
+
+Symbol: R10_1ScanEnd
+   Definitions
+      At line 1134 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 1129 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R10_1ScanEnd used once
+R10_1ScanFail 0000044A
+
+Symbol: R10_1ScanFail
+   Definitions
+      At line 1131 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1105 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1114 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1123 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1125 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R10_1ScanPass 00000446
+
+Symbol: R10_1ScanPass
+   Definitions
+      At line 1127 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R10_1ScanPass unused
+R10_1ScanStart 00000430
+
+Symbol: R10_1ScanStart
+   Definitions
+      At line 1110 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1118 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R10_1ScanStart used once
+R11_0ScanEnd 00000484
+
+Symbol: R11_0ScanEnd
+   Definitions
+      At line 1188 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1183 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R11_0ScanEnd used once
+R11_0ScanFail 00000482
+
+Symbol: R11_0ScanFail
+   Definitions
+      At line 1185 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1157 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1167 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1177 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1179 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R11_0ScanPass 0000047E
+
+Symbol: R11_0ScanPass
+   Definitions
+      At line 1181 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R11_0ScanPass unused
+R11_0ScanStart 00000466
+
+Symbol: R11_0ScanStart
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 1163 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1171 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R11_0ScanStart used once
+R11_1ScanEnd 000004B4
+
+Symbol: R11_1ScanEnd
+   Definitions
+      At line 1236 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1231 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R11_1ScanEnd used once
+R11_1ScanFail 000004B2
+
+Symbol: R11_1ScanFail
+   Definitions
+      At line 1233 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1207 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1216 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1225 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1227 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R11_1ScanPass 000004AE
+
+Symbol: R11_1ScanPass
+   Definitions
+      At line 1229 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R11_1ScanPass unused
+R11_1ScanStart 00000498
+
+Symbol: R11_1ScanStart
+   Definitions
+      At line 1212 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1220 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R11_1ScanStart used once
+R12_0ScanEnd 000004EC
+
+Symbol: R12_0ScanEnd
+   Definitions
+      At line 1290 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1285 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R12_0ScanEnd used once
+R12_0ScanFail 000004EA
+
+Symbol: R12_0ScanFail
+   Definitions
+      At line 1287 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1259 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1269 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1279 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1281 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Relocatable symbols
+
+R12_0ScanPass 000004E6
+
+Symbol: R12_0ScanPass
+   Definitions
+      At line 1283 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R12_0ScanPass unused
+R12_0ScanStart 000004CE
+
+Symbol: R12_0ScanStart
+   Definitions
+      At line 1265 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1273 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R12_0ScanStart used once
+R12_1ScanEnd 0000051C
+
+Symbol: R12_1ScanEnd
+   Definitions
+      At line 1338 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1333 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R12_1ScanEnd used once
+R12_1ScanFail 0000051A
+
+Symbol: R12_1ScanFail
+   Definitions
+      At line 1335 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1309 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1318 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1327 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1329 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R12_1ScanPass 00000516
+
+Symbol: R12_1ScanPass
+   Definitions
+      At line 1331 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R12_1ScanPass unused
+R12_1ScanStart 00000500
+
+Symbol: R12_1ScanStart
+   Definitions
+      At line 1314 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1322 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R12_1ScanStart used once
+R13_0ScanEnd 0000055E
+
+Symbol: R13_0ScanEnd
+   Definitions
+      At line 1403 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1398 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R13_0ScanEnd used once
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Relocatable symbols
+
+R13_0ScanFail 0000055C
+
+Symbol: R13_0ScanFail
+   Definitions
+      At line 1400 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1367 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1382 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1392 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1394 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R13_0ScanPass 00000558
+
+Symbol: R13_0ScanPass
+   Definitions
+      At line 1396 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R13_0ScanPass unused
+R13_0ScanStart 0000053C
+
+Symbol: R13_0ScanStart
+   Definitions
+      At line 1374 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1386 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R13_0ScanStart used once
+R13_1ScanEnd 00000594
+
+Symbol: R13_1ScanEnd
+   Definitions
+      At line 1457 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1452 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R13_1ScanEnd used once
+R13_1ScanFail 00000592
+
+Symbol: R13_1ScanFail
+   Definitions
+      At line 1454 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1426 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1436 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1446 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1448 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R13_1ScanPass 0000058E
+
+Symbol: R13_1ScanPass
+   Definitions
+      At line 1450 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R13_1ScanPass unused
+R13_1ScanStart 00000576
+
+Symbol: R13_1ScanStart
+   Definitions
+      At line 1432 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Relocatable symbols
+
+   Uses
+      At line 1440 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R13_1ScanStart used once
+R14_0ScanEnd 000005C6
+
+Symbol: R14_0ScanEnd
+   Definitions
+      At line 1509 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1504 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R14_0ScanEnd used once
+R14_0ScanFail 000005C4
+
+Symbol: R14_0ScanFail
+   Definitions
+      At line 1506 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1480 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1490 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R14_0ScanPass 000005C0
+
+Symbol: R14_0ScanPass
+   Definitions
+      At line 1502 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R14_0ScanPass unused
+R14_0ScanStart 000005AC
+
+Symbol: R14_0ScanStart
+   Definitions
+      At line 1486 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1494 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1500 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R14_1ScanEnd 000005F0
+
+Symbol: R14_1ScanEnd
+   Definitions
+      At line 1553 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1548 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R14_1ScanEnd used once
+R14_1ScanFail 000005EE
+
+Symbol: R14_1ScanFail
+   Definitions
+      At line 1550 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1527 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1536 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1544 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R14_1ScanPass 000005EA
+
+Symbol: R14_1ScanPass
+   Definitions
+
+
+
+ARM Macro Assembler    Page 8 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 1546 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R14_1ScanPass unused
+R14_1ScanStart 000005D8
+
+Symbol: R14_1ScanStart
+   Definitions
+      At line 1532 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1540 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R14_1ScanStart used once
+R1_0ScanEnd 0000008A
+
+Symbol: R1_0ScanEnd
+   Definitions
+      At line 166 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 161 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R1_0ScanEnd used once
+R1_0ScanFail 00000088
+
+Symbol: R1_0ScanFail
+   Definitions
+      At line 163 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 134 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 144 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 155 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 157 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R1_0ScanPass 00000084
+
+Symbol: R1_0ScanPass
+   Definitions
+      At line 159 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R1_0ScanPass unused
+R1_0ScanStart 0000006A
+
+Symbol: R1_0ScanStart
+   Definitions
+      At line 140 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 148 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R1_0ScanStart used once
+R1_1ScanEnd 000000BA
+
+Symbol: R1_1ScanEnd
+   Definitions
+      At line 215 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 210 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R1_1ScanEnd used once
+R1_1ScanFail 000000B8
+
+Symbol: R1_1ScanFail
+   Definitions
+
+
+
+ARM Macro Assembler    Page 9 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 212 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 184 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 193 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 204 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 206 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R1_1ScanPass 000000B4
+
+Symbol: R1_1ScanPass
+   Definitions
+      At line 208 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R1_1ScanPass unused
+R1_1ScanStart 0000009A
+
+Symbol: R1_1ScanStart
+   Definitions
+      At line 189 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 197 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R1_1ScanStart used once
+R2_0ScanEnd 000000EE
+
+Symbol: R2_0ScanEnd
+   Definitions
+      At line 268 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 263 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R2_0ScanEnd used once
+R2_0ScanFail 000000EC
+
+Symbol: R2_0ScanFail
+   Definitions
+      At line 265 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 236 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 246 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 257 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 259 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 306 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 308 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R2_0ScanPass 000000E8
+
+Symbol: R2_0ScanPass
+   Definitions
+      At line 261 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R2_0ScanPass unused
+R2_0ScanStart 000000CE
+
+Symbol: R2_0ScanStart
+   Definitions
+      At line 242 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 250 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+
+
+ARM Macro Assembler    Page 10 Alphabetic symbol ordering
+Relocatable symbols
+
+Comment: R2_0ScanStart used once
+R2_1ScanEnd 0000011E
+
+Symbol: R2_1ScanEnd
+   Definitions
+      At line 317 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 312 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R2_1ScanEnd used once
+R2_1ScanFail 0000011C
+
+Symbol: R2_1ScanFail
+   Definitions
+      At line 314 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 286 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 295 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R2_1ScanPass 00000118
+
+Symbol: R2_1ScanPass
+   Definitions
+      At line 310 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R2_1ScanPass unused
+R2_1ScanStart 000000FE
+
+Symbol: R2_1ScanStart
+   Definitions
+      At line 291 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 299 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R2_1ScanStart used once
+R3_0ScanEnd 00000152
+
+Symbol: R3_0ScanEnd
+   Definitions
+      At line 369 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 364 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R3_0ScanEnd used once
+R3_0ScanFail 00000150
+
+Symbol: R3_0ScanFail
+   Definitions
+      At line 366 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 337 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 347 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 358 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 360 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R3_0ScanPass 0000014C
+
+Symbol: R3_0ScanPass
+   Definitions
+      At line 362 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 11 Alphabetic symbol ordering
+Relocatable symbols
+
+      None
+Comment: R3_0ScanPass unused
+R3_0ScanStart 00000132
+
+Symbol: R3_0ScanStart
+   Definitions
+      At line 343 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 351 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R3_0ScanStart used once
+R3_1ScanEnd 00000182
+
+Symbol: R3_1ScanEnd
+   Definitions
+      At line 418 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 413 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R3_1ScanEnd used once
+R3_1ScanFail 00000180
+
+Symbol: R3_1ScanFail
+   Definitions
+      At line 415 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 387 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 396 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 407 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 409 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R3_1ScanPass 0000017C
+
+Symbol: R3_1ScanPass
+   Definitions
+      At line 411 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R3_1ScanPass unused
+R3_1ScanStart 00000162
+
+Symbol: R3_1ScanStart
+   Definitions
+      At line 392 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 400 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R3_1ScanStart used once
+R4_0ScanEnd 000001B6
+
+Symbol: R4_0ScanEnd
+   Definitions
+      At line 471 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 466 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R4_0ScanEnd used once
+R4_0ScanFail 000001B4
+
+Symbol: R4_0ScanFail
+   Definitions
+      At line 468 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 12 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 439 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 449 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 460 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 462 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R4_0ScanPass 000001B0
+
+Symbol: R4_0ScanPass
+   Definitions
+      At line 464 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R4_0ScanPass unused
+R4_0ScanStart 00000196
+
+Symbol: R4_0ScanStart
+   Definitions
+      At line 445 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 453 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R4_0ScanStart used once
+R4_1ScanEnd 000001E6
+
+Symbol: R4_1ScanEnd
+   Definitions
+      At line 520 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 515 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R4_1ScanEnd used once
+R4_1ScanFail 000001E4
+
+Symbol: R4_1ScanFail
+   Definitions
+      At line 517 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 489 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 498 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 509 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 511 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R4_1ScanPass 000001E0
+
+Symbol: R4_1ScanPass
+   Definitions
+      At line 513 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R4_1ScanPass unused
+R4_1ScanStart 000001C6
+
+Symbol: R4_1ScanStart
+   Definitions
+      At line 494 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 502 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R4_1ScanStart used once
+R5_0ScanEnd 0000021A
+
+Symbol: R5_0ScanEnd
+
+
+
+ARM Macro Assembler    Page 13 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 574 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 569 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R5_0ScanEnd used once
+R5_0ScanFail 00000218
+
+Symbol: R5_0ScanFail
+   Definitions
+      At line 571 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 543 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 553 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 563 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 565 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R5_0ScanPass 00000214
+
+Symbol: R5_0ScanPass
+   Definitions
+      At line 567 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R5_0ScanPass unused
+R5_0ScanStart 000001FC
+
+Symbol: R5_0ScanStart
+   Definitions
+      At line 549 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 557 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R5_0ScanStart used once
+R5_1ScanEnd 0000024A
+
+Symbol: R5_1ScanEnd
+   Definitions
+      At line 623 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 618 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R5_1ScanEnd used once
+R5_1ScanFail 00000248
+
+Symbol: R5_1ScanFail
+   Definitions
+      At line 620 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 594 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 603 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 612 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 614 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R5_1ScanPass 00000244
+
+Symbol: R5_1ScanPass
+   Definitions
+      At line 616 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R5_1ScanPass unused
+
+
+
+ARM Macro Assembler    Page 14 Alphabetic symbol ordering
+Relocatable symbols
+
+R5_1ScanStart 0000022E
+
+Symbol: R5_1ScanStart
+   Definitions
+      At line 599 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 607 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R5_1ScanStart used once
+R6_0ScanEnd 00000280
+
+Symbol: R6_0ScanEnd
+   Definitions
+      At line 680 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 672 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R6_0ScanEnd used once
+R6_0ScanFail 0000027E
+
+Symbol: R6_0ScanFail
+   Definitions
+      At line 677 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 666 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 668 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R6_0ScanFailPop 0000027C
+
+Symbol: R6_0ScanFailPop
+   Definitions
+      At line 674 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 645 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 656 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R6_0ScanPass 00000278
+
+Symbol: R6_0ScanPass
+   Definitions
+      At line 670 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R6_0ScanPass unused
+R6_0ScanStart 00000260
+
+Symbol: R6_0ScanStart
+   Definitions
+      At line 651 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 660 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R6_0ScanStart used once
+R6_1ScanEnd 000002B0
+
+Symbol: R6_1ScanEnd
+   Definitions
+      At line 728 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 723 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R6_1ScanEnd used once
+R6_1ScanFail 000002AE
+
+
+
+ARM Macro Assembler    Page 15 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: R6_1ScanFail
+   Definitions
+      At line 725 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 699 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 708 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 717 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 719 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R6_1ScanPass 000002AA
+
+Symbol: R6_1ScanPass
+   Definitions
+      At line 721 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R6_1ScanPass unused
+R6_1ScanStart 00000294
+
+Symbol: R6_1ScanStart
+   Definitions
+      At line 704 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 712 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R6_1ScanStart used once
+R7_0ScanEnd 000002E4
+
+Symbol: R7_0ScanEnd
+   Definitions
+      At line 780 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 775 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R7_0ScanEnd used once
+R7_0ScanFail 000002E2
+
+Symbol: R7_0ScanFail
+   Definitions
+      At line 777 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 749 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 759 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 769 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 771 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R7_0ScanPass 000002DE
+
+Symbol: R7_0ScanPass
+   Definitions
+      At line 773 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R7_0ScanPass unused
+R7_0ScanStart 000002C6
+
+Symbol: R7_0ScanStart
+   Definitions
+      At line 755 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 16 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 763 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R7_0ScanStart used once
+R7_1ScanEnd 00000314
+
+Symbol: R7_1ScanEnd
+   Definitions
+      At line 828 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 823 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R7_1ScanEnd used once
+R7_1ScanFail 00000312
+
+Symbol: R7_1ScanFail
+   Definitions
+      At line 825 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 799 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 808 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 817 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 819 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R7_1ScanPass 0000030E
+
+Symbol: R7_1ScanPass
+   Definitions
+      At line 821 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R7_1ScanPass unused
+R7_1ScanStart 000002F8
+
+Symbol: R7_1ScanStart
+   Definitions
+      At line 804 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 812 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R7_1ScanStart used once
+R8_0ScanEnd 0000034C
+
+Symbol: R8_0ScanEnd
+   Definitions
+      At line 882 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 877 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R8_0ScanEnd used once
+R8_0ScanFail 0000034A
+
+Symbol: R8_0ScanFail
+   Definitions
+      At line 879 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 851 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 861 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 871 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 873 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R8_0ScanPass 00000346
+
+Symbol: R8_0ScanPass
+
+
+
+ARM Macro Assembler    Page 17 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 875 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R8_0ScanPass unused
+R8_0ScanStart 0000032E
+
+Symbol: R8_0ScanStart
+   Definitions
+      At line 857 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 865 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R8_0ScanStart used once
+R8_1ScanEnd 0000037C
+
+Symbol: R8_1ScanEnd
+   Definitions
+      At line 930 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 925 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R8_1ScanEnd used once
+R8_1ScanFail 0000037A
+
+Symbol: R8_1ScanFail
+   Definitions
+      At line 927 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 901 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 910 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 919 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 921 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R8_1ScanPass 00000376
+
+Symbol: R8_1ScanPass
+   Definitions
+      At line 923 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R8_1ScanPass unused
+R8_1ScanStart 00000360
+
+Symbol: R8_1ScanStart
+   Definitions
+      At line 906 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 914 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R8_1ScanStart used once
+R9_0ScanEnd 000003B4
+
+Symbol: R9_0ScanEnd
+   Definitions
+      At line 984 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 979 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R9_0ScanEnd used once
+R9_0ScanFail 000003B2
+
+Symbol: R9_0ScanFail
+
+
+
+ARM Macro Assembler    Page 18 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 981 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 953 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 963 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 973 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 975 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R9_0ScanPass 000003AE
+
+Symbol: R9_0ScanPass
+   Definitions
+      At line 977 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R9_0ScanPass unused
+R9_0ScanStart 00000396
+
+Symbol: R9_0ScanStart
+   Definitions
+      At line 959 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 967 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R9_0ScanStart used once
+R9_1ScanEnd 000003E4
+
+Symbol: R9_1ScanEnd
+   Definitions
+      At line 1032 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1027 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R9_1ScanEnd used once
+R9_1ScanFail 000003E2
+
+Symbol: R9_1ScanFail
+   Definitions
+      At line 1029 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1003 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1012 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1021 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+      At line 1023 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+
+R9_1ScanPass 000003DE
+
+Symbol: R9_1ScanPass
+   Definitions
+      At line 1025 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      None
+Comment: R9_1ScanPass unused
+R9_1ScanStart 000003C8
+
+Symbol: R9_1ScanStart
+   Definitions
+      At line 1008 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1016 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: R9_1ScanStart used once
+
+
+
+ARM Macro Assembler    Page 19 Alphabetic symbol ordering
+Relocatable symbols
+
+r0_0scan 00000000
+
+Symbol: r0_0scan
+   Definitions
+      At line 15 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 16 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r0_0scan used once
+r0_1scan 0000002E
+
+Symbol: r0_1scan
+   Definitions
+      At line 76 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 77 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r0_1scan used once
+r10_0scan 000003E6
+
+Symbol: r10_0scan
+   Definitions
+      At line 1043 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1044 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r10_0scan used once
+r10_1scan 0000041E
+
+Symbol: r10_1scan
+   Definitions
+      At line 1095 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1096 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r10_1scan used once
+r11_0scan 0000044E
+
+Symbol: r11_0scan
+   Definitions
+      At line 1145 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1146 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r11_0scan used once
+r11_1scan 00000486
+
+Symbol: r11_1scan
+   Definitions
+      At line 1197 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1198 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r11_1scan used once
+r12_0scan 000004B6
+
+Symbol: r12_0scan
+   Definitions
+      At line 1247 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1248 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r12_0scan used once
+r12_1scan 000004EE
+
+Symbol: r12_1scan
+
+
+
+ARM Macro Assembler    Page 20 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 1299 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1300 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r12_1scan used once
+r13_0scan 0000051E
+
+Symbol: r13_0scan
+   Definitions
+      At line 1353 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1354 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r13_0scan used once
+r13_1scan 00000560
+
+Symbol: r13_1scan
+   Definitions
+      At line 1414 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1415 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r13_1scan used once
+r14_0scan 00000596
+
+Symbol: r14_0scan
+   Definitions
+      At line 1468 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1469 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r14_0scan used once
+r14_1scan 000005C8
+
+Symbol: r14_1scan
+   Definitions
+      At line 1518 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 1519 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r14_1scan used once
+r1_0scan 00000058
+
+Symbol: r1_0scan
+   Definitions
+      At line 124 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 125 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r1_0scan used once
+r1_1scan 0000008C
+
+Symbol: r1_1scan
+   Definitions
+      At line 175 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 176 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r1_1scan used once
+r2_0scan 000000BC
+
+Symbol: r2_0scan
+   Definitions
+      At line 226 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 21 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 227 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r2_0scan used once
+r2_1scan 000000F0
+
+Symbol: r2_1scan
+   Definitions
+      At line 277 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 278 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r2_1scan used once
+r3_0scan 00000120
+
+Symbol: r3_0scan
+   Definitions
+      At line 328 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 329 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r3_0scan used once
+r3_1scan 00000154
+
+Symbol: r3_1scan
+   Definitions
+      At line 378 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 379 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r3_1scan used once
+r4_0scan 00000184
+
+Symbol: r4_0scan
+   Definitions
+      At line 429 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 430 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r4_0scan used once
+r4_1scan 000001B8
+
+Symbol: r4_1scan
+   Definitions
+      At line 480 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 481 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r4_1scan used once
+r5_0scan 000001E8
+
+Symbol: r5_0scan
+   Definitions
+      At line 533 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 534 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r5_0scan used once
+r5_1scan 0000021C
+
+Symbol: r5_1scan
+   Definitions
+      At line 583 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 584 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r5_1scan used once
+r6_0scan 0000024C
+
+
+
+ARM Macro Assembler    Page 22 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: r6_0scan
+   Definitions
+      At line 635 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 636 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r6_0scan used once
+r6_1scan 00000282
+
+Symbol: r6_1scan
+   Definitions
+      At line 689 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 690 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r6_1scan used once
+r7_0scan 000002B2
+
+Symbol: r7_0scan
+   Definitions
+      At line 739 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 740 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r7_0scan used once
+r7_1scan 000002E6
+
+Symbol: r7_1scan
+   Definitions
+      At line 789 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 790 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r7_1scan used once
+r8_0scan 00000316
+
+Symbol: r8_0scan
+   Definitions
+      At line 839 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 840 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r8_0scan used once
+r8_1scan 0000034E
+
+Symbol: r8_1scan
+   Definitions
+      At line 891 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 892 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r8_1scan used once
+r9_0scan 0000037E
+
+Symbol: r9_0scan
+   Definitions
+      At line 941 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 942 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r9_0scan used once
+r9_1scan 000003B6
+
+Symbol: r9_1scan
+   Definitions
+
+
+
+ARM Macro Assembler    Page 23 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 993 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+   Uses
+      At line 994 in file 2_HardwareDriverLayer\ClassB\Register_scan.s
+Comment: r9_1scan used once
+152 symbols
+485 symbols in table

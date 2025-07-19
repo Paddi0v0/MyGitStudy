@@ -1,0 +1,14 @@
+.\objects\pubdata_hd_md.o: 3_CommonServiceLayer\PubData_HD_MD.c
+.\objects\pubdata_hd_md.o: .\3_CommonServiceLayer\Header\PubData_HD_MD.h
+.\objects\pubdata_hd_md.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h
+.\objects\pubdata_hd_md.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\pubdata_hd_md.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\pubdata_hd_md.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\pubdata_hd_md.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pubdata_hd_md.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\pubdata_hd_md.o: .\3_CommonServiceLayer\Header\MC_type.h
+.\objects\pubdata_hd_md.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\pubdata_hd_md.o: .\Include\project_config.h
+.\objects\pubdata_hd_md.o: .\Include\MC_configure_FB_data.h
+.\objects\pubdata_hd_md.o: .\Include\MC_Parameter_M0.h
+.\objects\pubdata_hd_md.o: .\Include\MC_GlobalDef_M0.h

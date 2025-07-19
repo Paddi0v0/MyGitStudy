@@ -1,0 +1,1913 @@
+Dependencies for Project 'LKS03x_1Motor', Target 'Linko_03x_Project': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_adc.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_adc.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_cmp.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_cmp.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_dac.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_dac.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_DMA.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_dma.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_DMA.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_dsp.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_dsp.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32MC03x_Flash.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_flash.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_gpio.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_gpio.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_hall.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_hall.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_I2C.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_i2c.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_IWDG.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_iwdg.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_MCPWM.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_mcpwm.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_nvr.lib)(0x67317A3E)()
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_opa.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_opa.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_spi.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_spi.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_sys.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_sys.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_timer.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_timer.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_tmp.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_tmp.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\lks32mc03x_uart.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/lks32mc03x_uart.o -MD)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+F (.\1_LKS_FwLib\lks32mc03x_periph_driver\Source\startup_lks32mc03x.s)(0x67317A3E)(--target=arm-arm-none-eabi -mcpu=cortex-m0 -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_lks32mc03x.o)
+F (.\2_HardwareDriverLayer\HardwareDriver\HAL_DEF.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/hal_def.o -MD)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (Include\hardware_config.h)(0x67317A3E)
+I (2_HardwareDriverLayer\Header\HALDrv.h)(0x67317A3E)
+F (.\2_HardwareDriverLayer\HardwareDriver\hardware_init.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/hardware_init.o -MD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (Include\hardware_config.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+F (.\2_HardwareDriverLayer\HardwareDriver\interrupt.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/interrupt.o -MD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\hardware_config.h)(0x67317A3E)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (2_HardwareDriverLayer\Header\hardware_init.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\mc_declaration.h)(0x67AD8C94)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (RTT\segger_rtt.h)(0x67317A3E)
+I (RTT\SEGGER_RTT_Conf.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x603507D4)
+F (.\2_HardwareDriverLayer\HardwareDriver\main.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/main.o -MD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\hardware_config.h)(0x67317A3E)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+F (.\2_HardwareDriverLayer\HardwareDriver\System_Init.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/system_init.o -MD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (Include\project_mcu.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\hardware_config.h)(0x67317A3E)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (2_HardwareDriverLayer\Header\hardware_init.h)(0x67317A3E)
+I (RTT\segger_rtt.h)(0x67317A3E)
+I (RTT\SEGGER_RTT_Conf.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x603507D4)
+F (.\3_CommonServiceLayer\ComFuncs.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/comfuncs.o -MD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+F (.\3_CommonServiceLayer\MC_math.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/mc_math.o -MD)
+I (3_CommonServiceLayer\Header\mc_math.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+F (.\3_CommonServiceLayer\PubData_DriverInstance.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/pubdata_driverinstance.o -MD)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+F (.\3_CommonServiceLayer\PubData_HD_MD.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/pubdata_hd_md.o -MD)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+F (.\3_CommonServiceLayer\PubData_MA_UA.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/pubdata_ma_ua.o -MD)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+F (.\3_CommonServiceLayer\PubData_MD_MA.c)(0x67AD8C8B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/pubdata_md_ma.o -MD)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+F (.\4_MotorDriveLayer\FOC_Drive.c)(0x67516EC1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/foc_drive.o -MD)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (Include\hardware_config.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\mc_math.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\mc_declaration.h)(0x67AD8C94)
+I (2_HardwareDriverLayer\Header\HALDrv.h)(0x67317A3E)
+F (.\4_MotorDriveLayer\FocDef.c)(0x67516EC7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/focdef.o -MD)
+I (4_MotorDriveLayer\Header\mc_declaration.h)(0x67AD8C94)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MathLIB_Inlines.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MathLIB_Defines.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MathLIB_Typedefs.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (Include\hardware_config.h)(0x67317A3E)
+F (.\4_MotorDriveLayer\PID_regulators.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/pid_regulators.o -MD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+F (.\4_MotorDriveLayer\Lib\lks03x_Lib_R_V02_1_0a0Opt_AC6.lib)(0x678F45BE)()
+F (.\5_MotorAppLayer\MA_interface.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/ma_interface.o -MD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+F (.\5_MotorAppLayer\MA_Static_Variable.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/ma_static_variable.o -MD)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\time_process.h)(0x67317A3E)
+F (.\5_MotorAppLayer\Main_Drive.c)(0x673FECA0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/main_drive.o -MD)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+F (.\5_MotorAppLayer\PowerCalculation.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/powercalculation.o -MD)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\mc_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+F (.\5_MotorAppLayer\Process_Control.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/process_control.o -MD)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+F (.\5_MotorAppLayer\state_machine.c)(0x67516ECF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/state_machine.o -MD)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\mc_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+F (.\5_MotorAppLayer\usr\fault_detection.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/fault_detection.o -MD)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\mc_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+F (.\5_MotorAppLayer\usr\Task_Scheduler.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/task_scheduler.o -MD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+F (.\6_UserAppLayer\UA_interface.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/ua_interface.o -MD)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (6_UserAppLayer\Header\UA_Data.h)(0x67317A3E)
+F (.\6_UserAppLayer\UA_stateMachine.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/ua_statemachine.o -MD)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (6_UserAppLayer\Header\UA_Data.h)(0x67317A3E)
+F (.\6_UserAppLayer\UA_usrApp.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/ua_usrapp.o -MD)
+I (3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h)(0x63934A72)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (3_CommonServiceLayer\Header\MC_Math.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x67317A3E)
+I (3_CommonServiceLayer\Header\MC_type.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x67317A3E)
+I (Include\project_config.h)(0x67AD8CAD)
+I (Include\project_mcu.h)(0x67317A3E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\lks32mc03x.h)(0x63934A72)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_MCPWM.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_lib.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x603507C4)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dac.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dma.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_dsp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32MC03x_flash.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_i2c.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_iwdg.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_mcpwm.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_nvr.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_opa.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_spi.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h\)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_tmp.h  \)(0x00000000)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_sys.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_adc.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_flash.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_gpio.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_cmp.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_uart.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_hall.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_timer.h)(0x67317A3E)
+I (1_LKS_FwLib\lks32mc03x_periph_driver\Include\lks32mc03x_NVR.h)(0x67317A3E)
+I (Include\MC_configure_FB_data.h)(0x67AD8CA1)
+I (Include\MC_Parameter_M0.h)(0x67516EDF)
+I (Include\MC_GlobalDef_M0.h)(0x67AD8CA7)
+I (3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\Time_Process.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\MA_Static_Variable.h)(0x67317A3E)
+I (5_MotorAppLayer\usr\Header\fault_detection.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\state_machine.h)(0x67317A3E)
+I (5_MotorAppLayer\Header\PowerCalculation.h)(0x67317A3E)
+I (4_MotorDriveLayer\Header\PID_regulators.h)(0x67317A3E)
+I (6_UserAppLayer\Header\UA_Data.h)(0x67317A3E)
+F (.\Include\hardware_config.h)(0x67317A3E)()
+F (.\Include\MC_configure_FB_data.h)(0x67AD8CA1)()
+F (.\Include\MC_GlobalDef_M0.h)(0x67AD8CA7)()
+F (.\Include\MC_Parameter_M0.h)(0x67516EDF)()
+F (.\Include\project_config.h)(0x67AD8CAD)()
+F (.\RTT\SEGGER_RTT.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/segger_rtt.o -MD)
+I (RTT\SEGGER_RTT.h)(0x67317A3E)
+I (RTT\SEGGER_RTT_Conf.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\RTT\SEGGER_RTT_printf.c)(0x67317A3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./1_LKS_FwLib/lks32mc03x_periph_driver/Include -I ./2_HardwareDriverLayer/Header -I ./3_CommonServiceLayer/Header -I ./5_MotorAppLayer/Header -I ./4_MotorDriveLayer/Header -I ./6_UserAppLayer/Header -I ./Include -I ./RTT -I ./5_MotorAppLayer/usr/Header-I./RTE/_Linko_03x_Project-IC:/Users/bpsemi/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/bpsemi/AppData/Local/Arm/Packs/Linko/LKS03x/1.0.7/Device/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_-o ./objects/segger_rtt_printf.o -MD)
+I (RTT\SEGGER_RTT.h)(0x67317A3E)
+I (RTT\SEGGER_RTT_Conf.h)(0x67317A3E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x603507D4)

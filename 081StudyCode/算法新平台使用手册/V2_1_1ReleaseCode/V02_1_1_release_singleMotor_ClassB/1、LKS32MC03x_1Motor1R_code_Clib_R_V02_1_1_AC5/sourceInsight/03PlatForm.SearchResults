@@ -1,0 +1,5 @@
+---- bRttBuf Matches (4 in 3 files) ----
+SEGGER_RTT.c (d:\lith\program\07_plantform\git version\version\v02_1_1_prepupdate\v02_1_0a_release_singlemotor+classb_0213\1、lks32mc03x_1motor1r_code+clib_r_v02_1_0a_ac5\rtt):unsigned char bRttBuf[512];
+SEGGER_RTT.h (d:\lith\program\07_plantform\git version\version\v02_1_1_prepupdate\v02_1_0a_release_singlemotor+classb_0213\1、lks32mc03x_1motor1r_code+clib_r_v02_1_0a_ac5\rtt):extern unsigned char bRttBuf[512];
+System_Init.c (d:\lith\program\07_plantform\git version\version\v02_1_1_prepupdate\v02_1_0a_release_singlemotor+classb_0213\1、lks32mc03x_1motor1r_code+clib_r_v02_1_0a_ac5\2_hardwaredriverlayer\hardwaredriver):    //SEGGER_RTT_ConfigUpBuffer(1, "JScope_i2i2i2i2", bRttBuf, 512, SEGGER_RTT_MODE_NO_BLOCK_SKIP);
+System_Init.c (d:\lith\program\07_plantform\git version\version\v02_1_1_prepupdate\v02_1_0a_release_singlemotor+classb_0213\1、lks32mc03x_1motor1r_code+clib_r_v02_1_0a_ac5\2_hardwaredriverlayer\hardwaredriver):    SEGGER_RTT_ConfigUpBuffer(1, "JScope_i2i2", bRttBuf, 256, SEGGER_RTT_MODE_NO_BLOCK_SKIP);

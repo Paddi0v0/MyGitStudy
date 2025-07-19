@@ -1,0 +1,6 @@
+---- goldenCRC_flash Matches (5 in 2 files) ----
+Software_safe.c (d:\lith\program\07_plantform\git version\singlemotor\1、lks32mc03x_1motor1r_code+clib_r_v02_0_9a_ac5_classb\2_hardwaredriverlayer\classb):			microCheck.goldenCRC_flash = crc_flash_block(0x00000000, FLASH_SIZE, CRC_RESULT_BUFFER);
+Software_safe.c (d:\lith\program\07_plantform\git version\singlemotor\1、lks32mc03x_1motor1r_code+clib_r_v02_0_9a_ac5_classb\2_hardwaredriverlayer\classb):			Code_Selftest_Buf[0] = microCheck.goldenCRC_flash;
+Software_safe.c (d:\lith\program\07_plantform\git version\singlemotor\1、lks32mc03x_1motor1r_code+clib_r_v02_0_9a_ac5_classb\2_hardwaredriverlayer\classb):			microCheck.goldenCRC_flash = struSaftey.crc_golden;
+Software_safe.c (d:\lith\program\07_plantform\git version\singlemotor\1、lks32mc03x_1motor1r_code+clib_r_v02_0_9a_ac5_classb\2_hardwaredriverlayer\classb):			 if(microCheck.crc_check  != microCheck.goldenCRC_flash)  //周期自检结果与整体自检结果若不一致，flash被篡改，测试fail
+Software_safe.h (d:\lith\program\07_plantform\git version\singlemotor\1、lks32mc03x_1motor1r_code+clib_r_v02_0_9a_ac5_classb\2_hardwaredriverlayer\classb):	 volatile u32 goldenCRC_flash;        /* 第一次flash校验的结果 */

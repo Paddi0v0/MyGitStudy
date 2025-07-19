@@ -1,0 +1,14 @@
+.\obj\test_spi.o: Source\test_spi.c
+.\obj\test_spi.o: Source\test_spi.h
+.\obj\test_spi.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x.h
+.\obj\test_spi.o: C:\Keil_v5\ARM\INC\Linko\lks32mc081\basic.h
+.\obj\test_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\test_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\obj\test_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\test_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\test_spi.o: C:\Keil_v5\ARM\INC\Linko\lks32mc081\core_cm0.c
+.\obj\test_spi.o: C:\Keil_v5\ARM\INC\Linko\lks32mc081\core_cm0.h
+.\obj\test_spi.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h
+.\obj\test_spi.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_spi.h
+.\obj\test_spi.o: .\LKS32MC08x_Periph_Driver\Include\lks32mc08x_sys.h
+.\obj\test_spi.o: .\Include\hardware_config.h

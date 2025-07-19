@@ -1,0 +1,1688 @@
+Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+
+==============================================================================
+
+Section Cross References
+
+    startup_lks32mc03x.o(RESET) refers to startup_lks32mc03x.o(STACK) for __initial_sp
+    startup_lks32mc03x.o(RESET) refers to startup_lks32mc03x.o(.text) for Reset_Handler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.HardFault_Handler) for HardFault_Handler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.TIMER0_IRQHandler) for TIMER0_IRQHandler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.TIMER1_IRQHandler) for TIMER1_IRQHandler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.HALL_IRQHandler) for HALL_IRQHandler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.CMP_IRQHandler) for CMP_IRQHandler
+    startup_lks32mc03x.o(RESET) refers to lto-llvm-caad6e.o(.text.ADC_IRQHandler) for ADC_IRQHandler
+    startup_lks32mc03x.o(.text) refers to startup_lks32mc03x.o(STACK) for __initial_sp
+    startup_lks32mc03x.o(.text) refers to lto-llvm-caad6e.o(.text.SystemInit) for SystemInit
+    startup_lks32mc03x.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    fluxobserve.o(.text.setLibWorkMode) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setLibWorkMode) refers to fluxobserve.o(.text.setLibWorkMode) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObjPar) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObjPar) refers to fluxobserve.o(.text.RegisterObjPar) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsPar) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsPar) refers to fluxobserve.o(.text.RegisterObsPar) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterSvpwmParObj) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.RegisterSvpwmParObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterSvpwmParObj) refers to fluxobserve.o(.text.RegisterSvpwmParObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsAngleObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsAngleObj) refers to fluxobserve.o(.text.RegisterObsAngleObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsSpeedObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsSpeedObj) refers to fluxobserve.o(.text.RegisterObsSpeedObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsCurObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsCurObj) refers to fluxobserve.o(.text.RegisterObsCurObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsVolObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsVolObj) refers to fluxobserve.o(.text.RegisterObsVolObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsAcrObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsAcrObj) refers to fluxobserve.o(.text.RegisterObsAcrObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsTcObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsTcObj) refers to fluxobserve.o(.text.RegisterObsTcObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsGainObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsGainObj) refers to fluxobserve.o(.text.RegisterObsGainObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterSamplingStru) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterSamplingStru) refers to fluxobserve.o(.text.RegisterSamplingStru) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterSamplingEv) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.RegisterSamplingEv) refers to fluxobserve.o(.text.RegisterSamplingEv) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterSvpwmPar) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.RegisterSvpwmPar) refers to fluxobserve.o(.text.RegisterSvpwmPar) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterSvpwmCmprTmr) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.RegisterSvpwmCmprTmr) refers to fluxobserve.o(.text.RegisterSvpwmCmprTmr) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsStatorCurObj) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsStatorCurObj) refers to fluxobserve.o(.text.RegisterObsStatorCurObj) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsHalDrvHandle) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsHalDrvHandle) refers to fluxobserve.o(.text.RegisterObsHalDrvHandle) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsHDMDInfor) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsHDMDInfor) refers to fluxobserve.o(.text.RegisterObsHDMDInfor) for [Anonymous Symbol]
+    fluxobserve.o(.text.RegisterObsMAMDInfor) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.RegisterObsMAMDInfor) refers to fluxobserve.o(.text.RegisterObsMAMDInfor) for [Anonymous Symbol]
+    fluxobserve.o(.text.InitPmFluxOB) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.InitPmFluxOB) refers to fluxobservercfg.o(.bss.gS_DcBusVolM) for gS_DcBusVolM
+    fluxobserve.o(.text.InitPmFluxOB) refers to fluxobservercfg.o(.bss.gS_AEMFRT_M) for gS_AEMFRT_M
+    fluxobserve.o(.text.InitPmFluxOB) refers to fluxobservercfg.o(.bss.gS_AEMFRM_M) for gS_AEMFRM_M
+    fluxobserve.o(.ARM.exidx.text.InitPmFluxOB) refers to fluxobserve.o(.text.InitPmFluxOB) for [Anonymous Symbol]
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to llmul.o(.text) for __aeabi_lmul
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to ldiv.o(.text) for __aeabi_ldivmod
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to idiv_div0.o(.text) for __aeabi_idiv
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to lto-llvm-caad6e.o(.text.CountLeadZero) for CountLeadZero
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to uldiv.o(.text) for __aeabi_uldivmod
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to memseta.o(.text) for __aeabi_memclr4
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.FluxObserveParaCalc) refers to lto-llvm-caad6e.o(.text.App2CoreFreqTrans) for App2CoreFreqTrans
+    fluxobserve.o(.ARM.exidx.text.FluxObserveParaCalc) refers to fluxobserve.o(.text.FluxObserveParaCalc) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserveIDSimply) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserveIDSimply) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveIDSimply) refers to fluxobserve.o(.text.PmsmFluxObserveIDSimply) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserveSimply_Full) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserveSimply_Full) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveSimply_Full) refers to fluxobserve.o(.text.PmsmFluxObserveSimply_Full) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserveSimplyWeaken) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserveSimplyWeaken) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveSimplyWeaken) refers to fluxobserve.o(.text.PmsmFluxObserveSimplyWeaken) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserveWeaken) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserveWeaken) refers to fluxobserve.o(.text.Calc_Atan) for Calc_Atan
+    fluxobserve.o(.text.PmsmFluxObserveWeaken) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveWeaken) refers to fluxobserve.o(.text.PmsmFluxObserveWeaken) for [Anonymous Symbol]
+    fluxobserve.o(.text.Calc_Atan) refers to fluxobserve.o(.rodata.atantab1) for atantab1
+    fluxobserve.o(.ARM.exidx.text.Calc_Atan) refers to fluxobserve.o(.text.Calc_Atan) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserve) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserve) refers to fluxobserve.o(.text.Calc_Atan) for Calc_Atan
+    fluxobserve.o(.text.PmsmFluxObserve) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve) refers to fluxobserve.o(.text.PmsmFluxObserve) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserve_Full) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserve_Full) refers to fluxobserve.o(.text.Calc_Atan) for Calc_Atan
+    fluxobserve.o(.text.PmsmFluxObserve_Full) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve_Full) refers to fluxobserve.o(.text.PmsmFluxObserve_Full) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserve_Full_En) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for CurrentPIRegulator
+    fluxobserve.o(.text.PmsmFluxObserve_Full_En) refers to fluxobserve.o(.text.Calc_Atan) for Calc_Atan
+    fluxobserve.o(.text.PmsmFluxObserve_Full_En) refers to lto-llvm-caad6e.o(.text.getMinQVoltSetting) for getMinQVoltSetting
+    fluxobserve.o(.text.PmsmFluxObserve_Full_En) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.PmsmFluxObserve_Full_En) refers to fluxobserve.o(.bss..L_MergedGlobals.1) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserve_Full_En) refers to fluxobserve.o(.data.MinQSpdFilPeriod) for MinQSpdFilPeriod
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve_Full_En) refers to fluxobserve.o(.text.PmsmFluxObserve_Full_En) for [Anonymous Symbol]
+    fluxobserve.o(.text.CalcDcVoltPerUnit) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.CalcDcVoltPerUnit) refers to fluxobserve.o(.text.CalcDcVoltPerUnit) for [Anonymous Symbol]
+    fluxobserve.o(.text.CalcVolCircle) refers to lto-llvm-caad6e.o(.text.Trig_Functions) for Trig_Functions
+    fluxobserve.o(.text.CalcVolCircle) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.CalcVolCircle) refers to fluxobservercfg.o(.data.gS_OVER_MODU_FAC) for gS_OVER_MODU_FAC
+    fluxobserve.o(.ARM.exidx.text.CalcVolCircle) refers to fluxobserve.o(.text.CalcVolCircle) for [Anonymous Symbol]
+    fluxobserve.o(.text.CalcVolCircleComp) refers to lto-llvm-caad6e.o(.text.Trig_Functions) for Trig_Functions
+    fluxobserve.o(.text.CalcVolCircleComp) refers to fluxobservercfg.o(.bss.gS_VectorVF) for gS_VectorVF
+    fluxobserve.o(.text.CalcVolCircleComp) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.CalcVolCircleComp) refers to fluxobserve.o(.bss.UdeadMaxComp) for UdeadMaxComp
+    fluxobserve.o(.text.CalcVolCircleComp) refers to fluxobservercfg.o(.data.gS_OVER_MODU_FAC) for gS_OVER_MODU_FAC
+    fluxobserve.o(.ARM.exidx.text.CalcVolCircleComp) refers to fluxobserve.o(.text.CalcVolCircleComp) for [Anonymous Symbol]
+    fluxobserve.o(.text.getMotorVoltFromObjId) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getMotorVoltFromObjId) refers to fluxobserve.o(.text.getMotorVoltFromObjId) for [Anonymous Symbol]
+    fluxobserve.o(.text.getMotorActVoltFromObjId) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getMotorActVoltFromObjId) refers to fluxobserve.o(.text.getMotorActVoltFromObjId) for [Anonymous Symbol]
+    fluxobserve.o(.text.getMotorDaxisVoltFormObjId) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getMotorDaxisVoltFormObjId) refers to fluxobserve.o(.text.getMotorDaxisVoltFormObjId) for [Anonymous Symbol]
+    fluxobserve.o(.text.getMotorQaxisVoltFormObjId) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getMotorQaxisVoltFormObjId) refers to fluxobserve.o(.text.getMotorQaxisVoltFormObjId) for [Anonymous Symbol]
+    fluxobserve.o(.text.getMotorPowerFromObjId) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getMotorPowerFromObjId) refers to fluxobserve.o(.text.getMotorPowerFromObjId) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.IQ15SqrtIQ31) refers to fluxobserve.o(.text.IQ15SqrtIQ31) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.Calc_Atan_simple) refers to fluxobserve.o(.text.Calc_Atan_simple) for [Anonymous Symbol]
+    fluxobserve.o(.text.getElectAngle) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getElectAngle) refers to fluxobserve.o(.text.getElectAngle) for [Anonymous Symbol]
+    fluxobserve.o(.text.getElectAngleEst) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getElectAngleEst) refers to fluxobserve.o(.text.getElectAngleEst) for [Anonymous Symbol]
+    fluxobserve.o(.text.getElectSpdEst) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getElectSpdEst) refers to fluxobserve.o(.text.getElectSpdEst) for [Anonymous Symbol]
+    fluxobserve.o(.text.getElectBmefD) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getElectBmefD) refers to fluxobserve.o(.text.getElectBmefD) for [Anonymous Symbol]
+    fluxobserve.o(.text.getElectBmefQ) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getElectBmefQ) refers to fluxobserve.o(.text.getElectBmefQ) for [Anonymous Symbol]
+    fluxobserve.o(.text.setOBElectAngleEst) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setOBElectAngleEst) refers to fluxobserve.o(.text.setOBElectAngleEst) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_1Shunt) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_1Shunt) refers to fluxobserve.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt) refers to fluxobserve.o(.text.SVPWM_1Shunt) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_1Shunt_En) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_1Shunt_En) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.SVPWM_1Shunt_En) refers to fluxobserve.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_En) refers to fluxobserve.o(.text.SVPWM_1Shunt_En) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_1Shunt_Mode0) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_1Shunt_Mode0) refers to fluxobserve.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_Mode0) refers to fluxobserve.o(.text.SVPWM_1Shunt_Mode0) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_1Shunt_Mode1) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_1Shunt_Mode1) refers to fluxobserve.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_1Shunt_Mode1) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_Mode1) refers to fluxobserve.o(.text.SVPWM_1Shunt_Mode1) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_1Shunt_5_7Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_1Shunt_5_7Seg) refers to fluxobserve.o(.data..L_MergedGlobals) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_5_7Seg) refers to fluxobserve.o(.text.SVPWM_1Shunt_5_7Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_En) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En) refers to fluxobserve.o(.text.SVPWM_2Shunt_En) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_En_5Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En_5Seg) refers to fluxobserve.o(.text.SVPWM_2Shunt_En_5Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt) refers to fluxobserve.o(.text.SVPWM_2Shunt) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_5Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_5Seg) refers to fluxobserve.o(.text.SVPWM_2Shunt_5Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_En1) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_2Shunt_En1) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En1) refers to fluxobserve.o(.text.SVPWM_2Shunt_En1) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_En1_5Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_2Shunt_En1_5Seg) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En1_5Seg) refers to fluxobserve.o(.text.SVPWM_2Shunt_En1_5Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_En2) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_2Shunt_En2) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En2) refers to fluxobserve.o(.text.SVPWM_2Shunt_En2) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_2Shunt_En2_5Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_2Shunt_En2_5Seg) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En2_5Seg) refers to fluxobserve.o(.text.SVPWM_2Shunt_En2_5Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIbIc) for SVPWM_3ShuntGetPhaseIbIc
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIbOldIc) for SVPWM_3ShuntGetPhaseOldIbOldIc
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIb) for SVPWM_3ShuntGetPhaseIaIb
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIb) for SVPWM_3ShuntGetPhaseOldIaOldIb
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIc) for SVPWM_3ShuntGetPhaseIaIc
+    fluxobserve.o(.text.SVPWM_3Shunt) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIc) for SVPWM_3ShuntGetPhaseOldIaOldIc
+    fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt) refers to fluxobserve.o(.text.SVPWM_3Shunt) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_3Shunt_En) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_3Shunt_En) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIbIc) for SVPWM_3ShuntGetPhaseIbIc
+    fluxobserve.o(.text.SVPWM_3Shunt_En) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.SVPWM_3Shunt_En) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIb) for SVPWM_3ShuntGetPhaseIaIb
+    fluxobserve.o(.text.SVPWM_3Shunt_En) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIc) for SVPWM_3ShuntGetPhaseIaIc
+    fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt_En) refers to fluxobserve.o(.text.SVPWM_3Shunt_En) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIbIc) for SVPWM_3ShuntGetPhaseIbIc
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIbOldIc) for SVPWM_3ShuntGetPhaseOldIbOldIc
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIb) for SVPWM_3ShuntGetPhaseIaIb
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIb) for SVPWM_3ShuntGetPhaseOldIaOldIb
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIc) for SVPWM_3ShuntGetPhaseIaIc
+    fluxobserve.o(.text.SVPWM_3Shunt_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIc) for SVPWM_3ShuntGetPhaseOldIaOldIc
+    fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt_5Seg) refers to fluxobserve.o(.text.SVPWM_3Shunt_5Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIbIc) for SVPWM_3ShuntGetPhaseIbIc
+    fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIb) for SVPWM_3ShuntGetPhaseIaIb
+    fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIc) for SVPWM_3ShuntGetPhaseIaIc
+    fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt_En_5Seg) refers to fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg) for [Anonymous Symbol]
+    fluxobserve.o(.text.checkNomData) refers to lto-llvm-caad6e.o(.text.CountLeadZero) for CountLeadZero
+    fluxobserve.o(.ARM.exidx.text.checkNomData) refers to fluxobserve.o(.text.checkNomData) for [Anonymous Symbol]
+    fluxobserve.o(.text.PmsmFluxObserve1ms) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve1ms) refers to fluxobserve.o(.text.PmsmFluxObserve1ms) for [Anonymous Symbol]
+    fluxobserve.o(.text.CalcDcVoltPerUnitSimply) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.CalcDcVoltPerUnitSimply) refers to fluxobserve.o(.text.CalcDcVoltPerUnitSimply) for [Anonymous Symbol]
+    fluxobserve.o(.text.CalcDcVoltPerUnitSlowTask) refers to idiv_div0.o(.text) for __aeabi_idiv
+    fluxobserve.o(.text.CalcDcVoltPerUnitSlowTask) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.CalcDcVoltPerUnitSlowTask) refers to fluxobserve.o(.text.CalcDcVoltPerUnitSlowTask) for [Anonymous Symbol]
+    fluxobserve.o(.text.getVdcCirCleLim) refers to fluxobservercfg.o(.bss.gS_DcBusVolM) for gS_DcBusVolM
+    fluxobserve.o(.ARM.exidx.text.getVdcCirCleLim) refers to fluxobserve.o(.text.getVdcCirCleLim) for [Anonymous Symbol]
+    fluxobserve.o(.text.getRunStatus) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getRunStatus) refers to fluxobserve.o(.text.getRunStatus) for [Anonymous Symbol]
+    fluxobserve.o(.text.getCurLoopCloseStatusFromOB) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getCurLoopCloseStatusFromOB) refers to fluxobserve.o(.text.getCurLoopCloseStatusFromOB) for [Anonymous Symbol]
+    fluxobserve.o(.text.setTrakingModeEnable) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setTrakingModeEnable) refers to fluxobserve.o(.text.setTrakingModeEnable) for [Anonymous Symbol]
+    fluxobserve.o(.text.setTrakingModeDisable) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setTrakingModeDisable) refers to fluxobserve.o(.text.setTrakingModeDisable) for [Anonymous Symbol]
+    fluxobserve.o(.text.setObserPLLKpKi) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setObserPLLKpKi) refers to fluxobserve.o(.text.setObserPLLKpKi) for [Anonymous Symbol]
+    fluxobserve.o(.text.setFieldWeakenPara) refers to fluxobservercfg.o(.data.gS_AFWR_KI) for gS_AFWR_KI
+    fluxobserve.o(.text.setFieldWeakenPara) refers to fluxobservercfg.o(.bss.gS_AFWR_KP) for gS_AFWR_KP
+    fluxobserve.o(.text.setFieldWeakenPara) refers to fluxobservercfg.o(.bss.gS_FieldW) for gS_FieldW
+    fluxobserve.o(.ARM.exidx.text.setFieldWeakenPara) refers to fluxobserve.o(.text.setFieldWeakenPara) for [Anonymous Symbol]
+    fluxobserve.o(.text.setFieldWeakenVoltFac) refers to fluxobservercfg.o(.data.gS_AFWR_RSV_FAC) for gS_AFWR_RSV_FAC
+    fluxobserve.o(.ARM.exidx.text.setFieldWeakenVoltFac) refers to fluxobserve.o(.text.setFieldWeakenVoltFac) for [Anonymous Symbol]
+    fluxobserve.o(.text.setOverModuFac) refers to fluxobservercfg.o(.data.gS_OVER_MODU_FAC) for gS_OVER_MODU_FAC
+    fluxobserve.o(.ARM.exidx.text.setOverModuFac) refers to fluxobserve.o(.text.setOverModuFac) for [Anonymous Symbol]
+    fluxobserve.o(.text.AutoFieldWeakRegUpdate) refers to fluxobservercfg.o(.data.gS_OVER_MODU_FAC) for gS_OVER_MODU_FAC
+    fluxobserve.o(.text.AutoFieldWeakRegUpdate) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.AutoFieldWeakRegUpdate) refers to fluxobservercfg.o(.data.gS_AFWR_RSV_FAC) for gS_AFWR_RSV_FAC
+    fluxobserve.o(.text.AutoFieldWeakRegUpdate) refers to fluxobservercfg.o(.bss.gS_FieldW) for gS_FieldW
+    fluxobserve.o(.ARM.exidx.text.AutoFieldWeakRegUpdate) refers to fluxobserve.o(.text.AutoFieldWeakRegUpdate) for [Anonymous Symbol]
+    fluxobserve.o(.text.CalcVectorVFPara) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    fluxobserve.o(.text.CalcVectorVFPara) refers to llmul.o(.text) for __aeabi_lmul
+    fluxobserve.o(.text.CalcVectorVFPara) refers to ldiv.o(.text) for __aeabi_ldivmod
+    fluxobserve.o(.text.CalcVectorVFPara) refers to lto-llvm-caad6e.o(.text.CountLeadZero) for CountLeadZero
+    fluxobserve.o(.text.CalcVectorVFPara) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    fluxobserve.o(.text.CalcVectorVFPara) refers to fluxobservercfg.o(.bss.gS_VectorVF) for gS_VectorVF
+    fluxobserve.o(.text.CalcVectorVFPara) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.CalcVectorVFPara) refers to fluxobserve.o(.text.CalcVectorVFPara) for [Anonymous Symbol]
+    fluxobserve.o(.text.vectorVFcontrol) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.vectorVFcontrol) refers to fluxobservercfg.o(.bss.gS_VectorVF) for gS_VectorVF
+    fluxobserve.o(.ARM.exidx.text.vectorVFcontrol) refers to fluxobserve.o(.text.vectorVFcontrol) for [Anonymous Symbol]
+    fluxobserve.o(.text.setDeadCompFactor) refers to fluxobservercfg.o(.bss.gS_VectorVF) for gS_VectorVF
+    fluxobserve.o(.ARM.exidx.text.setDeadCompFactor) refers to fluxobserve.o(.text.setDeadCompFactor) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.motorStopOrExceptionHandle) refers to fluxobserve.o(.text.motorStopOrExceptionHandle) for [Anonymous Symbol]
+    fluxobserve.o(.text.getDCurRefGen) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.getDCurRefGen) refers to fluxobservercfg.o(.bss.gS_DQCurRef) for gS_DQCurRef
+    fluxobserve.o(.ARM.exidx.text.getDCurRefGen) refers to fluxobserve.o(.text.getDCurRefGen) for [Anonymous Symbol]
+    fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) refers to fluxobservercfg.o(.data.gS_OVER_MODU_FAC) for gS_OVER_MODU_FAC
+    fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) refers to fluxobservercfg.o(.data.gS_AFWR_RSV_FAC) for gS_AFWR_RSV_FAC
+    fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) refers to fluxobservercfg.o(.bss.gS_FieldW) for gS_FieldW
+    fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) refers to fluxobservercfg.o(.bss.gS_DQCurRef) for gS_DQCurRef
+    fluxobserve.o(.ARM.exidx.text.getDCurRefGenWithEnWeakenFlux) refers to fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) for [Anonymous Symbol]
+    fluxobserve.o(.text.InitDQCurRefGen) refers to idiv_div0.o(.text) for __aeabi_idiv
+    fluxobserve.o(.text.InitDQCurRefGen) refers to fluxobservercfg.o(.bss.gS_DQCurRef) for gS_DQCurRef
+    fluxobserve.o(.ARM.exidx.text.InitDQCurRefGen) refers to fluxobserve.o(.text.InitDQCurRefGen) for [Anonymous Symbol]
+    fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) refers to idiv_div0.o(.text) for __aeabi_idiv
+    fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) refers to fluxobservercfg.o(.bss.gS_DQCurRef) for gS_DQCurRef
+    fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) refers to fluxobservercfg.o(.bss.gS_FieldW) for gS_FieldW
+    fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) refers to fluxobservercfg.o(.bss.gS_AFWR_KP) for gS_AFWR_KP
+    fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) refers to fluxobservercfg.o(.data.gS_AFWR_KI) for gS_AFWR_KI
+    fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.InitDQCurRefGenWithWeakenFlux) refers to fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) for [Anonymous Symbol]
+    fluxobserve.o(.text.SetDCurRefInitValue) refers to fluxobservercfg.o(.bss.gS_DQCurRef) for gS_DQCurRef
+    fluxobserve.o(.ARM.exidx.text.SetDCurRefInitValue) refers to fluxobserve.o(.text.SetDCurRefInitValue) for [Anonymous Symbol]
+    fluxobserve.o(.text.QCurRefGenValue) refers to llshl.o(.text) for __aeabi_llsl
+    fluxobserve.o(.text.QCurRefGenValue) refers to fluxobservercfg.o(.bss.gS_DQCurRef) for gS_DQCurRef
+    fluxobserve.o(.ARM.exidx.text.QCurRefGenValue) refers to fluxobserve.o(.text.QCurRefGenValue) for [Anonymous Symbol]
+    fluxobserve.o(.text.speedPIParaCalc) refers to llmul.o(.text) for __aeabi_lmul
+    fluxobserve.o(.text.speedPIParaCalc) refers to ldiv.o(.text) for __aeabi_ldivmod
+    fluxobserve.o(.ARM.exidx.text.speedPIParaCalc) refers to fluxobserve.o(.text.speedPIParaCalc) for [Anonymous Symbol]
+    fluxobserve.o(.text.SpeedPIAutoTunning) refers to llmul.o(.text) for __aeabi_lmul
+    fluxobserve.o(.text.SpeedPIAutoTunning) refers to idiv_div0.o(.text) for __aeabi_idiv
+    fluxobserve.o(.text.SpeedPIAutoTunning) refers to ldiv.o(.text) for __aeabi_ldivmod
+    fluxobserve.o(.text.SpeedPIAutoTunning) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SpeedPIAutoTunning) refers to fluxobserve.o(.text.SpeedPIAutoTunning) for [Anonymous Symbol]
+    fluxobserve.o(.text.CurPIAutoTunning) refers to llmul.o(.text) for __aeabi_lmul
+    fluxobserve.o(.text.CurPIAutoTunning) refers to ldiv.o(.text) for __aeabi_ldivmod
+    fluxobserve.o(.text.CurPIAutoTunning) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.CurPIAutoTunning) refers to fluxobserve.o(.text.CurPIAutoTunning) for [Anonymous Symbol]
+    fluxobserve.o(.text.SetCurPIPara) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.SetCurPIPara) refers to fluxobserve.o(.text.SetCurPIPara) for [Anonymous Symbol]
+    fluxobserve.o(.text.setEstSpdFromExternalModule) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setEstSpdFromExternalModule) refers to fluxobserve.o(.text.setEstSpdFromExternalModule) for [Anonymous Symbol]
+    fluxobserve.o(.text.setVCState2RunStatus) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.setVCState2RunStatus) refers to fluxobserve.o(.text.setVCState2RunStatus) for [Anonymous Symbol]
+    fluxobserve.o(.ARM.exidx.text.getLibMaxObjNumber) refers to fluxobserve.o(.text.getLibMaxObjNumber) for [Anonymous Symbol]
+    fluxobserve.o(.text.getVolt2FreqCalcPara) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    fluxobserve.o(.ARM.exidx.text.getVolt2FreqCalcPara) refers to fluxobserve.o(.text.getVolt2FreqCalcPara) for [Anonymous Symbol]
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNIa) for SVPWM_1ShuntGetPhaseIcNIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNIa) for SVPWM_1ShuntGetPhaseOldIcNIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNOldIa) for SVPWM_1ShuntGetPhaseIcNOldIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNOldIa) for SVPWM_1ShuntGetPhaseOldIcNOldIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNIa) for SVPWM_1ShuntGetPhaseIbNIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNIa) for SVPWM_1ShuntGetPhaseOldIbNIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNOldIa) for SVPWM_1ShuntGetPhaseIbNOldIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNOldIa) for SVPWM_1ShuntGetPhaseOldIbNOldIa
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNIc) for SVPWM_1ShuntGetPhaseIbNIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNIc) for SVPWM_1ShuntGetPhaseOldIbNIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNOldIc) for SVPWM_1ShuntGetPhaseIbNOldIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNOldIc) for SVPWM_1ShuntGetPhaseOldIbNOldIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNIb) for SVPWM_1ShuntGetPhaseIcNIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNIb) for SVPWM_1ShuntGetPhaseOldIcNIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNOldIb) for SVPWM_1ShuntGetPhaseIcNOldIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNOldIb) for SVPWM_1ShuntGetPhaseOldIcNOldIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIb) for SVPWM_1ShuntGetPhaseIaNIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNIb) for SVPWM_1ShuntGetPhaseOldIaNIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNOldIb) for SVPWM_1ShuntGetPhaseIaNOldIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNOldIb) for SVPWM_1ShuntGetPhaseOldIaNOldIb
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIc) for SVPWM_1ShuntGetPhaseIaNIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNIc) for SVPWM_1ShuntGetPhaseOldIaNIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNOldIc) for SVPWM_1ShuntGetPhaseIaNOldIc
+    fluxobserve.o(.data..L_MergedGlobals) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNOldIc) for SVPWM_1ShuntGetPhaseOldIaNOldIc
+    lib_ipd.o(.text.IPDEst_DMotor) refers to lib_ipd.o(.text.IPD_AngleCalc) for IPD_AngleCalc
+    lib_ipd.o(.text.IPDEst_DMotor) refers to fluxobservercfg.o(.bss.gS_IPDM) for gS_IPDM
+    lib_ipd.o(.text.IPDEst_DMotor) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    lib_ipd.o(.text.IPDEst_DMotor) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    lib_ipd.o(.text.IPDEst_DMotor) refers to lto-llvm-caad6e.o(.text.SVPWM_2ShuntGetPhaseIaIb) for SVPWM_2ShuntGetPhaseIaIb
+    lib_ipd.o(.text.IPDEst_DMotor) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIb) for SVPWM_1ShuntGetPhaseIaNIb
+    lib_ipd.o(.ARM.exidx.text.IPDEst_DMotor) refers to lib_ipd.o(.text.IPDEst_DMotor) for [Anonymous Symbol]
+    lib_ipd.o(.text.InitIPD) refers to lto-llvm-caad6e.o(.text.Div_Functions) for Div_Functions
+    lib_ipd.o(.text.InitIPD) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    lib_ipd.o(.text.InitIPD) refers to fluxobservercfg.o(.bss.gS_IPDM) for gS_IPDM
+    lib_ipd.o(.text.InitIPD) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    lib_ipd.o(.ARM.exidx.text.InitIPD) refers to lib_ipd.o(.text.InitIPD) for [Anonymous Symbol]
+    lib_ipd.o(.ARM.exidx.text.soft_Trg_ADC) refers to lib_ipd.o(.text.soft_Trg_ADC) for [Anonymous Symbol]
+    lib_ipd.o(.ARM.exidx.text.FindMaxIn31) refers to lib_ipd.o(.text.FindMaxIn31) for [Anonymous Symbol]
+    lib_ipd.o(.text.IPDEst_SMotor) refers to lib_ipd.o(.text.IPD_AngleCalc) for IPD_AngleCalc
+    lib_ipd.o(.text.IPDEst_SMotor) refers to fluxobservercfg.o(.bss.gS_IPDM) for gS_IPDM
+    lib_ipd.o(.text.IPDEst_SMotor) refers to fluxobservercfg.o(.bss.gS_SvpwmM) for gS_SvpwmM
+    lib_ipd.o(.text.IPDEst_SMotor) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    lib_ipd.o(.text.IPDEst_SMotor) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIb) for SVPWM_1ShuntGetPhaseIaNIb
+    lib_ipd.o(.text.IPDEst_SMotor) refers to lto-llvm-caad6e.o(.text.SVPWM_2ShuntGetPhaseIaIb) for SVPWM_2ShuntGetPhaseIaIb
+    lib_ipd.o(.ARM.exidx.text.IPDEst_SMotor) refers to lib_ipd.o(.text.IPDEst_SMotor) for [Anonymous Symbol]
+    lib_ipd.o(.text.getIPDFinishFlag) refers to fluxobservercfg.o(.bss.gS_IPDM) for gS_IPDM
+    lib_ipd.o(.ARM.exidx.text.getIPDFinishFlag) refers to lib_ipd.o(.text.getIPDFinishFlag) for [Anonymous Symbol]
+    lib_ipd.o(.text.getIPDAngleLib) refers to fluxobservercfg.o(.bss.gS_IPDM) for gS_IPDM
+    lib_ipd.o(.ARM.exidx.text.getIPDAngleLib) refers to lib_ipd.o(.text.getIPDAngleLib) for [Anonymous Symbol]
+    lib_ipd.o(.text.IPD_AngleCalc) refers to fluxobserve.o(.text.Calc_Atan) for Calc_Atan
+    lib_ipd.o(.ARM.exidx.text.IPD_AngleCalc) refers to lib_ipd.o(.text.IPD_AngleCalc) for [Anonymous Symbol]
+    onthefly.o(.text.OnTheFlyDetectPro) refers to fluxobservercfg.o(.bss.gS_OnFlyM) for gS_OnFlyM
+    onthefly.o(.text.OnTheFlyDetectPro) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    onthefly.o(.ARM.exidx.text.OnTheFlyDetectPro) refers to onthefly.o(.text.OnTheFlyDetectPro) for [Anonymous Symbol]
+    onthefly.o(.text.OnTheFlyDetectInit) refers to memseta.o(.text) for __aeabi_memclr4
+    onthefly.o(.text.OnTheFlyDetectInit) refers to fluxobservercfg.o(.bss.gS_OnFlyM) for gS_OnFlyM
+    onthefly.o(.text.OnTheFlyDetectInit) refers to fluxobservercfg.o(.bss.gS_MotorObsM) for gS_MotorObsM
+    onthefly.o(.ARM.exidx.text.OnTheFlyDetectInit) refers to onthefly.o(.text.OnTheFlyDetectInit) for [Anonymous Symbol]
+    onthefly.o(.text.getOnFlyFreqResultFromObjId) refers to fluxobservercfg.o(.bss.gS_OnFlyM) for gS_OnFlyM
+    onthefly.o(.ARM.exidx.text.getOnFlyFreqResultFromObjId) refers to onthefly.o(.text.getOnFlyFreqResultFromObjId) for [Anonymous Symbol]
+    onthefly.o(.ARM.exidx.text.BrakeStateCheck) refers to onthefly.o(.text.BrakeStateCheck) for [Anonymous Symbol]
+    onthefly.o(.ARM.exidx.text.BrakeStateCheckInit) refers to onthefly.o(.text.BrakeStateCheckInit) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    ldiv.o(.text) refers to uldiv.o(.text) for __aeabi_uldivmod
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_lks32mc03x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_lks32mc03x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to lto-llvm-caad6e.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to lto-llvm-caad6e.o(.text.main) for main
+    idiv_div0.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    lto-llvm-caad6e.o(.ARM.exidx.text.AcquireCurSamplingResultsM0) refers to lto-llvm-caad6e.o(.text.AcquireCurSamplingResultsM0) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.AcquireVdcSamplingResultsM0) refers to lto-llvm-caad6e.o(.text.AcquireVdcSamplingResultsM0) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.AcquireNTCSamplingResultsM0) refers to lto-llvm-caad6e.o(.text.AcquireNTCSamplingResultsM0) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.AcquireBmefSamplingResultsM0) refers to lto-llvm-caad6e.o(.text.AcquireBmefSamplingResultsM0) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.ChangeADChanelCFGM0) refers to lto-llvm-caad6e.o(.text.ChangeADChanelCFGM0) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.MCPWM0_RegUpdate) refers to lto-llvm-caad6e.o(.text.MCPWM0_RegUpdate) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.EPWM0_OutPut) refers to lto-llvm-caad6e.o(.text.EPWM0_OutPut) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.EPWM0_Charge) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.EPWM0_Charge) refers to lto-llvm-caad6e.o(.text.EPWM0_Charge) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd) refers to lks32mc03x_nvr.o(i.Read_Trim) for Read_Trim
+    lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd) refers to lto-llvm-caad6e.o(.text.MCPWM_init) for MCPWM_init
+    lto-llvm-caad6e.o(.ARM.exidx.text.InitEPWM0ChargeEnd) refers to lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.GetEPWM0_breakInStatus) refers to lto-llvm-caad6e.o(.text.GetEPWM0_breakInStatus) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.ClrEPWM0_breakInStatus) refers to lto-llvm-caad6e.o(.text.ClrEPWM0_breakInStatus) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.MCPWM_init) refers to llmul.o(.text) for __aeabi_lmul
+    lto-llvm-caad6e.o(.text.MCPWM_init) refers to ldiv.o(.text) for __aeabi_ldivmod
+    lto-llvm-caad6e.o(.text.MCPWM_init) refers to idiv_div0.o(.text) for __aeabi_idiv
+    lto-llvm-caad6e.o(.text.MCPWM_init) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.MCPWM_init) refers to lto-llvm-caad6e.o(.text.MCPWM_init) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.SystemInit) refers to lks32mc03x_nvr.o(i.Read_Trim) for Read_Trim
+    lto-llvm-caad6e.o(.ARM.exidx.text.SystemInit) refers to lto-llvm-caad6e.o(.text.SystemInit) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.CalcDcVoltPerUnit) for CalcDcVoltPerUnit
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.setLibWorkMode) for setLibWorkMode
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.setTrakingModeDisable) for setTrakingModeDisable
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to lto-llvm-caad6e.o(.text.Trig_Functions) for Trig_Functions
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.getCurLoopCloseStatusFromOB) for getCurLoopCloseStatusFromOB
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.setTrakingModeEnable) for setTrakingModeEnable
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to onthefly.o(.text.OnTheFlyDetectPro) for OnTheFlyDetectPro
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.InitPmFluxOB) for InitPmFluxOB
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.CalcVolCircle) for CalcVolCircle
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.SVPWM_2Shunt_En1) for SVPWM_2Shunt_En1
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.PmsmFluxObserve_Full) for PmsmFluxObserve_Full
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to fluxobserve.o(.text.getElectAngleEst) for getElectAngleEst
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to memcpya.o(.text) for __aeabi_memcpy
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to lib_ipd.o(.text.IPDEst_SMotor) for IPDEst_SMotor
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to lib_ipd.o(.text.getIPDAngleLib) for getIPDAngleLib
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to lib_ipd.o(.text.getIPDFinishFlag) for getIPDFinishFlag
+    lto-llvm-caad6e.o(.text.ADC_IRQHandler) refers to lto-llvm-caad6e.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.ADC_IRQHandler) refers to lto-llvm-caad6e.o(.text.ADC_IRQHandler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.HALL_IRQHandler) refers to lto-llvm-caad6e.o(.text.HALL_IRQHandler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.TIMER0_IRQHandler) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.TIMER0_IRQHandler) refers to lto-llvm-caad6e.o(.text.TIMER0_IRQHandler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.TIMER1_IRQHandler) refers to lto-llvm-caad6e.o(.text.TIMER1_IRQHandler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.CMP_IRQHandler) refers to lto-llvm-caad6e.o(.text.CMP_IRQHandler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SysTick_Handler) refers to lto-llvm-caad6e.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.HardFault_Handler) refers to lto-llvm-caad6e.o(.text.HardFault_Handler) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to memseta.o(.text) for __aeabi_memclr4
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getLibMaxObjNumber) for getLibMaxObjNumber
+    lto-llvm-caad6e.o(.text.main) refers to lks32mc03x_nvr.o(i.Read_Trim) for Read_Trim
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.MCPWM_init) for MCPWM_init
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.ARM.__at_0x7E08) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to idiv_div0.o(.text) for __aeabi_idiv
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsPar) for RegisterObsPar
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsAngleObj) for RegisterObsAngleObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsSpeedObj) for RegisterObsSpeedObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsStatorCurObj) for RegisterObsStatorCurObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsCurObj) for RegisterObsCurObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsAcrObj) for RegisterObsAcrObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsVolObj) for RegisterObsVolObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsTcObj) for RegisterObsTcObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsGainObj) for RegisterObsGainObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterSvpwmParObj) for RegisterSvpwmParObj
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObjPar) for RegisterObjPar
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterSamplingStru) for RegisterSamplingStru
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterSamplingEv) for RegisterSamplingEv
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterSvpwmCmprTmr) for RegisterSvpwmCmprTmr
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsHalDrvHandle) for RegisterObsHalDrvHandle
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsHDMDInfor) for RegisterObsHDMDInfor
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.RegisterObsMAMDInfor) for RegisterObsMAMDInfor
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.setOverModuFac) for setOverModuFac
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.updateAcrParaMALayer) for updateAcrParaMALayer
+    lto-llvm-caad6e.o(.text.main) refers to llmul.o(.text) for __aeabi_lmul
+    lto-llvm-caad6e.o(.text.main) refers to ldiv.o(.text) for __aeabi_ldivmod
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.SVPWM_2ShuntGetPhaseIaIb) for SVPWM_2ShuntGetPhaseIaIb
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.rodata) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to memcpya.o(.text) for __aeabi_memcpy
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.InitFocVar) for InitFocVar
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.InitPmFluxOB) for InitPmFluxOB
+    lto-llvm-caad6e.o(.text.main) refers to onthefly.o(.text.OnTheFlyDetectInit) for OnTheFlyDetectInit
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.FluxObserveParaCalc) for FluxObserveParaCalc
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.CalcVectorVFPara) for CalcVectorVFPara
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.setDeadCompFactor) for setDeadCompFactor
+    lto-llvm-caad6e.o(.text.main) refers to lib_ipd.o(.text.InitIPD) for InitIPD
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getMotorDaxisVoltFormObjId) for getMotorDaxisVoltFormObjId
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getMotorQaxisVoltFormObjId) for getMotorQaxisVoltFormObjId
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.IQ15SqrtIQ31) for IQ15SqrtIQ31
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getMotorPowerFromObjId) for getMotorPowerFromObjId
+    lto-llvm-caad6e.o(.text.main) refers to onthefly.o(.text.getOnFlyFreqResultFromObjId) for getOnFlyFreqResultFromObjId
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.PmsmFluxObserve1ms) for PmsmFluxObserve1ms
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.setObserPLLKpKi) for setObserPLLKpKi
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.vectorVFcontrol) for vectorVFcontrol
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.data) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.ARM.__at_0x20000000) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.ARM.__at_0x20000004) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getVolt2FreqCalcPara) for getVolt2FreqCalcPara
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.motorControlParaInitDone) for motorControlParaInitDone
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.StateInit) for StateInit
+    lto-llvm-caad6e.o(.text.main) refers to lto-llvm-caad6e.o(.text.FaultInitTask) for FaultInitTask
+    lto-llvm-caad6e.o(.text.main) refers to onthefly.o(.text.BrakeStateCheck) for BrakeStateCheck
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.QCurRefGenValue) for QCurRefGenValue
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getRunStatus) for getRunStatus
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux) for getDCurRefGenWithEnWeakenFlux
+    lto-llvm-caad6e.o(.text.main) refers to onthefly.o(.text.BrakeStateCheckInit) for BrakeStateCheckInit
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.SetDCurRefInitValue) for SetDCurRefInitValue
+    lto-llvm-caad6e.o(.text.main) refers to fluxobserve.o(.text.setOBElectAngleEst) for setOBElectAngleEst
+    lto-llvm-caad6e.o(.ARM.exidx.text.main) refers to lto-llvm-caad6e.o(.text.main) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.CountLeadZero) refers to lto-llvm-caad6e.o(.text.CountLeadZero) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.App2CoreFreqTrans) refers to lto-llvm-caad6e.o(.text.App2CoreFreqTrans) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.Trig_Functions) refers to lto-llvm-caad6e.o(.rodata) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.Trig_Functions) refers to lto-llvm-caad6e.o(.text.Trig_Functions) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.Div_Functions) refers to lto-llvm-caad6e.o(.text.Div_Functions) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.updateAcrParaMALayer) refers to idiv_div0.o(.text) for __aeabi_idiv
+    lto-llvm-caad6e.o(.ARM.exidx.text.updateAcrParaMALayer) refers to lto-llvm-caad6e.o(.text.updateAcrParaMALayer) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_2ShuntGetPhaseIaIb) refers to lto-llvm-caad6e.o(.text.SVPWM_2ShuntGetPhaseIaIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.InitFocVar) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.InitFocVar) refers to lto-llvm-caad6e.o(.text.InitFocVar) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNOldIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNOldIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNOldIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNOldIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNOldIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNOldIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNOldIa) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNOldIa) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNOldIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNOldIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNOldIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNOldIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNOldIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNOldIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNOldIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNOldIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNOldIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNOldIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNOldIb) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNOldIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNOldIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNOldIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNOldIc) refers to lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNOldIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseIaIb) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseOldIaOldIb) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIb) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseIaIc) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseOldIaOldIc) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseIbIc) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIbIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseOldIbOldIc) refers to lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIbOldIc) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.CurrentPIRegulator) refers to lto-llvm-caad6e.o(.text.CurrentPIRegulator) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.getMinQVoltSetting) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.getMinQVoltSetting) refers to lto-llvm-caad6e.o(.text.getMinQVoltSetting) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.motorControlParaInitDone) refers to idiv_div0.o(.text) for __aeabi_idiv
+    lto-llvm-caad6e.o(.text.motorControlParaInitDone) refers to llmul.o(.text) for __aeabi_lmul
+    lto-llvm-caad6e.o(.text.motorControlParaInitDone) refers to ldiv.o(.text) for __aeabi_ldivmod
+    lto-llvm-caad6e.o(.text.motorControlParaInitDone) refers to lto-llvm-caad6e.o(.text.updateAcrParaMALayer) for updateAcrParaMALayer
+    lto-llvm-caad6e.o(.text.motorControlParaInitDone) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.motorControlParaInitDone) refers to lto-llvm-caad6e.o(.text.motorControlParaInitDone) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.StateInit) refers to idiv_div0.o(.text) for __aeabi_idiv
+    lto-llvm-caad6e.o(.text.StateInit) refers to llmul.o(.text) for __aeabi_lmul
+    lto-llvm-caad6e.o(.text.StateInit) refers to fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux) for InitDQCurRefGenWithWeakenFlux
+    lto-llvm-caad6e.o(.text.StateInit) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.StateInit) refers to lto-llvm-caad6e.o(.text.StateInit) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.text.FaultInitTask) refers to lto-llvm-caad6e.o(.bss) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.ARM.exidx.text.FaultInitTask) refers to lto-llvm-caad6e.o(.text.FaultInitTask) for [Anonymous Symbol]
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.AcquireCurSamplingResultsM0) for AcquireCurSamplingResultsM0
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.AcquireVdcSamplingResultsM0) for AcquireVdcSamplingResultsM0
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.AcquireNTCSamplingResultsM0) for AcquireNTCSamplingResultsM0
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.AcquireBmefSamplingResultsM0) for AcquireBmefSamplingResultsM0
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.ChangeADChanelCFGM0) for ChangeADChanelCFGM0
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.MCPWM0_RegUpdate) for MCPWM0_RegUpdate
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.EPWM0_OutPut) for EPWM0_OutPut
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.EPWM0_Charge) for EPWM0_Charge
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd) for InitEPWM0ChargeEnd
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.GetEPWM0_breakInStatus) for GetEPWM0_breakInStatus
+    lto-llvm-caad6e.o(.rodata) refers to lto-llvm-caad6e.o(.text.ClrEPWM0_breakInStatus) for ClrEPWM0_breakInStatus
+    lto-llvm-caad6e.o(.rodata) refers to fluxobserve.o(.text.SVPWM_2Shunt_En1) for SVPWM_2Shunt_En1
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_lks32mc03x.o(HEAP), (512 bytes).
+    Removing lks32mc03x_nvr.o(i.Prog_Trim), (100 bytes).
+    Removing fluxobserve.o(.text), (0 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setLibWorkMode), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObjPar), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsPar), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterSvpwmParObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsAngleObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsSpeedObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsCurObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsVolObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsAcrObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsTcObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsGainObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterSamplingStru), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterSamplingEv), (8 bytes).
+    Removing fluxobserve.o(.text.RegisterSvpwmPar), (12 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterSvpwmPar), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterSvpwmCmprTmr), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsStatorCurObj), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsHalDrvHandle), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsHDMDInfor), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.RegisterObsMAMDInfor), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.InitPmFluxOB), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.FluxObserveParaCalc), (8 bytes).
+    Removing fluxobserve.o(.text.PmsmFluxObserveIDSimply), (464 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveIDSimply), (8 bytes).
+    Removing fluxobserve.o(.text.PmsmFluxObserveSimply_Full), (484 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveSimply_Full), (8 bytes).
+    Removing fluxobserve.o(.text.PmsmFluxObserveSimplyWeaken), (500 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveSimplyWeaken), (8 bytes).
+    Removing fluxobserve.o(.text.PmsmFluxObserveWeaken), (492 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserveWeaken), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.Calc_Atan), (8 bytes).
+    Removing fluxobserve.o(.text.PmsmFluxObserve), (460 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve_Full), (8 bytes).
+    Removing fluxobserve.o(.text.PmsmFluxObserve_Full_En), (580 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve_Full_En), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CalcDcVoltPerUnit), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CalcVolCircle), (8 bytes).
+    Removing fluxobserve.o(.text.CalcVolCircleComp), (340 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CalcVolCircleComp), (8 bytes).
+    Removing fluxobserve.o(.text.getMotorVoltFromObjId), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getMotorVoltFromObjId), (8 bytes).
+    Removing fluxobserve.o(.text.getMotorActVoltFromObjId), (44 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getMotorActVoltFromObjId), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getMotorDaxisVoltFormObjId), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getMotorQaxisVoltFormObjId), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getMotorPowerFromObjId), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.IQ15SqrtIQ31), (8 bytes).
+    Removing fluxobserve.o(.text.Calc_Atan_simple), (28 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.Calc_Atan_simple), (8 bytes).
+    Removing fluxobserve.o(.text.getElectAngle), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getElectAngle), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getElectAngleEst), (8 bytes).
+    Removing fluxobserve.o(.text.getElectSpdEst), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getElectSpdEst), (8 bytes).
+    Removing fluxobserve.o(.text.getElectBmefD), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getElectBmefD), (8 bytes).
+    Removing fluxobserve.o(.text.getElectBmefQ), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getElectBmefQ), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setOBElectAngleEst), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_1Shunt), (1092 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_1Shunt_En), (1444 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_En), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_1Shunt_Mode0), (1248 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_Mode0), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_1Shunt_Mode1), (1544 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_Mode1), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_1Shunt_5_7Seg), (1444 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_1Shunt_5_7Seg), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt_En), (612 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt_En_5Seg), (608 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En_5Seg), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt), (228 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt_5Seg), (268 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_5Seg), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En1), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt_En1_5Seg), (400 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En1_5Seg), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt_En2), (588 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En2), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_2Shunt_En2_5Seg), (540 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_2Shunt_En2_5Seg), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_3Shunt), (592 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_3Shunt_En), (1028 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt_En), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_3Shunt_5Seg), (772 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt_5Seg), (8 bytes).
+    Removing fluxobserve.o(.text.SVPWM_3Shunt_En_5Seg), (1128 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SVPWM_3Shunt_En_5Seg), (8 bytes).
+    Removing fluxobserve.o(.text.checkNomData), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.checkNomData), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.PmsmFluxObserve1ms), (8 bytes).
+    Removing fluxobserve.o(.text.CalcDcVoltPerUnitSimply), (44 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CalcDcVoltPerUnitSimply), (8 bytes).
+    Removing fluxobserve.o(.text.CalcDcVoltPerUnitSlowTask), (52 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CalcDcVoltPerUnitSlowTask), (8 bytes).
+    Removing fluxobserve.o(.text.getVdcCirCleLim), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getVdcCirCleLim), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getRunStatus), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getCurLoopCloseStatusFromOB), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setTrakingModeEnable), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setTrakingModeDisable), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setObserPLLKpKi), (8 bytes).
+    Removing fluxobserve.o(.text.setFieldWeakenPara), (40 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setFieldWeakenPara), (8 bytes).
+    Removing fluxobserve.o(.text.setFieldWeakenVoltFac), (24 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setFieldWeakenVoltFac), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setOverModuFac), (8 bytes).
+    Removing fluxobserve.o(.text.AutoFieldWeakRegUpdate), (140 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.AutoFieldWeakRegUpdate), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CalcVectorVFPara), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.vectorVFcontrol), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setDeadCompFactor), (8 bytes).
+    Removing fluxobserve.o(.text.motorStopOrExceptionHandle), (148 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.motorStopOrExceptionHandle), (8 bytes).
+    Removing fluxobserve.o(.text.getDCurRefGen), (72 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getDCurRefGen), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getDCurRefGenWithEnWeakenFlux), (8 bytes).
+    Removing fluxobserve.o(.text.InitDQCurRefGen), (44 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.InitDQCurRefGen), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.InitDQCurRefGenWithWeakenFlux), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SetDCurRefInitValue), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.QCurRefGenValue), (8 bytes).
+    Removing fluxobserve.o(.text.speedPIParaCalc), (104 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.speedPIParaCalc), (8 bytes).
+    Removing fluxobserve.o(.text.SpeedPIAutoTunning), (140 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SpeedPIAutoTunning), (8 bytes).
+    Removing fluxobserve.o(.text.CurPIAutoTunning), (180 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.CurPIAutoTunning), (8 bytes).
+    Removing fluxobserve.o(.text.SetCurPIPara), (32 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.SetCurPIPara), (8 bytes).
+    Removing fluxobserve.o(.text.setEstSpdFromExternalModule), (24 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setEstSpdFromExternalModule), (8 bytes).
+    Removing fluxobserve.o(.text.setVCState2RunStatus), (20 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.setVCState2RunStatus), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getLibMaxObjNumber), (8 bytes).
+    Removing fluxobserve.o(.ARM.exidx.text.getVolt2FreqCalcPara), (8 bytes).
+    Removing fluxobserve.o(.data.MinQSpdFilPeriod), (2 bytes).
+    Removing fluxobserve.o(.bss.MinQSpdHighFilTime), (2 bytes).
+    Removing fluxobserve.o(.data.MinQSpdHighFilPeriod), (2 bytes).
+    Removing fluxobserve.o(.bss.UdeadMaxComp), (2 bytes).
+    Removing fluxobserve.o(.data..L_MergedGlobals), (96 bytes).
+    Removing fluxobserve.o(.bss..L_MergedGlobals.1), (8 bytes).
+    Removing lib_ipd.o(.text), (0 bytes).
+    Removing lib_ipd.o(.text.IPDEst_DMotor), (908 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.IPDEst_DMotor), (8 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.InitIPD), (8 bytes).
+    Removing lib_ipd.o(.text.soft_Trg_ADC), (48 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.soft_Trg_ADC), (8 bytes).
+    Removing lib_ipd.o(.text.FindMaxIn31), (72 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.FindMaxIn31), (8 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.IPDEst_SMotor), (8 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.getIPDFinishFlag), (8 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.getIPDAngleLib), (8 bytes).
+    Removing lib_ipd.o(.ARM.exidx.text.IPD_AngleCalc), (8 bytes).
+    Removing onthefly.o(.text), (0 bytes).
+    Removing onthefly.o(.ARM.exidx.text.OnTheFlyDetectPro), (8 bytes).
+    Removing onthefly.o(.ARM.exidx.text.OnTheFlyDetectInit), (8 bytes).
+    Removing onthefly.o(.ARM.exidx.text.getOnFlyFreqResultFromObjId), (8 bytes).
+    Removing onthefly.o(.ARM.exidx.text.BrakeStateCheck), (8 bytes).
+    Removing onthefly.o(.ARM.exidx.text.BrakeStateCheckInit), (8 bytes).
+    Removing fluxobservercfg.o(.text), (0 bytes).
+    Removing fluxobservercfg.o(.bss.gS_BEMF_Check), (80 bytes).
+    Removing lto-llvm-caad6e.o(.text), (0 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.AcquireCurSamplingResultsM0), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.AcquireVdcSamplingResultsM0), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.AcquireNTCSamplingResultsM0), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.AcquireBmefSamplingResultsM0), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.ChangeADChanelCFGM0), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.MCPWM0_RegUpdate), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.EPWM0_OutPut), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.EPWM0_Charge), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.InitEPWM0ChargeEnd), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.GetEPWM0_breakInStatus), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.ClrEPWM0_breakInStatus), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.MCPWM_init), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.ADC_IRQHandler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.HALL_IRQHandler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.TIMER0_IRQHandler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.TIMER1_IRQHandler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.CMP_IRQHandler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.HardFault_Handler), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.main), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.CountLeadZero), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.App2CoreFreqTrans), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.Trig_Functions), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.Div_Functions), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.updateAcrParaMALayer), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_2ShuntGetPhaseIaIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.InitFocVar), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNIa), (22 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNIa), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNOldIa), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNOldIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNOldIa), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNOldIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNIa), (22 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNIa), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNOldIa), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNOldIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNOldIa), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNOldIa), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNIc), (22 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNIc), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIbNOldIc), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIbNOldIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIbNOldIc), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIbNOldIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNIb), (22 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNIb), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIcNOldIb), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIcNOldIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIcNOldIb), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIcNOldIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNIb), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNOldIb), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNOldIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNOldIb), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNOldIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIc), (22 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNIc), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNOldIc), (20 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseIaNOldIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseOldIaNOldIc), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_1ShuntGetPhaseOldIaNOldIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIb), (26 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseIaIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIb), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseOldIaOldIb), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIaIc), (26 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseIaIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIaOldIc), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseOldIaOldIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseIbIc), (26 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseIbIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.SVPWM_3ShuntGetPhaseOldIbOldIc), (2 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.SVPWM_3ShuntGetPhaseOldIbOldIc), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.CurrentPIRegulator), (8 bytes).
+    Removing lto-llvm-caad6e.o(.text.getMinQVoltSetting), (12 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.getMinQVoltSetting), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.motorControlParaInitDone), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.StateInit), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.exidx.text.FaultInitTask), (8 bytes).
+    Removing lto-llvm-caad6e.o(.ARM.use_no_argv), (4 bytes).
+
+265 unused section(s) (total 21798 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast_div0.o ABSOLUTE
+    ../clib/longlong.c                       0x00000000   Number         0  llmul.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  ldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv0.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    1_LKS_FwLib/lks32mc03x_periph_driver/Source/startup_lks32mc03x.s 0x00000000   Number         0  startup_lks32mc03x.o ABSOLUTE
+    FluxObserve.c                            0x00000000   Number         0  fluxobserve.o ABSOLUTE
+    FluxObserverCfg.c                        0x00000000   Number         0  fluxobservercfg.o ABSOLUTE
+    Lib_IPD.c                                0x00000000   Number         0  lib_ipd.o ABSOLUTE
+    OnTheFly.c                               0x00000000   Number         0  onthefly.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    ld-temp.o                                0x00000000   Number         0  lto-llvm-caad6e.o ABSOLUTE
+    lks32mc03x_NVR.c                         0x00000000   Number         0  lks32mc03x_nvr.o ABSOLUTE
+    RESET                                    0x00000000   Section      192  startup_lks32mc03x.o(RESET)
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d4   Section       40  startup_lks32mc03x.o(.text)
+    .text                                    0x000000fc   Section        0  uldiv.o(.text)
+    .text                                    0x0000015c   Section        0  ldiv.o(.text)
+    .text                                    0x000001a8   Section        0  llmul.o(.text)
+    .text                                    0x000001d8   Section        0  llshl.o(.text)
+    .text                                    0x000001f8   Section        0  memseta.o(.text)
+    .text                                    0x0000021c   Section        0  uidiv_div0.o(.text)
+    .text                                    0x0000025c   Section        0  idiv_div0.o(.text)
+    .text                                    0x000002ac   Section        0  llushr.o(.text)
+    .text                                    0x000002d0   Section       36  init.o(.text)
+    .text                                    0x000002f4   Section        0  memcpya.o(.text)
+    [Anonymous Symbol]                       0x00000318   Section        0  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_16                           0x000003cc   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_18                           0x000003d4   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_19                           0x000003d8   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_1                            0x000008a4   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_4                            0x000008a8   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_5                            0x000008ac   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_6                            0x000008b0   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_7                            0x000008b4   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_8                            0x000008b8   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_9                            0x000008bc   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_10                           0x000008c0   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_11                           0x000008c4   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_12                           0x000008c8   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_13                           0x000008cc   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    __arm_cp.13_14                           0x000008d0   Number         4  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    AcquireBmefSamplingResultsM0             0x000008d5   Thumb Code     2  lto-llvm-caad6e.o(.text.AcquireBmefSamplingResultsM0)
+    [Anonymous Symbol]                       0x000008d4   Section        0  lto-llvm-caad6e.o(.text.AcquireBmefSamplingResultsM0)
+    AcquireCurSamplingResultsM0              0x000008d9   Thumb Code    12  lto-llvm-caad6e.o(.text.AcquireCurSamplingResultsM0)
+    [Anonymous Symbol]                       0x000008d8   Section        0  lto-llvm-caad6e.o(.text.AcquireCurSamplingResultsM0)
+    __arm_cp.0_0                             0x000008e4   Number         4  lto-llvm-caad6e.o(.text.AcquireCurSamplingResultsM0)
+    AcquireNTCSamplingResultsM0              0x000008e9   Thumb Code     8  lto-llvm-caad6e.o(.text.AcquireNTCSamplingResultsM0)
+    [Anonymous Symbol]                       0x000008e8   Section        0  lto-llvm-caad6e.o(.text.AcquireNTCSamplingResultsM0)
+    __arm_cp.2_0                             0x000008f0   Number         4  lto-llvm-caad6e.o(.text.AcquireNTCSamplingResultsM0)
+    AcquireVdcSamplingResultsM0              0x000008f5   Thumb Code     8  lto-llvm-caad6e.o(.text.AcquireVdcSamplingResultsM0)
+    [Anonymous Symbol]                       0x000008f4   Section        0  lto-llvm-caad6e.o(.text.AcquireVdcSamplingResultsM0)
+    __arm_cp.1_0                             0x000008fc   Number         4  lto-llvm-caad6e.o(.text.AcquireVdcSamplingResultsM0)
+    [Anonymous Symbol]                       0x00000900   Section        0  lto-llvm-caad6e.o(.text.App2CoreFreqTrans)
+    [Anonymous Symbol]                       0x0000090c   Section        0  onthefly.o(.text.BrakeStateCheck)
+    __arm_cp.3_0                             0x0000095c   Number         4  onthefly.o(.text.BrakeStateCheck)
+    [Anonymous Symbol]                       0x00000960   Section        0  onthefly.o(.text.BrakeStateCheckInit)
+    [Anonymous Symbol]                       0x0000096a   Section        0  lto-llvm-caad6e.o(.text.CMP_IRQHandler)
+    [Anonymous Symbol]                       0x0000096c   Section        0  fluxobserve.o(.text.CalcDcVoltPerUnit)
+    [Anonymous Symbol]                       0x00000998   Section        0  fluxobserve.o(.text.CalcVectorVFPara)
+    __arm_cp.76_0                            0x00000b24   Number         4  fluxobserve.o(.text.CalcVectorVFPara)
+    __arm_cp.76_1                            0x00000b28   Number         4  fluxobserve.o(.text.CalcVectorVFPara)
+    __arm_cp.76_2                            0x00000b2c   Number         4  fluxobserve.o(.text.CalcVectorVFPara)
+    __arm_cp.76_4                            0x00000b30   Number         4  fluxobserve.o(.text.CalcVectorVFPara)
+    __arm_cp.76_5                            0x00000b34   Number         4  fluxobserve.o(.text.CalcVectorVFPara)
+    [Anonymous Symbol]                       0x00000b38   Section        0  fluxobserve.o(.text.CalcVolCircle)
+    __arm_cp.30_1                            0x00000c04   Number         4  fluxobserve.o(.text.CalcVolCircle)
+    __arm_cp.30_2                            0x00000c08   Number         4  fluxobserve.o(.text.CalcVolCircle)
+    [Anonymous Symbol]                       0x00000c0c   Section        0  fluxobserve.o(.text.Calc_Atan)
+    __arm_cp.25_0                            0x00000d2c   Number         4  fluxobserve.o(.text.Calc_Atan)
+    __arm_cp.25_1                            0x00000d30   Number         4  fluxobserve.o(.text.Calc_Atan)
+    __arm_cp.25_2                            0x00000d34   Number         4  fluxobserve.o(.text.Calc_Atan)
+    __arm_cp.25_3                            0x00000d38   Number         4  fluxobserve.o(.text.Calc_Atan)
+    __arm_cp.25_4                            0x00000d3c   Number         4  fluxobserve.o(.text.Calc_Atan)
+    ChangeADChanelCFGM0                      0x00000d41   Thumb Code     2  lto-llvm-caad6e.o(.text.ChangeADChanelCFGM0)
+    [Anonymous Symbol]                       0x00000d40   Section        0  lto-llvm-caad6e.o(.text.ChangeADChanelCFGM0)
+    ClrEPWM0_breakInStatus                   0x00000d45   Thumb Code    12  lto-llvm-caad6e.o(.text.ClrEPWM0_breakInStatus)
+    [Anonymous Symbol]                       0x00000d44   Section        0  lto-llvm-caad6e.o(.text.ClrEPWM0_breakInStatus)
+    __arm_cp.10_0                            0x00000d50   Number         4  lto-llvm-caad6e.o(.text.ClrEPWM0_breakInStatus)
+    [Anonymous Symbol]                       0x00000d54   Section        0  lto-llvm-caad6e.o(.text.CountLeadZero)
+    __arm_cp.21_0                            0x00000d94   Number         4  lto-llvm-caad6e.o(.text.CountLeadZero)
+    __arm_cp.21_1                            0x00000d98   Number         4  lto-llvm-caad6e.o(.text.CountLeadZero)
+    __arm_cp.21_2                            0x00000d9c   Number         4  lto-llvm-caad6e.o(.text.CountLeadZero)
+    __arm_cp.21_3                            0x00000da0   Number         4  lto-llvm-caad6e.o(.text.CountLeadZero)
+    [Anonymous Symbol]                       0x00000da4   Section        0  lto-llvm-caad6e.o(.text.CurrentPIRegulator)
+    [Anonymous Symbol]                       0x00000ddc   Section        0  lto-llvm-caad6e.o(.text.Div_Functions)
+    __arm_cp.24_0                            0x00000de8   Number         4  lto-llvm-caad6e.o(.text.Div_Functions)
+    EPWM0_Charge                             0x00000ded   Thumb Code    84  lto-llvm-caad6e.o(.text.EPWM0_Charge)
+    [Anonymous Symbol]                       0x00000dec   Section        0  lto-llvm-caad6e.o(.text.EPWM0_Charge)
+    __arm_cp.7_0                             0x00000e40   Number         4  lto-llvm-caad6e.o(.text.EPWM0_Charge)
+    __arm_cp.7_2                             0x00000e44   Number         4  lto-llvm-caad6e.o(.text.EPWM0_Charge)
+    __arm_cp.7_3                             0x00000e48   Number         4  lto-llvm-caad6e.o(.text.EPWM0_Charge)
+    __arm_cp.7_4                             0x00000e4c   Number         4  lto-llvm-caad6e.o(.text.EPWM0_Charge)
+    EPWM0_OutPut                             0x00000e51   Thumb Code    32  lto-llvm-caad6e.o(.text.EPWM0_OutPut)
+    [Anonymous Symbol]                       0x00000e50   Section        0  lto-llvm-caad6e.o(.text.EPWM0_OutPut)
+    __arm_cp.6_0                             0x00000e70   Number         4  lto-llvm-caad6e.o(.text.EPWM0_OutPut)
+    __arm_cp.6_1                             0x00000e74   Number         4  lto-llvm-caad6e.o(.text.EPWM0_OutPut)
+    __arm_cp.6_2                             0x00000e78   Number         4  lto-llvm-caad6e.o(.text.EPWM0_OutPut)
+    __arm_cp.6_3                             0x00000e7c   Number         4  lto-llvm-caad6e.o(.text.EPWM0_OutPut)
+    FaultInitTask                            0x00000e81   Thumb Code   176  lto-llvm-caad6e.o(.text.FaultInitTask)
+    [Anonymous Symbol]                       0x00000e80   Section        0  lto-llvm-caad6e.o(.text.FaultInitTask)
+    __arm_cp.62_0                            0x00000f30   Number         4  lto-llvm-caad6e.o(.text.FaultInitTask)
+    [Anonymous Symbol]                       0x00000f34   Section        0  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_8                            0x00001334   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_9                            0x00001338   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_2                            0x000013fc   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_3                            0x00001400   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_4                            0x00001404   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_5                            0x00001408   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_6                            0x0000140c   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    __arm_cp.20_7                            0x00001410   Number         4  fluxobserve.o(.text.FluxObserveParaCalc)
+    GetEPWM0_breakInStatus                   0x00001415   Thumb Code    12  lto-llvm-caad6e.o(.text.GetEPWM0_breakInStatus)
+    [Anonymous Symbol]                       0x00001414   Section        0  lto-llvm-caad6e.o(.text.GetEPWM0_breakInStatus)
+    __arm_cp.9_0                             0x00001420   Number         4  lto-llvm-caad6e.o(.text.GetEPWM0_breakInStatus)
+    [Anonymous Symbol]                       0x00001424   Section        0  lto-llvm-caad6e.o(.text.HALL_IRQHandler)
+    [Anonymous Symbol]                       0x00001426   Section        0  lto-llvm-caad6e.o(.text.HardFault_Handler)
+    [Anonymous Symbol]                       0x00001428   Section        0  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_0                             0x0000173c   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_1                             0x00001740   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_2                             0x00001744   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_3                             0x00001748   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_4                             0x0000174c   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_5                             0x00001750   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_6                             0x00001754   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_7                             0x00001758   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_8                             0x0000175c   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_9                             0x00001760   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_10                            0x00001764   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_11                            0x00001768   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_12                            0x0000176c   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    __arm_cp.4_13                            0x00001770   Number         4  lib_ipd.o(.text.IPDEst_SMotor)
+    IPD_AngleCalc                            0x00001775   Thumb Code   248  lib_ipd.o(.text.IPD_AngleCalc)
+    [Anonymous Symbol]                       0x00001774   Section        0  lib_ipd.o(.text.IPD_AngleCalc)
+    __arm_cp.7_0                             0x0000186c   Number         4  lib_ipd.o(.text.IPD_AngleCalc)
+    __arm_cp.7_1                             0x00001870   Number         4  lib_ipd.o(.text.IPD_AngleCalc)
+    __arm_cp.7_2                             0x00001874   Number         4  lib_ipd.o(.text.IPD_AngleCalc)
+    __arm_cp.7_3                             0x00001878   Number         4  lib_ipd.o(.text.IPD_AngleCalc)
+    [Anonymous Symbol]                       0x0000187c   Section        0  fluxobserve.o(.text.IQ15SqrtIQ31)
+    __arm_cp.37_0                            0x0000197c   Number         4  fluxobserve.o(.text.IQ15SqrtIQ31)
+    [Anonymous Symbol]                       0x00001980   Section        0  fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux)
+    __arm_cp.83_0                            0x000019d8   Number         4  fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux)
+    __arm_cp.83_1                            0x000019dc   Number         4  fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux)
+    __arm_cp.83_3                            0x000019e0   Number         4  fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux)
+    __arm_cp.83_4                            0x000019e4   Number         4  fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux)
+    InitEPWM0ChargeEnd                       0x000019e9   Thumb Code   160  lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd)
+    [Anonymous Symbol]                       0x000019e8   Section        0  lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd)
+    __arm_cp.8_0                             0x00001a88   Number         4  lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd)
+    __arm_cp.8_2                             0x00001a8c   Number         4  lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd)
+    __arm_cp.8_3                             0x00001a90   Number         4  lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd)
+    __arm_cp.8_5                             0x00001a94   Number         4  lto-llvm-caad6e.o(.text.InitEPWM0ChargeEnd)
+    InitFocVar                               0x00001a99   Thumb Code   184  lto-llvm-caad6e.o(.text.InitFocVar)
+    [Anonymous Symbol]                       0x00001a98   Section        0  lto-llvm-caad6e.o(.text.InitFocVar)
+    __arm_cp.27_0                            0x00001b50   Number         4  lto-llvm-caad6e.o(.text.InitFocVar)
+    __arm_cp.27_1                            0x00001b54   Number         4  lto-llvm-caad6e.o(.text.InitFocVar)
+    __arm_cp.27_2                            0x00001b58   Number         4  lto-llvm-caad6e.o(.text.InitFocVar)
+    __arm_cp.27_3                            0x00001b5c   Number         4  lto-llvm-caad6e.o(.text.InitFocVar)
+    [Anonymous Symbol]                       0x00001b60   Section        0  lib_ipd.o(.text.InitIPD)
+    __arm_cp.1_1                             0x00001c20   Number         4  lib_ipd.o(.text.InitIPD)
+    __arm_cp.1_2                             0x00001c24   Number         4  lib_ipd.o(.text.InitIPD)
+    [Anonymous Symbol]                       0x00001c28   Section        0  fluxobserve.o(.text.InitPmFluxOB)
+    __arm_cp.19_0                            0x00001ca8   Number         4  fluxobserve.o(.text.InitPmFluxOB)
+    __arm_cp.19_1                            0x00001cac   Number         4  fluxobserve.o(.text.InitPmFluxOB)
+    __arm_cp.19_2                            0x00001cb0   Number         4  fluxobserve.o(.text.InitPmFluxOB)
+    __arm_cp.19_3                            0x00001cb4   Number         4  fluxobserve.o(.text.InitPmFluxOB)
+    __arm_cp.19_4                            0x00001cb8   Number         4  fluxobserve.o(.text.InitPmFluxOB)
+    __arm_cp.19_5                            0x00001cbc   Number         4  fluxobserve.o(.text.InitPmFluxOB)
+    MCPWM0_RegUpdate                         0x00001cc1   Thumb Code    36  lto-llvm-caad6e.o(.text.MCPWM0_RegUpdate)
+    [Anonymous Symbol]                       0x00001cc0   Section        0  lto-llvm-caad6e.o(.text.MCPWM0_RegUpdate)
+    __arm_cp.5_0                             0x00001ce4   Number         4  lto-llvm-caad6e.o(.text.MCPWM0_RegUpdate)
+    MCPWM_init                               0x00001ce9   Thumb Code   196  lto-llvm-caad6e.o(.text.MCPWM_init)
+    [Anonymous Symbol]                       0x00001ce8   Section        0  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_0                            0x00001dac   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_1                            0x00001db0   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_2                            0x00001db4   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_3                            0x00001db8   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_4                            0x00001dbc   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_5                            0x00001dc0   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_6                            0x00001dc4   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_7                            0x00001dc8   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_8                            0x00001dcc   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_9                            0x00001dd0   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_10                           0x00001dd4   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_11                           0x00001dd8   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_12                           0x00001ddc   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    __arm_cp.11_13                           0x00001de0   Number         4  lto-llvm-caad6e.o(.text.MCPWM_init)
+    [Anonymous Symbol]                       0x00001de4   Section        0  onthefly.o(.text.OnTheFlyDetectInit)
+    __arm_cp.1_2                             0x00001e1c   Number         4  onthefly.o(.text.OnTheFlyDetectInit)
+    __arm_cp.1_3                             0x00001e20   Number         4  onthefly.o(.text.OnTheFlyDetectInit)
+    [Anonymous Symbol]                       0x00001e24   Section        0  onthefly.o(.text.OnTheFlyDetectPro)
+    __arm_cp.0_0                             0x00001eb4   Number         4  onthefly.o(.text.OnTheFlyDetectPro)
+    __arm_cp.0_1                             0x00001eb8   Number         4  onthefly.o(.text.OnTheFlyDetectPro)
+    [Anonymous Symbol]                       0x00001ebc   Section        0  fluxobserve.o(.text.PmsmFluxObserve1ms)
+    __arm_cp.63_0                            0x00001f74   Number         4  fluxobserve.o(.text.PmsmFluxObserve1ms)
+    [Anonymous Symbol]                       0x00001f78   Section        0  fluxobserve.o(.text.PmsmFluxObserve_Full)
+    [Anonymous Symbol]                       0x00002154   Section        0  fluxobserve.o(.text.QCurRefGenValue)
+    [Anonymous Symbol]                       0x00002190   Section        0  fluxobserve.o(.text.RegisterObjPar)
+    [Anonymous Symbol]                       0x0000219c   Section        0  fluxobserve.o(.text.RegisterObsAcrObj)
+    [Anonymous Symbol]                       0x000021b0   Section        0  fluxobserve.o(.text.RegisterObsAngleObj)
+    [Anonymous Symbol]                       0x000021c0   Section        0  fluxobserve.o(.text.RegisterObsCurObj)
+    __arm_cp.6_0                             0x000021d4   Number         4  fluxobserve.o(.text.RegisterObsCurObj)
+    [Anonymous Symbol]                       0x000021d8   Section        0  fluxobserve.o(.text.RegisterObsGainObj)
+    [Anonymous Symbol]                       0x000021e8   Section        0  fluxobserve.o(.text.RegisterObsHDMDInfor)
+    [Anonymous Symbol]                       0x000021fc   Section        0  fluxobserve.o(.text.RegisterObsHalDrvHandle)
+    __arm_cp.16_0                            0x0000220c   Number         4  fluxobserve.o(.text.RegisterObsHalDrvHandle)
+    [Anonymous Symbol]                       0x00002210   Section        0  fluxobserve.o(.text.RegisterObsMAMDInfor)
+    [Anonymous Symbol]                       0x00002224   Section        0  fluxobserve.o(.text.RegisterObsPar)
+    [Anonymous Symbol]                       0x00002230   Section        0  fluxobserve.o(.text.RegisterObsSpeedObj)
+    [Anonymous Symbol]                       0x00002240   Section        0  fluxobserve.o(.text.RegisterObsStatorCurObj)
+    [Anonymous Symbol]                       0x00002254   Section        0  fluxobserve.o(.text.RegisterObsTcObj)
+    [Anonymous Symbol]                       0x00002264   Section        0  fluxobserve.o(.text.RegisterObsVolObj)
+    __arm_cp.7_0                             0x00002274   Number         4  fluxobserve.o(.text.RegisterObsVolObj)
+    [Anonymous Symbol]                       0x00002278   Section        0  fluxobserve.o(.text.RegisterSamplingEv)
+    [Anonymous Symbol]                       0x00002284   Section        0  fluxobserve.o(.text.RegisterSamplingStru)
+    [Anonymous Symbol]                       0x00002294   Section        0  fluxobserve.o(.text.RegisterSvpwmCmprTmr)
+    [Anonymous Symbol]                       0x000022a0   Section        0  fluxobserve.o(.text.RegisterSvpwmParObj)
+    __arm_cp.3_1                             0x000022b4   Number         4  fluxobserve.o(.text.RegisterSvpwmParObj)
+    [Anonymous Symbol]                       0x000022b8   Section        0  lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIb)
+    [Anonymous Symbol]                       0x000022ce   Section        0  lto-llvm-caad6e.o(.text.SVPWM_2ShuntGetPhaseIaIb)
+    [Anonymous Symbol]                       0x000022e8   Section        0  fluxobserve.o(.text.SVPWM_2Shunt_En1)
+    __arm_cp.54_0                            0x00002434   Number         4  fluxobserve.o(.text.SVPWM_2Shunt_En1)
+    __arm_cp.54_1                            0x00002438   Number         4  fluxobserve.o(.text.SVPWM_2Shunt_En1)
+    __arm_cp.54_2                            0x0000243c   Number         4  fluxobserve.o(.text.SVPWM_2Shunt_En1)
+    __arm_cp.54_3                            0x00002440   Number         4  fluxobserve.o(.text.SVPWM_2Shunt_En1)
+    [Anonymous Symbol]                       0x00002444   Section        0  fluxobserve.o(.text.SetDCurRefInitValue)
+    __arm_cp.84_0                            0x00002450   Number         4  fluxobserve.o(.text.SetDCurRefInitValue)
+    StateInit                                0x00002455   Thumb Code   564  lto-llvm-caad6e.o(.text.StateInit)
+    [Anonymous Symbol]                       0x00002454   Section        0  lto-llvm-caad6e.o(.text.StateInit)
+    __arm_cp.61_0                            0x00002688   Number         4  lto-llvm-caad6e.o(.text.StateInit)
+    __arm_cp.61_1                            0x0000268c   Number         4  lto-llvm-caad6e.o(.text.StateInit)
+    __arm_cp.61_2                            0x00002690   Number         4  lto-llvm-caad6e.o(.text.StateInit)
+    [Anonymous Symbol]                       0x00002694   Section        0  lto-llvm-caad6e.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x00002698   Section        0  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_0                            0x000027cc   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_1                            0x000027d0   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_2                            0x000027d4   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_3                            0x000027d8   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_4                            0x000027dc   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_5                            0x000027e0   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_6                            0x000027e4   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_7                            0x000027e8   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    __arm_cp.12_8                            0x000027ec   Number         4  lto-llvm-caad6e.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x000027f0   Section        0  lto-llvm-caad6e.o(.text.TIMER0_IRQHandler)
+    __arm_cp.15_0                            0x00002814   Number         4  lto-llvm-caad6e.o(.text.TIMER0_IRQHandler)
+    __arm_cp.15_1                            0x00002818   Number         4  lto-llvm-caad6e.o(.text.TIMER0_IRQHandler)
+    __arm_cp.15_2                            0x0000281c   Number         4  lto-llvm-caad6e.o(.text.TIMER0_IRQHandler)
+    __arm_cp.15_3                            0x00002820   Number         4  lto-llvm-caad6e.o(.text.TIMER0_IRQHandler)
+    [Anonymous Symbol]                       0x00002824   Section        0  lto-llvm-caad6e.o(.text.TIMER1_IRQHandler)
+    [Anonymous Symbol]                       0x00002828   Section        0  lto-llvm-caad6e.o(.text.Trig_Functions)
+    __arm_cp.23_0                            0x00002894   Number         4  lto-llvm-caad6e.o(.text.Trig_Functions)
+    [Anonymous Symbol]                       0x00002898   Section        0  fluxobserve.o(.text.getCurLoopCloseStatusFromOB)
+    [Anonymous Symbol]                       0x000028a8   Section        0  fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux)
+    __arm_cp.81_1                            0x0000294c   Number         4  fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux)
+    __arm_cp.81_2                            0x00002950   Number         4  fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux)
+    __arm_cp.81_3                            0x00002954   Number         4  fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux)
+    __arm_cp.81_4                            0x00002958   Number         4  fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux)
+    [Anonymous Symbol]                       0x0000295c   Section        0  fluxobserve.o(.text.getElectAngleEst)
+    [Anonymous Symbol]                       0x0000296c   Section        0  lib_ipd.o(.text.getIPDAngleLib)
+    [Anonymous Symbol]                       0x00002978   Section        0  lib_ipd.o(.text.getIPDFinishFlag)
+    __arm_cp.5_0                             0x00002988   Number         4  lib_ipd.o(.text.getIPDFinishFlag)
+    [Anonymous Symbol]                       0x0000298c   Section        0  fluxobserve.o(.text.getLibMaxObjNumber)
+    [Anonymous Symbol]                       0x00002990   Section        0  fluxobserve.o(.text.getMotorDaxisVoltFormObjId)
+    [Anonymous Symbol]                       0x000029a0   Section        0  fluxobserve.o(.text.getMotorPowerFromObjId)
+    [Anonymous Symbol]                       0x000029c8   Section        0  fluxobserve.o(.text.getMotorQaxisVoltFormObjId)
+    [Anonymous Symbol]                       0x000029d8   Section        0  onthefly.o(.text.getOnFlyFreqResultFromObjId)
+    __arm_cp.2_0                             0x000029e4   Number         4  onthefly.o(.text.getOnFlyFreqResultFromObjId)
+    [Anonymous Symbol]                       0x000029e8   Section        0  fluxobserve.o(.text.getRunStatus)
+    [Anonymous Symbol]                       0x000029f8   Section        0  fluxobserve.o(.text.getVolt2FreqCalcPara)
+    __arm_cp.93_0                            0x00002a08   Number         4  fluxobserve.o(.text.getVolt2FreqCalcPara)
+    [Anonymous Symbol]                       0x00002a0c   Section        0  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_79                           0x00002bb8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_80                           0x00002bbc   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_83                           0x00002bc8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_85                           0x00002bd0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_87                           0x00002bd8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_89                           0x00002be0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_91                           0x00002be8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_92                           0x00002bec   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_94                           0x00002c78   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_95                           0x00002c7c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_96                           0x00002c80   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_104                          0x00002cd0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_105                          0x00002cf0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_106                          0x00002cf4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_112                          0x00002de0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_113                          0x00002de4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_114                          0x00002de8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_115                          0x00002dec   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_116                          0x00002df0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_117                          0x000031f4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_118                          0x000031f8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_119                          0x000031fc   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_123                          0x0000320c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_125                          0x00003214   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_126                          0x00003218   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_128                          0x00003220   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_129                          0x00003468   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_130                          0x0000346c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_133                          0x00003478   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_134                          0x0000347c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_135                          0x00003480   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_136                          0x00003484   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_137                          0x00003488   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_138                          0x0000348c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_139                          0x00003490   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_141                          0x00003498   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_142                          0x0000349c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_143                          0x000034a0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_144                          0x000034a4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_145                          0x000034a8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_146                          0x000034ac   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_147                          0x000034b0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_148                          0x000034b4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_149                          0x000034b8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_150                          0x000034bc   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_152                          0x000034cc   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_157                          0x000038f8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_159                          0x00003900   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_163                          0x00003978   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_196                          0x0000397c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_165                          0x00003b88   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_166                          0x00003b8c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_167                          0x00003b90   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_169                          0x00003b98   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_170                          0x00003b9c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_171                          0x00003ba0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_172                          0x00003ba4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_175                          0x00003fd0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_178                          0x00003fdc   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_180                          0x00004378   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_181                          0x0000437c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_183                          0x00004644   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_184                          0x00004648   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_185                          0x00004ae4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_186                          0x00004ae8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_188                          0x00004af0   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_189                          0x00004af4   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_190                          0x00004af8   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_191                          0x00004afc   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_193                          0x00004f38   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_194                          0x00004f3c   Number         4  lto-llvm-caad6e.o(.text.main)
+    __arm_cp.20_37                           0x000053b0   Number         4  lto-llvm-caad6e.o(.text.main)
+    motorControlParaInitDone                 0x000053b5   Thumb Code   600  lto-llvm-caad6e.o(.text.motorControlParaInitDone)
+    [Anonymous Symbol]                       0x000053b4   Section        0  lto-llvm-caad6e.o(.text.motorControlParaInitDone)
+    __arm_cp.60_0                            0x0000560c   Number         4  lto-llvm-caad6e.o(.text.motorControlParaInitDone)
+    __arm_cp.60_1                            0x00005610   Number         4  lto-llvm-caad6e.o(.text.motorControlParaInitDone)
+    __arm_cp.60_2                            0x00005614   Number         4  lto-llvm-caad6e.o(.text.motorControlParaInitDone)
+    [Anonymous Symbol]                       0x00005618   Section        0  fluxobserve.o(.text.setDeadCompFactor)
+    [Anonymous Symbol]                       0x00005624   Section        0  fluxobserve.o(.text.setLibWorkMode)
+    [Anonymous Symbol]                       0x00005634   Section        0  fluxobserve.o(.text.setOBElectAngleEst)
+    [Anonymous Symbol]                       0x00005648   Section        0  fluxobserve.o(.text.setObserPLLKpKi)
+    [Anonymous Symbol]                       0x0000565c   Section        0  fluxobserve.o(.text.setOverModuFac)
+    __arm_cp.74_0                            0x0000566c   Number         4  fluxobserve.o(.text.setOverModuFac)
+    __arm_cp.74_1                            0x00005670   Number         4  fluxobserve.o(.text.setOverModuFac)
+    [Anonymous Symbol]                       0x00005674   Section        0  fluxobserve.o(.text.setTrakingModeDisable)
+    [Anonymous Symbol]                       0x00005684   Section        0  fluxobserve.o(.text.setTrakingModeEnable)
+    updateAcrParaMALayer                     0x00005699   Thumb Code   168  lto-llvm-caad6e.o(.text.updateAcrParaMALayer)
+    [Anonymous Symbol]                       0x00005698   Section        0  lto-llvm-caad6e.o(.text.updateAcrParaMALayer)
+    [Anonymous Symbol]                       0x00005740   Section        0  fluxobserve.o(.text.vectorVFcontrol)
+    __arm_cp.77_0                            0x000057d0   Number         4  fluxobserve.o(.text.vectorVFcontrol)
+    __arm_cp.77_1                            0x000057d4   Number         4  fluxobserve.o(.text.vectorVFcontrol)
+    i.Read_Trim                              0x000057d8   Section        0  lks32mc03x_nvr.o(i.Read_Trim)
+    i.__scatterload_copy                     0x00005838   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00005846   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00005848   Section       14  handlers.o(i.__scatterload_zeroinit)
+    gS_MotorHalDrvHandleM                    0x00005858   Data          44  lto-llvm-caad6e.o(.rodata)
+    [Anonymous Symbol]                       0x00005858   Section        0  lto-llvm-caad6e.o(.rodata)
+    hSin_Cos_Table                           0x00005884   Data         512  lto-llvm-caad6e.o(.rodata)
+    gS_MotorFocHandleM                       0x00005a84   Data           4  lto-llvm-caad6e.o(.rodata)
+    [Anonymous Symbol]                       0x00005ca8   Section        0  lto-llvm-caad6e.o(.rodata.str1.1)
+    tS_DrvCfgPara                            0x00007e08   Data         500  lto-llvm-caad6e.o(.ARM.__at_0x7E08)
+    [Anonymous Symbol]                       0x00007e08   Section        0  lto-llvm-caad6e.o(.ARM.__at_0x7E08)
+    gs_bDownReqCmd                           0x20000000   Data           1  lto-llvm-caad6e.o(.ARM.__at_0x20000000)
+    [Anonymous Symbol]                       0x20000000   Section        0  lto-llvm-caad6e.o(.ARM.__at_0x20000000)
+    gs_bDownAckStatus                        0x20000004   Data           1  lto-llvm-caad6e.o(.ARM.__at_0x20000004)
+    [Anonymous Symbol]                       0x20000004   Section        0  lto-llvm-caad6e.o(.ARM.__at_0x20000004)
+    runM0SpdSetpoint                         0x20000008   Data           4  lto-llvm-caad6e.o(.data)
+    [Anonymous Symbol]                       0x20000008   Section        0  lto-llvm-caad6e.o(.data)
+    Rttstru                                  0x20000010   Data           8  lto-llvm-caad6e.o(.bss)
+    [Anonymous Symbol]                       0x20000010   Section        0  lto-llvm-caad6e.o(.bss)
+    gs_bDownloadStatus                       0x20000018   Data           1  lto-llvm-caad6e.o(.bss)
+    gS_PhyObjInstanceM                       0x2000001c   Data         336  lto-llvm-caad6e.o(.bss)
+    gs_timeCnt                               0x2000016c   Data           2  lto-llvm-caad6e.o(.bss)
+    tS_MotorFocParM                          0x20000170   Data         128  lto-llvm-caad6e.o(.bss)
+    gS_FocObjM                               0x200001f0   Data          84  lto-llvm-caad6e.o(.bss)
+    gS_FocElementObjM                        0x20000244   Data         136  lto-llvm-caad6e.o(.bss)
+    g_buMdPWMONDelay                         0x200002cc   Data           1  lto-llvm-caad6e.o(.bss)
+    minVolt2CoreData                         0x200002d0   Data           4  lto-llvm-caad6e.o(.bss)
+    sS_MACtrProc                             0x200002d8   Data         272  lto-llvm-caad6e.o(.bss)
+    sS_MASubBlock                            0x200003e8   Data         376  lto-llvm-caad6e.o(.bss)
+    sS_UACtrlProc                            0x20000560   Data          88  lto-llvm-caad6e.o(.bss)
+    runM0UaCmd                               0x200005b8   Data           1  lto-llvm-caad6e.o(.bss)
+    _SEGGER_RTT                              0x200005bc   Data         168  lto-llvm-caad6e.o(.bss)
+    bRttBuf                                  0x20000664   Data         512  lto-llvm-caad6e.o(.bss)
+    _acUpBuffer                              0x20000864   Data         128  lto-llvm-caad6e.o(.bss)
+    _acDownBuffer                            0x200008e4   Data          16  lto-llvm-caad6e.o(.bss)
+    Stru_DAC_CHECK.1                         0x200008f4   Data           2  lto-llvm-caad6e.o(.bss)
+    Stru_DAC_CHECK.2                         0x200008f6   Data           2  lto-llvm-caad6e.o(.bss)
+    g_hDriverPolarity.0                      0x200008f8   Data           2  lto-llvm-caad6e.o(.bss)
+    gS_TaskScheduler.2                       0x200008fc   Data           1  lto-llvm-caad6e.o(.bss)
+    gS_TaskScheduler.3                       0x20000900   Data           2  lto-llvm-caad6e.o(.bss)
+    gS_TaskScheduler.4                       0x20000904   Data           2  lto-llvm-caad6e.o(.bss)
+    STACK                                    0x20000ad8   Section     1024  startup_lks32mc03x.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$IEEEF$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_lks32mc03x.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  startup_lks32mc03x.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  startup_lks32mc03x.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000d5   Thumb Code    14  startup_lks32mc03x.o(.text)
+    NMI_Handler                              0x000000e3   Thumb Code     2  startup_lks32mc03x.o(.text)
+    SVC_Handler                              0x000000e7   Thumb Code     2  startup_lks32mc03x.o(.text)
+    PendSV_Handler                           0x000000e9   Thumb Code     2  startup_lks32mc03x.o(.text)
+    DMA_IRQHandler                           0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    GPIO_IRQHandler                          0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    I2C_IRQHandler                           0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    MCPWM0_IRQHandler                        0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    MCPWM1_IRQHandler                        0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    SPI_IRQHandler                           0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    SW_IRQHandler                            0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    UART_IRQHandler                          0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    WAKE_IRQHandler                          0x000000ed   Thumb Code     0  startup_lks32mc03x.o(.text)
+    __aeabi_uldivmod                         0x000000fd   Thumb Code    96  uldiv.o(.text)
+    __aeabi_ldivmod                          0x0000015d   Thumb Code    76  ldiv.o(.text)
+    __aeabi_lmul                             0x000001a9   Thumb Code    48  llmul.o(.text)
+    _ll_mul                                  0x000001a9   Thumb Code     0  llmul.o(.text)
+    __aeabi_llsl                             0x000001d9   Thumb Code    32  llshl.o(.text)
+    _ll_shift_l                              0x000001d9   Thumb Code     0  llshl.o(.text)
+    __aeabi_memset                           0x000001f9   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x000001f9   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x000001f9   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x00000207   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x00000207   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x00000207   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0000020b   Thumb Code    18  memseta.o(.text)
+    __aeabi_uidiv                            0x0000021d   Thumb Code     0  uidiv_div0.o(.text)
+    __aeabi_uidivmod                         0x0000021d   Thumb Code    62  uidiv_div0.o(.text)
+    __aeabi_idiv                             0x0000025d   Thumb Code     0  idiv_div0.o(.text)
+    __aeabi_idivmod$div0                     0x0000025d   Thumb Code    74  idiv_div0.o(.text)
+    __aeabi_llsr                             0x000002ad   Thumb Code    34  llushr.o(.text)
+    _ll_ushift_r                             0x000002ad   Thumb Code     0  llushr.o(.text)
+    __scatterload                            0x000002d1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002d1   Thumb Code     0  init.o(.text)
+    __aeabi_memcpy                           0x000002f5   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x000002f5   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x000002f5   Thumb Code     0  memcpya.o(.text)
+    ADC_IRQHandler                           0x00000319   Thumb Code  1420  lto-llvm-caad6e.o(.text.ADC_IRQHandler)
+    App2CoreFreqTrans                        0x00000901   Thumb Code    12  lto-llvm-caad6e.o(.text.App2CoreFreqTrans)
+    BrakeStateCheck                          0x0000090d   Thumb Code    80  onthefly.o(.text.BrakeStateCheck)
+    BrakeStateCheckInit                      0x00000961   Thumb Code    10  onthefly.o(.text.BrakeStateCheckInit)
+    CMP_IRQHandler                           0x0000096b   Thumb Code     2  lto-llvm-caad6e.o(.text.CMP_IRQHandler)
+    CalcDcVoltPerUnit                        0x0000096d   Thumb Code    44  fluxobserve.o(.text.CalcDcVoltPerUnit)
+    CalcVectorVFPara                         0x00000999   Thumb Code   396  fluxobserve.o(.text.CalcVectorVFPara)
+    CalcVolCircle                            0x00000b39   Thumb Code   204  fluxobserve.o(.text.CalcVolCircle)
+    Calc_Atan                                0x00000c0d   Thumb Code   288  fluxobserve.o(.text.Calc_Atan)
+    CountLeadZero                            0x00000d55   Thumb Code    64  lto-llvm-caad6e.o(.text.CountLeadZero)
+    CurrentPIRegulator                       0x00000da5   Thumb Code    56  lto-llvm-caad6e.o(.text.CurrentPIRegulator)
+    Div_Functions                            0x00000ddd   Thumb Code    12  lto-llvm-caad6e.o(.text.Div_Functions)
+    FluxObserveParaCalc                      0x00000f35   Thumb Code  1224  fluxobserve.o(.text.FluxObserveParaCalc)
+    HALL_IRQHandler                          0x00001425   Thumb Code     2  lto-llvm-caad6e.o(.text.HALL_IRQHandler)
+    HardFault_Handler                        0x00001427   Thumb Code     2  lto-llvm-caad6e.o(.text.HardFault_Handler)
+    IPDEst_SMotor                            0x00001429   Thumb Code   788  lib_ipd.o(.text.IPDEst_SMotor)
+    IQ15SqrtIQ31                             0x0000187d   Thumb Code   256  fluxobserve.o(.text.IQ15SqrtIQ31)
+    InitDQCurRefGenWithWeakenFlux            0x00001981   Thumb Code    88  fluxobserve.o(.text.InitDQCurRefGenWithWeakenFlux)
+    InitIPD                                  0x00001b61   Thumb Code   192  lib_ipd.o(.text.InitIPD)
+    InitPmFluxOB                             0x00001c29   Thumb Code   128  fluxobserve.o(.text.InitPmFluxOB)
+    OnTheFlyDetectInit                       0x00001de5   Thumb Code    56  onthefly.o(.text.OnTheFlyDetectInit)
+    OnTheFlyDetectPro                        0x00001e25   Thumb Code   144  onthefly.o(.text.OnTheFlyDetectPro)
+    PmsmFluxObserve1ms                       0x00001ebd   Thumb Code   184  fluxobserve.o(.text.PmsmFluxObserve1ms)
+    PmsmFluxObserve_Full                     0x00001f79   Thumb Code   476  fluxobserve.o(.text.PmsmFluxObserve_Full)
+    QCurRefGenValue                          0x00002155   Thumb Code    60  fluxobserve.o(.text.QCurRefGenValue)
+    RegisterObjPar                           0x00002191   Thumb Code    12  fluxobserve.o(.text.RegisterObjPar)
+    RegisterObsAcrObj                        0x0000219d   Thumb Code    20  fluxobserve.o(.text.RegisterObsAcrObj)
+    RegisterObsAngleObj                      0x000021b1   Thumb Code    16  fluxobserve.o(.text.RegisterObsAngleObj)
+    RegisterObsCurObj                        0x000021c1   Thumb Code    20  fluxobserve.o(.text.RegisterObsCurObj)
+    RegisterObsGainObj                       0x000021d9   Thumb Code    16  fluxobserve.o(.text.RegisterObsGainObj)
+    RegisterObsHDMDInfor                     0x000021e9   Thumb Code    20  fluxobserve.o(.text.RegisterObsHDMDInfor)
+    RegisterObsHalDrvHandle                  0x000021fd   Thumb Code    16  fluxobserve.o(.text.RegisterObsHalDrvHandle)
+    RegisterObsMAMDInfor                     0x00002211   Thumb Code    20  fluxobserve.o(.text.RegisterObsMAMDInfor)
+    RegisterObsPar                           0x00002225   Thumb Code    12  fluxobserve.o(.text.RegisterObsPar)
+    RegisterObsSpeedObj                      0x00002231   Thumb Code    16  fluxobserve.o(.text.RegisterObsSpeedObj)
+    RegisterObsStatorCurObj                  0x00002241   Thumb Code    20  fluxobserve.o(.text.RegisterObsStatorCurObj)
+    RegisterObsTcObj                         0x00002255   Thumb Code    16  fluxobserve.o(.text.RegisterObsTcObj)
+    RegisterObsVolObj                        0x00002265   Thumb Code    16  fluxobserve.o(.text.RegisterObsVolObj)
+    RegisterSamplingEv                       0x00002279   Thumb Code    12  fluxobserve.o(.text.RegisterSamplingEv)
+    RegisterSamplingStru                     0x00002285   Thumb Code    16  fluxobserve.o(.text.RegisterSamplingStru)
+    RegisterSvpwmCmprTmr                     0x00002295   Thumb Code    12  fluxobserve.o(.text.RegisterSvpwmCmprTmr)
+    RegisterSvpwmParObj                      0x000022a1   Thumb Code    20  fluxobserve.o(.text.RegisterSvpwmParObj)
+    SVPWM_1ShuntGetPhaseIaNIb                0x000022b9   Thumb Code    22  lto-llvm-caad6e.o(.text.SVPWM_1ShuntGetPhaseIaNIb)
+    SVPWM_2ShuntGetPhaseIaIb                 0x000022cf   Thumb Code    26  lto-llvm-caad6e.o(.text.SVPWM_2ShuntGetPhaseIaIb)
+    SVPWM_2Shunt_En1                         0x000022e9   Thumb Code   332  fluxobserve.o(.text.SVPWM_2Shunt_En1)
+    SetDCurRefInitValue                      0x00002445   Thumb Code    12  fluxobserve.o(.text.SetDCurRefInitValue)
+    SysTick_Handler                          0x00002695   Thumb Code     2  lto-llvm-caad6e.o(.text.SysTick_Handler)
+    SystemInit                               0x00002699   Thumb Code   308  lto-llvm-caad6e.o(.text.SystemInit)
+    TIMER0_IRQHandler                        0x000027f1   Thumb Code    36  lto-llvm-caad6e.o(.text.TIMER0_IRQHandler)
+    TIMER1_IRQHandler                        0x00002825   Thumb Code     2  lto-llvm-caad6e.o(.text.TIMER1_IRQHandler)
+    Trig_Functions                           0x00002829   Thumb Code   108  lto-llvm-caad6e.o(.text.Trig_Functions)
+    getCurLoopCloseStatusFromOB              0x00002899   Thumb Code    16  fluxobserve.o(.text.getCurLoopCloseStatusFromOB)
+    getDCurRefGenWithEnWeakenFlux            0x000028a9   Thumb Code   164  fluxobserve.o(.text.getDCurRefGenWithEnWeakenFlux)
+    getElectAngleEst                         0x0000295d   Thumb Code    16  fluxobserve.o(.text.getElectAngleEst)
+    getIPDAngleLib                           0x0000296d   Thumb Code    12  lib_ipd.o(.text.getIPDAngleLib)
+    getIPDFinishFlag                         0x00002979   Thumb Code    16  lib_ipd.o(.text.getIPDFinishFlag)
+    getLibMaxObjNumber                       0x0000298d   Thumb Code     4  fluxobserve.o(.text.getLibMaxObjNumber)
+    getMotorDaxisVoltFormObjId               0x00002991   Thumb Code    16  fluxobserve.o(.text.getMotorDaxisVoltFormObjId)
+    getMotorPowerFromObjId                   0x000029a1   Thumb Code    40  fluxobserve.o(.text.getMotorPowerFromObjId)
+    getMotorQaxisVoltFormObjId               0x000029c9   Thumb Code    16  fluxobserve.o(.text.getMotorQaxisVoltFormObjId)
+    getOnFlyFreqResultFromObjId              0x000029d9   Thumb Code    12  onthefly.o(.text.getOnFlyFreqResultFromObjId)
+    getRunStatus                             0x000029e9   Thumb Code    16  fluxobserve.o(.text.getRunStatus)
+    getVolt2FreqCalcPara                     0x000029f9   Thumb Code    16  fluxobserve.o(.text.getVolt2FreqCalcPara)
+    main                                     0x00002a0d   Thumb Code 10660  lto-llvm-caad6e.o(.text.main)
+    setDeadCompFactor                        0x00005619   Thumb Code    12  fluxobserve.o(.text.setDeadCompFactor)
+    setLibWorkMode                           0x00005625   Thumb Code    16  fluxobserve.o(.text.setLibWorkMode)
+    setOBElectAngleEst                       0x00005635   Thumb Code    20  fluxobserve.o(.text.setOBElectAngleEst)
+    setObserPLLKpKi                          0x00005649   Thumb Code    20  fluxobserve.o(.text.setObserPLLKpKi)
+    setOverModuFac                           0x0000565d   Thumb Code    16  fluxobserve.o(.text.setOverModuFac)
+    setTrakingModeDisable                    0x00005675   Thumb Code    16  fluxobserve.o(.text.setTrakingModeDisable)
+    setTrakingModeEnable                     0x00005685   Thumb Code    20  fluxobserve.o(.text.setTrakingModeEnable)
+    vectorVFcontrol                          0x00005741   Thumb Code   144  fluxobserve.o(.text.vectorVFcontrol)
+    Read_Trim                                0x000057d9   Thumb Code    90  lks32mc03x_nvr.o(i.Read_Trim)
+    __scatterload_copy                       0x00005839   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00005847   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00005849   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    atantab1                                 0x00005a88   Data         544  fluxobserve.o(.rodata.atantab1)
+    Region$$Table$$Base                      0x00005cb8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00005cd8   Number         0  anon$$obj.o(Region$$Table)
+    gS_AFWR_KI                               0x20000002   Data           2  fluxobservercfg.o(.data.gS_AFWR_KI)
+    gS_AFWR_RSV_FAC                          0x2000000c   Data           2  fluxobservercfg.o(.data.gS_AFWR_RSV_FAC)
+    gS_OVER_MODU_FAC                         0x2000000e   Data           2  fluxobservercfg.o(.data.gS_OVER_MODU_FAC)
+    gS_AEMFRM_M                              0x20000908   Data          28  fluxobservercfg.o(.bss.gS_AEMFRM_M)
+    gS_AEMFRT_M                              0x20000924   Data          28  fluxobservercfg.o(.bss.gS_AEMFRT_M)
+    gS_AFWR_KP                               0x20000940   Data           2  fluxobservercfg.o(.bss.gS_AFWR_KP)
+    gS_DQCurRef                              0x20000944   Data          16  fluxobservercfg.o(.bss.gS_DQCurRef)
+    gS_DcBusVolM                             0x20000954   Data          12  fluxobservercfg.o(.bss.gS_DcBusVolM)
+    gS_FieldW                                0x20000960   Data          20  fluxobservercfg.o(.bss.gS_FieldW)
+    gS_IPDM                                  0x20000974   Data          34  fluxobservercfg.o(.bss.gS_IPDM)
+    gS_MotorObsM                             0x20000998   Data         228  fluxobservercfg.o(.bss.gS_MotorObsM)
+    gS_OnFlyM                                0x20000a7c   Data          44  fluxobservercfg.o(.bss.gS_OnFlyM)
+    gS_SvpwmM                                0x20000aa8   Data          16  fluxobservercfg.o(.bss.gS_SvpwmM)
+    gS_VectorVF                              0x20000ab8   Data          32  fluxobservercfg.o(.bss.gS_VectorVF)
+    __initial_sp                             0x20000ed8   Data           0  startup_lks32mc03x.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00005ce8, Max: 0x00007e00, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00005cd8, Max: 0x00007e00, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO           20    RESET               startup_lks32mc03x.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO          364  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO          387    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO          390    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          392    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO          394    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO          395    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          397    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO          399    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO          388    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x000000d4   0x00000028   Code   RO           21    .text               startup_lks32mc03x.o
+    0x000000fc   0x000000fc   0x00000060   Code   RO          375    .text               mc_p.l(uldiv.o)
+    0x0000015c   0x0000015c   0x0000004c   Code   RO          377    .text               mc_p.l(ldiv.o)
+    0x000001a8   0x000001a8   0x00000030   Code   RO          379    .text               mc_p.l(llmul.o)
+    0x000001d8   0x000001d8   0x00000020   Code   RO          381    .text               mc_p.l(llshl.o)
+    0x000001f8   0x000001f8   0x00000024   Code   RO          383    .text               mc_p.l(memseta.o)
+    0x0000021c   0x0000021c   0x0000003e   Code   RO          405    .text               mc_p.l(uidiv_div0.o)
+    0x0000025a   0x0000025a   0x00000002   PAD
+    0x0000025c   0x0000025c   0x00000050   Code   RO          407    .text               mc_p.l(idiv_div0.o)
+    0x000002ac   0x000002ac   0x00000022   Code   RO          411    .text               mc_p.l(llushr.o)
+    0x000002ce   0x000002ce   0x00000002   PAD
+    0x000002d0   0x000002d0   0x00000024   Code   RO          413    .text               mc_p.l(init.o)
+    0x000002f4   0x000002f4   0x00000024   Code   RO          557    .text               mc_p.l(memcpya.o)
+    0x00000318   0x00000318   0x000005bc   Code   RO          442    .text.ADC_IRQHandler  lto-llvm-caad6e.o
+    0x000008d4   0x000008d4   0x00000002   Code   RO          422    .text.AcquireBmefSamplingResultsM0  lto-llvm-caad6e.o
+    0x000008d6   0x000008d6   0x00000002   PAD
+    0x000008d8   0x000008d8   0x00000010   Code   RO          416    .text.AcquireCurSamplingResultsM0  lto-llvm-caad6e.o
+    0x000008e8   0x000008e8   0x0000000c   Code   RO          420    .text.AcquireNTCSamplingResultsM0  lto-llvm-caad6e.o
+    0x000008f4   0x000008f4   0x0000000c   Code   RO          418    .text.AcquireVdcSamplingResultsM0  lto-llvm-caad6e.o
+    0x00000900   0x00000900   0x0000000c   Code   RO          460    .text.App2CoreFreqTrans  lto-llvm-caad6e.o
+    0x0000090c   0x0000090c   0x00000054   Code   RO          333    .text.BrakeStateCheck  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(onthefly.o)
+    0x00000960   0x00000960   0x0000000a   Code   RO          335    .text.BrakeStateCheckInit  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(onthefly.o)
+    0x0000096a   0x0000096a   0x00000002   Code   RO          450    .text.CMP_IRQHandler  lto-llvm-caad6e.o
+    0x0000096c   0x0000096c   0x0000002c   Code   RO          158    .text.CalcDcVoltPerUnit  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00000998   0x00000998   0x000001a0   Code   RO          252    .text.CalcVectorVFPara  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00000b38   0x00000b38   0x000000d4   Code   RO          160    .text.CalcVolCircle  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00000c0c   0x00000c0c   0x00000134   Code   RO          150    .text.Calc_Atan     lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00000d40   0x00000d40   0x00000002   Code   RO          424    .text.ChangeADChanelCFGM0  lto-llvm-caad6e.o
+    0x00000d42   0x00000d42   0x00000002   PAD
+    0x00000d44   0x00000d44   0x00000010   Code   RO          436    .text.ClrEPWM0_breakInStatus  lto-llvm-caad6e.o
+    0x00000d54   0x00000d54   0x00000050   Code   RO          458    .text.CountLeadZero  lto-llvm-caad6e.o
+    0x00000da4   0x00000da4   0x00000038   Code   RO          532    .text.CurrentPIRegulator  lto-llvm-caad6e.o
+    0x00000ddc   0x00000ddc   0x00000010   Code   RO          464    .text.Div_Functions  lto-llvm-caad6e.o
+    0x00000dec   0x00000dec   0x00000064   Code   RO          430    .text.EPWM0_Charge  lto-llvm-caad6e.o
+    0x00000e50   0x00000e50   0x00000030   Code   RO          428    .text.EPWM0_OutPut  lto-llvm-caad6e.o
+    0x00000e80   0x00000e80   0x000000b4   Code   RO          540    .text.FaultInitTask  lto-llvm-caad6e.o
+    0x00000f34   0x00000f34   0x000004e0   Code   RO          140    .text.FluxObserveParaCalc  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00001414   0x00001414   0x00000010   Code   RO          434    .text.GetEPWM0_breakInStatus  lto-llvm-caad6e.o
+    0x00001424   0x00001424   0x00000002   Code   RO          444    .text.HALL_IRQHandler  lto-llvm-caad6e.o
+    0x00001426   0x00001426   0x00000002   Code   RO          454    .text.HardFault_Handler  lto-llvm-caad6e.o
+    0x00001428   0x00001428   0x0000034c   Code   RO          311    .text.IPDEst_SMotor  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(lib_ipd.o)
+    0x00001774   0x00001774   0x00000108   Code   RO          317    .text.IPD_AngleCalc  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(lib_ipd.o)
+    0x0000187c   0x0000187c   0x00000104   Code   RO          174    .text.IQ15SqrtIQ31  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00001980   0x00001980   0x00000068   Code   RO          266    .text.InitDQCurRefGenWithWeakenFlux  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000019e8   0x000019e8   0x000000b0   Code   RO          432    .text.InitEPWM0ChargeEnd  lto-llvm-caad6e.o
+    0x00001a98   0x00001a98   0x000000c8   Code   RO          470    .text.InitFocVar    lto-llvm-caad6e.o
+    0x00001b60   0x00001b60   0x000000c8   Code   RO          305    .text.InitIPD       lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(lib_ipd.o)
+    0x00001c28   0x00001c28   0x00000098   Code   RO          138    .text.InitPmFluxOB  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00001cc0   0x00001cc0   0x00000028   Code   RO          426    .text.MCPWM0_RegUpdate  lto-llvm-caad6e.o
+    0x00001ce8   0x00001ce8   0x000000fc   Code   RO          438    .text.MCPWM_init    lto-llvm-caad6e.o
+    0x00001de4   0x00001de4   0x00000040   Code   RO          329    .text.OnTheFlyDetectInit  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(onthefly.o)
+    0x00001e24   0x00001e24   0x00000098   Code   RO          327    .text.OnTheFlyDetectPro  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(onthefly.o)
+    0x00001ebc   0x00001ebc   0x000000bc   Code   RO          226    .text.PmsmFluxObserve1ms  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00001f78   0x00001f78   0x000001dc   Code   RO          154    .text.PmsmFluxObserve_Full  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002154   0x00002154   0x0000003c   Code   RO          270    .text.QCurRefGenValue  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002190   0x00002190   0x0000000c   Code   RO          102    .text.RegisterObjPar  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x0000219c   0x0000219c   0x00000014   Code   RO          116    .text.RegisterObsAcrObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000021b0   0x000021b0   0x00000010   Code   RO          108    .text.RegisterObsAngleObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000021c0   0x000021c0   0x00000018   Code   RO          112    .text.RegisterObsCurObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000021d8   0x000021d8   0x00000010   Code   RO          120    .text.RegisterObsGainObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000021e8   0x000021e8   0x00000014   Code   RO          134    .text.RegisterObsHDMDInfor  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000021fc   0x000021fc   0x00000014   Code   RO          132    .text.RegisterObsHalDrvHandle  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002210   0x00002210   0x00000014   Code   RO          136    .text.RegisterObsMAMDInfor  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002224   0x00002224   0x0000000c   Code   RO          104    .text.RegisterObsPar  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002230   0x00002230   0x00000010   Code   RO          110    .text.RegisterObsSpeedObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002240   0x00002240   0x00000014   Code   RO          130    .text.RegisterObsStatorCurObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002254   0x00002254   0x00000010   Code   RO          118    .text.RegisterObsTcObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002264   0x00002264   0x00000014   Code   RO          114    .text.RegisterObsVolObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002278   0x00002278   0x0000000c   Code   RO          124    .text.RegisterSamplingEv  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002284   0x00002284   0x00000010   Code   RO          122    .text.RegisterSamplingStru  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002294   0x00002294   0x0000000c   Code   RO          128    .text.RegisterSvpwmCmprTmr  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000022a0   0x000022a0   0x00000018   Code   RO          106    .text.RegisterSvpwmParObj  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000022b8   0x000022b8   0x00000016   Code   RO          504    .text.SVPWM_1ShuntGetPhaseIaNIb  lto-llvm-caad6e.o
+    0x000022ce   0x000022ce   0x0000001a   Code   RO          468    .text.SVPWM_2ShuntGetPhaseIaIb  lto-llvm-caad6e.o
+    0x000022e8   0x000022e8   0x0000015c   Code   RO          208    .text.SVPWM_2Shunt_En1  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002444   0x00002444   0x00000010   Code   RO          268    .text.SetDCurRefInitValue  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002454   0x00002454   0x00000240   Code   RO          538    .text.StateInit     lto-llvm-caad6e.o
+    0x00002694   0x00002694   0x00000002   Code   RO          452    .text.SysTick_Handler  lto-llvm-caad6e.o
+    0x00002696   0x00002696   0x00000002   PAD
+    0x00002698   0x00002698   0x00000158   Code   RO          440    .text.SystemInit    lto-llvm-caad6e.o
+    0x000027f0   0x000027f0   0x00000034   Code   RO          446    .text.TIMER0_IRQHandler  lto-llvm-caad6e.o
+    0x00002824   0x00002824   0x00000002   Code   RO          448    .text.TIMER1_IRQHandler  lto-llvm-caad6e.o
+    0x00002826   0x00002826   0x00000002   PAD
+    0x00002828   0x00002828   0x00000070   Code   RO          462    .text.Trig_Functions  lto-llvm-caad6e.o
+    0x00002898   0x00002898   0x00000010   Code   RO          236    .text.getCurLoopCloseStatusFromOB  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000028a8   0x000028a8   0x000000b4   Code   RO          262    .text.getDCurRefGenWithEnWeakenFlux  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x0000295c   0x0000295c   0x00000010   Code   RO          180    .text.getElectAngleEst  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x0000296c   0x0000296c   0x0000000c   Code   RO          315    .text.getIPDAngleLib  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(lib_ipd.o)
+    0x00002978   0x00002978   0x00000014   Code   RO          313    .text.getIPDFinishFlag  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(lib_ipd.o)
+    0x0000298c   0x0000298c   0x00000004   Code   RO          284    .text.getLibMaxObjNumber  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002990   0x00002990   0x00000010   Code   RO          168    .text.getMotorDaxisVoltFormObjId  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000029a0   0x000029a0   0x00000028   Code   RO          172    .text.getMotorPowerFromObjId  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000029c8   0x000029c8   0x00000010   Code   RO          170    .text.getMotorQaxisVoltFormObjId  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000029d8   0x000029d8   0x00000010   Code   RO          331    .text.getOnFlyFreqResultFromObjId  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(onthefly.o)
+    0x000029e8   0x000029e8   0x00000010   Code   RO          234    .text.getRunStatus  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000029f8   0x000029f8   0x00000014   Code   RO          286    .text.getVolt2FreqCalcPara  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00002a0c   0x00002a0c   0x000029a8   Code   RO          456    .text.main          lto-llvm-caad6e.o
+    0x000053b4   0x000053b4   0x00000264   Code   RO          536    .text.motorControlParaInitDone  lto-llvm-caad6e.o
+    0x00005618   0x00005618   0x0000000c   Code   RO          256    .text.setDeadCompFactor  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005624   0x00005624   0x00000010   Code   RO          100    .text.setLibWorkMode  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005634   0x00005634   0x00000014   Code   RO          188    .text.setOBElectAngleEst  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005648   0x00005648   0x00000014   Code   RO          242    .text.setObserPLLKpKi  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x0000565c   0x0000565c   0x00000018   Code   RO          248    .text.setOverModuFac  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005674   0x00005674   0x00000010   Code   RO          240    .text.setTrakingModeDisable  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005684   0x00005684   0x00000014   Code   RO          238    .text.setTrakingModeEnable  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005698   0x00005698   0x000000a8   Code   RO          466    .text.updateAcrParaMALayer  lto-llvm-caad6e.o
+    0x00005740   0x00005740   0x00000098   Code   RO          254    .text.vectorVFcontrol  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x000057d8   0x000057d8   0x00000060   Code   RO           55    i.Read_Trim         lks32mc03x_nvr.lib(lks32mc03x_nvr.o)
+    0x00005838   0x00005838   0x0000000e   Code   RO          563    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00005846   0x00005846   0x00000002   Code   RO          564    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00005848   0x00005848   0x0000000e   Code   RO          565    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00005856   0x00005856   0x00000002   PAD
+    0x00005858   0x00005858   0x00000230   Data   RO          542    .rodata             lto-llvm-caad6e.o
+    0x00005a88   0x00005a88   0x00000220   Data   RO          291    .rodata.atantab1    lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobserve.o)
+    0x00005ca8   0x00005ca8   0x00000010   Data   RO          549    .rodata.str1.1      lto-llvm-caad6e.o
+    0x00005cb8   0x00005cb8   0x00000020   Data   RO          562    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00005cd8, Size: 0x00000ed8, Max: 0x00001000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00005cd8   0x00000001   Data   RW          545    .ARM.__at_0x20000000  lto-llvm-caad6e.o
+    0x20000001   0x00005cd9   0x00000001   PAD
+    0x20000002   0x00005cda   0x00000002   Data   RW          346    .data.gS_AFWR_KI    lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000004   0x00005cdc   0x00000001   Data   RW          546    .ARM.__at_0x20000004  lto-llvm-caad6e.o
+    0x20000005   0x00005cdd   0x00000003   PAD
+    0x20000008   0x00005ce0   0x00000004   Data   RW          548    .data               lto-llvm-caad6e.o
+    0x2000000c   0x00005ce4   0x00000002   Data   RW          347    .data.gS_AFWR_RSV_FAC  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x2000000e   0x00005ce6   0x00000002   Data   RW          348    .data.gS_OVER_MODU_FAC  lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000010        -       0x000008f6   Zero   RW          543    .bss                lto-llvm-caad6e.o
+    0x20000906   0x00005ce8   0x00000002   PAD
+    0x20000908        -       0x0000001c   Zero   RW          350    .bss.gS_AEMFRM_M    lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000924        -       0x0000001c   Zero   RW          351    .bss.gS_AEMFRT_M    lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000940        -       0x00000002   Zero   RW          345    .bss.gS_AFWR_KP     lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000942   0x00005ce8   0x00000002   PAD
+    0x20000944        -       0x00000010   Zero   RW          358    .bss.gS_DQCurRef    lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000954        -       0x0000000c   Zero   RW          352    .bss.gS_DcBusVolM   lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000960        -       0x00000014   Zero   RW          356    .bss.gS_FieldW      lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000974        -       0x00000022   Zero   RW          355    .bss.gS_IPDM        lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000996   0x00005ce8   0x00000002   PAD
+    0x20000998        -       0x000000e4   Zero   RW          349    .bss.gS_MotorObsM   lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000a7c        -       0x0000002c   Zero   RW          354    .bss.gS_OnFlyM      lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000aa8        -       0x00000010   Zero   RW          353    .bss.gS_SvpwmM      lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000ab8        -       0x00000020   Zero   RW          357    .bss.gS_VectorVF    lks03x_Lib_R_V02_1_0a0Opt_AC6.lib(fluxobservercfg.o)
+    0x20000ad8        -       0x00000400   Zero   RW           18    STACK               startup_lks32mc03x.o
+
+
+
+  Load Region LR$$.ARM.__at_0x7E08 (Base: 0x00007e08, Size: 0x000001f4, Max: 0x000001f4, ABSOLUTE)
+
+    Execution Region ER$$.ARM.__at_0x7E08 (Exec base: 0x00007e08, Load base: 0x00007e08, Size: 0x000001f4, Max: 0x000001f4, ABSOLUTE, UNINIT)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00007e08   0x00007e08   0x000001f4   Data   RO          547    .ARM.__at_0x7E08    lto-llvm-caad6e.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+     15290        928       1076          6       2294     207788   lto-llvm-caad6e.o
+        40         14        192          0       1024        796   startup_lks32mc03x.o
+
+    ----------------------------------------------------------------------
+     15338        942       1300         10       3320     208584   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         8          0          0          4          2          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+      4732        200        544          0          0      84489   fluxobserve.o
+         0          0          0          6        460      12291   fluxobservercfg.o
+      1340         96          0          0          0      17409   lib_ipd.o
+       326         24          0          0          0      11855   onthefly.o
+        96          6          0          0          0       2012   lks32mc03x_nvr.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        80          6          0          0          0         72   idiv_div0.o
+        36          8          0          0          0         68   init.o
+        76          0          0          0          0         76   ldiv.o
+        48          0          0          0          0         72   llmul.o
+        32          0          0          0          0         68   llshl.o
+        34          0          0          0          0         68   llushr.o
+        36          0          0          0          0         60   memcpya.o
+        36          0          0          0          0        100   memseta.o
+        62          0          0          0          0         72   uidiv_div0.o
+        96          0          0          0          0         84   uldiv.o
+
+    ----------------------------------------------------------------------
+      7086        348        544          6        464     128796   Library Totals
+         6          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      6398        320        544          6        460     126044   lks03x_Lib_R_V02_1_0a0Opt_AC6.lib
+        96          6          0          0          0       2012   lks32mc03x_nvr.lib
+       586         22          0          0          0        740   mc_p.l
+
+    ----------------------------------------------------------------------
+      7086        348        544          6        464     128796   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     22424       1290       1844         16       3784     337120   Grand Totals
+     22424       1290       1844         16       3784     337120   ELF Image Totals
+     22424       1290       1844         16          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                24268 (  23.70kB)
+    Total RW  Size (RW Data + ZI Data)              3800 (   3.71kB)
+    Total ROM Size (Code + RO Data + RW Data)      24284 (  23.71kB)
+
+==============================================================================
+

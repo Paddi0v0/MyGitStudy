@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lksscope appVersion="v1.2.8">
+    <params>
+        <param value="0" name="linkType"/>
+        <param value="10000000" name="jClock"/>
+        <param value="1000000" name="uClock"/>
+        <param value="" name="commPort"/>
+        <param value="9600" name="commBaud"/>
+        <param value="" name="bleName"/>
+        <param value="" name="localIP"/>
+        <param value="" name="localPort"/>
+        <param value="" name="remoteIP"/>
+        <param value="" name="remotePort"/>
+        <param value="20000000" name="rttAddr"/>
+        <param value="1000" name="rttFreq"/>
+        <param value="10" name="sampleInterval"/>
+        <param value="50" name="uiInterval"/>
+        <param value="100" name="maxPoint"/>
+        <param value="1" name="checkAxf"/>
+    </params>
+    <layouts>
+        <param value="AdnQywADAAD/////////9QAAB4AAAAQKAAABjwAAAKAAAAXwAAADaAAAAAACAAAAB4AAAAAAAAAAIgAAB38AAAQJ" name="geometry"/>
+        <param value="AAAA/wAAAAD9AAAAAgAAAAAAAAFvAAADdvwCAAAAAvsAAAAIepdT41v8gioBAAAAWAAAAcAAAAAAAAAAAPwAAAIcAAABsgAAAAAA////+gAAAAACAAAAAvsAAAAIW/xRZVPYkc8BAAAAAP////8AAAAAAAAAAPsAAAAKgepbmk5JU9iRzwEAAAAA/////wAAAAAAAAAAAAAAAQAABg0AAAN2/AIAAAAS+wAAAAwAUgBUAFRUfU7kiEwAAAAATAAAAPAAAAAAAAAAAPsAAAAKAFIAVABUZXBjbgAAAAAA/////wAAAAAAAAAA+wAAAAZbxFtYVmgAAAAAAP////8AAAAAAAAAAPsAAAAIj9CITGXlX9cAAAAAAP////8AAAAAAAAAAPsAAAAGZXBQPAAxAQAAAVYAAAJ9AAAAAAAAAAD7AAAABmVwUDwAMAAAAAAA/////wAAAAAAAAAA+wAAAAZm8n6/ADAAAAAAAP////8AAAAAAAAAAPsAAAAQAFQAcgBpAGcAZwBlAHIAMAAAAAAA/////wAAAAAAAAAA+wAAAAZ1NWc6ADABAAAATAAAALUAAAAAAAAAAPsAAAAGdTVnOgAxAQAAAQUAAACBAAAAAAAAAAD7AAAABmVwUDwAMAAAAAAA/////wAAAAAAAAAA+wAAAAZ1NWc6ADABAAAATAAAAhAAAAAAAAAAAPsAAAAGdTVnOgAxAQAAAmAAAAFzAAAAAAAAAAD7AAAABmbyfr8AMAAAAAAA/////wAAAAAAAAAA+wAAABAAVAByAGkAZwBnAGUAcgAwAAAAAAD/////AAAAAAAAAAD8AAAAWAAAA3YAAAAAAP////wCAAAAAvsAAAAIZXBjbmY+eToBAAAAWAAAA3YAAAAAAAAAAPsAAAAGU8JlcAAwAgAAA0wAAAKRAAAENAAAAaf7AAAABlPCZXAAMAIAAAAAAAAAAAAAAGQAAAAe+wAAAAh1NWc6Y6dSNgAAAAAA/////wAAALEA////AAAHgAAAA3YAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAAA4AdABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAEgB0AG8AbwBsAEIAYQByAF8AMgEAAAEU/////wAAAAAAAAAA" name="state"/>
+    </layouts>
+    <tabs curPage="0">
+        <tab geometry="AdnQywADAAAAAAAAAAAAAAAABYgAAANCAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAAAAABYgAAANC" state="AAAA/wAAAAD9AAAAAgAAAAEAAAWJAAADQ/wCAAAACPsAAAAIj9CITGXlX9cAAAAAAP////8AAACBAP////sAAAAMAFIAVABUVH1O5IhMAAAAAAD/////AAAA8AD////8AAAAAAAAArgAAAE9AP////wBAAAAAvsAAAAKAFIAVABUZXBjbgEAAAAAAAACZQAAAIcA////+wAAAAQAVQBBAQAAAmkAAAMgAAAAawD////7AAAAEABVAEEAXwBjAHUAcgB2AGUBAAACvAAAAIcAAABIAP////sAAAAGZXBQPAAwAAAAAo0AAADeAAAAAAAAAAD7AAAABnU1ZzoAMQAAAAILAAABYAAAAAAAAAAA+wAAABAAVAByAGkAZwBnAGUAcgAwAAAAAAD/////AAAAzgD////7AAAABlPCZXAAMAIAAAHqAAACiQAABYkAAADcAAAAAwAAAAAAAAAA/AEAAAAB+wAAAAZm8n6/ADAAAAAAAP////8AAAB0AP///wAAAAAAAANDAAAABAAAAAQAAAAIAAAACPwAAAAA" checked="1" title="DRV0_UA"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAgAAAAEAAAWJAAAA2fwCAAAAAfsAAAAQAE0AQQBfAGMAdQByAHYAZQEAAAJqAAAA2QAAAEgA////AAAAAgAABYkAAAJm/AEAAAAB+wAAAAQATQBBAQAAAAAAAAWJAAAAawD///8AAAAAAAAA2QAAAAQAAAAEAAAACAAAAAj8AAAAAA==" checked="1" title="DRV0_MA"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAA/sAAAAEAE0ARAEAAAAAAAABhgAAAIEA////+wAAABQATQBEAF8ASQBkAGMAdQByAHYAZQEAAAGKAAAA7gAAAEgA////+wAAABYATQBEAF8ASQBxAF8AYwB1AHIAdgBlAQAAAnwAAADHAAAASAD///8AAAAAAAADQwAAAAQAAAAEAAAACAAAAAj8AAAAAA==" checked="1" title="DRV0_MD"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAAvsAAAAEAEgARAEAAAAAAAAB4wAAAIEA////+wAAABAASABEAF8AYwB1AHIAdgBlAQAAAecAAAFcAAAASAD///8AAAAAAAADQwAAAAQAAAAEAAAACAAAAAj8AAAAAA==" checked="1" title="DRV0_HD"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAABPsAAAAQAG8AYgBzAGUAcgB2AGUAcgEAAAAAAAABwwAAAIEA////+wAAABQAbwBiAHMAZQByAHYAZQBfAGkAZAEAAAHHAAAASAAAAEgA////+wAAABwAbwBiAHMAZQByAHYAZQByAF8AZABhAHgAaQBzAAAAAfIAAAF5AAAAAAAAAAD7AAAAFABvAGIAXwB1AGQAXwBlAHMAdABkAQAAAhMAAAEwAAAASAD///8AAAAAAAADQwAAAAQAAAAEAAAACAAAAAj8AAAAAA==" checked="1" title="observer_daxis"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAA/sAAAAUAG8AYgBzAGUAcgB2AGUAcgBfAHEBAAAAAAAAAScAAACBAP////sAAAAKAG8AYgBfAGkAcQEAAAErAAAA+QAAAEgA////+wAAAAoAbwBiAF8AdQBxAQAAAigAAAEbAAAASAD///8AAAAAAAADQwAAAAQAAAAEAAAACAAAAAj8AAAAAA==" checked="1" title="observer_qaxis"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAA/sAAAAWAE0AQQBfAFMAUABFAEUARABfAFAASQEAAAAAAAABmQAAAIEA////+wAAABAAUwBQAEUARQBEAF8AUABJAQAAAZ0AAAEZAAAASAD////7AAAAEgBTAFAARQBFAEQAXwBPAFUAVAEAAAK6AAAAiQAAAEgA////AAAAAAAAA0MAAAAEAAAABAAAAAgAAAAI/AAAAAA=" checked="1" title="DRV0_MA_SPEED_PI"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAA/sAAAAWAE0ARABfAEQAXwBDAFUAUgBfAFAASQEAAAAAAAABggAAAIEA////+wAAABAARABfAEMAVQBSAF8AUABJAQAAAYYAAAEwAAAASAD////7AAAAEgBEAF8AQwBVAFIAXwBPAFUAVAEAAAK6AAAAiQAAAEgA////AAAAAAAAA0MAAAAEAAAABAAAAAgAAAAI/AAAAAA=" checked="1" title="DRV0_MD_D_CUR_PI"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAA/sAAAAWAE0ARABfAFEAXwBDAFUAUgBfAFAASQEAAAAAAAABcgAAAIEA////+wAAABAAUQBfAEMAVQBSAF8AUABJAQAAAXYAAADqAAAASAD////7AAAAEgBRAF8AQwBVAFIAXwBPAFUAVAEAAAJkAAAA3wAAAEgA////AAAAAAAAA0MAAAAEAAAABAAAAAgAAAAI/AAAAAA=" checked="1" title="DRV0_MD_Q_CUR_PI"/>
+        <tab geometry="AdnQywADAAAAAAAAAAAAFAAABYgAAANWAAAAAAAAAAD//////////wAAAAAAAAAAB4AAAAAAAAAAFAAABYgAAANW" state="AAAA/wAAAAD9AAAAAQAAAAEAAAWJAAADQ/wCAAAAAfsAAAAQAGQAYQB0AGEAVABlAHMAdAEAAAAAAAADQwAAAIEA////AAAAAAAAA0MAAAAEAAAABAAAAAgAAAAI/AAAAAA=" checked="1" title="control_ParaData"/>
+    </tabs>
+    <forms>
+        <form type="0" title="导航窗口"/>
+        <form type="1" lv-width="150,100,100,100,100" title="自定义参数"/>
+        <form type="2" lv-width="294,100,100,100,320,100,100,204,100,100" mapFile="./Objects/lks03x_Project.axf" title="导入参数"/>
+        <form type="3" visible="0" page="0" floating="0" title="运行日志"/>
+        <form type="4" visible="0" page="0" floating="0" title="RTT命令行"/>
+        <form type="5" xCount="8897.65" trigName="" visible="1" autoRange="1" page="0" floating="0" scatterStyle="1" trigValue="0" min="-500" max="500" trigType="0" lineStyle="1" scrollType="0" title="RTT数据" subMode="0" xTag="0"/>
+        <form type="12" visible="0" lv-width="150,100,100,100,100" page="-1" floating="0" title="电机控制">
+            <var lower="0" desc="速度设定" name="" upper="100" step="0.1"/>
+            <var lower="0" desc="电流设定" name="" upper="100" step="1"/>
+            <var lower="0" desc="功率设定" name="" upper="100" step="1"/>
+            <var lower="0" desc="电机启停" name="" upper="1" step="1"/>
+        </form>
+        <form type="6" visible="0" page="-1" floating="0" title="Form"/>
+        <form type="7" visible="1" lv-width="531,150,100,100,100,100,100,100,120,100,100" page="0" floating="0" title="UA">
+            <var interval="10" formula="" showType="Signed" color="" desc="runM0SpdSetpoint" name="runM0SpdSetpoint" addr="0x20000034"/>
+            <var interval="10" formula="" showType="Enum" color="" desc="sS_UACtrlProc.[0].m_eUASysState" name="sS_UACtrlProc.[0].m_eUASysState" addr="0x200005c4"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_UACtrlProc.[0].m_StruCmd.m_bRunFlag" name="sS_UACtrlProc.[0].m_StruCmd.m_bRunFlag" addr="0x200005c5"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_UACtrlProc.[0].m_bLoopMode" name="sS_UACtrlProc.[0].m_bLoopMode" addr="0x200005c8"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_UACtrlProc.[0].m_bStopMode" name="sS_UACtrlProc.[0].m_bStopMode" addr="0x200005c6"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="sS_UACtrlProc.[0].m_wPowerSetpoint" name="sS_UACtrlProc.[0].m_wPowerSetpoint" addr="0x200005d4"/>
+            <var interval="10" formula="x*0.001" showType="Signed" color="" desc="sS_UACtrlProc.[0].m_wTqSetpoint" name="sS_UACtrlProc.[0].m_wTqSetpoint" addr="0x200005d0"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="sS_UACtrlProc.[0].m_wSetpoint" name="sS_UACtrlProc.[0].m_wSetpoint" addr="0x200005cc"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mUaToMa.wFreqCmd" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mUaToMa.wFreqCmd" addr="0x200001e4"/>
+            <var interval="10" formula="x*0.001" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mUaToMa.wTorqCmd" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mUaToMa.wTorqCmd" addr="0x200001ec"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mUaToMa.wPowerCmd" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mUaToMa.wPowerCmd" addr="0x200001e8"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wVdcDec" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wVdcDec" addr="0x200001fc"/>
+            <var interval="10" formula="x*0.001" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wCurDec" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wCurDec" addr="0x20000200"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wVolDec" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wVolDec" addr="0x20000204"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wSpeedDec" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.wSpeedDec" addr="0x20000208"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.uFault" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.uFault" addr="0x20000210"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="sS_MACtrProc.[0].m_wPower001W" name="sS_MACtrProc.[0].m_wPower001W" addr="0x200003a8"/>
+            <var interval="10" formula="x*1" showType="Signed" color="" desc="DebugTmax" name="DebugTmax" addr=""/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+        </form>
+        <form type="7" visible="1" lv-width="695,288,100,100,100,100,100,100,120,100,100" page="1" floating="0" title="MA">
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_MACtrProc.[0].m_nLoopMode" name="sS_MACtrProc.[0].m_nLoopMode" addr="0x2000039b"/>
+            <var interval="10" formula="" showType="Enum" color="" desc="sS_MACtrProc.[0].m_eSysState" name="sS_MACtrProc.[0].m_eSysState" addr="0x2000039c"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_MACtrProc.[0].m_SMACtrlBit.m_bMC_RunFlg" name="sS_MACtrProc.[0].m_SMACtrlBit.m_bMC_RunFlg" addr="0x20000396"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_MACtrProc.[0].mg_UFault.R" name="sS_MACtrProc.[0].mg_UFault.R" addr="0x20000308"/>
+            <var interval="10" formula="" showType="Enum" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.eMotorStatus" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.eMotorStatus" addr="0x200001b2"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.wMotorSpeedRef" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.wMotorSpeedRef" addr="0x200001b8"/>
+            <var interval="10" formula="" showType="Enum" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.ePwmCmd" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.ePwmCmd" addr="0x200001bc"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.wFreq" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.wFreq" addr="0x20000190"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.nVdc" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.nVdc" addr="0x20000194"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisQ" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisQ" addr="0x20000196"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisD" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisD" addr="0x20000198"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRef" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRef" addr="0x20000464"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedSet" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedSet" addr="0x20000460"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIn" name="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIn" addr="0x20000478"/>
+            <var interval="10" formula="x*0.01" showType="Signed" color="" desc="sS_MACtrProc.[0].m_wPower001W" name="sS_MACtrProc.[0].m_wPower001W" addr="0x200003a8"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_nDCurrentSet" name="sS_MACtrProc.[0].m_nDCurrentSet" addr="0x20000406"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_nDCur_Reference" name="sS_MACtrProc.[0].m_nDCur_Reference" addr="0x20000402"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_nQCurrentSet" name="sS_MACtrProc.[0].m_nQCurrentSet" addr="0x20000404"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_nQCur_Reference" name="sS_MACtrProc.[0].m_nQCur_Reference" addr="0x20000400"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisD" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisD" addr="0x200001b6"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisQ" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisQ" addr="0x200001b4"/>
+        </form>
+        <form type="7" visible="1" lv-width="647,150,100,100,100,100,100,100,120,100,100" page="2" floating="0" title="MD">
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisD" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisD" addr="0x200001b6"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisD" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisD" addr="0x20000198"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisQ" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisQ" addr="0x200001b4"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisQ" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisQ" addr="0x20000196"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.wMotorSpeedRef" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.wMotorSpeedRef" addr="0x200001b8"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.wFreq" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.wFreq" addr="0x20000190"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrD.KP" name="gS_FocElementObjM.[0].mAcrD.KP" addr="0x20000298"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrD.KI" name="gS_FocElementObjM.[0].mAcrD.KI" addr="0x2000029a"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrQ.KP" name="gS_FocElementObjM.[0].mAcrQ.KP" addr="0x200002b4"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrQ.KI" name="gS_FocElementObjM.[0].mAcrQ.KI" addr="0x200002b6"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mAcrOutDQ.nAxisD" name="gS_FocElementObjM.[0].mAcrOutDQ.nAxisD" addr="0x200002ca"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mAcrOutDQ.nAxisQ" name="gS_FocElementObjM.[0].mAcrOutDQ.nAxisQ" addr="0x200002c8"/>
+            <var interval="10" formula="x*1" showType="Signed" color="" desc="DebugTmax" name="DebugTmax" addr=""/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+        </form>
+        <form type="7" visible="1" lv-width="637,150,100,100,100,100,100,100,120,100,100" page="3" floating="0" title="HD">
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcPwm.nuTimePhA" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcPwm.nuTimePhA" addr="0x20000180"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcPwm.nuTimePhB" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcPwm.nuTimePhB" addr="0x20000184"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcPwm.nuTimePhC" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcPwm.nuTimePhC" addr="0x20000186"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcTmr.nuPoint0" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcTmr.nuPoint0" addr="0x20000178"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcTmr.nuPoint1" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcTmr.nuPoint1" addr="0x2000017a"/>
+            <var interval="10" formula="" showType="Enum" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcTmr.eChannel" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToHd.mMcTmr.eChannel" addr="0x2000017c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nPhaseUOffset" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nPhaseUOffset" addr="0x20000166"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nPhaseVOffset" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nPhaseVOffset" addr="0x20000168"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nPhaseWOffset" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nPhaseWOffset" addr="0x2000016a"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatU" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatU" addr="0x20000170"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatV" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatV" addr="0x20000172"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatW" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatW" addr="0x20000174"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nDcVolAdcDat" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nDcVolAdcDat" addr="0x2000016e"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocObjM.[0].m_pFluxObsGain->VDC_PerUnitGAIN" name="gS_FocObjM.[0].m_pFluxObsGain->VDC_PerUnitGAIN" addr="0x20000234"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].m_pDcBusVol->nVoltageCircleLim" name="gS_MotorObsM.[0].m_pDcBusVol->nVoltageCircleLim" addr="0x200008dc"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_DcBusVolM.[0].nBusVolt_PerUnit" name="gS_DcBusVolM.[0].nBusVolt_PerUnit" addr="0x2000093c"/>
+        </form>
+        <form type="7" visible="1" lv-width="540,150,100,100,100,100,515,152,120,100,100" page="4" floating="0" title="observer">
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->nD_CurrLoopKP" name="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->nD_CurrLoopKP" addr="0x200008cc"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->nD_CurrLoopKI" name="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->nD_CurrLoopKI" addr="0x200008cc"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMarsWeEst" name="gS_MotorObsM.[0].mFluxObsVar.iMarsWeEst" addr="0x20000880"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.s16UtRohRef" name="gS_MotorObsM.[0].mFluxObsVar.s16UtRohRef" addr="0x20000850"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasUq" name="gS_MotorObsM.[0].mFluxObsVar.iMrasUq" addr="0x2000085e"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iEemfTEst" name="gS_MotorObsM.[0].mFluxObsVar.iEemfTEst" addr="0x20000868"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIq" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIq" addr="0x20000862"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIqEstN_1_Fs" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIqEstN_1_Fs" addr="0x20000874"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIdEstN_1_Fs" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIdEstN_1_Fs" addr="0x20000870"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasId" name="gS_MotorObsM.[0].mFluxObsVar.iMrasId" addr="0x20000860"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.s16UmRohRef" name="gS_MotorObsM.[0].mFluxObsVar.s16UmRohRef" addr="0x2000084e"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasUd" name="gS_MotorObsM.[0].mFluxObsVar.iMrasUd" addr="0x2000085c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iEemfMEst" name="gS_MotorObsM.[0].mFluxObsVar.iEemfMEst" addr="0x20000866"/>
+        </form>
+        <form type="7" visible="1" lv-width="485,150,100,100,100,100,100,100,120,100,100" page="5" floating="0" title="observer_q">
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIq" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIq" addr="0x20000862"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIqEstN_1_Fs" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIqEstN_1_Fs" addr="0x20000874"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasUq" name="gS_MotorObsM.[0].mFluxObsVar.iMrasUq" addr="0x2000085e"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.iEemfTEst" name="gS_MotorObsM.[0].mFluxObsVar.iEemfTEst" addr="0x20000868"/>
+        </form>
+        <form type="7" visible="1" lv-width="505,150,100,100,100,100,100,100,120,100,100" page="6" floating="0" title="MA_SPEED_PI">
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIn" name="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIn" addr="0x20000478"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampOut" name="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampOut" addr="0x20000488"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRef" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRef" addr="0x20000464"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedfbk" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedfbk" addr="0x20000468"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedEst" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedEst" addr="0x20000470"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.mSpeedPI.KP" name="sS_MASubBlock.[0].m_struMotorSpeed.mSpeedPI.KP" addr="0x20000498"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.mSpeedPI.KI" name="sS_MASubBlock.[0].m_struMotorSpeed.mSpeedPI.KI" addr="0x2000049a"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_nQCurrentSet" name="sS_MACtrProc.[0].m_nQCurrentSet" addr="0x20000404"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_nQCur_Reference" name="sS_MACtrProc.[0].m_nQCur_Reference" addr="0x20000400"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="runM0SpdSetpoint" name="runM0SpdSetpoint" addr="0x20000034"/>
+        </form>
+        <form type="7" visible="1" lv-width="452,150,100,100,100,100,100,100,120,100,100" page="7" floating="0" title="MD_D_CUR_PI">
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrD.KP" name="gS_FocElementObjM.[0].mAcrD.KP" addr="0x20000298"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrD.KI" name="gS_FocElementObjM.[0].mAcrD.KI" addr="0x2000029a"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisD" name="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisD" addr="0x20000276"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mStatCurDQ.nAxisD" name="gS_FocElementObjM.[0].mStatCurDQ.nAxisD" addr="0x2000027a"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mAcrOutDQ.nAxisD" name="gS_FocElementObjM.[0].mAcrOutDQ.nAxisD" addr="0x200002ca"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.s16UmRohRef" name="gS_MotorObsM.[0].mFluxObsVar.s16UmRohRef" addr="0x2000084e"/>
+        </form>
+        <form type="7" visible="1" lv-width="422,150,100,100,100,100,100,100,120,100,100" page="8" floating="0" title="MD_Q_CUR_PI">
+            <var interval="10" formula="" showType="Unsigned" color="" desc="runM0UaCmd" name="runM0UaCmd" addr="0x2000002c"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrQ.KP" name="gS_FocElementObjM.[0].mAcrQ.KP" addr="0x200002b4"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_FocElementObjM.[0].mAcrQ.KI" name="gS_FocElementObjM.[0].mAcrQ.KI" addr="0x200002b6"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisQ" name="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisQ" addr="0x20000274"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mStatCurDQ.nAxisQ" name="gS_FocElementObjM.[0].mStatCurDQ.nAxisQ" addr="0x20000278"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_FocElementObjM.[0].mAcrOutDQ.nAxisQ" name="gS_FocElementObjM.[0].mAcrOutDQ.nAxisQ" addr="0x200002c8"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.s16UtRohRef" name="gS_MotorObsM.[0].mFluxObsVar.s16UtRohRef" addr="0x20000850"/>
+        </form>
+        <form type="7" visible="1" lv-width="650,319,100,100,100,100,100,100,120,100,100" page="9" floating="0" title="dataTest">
+            <var interval="10" formula="" showType="Unsigned" color="" desc="sS_UACtrlProc.[0].mg_pCtrlObj->mTransCoef.mUserToApp.nuVol" name="sS_UACtrlProc.[0].mg_pCtrlObj->mTransCoef.mUserToApp.nuVol" addr="0x2000058c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_UACtrlProc.[0].mg_pCtrlObj->mTransCoef.mUserToApp.nVolShftNum" name="sS_UACtrlProc.[0].mg_pCtrlObj->mTransCoef.mUserToApp.nVolShftNum" addr="0x2000058c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_OnTheFlyDetect.nMotorStopCurrentThd" name="sS_MASubBlock.[0].m_OnTheFlyDetect.nMotorStopCurrentThd" addr="0x200004ce"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_OnTheFlyDetect.nMotorStopCurDifThd" name="sS_MASubBlock.[0].m_OnTheFlyDetect.nMotorStopCurDifThd" addr="0x200004d0"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIncrease" name="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIncrease" addr="0x20000480"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_STR_CurRampGen.wRampIncrease" name="sS_MASubBlock.[0].m_STR_CurRampGen.wRampIncrease" addr="0x200004e8"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRampACCStep" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRampACCStep" addr="0x200004b0"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_pMotorSpeed->mSpeedPI.wUpperLimitOutput" name="sS_MACtrProc.[0].m_pMotorSpeed->mSpeedPI.wUpperLimitOutput" addr="0x200003c0"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MACtrProc.[0].m_pMotorSpeed->mSpeedPI.wLowerLimitOutput" name="sS_MACtrProc.[0].m_pMotorSpeed->mSpeedPI.wLowerLimitOutput" addr="0x200003c0"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_DQCurRef.[0].m_nDCurrentCmd" name="gS_DQCurRef.[0].m_nDCurrentCmd" addr="0x200009d6"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_DQCurRef.[0].m_nQCurrentCmd" name="gS_DQCurRef.[0].m_nQCurrentCmd" addr="0x200009d8"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="sS_MASubBlock.[0].m_struAppCommData.wDirTrackFreq" name="sS_MASubBlock.[0].m_struAppCommData.wDirTrackFreq" addr="0x20000438"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.motorVoltageBase" name="gS_MotorObsM.[0].mFluxObsVar.motorVoltageBase" addr="0x20000828"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.motorCurrentBase" name="gS_MotorObsM.[0].mFluxObsVar.motorCurrentBase" addr="0x20000824"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->nD_CurrLoopKP" name="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->nD_CurrLoopKP" addr="0x200008cc"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->BEMF_PerUnit_GAIN" name="gS_MotorObsM.[0].mFluxObsVar.m_pFluxObsGain->BEMF_PerUnit_GAIN" addr="0x200008cc"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].EmfFactorQn" name="gS_VectorVF.[0].EmfFactorQn" addr="0x200009c6"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].EmfFactor" name="gS_VectorVF.[0].EmfFactor" addr="0x200009c4"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].LdQn" name="gS_VectorVF.[0].LdQn" addr="0x200009ca"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].LdFactor" name="gS_VectorVF.[0].LdFactor" addr="0x200009c8"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].LqQn" name="gS_VectorVF.[0].LqQn" addr="0x200009ce"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].LqFactor" name="gS_VectorVF.[0].LqFactor" addr="0x200009cc"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].RsQn" name="gS_VectorVF.[0].RsQn" addr="0x200009c2"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_VectorVF.[0].Rs" name="gS_VectorVF.[0].Rs" addr="0x200009c0"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_DcBusVolM.[0].nBusVolt_PerUnit" name="gS_DcBusVolM.[0].nBusVolt_PerUnit" addr="0x2000093c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_DcBusVolM.[0].nVoltageCircleLim" name="gS_DcBusVolM.[0].nVoltageCircleLim" addr="0x20000936"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.wOb_F1" name="gS_MotorObsM.[0].mFluxObsVar.wOb_F1" addr="0x2000082c"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.wOb_F2" name="gS_MotorObsM.[0].mFluxObsVar.wOb_F2" addr="0x20000830"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.wOb_F3" name="gS_MotorObsM.[0].mFluxObsVar.wOb_F3" addr="0x20000834"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.bSftN_F1" name="gS_MotorObsM.[0].mFluxObsVar.bSftN_F1" addr="0x20000838"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.bSftN_F2" name="gS_MotorObsM.[0].mFluxObsVar.bSftN_F2" addr="0x20000839"/>
+            <var interval="10" formula="" showType="Signed" color="" desc="gS_MotorObsM.[0].mFluxObsVar.bSftN_F3" name="gS_MotorObsM.[0].mFluxObsVar.bSftN_F3" addr="0x2000083a"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_MotorObsM.[0].mFluxObsVar.nProductPLL" name="gS_MotorObsM.[0].mFluxObsVar.nProductPLL" addr="0x2000084a"/>
+            <var interval="10" formula="" showType="Unsigned" color="" desc="gS_MotorObsM.[0].mFluxObsVar.nOpenLoopDppKp" name="gS_MotorObsM.[0].mFluxObsVar.nOpenLoopDppKp" addr="0x20000848"/>
+        </form>
+        <form xCount="1000" page="0" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="0" scrollType="0" trigName="" refName="" refType="0" min="-500" title="曲线0" filterType="1" floating="0" refValue="0" max="500" trigValue="0"/>
+        <form xCount="3124.25" page="0" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="UA_curve" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff00ff" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.nVdcDec" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToUa.nVdcDec"/>
+        </form>
+        <form xCount="1000" page="1" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="MA_curve" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.wMotorSpeedRef" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.wMotorSpeedRef"/>
+            <var subPlot="0" color="#00ff00" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.wFreq" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.wFreq"/>
+        </form>
+        <form xCount="1000" page="3" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="HD_curve" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatU" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatU"/>
+            <var subPlot="0" color="#00ff00" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatV" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatV"/>
+            <var subPlot="0" color="#00ffff" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatW" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mHdToMd.nSampDatW"/>
+        </form>
+        <form xCount="1000" page="2" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="MD_Idcurve" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisD" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisD"/>
+            <var subPlot="0" color="#00ff00" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisD" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisD"/>
+        </form>
+        <form xCount="1000" page="2" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="MD_Iq_curve" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisQ" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMdToMa.mStatCurDQ.nAxisQ"/>
+            <var subPlot="0" color="#00ff00" desc="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisQ" name="gS_PhyObjInstanceM.[0].mGlobalDatPackage.mMaToMd.mStatCurDQCmd.nAxisQ"/>
+        </form>
+        <form xCount="1000" page="4" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="observe_id" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIdEstN_1_Fs" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIdEstN_1_Fs"/>
+            <var subPlot="0" color="#00ff00" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasId" name="gS_MotorObsM.[0].mFluxObsVar.iMrasId"/>
+        </form>
+        <form xCount="1000" page="4" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="ob_ud_estd" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasUd" name="gS_MotorObsM.[0].mFluxObsVar.iMrasUd"/>
+            <var subPlot="0" color="#00ff00" desc="gS_MotorObsM.[0].mFluxObsVar.iEemfMEst" name="gS_MotorObsM.[0].mFluxObsVar.iEemfMEst"/>
+        </form>
+        <form xCount="1000" page="5" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="ob_iq" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIq" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIq"/>
+            <var subPlot="0" color="#00ff00" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasIqEstN_1_Fs" name="gS_MotorObsM.[0].mFluxObsVar.iMrasIqEstN_1_Fs"/>
+        </form>
+        <form xCount="1000" page="5" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="ob_uq" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_MotorObsM.[0].mFluxObsVar.iMrasUq" name="gS_MotorObsM.[0].mFluxObsVar.iMrasUq"/>
+            <var subPlot="0" color="#00ff00" desc="gS_MotorObsM.[0].mFluxObsVar.iEemfTEst" name="gS_MotorObsM.[0].mFluxObsVar.iEemfTEst"/>
+        </form>
+        <form xCount="1000" page="7" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="D_CUR_PI" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisD" name="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisD"/>
+            <var subPlot="0" color="#00ff00" desc="gS_FocElementObjM.[0].mStatCurDQ.nAxisD" name="gS_FocElementObjM.[0].mStatCurDQ.nAxisD"/>
+        </form>
+        <form xCount="1000" page="7" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="D_CUR_OUT" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#00ff00" desc="gS_MotorObsM.[0].mFluxObsVar.s16UmRohRef" name="gS_MotorObsM.[0].mFluxObsVar.s16UmRohRef"/>
+            <var subPlot="0" color="#ff0000" desc="gS_FocElementObjM.[0].mAcrOutDQ.nAxisD" name="gS_FocElementObjM.[0].mAcrOutDQ.nAxisD"/>
+        </form>
+        <form xCount="1000" page="8" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="Q_CUR_PI" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisQ" name="gS_FocElementObjM.[0].mStatCurDQCmd.nAxisQ"/>
+            <var subPlot="0" color="#5500ff" desc="gS_FocElementObjM.[0].mStatCurDQ.nAxisQ" name="gS_FocElementObjM.[0].mStatCurDQ.nAxisQ"/>
+        </form>
+        <form xCount="1000" page="8" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="Q_CUR_OUT" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="gS_MotorObsM.[0].mFluxObsVar.s16UtRohRef" name="gS_MotorObsM.[0].mFluxObsVar.s16UtRohRef"/>
+            <var subPlot="0" color="#00ff00" desc="gS_FocElementObjM.[0].mAcrOutDQ.nAxisQ" name="gS_FocElementObjM.[0].mAcrOutDQ.nAxisQ"/>
+        </form>
+        <form xCount="1000" page="6" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="SPEED_PI" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIn" name="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampIn"/>
+            <var subPlot="0" color="#00ff00" desc="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampOut" name="sS_MASubBlock.[0].m_struMotorSpeed.STR_SpdRampGen.wRampOut"/>
+            <var subPlot="0" color="#00ffff" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRef" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedRef"/>
+            <var subPlot="0" color="#ff00ff" desc="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedfbk" name="sS_MASubBlock.[0].m_struMotorSpeed.wSpeedfbk"/>
+        </form>
+        <form xCount="1000" page="6" trigType="0" xTag="0" subMode="0" autoRange="1" lineStyle="1" type="8" scatterStyle="1" visible="1" scrollType="0" trigName="" refName="" refType="0" min="-500" title="SPEED_OUT" filterType="1" floating="0" refValue="0" max="500" trigValue="0">
+            <var subPlot="0" color="#ff0000" desc="sS_MACtrProc.[0].m_nQCurrentSet" name="sS_MACtrProc.[0].m_nQCurrentSet"/>
+            <var subPlot="0" color="#00ff00" desc="sS_MACtrProc.[0].m_nQCur_Reference" name="sS_MACtrProc.[0].m_nQCur_Reference"/>
+        </form>
+        <form type="9" xCount="1000" interval="100" visible="0" num="500" autoRange="1" page="0" floating="0" scatterStyle="1" min="-500" max="500" lineStyle="1" title="Trigger0" subMode="0" xTag="0"/>
+        <form type="11" visible="1" lv-width="181,100,100,100,232,100,236" page="0" floating="1" title="参数0">
+            <var lower="0" desc="runM0SpdSetpoint" name="runM0SpdSetpoint" upper="100" step="1"/>
+            <var lower="0" desc="runM0UaCmd" name="runM0UaCmd" upper="1" step="1"/>
+        </form>
+    </forms>
+</lksscope>

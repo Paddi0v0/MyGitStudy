@@ -1,0 +1,1350 @@
+Dependencies for Project 'LKS07x_1Motor', Target 'Linko_07x_Project': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_adc.c)(0x64FEAF35)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_adc.o --omf_browse .\objects\lks32mc07x_adc.crf --depend .\objects\lks32mc07x_adc.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_can.c)(0x641B03F1)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_can.o --omf_browse .\objects\lks32mc07x_can.crf --depend .\objects\lks32mc07x_can.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_cmp.c)(0x6416F1D0)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_cmp.o --omf_browse .\objects\lks32mc07x_cmp.crf --depend .\objects\lks32mc07x_cmp.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_dac.c)(0x6416CA37)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_dac.o --omf_browse .\objects\lks32mc07x_dac.crf --depend .\objects\lks32mc07x_dac.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_dma.c)(0x6400913D)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_dma.o --omf_browse .\objects\lks32mc07x_dma.crf --depend .\objects\lks32mc07x_dma.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_dsp.c)(0x641588C6)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_dsp.o --omf_browse .\objects\lks32mc07x_dsp.crf --depend .\objects\lks32mc07x_dsp.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_exti.c)(0x63FDB7ED)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_exti.o --omf_browse .\objects\lks32mc07x_exti.crf --depend .\objects\lks32mc07x_exti.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32MC07x_flash.c)(0x63F60B6D)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_flash.o --omf_browse .\objects\lks32mc07x_flash.crf --depend .\objects\lks32mc07x_flash.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_Flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_gpio.c)(0x63FDB302)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_gpio.o --omf_browse .\objects\lks32mc07x_gpio.crf --depend .\objects\lks32mc07x_gpio.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_hall.c)(0x6450B021)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_hall.o --omf_browse .\objects\lks32mc07x_hall.crf --depend .\objects\lks32mc07x_hall.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_mcpwm.c)(0x64171431)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_mcpwm.o --omf_browse .\objects\lks32mc07x_mcpwm.crf --depend .\objects\lks32mc07x_mcpwm.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_MCPWM.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_nvr.lib)(0x63E30B70)()
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_opa.c)(0x6416CD8D)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_opa.o --omf_browse .\objects\lks32mc07x_opa.crf --depend .\objects\lks32mc07x_opa.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_qep.c)(0x63F71BBF)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_qep.o --omf_browse .\objects\lks32mc07x_qep.crf --depend .\objects\lks32mc07x_qep.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_sif.c)(0x64009153)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_sif.o --omf_browse .\objects\lks32mc07x_sif.crf --depend .\objects\lks32mc07x_sif.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_sys.c)(0x64508EC2)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_sys.o --omf_browse .\objects\lks32mc07x_sys.crf --depend .\objects\lks32mc07x_sys.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_tim.c)(0x641583C6)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_tim.o --omf_browse .\objects\lks32mc07x_tim.crf --depend .\objects\lks32mc07x_tim.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_tmp.c)(0x640A9389)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_tmp.o --omf_browse .\objects\lks32mc07x_tmp.crf --depend .\objects\lks32mc07x_tmp.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_uart.c)(0x63FDBBE0)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_uart.o --omf_browse .\objects\lks32mc07x_uart.crf --depend .\objects\lks32mc07x_uart.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Source\lks32mc07x_wake.c)(0x63F71792)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\lks32mc07x_wake.o --omf_browse .\objects\lks32mc07x_wake.crf --depend .\objects\lks32mc07x_wake.d)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+F (.\2_HardwareDriverLayer\startup_lks32mc07x.s)(0x6416F70E)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "LKS32MC071CBT8 SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_lks32mc07x.lst --xref -o .\objects\startup_lks32mc07x.o --depend .\objects\startup_lks32mc07x.d)
+F (.\2_HardwareDriverLayer\HardwareDriver\hardware_init.c)(0x659E50CC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\2_HardwareDriverLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\hardware_init.o --omf_browse .\objects\hardware_init.crf --depend .\objects\hardware_init.d)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+F (.\2_HardwareDriverLayer\HardwareDriver\interrupt.c)(0x650A8DEB)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\2_HardwareDriverLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\interrupt.o --omf_browse .\objects\interrupt.crf --depend .\objects\interrupt.d)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\2_HardwareDriverLayer\Header\hardware_init.h)(0x62CB9C8C)
+I (.\4_MotorDriveLayer\Header\mc_declaration.h)(0x660624DD)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\RTT\segger_rtt.h)(0x64F7DE15)
+I (.\RTT\SEGGER_RTT_Conf.h)(0x64F033FE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\2_HardwareDriverLayer\HardwareDriver\main.c)(0x6557206C)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\2_HardwareDriverLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+F (.\2_HardwareDriverLayer\HardwareDriver\System_Init.c)(0x6556FF6E)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\2_HardwareDriverLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\system_init.o --omf_browse .\objects\system_init.crf --depend .\objects\system_init.d)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+I (.\2_HardwareDriverLayer\Header\hardware_init.h)(0x62CB9C8C)
+I (.\RTT\segger_rtt.h)(0x64F7DE15)
+I (.\RTT\SEGGER_RTT_Conf.h)(0x64F033FE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\2_HardwareDriverLayer\HardwareDriver\HAL_DEF.c)(0x664EAAA7)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\2_HardwareDriverLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\hal_def.o --omf_browse .\objects\hal_def.crf --depend .\objects\hal_def.d)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (.\2_HardwareDriverLayer\Header\HALDrv.h)(0x65016BC1)
+F (.\3_CommonServiceLayer\ComFuncs.c)(0x64F7D306)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\3_CommonServiceLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\comfuncs.o --omf_browse .\objects\comfuncs.crf --depend .\objects\comfuncs.d)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+F (.\3_CommonServiceLayer\PubData_DriverInstance.c)(0x659E50DE)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\3_CommonServiceLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\pubdata_driverinstance.o --omf_browse .\objects\pubdata_driverinstance.crf --depend .\objects\pubdata_driverinstance.d)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+F (.\3_CommonServiceLayer\PubData_HD_MD.c)(0x6397E2D6)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\3_CommonServiceLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\pubdata_hd_md.o --omf_browse .\objects\pubdata_hd_md.crf --depend .\objects\pubdata_hd_md.d)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+F (.\3_CommonServiceLayer\PubData_MA_UA.c)(0x62F0BA55)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\3_CommonServiceLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\pubdata_ma_ua.o --omf_browse .\objects\pubdata_ma_ua.crf --depend .\objects\pubdata_ma_ua.d)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+F (.\3_CommonServiceLayer\PubData_MD_MA.c)(0x64F7D325)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\3_CommonServiceLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\pubdata_md_ma.o --omf_browse .\objects\pubdata_md_ma.crf --depend .\objects\pubdata_md_ma.d)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+F (.\3_CommonServiceLayer\MC_math.c)(0x64FEDDCC)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\3_CommonServiceLayer\Header -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\mc_math.o --omf_browse .\objects\mc_math.crf --depend .\objects\mc_math.d)
+I (.\3_CommonServiceLayer\Header\mc_math.h)(0x64F7D2BA)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\4_MotorDriveLayer\FOC_Drive.c)(0x66061D65)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\4_MotorDriveLayer\Header -I .\3_CommonServiceLayer\Header -I .\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\foc_drive.o --omf_browse .\objects\foc_drive.crf --depend .\objects\foc_drive.d)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\mc_math.h)(0x64F7D2BA)
+I (.\4_MotorDriveLayer\Header\mc_declaration.h)(0x660624DD)
+I (.\2_HardwareDriverLayer\Header\HALDrv.h)(0x65016BC1)
+F (.\4_MotorDriveLayer\FocDef.c)(0x664EAAB6)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\4_MotorDriveLayer\Header -I .\3_CommonServiceLayer\Header -I .\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\focdef.o --omf_browse .\objects\focdef.crf --depend .\objects\focdef.d)
+I (.\4_MotorDriveLayer\Header\mc_declaration.h)(0x660624DD)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\MathLIB_Inlines.h)(0x5645FA88)
+I (.\3_CommonServiceLayer\Header\MathLIB_Defines.h)(0x56F66976)
+I (.\3_CommonServiceLayer\Header\MathLIB_Typedefs.h)(0x537090B4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\Include\hardware_config.h)(0x659E510D)
+I (.\Include\project_mcu.h)(0x64FEB01D)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\lks32mc07x.h)(0x650AAD08)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D3E8E2)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_mcpwm.h)(0x6450DBCA)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_lib.h)(0x6485470B)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_gpio.h)(0x63FDB300)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sif.h)(0x640AC2E4)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_sys.h)(0x640ACD27)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_adc.h)(0x64170E9F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_can.h)(0x63F71B10)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_cmp.h)(0x6400553F)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dac.h)(0x6415B13A)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dma.h)(0x64009125)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_dsp.h)(0x6400911D)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_exti.h)(0x63FDBC29)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_flash.h)(0x63F71A36)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_hall.h)(0x64004A99)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_opa.h)(0x641BC305)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_qep.h)(0x640090EF)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tim.h)(0x63F6DA82)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_tmp.h)(0x640A93A6)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_wake.h)(0x63F717E8)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_uart.h)(0x640ADCDE)
+I (.\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include\lks32mc07x_nvr.h)(0x640AA658)
+F (.\4_MotorDriveLayer\PID_regulators.c)(0x66581748)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\4_MotorDriveLayer\Header -I .\3_CommonServiceLayer\Header -I .\Include -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\pid_regulators.o --omf_browse .\objects\pid_regulators.crf --depend .\objects\pid_regulators.d)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+F (.\4_MotorDriveLayer\Lib\lks07x_Lib_R_V02_0_9aOpt_AC5.lib)(0x66061E59)()
+F (.\5_MotorAppLayer\Main_Drive.c)(0x66581752)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\main_drive.o --omf_browse .\objects\main_drive.crf --depend .\objects\main_drive.d)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+F (.\5_MotorAppLayer\PowerCalculation.c)(0x654AE76A)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\powercalculation.o --omf_browse .\objects\powercalculation.crf --depend .\objects\powercalculation.d)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\mc_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+F (.\5_MotorAppLayer\Process_Control.c)(0x65040F41)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\process_control.o --omf_browse .\objects\process_control.crf --depend .\objects\process_control.d)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+F (.\5_MotorAppLayer\state_machine.c)(0x654AE78B)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\state_machine.o --omf_browse .\objects\state_machine.crf --depend .\objects\state_machine.d)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\mc_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+F (.\5_MotorAppLayer\MA_Static_Variable.c)(0x654AE751)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\ma_static_variable.o --omf_browse .\objects\ma_static_variable.crf --depend .\objects\ma_static_variable.d)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\5_MotorAppLayer\usr\Header\time_process.h)(0x64392A08)
+F (.\5_MotorAppLayer\MA_interface.c)(0x66061D1B)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\ma_interface.o --omf_browse .\objects\ma_interface.crf --depend .\objects\ma_interface.d)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+F (.\5_MotorAppLayer\usr\fault_detection.c)(0x655B1D70)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\fault_detection.o --omf_browse .\objects\fault_detection.crf --depend .\objects\fault_detection.d)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\mc_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\3_CommonServiceLayer\Header\MC_math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+F (.\5_MotorAppLayer\usr\Task_Scheduler.c)(0x65488A9D)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\task_scheduler.o --omf_browse .\objects\task_scheduler.crf --depend .\objects\task_scheduler.d)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+F (.\6_UserAppLayer\UA_interface.c)(0x654AFD20)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\ua_interface.o --omf_browse .\objects\ua_interface.crf --depend .\objects\ua_interface.d)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\6_UserAppLayer\Header\UA_Data.h)(0x64F7D745)
+F (.\6_UserAppLayer\UA_stateMachine.c)(0x654AE7AD)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\ua_statemachine.o --omf_browse .\objects\ua_statemachine.crf --depend .\objects\ua_statemachine.d)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\6_UserAppLayer\Header\UA_Data.h)(0x64F7D745)
+F (.\6_UserAppLayer\UA_usrApp.c)(0x654AE7B7)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\ua_usrapp.o --omf_browse .\objects\ua_usrapp.crf --depend .\objects\ua_usrapp.d)
+I (.\3_CommonServiceLayer\Header\PubData_MA_UA.h)(0x654AE5AF)
+I (C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include\basic.h)(0x650AAD08)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (.\3_CommonServiceLayer\Header\MC_Math.h)(0x64F7D2BA)
+I (.\3_CommonServiceLayer\Header\PubData_MD_MA.h)(0x654AE5D0)
+I (.\3_CommonServiceLayer\Header\MC_type.h)(0x64F7D2C3)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\3_CommonServiceLayer\Header\PubData_DriverInstance.h)(0x654AE57A)
+I (.\Include\project_config.h)(0x65B8B77B)
+I (.\Include\MC_configure_FB_data.h)(0x659E5114)
+I (.\Include\MC_Parameter_M0.h)(0x66061D48)
+I (.\Include\MC_GlobalDef_M0.h)(0x659E511C)
+I (.\3_CommonServiceLayer\Header\PubData_HD_MD.h)(0x659E50D7)
+I (.\5_MotorAppLayer\usr\Header\Time_Process.h)(0x64392A08)
+I (.\5_MotorAppLayer\Header\MA_Static_Variable.h)(0x654AE6DF)
+I (.\5_MotorAppLayer\usr\Header\fault_detection.h)(0x6551E983)
+I (.\5_MotorAppLayer\Header\state_machine.h)(0x654AE6EB)
+I (.\5_MotorAppLayer\Header\PowerCalculation.h)(0x6423CDDF)
+I (.\4_MotorDriveLayer\Header\PID_regulators.h)(0x6304818E)
+I (.\6_UserAppLayer\Header\UA_Data.h)(0x64F7D745)
+F (.\Include\MC_Parameter_M0.h)(0x66061D48)()
+F (.\Include\MC_Parameter_M1.h)(0x660623F4)()
+F (.\Include\MC_configure_FB_data.h)(0x659E5114)()
+F (.\Include\project_config.h)(0x65B8B77B)()
+F (.\RTT\SEGGER_RTT.c)(0x64F7DE1C)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\segger_rtt.o --omf_browse .\objects\segger_rtt.crf --depend .\objects\segger_rtt.d)
+I (RTT\SEGGER_RTT.h)(0x64F7DE15)
+I (RTT\SEGGER_RTT_Conf.h)(0x64F033FE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\RTT\SEGGER_RTT_printf.c)(0x6214B439)(--c99 --gnu -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I .\Include -I .\1_LKS_FwLib\LKS32MC07x_Periph_Driver\Include -I .\2_HardwareDriverLayer\Header -I .\3_CommonServiceLayer\Header -I .\5_MotorAppLayer\Header -I .\4_MotorDriveLayer\Header -I .\6_UserAppLayer\Header -I .\RTT -I .\5_MotorAppLayer\usr\Header-I.\RTE\_Linko_07x_Project-IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS07x\1.1.2\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLKS32MC071CBT8 -D_RTE_-o .\objects\segger_rtt_printf.o --omf_browse .\objects\segger_rtt_printf.crf --depend .\objects\segger_rtt_printf.d)
+I (RTT\SEGGER_RTT.h)(0x64F7DE15)
+I (RTT\SEGGER_RTT_Conf.h)(0x64F033FE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\RTT\SEGGER_RTT.h)(0x64F7DE15)()

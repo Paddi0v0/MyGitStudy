@@ -1,0 +1,13 @@
+.\objects\lks32mc08x_gpio.o: 1_LKS_FwLib\lks32mc08x_periph_driver\Source\lks32mc08x_gpio.c
+.\objects\lks32mc08x_gpio.o: .\1_LKS_FwLib\LKS32MC08x_Periph_Driver\Include\lks32mc08x_gpio.h
+.\objects\lks32mc08x_gpio.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS08x\1.1.5\Device\Include\lks32mc08x.h
+.\objects\lks32mc08x_gpio.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS08x\1.1.5\Device\Include\basic.h
+.\objects\lks32mc08x_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\lks32mc08x_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\lks32mc08x_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\lks32mc08x_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lks32mc08x_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\lks32mc08x_gpio.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm0.h
+.\objects\lks32mc08x_gpio.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\lks32mc08x_gpio.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\lks32mc08x_gpio.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h

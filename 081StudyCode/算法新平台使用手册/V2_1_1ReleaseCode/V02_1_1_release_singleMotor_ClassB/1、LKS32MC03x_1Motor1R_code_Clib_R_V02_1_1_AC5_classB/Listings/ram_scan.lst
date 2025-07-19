@@ -1,0 +1,241 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000                 THUMB
+    3 00000000         
+    4 00000000         
+    5 00000000         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+    6 00000000         ;   Occupied Half word Scan
+    7 00000000         ;   Cycles: 338
+    8 00000000         ;   Parameters
+    9 00000000         ;       R0: ram addr, aligned by 2
+   10 00000000         
+   11 00000000         ;   Return value:
+   12 00000000         ;       0xCC, Test passed
+   13 00000000         ;       0xDD, Test failed
+   14 00000000         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                       ;
+   15 00000000         ;occupied_halfword_scanº¯Êý·­×ªÁ÷³Ì£»
+   16 00000000         ;                 0x0000£¬0xFFFF£¬
+   17 00000000         ;                 0x8000,0x7FFF,0x4000,0xBFFF,0x2000,0xD
+                       FFF,0x1000,0xEFFF
+   18 00000000         ;                 0x0800,0xF7FF,0x0400,0xFBFF,0x0200,0xF
+                       DFF,0x0100,0xFEFF
+   19 00000000         ;                 0x0080,0xFF7F,0x0040,0xFFBF,0x0020,0xF
+                       FDF,0x0010,0xFFEF
+   20 00000000         ;                 0x0008,0xFFF7,0x0004,0xFFFB,0x0002,0xF
+                       FFD,0x0001,0xFFFE
+   21 00000000         occupied_halfword_scan
+                               PROC
+   22 00000000                 EXPORT           occupied_halfword_scan
+   23 00000000 B4F0            PUSH             {R4, R5, R6, R7}
+   24 00000002 1E80            SUBS             R0, R0, #2  ;R0 = R0 - 2   
+   25 00000004 8842            LDRH             R2, [R0, #2] ;É¨ÃèÆÆ»µRAMÖ®Ç°ÏÈ
+                                                            ±£´æRAMÖÐµÄÄÚÈÝ¡£
+   26 00000006 8806            LDRH             R6, [R0, #0]
+   27 00000008 8887            LDRH             R7, [R0, #4] ;±£´æ¼ì²âµØÖ·¼°Ç°2
+                                                            ¸ö×Ö½ÚºÍºó2¸ö×Ö½ÚµÄ
+                                                            Êý¾Ý£¬¹²6¸ö×Ö½ÚÊý¾Ý
+                                                            
+   28 0000000A         
+   29 0000000A 2101            MOVS             R1, #1      ;R1¸³ÖµÎª1         
+                                                                      
+   30 0000000C 03C9            LSLS             R1, R1, #15 ;R1 = 0x8000       
+                                                            R1Ïò×óÒÆ15Î»
+   31 0000000E 43CD            MVNS             R5, R1      ;R5 = 0xFFFF7FFF   
+                                                            R5µÈÓÚR1È¡·´
+   32 00000010 0C2D            LSRS             R5, R5, #16 ;R5 = 0xFFFF       
+                                                            R5µÈÓÚR5ÏòÓÒÒÆ16Î» 
+                                                              
+   33 00000012         
+   34 00000012         ;0x0000
+   35 00000012 2300            MOVS             R3, #0      ;R3 = 0; 
+   36 00000014 8043            STRH             R3, [R0, #2] ;°ÑR3µÄ°ë×ÖÊý¾Ý¸³Ö
+                                                            µ¸øµØÖ·R0+2£¬¼´±»¼ì
+                                                            ²âµÄµØÖ·
+   37 00000016 8844            LDRH             R4, [R0, #2] ;½«R0+2µØÖ·µÄÊý¾Ý¸
+                                                            ³Öµ¸øR4£¬²¢½«R4µÄ¸ß
+                                                            16Î»ÇåÁã
+   38 00000018 429C            CMP              R4, R3      ;±È½ÏR4ºÍR3
+   39 0000001A D118            BNE              Halfword_ScanFail ;Èç¹ûR4-R3¡Ù0
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            Ö´ÐÐ Halfword_ScanF
+                                                            ail
+   40 0000001C         ;0xFFFF
+   41 0000001C 8045            STRH             R5, [R0, #2] ;½«R5µÄ°ë×ÖÊý¾Ý¸³Ö
+                                                            µ¸øµØÖ·R0+2
+   42 0000001E 8844            LDRH             R4, [R0, #2] ;½«R0+2µØÖ·µÄÊý¾Ý¸
+                                                            ³Öµ¸øR4£¬²¢½«R4µÄ¸ß
+                                                            16Î»ÇåÁã
+   43 00000020         ; MOVS    R5, #1               ;ERROR injection         
+                                                ¼ÓÈë´íÎó
+   44 00000020 42AC            CMP              R4, R5
+   45 00000022 D114            BNE              Halfword_ScanFail ;Èç¹ûR4-R5¡Ù0
+                                                            Ö´ÐÐ Halfword_ScanF
+                                                            ail
+   46 00000024         
+   47 00000024         Halfword_ScanStart
+   48 00000024         ;1 scan  ÖðÎ»ÓÉ0Ð´1    0x8000,0x4000,0x2000,0x1000
+   49 00000024         ;                      0x0800,0x0400,0x0200,0x0100
+   50 00000024         ;                      0x0080,0x0040,0x0020,0x0010
+   51 00000024         ;                      0x0008,0x0004,0x0002,0x0001
+   52 00000024         
+   53 00000024 8041            STRH             R1, [R0, #2] ;°ÑR1µÄ°ë×ÖÊý¾Ý¸³Ö
+                                                            µ¸øµØÖ·R0+2
+   54 00000026 8843            LDRH             R3, [R0, #2] ;½«R0+2µØÖ·µÄÊý¾Ý¸
+                                                            ³Öµ¸øR3£¬²¢½«R3µÄ¸ß
+                                                            16Î»ÇåÁã
+   55 00000028         ; MOV    R3, #1                ;ERROR injection         
+                                                ¼ÓÈë´íÎó
+   56 00000028 4299            CMP              R1, R3
+   57 0000002A D110            BNE              Halfword_ScanFail ;Èç¹ûR1-R3¡Ù0
+                                                            Ö´ÐÐ Halfword_ScanF
+                                                            ail
+   58 0000002C         
+   59 0000002C         ;0 scan ÖðÎ»ÓÉ1Ð´0     0x7FFF,0xBFFF,0xDFFF,0xEFFF
+   60 0000002C         ;                      0xF7FF,0xFBFF,0xFDFF,0xFEFF
+   61 0000002C         ;                      0xFF7F,0xFFBF,0xFFDF,0xFFEF
+   62 0000002C         ;                      0xFFF7,0xFFFB,0xFFFD,0xFFFE
+   63 0000002C         
+   64 0000002C 43CC            MVNS             R4, R1      ;R4 = R1,²¢¶ÔR4È¡·´
+                                                            
+   65 0000002E 402C            ANDS             R4, R5      ;R4 = R4 & R5;
+   66 00000030 8044            STRH             R4, [R0, #2] ;°ÑR4µÄ°ë×ÖÊý¾Ý¸³Ö
+                                                            µ¸øµØÖ·R0+2
+   67 00000032 8843            LDRH             R3, [R0, #2] ;½«R0+2µØÖ·µÄÊý¾Ý¸
+                                                            ³Öµ¸øR3£¬²¢½«R3µÄ¸ß
+                                                            16Î»ÇåÁã
+   68 00000034 429C            CMP              R4, R3
+   69 00000036 D10A            BNE              Halfword_ScanFail ;Èç¹ûR4-R3¡Ù0
+                                                            Ö´ÐÐ Halfword_ScanF
+                                                            ail
+   70 00000038         
+   71 00000038 0849            LSRS             R1, R1, #1  ;R1 = R1 >> 1
+   72 0000003A 2900            CMP              R1, #0
+   73 0000003C D1F2            BNE              Halfword_ScanStart ;R1 - 0 ¡Ù 0
+                                                               Ö´ÐÐ Halfword_Sc
+                                                            anFail   
+   74 0000003E         
+   75 0000003E         ;check adjacent contect
+   76 0000003E 8804            LDRH             R4, [R0, #0] ;½«R0+0µØÖ·µÄÊý¾Ý¸
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+                                                            ³Öµ¸øR4£¬²¢½«R4µÄ¸ß
+                                                            16Î»ÇåÁã
+   77 00000040 8885            LDRH             R5, [R0, #4] ;½«R0+4µØÖ·µÄÊý¾Ý¸
+                                                            ³Öµ¸øR5£¬²¢½«R5µÄ¸ß
+                                                            16Î»ÇåÁã
+   78 00000042 42B4            CMP              R4, R6      ;¼ì²â±»¼ì²âµØÖ·Ç°2¸
+                                                            ö×Ö½ÚÓÐÃ»ÓÐ±»ÐÞ¸Ä
+   79 00000044 D103            BNE              Halfword_ScanFail ;Èç¹ûR4-R6¡Ù0
+                                                            Ö´ÐÐ Halfword_ScanF
+                                                            ail
+   80 00000046 42BD            CMP              R5, R7      ;¼ì²â±»¼ì²âµØÖ·ºó2¸
+                                                            ö×Ö½ÚÓÐÃ»ÓÐ±»ÐÞ¸Ä
+   81 00000048 D101            BNE              Halfword_ScanFail ;Èç¹ûR5-R7¡Ù0
+                                                            Ö´ÐÐ Halfword_ScanF
+                                                            ail
+   82 0000004A         
+   83 0000004A         Halfword_ScanPass
+   84 0000004A 21CC            MOVS             R1, #0xCC
+   85 0000004C E000            B                Halfword_ScanEnd
+   86 0000004E         
+   87 0000004E         Halfword_ScanFail
+   88 0000004E 21DD            MOVS             R1, #0xDD
+   89 00000050         
+   90 00000050         Halfword_ScanEnd
+   91 00000050         ;Restore ram content
+   92 00000050 8042            STRH             R2, [R0, #2] ;°ÑR2µÄ°ë×ÖÊý¾Ý¸³Ö
+                                                            µ¸øµØÖ·R0+2£¬¸´Ô­ÏÖ
+                                                            ³¡
+   93 00000052         ;Assign return value
+   94 00000052 4608            MOV              R0, R1      ;R0 = R1
+   95 00000054         ;Restore variables
+   96 00000054 BCF0            POP              {R4, R5, R6, R7} ;³öÕ»
+   97 00000056 4770            BX               LR
+   98 00000058                 ENDP
+   99 00000058         
+  100 00000058         
+  101 00000058                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
+ork --depend=.\objects\ram_scan.d -o.\objects\ram_scan.o -I.\RTE\_Linko_03x_Pro
+ject -IC:\Users\bpsemi\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Inclu
+de -IC:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include 
+--predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 536" --pred
+efine="_RTE_ SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\ram_scan.lst 
+2_HardwareDriverLayer\ClassB\Ram_scan.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+   Uses
+      None
+Comment: .text unused
+Halfword_ScanEnd 00000050
+
+Symbol: Halfword_ScanEnd
+   Definitions
+      At line 90 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+   Uses
+      At line 85 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+Comment: Halfword_ScanEnd used once
+Halfword_ScanFail 0000004E
+
+Symbol: Halfword_ScanFail
+   Definitions
+      At line 87 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+   Uses
+      At line 39 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+      At line 45 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+      At line 57 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+      At line 69 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+      At line 79 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+      At line 81 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+
+Halfword_ScanPass 0000004A
+
+Symbol: Halfword_ScanPass
+   Definitions
+      At line 83 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+   Uses
+      None
+Comment: Halfword_ScanPass unused
+Halfword_ScanStart 00000024
+
+Symbol: Halfword_ScanStart
+   Definitions
+      At line 47 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+   Uses
+      At line 73 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+Comment: Halfword_ScanStart used once
+occupied_halfword_scan 00000000
+
+Symbol: occupied_halfword_scan
+   Definitions
+      At line 21 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+   Uses
+      At line 22 in file 2_HardwareDriverLayer\ClassB\Ram_scan.s
+Comment: occupied_halfword_scan used once
+6 symbols
+339 symbols in table

@@ -1,0 +1,10 @@
+.\objects\pid_regulators.o: 4_MotorDriveLayer\PID_regulators.c
+.\objects\pid_regulators.o: C:\Users\bpsemi\AppData\Local\Arm\Packs\Linko\LKS03x\1.0.7\Device\Include\basic.h
+.\objects\pid_regulators.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\pid_regulators.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\pid_regulators.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\pid_regulators.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pid_regulators.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\pid_regulators.o: .\3_CommonServiceLayer\Header\MC_type.h
+.\objects\pid_regulators.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\pid_regulators.o: .\4_MotorDriveLayer\Header\PID_regulators.h

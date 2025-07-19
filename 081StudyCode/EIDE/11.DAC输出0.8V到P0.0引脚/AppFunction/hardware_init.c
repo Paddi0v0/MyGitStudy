@@ -113,7 +113,7 @@ void DAC_init(void)
     SYS_WR_PROTECT = 0x7a83; /* 解除系统寄存器写保护 */
 
     SYS_AFE_REG1 &= ~((u32)0x03 << 6);
-    SYS_AFE_REG1 |= (DAC_RANGE_1V2 << 6); /* 设置DAC满量程为1.2V；00:3V| 01:1.2V| 10:4.85V */
+    SYS_AFE_REG1 |= (DAC_RANGE_3V0 << 6); /* 设置DAC满量程为1.2V；00:3V| 01:1.2V| 10:4.85V */
 
     if (((SYS_AFE_REG1 >> 6) & 0x03) == DAC_RANGE_1V2)
     { /* 加载DAC 1.2V量程校正值 */
@@ -131,7 +131,7 @@ void DAC_init(void)
         SYS_AFE_DAC_AMC = Read_Trim(0x00000338);
     }
     SYS_AFE_REG3 |= BIT11; /*使能DAC输出到P0.0 IO口*/
-    SYS_AFE_DAC = 2731;    /*DAC输出电压为（2731*1.2V）/4096 = 0.8V*/
+    SYS_AFE_DAC = 2458;    /*DAC输出电压为（x*3V）/4096 = 1.8V*/
     SYS_WR_PROTECT = 0x0;  /*关闭系统寄存器写操作*/
 }
 
